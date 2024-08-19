@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/my.js"></script>
+    <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
+    <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
+    <script type="text/javascript" src="./cn/M1,M1_M2.js"></script>
+    <script type="text/javascript" src="./cn/信贷脉冲,房价同比.js"></script>
+    <script type="text/javascript" src="./us/中美利差Day,中美汇率Day.js"></script>
+    <script type="text/javascript" src="./us/PMI_ISM,金融脉动增速.js"></script>
+    <script type="text/javascript">
+
+        PPI = PPI.filter(item => {
+            return parseFloat(item[0].substring(0, 4)) >= 2000
+        })
+        let MA = 4 //https://www.jianshu.com/p/d709fe2be814
+        let PPI_MA = PPI.map((item, index) => {
+            const copyItem = [...item];
+            if (index < MA) {
+                return copyItem
+            }
+
+            let sum = 0
+            for (let i = index - MA; i < index; i++) {
+                sum += parseFloat(PPI[i][1])
+            }
+            let avg = (sum / MA).toFixed(2)
+
+            copyItem[1] = avg
+            return copyItem
+        })
+
+        官方制造业PMI = 官方制造业PMI.map(item => {
+            item[1] = parseFloat(((item[1] - 50) * 1).toFixed(2))
+            return item
+        })
+        财新制造业PMI = 财新制造业PMI.map(item => {
+            item[1] = parseFloat(((item[1] - 50) * 1).toFixed(2))
+            return item
+        })
+        let cn_pmi_平均 = 官方制造业PMI.map((item, index) => {
+            let newArr = []
+            newArr[0] = item[0]
+            let avg
+            let cx = findSameTime(财新制造业PMI, item[0])
+            if (cx) avg = (item[1] * 0.5 + parseFloat(cx[1]) * 0.5).toFixed(2)
+            else avg = item[1].toFixed(2)
+            newArr[1] = parseFloat(avg)
+            return newArr
+        }).filter(item => {
+            return true //parseFloat(item[0].substring(0, 4)) >= 2008
+        })
+
+        let 中美汇率Day同比 = 中美汇率Day
+            .filter((ele, index, datasArr) => {
+                // var d = new Date(ele[0])
+                // var n = d.getDay()
+                // if(n==5) return true //周5
+                // if(datasArr.length-1 == index) return true
+
+                return true
+
+                currentMonth = ele[0].substring(5, 7)//月最后一天
+                if (index < datasArr.length - 1) {
+                    nextMonth = datasArr[index + 1][0].substring(5, 7)
+                    return currentMonth != nextMonth
+                } else {
+                    return true
+                }
+            })
+            .map((ele, index, datasArr) => { // yoY 同比
+                let preYear = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
+                let preItem = datasArr.find(element => {
+                    return element[0] == preYear
+                })
+
+                if (!preItem) { //去原始数据找
+                    let currentDayInt = parseInt(ele[0].substring(8, 10))
+                    let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
+                    let n = 3
+                    while (-5 < n) { //向前查找
+                        let dayInt = currentDayInt + n
+                        let dayStr = dayInt >= 10 ? '' + dayInt : "0" + dayInt
+                        let preYearMonthDay = '' + preYearMonth + "-" + dayStr
+                        preItem = datasArr.find(element => {
+                            return element[0] == preYearMonthDay
+                        })
+                        if (preItem) break
+                        n--
+                    }
+                }
+                let yoY = ""
+                if (preItem) {
+                    preItem[1] = parseFloat(preItem[1])
+                    ele[1] = parseFloat(ele[1])
+                    yoY = preItem[1] ? (ele[1] - preItem[1]) / preItem[1] : ""
+                }
+                return [ele[0], yoY * 100]
+            })
+            .map((item, index, datasArr) => {
+                //return item
+                if (index < datasArr.length - 1) {
+                    item[0] = item[0]
+                    item[1] = -item[1]
+                }
+                return item
+            })
+        //中美汇率Day同比 = 中美汇率Day同比.chartDataMaN(4)
+
+        let 信贷脉冲_MA = 信贷脉冲.chartDataMaN(4)
+        //console.log(信贷脉冲_MA,信贷脉冲)
+
+    </script>
+    <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/恒生.js"></script>
+    <script>
+        function xueqiuFormatDate(stamp, period = "month") {
+            var date = new Date(stamp);
+            var y = date.getFullYear(),
+                m = date.getMonth() + 1,
+                d = date.getDate();
+            if (m < 10)
+                m = '0' + m;
+            if (d < 10)
+                d = '0' + d;
+
+            if (period == "month") {
+                var current_date = new Date();
+                var current_y = current_date.getFullYear(),
+                    current_m = current_date.getMonth() + 1,
+                    current_d = current_date.getDate();
+                if (current_m < 10)
+                    current_m = '0' + current_m;
+                if (current_d < 10)
+                    current_d = '0' + current_d;
+
+                if ((y + '-' + m) == (current_y + '-' + current_m)) { //当月不处理
+                    var t = y + '-' + m + '-' + d;
+                } else {
+                    var t = y + '-' + m + '-28';
+                }
+            }
+
+            if (period == "day") {
+                var t = y + '-' + m + '-' + d;
+            }
+
+
+            return t;
+        }
+
+        function sectorIndexToObj(ele, period = "month") {
+            let newItem = {}
+            newItem.stamp = ele[0]
+            newItem.date = xueqiuFormatDate(ele[0], period)
+            newItem.open = ele[2] //open
+            newItem.high = ele[3] //open
+            newItem.low = ele[4] //open
+            newItem.close = ele[5] //close
+            return newItem
+        }
+
+        function sectorIndexYoY(ele, index, datasArr) {
+
+            let preItem
+            // preItem = datasArr.find(element => {
+            //     let preYear = '' + (parseInt(ele.date.slice(0, 4)) - 1) + ele.date.substring(4, 10)
+            //     return element.date == preYear
+            // })
+            //A股一年平均有250个交易日
+            preItem = datasArr[index - 240]
+            let pre1_5Item = datasArr[index - 470]
+
+            if (preItem) {
+                let openYoY = (ele.open - preItem.open) / preItem.open
+                var closeYoY = (ele.close - preItem.close) / preItem.close
+                let highYoY = (ele.high - preItem.high) / preItem.high
+                let lowYoY = (ele.low - preItem.low) / preItem.low
+
+                ele.openYoY = openYoY
+                ele.closeYoY = closeYoY
+                ele.highYoY = highYoY
+                ele.lowYoY = lowYoY
+            } else {
+                ele.openYoY = ""
+                ele.closeYoY = ""
+                ele.highYoY = ""
+                ele.lowYoY = ""
+            }
+
+            if (pre1_5Item) {
+                let closeYoY1_5 = (ele.close - pre1_5Item.close) / pre1_5Item.close
+                let highYoY1_5 = (ele.high - pre1_5Item.high) / pre1_5Item.high
+                let lowYoY1_5 = (ele.low - pre1_5Item.low) / pre1_5Item.low
+                ele.closeYoY1_5 = closeYoY1_5
+                ele.highYoY1_5 = highYoY1_5
+                ele.lowYoY1_5 = lowYoY1_5
+            } else {
+                ele.closeYoY1_5 = ""
+            }
+            return ele
+
+        }
+
+        上证 = 上证.data.item.map((ele, index, arr) => {
+            return sectorIndexToObj(ele, "day")
+        }).map((ele, index, arr) => {
+            return ele //sectorIndexYoY(ele, index, arr)
+        })
+        沪深300 = 沪深300.data.item.map((ele, index, arr) => {
+            return sectorIndexToObj(ele, "day")
+        }).map((ele, index, arr) => {
+            return ele //sectorIndexYoY(ele, index, arr)
+        })
+        恒生 = 恒生.data.item.map((ele, index, arr) => {
+            return sectorIndexToObj(ele, "day")
+        }).map((ele, index, arr) => {
+            return ele //sectorIndexYoY(ele, index, arr)
+        })
+
+        let currentName = decodeURI(getQueryVariable("name")) == "上证" ? "上证" : "沪深300"
+    </script>
+    <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
+    <script>
+        let 高位next1 = []
+        let 高位next2 = []
+        let 低位next1 = []
+        let 低位next2 = []
+        let trigDateArr = Object.keys(triggerLogObj指数.按日期排序)
+
+        for (let index = 0; index < trigDateArr.length; index++) {
+
+            let date = trigDateArr[index];
+            let profileN = triggerLogObj指数.按日期排序[date].pop()
+            let trig策略s = triggerLogObj指数.按日期排序[date]
+
+            if (Object.keys(profileN).length <= 0) continue
+
+            let next1kline = [
+                date,
+                0,//open
+                +profileN.nextFirstDelivery周三.close.split(",")[2],//close
+                +profileN.nextFirstDelivery周三.low.split(",")[2],//low
+                +profileN.nextFirstDelivery周三.high.split(",")[2],//up
+                +profileN.nextFirstDelivery周三.close.split(",")[1],//close 点位变化
+            ]
+
+            let next2kline = [
+                date,
+                0,//open
+                +profileN.nextSecondDelivery周三.close.split(",")[2],//close
+                +profileN.nextSecondDelivery周三.low.split(",")[2],//low
+                +profileN.nextSecondDelivery周三.high.split(",")[2],//up
+                +profileN.nextSecondDelivery周三.close.split(",")[1],//close 点位变化
+            ]
+
+            if (trig策略s[0].includes("高位") && profileN.hasOwnProperty("nextFirstDelivery周三") && +date.substring(0, 4) > 2008)
+                高位next1.push(next1kline)
+
+            if (trig策略s[0].includes("高位") && profileN.hasOwnProperty("nextSecondDelivery周三") && +date.substring(0, 4) > 2008)
+                高位next2.push(next2kline)
+
+            if (trig策略s[0].includes("低位") && profileN.hasOwnProperty("nextFirstDelivery周三"))
+                低位next1.push(next1kline)
+
+            if (trig策略s[0].includes("低位") && profileN.hasOwnProperty("nextSecondDelivery周三"))
+                低位next2.push(next2kline)
+        }
+
+        function fliterNday(oldArr) {
+            let arrNew = []
+            for (let index = 0; index < oldArr.length; index++) {
+                const ele = oldArr[index]
+                if (index == 0)
+                    arrNew.push(ele)
+                else if (dateToStamp(arrNew[arrNew.length - 1][0]) + 10 * 86400000 < dateToStamp(ele[0])) //10day
+                    arrNew.push(ele)
+            }
+            return arrNew
+        }
+
+        高位next2 = fliterNday(高位next2).sort((a, b) => a[2] - b[2]).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        低位next2 = fliterNday(低位next2).sort((a, b) => a[2] - b[2]).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+
+        console.log(
+            "高位next2",
+            高位next2.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        )
+        console.log(
+            "低位next2",
+            低位next2.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        )
+
+    </script>
+
+    <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
+    <script type="text/javascript">
+
+        function toKline(ele) {
+            let item = ele.logProfileN
+            let mostLow60orLast = item.day60LowUp ? item.day60LowUp[1] : item[`day${item.lastDay}LowUp`][1]
+            let mostUp60orLast = item.day60LowUp ? item.day60LowUp[3] : item[`day${item.lastDay}LowUp`][3]
+            let close60orLast = item.day60LowUp ? item.day60LowUp[4] : item[`day${item.lastDay}LowUp`][4]
+
+            return [ele.trigDate, 0, close60orLast, mostLow60orLast, mostUp60orLast, ele.dataName, ele?.test]
+        }
+        let 大宗高位KDJ = triggerLogObj大宗.高位KDJ.map((ele) => toKline(ele))
+        let 大宗高位九转 = triggerLogObj大宗.高位九转.map((ele) => toKline(ele))
+        let 大宗低位KDJ = triggerLogObj大宗.低位KDJ.map((ele) => toKline(ele))
+        let 大宗低位九转 = triggerLogObj大宗.低位九转.map((ele) => toKline(ele))
+
+        console.log(
+            "大宗高位KDJ", 大宗高位KDJ.sort((a, b) => a[3] - b[3]),
+            "大宗高位九转", 大宗高位九转.sort((a, b) => a[3] - b[3]),
+        )
+        console.log(
+            "大宗低位KDJ", 大宗低位KDJ.sort((a, b) => a[3] - b[3]),
+            "大宗低位九转", 大宗低位九转.sort((a, b) => a[3] - b[3]),//dateToStamp(a[0]) - dateToStamp(b[0])
+        )
+    </script>
+
+    <script type="text/javascript" src="./cnThs/今收/同花顺策略组1_信号统计.js"></script>
+    <script type="text/javascript" src="./cnThs/今收/同花顺策略组2_大小市值信号统计.js"></script>
+    <script type="text/javascript">
+        if (typeof 技术指标统计 === "undefined") var 技术指标统计 = []
+        if (typeof 小市值低估 === "undefined") var 小市值低估 = []
+        if (typeof 大市值趋势 === "undefined") var 大市值趋势 = []
+
+        小市值低估 = 小市值低估.filter(
+            ele => parseFloat(ele[6].substring(0, ele[6].length - 1)) < -8 //亏损大于10
+        ).map((item) => {
+            return [item[3], parseFloat(item[6].substring(0, item[6].length - 1))]
+        })
+
+        大市值趋势 = 大市值趋势.filter((ele, index, arr) => {
+            return parseFloat(ele[6].substring(0, ele[6].length - 1)) < -8 //亏损大于10
+        }).map((item) => {
+            return [item[3], parseFloat(item[6].substring(0, item[6].length - 1))]
+        })
+
+        //技术指标统计 = []
+        console.log("技术指标统计", 技术指标统计)
+    </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+
+    <script type="text/javascript">
+        Array.prototype.filterAndAddStartEnd = function () {
+            let arr = this
+
+            arr = arr.filter(item => {
+                return parseFloat(item[0].substring(0, 4)) >= 1994
+            })
+
+            let start = [
+                ["1994-01-01", ""]
+            ]
+            arr = start.concat(arr)
+
+            //当天 或 hs300最后一天 
+            let currentDay = new Date()
+            currentDay = currentDay.getFullYear() + 1 + "-" + (currentDay.getMonth() + 1) + "-" + currentDay.getDate()
+            arr.push([currentDay, ""])
+
+            return arr
+        }
+        var dom = document.getElementById('container');
+        var myChart = echarts.init(dom, "#fff", {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+
+        let colorA = "#172129"
+        let colorB = "#1672df"
+        let colorC = "#02c0c0"
+
+        let symbolCircle = "circle"
+        let symbolPin = "pin"
+        let symbolUpArrow = "path://M12.0002 3.58569L19.4144 10.9999L18.0002 12.4141L13.0002 7.41412V19.9999H11.0002V7.41412L6.00015 12.4141L4.58594 10.9999L12.0002 3.58569Z"
+        let symbolDownArrow = 'path://M12.0002 21.4142L17.4144 16L16.0002 14.5858L13.0002 17.5858V3H11.0002V17.5858L8.00015 14.5858L6.58594 16L12.0002 21.4142Z'
+
+        let backgroundColorA = '#f8fcf7' // '#fbfbfe'
+        let backgroundColorB = '#f8fcf7' // '#f4f4fb'
+        let backgroundColorC = '#f8fcf7' // '#e6e6fa'
+
+        let splitLineColor = "#d8d8d8";
+        var app = {};
+        var option;
+        option = {
+            title: {},
+            tooltip: {
+                trigger: "item", //axis item cross,
+                show: true,
+                position: ['30%', '80%'],
+                order: 'seriesDesc',
+                axisPointer: {
+                    type: "cross",
+                    show: true,
+                    crossStyle: {
+                        width: 1,
+                        color: "black", // 鼠标十字横轴
+                    },
+                },
+                formatter: function (params, ticket, callback) {
+                    //trigger: "item", 时候才有效
+                    //if (params.seriesName && params.seriesName.includes("策略")) {
+                    return params.seriesName + params.data
+                    //}
+                },
+            },
+
+            legend: {
+                left: 70,
+                top: 0,
+                width: 50,
+                height: "95%",
+                backgroundColor: "gray",
+                selector: ['all', 'inverse'],
+                orient: "vertical"
+            },
+            toolbox: {},
+            axisPointer: {
+                link: [{
+                    xAxisIndex: 'all'
+                }],
+                lineStyle: {
+                    color: "black", // 鼠标十字竖轴
+                },
+            },
+            dataZoom: [{
+                show: true,
+                realtime: true,
+                start: 0,
+                end: 100,
+                bottom: -5,
+                xAxisIndex: [0, 1, 2, 3, 4, 5, 6, 7],
+            },
+            {
+                type: 'inside',
+                realtime: true,
+                start: 0,
+                end: 100,
+                xAxisIndex: [0, 1, 2, 3, 4, 5, 6, 7],
+            }
+            ],
+            grid: [
+
+                {
+                    left: 60,
+                    right: 80,
+                    top: "0%",
+                    height: '20%',
+                },
+                {
+                    left: 60,
+                    right: 80,
+                    top: "20%",
+                    height: '20%',
+                },
+                {
+                    left: 60,
+                    right: 80,
+                    top: "40%",
+                    height: '10%',
+                    backgroundColor: backgroundColorA,
+                    show: true
+                },
+
+
+
+                {
+                    left: 60,
+                    right: 80,
+                    top: "50%",
+                    height: '10%',
+                    backgroundColor: backgroundColorB,
+                    show: true
+                },
+
+
+                //bottom
+                {
+                    left: 60,
+                    right: 80,
+                    top: "60%",
+                    height: '15%',
+                    backgroundColor: backgroundColorC,
+                    show: true
+                },
+
+
+                {
+                    left: 60,
+                    right: 80,
+                    top: "75%",
+                    height: '10%',
+                },
+                {
+                    left: 60,
+                    right: 80,
+                    top: "85%",
+                    height: '10%',
+                },
+
+
+                //kline
+                {
+                    left: 60,
+                    right: 80,
+                    top: "60%",
+                    height: '35%',
+                    backgroundColor: backgroundColorC,
+                    show: true
+                },
+
+
+            ],
+            xAxis: [
+                {
+                    gridIndex: 0,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    }
+                },
+
+                {
+                    gridIndex: 1,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    }
+                },
+
+                {
+                    gridIndex: 2,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                },
+
+
+
+                {
+                    gridIndex: 3,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                },
+
+
+                {
+                    gridIndex: 4,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                },
+                {
+                    gridIndex: 5,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                },
+                {
+                    gridIndex: 6,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                },
+
+
+
+                // {
+                //     gridIndex: 7,
+                //     type: 'time',
+                //     splitNumber: 20,
+                //     splitLine: {
+                //         show: true,
+                //         lineStyle: {
+                //             color: [splitLineColor]
+                //         }
+                //     },
+                //     axisPointer: {
+                //         show: true,
+                //         label: {
+                //             show: false,
+                //         },
+                //     },
+                //     axisLabel: {
+                //         show: false
+                //     },
+                // },
+
+
+                {
+                    gridIndex: 7,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: true,
+                        },
+                    },
+                    axisLabel: {
+                        fontSize: 10,
+                        formatter: "{yyyy}",
+                        padding: [0, -60, 0, 0],
+                    },
+                },
+
+
+            ],
+            yAxis: [
+                //默认
+                {
+                    gridIndex: 0,
+                    type: 'value',
+                    splitLine: {
+                        "show": false
+                    },
+                    max: 18,
+                    min: -18,
+                },
+
+                {
+                    gridIndex: 1, //
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    show: true,
+                    max: 40,
+                    min: 20,
+                },
+
+                {
+                    gridIndex: 2, // 
+                    name: '',
+                    type: 'value',
+
+                    splitLine: {
+                        show: false
+                    },
+                    show: true,
+                    min: -15,
+                    inverse: true,
+                },
+
+                {
+                    gridIndex: 3,
+                    name: '',
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    show: false,
+                    max: 10
+
+                },
+
+                {
+                    gridIndex: 4,
+                    name: '',
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    show: true,
+
+                    min: -30
+
+                },
+
+                {
+                    gridIndex: 5,
+                    name: '',
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    show: true,
+                    max: 7
+                },
+
+
+                {
+                    gridIndex: 6,
+                    name: '',
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    show: true,
+                    max: 10
+                },
+
+
+                {
+                    gridIndex: 7,
+                    name: '',
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    show: true,
+                },
+
+            ],
+
+            series: [
+
+                // {
+                //     name: "PPI",
+                //     type: "line",
+                //     xAxisIndex: 0,
+                //     yAxisIndex: 0,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 0.9,
+                //     },
+                //     data: PPI.filterAndAddStartEnd()
+                // },
+                // {
+                //     name: 'pmi',
+                //     type: 'line',
+                //     xAxisIndex: 1,
+                //     yAxisIndex: 1,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 1,
+                //         color: "gray"
+                //     },
+                //     data: cn_pmi_平均.map(v => {
+                //         v[1] = parseFloat(v[1]) * 10
+                //         return v
+                //     }).filterAndAddStartEnd(),
+                // },
+
+
+                {
+                    name: '金融脉动增速us',
+                    type: 'line',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    //smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "black"
+                    },
+                    data: 金融脉动增速.map((item) => {
+                        item[1] = Number(item[1]) * -10
+                        return item
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: "中美汇",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.8,
+                        color: "gray"
+                    },
+                    data: 中美汇率Day同比.filterAndAddStartEnd()
+                },
+
+
+
+                { //m12 信贷
+                    name: '信贷脉冲',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    smooth: true,
+                    showSymbol: false,
+
+                    itemStyle: {
+                        "color": {
+                            "type": "linear",
+                            "x": 0,
+                            "y": 0,
+                            "x2": 0,
+                            "y2": 1,
+                            "colorStops": [{
+                                "offset": 0.7, //小上 大下
+                                "color": "green"
+                            },
+                            {
+                                "offset": 0.5,
+                                "color": "orange"
+                            },
+
+                            {
+                                "offset": 0.3,
+                                "color": "red"
+                            }
+
+                            ],
+                            "globalCoord": false
+                        }
+
+                    },
+                    lineStyle: {
+                        width: 1.5,
+
+                    },
+                    data: 信贷脉冲.filterAndAddStartEnd()
+                },
+                {
+                    name: '信贷脉冲_MA',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    smooth: true,
+                    showSymbol: false,
+                    itemStyle: {
+                        "color": {
+                            "type": "linear",
+                            "x": 0,
+                            "y": 0,
+                            "x2": 0,
+                            "y2": 1,
+                            "colorStops": [{
+                                "offset": 0.7,
+                                "color": "green"
+                            },
+                            {
+                                "offset": 0.5,
+                                "color": "orange"
+                            },
+
+                            {
+                                "offset": 0.3,
+                                "color": "red"
+                            }
+
+                            ],
+                            "globalCoord": false
+                        }
+
+                    },
+                    lineStyle: {
+                        width: 1,
+                        type: 'dotted',
+
+                    },
+                    data: 信贷脉冲_MA.filterAndAddStartEnd()
+                },
+
+                ////////////////////////////////////////////////////////////////////////////////////////////
+                {
+                    name: '大宗高位KDJ',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 大宗高位KDJ.map((item) => {
+                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
+                        let tmp = []
+                        tmp[0] = item[0] //date
+                        tmp[1] = item[1] //open
+                        tmp[2] = item[2] //close
+                        tmp[3] = item[3] //low
+                        tmp[4] = item[4] //up
+                        tmp[5] = item[5] //name
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
+                {
+                    name: '大宗高位九转',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 大宗高位九转.map((item) => {
+                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
+                        let tmp = []
+                        tmp[0] = item[0] //date
+                        tmp[1] = item[1] //open
+                        tmp[2] = item[2] //close
+                        tmp[3] = item[3] //low
+                        tmp[4] = item[4] //up
+                        tmp[5] = item[5] //name
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
+
+                {
+                    name: '大宗低位KDJ',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 大宗低位KDJ.map((item) => {
+                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
+                        let tmp = []
+                        tmp[0] = item[0] //date
+                        tmp[1] = item[1] //open
+                        tmp[2] = item[2] //close
+                        tmp[3] = item[3] //low
+                        tmp[4] = item[4] //up
+                        tmp[5] = item[5] //name
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
+                {
+                    name: '大宗低位九转',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 大宗低位九转.map((item) => {
+                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
+                        let tmp = []
+                        tmp[0] = item[0] //date
+                        tmp[1] = item[1] //open
+                        tmp[2] = item[2] //close
+                        tmp[3] = item[3] //low
+                        tmp[4] = item[4] //up
+                        tmp[5] = item[5] //name
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
+
+
+                ////////////////////////////////////////////////////////////////////////////////////////////
+                {
+                    name: '高位next1',
+                    type: 'candlestick',
+                    barWidth: 2,
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 高位next1.filterAndAddStartEnd()
+                },
+                {
+                    name: '高位next2',
+                    type: 'candlestick',
+                    barWidth: 2,
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 高位next2.filterAndAddStartEnd()
+                },
+
+                {
+                    name: '低位next1',
+                    type: 'candlestick',
+                    barWidth: 2,
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 低位next1.filterAndAddStartEnd()
+                },
+                {
+                    name: '低位next2',
+                    type: 'candlestick',
+                    barWidth: 2,
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 低位next2.filterAndAddStartEnd()
+                },
+
+
+
+
+                {
+                    name: '沪深300高位KDJ',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 13.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300高位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证高位KDJ',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 10.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50高位KDJ',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+
+                {
+                    name: '周月高位九转',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.周月高位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '日月高位九转',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 6.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.日月高位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '日周高位九转',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.日周高位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+
+                ///////////////////////////////////////////////////
+                {
+                    name: '同花顺策略总数',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 4,
+                    symbol: symbolDownArrow,
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA //00bfff
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 12
+                    },
+                    zlevel: 3,
+                    data: 技术指标统计.filter(ele => {
+                        return ele[1] >= 3 || ele[2].length >= 2
+                    }).filterAndAddStartEnd()
+
+                },
+                {
+                    name: '同花顺策略个数',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 4,
+                    symbol: symbolDownArrow,
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorB //"#ff69b4" ed31cd
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 9
+                    },
+                    zlevel: 5,
+                    data: 技术指标统计.filter(ele => {
+                        return ele[1] >= 3 || ele[2].length >= 2
+                    }).map(ele => {
+                        return [ele[0], ele[2].length]
+                    }).filterAndAddStartEnd()
+
+                },
+
+
+                {
+                    name: '大市值策略',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 4,
+                    symbol: symbolDownArrow,
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "blue"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 10.5
+                    },
+                    zlevel: 6,
+                    data: 大市值趋势.filterAndAddStartEnd()
+                },
+                {
+                    name: '小市值策略',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 4,
+                    symbol: symbolDownArrow,
+                    itemStyle: {
+                        normal: {
+                            opacity: 2,
+                            color: "blue"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 10.5
+                    },
+                    zlevel: 6,
+                    data: 小市值低估.filterAndAddStartEnd()
+                },
+
+
+                {
+                    name: '沪深300低位KDJ',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 12.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300低位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证低位KDJ',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorB
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证低位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50低位KDJ',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorC
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50低位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+                {
+                    name: '周月低位九转',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.周月低位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '日月低位九转',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorB
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 6.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.日月低位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '日周低位九转',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorC
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.日周低位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+
+
+
+                {
+                    name: '上证',
+                    type: 'candlestick',
+                    xAxisIndex: 7,
+                    yAxisIndex: 7,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 上证.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.open ? item.open : ""
+                        tmp[2] = item.close ? item.close : ""
+                        tmp[3] = item.low ? item.low : ""
+                        tmp[4] = item.high ? item.high : ""
+                        return tmp
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '沪深300',
+                    type: 'candlestick',
+                    xAxisIndex: 7,
+                    yAxisIndex: 7,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 沪深300.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.open ? item.open : ""
+                        tmp[2] = item.close ? item.close : ""
+                        tmp[3] = item.low ? item.low : ""
+                        tmp[4] = item.high ? item.high : ""
+                        return tmp
+                    }).filterAndAddStartEnd()
+                },
+
+            ]
+        };
+
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+        window.addEventListener('resize', myChart.resize)
+        setTimeout(() => {
+
+            let seriesArr = myChart.getOption().series
+            for (let index = 0; index < seriesArr.length; index++) {
+                const serie = seriesArr[index];
+                if (
+                    (serie.name.includes("大宗") && serie.name.includes("位")) ||
+                    (serie.name.includes("next") && serie.name.includes("位"))
+                )
+                    myChart.dispatchAction({
+                        type: 'legendToggleSelect',
+                        name: serie.name
+                    });
+            }
+        }, "1")
+    </script>
+</body>
+
+</html>
