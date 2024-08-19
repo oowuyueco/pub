@@ -29,7 +29,11 @@
         let 日期低位 = []
         for (let index = 0; index < trigDateArr.length; index++) {
             let date = trigDateArr[index];
-            let profileN = triggerLogObj指数.按日期排序[date].pop()
+
+            let profileN
+            if (typeof triggerLogObj指数.按日期排序[date][triggerLogObj指数.按日期排序[date].length - 1] === "object")
+                profileN = triggerLogObj指数.按日期排序[date].pop()
+
             let trig策略s = triggerLogObj指数.按日期排序[date]
 
             if (trig策略s[0].includes("高位")) {
@@ -47,7 +51,11 @@
         let 美股日期低位 = []
         for (let index = 0; index < 美股trigDateArr.length; index++) {
             let date = 美股trigDateArr[index];
-            //let profileN = triggerLogObj美股指数.按日期排序[date].pop()
+
+            let profileN
+            if (typeof triggerLogObj美股指数.按日期排序[date][triggerLogObj美股指数.按日期排序[date].length - 1] === "object")
+                profileN = triggerLogObj美股指数.按日期排序[date].pop()
+
             let trig策略s = triggerLogObj美股指数.按日期排序[date]
 
             if (trig策略s[0].includes("高位")) {
@@ -65,7 +73,7 @@
 
 <body style="height: 100%; margin: 0">
     <div id="container" style="height: 100%"></div>
-   
+
     <script type="text/javascript">
         Array.prototype.filterAndAddStartEnd = function () {
             let arr = this
