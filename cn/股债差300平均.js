@@ -892,8 +892,8 @@ let 股债差300平均 = [
         6.28
     ],
     [
-        "2024-08-15",
-        6.52
+        "2024-08-19",
+        6.45
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
