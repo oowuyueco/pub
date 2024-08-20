@@ -235,7 +235,11 @@
         for (let index = 0; index < trigDateArr.length; index++) {
 
             let date = trigDateArr[index];
-            let profileN = triggerLogObj指数.按日期排序[date].pop()
+
+            let profileN = {}
+            if (typeof triggerLogObj指数.按日期排序[date][triggerLogObj指数.按日期排序[date].length - 1] === "object")
+                profileN = triggerLogObj指数.按日期排序[date].pop()
+            
             let trig策略s = triggerLogObj指数.按日期排序[date]
 
             if (Object.keys(profileN).length <= 0) continue

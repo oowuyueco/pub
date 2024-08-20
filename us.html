@@ -33,11 +33,12 @@
 
         us原油 = us原油.data
         us白糖 = us白糖.data
-        let 糖油比 = us原油.map(item原油 => {
+        let 油糖比 = us原油.map(item原油 => {
             let item白糖 = findSameTime(us白糖, item原油[0])
-            if (item白糖) return [item原油[0], item原油[4] / item白糖[4]]
+            if (item白糖) return [stampToDate(item原油[0]), item原油[4] / item白糖[4]]
             else return [item原油[0], ""]
         })
+        console.log("油糖比", 油糖比)
 
         //美元指数同比 铜金比同比  糖油比同比 未用
         let 美元指数同比 = 美元指数Day
@@ -93,7 +94,11 @@
         let 美股日期低位 = []
         for (let index = 0; index < 美股trigDateArr.length; index++) {
             let date = 美股trigDateArr[index];
-            //let profileN = triggerLogObj美股指数.按日期排序[date].pop()
+
+            let profileN = {}
+            if (typeof triggerLogObj美股指数.按日期排序[date][triggerLogObj美股指数.按日期排序[date].length - 1] === "object")
+                profileN = triggerLogObj美股指数.按日期排序[date].pop()
+
             let trig策略s = triggerLogObj美股指数.按日期排序[date]
 
             if (trig策略s[0].includes("高位")) {
@@ -704,7 +709,7 @@
                             }
                         ],
                     },
-                    data: 糖油比.addStartEnd()
+                    data: 油糖比.addStartEnd()
                 },
                 {
                     name: '美股基本面', //柯博文重卡  企业税后获利  信用风险利差企业债-10年国债9f39b3
