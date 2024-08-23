@@ -8792,4 +8792,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastDate = "2024-08-22"
+var runLastDate = "2024-08-23"
