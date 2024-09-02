@@ -9388,4 +9388,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-08-30"
+var runLastKlineDate = "2024-09-02"
