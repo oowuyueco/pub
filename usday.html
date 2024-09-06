@@ -33,7 +33,7 @@
         let 油糖比 = us原油.map(item原油 => {
             let item白糖 = findSameTime(us白糖, item原油[0])
             if (item白糖) return [stampToDate(item原油[0]), item原油[4] / item白糖[4]]
-            else return [item原油[0], ""]
+            else return [stampToDate(item原油[0]), ""]
         })
         console.log("油糖比", 油糖比)
 
