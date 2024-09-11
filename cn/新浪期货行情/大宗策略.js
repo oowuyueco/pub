@@ -404,6 +404,9 @@ var triggerLogObj大宗={
         ],
         "2024-04-22": [
             "低位KDJ_豆二连续"
+        ],
+        "2024-09-11": [
+            "低位九转日月_苹果连续"
         ]
     },
     "高位KDJ": [
@@ -9385,7 +9388,24 @@ var triggerLogObj大宗={
                     11.67
                 ]
             }
+        },
+        {
+            "dataName": "苹果连续",
+            "quantName": "低位九转",
+            "trigDate": "2024-09-11",
+            "trigIndex": 1627,
+            "trigcalType": "日月九转",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
         }
     ]
 }
-var runLastKlineDate = "2024-09-10"
+var runLastKlineDate = "2024-09-11"
