@@ -407,6 +407,9 @@ var triggerLogObj大宗={
         ],
         "2024-09-11": [
             "低位九转日月_苹果连续"
+        ],
+        "2024-09-12": [
+            "低位九转日周周月_焦煤连续"
         ]
     },
     "高位KDJ": [
@@ -9405,7 +9408,24 @@ var triggerLogObj大宗={
                 ],
                 "lastDay": 0
             }
+        },
+        {
+            "dataName": "焦煤连续",
+            "quantName": "低位九转",
+            "trigDate": "2024-09-12",
+            "trigIndex": 2787,
+            "trigcalType": "日周九转周月九转",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
         }
     ]
 }
-var runLastKlineDate = "2024-09-11"
+var runLastKlineDate = "2024-09-12"
