@@ -7,7 +7,8 @@
     <script type="text/javascript" src="./js/my.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
     <script type="text/javascript" src="./cn/利润同比,亏损增减.js"></script>
-    <script type="text/javascript" src="./cn/股债差300平均.js"></script>
+    <script type="text/javascript" src="./cn/股债差300平均,滚动市盈率300.js"></script>
+    <script type="text/javascript" src="./cn/滚动市盈率恒指.js"></script>
 
 
     <script type="text/javascript" src="./cn/沪深300PE中位数,全A股PE中位数,十年期国债利率倒数.js"></script>
@@ -23,6 +24,7 @@
     <script type="text/javascript" src="./us/中美利差Day,中美汇率Day.js"></script>
     <script type="text/javascript" src="./us/金融压力Day,美元指数Day.js"></script>
     <script type="text/javascript" src="./us/PMI_ISM,金融脉动增速.js"></script>
+    <script type="text/javascript" src="./us/Y10日,Y2日.js"></script>
     <script type="text/javascript">
         /*
         各类资产的长期回报率是多少?  https://deepinvest.org/post/2022/09/05/the-rate-of-return-on-everything/   
@@ -151,12 +153,12 @@
         //https://finance.sina.com.cn/money/forex/hq/USDCNH.shtml
         //https://finance.sina.com.cn/money/forex/hq/DINIW.shtml
         let 中美汇率Day同比 = 中美汇率Day
-            .filter((ele, index, datasArr) => { 
+            .filter((ele, index, datasArr) => {
                 // var d = new Date(ele[0])
                 // var n = d.getDay()
                 // if(n==5) return true //周5
                 // if(datasArr.length-1 == index) return true
-                
+
                 return true
 
                 currentMonth = ele[0].substring(5, 7)//月最后一天
@@ -212,7 +214,7 @@
         //         // var n = d.getDay()
         //         // if(n==5) return true //周5
         //         // if(datasArr.length-1 == index) return true
-                
+
         //         return true
 
         //         currentMonth = ele[0].substring(5, 7)
@@ -262,15 +264,38 @@
         //     })
         // //美元指数Day同比 = 美元指数Day同比.chartDataMaN(4)
 
+        let 股债差恒指美债 = 滚动市盈率恒指.map(pe指数 => {
+            let 美债10 = findSameTime(Y10日, pe指数[0])
+            if (美债10) return [pe指数[0], 1 / pe指数[1] * 100 - parseFloat(美债10[1])]
+            else {
+                let currentDayInt = 28
+                let yearMonth = pe指数[0].substring(0, 7)
+                let n = 0
+                while (-5 < n) { //向前查找
+                    let dayInt = currentDayInt + n
+                    let dayStr = dayInt >= 10 ? '' + dayInt : "0" + dayInt
+                    let yearMonthDay = yearMonth + "-" + dayStr
+                    美债10 = Y10日.find(element => {
+                        return element[0] == yearMonthDay
+                    })
+                    if (美债10) break
+                    n--
+                }
+                if (美债10) return [pe指数[0], 1 / pe指数[1] * 100 - parseFloat(美债10[1])]
+                else return [pe指数[0], ""]
+            }
+        })
+        console.log("股债差300美债", 股债差300美债)
+
     </script>
-    
+
     <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
     <script>
-     沪深300 = 沪深300.data.item.xueqiuData2Obj()
-     上证 = 上证.data.item.xueqiuData2Obj()
-     let trigDateArr = Object.keys(triggerLogObj指数.按日期排序)
+        沪深300 = 沪深300.data.item.xueqiuData2Obj()
+        上证 = 上证.data.item.xueqiuData2Obj()
+        let trigDateArr = Object.keys(triggerLogObj指数.按日期排序)
         let 日期高位 = []
         let 日期低位 = []
         for (let index = 0; index < trigDateArr.length; index++) {
@@ -279,7 +304,7 @@
             let profileN = {}
             if (typeof triggerLogObj指数.按日期排序[date][triggerLogObj指数.按日期排序[date].length - 1] === "object")
                 profileN = triggerLogObj指数.按日期排序[date].pop()
-            
+
             let trig策略s = triggerLogObj指数.按日期排序[date]
 
             if (trig策略s[0].includes("高位")) {
@@ -410,8 +435,6 @@
                     show: true,
 
                 },
-
-
                 { //PMI
                     left: 60,
                     right: 80,
@@ -440,11 +463,11 @@
                     show: true,
                 },
 
-                { //指数 单独
+                { //策略 单独
                     left: 60,
                     right: 80,
-                    top: "45%",
-                    height: '13%', // 23 or 43  
+                    top: "35%",
+                    height: '23%', // 23 or 43  
                     show: true,
                 },
 
@@ -453,7 +476,7 @@
 
             xAxis: [
 
-                { //P
+                { //ppi
                     gridIndex: 0,
                     type: "time",
                     splitNumber: 20,
@@ -476,7 +499,7 @@
                     },
                 },
 
-                { //
+                { //利润亏损
                     gridIndex: 1,
                     type: "time",
                     splitNumber: 20,
@@ -517,7 +540,6 @@
                         show: false
                     }
                 },
-
 
                 { //pmi
                     gridIndex: 3,
@@ -765,17 +787,17 @@
                     min: 700
                 },
 
-                
+
                 { //策略 单独
                     gridIndex: 6,
                     type: 'value',
                     splitLine: {
                         show: false
                     },
-                    axisLabel:{
-                        show:false
+                    axisLabel: {
+                        show: false
                     },
-                    max:10,
+                    max: 20,
                 }
 
             ],
@@ -879,18 +901,17 @@
                 },
 
 
-
                 { //股债
-                    name: "300股债差",
+                    name: "股债差",
                     type: "line",
                     xAxisIndex: 2,
                     yAxisIndex: 4,
                     data: 股债差300平均.filter((item) => {
-                        return parseFloat(item[0].substring(0, 4)) >= 2008;
+                        return parseFloat(item[0].substring(0, 4)) >= 2007;
                     }).addStartEnd(),
                     showSymbol: false,
                     lineStyle: {
-                        width: 1.7,
+                        width: 1.5,
                     },
                     zlevel: 1,
                     itemStyle: {
@@ -964,7 +985,52 @@
                     },
                 },
                 {
-                    name: "中位PE",
+                    name: '恒指美债差',
+                    type: 'line',
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 1.7,
+                        type: "dotted"
+                    },
+                    zlevel: 1,
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.4,   //小上移  大下移
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.5,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.7,
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+
+                    data: 股债差恒指美债.filter((item) => {
+                        return parseFloat(item[0].substring(0, 4)) >= 2007;
+                    }).addStartEnd(),
+                },
+
+
+
+                {
+                    name: "中位PE", //紫色 300PE中位数
                     type: "line",
                     xAxisIndex: 2,
                     yAxisIndex: 4,
@@ -1012,7 +1078,7 @@
                     },
                 },
                 {
-                    name: "中位PE", //全a剔除后中位
+                    name: "中位PE", //橘色 全a剔除后中位
                     type: "line",
                     xAxisIndex: 2,
                     yAxisIndex: 4,
@@ -1028,7 +1094,7 @@
                     },
                 },
                 {
-                    name: "中位PE", //十年前国债收益率倒数
+                    name: "中位PE", //十年前国债收益率
                     type: "line",
                     xAxisIndex: 2,
                     yAxisIndex: 4,
@@ -1040,6 +1106,39 @@
                     showSymbol: false,
                     lineStyle: {
                         width: 1.1,
+                        color: "black",
+                    },
+                },
+                {
+                    name: "美债", //美十年前国债收益率
+                    type: "line",
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    zlevel: 1,
+                    data: Y10日.filter((ele, index, datasArr) => { //月最后一天
+                        // var d = new Date(ele[0])
+                        // var n = d.getDay()
+                        // if(n==5) return true //周5
+                        // if(datasArr.length-1 == index) return true
+                        // return true
+                        currentMonth = ele[0].substring(5, 7)
+                        if (index < datasArr.length - 1) {
+                            nextMonth = datasArr[index + 1][0].substring(5, 7) 
+                            return currentMonth != nextMonth
+                        } else {
+                            return true
+                        }
+                    })
+                        .map(ele => {
+                            return [ele[0], (parseFloat(ele[1])).toFixed(2)]
+                        }).filter((item) => {
+                            return parseFloat(item[0].substring(0, 4)) >= 2005;
+                        }).addStartEnd(),
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: {
+                        type: 'dotted',
+                        width: 1,
                         color: "black",
                     },
                 },
@@ -1061,7 +1160,7 @@
                         return 8
                     },
                     zlevel: 3,
-                    data:  日期高位.addStartEnd()
+                    data: 日期高位.addStartEnd()
                 },
                 {
                     name: '大盘策略',
@@ -1092,7 +1191,7 @@
                     lineStyle: {
                         width: 1,
                         color: "#ff66cc",
-                        
+
                     },
                     zlevel: 1,
                     markLine: {
@@ -1305,7 +1404,7 @@
 
 
 
-               {
+                {
                     name: "MM制造业",
                     type: "line",
                     xAxisIndex: 3,
@@ -1322,17 +1421,17 @@
                             {
                                 lineStyle: {
                                     width: 0.5,
-                                    type:"solid",
+                                    type: "solid",
                                     color: "black",
                                 },
-                               
+
                                 yAxis: 0, // 标线值
                             }
                         ]
                     },
                     zlevel: 1,
                     data: MM制造业指标.map((item) => {
-                        item[1] =item[1]*10
+                        item[1] = item[1] * 10
                         return item
                     }).addStartEnd()
                 },
@@ -1377,12 +1476,12 @@
                     itemStyle: {
                         normal: {
                             areaStyle: {
-                                color: "#87c5cf" // "#57aacb",
+                                color: "#a3d4ff" // "#57aacb",
                             },
                         },
                         emphasis: {
                             areaStyle: {
-                                color: "#87c5cf",
+                                color: "#a3d4ff",
                             },
                         },
                     },
@@ -1407,12 +1506,12 @@
                     itemStyle: {
                         normal: {
                             areaStyle: {
-                                color: "#87c5cf" // "#57aacb",
+                                color: "#a3d4ff"//"#87c5cf" // "#57aacb",
                             },
                         },
                         emphasis: {
                             areaStyle: {
-                                color: "#87c5cf",
+                                color: "#a3d4ff",
                             },
                         },
                     },
@@ -1447,12 +1546,12 @@
                 option.yAxis[4].inverse = true
                 option.yAxis[4].interval = 1.5
 
-                params.selected["300股债差"] = false
+                params.selected["股债差"] = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
 
-            if (params.name === "300股债差" && params.selected["300股债差"] === true) {
+            if (params.name === "股债差" && params.selected["股债差"] === true) {
                 option.yAxis[4].max = 9
                 option.yAxis[4].min = 0
                 option.yAxis[4].inverse = true
@@ -1481,7 +1580,7 @@
             //     option.legend.selected = params.selected
             //     myChart.setOption(option)
             // }
-            
+
 
         })
 
@@ -1508,6 +1607,14 @@
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "中位PE"
+            });
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "恒指美债差"
+            });
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "美债"
             });
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
