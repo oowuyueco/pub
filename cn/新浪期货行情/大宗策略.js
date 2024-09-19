@@ -4509,6 +4509,39 @@ var triggerLogObj大宗={
             },
             "trig1AtIndex": 1495,
             "trig1Fucked": false
+        },
+        {
+            "name": "红枣连续",
+            "trig1Date": "2024-09-19",
+            "trig1Data": {
+                "date": "2024-09-19",
+                "open": 9205,
+                "high": 9460,
+                "low": 9125,
+                "close": 9450,
+                "volume": 63716,
+                "hold": 69791,
+                "settle": 9325,
+                "K": 29.762955562338743,
+                "D": 19.474637916623813,
+                "J": 50.3395908537686,
+                "diff": -283.2065723357682,
+                "dea": -255.56676839523797,
+                "bar": -55.279607881060485,
+                "mas": 9799.5,
+                "ups": 10582.212590929774,
+                "lows": 9016.787409070226,
+                "averagePrice": null,
+                "bias": {
+                    "bias1": 1.033499643620806,
+                    "bias2": -0.848124508175227,
+                    "bias3": -4.08728564481002
+                },
+                "curtPercent": 2.66,
+                "curtAmp": 73.13
+            },
+            "trig1AtIndex": 1307,
+            "trig1Fucked": false
         }
     ],
     "低位KDJ": [
@@ -9428,4 +9461,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-09-18"
+var runLastKlineDate = "2024-09-19"
