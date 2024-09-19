@@ -38,6 +38,11 @@
             //统一数据
             let dayDatas = window[dataName]
             if (site == "sina") {
+                if (!dayDatas[0]?.timestamp)
+                    dayDatas = dayDatas.map(function (data) {
+                        data.timestamp = new Date(data.date).getTime()
+                        return data
+                    })
             }
             if (site == "xueqiu") {
                 dayDatas = dayDatas.data.item.map(function (data) {
@@ -50,7 +55,7 @@
                         close: data[5],
                         percent: data[7],
                         volume: Math.ceil(+data[1]),
-                        turnover:0
+                        turnover: 0
                     }
                 })
             }
@@ -154,7 +159,7 @@
                     })
                 },
             })
-                   
+
             klinecharts.registerIndicator({
                 name: 'newBias',
                 shortName: 'newBias',
@@ -311,7 +316,7 @@
                 }
 
                 let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close")
-                currentDayList=calculationBias(currentDayList)
+                currentDayList = calculationBias(currentDayList)
 
                 let currentWeekList = dayToPeriod(currentDayList, "week").calKdj()
                 let currentMonthList = dayToPeriod(currentDayList, "month").calKdj()
