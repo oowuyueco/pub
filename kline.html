@@ -9,6 +9,41 @@
     <script type="text/javascript" src="./js/klinecharts.min.js"></script>
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
+    <script>
+        //从后往前N 包含当前的前N个  cnindex
+        Array.prototype.cal9转 = function (当前交易日期, priod, N = 5) {
+            var candleList = this
+            if (candleList.length < 20) return candleList
+
+            for (let endIndex = candleList.length - 1; candleList.length - N <= endIndex; endIndex--) {
+
+                if (endIndex == candleList.length - 1) {
+                    if (priod == "week" && new Date(当前交易日期).getDay() < 3) continue
+                    if (priod == "month" && +当前交易日期.substring(8, 10) < 18) continue
+                }
+
+                let is9转up = true
+                let is9转down = true
+                for (var i = 0; i <= 8; i++) {
+                    is9转down = is9转down && (candleList[endIndex - i - 4].close > candleList[endIndex - i].close)
+                    is9转up = is9转up && (candleList[endIndex - i - 4].close < candleList[endIndex - i].close)
+                }
+
+                if (is9转up) {
+                    for (var i = 0; i <= 8; i++)
+                        candleList[endIndex - i]["is9转up"] = 9 - i
+                    //break
+                }
+                if (is9转down) {
+                    for (var i = 0; i <= 8; i++)
+                        candleList[endIndex - i]["is9转down"] = 9 - i
+                    //break
+                }
+            }
+
+            return candleList
+        }
+    </script>
 </head>
 
 <body style="margin: 0;height: 100%">
@@ -75,11 +110,11 @@
             }
 
             klinecharts.registerIndicator({
-                name: 'MyMa',
-                shortName: 'MyMa',
+                name: 'newMa',
+                shortName: 'newMa',
                 calcParams: [3],
                 figures: [
-                    { key: 'MyMa', title: 'MyMa: ', type: 'line' },
+                    { key: 'newMa', title: 'newMa: ', type: 'line' },
                 ],
 
                 styles: {
@@ -95,13 +130,13 @@
 
                 calc: (kLineDataList, { calcParams, figures }) => {
                     return kLineDataList.map(kLineData => {
-                        return { MyMa: kLineData.ma3 }
+                        return { newMa: kLineData.ma3 }
                     })
                 }
             })
             klinecharts.registerIndicator({
-                name: 'MyBOLL',
-                shortName: 'MyBOLL',
+                name: 'newBOLL',
+                shortName: 'newBOLL',
                 calcParams: [],
                 figures: [
                     { key: 'ups', title: 'ups: ', type: 'line' },
@@ -159,7 +194,6 @@
                     })
                 },
             })
-
             klinecharts.registerIndicator({
                 name: 'newBias',
                 shortName: 'newBias',
@@ -176,6 +210,26 @@
                             "bias1": kLineData.bias.bias1,
                             "bias2": kLineData.bias.bias2,
                             "bias3": kLineData.bias.bias3,
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'new9转',
+                shortName: 'new9转',
+                calcParams: [],
+                figures: [
+                    { key: 'is9转up', title: 'is9转up', type: 'bar' },
+                    { key: 'is9转down', title: 'is9转down', type: 'bar' },
+
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        return {
+                            "is9转up": kLineData.is9转up,
+                            "is9转down": kLineData.is9转down,
+
                         }
                     })
                 }
@@ -252,16 +306,20 @@
             let dayNewKdj = chartDay.createIndicator('newKDJ')
             let dayMacd = chartDay.createIndicator('MACD')
             let dayNewBias = chartDay.createIndicator('newBias')
+            let dayNew9转 = chartDay.createIndicator('new9转')
             // let dayBias = chartDay.createIndicator('BIAS')
-            // let chartDayMyMa3 = chartDay.createIndicator({ name: "MyMa" }, true, { id: 'candle_pane' })
-            // let chartDayMyBOLL = chartDay.createIndicator({ name: "MyBOLL" }, true, { id: 'candle_pane' })
+            // let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            // let chartDayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
 
             let weekNewKdj = chartWeek.createIndicator('newKDJ')
             let weekMacd = chartWeek.createIndicator('MACD')
             let weekBias = chartWeek.createIndicator('BIAS')
+            let weekNew9转 = chartWeek.createIndicator('new9转')
 
             let monthNewKdj = chartMonth.createIndicator('newKDJ')
             let monthMacd = chartMonth.createIndicator('MACD')
+            let monthNewBias = chartMonth.createIndicator('newBias')
+            let monthNew9转 = chartMonth.createIndicator('new9转')
 
             document.addEventListener("keydown", function (event) {
                 if (event.keyCode === 37) endIndex--
@@ -315,11 +373,14 @@
                     return
                 }
 
-                let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close")
+                let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close").cal9转()
                 currentDayList = calculationBias(currentDayList)
 
-                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj()
-                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj()
+                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转()
+
+                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转()
+                currentMonthList = calculationBias(currentMonthList)
+
                 if (noChart) {
                 } else {
                     chartDay.applyNewData(currentDayList)

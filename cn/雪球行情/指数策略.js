@@ -16,7 +16,11 @@ var triggerLogObj指数 = {
       "日周低位九转"
     ],
     "2005-06-06": [
-      "上证低位KDJ"
+      "上证低位KDJ",
+      "日周低位九KDJ"
+    ],
+    "2005-06-07": [
+      "日周低位九KDJ"
     ],
     "2005-07-12": [
       "上证低位KDJ"
@@ -334,12 +338,19 @@ var triggerLogObj指数 = {
     "2011-10-12": [
       "上证低位KDJ",
       "沪深300低位KDJ",
-      "上证50低位KDJ"
+      "上证50低位KDJ",
+      "日周低位九KDJ"
+    ],
+    "2011-10-13": [
+      "日周低位九KDJ"
     ],
     "2011-10-25": [
       "上证低位KDJ",
       "沪深300低位KDJ",
       "上证50低位KDJ"
+    ],
+    "2012-08-02": [
+      "日周低位九KDJ"
     ],
     "2012-08-27": [
       "日周低位九转"
@@ -352,6 +363,12 @@ var triggerLogObj指数 = {
     ],
     "2012-08-31": [
       "日周低位九转"
+    ],
+    "2012-09-03": [
+      "日周低位九KDJ"
+    ],
+    "2012-09-04": [
+      "日周低位九KDJ"
     ],
     "2012-09-05": [
       "日周低位九转"
@@ -543,7 +560,8 @@ var triggerLogObj指数 = {
       "周月低位九转"
     ],
     "2022-11-02": [
-      "上证低位KDJ"
+      "上证低位KDJ",
+      "日周低位九KDJ"
     ],
     "2023-01-30": [
       "日周高位九转"
@@ -569,9 +587,30 @@ var triggerLogObj指数 = {
     ],
     "2024-02-07": [
       "上证低位KDJ"
+    ],
+    "2024-09-18": [
+      "日周低位九KDJ"
+    ],
+    "2024-09-19": [
+      "日周低位九KDJ"
     ]
   },
   "恒生低位KDJ": [
+    {
+      "trigDate": "1998-07-15",
+      "quantName": "恒生低位KDJ",
+      "percent": 3.39
+    },
+    {
+      "trigDate": "1998-09-07",
+      "quantName": "恒生低位KDJ",
+      "percent": 7.86
+    },
+    {
+      "trigDate": "1998-09-24",
+      "quantName": "恒生低位KDJ",
+      "percent": 4.4
+    },
     {
       "trigDate": "2001-09-04",
       "quantName": "恒生低位KDJ",
@@ -820,6 +859,58 @@ var triggerLogObj指数 = {
       "trigDate": "2024-02-05",
       "quantName": "日周低位九转",
       "trueCount": 3
+    }
+  ],
+  "日周低位九KDJ": [
+    {
+      "trigDate": "2005-06-06",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2005-06-07",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2011-10-12",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2011-10-13",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-08-02",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-09-03",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-09-04",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-11-02",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 7
+    },
+    {
+      "trigDate": "2024-09-18",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2024-09-19",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
     }
   ],
   "日月高位九转": [
@@ -1945,4 +2036,4 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2024-09-24"
+var runLastKlineDate = "2024-09-26"
