@@ -741,6 +741,9 @@ var triggerLogObj美股指数 = {
     ],
     "2024-07-11": [
       "纳指高位空但"
+    ],
+    "2024-09-25": [
+      "道琼斯高位空但"
     ]
   },
   "日周月高位九转": [
@@ -1862,6 +1865,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2024-03-22",
       "quantName": "道琼斯高位空但",
       "percent": -0.77
+    },
+    {
+      "trigDate": "2024-09-25",
+      "quantName": "道琼斯高位空但",
+      "percent": -0.7
     }
   ],
   "周月高位九转": [
@@ -2238,4 +2246,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2024-09-24"
+var runLastKlineDate = "2024-09-25"
