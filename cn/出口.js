@@ -1170,6 +1170,10 @@ let 出口 = [
     [
         "2024-07-28",
         "7.0000"
+    ],
+    [
+        "2024-08-28",
+        "8.7000"
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
