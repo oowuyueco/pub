@@ -56,27 +56,26 @@
 
         let 中美汇率Day同比 = 中美汇率Day
             .filter((ele, index, datasArr) => {
+                return true
+
                 // var d = new Date(ele[0])
                 // var n = d.getDay()
                 // if(n==5) return true //周5
                 // if(datasArr.length-1 == index) return true
 
-                return true
-
-                currentMonth = ele[0].substring(5, 7)//月最后一天
-                if (index < datasArr.length - 1) {
-                    nextMonth = datasArr[index + 1][0].substring(5, 7)
-                    return currentMonth != nextMonth
-                } else {
-                    return true
-                }
+                // currentMonth = ele[0].substring(5, 7)//月最后一天
+                // if (index < datasArr.length - 1) {
+                //     nextMonth = datasArr[index + 1][0].substring(5, 7)
+                //     return currentMonth != nextMonth
+                // } else {
+                //     return true
+                // }
             })
             .map((ele, index, datasArr) => { // yoY 同比
-                let preYear = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
+                let preYearMonthDay = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
                 let preItem = datasArr.find(element => {
-                    return element[0] == preYear
+                    return element[0] == preYearMonthDay
                 })
-
                 if (!preItem) { //去原始数据找
                     let currentDayInt = parseInt(ele[0].substring(8, 10))
                     let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
@@ -96,19 +95,22 @@
                 if (preItem) {
                     preItem[1] = parseFloat(preItem[1])
                     ele[1] = parseFloat(ele[1])
-                    yoY = preItem[1] ? (ele[1] - preItem[1]) / preItem[1] : ""
+                    yoY = preItem[1] ? ((ele[1] - preItem[1]) / preItem[1]) * 100 : ""
                 }
-                return [ele[0], yoY * 100]
+                return [ele[0], yoY]
             })
             .map((item, index, datasArr) => {
-                //return item
-                if (index < datasArr.length - 1) {
-                    item[0] = item[0]
-                    item[1] = -item[1]
-                }
+                if (item[1] !== "") item[1] = -item[1]
                 return item
+                // ??????
+                // if (index < datasArr.length - 1) {
+                //     item[0] = item[0]
+                //     item[1] = -item[1]
+                // }
             })
+
         //中美汇率Day同比 = 中美汇率Day同比.chartDataMaN(4)
+        //console.log("中美汇率Day同比", 中美汇率Day同比)
 
         let 信贷脉冲_MA = 信贷脉冲.chartDataMaN(4)
         //console.log(信贷脉冲_MA,信贷脉冲)
