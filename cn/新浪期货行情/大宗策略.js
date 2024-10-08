@@ -8035,7 +8035,14 @@ var triggerLogObj大宗={
                     4.86,
                     4.27
                 ],
-                "lastDay": 10
+                "day11LowUp": [
+                    "1,2024-09-12",
+                    -0.52,
+                    "4,2024-09-19",
+                    4.86,
+                    3.32
+                ],
+                "lastDay": 11
             }
         },
         {
@@ -8082,14 +8089,14 @@ var triggerLogObj大宗={
             "trigIndex": 2787,
             "trigcalType": "周月九转",
             "logProfileN": {
-                "day9LowUp": [
+                "day10LowUp": [
                     "5,2024-09-23",
                     -4.05,
-                    "9,2024-09-27",
-                    9.32,
-                    9.32
+                    "10,2024-09-30",
+                    20.55,
+                    20.55
                 ],
-                "lastDay": 9
+                "lastDay": 10
             }
         },
         {

@@ -249,19 +249,19 @@
             let next1kline = [
                 date,
                 0,//open
-                +profileN.nextFirstDelivery周三.close.split(",")[2],//close
-                +profileN.nextFirstDelivery周三.low.split(",")[2],//low
-                +profileN.nextFirstDelivery周三.high.split(",")[2],//up
-                +profileN.nextFirstDelivery周三.close.split(",")[1],//close 点位变化
+                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
             ]
 
             let next2kline = [
                 date,
                 0,//open
-                +profileN.nextSecondDelivery周三.close.split(",")[2],//close
-                +profileN.nextSecondDelivery周三.low.split(",")[2],//low
-                +profileN.nextSecondDelivery周三.high.split(",")[2],//up
-                +profileN.nextSecondDelivery周三.close.split(",")[1],//close 点位变化
+                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
             ]
 
             if (trig策略s[0].includes("高位") && profileN.hasOwnProperty("nextFirstDelivery周三") && +date.substring(0, 4) > 2008)
@@ -418,7 +418,7 @@
                 formatter: function (params, ticket, callback) {
                     //trigger: "item", 时候才有效
                     //if (params.seriesName && params.seriesName.includes("策略")) {
-                    return params.seriesName + params.data
+                    return params.seriesName + ": " + params.data
                     //}
                 },
             },
