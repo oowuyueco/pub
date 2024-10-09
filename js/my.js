@@ -714,6 +714,15 @@ function PtPAmp(prePeriodItem, currentPeriodItem) {
 }
 
 
+//js垫片扩展
+if (!Array.prototype.toSpliced) {
+    Array.prototype.toSpliced = function (start, deleteCount, ...items) {
+        const copy = this.slice();
+        copy.splice(start, deleteCount, ...items);
+        return copy;
+    };
+}
+
 //nodejs 导出
 if (typeof module !== "undefined" && module.exports) {
     const fs = require('fs');

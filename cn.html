@@ -55,7 +55,7 @@
         MV         内外最底部            内M最大_信贷&M1          外M最大_汇率
 
         */
-        console.log("cn抓取日期=", cn抓取日期)
+        console.log("cn数据抓取日期=", cn抓取日期)
 
         let PPI_MA = PPI.chartDataMaN(4)
 
@@ -154,27 +154,26 @@
         //https://finance.sina.com.cn/money/forex/hq/DINIW.shtml
         let 中美汇率Day同比 = 中美汇率Day
             .filter((ele, index, datasArr) => {
+                return true
+
                 // var d = new Date(ele[0])
                 // var n = d.getDay()
                 // if(n==5) return true //周5
                 // if(datasArr.length-1 == index) return true
 
-                return true
-
-                currentMonth = ele[0].substring(5, 7)//月最后一天
-                if (index < datasArr.length - 1) {
-                    nextMonth = datasArr[index + 1][0].substring(5, 7)
-                    return currentMonth != nextMonth
-                } else {
-                    return true
-                }
+                // currentMonth = ele[0].substring(5, 7)//月最后一天
+                // if (index < datasArr.length - 1) {
+                //     nextMonth = datasArr[index + 1][0].substring(5, 7)
+                //     return currentMonth != nextMonth
+                // } else {
+                //     return true
+                // }
             })
             .map((ele, index, datasArr) => { // yoY 同比
-                let preYear = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
+                let preYearMonthDay = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
                 let preItem = datasArr.find(element => {
-                    return element[0] == preYear
+                    return element[0] == preYearMonthDay
                 })
-
                 if (!preItem) { //去原始数据找
                     let currentDayInt = parseInt(ele[0].substring(8, 10))
                     let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
@@ -194,17 +193,18 @@
                 if (preItem) {
                     preItem[1] = parseFloat(preItem[1])
                     ele[1] = parseFloat(ele[1])
-                    yoY = preItem[1] ? (ele[1] - preItem[1]) / preItem[1] : ""
+                    yoY = preItem[1] ? ((ele[1] - preItem[1]) / preItem[1]) * 100 : ""
                 }
-                return [ele[0], yoY * 100]
+                return [ele[0], yoY]
             })
             .map((item, index, datasArr) => {
-                //return item
-                if (index < datasArr.length - 1) {
-                    item[0] = item[0]
-                    item[1] = -item[1]
-                }
+                if (item[1] !== "") item[1] = -item[1]
                 return item
+                // ??????
+                // if (index < datasArr.length - 1) {
+                //     item[0] = item[0]
+                //     item[1] = -item[1]
+                // }
             })
         //中美汇率Day同比 = 中美汇率Day同比.chartDataMaN(4)
 
@@ -306,7 +306,6 @@
                 profileN = triggerLogObj指数.按日期排序[date].pop()
 
             let trig策略s = triggerLogObj指数.按日期排序[date]
-            console.log(date,trig策略s)
 
             if (trig策略s[0].includes("高位")) {
                 日期高位.push([date, trig策略s.length, trig策略s])
@@ -316,6 +315,7 @@
                 日期低位.push([date, trig策略s.length, trig策略s])
             }
         }
+        console.log("沪深300最新日期=", 沪深300[沪深300.length-1])
     </script>
 
 </head>
@@ -1124,7 +1124,7 @@
                         // return true
                         currentMonth = ele[0].substring(5, 7)
                         if (index < datasArr.length - 1) {
-                            nextMonth = datasArr[index + 1][0].substring(5, 7) 
+                            nextMonth = datasArr[index + 1][0].substring(5, 7)
                             return currentMonth != nextMonth
                         } else {
                             return true

@@ -29,7 +29,7 @@
     <script type="text/javascript" src="./us/Y10日,Y2日.js"></script>
 
     <script>
-        console.log("us抓取日期=", us抓取日期)
+        console.log("us数据抓取日期=", us抓取日期)
 
         us原油 = us原油.data
         us白糖 = us白糖.data
@@ -38,7 +38,7 @@
             if (item白糖) return [stampToDate(item原油[0]), item原油[4] / item白糖[4]]
             else return [item原油[0], ""]
         })
-        console.log("油糖比", 油糖比)
+       
 
         //美元指数同比 铜金比同比  糖油比同比 未用
         let 美元指数同比 = 美元指数Day
@@ -109,6 +109,7 @@
                 美股日期低位.push([date, trig策略s.length, trig策略s])
             }
         }
+        console.log("标普500最新日期", 标普500[标普500.length-1])
     </script>
 
 </head>
