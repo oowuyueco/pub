@@ -364,6 +364,9 @@ var triggerLogObj大宗={
         "2024-09-12": [
             "低位九转_周月九转_焦煤连续",
             "低位九转_日月九转_苹果连续"
+        ],
+        "2024-10-09": [
+            "低位KDJ_红枣连续"
         ]
     },
     "高位KDJ": [
@@ -4510,7 +4513,7 @@ var triggerLogObj大宗={
                 "curtAmp": 73.13
             },
             "trig1AtIndex": 1307,
-            "trig1Fucked": false
+            "trig1Fucked": true
         }
     ],
     "低位KDJ": [
@@ -6686,6 +6689,27 @@ var triggerLogObj大宗={
                     -9.24
                 ]
             }
+        },
+        {
+            "quantName": "低位KDJ",
+            "dataName": "红枣连续",
+            "dataType": "农业",
+            "fuckTrig1": [
+                "2024-09-19",
+                9,
+                3.39
+            ],
+            "trigDate": "2024-10-09",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
         }
     ],
     "低位九转": [
@@ -8035,14 +8059,14 @@ var triggerLogObj大宗={
                     4.86,
                     4.27
                 ],
-                "day12LowUp": [
+                "day13LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "4,2024-09-19",
                     4.86,
-                    -0.87
+                    -0.58
                 ],
-                "lastDay": 12
+                "lastDay": 13
             }
         },
         {
@@ -8096,14 +8120,14 @@ var triggerLogObj大宗={
                     20.55,
                     20.55
                 ],
-                "day11LowUp": [
+                "day12LowUp": [
                     "5,2024-09-23",
                     -4.05,
                     "10,2024-09-30",
                     20.55,
-                    15.52
+                    14.27
                 ],
-                "lastDay": 11
+                "lastDay": 12
             }
         },
         {
@@ -8675,14 +8699,14 @@ var triggerLogObj大宗={
                     5.41,
                     3.86
                 ],
-                "day11LowUp": [
+                "day12LowUp": [
                     "11,2024-10-08",
                     -0.36,
                     "3,2024-09-19",
                     5.41,
-                    -0.36
+                    -0.06
                 ],
-                "lastDay": 11
+                "lastDay": 12
             }
         },
         {
@@ -8724,4 +8748,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-10-08"
+var runLastKlineDate = "2024-10-09"
