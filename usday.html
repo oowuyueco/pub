@@ -882,15 +882,7 @@
                     showSymbol: false,
                     silent: true,
                     zlevel: 2,
-                    data: 纳指.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.open ? item.open : ""
-                        tmp[2] = item.close ? item.close : ""
-                        tmp[3] = item.low ? item.low : ""
-                        tmp[4] = item.high ? item.high : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
+                    data: 纳指.ohlc2oclh().filterAndAddStartEnd()
                 },
                 {
                     name: '标普500',
@@ -900,15 +892,7 @@
                     showSymbol: false,
                     silent: true,
                     zlevel: 2,
-                    data: 标普500.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.open ? item.open : ""
-                        tmp[2] = item.close ? item.close : ""
-                        tmp[3] = item.low ? item.low : ""
-                        tmp[4] = item.high ? item.high : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
+                    data: 标普500.ohlc2oclh().filterAndAddStartEnd()
                 },
                 {
                     name: '上证',
@@ -918,15 +902,7 @@
                     showSymbol: false,
                     silent: true,
                     zlevel: 2,
-                    data: 上证.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.open ? item.open : ""
-                        tmp[2] = item.close ? item.close : ""
-                        tmp[3] = item.low ? item.low : ""
-                        tmp[4] = item.high ? item.high : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
+                    data: 上证.ohlc2oclh().filterAndAddStartEnd()
                 },
                 {
                     name: '沪深300',
@@ -936,15 +912,7 @@
                     showSymbol: false,
                     silent: true,
                     zlevel: 2,
-                    data: 沪深300.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.open ? item.open : ""
-                        tmp[2] = item.close ? item.close : ""
-                        tmp[3] = item.low ? item.low : ""
-                        tmp[4] = item.high ? item.high : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
+                    data: 沪深300.ohlc2oclh().filterAndAddStartEnd()
                 },
 
             ]

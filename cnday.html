@@ -249,31 +249,37 @@
             let next1kline = [
                 date,
                 0,//open
-                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
-                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
                 profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+
+                profileN.nextSecondDelivery周三 ? "nextSecondDelivery周三" : `after${profileN.after.close.split("->")[0]}`,
                 profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+
             ]
 
             let next2kline = [
                 date,
                 0,//open
-                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
-                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
                 profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+
+                profileN.nextSecondDelivery周三 ? "nextSecondDelivery周三" : `after${profileN.after.close.split("->")[0]}`,
                 profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+
             ]
 
-            if (trig策略s[0].includes("高位") && profileN.hasOwnProperty("nextFirstDelivery周三") && +date.substring(0, 4) > 2008)
+            if (trig策略s[0].includes("高位") && (profileN.hasOwnProperty("nextFirstDelivery周三") || profileN.hasOwnProperty("after")) && +date.substring(0, 4) > 2008)
                 高位next1.push(next1kline)
 
-            if (trig策略s[0].includes("高位") && profileN.hasOwnProperty("nextSecondDelivery周三") && +date.substring(0, 4) > 2008)
+            if (trig策略s[0].includes("高位") && (profileN.hasOwnProperty("nextSecondDelivery周三") || profileN.hasOwnProperty("after")) && +date.substring(0, 4) > 2008)
                 高位next2.push(next2kline)
 
-            if (trig策略s[0].includes("低位") && profileN.hasOwnProperty("nextFirstDelivery周三"))
+            if (trig策略s[0].includes("低位") && (profileN.hasOwnProperty("nextFirstDelivery周三") || profileN.hasOwnProperty("after")))
                 低位next1.push(next1kline)
 
-            if (trig策略s[0].includes("低位") && profileN.hasOwnProperty("nextSecondDelivery周三"))
+            if (trig策略s[0].includes("低位") && (profileN.hasOwnProperty("nextSecondDelivery周三") || profileN.hasOwnProperty("after")))
                 低位next2.push(next2kline)
         }
 
@@ -283,7 +289,7 @@
                 const ele = oldArr[index]
                 if (index == 0)
                     arrNew.push(ele)
-                else if (dateToStamp(arrNew[arrNew.length - 1][0]) + 10 * 86400000 < dateToStamp(ele[0])) //10day
+                else if (dateToStamp(arrNew[arrNew.length - 1][0]) + 10 * 86400000 < dateToStamp(ele[0])) //10day 过滤10天以内的
                     arrNew.push(ele)
             }
             return arrNew
@@ -312,7 +318,7 @@
             let mostUp60orLast = item.day60LowUp ? item.day60LowUp[3] : item[`day${item.lastDay}LowUp`][3]
             let close60orLast = item.day60LowUp ? item.day60LowUp[4] : item[`day${item.lastDay}LowUp`][4]
 
-            return [ele.trigDate, 0, close60orLast, mostLow60orLast, mostUp60orLast, ele.dataName, ele?.trigcalType, ele?.testInfo]
+            return [ele.trigDate, 0, mostUp60orLast, mostLow60orLast, close60orLast, ele.dataName, ele?.trigcalType, item.day60LowUp ? 60 : item.lastDay]
         }
         let 大宗高位KDJ = triggerLogObj大宗.高位KDJ.map((ele) => toKline(ele))
         let 大宗高位九转 = triggerLogObj大宗.高位九转.map((ele) => toKline(ele))
@@ -325,7 +331,7 @@
         )
         console.log(
             "大宗低位KDJ", 大宗低位KDJ.sort((a, b) => a[3] - b[3]),
-            "大宗低位九转", 大宗低位九转.sort((a, b) => a[3] - b[3]),
+            "大宗低位九转", 大宗低位九转.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0])),
             // a[5].localeCompare(b[5], 'zh-Hans-CN', { sensitivity: 'accent' })
             // dateToStamp(a[0]) - dateToStamp(b[0])
         )
@@ -976,17 +982,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 大宗高位KDJ.map((item) => {
-                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
-                        let tmp = []
-                        tmp[0] = item[0] //date
-                        tmp[1] = item[1] //open
-                        tmp[2] = item[2] //close
-                        tmp[3] = item[3] //low
-                        tmp[4] = item[4] //up
-                        tmp[5] = item[5] //name
-                        return tmp
-                    }).filterAndAddStartEnd(),
+                    data: 大宗高位KDJ.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
                 {
@@ -995,17 +991,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 大宗高位九转.map((item) => {
-                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
-                        let tmp = []
-                        tmp[0] = item[0] //date
-                        tmp[1] = item[1] //open
-                        tmp[2] = item[2] //close
-                        tmp[3] = item[3] //low
-                        tmp[4] = item[4] //up
-                        tmp[5] = item[5] //name
-                        return tmp
-                    }).filterAndAddStartEnd(),
+                    data: 大宗高位九转.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
 
@@ -1015,17 +1001,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 大宗低位KDJ.map((item) => {
-                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
-                        let tmp = []
-                        tmp[0] = item[0] //date
-                        tmp[1] = item[1] //open
-                        tmp[2] = item[2] //close
-                        tmp[3] = item[3] //low
-                        tmp[4] = item[4] //up
-                        tmp[5] = item[5] //name
-                        return tmp
-                    }).filterAndAddStartEnd(),
+                    data: 大宗低位KDJ.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
                 {
@@ -1034,17 +1010,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 大宗低位九转.map((item) => {
-                        // [item.trig12Date, 0, close60orLast, mostLow60orLast, mostUp60orLast, item.name]
-                        let tmp = []
-                        tmp[0] = item[0] //date
-                        tmp[1] = item[1] //open
-                        tmp[2] = item[2] //close
-                        tmp[3] = item[3] //low
-                        tmp[4] = item[4] //up
-                        tmp[5] = item[5] //name
-                        return tmp
-                    }).filterAndAddStartEnd(),
+                    data: 大宗低位九转.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
 
@@ -1057,7 +1023,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 高位next1.filterAndAddStartEnd()
+                    data: 高位next1.ohlc2oclh().filterAndAddStartEnd()
                 },
                 {
                     name: '高位next2',
@@ -1066,7 +1032,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 高位next2.filterAndAddStartEnd()
+                    data: 高位next2.ohlc2oclh().filterAndAddStartEnd()
                 },
 
                 {
@@ -1076,7 +1042,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 低位next1.filterAndAddStartEnd()
+                    data: 低位next1.ohlc2oclh().filterAndAddStartEnd()
                 },
                 {
                     name: '低位next2',
@@ -1085,7 +1051,7 @@
                     xAxisIndex: 0,
                     yAxisIndex: 0,
                     zlevel: 3,
-                    data: 低位next2.filterAndAddStartEnd()
+                    data: 低位next2.ohlc2oclh().filterAndAddStartEnd()
                 },
 
 
@@ -1465,15 +1431,7 @@
                     showSymbol: false,
                     silent: true,
                     zlevel: 2,
-                    data: 上证.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.open ? item.open : ""
-                        tmp[2] = item.close ? item.close : ""
-                        tmp[3] = item.low ? item.low : ""
-                        tmp[4] = item.high ? item.high : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
+                    data: 上证.ohlc2oclh().filterAndAddStartEnd()
                 },
                 {
                     name: '沪深300',
@@ -1483,15 +1441,7 @@
                     showSymbol: false,
                     silent: true,
                     zlevel: 2,
-                    data: 沪深300.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.open ? item.open : ""
-                        tmp[2] = item.close ? item.close : ""
-                        tmp[3] = item.low ? item.low : ""
-                        tmp[4] = item.high ? item.high : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
+                    data: 沪深300.ohlc2oclh().filterAndAddStartEnd()
                 },
 
             ]

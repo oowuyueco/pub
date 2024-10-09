@@ -449,6 +449,45 @@ Array.prototype.chartDataMaN = function (MA, dataIndex = 1) {
     return dataList
 }
 
+//标准kline to echartKline
+Array.prototype.ohlc2oclh = function () {
+    let dataList = this
+    if (dataList.length == 0) return dataList
+
+    if (dataList[0]?.open === undefined) {
+        dataList = dataList.map((item, index) => {
+            let tmp = []
+            tmp[0] = item[0] //date
+            tmp[1] = item[1] //open
+            tmp[2] = item[4] //close
+            tmp[3] = item[3] //low
+            tmp[4] = item[2] //high
+            for (let ii = 5; ii < item.length; ii++) {
+                tmp[ii] = item[ii]
+            }
+            return tmp
+        })
+    }
+    else {
+
+        let keys = Object.keys(dataList[0])
+        dataList = dataList.map((item, index) => {
+            let tmp = []
+            tmp[0] = item.date
+            tmp[1] = item.open ? item.open : ""
+            tmp[2] = item.close ? item.close : ""
+            tmp[3] = item.low ? item.low : ""
+            tmp[4] = item.high ? item.high : ""
+            for (let ii = 5; ii < keys.length; ii++) {
+                tmp[ii] = item[keys[ii]]
+            }
+            return tmp
+        })
+    }
+
+    return dataList
+}
+
 //技术指标https://github.com/kimboqi/stock-indicators
 function dayToPeriod(dayIndexList, period) {
     let open, high, low, close, volume
