@@ -6701,14 +6701,14 @@ var triggerLogObj大宗={
             ],
             "trigDate": "2024-10-09",
             "logProfileN": {
-                "day1LowUp": [
-                    "",
-                    0,
+                "day2LowUp": [
+                    "2,2024-10-11",
+                    -1.74,
                     "1,2024-10-10",
                     0.1,
-                    0.1
+                    -1.74
                 ],
-                "lastDay": 1
+                "lastDay": 2
             }
         }
     ],
@@ -8059,14 +8059,14 @@ var triggerLogObj大宗={
                     4.86,
                     4.27
                 ],
-                "day14LowUp": [
+                "day15LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "4,2024-09-19",
                     4.86,
-                    -0.1
+                    0.27
                 ],
-                "lastDay": 14
+                "lastDay": 15
             }
         },
         {
@@ -8120,14 +8120,14 @@ var triggerLogObj大宗={
                     20.55,
                     20.55
                 ],
-                "day12LowUp": [
+                "day14LowUp": [
                     "5,2024-09-23",
                     -4.05,
                     "10,2024-09-30",
                     20.55,
-                    14.27
+                    15.71
                 ],
-                "lastDay": 12
+                "lastDay": 14
             }
         },
         {
@@ -8699,14 +8699,14 @@ var triggerLogObj大宗={
                     5.41,
                     3.86
                 ],
-                "day13LowUp": [
+                "day14LowUp": [
                     "11,2024-10-08",
                     -0.36,
                     "3,2024-09-19",
                     5.41,
-                    0.42
+                    0.79
                 ],
-                "lastDay": 13
+                "lastDay": 14
             }
         },
         {
@@ -8748,4 +8748,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-10-10"
+var runLastKlineDate = "2024-10-11"
