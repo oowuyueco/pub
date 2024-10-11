@@ -315,7 +315,7 @@
                 日期低位.push([date, trig策略s.length, trig策略s])
             }
         }
-        console.log("沪深300最新日期=", 沪深300[沪深300.length-1])
+        console.log("沪深300最新日期=", 沪深300[沪深300.length - 1])
     </script>
 
 </head>
@@ -357,6 +357,139 @@
 
         let gridbackgroundColor = "#f7f9fa"
         let splitLineColor = "#d8d8d8"
+        let grid默认 = [
+            { //ppi
+                left: 60,
+                right: 80,
+                top: "0%",
+                height: '17%',
+                show: true,
+
+            },
+
+            { //利润亏损
+                left: 60,
+                right: 80,
+                top: "17%",
+                height: '18%',
+                show: true,
+
+            },
+
+            { //股债  
+                left: 60,
+                right: 80,
+                top: "35%",
+                height: '23%',
+                show: true,
+            },
+            { //策略 
+                left: 60,
+                right: 80,
+                top: "35%",
+                height: '23%', // 23 or 43  
+                show: true,
+            },
+            { //股同比
+                left: 60,
+                right: 80,
+                top: "58%",
+                height: '20%',
+                show: true,
+            },
+            { //指数
+                left: 60,
+                right: 80,
+                top: "35%",
+                height: '43%', // 23 or 43  
+                show: true,
+            },
+
+
+            { //PMI
+                left: 60,
+                right: 80,
+                top: "58%",
+                height: '20%',
+                show: true,
+            },
+
+            { //M12 信贷
+                left: 60,
+                right: 80,
+                top: "78%",
+                height: '20%',
+                show: true,
+                //backgroundColor: gridbackgroundColor,
+            },
+        ]
+        let grid全屏 = [
+            { //ppi
+                left: 60,
+                right: 80,
+                top: "0%",
+                height: '17%',
+                show: true,
+
+            },
+
+            { //利润亏损
+                left: 60,
+                right: 80,
+                top: "17%",
+                height: '18%',
+                show: true,
+
+            },
+
+            { //股债  
+                left: 60,
+                right: 80,
+                top: "35%",
+                height: '15%',
+                show: true,
+            },
+            { //策略 
+                left: 60,
+                right: 80,
+                top: "35%",
+                height: '15%', // 23 or 43  
+                show: true,
+            },
+            { //股同比
+                left: 60,
+                right: 80,
+                top: "50%",
+                height: '13%',
+                show: true,
+            },
+            { //指数
+                left: 60,
+                right: 80,
+                top: "35%",
+                height: '28%', // 23 or 43  
+                show: true,
+            },
+
+
+            { //PMI
+                left: 60,
+                right: 80,
+                top: "63%",
+                height: '17%',
+                show: true,
+            },
+
+            { //M12 信贷
+                left: 60,
+                right: 80,
+                top: "80%",
+                height: '18%',
+                show: true,
+                //backgroundColor: gridbackgroundColor,  98
+            },
+        ]
+
         option = {
             title: {},
             tooltip: {
@@ -408,72 +541,7 @@
                 },
             ],
 
-            grid: [
-
-                { //ppi
-                    left: 60,
-                    right: 80,
-                    top: "0%",
-                    height: '17%',
-                    show: true,
-
-                },
-
-                { //利润亏损
-                    left: 60,
-                    right: 80,
-                    top: "17%",
-                    height: '18%',
-                    show: true,
-
-                },
-
-                { //股债  
-                    left: 60,
-                    right: 80,
-                    top: "35%",
-                    height: '23%',
-                    show: true,
-
-                },
-                { //PMI
-                    left: 60,
-                    right: 80,
-                    top: "58%",
-                    height: '20%',
-                    show: true,
-
-                },
-
-                { //M12 信贷
-                    left: 60,
-                    right: 80,
-                    top: "78%",
-                    height: '20%',
-                    show: true,
-                    //backgroundColor: gridbackgroundColor,
-                },
-
-
-
-                { //指数 单独
-                    left: 60,
-                    right: 80,
-                    top: "35%",
-                    height: '43%', // 23 or 43  
-                    show: true,
-                },
-
-                { //策略 单独
-                    left: 60,
-                    right: 80,
-                    top: "35%",
-                    height: '23%', // 23 or 43  
-                    show: true,
-                },
-
-
-            ],
+            grid: grid默认,
 
             xAxis: [
 
@@ -541,30 +609,8 @@
                         show: false
                     }
                 },
-
-                { //pmi
+                { //策略
                     gridIndex: 3,
-                    type: 'time',
-                    splitNumber: 20,
-                    splitLine: {
-                        show: true,
-                        lineStyle: {
-                            color: [splitLineColor]
-                        }
-                    },
-                    axisPointer: {
-                        show: true,
-                        label: {
-                            show: false,
-                        },
-                    },
-                    axisLabel: {
-                        show: false
-                    }
-                },
-
-                { //M
-                    gridIndex: 4,
                     type: "time",
                     splitNumber: 20,
                     splitLine: {
@@ -583,9 +629,27 @@
                         show: false
                     }
                 },
-
-
-                { //指数 单独  
+                { //股同比
+                    gridIndex: 4,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    }
+                },
+                { //指数  
                     gridIndex: 5,
                     type: 'time',
                     splitNumber: 20,
@@ -606,9 +670,29 @@
                     }
                 },
 
-
-                { //策略 单独
+                { //PMI
                     gridIndex: 6,
+                    type: "time",
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    }
+                },
+
+                { //M12 信贷
+                    gridIndex: 7,
                     type: "time",
                     splitNumber: 20,
                     splitLine: {
@@ -689,7 +773,7 @@
                     position: "right",
                     inverse: true, //默认现实平均
                     interval: 3,
-                    max: 9,
+                    max: 8.5,
                     min: 0,
                 },
                 {
@@ -707,9 +791,28 @@
                     position: "left",
                     min: 700
                 },
-
-                { //pmi 
+                { //策略
                     gridIndex: 3,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                    max: 20,
+                    position: "right",
+                },
+                {
+                    gridIndex: 3,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    position: "left",
+                },
+                { //股同比 
+                    gridIndex: 4,
                     type: 'value',
                     splitLine: {
                         show: false
@@ -726,7 +829,56 @@
                     position: "right",
                 },
                 {
-                    gridIndex: 3,
+                    gridIndex: 4,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    position: "left",
+                },
+                { //指数
+                    gridIndex: 5,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        formatter: (value, index) => {
+                            if (value > 700) return value / 1000 + "K"
+                            else return value
+                        }
+                    },
+                    position: "left",
+                    min: 700
+                },
+                {
+                    gridIndex: 5,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    position: "right",
+                },
+
+                { //PMI 
+                    gridIndex: 6,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        formatter: (value, index) => {
+                            if ([-10, 10].includes(value)) return value
+                            else return ""
+                        }
+                    },
+                    interval: 5,
+                    max: 39,
+                    min: -25,
+                    position: "right",
+                },
+                {
+                    gridIndex: 6,
                     type: 'value',
                     splitLine: {
                         show: false
@@ -734,9 +886,8 @@
                     position: "left",
                 },
 
-
-                { //右侧列数据 信贷
-                    gridIndex: 4,
+                { //信贷 右侧列数据
+                    gridIndex: 7,
                     type: 'value',
                     splitLine: {
                         show: false
@@ -751,9 +902,8 @@
                     max: 40,
                     min: 20,
                 },
-                {
-                    //左侧列数据 M1_M2  金融脉动us  美元指数
-                    gridIndex: 4,
+                { //M1_M2  金融脉动us  美元指数 左侧列数据 
+                    gridIndex: 7,
                     type: 'value',
                     splitLine: {
                         show: false
@@ -771,40 +921,9 @@
                     min: -20
                 },
 
-
-                { //指数 单独
-                    gridIndex: 5,
-                    type: 'value',
-                    splitLine: {
-                        show: false
-                    },
-                    axisLabel: {
-                        formatter: (value, index) => {
-                            if (value > 700) return value / 1000 + "K"
-                            else return value
-                        }
-                    },
-                    position: "left",
-                    min: 700
-                },
-
-
-                { //策略 单独
-                    gridIndex: 6,
-                    type: 'value',
-                    splitLine: {
-                        show: false
-                    },
-                    axisLabel: {
-                        show: false
-                    },
-                    max: 20,
-                }
-
             ],
 
             series: [
-
 
                 { //ppi
                     name: "ppi",
@@ -1028,8 +1147,6 @@
                     }).addStartEnd(),
                 },
 
-
-
                 {
                     name: "中位PE", //紫色 300PE中位数
                     type: "line",
@@ -1145,11 +1262,11 @@
                 },
 
 
-                {
+                { //策略
                     name: '大盘策略',
                     type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 11,
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1166,8 +1283,8 @@
                 {
                     name: '大盘策略',
                     type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 11,
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1182,16 +1299,168 @@
                     data: 日期低位.addStartEnd()
                 },
 
-                { //pmi
-                    name: 'pmi',
-                    type: 'line',
-                    xAxisIndex: 3,
-                    yAxisIndex: 6,
+                { //股同比
+                    name: "300同比",
+                    type: "line",
+                    xAxisIndex: 4,
+                    yAxisIndex: 8,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 1,
-                        color: "#ff66cc",
+                        width: 1.3,
+                    },
+                    zlevel: 1,
+                    tooltip: {
+                        show: false,
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.45, //大 下
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.8, //小 上
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.5,
+                                color: "green",
+                            },
+                            label: {
+                                formatter: "-20低估",
+                                color: "green",
+                                fontSize: "10",
+                                position: "start",
+                            },
+                            yAxis: -20, // 标线值
+                            x: "6.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "red",
+                            },
+                            label: {
+                                formatter: "30高估",
+                                color: "red",
+                                fontSize: "10",
+                                position: "start",
+                            },
+                            yAxis: 30, // 标线值
+                            x: "6.5%",
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "gray",
+                                //type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "30高估",
+                                color: "red",
+                                fontSize: "0",
+                                position: "start",
+                            },
+                            yAxis: 0, // 标线值
+                        },
+                        ],
+                    },
+                    data: 沪深300同比.filter(item => {
+                        return parseFloat(item[0].substring(0, 4)) >= 2008
+                    }).addStartEnd()
+                },
+
+                { //指数沪深300D
+                    name: "沪深300",
+                    type: "line",
+                    lineStyle: {
+                        width: 0,
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "#a3d4ff" // "#57aacb",
+                            },
+                        },
+                        emphasis: {
+                            areaStyle: {
+                                color: "#a3d4ff",
+                            },
+                        },
+                    },
+                    showSymbol: false,
+                    zlevel: 0,
+                    xAxisIndex: 5,
+                    yAxisIndex: 10,
+                    data: 沪深300.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.close ? item.close : ""
+                        return tmp
+                    }).addStartEnd(),
+                },
+                { //指数上证D
+                    name: "上证",
+                    type: "line",
+                    lineStyle: {
+                        width: 0,
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "#a3d4ff"//"#87c5cf" // "#57aacb",
+                            },
+                        },
+                        emphasis: {
+                            areaStyle: {
+                                color: "#a3d4ff",
+                            },
+                        },
+                    },
+                    showSymbol: false,
+                    zlevel: 0,
+                    xAxisIndex: 5,
+                    yAxisIndex: 10,
+                    data: 上证.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.close ? item.close : ""
+                        return tmp
+                    }).addStartEnd(),
+                },
+
+
+
+                { //pmi
+                    name: 'pmi',
+                    type: 'line',
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.6,
+                        color: "#ff66cc", //"black" //
 
                     },
                     zlevel: 1,
@@ -1261,12 +1530,11 @@
                         return v
                     }).addStartEnd(),
                 },
-
                 {
                     name: "汽车与出口",
                     type: "line",
-                    xAxisIndex: 3,
-                    yAxisIndex: 6,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
@@ -1278,8 +1546,8 @@
                 {
                     name: "房地产",
                     type: "line",
-                    xAxisIndex: 3,
-                    yAxisIndex: 6,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
@@ -1288,16 +1556,44 @@
                     },
                     data: 商品房销售.addStartEnd()
                 },
+                {
+                    name: "MM制造业",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "#565048",
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    type: "solid",
+                                    color: "black",
+                                },
+
+                                yAxis: 0, // 标线值
+                            }
+                        ]
+                    },
+                    zlevel: 1,
+                    data: MM制造业指标.map((item) => {
+                        item[1] = item[1] * 10
+                        return item
+                    }).addStartEnd()
+                },
 
 
-
-
-
-                { //m12 信贷
+                { //信贷
                     name: '信贷脉冲',
                     type: 'line',
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 7,
+                    yAxisIndex: 14,
                     smooth: true,
                     showSymbol: false,
                     itemStyle: {
@@ -1335,8 +1631,8 @@
                 {
                     name: '信贷脉冲_MA',
                     type: 'line',
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 7,
+                    yAxisIndex: 14,
                     smooth: true,
                     showSymbol: false,
                     itemStyle: {
@@ -1373,15 +1669,15 @@
                     data: 信贷脉冲_MA.addStartEnd()
                 },
 
-                {
+                { //M1_2 
                     name: "M1_M2",
                     type: "line",
-                    xAxisIndex: 4,
-                    yAxisIndex: 9,
+                    xAxisIndex: 7,
+                    yAxisIndex: 15,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 1.3,
+                        width: 1,
                         color: "black", //"#ff4900",
 
                     },
@@ -1390,8 +1686,8 @@
                 {
                     name: "M1_M2_MA",
                     type: "line",
-                    xAxisIndex: 4,
-                    yAxisIndex: 9,
+                    xAxisIndex: 7,
+                    yAxisIndex: 15,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
@@ -1403,45 +1699,11 @@
                     data: M1_M2_MA.addStartEnd(),
                 },
 
-
-
-                {
-                    name: "MM制造业",
-                    type: "line",
-                    xAxisIndex: 3,
-                    yAxisIndex: 6,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 1,
-                        color: "#565048",
-                    },
-                    markLine: {
-                        symbol: ["none", "none"],
-                        data: [
-                            {
-                                lineStyle: {
-                                    width: 0.5,
-                                    type: "solid",
-                                    color: "black",
-                                },
-
-                                yAxis: 0, // 标线值
-                            }
-                        ]
-                    },
-                    zlevel: 1,
-                    data: MM制造业指标.map((item) => {
-                        item[1] = item[1] * 10
-                        return item
-                    }).addStartEnd()
-                },
-
                 {
                     name: '金融脉动增速us',
                     type: 'line',
-                    xAxisIndex: 4,
-                    yAxisIndex: 9,
+                    xAxisIndex: 7,
+                    yAxisIndex: 15,
                     showSymbol: false,
                     //smooth: true,
                     lineStyle: {
@@ -1456,8 +1718,8 @@
                 {
                     name: "中美汇",
                     type: "line",
-                    xAxisIndex: 4,
-                    yAxisIndex: 9,
+                    xAxisIndex: 7,
+                    yAxisIndex: 15,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
@@ -1466,70 +1728,6 @@
                     },
                     data: 中美汇率Day同比.addStartEnd()
                 },
-
-
-                { //沪深300D 单独
-                    name: "沪深300",
-                    type: "line",
-                    lineStyle: {
-                        width: 0,
-                    },
-                    itemStyle: {
-                        normal: {
-                            areaStyle: {
-                                color: "#a3d4ff" // "#57aacb",
-                            },
-                        },
-                        emphasis: {
-                            areaStyle: {
-                                color: "#a3d4ff",
-                            },
-                        },
-                    },
-                    showSymbol: false,
-                    zlevel: 0,
-                    xAxisIndex: 5,
-                    yAxisIndex: 10,
-                    data: 沪深300.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.close ? item.close : ""
-                        return tmp
-                    }).addStartEnd(),
-                },
-
-                { //沪深300D 单独
-                    name: "上证",
-                    type: "line",
-                    lineStyle: {
-                        width: 0,
-                    },
-                    itemStyle: {
-                        normal: {
-                            areaStyle: {
-                                color: "#a3d4ff"//"#87c5cf" // "#57aacb",
-                            },
-                        },
-                        emphasis: {
-                            areaStyle: {
-                                color: "#a3d4ff",
-                            },
-                        },
-                    },
-                    showSymbol: false,
-                    zlevel: 0,
-                    xAxisIndex: 5,
-                    yAxisIndex: 10,
-                    data: 上证.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.close ? item.close : ""
-                        return tmp
-                    }).addStartEnd(),
-                },
-
-
-
 
             ]
         };
@@ -1562,26 +1760,6 @@
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
-
-            //////
-            // if (params.name === "MM制造业" && params.selected["MM制造业"] === true) {
-            //     option.yAxis[6].max = 3
-            //     option.yAxis[6].min = -3
-
-            //     params.selected["pmi"] = false
-            //     option.legend.selected = params.selected
-            //     myChart.setOption(option)
-            // }
-
-            // if (params.name === "pmi" && params.selected["pmi"] === true) {
-            //     option.yAxis[6].max = 50
-            //     option.yAxis[6].min = -25
-
-            //     params.selected["MM制造业"] = false
-            //     option.legend.selected = params.selected
-            //     myChart.setOption(option)
-            // }
-
 
         })
 
@@ -1645,7 +1823,33 @@
                 type: 'legendToggleSelect',
                 name: "金融脉动增速us"
             });
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "300同比"
+            });
         }, "1")
+
+
+        window.onload = () => {
+            window.onresize = function (e) {
+                if (window.innerHeight >= 880) {
+                    option.grid = grid全屏
+                    myChart.setOption(option)
+                    myChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: "300同比"
+                    });
+
+                } else if (window.innerHeight < 880) {
+                    option.grid = grid默认
+                    myChart.setOption(option)
+                    myChart.dispatchAction({
+                        type: 'legendUnSelect',
+                        name: "300同比"
+                    });
+                }
+            }//onresize
+        }
     </script>
 </body>
 
