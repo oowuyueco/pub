@@ -11,7 +11,27 @@
     <script type="text/javascript" src="./cn/信贷脉冲,房价同比.js"></script>
     <script type="text/javascript" src="./us/中美利差Day,中美汇率Day.js"></script>
     <script type="text/javascript" src="./us/PMI_ISM,金融脉动增速.js"></script>
+
+    <script type="text/javascript" src="./us/us原油.js "></script>
+    <script type="text/javascript" src="./us/us白糖.js "></script>
+    <script type="text/javascript" src="./us/铜金比Day.js"></script>
+
     <script type="text/javascript">
+
+        us原油 = us原油.data
+        us白糖 = us白糖.data
+        let 油糖比 = us原油.map(item原油 => {
+            let item白糖 = findSameTime(us白糖, item原油[0])
+            if (item白糖) return [stampToDate(item原油[0]), item原油[4] / item白糖[4]]
+            else return [stampToDate(item原油[0]), ""]
+        })
+        // console.log("油糖比", 油糖比)
+
+
+        铜金比Day = 铜金比Day.map(item => {
+            item[1] = parseFloat(item[1]) * 10
+            return item
+        })
 
         PPI = PPI.filter(item => {
             return parseFloat(item[0].substring(0, 4)) >= 2000
@@ -119,6 +139,14 @@
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/恒生.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/西部矿业.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/洛阳钼业.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/山东黄金.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/赤峰黄金.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/中国石油.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/中国石化.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/中粮糖业.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/广农糖业.js"></script>
     <script>
         function xueqiuFormatDate(stamp, period = "month") {
             var date = new Date(stamp);
@@ -309,6 +337,15 @@
 
     </script>
 
+
+    <script type="text/javascript" src="./cn/新浪期货行情/原油连续.js"></script>
+    <script type="text/javascript" src="./cn/新浪期货行情/燃油连续.js"></script>
+    <script type="text/javascript" src="./cn/新浪期货行情/白糖连续.js"></script>
+
+    <script type="text/javascript" src="./cn/新浪期货行情/沪铜连续.js"></script>
+    <script type="text/javascript" src="./cn/新浪期货行情/白银连续.js"></script>
+    <script type="text/javascript" src="./cn/新浪期货行情/黄金连续.js"></script>
+
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script type="text/javascript">
 
@@ -453,14 +490,14 @@
                 start: 0,
                 end: 100,
                 bottom: -5,
-                xAxisIndex: [0, 1, 2, 3, 4, 5, 6, 7],
+                xAxisIndex: [0, 1, 2, 3, 4, 5, 6, 7, 8],
             },
             {
                 type: 'inside',
                 realtime: true,
                 start: 0,
                 end: 100,
-                xAxisIndex: [0, 1, 2, 3, 4, 5, 6, 7],
+                xAxisIndex: [0, 1, 2, 3, 4, 5, 6, 7, 8],
             }
             ],
             grid: [
@@ -532,6 +569,18 @@
                     backgroundColor: backgroundColorC,
                     show: true
                 },
+
+
+                //个股
+                {
+                    left: 60,
+                    right: 80,
+                    top: "40%",
+                    height: '55%',
+                    backgroundColor: backgroundColorC,
+                    show: true
+                },
+
 
 
             ],
@@ -686,28 +735,6 @@
 
 
 
-                // {
-                //     gridIndex: 7,
-                //     type: 'time',
-                //     splitNumber: 20,
-                //     splitLine: {
-                //         show: true,
-                //         lineStyle: {
-                //             color: [splitLineColor]
-                //         }
-                //     },
-                //     axisPointer: {
-                //         show: true,
-                //         label: {
-                //             show: false,
-                //         },
-                //     },
-                //     axisLabel: {
-                //         show: false
-                //     },
-                // },
-
-
                 {
                     gridIndex: 7,
                     type: 'time',
@@ -730,6 +757,32 @@
                         padding: [0, -60, 0, 0],
                     },
                 },
+
+
+
+                {
+                    gridIndex: 8,
+                    type: 'time',
+                    splitNumber: 20,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [splitLineColor]
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: true,
+                        },
+                    },
+                    axisLabel: {
+                        fontSize: 10,
+                        formatter: "{yyyy}",
+                        padding: [0, -60, 0, 0],
+                    },
+                },
+
 
 
             ],
@@ -788,8 +841,8 @@
                     splitLine: {
                         show: false
                     },
-                    show: true,
 
+                    show: true,
                     min: -30
 
                 },
@@ -801,6 +854,7 @@
                     splitLine: {
                         show: false
                     },
+
                     show: true,
                     max: 7
                 },
@@ -813,6 +867,7 @@
                     splitLine: {
                         show: false
                     },
+
                     show: true,
                     max: 10
                 },
@@ -825,7 +880,29 @@
                     splitLine: {
                         show: false
                     },
+                    position: "right",
                     show: true,
+
+                },
+
+
+
+                {
+                    gridIndex: 8,
+                    type: 'value',
+                    splitLine: {
+                        "show": false
+                    },
+                    position: "letf",
+                },
+
+                {
+                    gridIndex: 8,
+                    type: 'value',
+                    splitLine: {
+                        "show": false
+                    },
+                    position: "right",
                 },
 
             ],
@@ -861,6 +938,96 @@
                 //     }).filterAndAddStartEnd(),
                 // },
 
+                {
+                    name: "油糖比",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    //smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        //color: "#FD4142", //"#22aa62", 
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "green",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: 5.5, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "green",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: 2.5, // 标线值
+                            }
+                        ],
+                    },
+                    data: 油糖比.filterAndAddStartEnd()
+                },
+                {
+                    name: "铜金比",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    //smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        //color: "#FD4142", //"#22aa62", 
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "green",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: 2.5, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "green",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: 1.5, // 标线值
+                            }
+                        ],
+                    },
+                    data: 铜金比Day.filterAndAddStartEnd()
+                },
 
                 {
                     name: '金融脉动增速us',
@@ -1444,6 +1611,253 @@
                     data: 沪深300.ohlc2oclh().filterAndAddStartEnd()
                 },
 
+                {
+                    name: '中国石油',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 中国石油.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '中国石化',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 中国石化.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                    //洛阳钼业.data.item.xueqiuData2Obj().ohlc2oclh().filterAndAddStartEnd()
+                },
+                {
+                    name: '中粮糖业',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 中粮糖业.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '广农糖业',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 广农糖业.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '西部矿业',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        color: "green"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 西部矿业.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '洛阳钼业',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 洛阳钼业.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                    //洛阳钼业.data.item.xueqiuData2Obj().ohlc2oclh().filterAndAddStartEnd()
+                },
+                {
+                    name: '山东黄金',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        color: "#db7093"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 山东黄金.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '赤峰黄金',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 8,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 赤峰黄金.data.item.xueqiuData2Obj().map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '原油连续',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 原油连续.map((item) => {
+                        return [item.date, item.close * 100]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '燃油连续',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 燃油连续.map((item) => {
+                        return [item.date, item.close*10]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '白糖连续',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 白糖连续.map((item) => {
+                        return [item.date, item.close*10]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '沪铜连续',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 沪铜连续.map((item) => {
+                        return [item.date, item.close]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '黄金连续',
+                    type: 'line',
+                    lineStyle: {
+                        width: 1.5,
+                        //color: "black"
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: 黄金连续.map((item) => {
+                        return [item.date, item.close * 100]
+                    }).filterAndAddStartEnd()
+                },
+
+                ////////////////////////////////////
+
+         
+
+                {
+                    name: '关闭股票策略',
+                    type: 'line',
+                    lineStyle: {
+                        width: 0,
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: []
+                },
+
+
+                {
+                    name: '',
+                    type: 'line',
+                    lineStyle: {
+                        width: 0,
+                    },
+                    xAxisIndex: 8,
+                    yAxisIndex: 9,
+                    showSymbol: false,
+                    silent: true,
+                    zlevel: 2,
+                    data: []
+                },
+
             ]
         };
 
@@ -1452,6 +1866,71 @@
             myChart.setOption(option);
         }
         window.addEventListener('resize', myChart.resize)
+
+
+
+        myChart.on('legendselectchanged', function (params) {
+
+            if (
+                (params.name === "金融脉动增速us" && params.selected["金融脉动增速us"] === true)
+                ||
+                (params.name === "中美汇" && params.selected["中美汇"] === true)
+            ) {
+                option.yAxis[0].max = 18
+                option.yAxis[0].min = -18
+                params.selected.油糖比 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+            if (params.name === "油糖比" && params.selected["油糖比"] === true) {
+                option.yAxis[0].max = 10
+                option.yAxis[0].min = 0
+                params.selected.金融脉动增速us = false
+                params.selected.中美汇 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+
+
+            if (
+                (params.name === "信贷脉冲" && params.selected["信贷脉冲"] === true)
+                ||
+                (params.name === "信贷脉冲_MA" && params.selected["信贷脉冲_MA"] === true)
+            ) {
+                option.yAxis[1].max = 40
+                option.yAxis[1].min = 20
+                params.selected.油糖比 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+            if (params.name === "铜金比" && params.selected["铜金比"] === true) {
+                option.yAxis[1].max = 5.5
+                option.yAxis[1].min = 1.2
+                params.selected.信贷脉冲 = false
+                params.selected.信贷脉冲_MA = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+
+
+            if (params.name === "关闭股票策略" && params.selected["关闭股票策略"] === false) {
+                let seriesArr = myChart.getOption().series
+
+                for (let index = 0; index < seriesArr.length; index++) {
+                    const serie = seriesArr[index];
+                    if (
+                        !serie.name.includes("大宗") && !serie.name.includes("next")
+                        && (serie.name.includes("位") || serie.name.includes("策略"))
+                    )
+                        myChart.dispatchAction({
+                            type: 'legendToggleSelect',
+                            name: serie.name
+                        });
+                }
+            }
+
+        })
+
         setTimeout(() => {
 
             let seriesArr = myChart.getOption().series
@@ -1466,6 +1945,42 @@
                         name: serie.name
                     });
             }
+
+            let 铜金油糖 = [
+                { name: "沪铜连续", code: "CU0", type: "工业" },
+                { name: "西部矿业", code: "SH601168" },
+                { name: "洛阳钼业", code: "SH603993" },
+
+                { name: "黄金连续", code: "AU0", type: "金融" },
+                { name: "山东黄金", code: "SH600547" },
+                { name: "赤峰黄金", code: "SH600988" },
+
+                { name: "原油连续", code: "SC0", type: "工业" },
+                { name: "燃油连续", code: "FU0", type: "能源" },
+                { name: "中国石油", code: "SH601857" },
+                { name: "中国石化", code: "SH600028" },
+
+                { name: "白糖连续", code: "SR0", type: "农业" },
+                { name: "中粮糖业", code: "SH600737" },
+                { name: "广农糖业", code: "SZ000911" },
+            ]
+            for (let index = 0; index < 铜金油糖.length; index++) {
+                let name = 铜金油糖[index].name
+                myChart.dispatchAction({
+                    type: 'legendToggleSelect',
+                    name: name
+                })
+            }
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "油糖比"
+            })
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "铜金比"
+            })
+
         }, "1")
     </script>
 </body>
