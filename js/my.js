@@ -761,6 +761,33 @@ if (!Array.prototype.toSpliced) {
         return copy;
     };
 }
+//平均
+function calAvgProf(filterArr, calIndex = 4) {
+    let sum = 0
+    let avg = 0
+    for (let index = 0; index < filterArr.length; index++) {
+        const element = filterArr[index];
+        sum = sum + element[calIndex]
+    }
+    avg = sum / filterArr.length
+
+    return parseFloat(avg.toFixed(2))
+}
+//中位
+function calMedianProf(filterArr, calIndex = 4) {
+
+    let arr = filterArr.map((item) => {
+        return item[calIndex]
+    })
+    const mid = Math.floor(arr.length / 2);
+    const sortedArr = arr.sort((a, b) => a - b);
+
+    if (arr.length % 2 === 0) {
+        return (sortedArr[mid - 1] + sortedArr[mid]) / 2;
+    } else {
+        return sortedArr[mid];
+    }
+}
 
 //nodejs 导出
 if (typeof module !== "undefined" && module.exports) {

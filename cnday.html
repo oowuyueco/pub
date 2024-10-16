@@ -311,7 +311,7 @@
                 低位next2.push(next2kline)
         }
 
-        function fliterNday(oldArr) {
+        function fliterNday指数(oldArr) {
             let arrNew = []
             for (let index = 0; index < oldArr.length; index++) {
                 const ele = oldArr[index]
@@ -323,18 +323,18 @@
             return arrNew
         }
 
-        高位next2 = fliterNday(高位next2).sort((a, b) => a[2] - b[2]).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
-        低位next2 = fliterNday(低位next2).sort((a, b) => a[2] - b[2]).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        高位next2 = fliterNday指数(高位next2).sort((a, b) => a[2] - b[2]).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        低位next2 = fliterNday指数(低位next2).sort((a, b) => a[2] - b[2]).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
         console.log(
-            "高位next2",
-            高位next2.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+            "高位next2", 高位next2.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0])),
+            "平均", calAvgProf(高位next2), calAvgProf(高位next2, 6),
+            "中位", calMedianProf(高位next2), calMedianProf(高位next2, 6),
+            "  ; ",
+            "低位next2", 低位next2.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0])),
+            "平均", calAvgProf(低位next2), calAvgProf(低位next2, 6),
+            "中位", calMedianProf(低位next2), calMedianProf(低位next2, 6),
         )
-        console.log(
-            "低位next2",
-            低位next2.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
-        )
-
     </script>
 
 
@@ -357,21 +357,54 @@
 
             return [ele.trigDate, 0, mostUp60orLast, mostLow60orLast, close60orLast, ele.dataName, ele?.trigcalType, item.day60LowUp ? 60 : item.lastDay]
         }
-        let 大宗高位KDJ = triggerLogObj大宗.高位KDJ.map((ele) => toKline(ele))
-        let 大宗高位九转 = triggerLogObj大宗.高位九转.map((ele) => toKline(ele))
-        let 大宗低位KDJ = triggerLogObj大宗.低位KDJ.map((ele) => toKline(ele))
-        let 大宗低位九转 = triggerLogObj大宗.低位九转.map((ele) => toKline(ele))
+
+        function fliterNday大宗(oldArr) {
+            let arrNew = []
+            function noSameOrNday(ele) {
+                return arrNew.find(eleNew => {
+                    return eleNew[5] == ele[5] && dateToStamp(eleNew[0]) + 10 * 86400000 >= dateToStamp(ele[0])
+                })
+            }
+            for (let index = 0; index < oldArr.length; index++) {
+                const ele = oldArr[index]
+                if (index == 0)
+                    arrNew.push(ele)
+                else if (!noSameOrNday(ele))
+                    arrNew.push(ele)
+            }
+            return arrNew
+        }
+
+
+        //默认按时间排序
+        let 大宗高位KDJ = triggerLogObj大宗.高位KDJ.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗高位九转 = triggerLogObj大宗.高位九转.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗低位KDJ = triggerLogObj大宗.低位KDJ.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗低位九转 = triggerLogObj大宗.低位九转.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+
+        let 大宗高位 = [...大宗高位KDJ, ...大宗高位九转].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗低位 = [...大宗低位KDJ, ...大宗低位九转].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+
+        let filter大宗高位 = fliterNday大宗(大宗高位)
+        let filter大宗低位 = fliterNday大宗(大宗低位)
 
         console.log(
-            "大宗高位KDJ", 大宗高位KDJ.sort((a, b) => a[3] - b[3]),
-            "大宗高位九转", 大宗高位九转.sort((a, b) => a[3] - b[3]),
+            "大宗高位", filter大宗高位,
+            "平均", calAvgProf(filter大宗高位),
+            "中位", calMedianProf(filter大宗高位),
+            "  ; ",
+            "大宗低位", filter大宗低位,
+            "平均", calAvgProf(filter大宗低位),
+            "中位", calMedianProf(filter大宗低位)
         )
-        console.log(
-            "大宗低位KDJ", 大宗低位KDJ.sort((a, b) => a[3] - b[3]),
-            "大宗低位九转", 大宗低位九转.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0])),
-            // a[5].localeCompare(b[5], 'zh-Hans-CN', { sensitivity: 'accent' })
-            // dateToStamp(a[0]) - dateToStamp(b[0])
-        )
+        // console.log(
+        //     // "大宗低位KDJ", 大宗低位KDJ,
+        //     // "大宗低位九转", 大宗低位九转,
+        //     大宗低位
+        //     // (a, b) => a[3] - b[3]
+        //     // a[5].localeCompare(b[5], 'zh-Hans-CN', { sensitivity: 'accent' })
+        //     // dateToStamp(a[0]) - dateToStamp(b[0])
+        // )
     </script>
 
     <script type="text/javascript" src="./cnThs/今收/同花顺策略组1_信号统计.js"></script>
@@ -1771,7 +1804,7 @@
                     silent: true,
                     zlevel: 2,
                     data: 燃油连续.map((item) => {
-                        return [item.date, item.close*10]
+                        return [item.date, item.close * 10]
                     }).filterAndAddStartEnd()
                 },
 
@@ -1788,7 +1821,7 @@
                     silent: true,
                     zlevel: 2,
                     data: 白糖连续.map((item) => {
-                        return [item.date, item.close*10]
+                        return [item.date, item.close * 10]
                     }).filterAndAddStartEnd()
                 },
 
@@ -1827,7 +1860,7 @@
 
                 ////////////////////////////////////
 
-         
+
 
                 {
                     name: '关闭股票策略',
