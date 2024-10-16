@@ -6701,14 +6701,14 @@ var triggerLogObj大宗={
             ],
             "trigDate": "2024-10-09",
             "logProfileN": {
-                "day3LowUp": [
+                "day4LowUp": [
                     "2,2024-10-11",
                     -1.74,
-                    "3,2024-10-14",
-                    0.2,
-                    0.2
+                    "4,2024-10-15",
+                    1.38,
+                    1.38
                 ],
-                "lastDay": 3
+                "lastDay": 4
             }
         }
     ],
@@ -8059,14 +8059,14 @@ var triggerLogObj大宗={
                     4.86,
                     4.27
                 ],
-                "day17LowUp": [
+                "day18LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "4,2024-09-19",
                     4.86,
-                    0.8
+                    -0.06
                 ],
-                "lastDay": 17
+                "lastDay": 18
             }
         },
         {
@@ -8120,14 +8120,14 @@ var triggerLogObj大宗={
                     20.55,
                     20.55
                 ],
-                "day16LowUp": [
+                "day17LowUp": [
                     "5,2024-09-23",
                     -4.05,
                     "10,2024-09-30",
                     20.55,
-                    14.7
+                    11.66
                 ],
-                "lastDay": 16
+                "lastDay": 17
             }
         },
         {
@@ -8699,14 +8699,14 @@ var triggerLogObj大宗={
                     5.41,
                     3.86
                 ],
-                "day16LowUp": [
+                "day17LowUp": [
                     "11,2024-10-08",
                     -0.36,
                     "3,2024-09-19",
                     5.41,
-                    1.33
+                    0.46
                 ],
-                "lastDay": 16
+                "lastDay": 17
             }
         },
         {
@@ -8748,4 +8748,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-10-15"
+var runLastKlineDate = "2024-10-16"
