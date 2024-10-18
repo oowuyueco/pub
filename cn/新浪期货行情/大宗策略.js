@@ -8059,14 +8059,14 @@ var triggerLogObj大宗={
                     4.86,
                     4.27
                 ],
-                "day19LowUp": [
+                "day20LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "4,2024-09-19",
                     4.86,
-                    1.57
+                    1.75
                 ],
-                "lastDay": 19
+                "lastDay": 20
             }
         },
         {
@@ -8120,14 +8120,14 @@ var triggerLogObj大宗={
                     20.55,
                     20.55
                 ],
-                "day17LowUp": [
+                "day19LowUp": [
                     "5,2024-09-23",
                     -4.05,
                     "10,2024-09-30",
                     20.55,
-                    11.66
+                    5.34
                 ],
-                "lastDay": 17
+                "lastDay": 19
             }
         },
         {
@@ -8699,14 +8699,14 @@ var triggerLogObj大宗={
                     5.41,
                     3.86
                 ],
-                "day18LowUp": [
+                "day19LowUp": [
                     "11,2024-10-08",
                     -0.36,
                     "3,2024-09-19",
                     5.41,
-                    2.1
+                    2.28
                 ],
-                "lastDay": 18
+                "lastDay": 19
             }
         },
         {
@@ -8748,4 +8748,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-10-17"
+var runLastKlineDate = "2024-10-18"
