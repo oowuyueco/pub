@@ -6701,14 +6701,14 @@ var triggerLogObj大宗={
             ],
             "trigDate": "2024-10-09",
             "logProfileN": {
-                "day6LowUp": [
+                "day7LowUp": [
                     "2,2024-10-11",
                     -1.74,
                     "4,2024-10-15",
                     1.38,
-                    -0.97
+                    0.82
                 ],
-                "lastDay": 6
+                "lastDay": 7
             }
         }
     ],
