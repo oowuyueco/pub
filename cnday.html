@@ -317,7 +317,7 @@
                 const ele = oldArr[index]
                 if (index == 0)
                     arrNew.push(ele)
-                else if (dateToStamp(arrNew[arrNew.length - 1][0]) + 10 * 86400000 < dateToStamp(ele[0])) //10day 过滤10天以内的
+                else if (dateToStamp(ele[0]) >= dateToStamp(arrNew[arrNew.length - 1][0]) + 10 * 86400000) //10day 过滤10天以内的
                     arrNew.push(ele)
             }
             return arrNew
@@ -362,8 +362,8 @@
             let arrNew = []
             function noSameOrNday(ele) {
                 return arrNew.find(eleNew => {
-                    return eleNew[5] == ele[5] && dateToStamp(eleNew[0]) + 10 * 86400000 >= dateToStamp(ele[0])
-                })
+                    return ele[5] == eleNew[5] && dateToStamp(ele[0]) <= dateToStamp(eleNew[0]) + 10 * 86400000   //10day过滤10天以内的同名 取反
+                 })
             }
             for (let index = 0; index < oldArr.length; index++) {
                 const ele = oldArr[index]
