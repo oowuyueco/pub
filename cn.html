@@ -1832,7 +1832,8 @@
 
         window.onload = () => {
             window.onresize = function (e) {
-                if (window.innerHeight >= 880) {
+                console.log("window.innerHeight",window.innerHeight) 
+                if (window.innerHeight >= 767) {  //880
                     option.grid = grid全屏
                     myChart.setOption(option)
                     myChart.dispatchAction({
@@ -1840,7 +1841,7 @@
                         name: "300同比"
                     });
 
-                } else if (window.innerHeight < 880) {
+                } else if (window.innerHeight < 767) {
                     option.grid = grid默认
                     myChart.setOption(option)
                     myChart.dispatchAction({
