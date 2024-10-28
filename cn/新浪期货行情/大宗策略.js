@@ -8141,14 +8141,14 @@ var triggerLogObj大宗={
                     20.55,
                     6.43
                 ],
-                "day24LowUp": [
+                "day25LowUp": [
                     "5,2024-09-23",
                     -4.05,
                     "10,2024-09-30",
                     20.55,
-                    5.65
+                    9.9
                 ],
-                "lastDay": 24
+                "lastDay": 25
             }
         },
         {
@@ -8776,4 +8776,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-10-25"
+var runLastKlineDate = "2024-10-28"
