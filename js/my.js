@@ -438,7 +438,7 @@ Array.prototype.chartDataMaN = function (MA, dataIndex = 1) {
         }
 
         let sum = 0
-        for (let i = index - MA; i < index; i++) {
+        for (let i = index - (MA - 1); i <= index; i++) {
             sum += parseFloat(dataList[i][dataIndex])
         }
         let avg = (sum / MA).toFixed(2)
