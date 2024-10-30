@@ -695,7 +695,29 @@ Array.prototype.calBoll = function () {
     return candleList;
 }
 
+
 Array.prototype.maN = function (MA, Attribute) {
+
+    let candleList = this
+
+    for (let index = 0; index < candleList.length; index++) {
+        let item = candleList[index]
+        if (index < MA) continue
+        if (item[`ma${MA}`] instanceof Number) continue
+
+        let sum = 0
+        for (let i = index - (MA - 1); i <= index; i++) {
+            sum += parseFloat(candleList[i][Attribute])
+        }
+        let avg = +(sum / MA).toFixed(2)
+
+        candleList[index][`ma${MA}`] = avg
+    }
+
+    return candleList
+}
+
+Array.prototype.maN_oldWrong = function (MA, Attribute) {
     let dataList = this
     dataList = dataList.map((item, index) => {
         if (index < MA) return item
