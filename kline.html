@@ -304,22 +304,24 @@
             })
 
             let dayNewKdj = chartDay.createIndicator('newKDJ')
-            let dayMacd = chartDay.createIndicator('MACD')
+            let dayNewMacd = chartDay.createIndicator('newMACD')
             let dayNewBias = chartDay.createIndicator('newBias')
             let dayNew9转 = chartDay.createIndicator('new9转')
             // let dayBias = chartDay.createIndicator('BIAS')
             // let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
-            // let chartDayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
 
             let weekNewKdj = chartWeek.createIndicator('newKDJ')
-            let weekMacd = chartWeek.createIndicator('MACD')
-            let weekBias = chartWeek.createIndicator('BIAS')
+            let weekNewMacd = chartWeek.createIndicator('newMACD')
+            let weekNewBias = chartWeek.createIndicator('newBias')
             let weekNew9转 = chartWeek.createIndicator('new9转')
+            let weekNewBOLL = chartWeek.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
 
             let monthNewKdj = chartMonth.createIndicator('newKDJ')
-            let monthMacd = chartMonth.createIndicator('MACD')
+            let monthNewMacd = chartMonth.createIndicator('newMACD')
             let monthNewBias = chartMonth.createIndicator('newBias')
             let monthNew9转 = chartMonth.createIndicator('new9转')
+            let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
 
             document.addEventListener("keydown", function (event) {
                 if (event.keyCode === 37) endIndex--
@@ -373,12 +375,13 @@
                     return
                 }
 
-                let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close").cal9转()
+                let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close").cal9转().calMacd()
                 currentDayList = calculationBias(currentDayList)
 
-                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转()
+                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd()
+                currentWeekList = calculationBias(currentWeekList)
 
-                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转()
+                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd()
                 currentMonthList = calculationBias(currentMonthList)
 
                 if (noChart) {
