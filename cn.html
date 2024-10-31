@@ -295,27 +295,83 @@
     <script>
         沪深300 = 沪深300.data.item.xueqiuData2Obj()
         上证 = 上证.data.item.xueqiuData2Obj()
-        let trigDateArr = Object.keys(triggerLogObj指数.按日期排序)
-        let 日期高位 = []
-        let 日期低位 = []
-        for (let index = 0; index < trigDateArr.length; index++) {
-            let date = trigDateArr[index];
 
-            let profileN = {}
-            if (typeof triggerLogObj指数.按日期排序[date][triggerLogObj指数.按日期排序[date].length - 1] === "object")
-                profileN = triggerLogObj指数.按日期排序[date].pop()
+        function toChartDataByDay() {
+            let 指数策略ByDay = []
+            let trigDateArr = Object.keys(triggerLogObj指数.按日期排序).sort((a, b) => dateToStamp(b) - dateToStamp(a))
 
-            let trig策略s = triggerLogObj指数.按日期排序[date]
+            for (let index = 0; index < trigDateArr.length; index++) {
+                let date = trigDateArr[index];
+                let eleArr = triggerLogObj指数.按日期排序[date]
+                let trig策略s = eleArr.toSpliced(-1, 1)
+                let profileN = eleArr[eleArr.length - 1]
+                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                if (Object.keys(profileN).length <= 0) continue
 
-            if (trig策略s[0].includes("高位")) {
-                日期高位.push([date, trig策略s.length, trig策略s])
+
+                let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
+                指数策略ByDay.push(byDateArr)
             }
+            return 指数策略ByDay
 
-            if (trig策略s[0].includes("低位")) {
-                日期低位.push([date, trig策略s.length, trig策略s])
-            }
         }
-        console.log("沪深300最新日期=", 沪深300[沪深300.length - 1], " ; ", "高位", 日期高位, " ; ", "低位", 日期低位)
+
+        function toBy期权日(nextN期权周三) {
+            let 指数策略By期权 = {}
+            let trigDateArr = Object.keys(triggerLogObj指数.按日期排序).sort((a, b) => dateToStamp(b) - dateToStamp(a))
+
+            for (let index = 0; index < trigDateArr.length; index++) {
+                let date = trigDateArr[index];
+                let eleArr = triggerLogObj指数.按日期排序[date]
+                let trig策略s = eleArr.toSpliced(-1, 1)
+                let profileN = eleArr[eleArr.length - 1]
+                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                if (Object.keys(profileN).length <= 0) continue
+
+                let key
+                let N = nextN期权周三 == "nextFirstDelivery周三" ? 1 : 2
+                if (profileN[nextN期权周三]) {
+                    key = `${type}_后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                }
+                else {
+                    key = N == 1 ? `${type}_后${N}周三` + profileN.after.nextFirstDelivery周三 : `${type}_后${N}周三` + profileN.after.nextSecondDelivery周三
+                }
+
+                let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
+                if (指数策略By期权.hasOwnProperty(key))
+                    指数策略By期权[key].push(byDateArr)
+                else
+                    指数策略By期权[key] = [byDateArr]
+            }
+            return 指数策略By期权
+        }
+
+        let 指数策略ByDay = toChartDataByDay()
+        let 指数策略By期权日 = toBy期权日("nextFirstDelivery周三")  //nextFirstDelivery周三  nextSecondDelivery周三
+
+
+        let 指数策略高位ByDay = 指数策略ByDay.filter(item => item[3] == "高位").map(item => [item[0], item[2], item[4]])
+        let 指数策略低位ByDay = 指数策略ByDay.filter(item => item[3] == "低位").map(item => [item[0], item[2], item[4]])
+
+        let 指数策略高位By期权日 = //Object.fromEntries(
+            Object.entries(指数策略By期权日).filter(([key, byDayArr]) => key.includes("高位")).map(([key, byDayArr]) => {
+                byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
+                return [key.replace("高位_", ""), byDayArr]
+            })
+        //)
+        let 指数策略低位By期权日 =
+            Object.entries(指数策略By期权日).filter(([key, byDayArr]) => key.includes("低位")).map(([key, byDayArr]) => {
+                byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
+                return [key.replace("低位_", ""), byDayArr]
+            })
+
+
+        console.log("沪深300最新日期=", 沪深300[沪深300.length - 1])
+        console.log(
+            "指数策略高位", 指数策略高位ByDay, 指数策略高位By期权日, "  ",
+            "指数策略低位", 指数策略低位ByDay, 指数策略低位By期权日
+        )
+
     </script>
 
 </head>
@@ -1278,7 +1334,9 @@
                         return 8
                     },
                     zlevel: 3,
-                    data: 日期高位.addStartEnd()
+                    data: 指数策略高位ByDay.map((item) => {
+                        return [item[0], item[1].length, item[1]]
+                    }).addStartEnd()
                 },
                 {
                     name: '大盘策略',
@@ -1289,14 +1347,16 @@
                     itemStyle: {
                         normal: {
                             opacity: 1,
-                            color: "black"
+                            color: "#003900"
                         }
                     },
                     symbolSize: function (val) {
                         return 8
                     },
                     zlevel: 3,
-                    data: 日期低位.addStartEnd()
+                    data: 指数策略低位ByDay.map((item) => {
+                        return [item[0], item[1].length, item[1]]
+                    }).addStartEnd()
                 },
 
                 { //股同比
