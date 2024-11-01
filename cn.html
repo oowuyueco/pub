@@ -314,6 +314,59 @@
 
         }
 
+        function toByDay过滤后N天(N = 10) {
+
+            let 指数策略ByDay过滤后N天 = []
+            let trigDateArr = Object.keys(triggerLogObj指数.按日期排序).sort((a, b) => dateToStamp(b) - dateToStamp(a))
+
+            for (let index = trigDateArr.length - 1; index >= 0; index--) {
+                let date = trigDateArr[index];
+                let eleArr = triggerLogObj指数.按日期排序[date]
+                let trig策略s = eleArr.toSpliced(-1, 1)
+                let profileN = eleArr[eleArr.length - 1]
+                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                if (Object.keys(profileN).length <= 0) continue
+
+                let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
+
+                if (index == trigDateArr.length - 2)//continue 去掉一个！！
+                    指数策略ByDay过滤后N天.unshift(byDateArr)
+                else if (dateToStamp(date) >= dateToStamp(指数策略ByDay过滤后N天[0][0]) + N * 86400000) //过滤后N天 1号后N天过滤掉
+                    指数策略ByDay过滤后N天.unshift(byDateArr)
+            }
+            return 指数策略ByDay过滤后N天
+        }
+
+        function toByDay统计前N天(N = 5) {
+
+            let 指数策略ByDay统计前N天 = []
+            let trigDateArr = Object.keys(triggerLogObj指数.按日期排序).sort((a, b) => dateToStamp(b) - dateToStamp(a))
+
+            for (let index = trigDateArr.length - 1; index >= 0; index--) {
+                let date = trigDateArr[index];
+                let eleArr = triggerLogObj指数.按日期排序[date]
+                let trig策略s = eleArr.toSpliced(-1, 1)
+                let profileN = eleArr[eleArr.length - 1]
+                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                if (Object.keys(profileN).length <= 0) continue
+
+                let 包含当天最近N天触发的日期 = trigDateArr.filter(eledate => dateToStamp(date) >= dateToStamp(eledate) && dateToStamp(eledate) >= dateToStamp(date) - N * 86400000)
+
+                let 包含当天最近N天触发的 = 包含当天最近N天触发的日期.map((itemDate) => {
+                    let eleArr = triggerLogObj指数.按日期排序[itemDate]
+                    let trig策略s = eleArr.toSpliced(-1, 1)
+                    let profileN = eleArr[eleArr.length - 1]
+                    let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                    return [itemDate, trig策略s, profileN]
+                })
+
+                let byDateArr = [date, type, 包含当天最近N天触发的]
+                指数策略ByDay统计前N天.push(byDateArr)
+            }
+
+            return 指数策略ByDay统计前N天.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+        }
+
         function toBy期权日(nextN期权周三) {
             let 指数策略By期权 = {}
             let trigDateArr = Object.keys(triggerLogObj指数.按日期排序).sort((a, b) => dateToStamp(b) - dateToStamp(a))
@@ -345,30 +398,43 @@
         }
 
         let 指数策略ByDay = toChartDataByDay()
-        let 指数策略By期权日 = toBy期权日("nextFirstDelivery周三")  //nextFirstDelivery周三  nextSecondDelivery周三
-
+        let 指数策略ByDay过滤后N天 = toByDay过滤后N天(10)
+        let 指数策略ByDay统计前N天 = toByDay统计前N天(5)
+        let 指数策略By后一期权日 = toBy期权日("nextFirstDelivery周三")
+        let 指数策略By后二期权日 = toBy期权日("nextSecondDelivery周三")
 
         let 指数策略高位ByDay = 指数策略ByDay.filter(item => item[3] == "高位").map(item => [item[0], item[2], item[4]])
         let 指数策略低位ByDay = 指数策略ByDay.filter(item => item[3] == "低位").map(item => [item[0], item[2], item[4]])
 
-        let 指数策略高位By期权日 = //Object.fromEntries(
-            Object.entries(指数策略By期权日).filter(([key, byDayArr]) => key.includes("高位")).map(([key, byDayArr]) => {
-                byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
-                return [key.replace("高位_", ""), byDayArr]
-            })
-        //)
-        let 指数策略低位By期权日 =
-            Object.entries(指数策略By期权日).filter(([key, byDayArr]) => key.includes("低位")).map(([key, byDayArr]) => {
-                byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
-                return [key.replace("低位_", ""), byDayArr]
-            })
+        let 指数策略高位ByDay过滤后N天 = 指数策略ByDay过滤后N天.filter(item => item[3] == "高位").map(item => [item[0], item[2], item[4]])
+        let 指数策略低位ByDay过滤后N天 = 指数策略ByDay过滤后N天.filter(item => item[3] == "低位").map(item => [item[0], item[2], item[4]])
+
+        let 指数策略高位ByDay统计前N天 = 指数策略ByDay统计前N天.filter(item => item[1] == "高位").map(item => [item[0], item[2]])
+        let 指数策略低位ByDay统计前N天 = 指数策略ByDay统计前N天.filter(item => item[1] == "低位").map(item => [item[0], item[2]])
+
+        //Object.fromEntries()
+        let 指数策略高位By后一期权日 = Object.entries(指数策略By后一期权日).filter(([key, byDayArr]) => key.includes("高位")).map(([key, byDayArr]) => {
+            byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
+            return [key.replace("高位_", ""), byDayArr]
+        })
+        let 指数策略低位By后一期权日 = Object.entries(指数策略By后一期权日).filter(([key, byDayArr]) => key.includes("低位")).map(([key, byDayArr]) => {
+            byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
+            return [key.replace("低位_", ""), byDayArr]
+        })
+
+        let 指数策略高位By后二期权日 = Object.entries(指数策略By后二期权日).filter(([key, byDayArr]) => key.includes("高位")).map(([key, byDayArr]) => {
+            byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
+            return [key.replace("高位_", ""), byDayArr]
+        })
+        let 指数策略低位By后二期权日 = Object.entries(指数策略By后二期权日).filter(([key, byDayArr]) => key.includes("低位")).map(([key, byDayArr]) => {
+            byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
+            return [key.replace("低位_", ""), byDayArr]
+        })
 
 
         console.log("沪深300最新日期=", 沪深300[沪深300.length - 1])
-        console.log(
-            "指数策略高位", 指数策略高位ByDay, 指数策略高位By期权日, "  ",
-            "指数策略低位", 指数策略低位ByDay, 指数策略低位By期权日
-        )
+        console.log("指数策略高位", 指数策略高位ByDay, 指数策略高位ByDay过滤后N天, 指数策略高位ByDay统计前N天, 指数策略高位By后一期权日, 指数策略高位By后二期权日)
+        console.log("指数策略低位", 指数策略低位ByDay, 指数策略低位ByDay过滤后N天, 指数策略低位ByDay统计前N天, 指数策略低位By后一期权日, 指数策略低位By后二期权日)
 
     </script>
 
