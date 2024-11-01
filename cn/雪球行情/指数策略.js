@@ -3993,4 +3993,4 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2024-10-31"
+var runLastKlineDate = "2024-11-01"
