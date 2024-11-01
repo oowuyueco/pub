@@ -1,21 +1,167 @@
 var triggerLogObj指数 = {
   "按日期排序": {
+    "2002-11-14": [
+      "日周低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "9->2002-11-27,-64.67,-5.46",
+          "high": "1->2002-11-15,3.29,0.28",
+          "low": "8->2002-11-26,-72.58,-6.13"
+        },
+        "nextSecondDelivery周三": {
+          "close": "29->2002-12-25,-32.47,-2.74",
+          "high": "1->2002-11-15,3.29,0.28",
+          "low": "8->2002-11-26,-72.58,-6.13"
+        }
+      }
+    ],
+    "2002-11-20": [
+      "日周低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "5->2002-11-27,-35.93,-3.11",
+          "high": ",0,0",
+          "low": "4->2002-11-26,-43.84,-3.8"
+        },
+        "nextSecondDelivery周三": {
+          "close": "25->2002-12-25,-3.74,-0.32",
+          "high": "7->2002-11-29,9.72,0.84",
+          "low": "4->2002-11-26,-43.84,-3.8"
+        }
+      }
+    ],
+    "2002-11-21": [
+      "日周低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "4->2002-11-27,-6.42,-0.57",
+          "high": "2->2002-11-25,7.79,0.69",
+          "low": "3->2002-11-26,-14.33,-1.27"
+        },
+        "nextSecondDelivery周三": {
+          "close": "24->2002-12-25,25.78,2.29",
+          "high": "6->2002-11-29,39.24,3.49",
+          "low": "3->2002-11-26,-14.33,-1.27"
+        }
+      }
+    ],
+    "2002-11-26": [
+      "日周低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "1->2002-11-27,7.91,0.71",
+          "high": "1->2002-11-27,7.91,0.71",
+          "low": ",0,0"
+        },
+        "nextSecondDelivery周三": {
+          "close": "21->2002-12-25,40.11,3.61",
+          "high": "3->2002-11-29,53.56,4.82",
+          "low": ",0,0"
+        }
+      }
+    ],
+    "2002-11-27": [
+      "日周低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "20->2002-12-25,32.2,2.88",
+          "high": "2->2002-11-29,45.65,4.08",
+          "low": "10->2002-12-11,-1.53,-0.14"
+        },
+        "nextSecondDelivery周三": {
+          "close": "39->2003-01-22,55.6,4.97",
+          "high": "35->2003-01-16,77.42,6.92",
+          "low": "26->2003-01-03,-45.44,-4.06"
+        }
+      }
+    ],
+    "2003-09-24": [
+      "日周低位九KDJ",
+      {
+        "nextFirstDelivery周三": {
+          "close": "15->2003-10-22,2.34,0.2",
+          "high": "7->2003-10-10,4.93,0.43",
+          "low": "3->2003-09-29,-33.94,-2.95"
+        },
+        "nextSecondDelivery周三": {
+          "close": "40->2003-11-26,4.77,0.41",
+          "high": "7->2003-10-10,4.93,0.43",
+          "low": "34->2003-11-18,-69.49,-6.04"
+        }
+      }
+    ],
     "2003-11-04": [
       "上证低位KDJ",
-      {}
+      {
+        "nextFirstDelivery周三": {
+          "close": "16->2003-11-26,10.1,0.88",
+          "high": "16->2003-11-26,10.1,0.88",
+          "low": "10->2003-11-18,-64.17,-5.6"
+        },
+        "nextSecondDelivery周三": {
+          "close": "36->2003-12-24,67.17,5.87",
+          "high": "36->2003-12-24,67.17,5.87",
+          "low": "10->2003-11-18,-64.17,-5.6"
+        }
+      }
+    ],
+    "2004-02-04": [
+      "日周高位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "15->2004-02-25,-19.42,-1.44",
+          "high": "10->2004-02-18,42.49,3.15",
+          "low": "15->2004-02-25,-19.42,-1.44"
+        },
+        "nextSecondDelivery周三": {
+          "close": "35->2004-03-24,36.51,2.71",
+          "high": "33->2004-03-22,50.69,3.76",
+          "low": "24->2004-03-09,-34.7,-2.57"
+        }
+      }
+    ],
+    "2004-02-05": [
+      "日周高位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "14->2004-02-25,-24.41,-1.8",
+          "high": "9->2004-02-18,37.5,2.77",
+          "low": "14->2004-02-25,-24.41,-1.8"
+        },
+        "nextSecondDelivery周三": {
+          "close": "34->2004-03-24,31.52,2.33",
+          "high": "32->2004-03-22,45.7,3.38",
+          "low": "23->2004-03-09,-39.68,-2.93"
+        }
+      }
+    ],
+    "2004-02-10": [
+      "日周高位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "11->2004-02-25,-33.62,-2.47",
+          "high": "6->2004-02-18,28.29,2.08",
+          "low": "11->2004-02-25,-33.62,-2.47"
+        },
+        "nextSecondDelivery周三": {
+          "close": "31->2004-03-24,22.31,1.64",
+          "high": "29->2004-03-22,36.49,2.68",
+          "low": "20->2004-03-09,-48.89,-3.59"
+        }
+      }
     ],
     "2005-01-21": [
       "上证低位KDJ",
       {
         "nextFirstDelivery周三": {
-          "close": "3->2005-01-26,7.33,0.75",
+          "close": "3->2005-01-26,7.32,0.75",
           "high": "1->2005-01-24,15.53,1.58",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
           "close": "16->2005-02-23,61.34,6.24",
           "high": "15->2005-02-22,64.14,6.53",
-          "low": "6->2005-01-31,-27.72,-2.82"
+          "low": "6->2005-01-31,-27.73,-2.82"
         }
       }
     ],
@@ -25,17 +171,111 @@ var triggerLogObj指数 = {
         "nextFirstDelivery周三": {
           "close": "8->2005-02-23,37.03,3.68",
           "high": "7->2005-02-22,39.83,3.96",
-          "low": "1->2005-02-03,-13.69,-1.36"
+          "low": "1->2005-02-03,-13.7,-1.36"
         },
         "nextSecondDelivery周三": {
           "close": "28->2005-03-23,-47.9,-4.76",
-          "high": "17->2005-03-08,42.08,4.18",
+          "high": "17->2005-03-08,42.07,4.18",
           "low": "28->2005-03-23,-47.9,-4.76"
+        }
+      }
+    ],
+    "2005-04-27": [
+      "日月低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "15->2005-05-25,-58.15,-6.28",
+          "high": "1->2005-04-28,15.47,1.67",
+          "low": "13->2005-05-23,-63.26,-6.83"
+        },
+        "nextSecondDelivery周三": {
+          "close": "35->2005-06-22,-25.96,-2.8",
+          "high": "1->2005-04-28,15.47,1.67",
+          "low": "22->2005-06-03,-108.57,-11.72"
+        }
+      }
+    ],
+    "2005-05-09": [
+      "日月低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "12->2005-05-25,-40.72,-4.48",
+          "high": "1->2005-05-10,3.9,0.43",
+          "low": "10->2005-05-23,-45.83,-5.04"
+        },
+        "nextSecondDelivery周三": {
+          "close": "32->2005-06-22,-8.53,-0.94",
+          "high": "1->2005-05-10,3.9,0.43",
+          "low": "19->2005-06-03,-91.14,-10.02"
+        }
+      }
+    ],
+    "2005-05-10": [
+      "日月低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "11->2005-05-25,-44.63,-4.89",
+          "high": ",0,0",
+          "low": "9->2005-05-23,-49.74,-5.45"
+        },
+        "nextSecondDelivery周三": {
+          "close": "31->2005-06-22,-12.43,-1.36",
+          "high": ",0,0",
+          "low": "18->2005-06-03,-95.04,-10.41"
+        }
+      }
+    ],
+    "2005-05-11": [
+      "日月低位九转",
+      "周月低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "10->2005-05-25,-33.4,-3.7",
+          "high": ",0,0",
+          "low": "8->2005-05-23,-38.51,-4.27"
+        },
+        "nextSecondDelivery周三": {
+          "close": "30->2005-06-22,-1.21,-0.13",
+          "high": "21->2005-06-09,10.75,1.19",
+          "low": "17->2005-06-03,-83.82,-9.29"
+        }
+      }
+    ],
+    "2005-05-12": [
+      "日月低位九转",
+      "周月低位九转",
+      {
+        "nextFirstDelivery周三": {
+          "close": "9->2005-05-25,-17.37,-1.96",
+          "high": "1->2005-05-13,1.72,0.19",
+          "low": "7->2005-05-23,-22.48,-2.54"
+        },
+        "nextSecondDelivery周三": {
+          "close": "29->2005-06-22,14.83,1.67",
+          "high": "20->2005-06-09,26.78,3.02",
+          "low": "16->2005-06-03,-67.79,-7.65"
+        }
+      }
+    ],
+    "2005-05-19": [
+      "日周低位九KDJ",
+      {
+        "nextFirstDelivery周三": {
+          "close": "4->2005-05-25,-15.72,-1.78",
+          "high": ",0,0",
+          "low": "2->2005-05-23,-20.83,-2.36"
+        },
+        "nextSecondDelivery周三": {
+          "close": "24->2005-06-22,16.47,1.86",
+          "high": "15->2005-06-09,28.43,3.22",
+          "low": "11->2005-06-03,-66.14,-7.48"
         }
       }
     ],
     "2005-06-02": [
       "日周低位九转",
+      "日月低位九转",
+      "周月低位九转",
       {
         "nextFirstDelivery周三": {
           "close": "14->2005-06-22,82.27,10.05",
@@ -51,6 +291,8 @@ var triggerLogObj指数 = {
     ],
     "2005-06-03": [
       "日周低位九转",
+      "日月低位九转",
+      "周月低位九转",
       {
         "nextFirstDelivery周三": {
           "close": "13->2005-06-22,82.61,10.1",
@@ -496,7 +738,6 @@ var triggerLogObj指数 = {
     ],
     "2006-12-21": [
       "上证高位KDJ",
-      "沪深300高位KDJ",
       "日周高位九转",
       "日月高位九转",
       "周月高位九转",
@@ -740,7 +981,6 @@ var triggerLogObj指数 = {
       }
     ],
     "2007-01-26": [
-      "恒生高位KDJ",
       "日周高位九转",
       {
         "nextFirstDelivery周三": {
@@ -1019,6 +1259,36 @@ var triggerLogObj指数 = {
         }
       }
     ],
+    "2008-10-21": [
+      "日周低位九KDJ",
+      {
+        "nextFirstDelivery周三": {
+          "close": "1->2008-10-22,-48.08,-2.56",
+          "high": ",0,0",
+          "low": "1->2008-10-22,-48.08,-2.56"
+        },
+        "nextSecondDelivery周三": {
+          "close": "26->2008-11-26,-37.91,-2.02",
+          "high": "19->2008-11-17,105.82,5.62",
+          "low": "10->2008-11-04,-253.65,-13.48"
+        }
+      }
+    ],
+    "2008-10-22": [
+      "日周低位九KDJ",
+      {
+        "nextFirstDelivery周三": {
+          "close": "25->2008-11-26,10.17,0.55",
+          "high": "18->2008-11-17,153.9,8.39",
+          "low": "9->2008-11-04,-205.56,-11.21"
+        },
+        "nextSecondDelivery周三": {
+          "close": "45->2008-12-24,53.75,2.93",
+          "high": "35->2008-12-10,263.07,14.35",
+          "low": "9->2008-11-04,-205.56,-11.21"
+        }
+      }
+    ],
     "2008-10-27": [
       "日周低位九转",
       "日月低位九转",
@@ -1038,7 +1308,7 @@ var triggerLogObj指数 = {
     ],
     "2008-10-28": [
       "上证低位KDJ",
-      "恒生低位KDJ",
+      "沪深300低位KDJ",
       "日周低位九转",
       "日月低位九转",
       "周月低位九转",
@@ -1085,6 +1355,21 @@ var triggerLogObj指数 = {
           "close": "37->2008-12-24,233.53,14.12",
           "high": "27->2008-12-10,442.85,26.78",
           "low": "1->2008-11-04,-25.78,-1.56"
+        }
+      }
+    ],
+    "2008-11-05": [
+      "沪深300低位KDJ",
+      {
+        "nextFirstDelivery周三": {
+          "close": "15->2008-11-26,152.07,8.99",
+          "high": "8->2008-11-17,295.8,17.49",
+          "low": "1->2008-11-06,-41.64,-2.46"
+        },
+        "nextSecondDelivery周三": {
+          "close": "35->2008-12-24,195.65,11.57",
+          "high": "25->2008-12-10,404.97,23.94",
+          "low": "1->2008-11-06,-41.64,-2.46"
         }
       }
     ],
@@ -1315,7 +1600,6 @@ var triggerLogObj指数 = {
     ],
     "2009-11-23": [
       "日月高位九转",
-      "周月高位九转",
       {
         "nextFirstDelivery周三": {
           "close": "2->2009-11-25,-35.88,-0.98",
@@ -1963,7 +2247,7 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "14->2016-03-23,177.67,5.81",
-          "high": "12->2016-03-21,191.02,6.25",
+          "high": "12->2016-03-21,191.01,6.25",
           "low": "5->2016-03-10,-45.28,-1.48"
         },
         "nextSecondDelivery周三": {
@@ -2085,13 +2369,13 @@ var triggerLogObj指数 = {
       "沪深300低位KDJ",
       {
         "nextFirstDelivery周三": {
-          "close": "3->2018-10-24,53.25,1.7",
-          "high": "1->2018-10-22,135.32,4.32",
+          "close": "3->2018-10-24,53.26,1.7",
+          "high": "1->2018-10-22,135.33,4.32",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
-          "close": "28->2018-11-28,43.98,1.4",
-          "high": "21->2018-11-19,159.65,5.09",
+          "close": "28->2018-11-28,43.99,1.4",
+          "high": "21->2018-11-19,159.66,5.09",
           "low": "6->2018-10-29,-58.06,-1.85"
         }
       }
@@ -2102,7 +2386,7 @@ var triggerLogObj指数 = {
         "nextFirstDelivery周三": {
           "close": "2->2018-10-24,-82.07,-2.51",
           "high": ",0,0",
-          "low": "1->2018-10-23,-86.84,-2.66"
+          "low": "1->2018-10-23,-86.85,-2.66"
         },
         "nextSecondDelivery周三": {
           "close": "27->2018-11-28,-91.34,-2.79",
@@ -2116,7 +2400,7 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "16->2019-01-23,130.4,4.33",
-          "high": "14->2019-01-21,174.99,5.81",
+          "high": "14->2019-01-21,174.98,5.81",
           "low": "2->2019-01-03,-45.81,-1.52"
         },
         "nextSecondDelivery周三": {
@@ -2130,14 +2414,14 @@ var triggerLogObj指数 = {
       "日月低位九转",
       {
         "nextFirstDelivery周三": {
-          "close": "15->2019-01-23,171.51,5.78",
+          "close": "15->2019-01-23,171.52,5.78",
           "high": "13->2019-01-21,216.1,7.28",
-          "low": "1->2019-01-03,-4.7,-0.16"
+          "low": "1->2019-01-03,-4.69,-0.16"
         },
         "nextSecondDelivery周三": {
-          "close": "35->2019-02-27,708.85,23.87",
-          "high": "33->2019-02-25,759.94,25.59",
-          "low": "1->2019-01-03,-4.7,-0.16"
+          "close": "35->2019-02-27,708.86,23.87",
+          "high": "33->2019-02-25,759.95,25.59",
+          "low": "1->2019-01-03,-4.69,-0.16"
         }
       }
     ],
@@ -2146,7 +2430,7 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "14->2019-01-23,176.21,5.94",
-          "high": "12->2019-01-21,220.8,7.45",
+          "high": "12->2019-01-21,220.79,7.45",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
@@ -2162,7 +2446,7 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "13->2019-01-23,105.18,3.46",
-          "high": "11->2019-01-21,149.77,4.93",
+          "high": "11->2019-01-21,149.76,4.93",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
@@ -2193,7 +2477,7 @@ var triggerLogObj指数 = {
         "nextFirstDelivery周三": {
           "close": "12->2019-04-24,-27.14,-0.67",
           "high": "9->2019-04-19,63.38,1.56",
-          "low": "5->2019-04-15,-81.71,-2.01"
+          "low": "5->2019-04-15,-81.7,-2.01"
         },
         "nextSecondDelivery周三": {
           "close": "29->2019-05-22,-407.85,-10.05",
@@ -2208,7 +2492,7 @@ var triggerLogObj指数 = {
         "nextFirstDelivery周三": {
           "close": "10->2019-04-24,-55.76,-1.36",
           "high": "7->2019-04-19,34.76,0.85",
-          "low": "3->2019-04-15,-110.33,-2.7"
+          "low": "3->2019-04-15,-110.32,-2.7"
         },
         "nextSecondDelivery周三": {
           "close": "27->2019-05-22,-436.47,-10.68",
@@ -2227,8 +2511,8 @@ var triggerLogObj指数 = {
           "low": "3->2020-03-30,-48.41,-1.3"
         },
         "nextSecondDelivery周三": {
-          "close": "41->2020-05-27,123.09,3.31",
-          "high": "31->2020-05-13,245.73,6.6",
+          "close": "41->2020-05-27,123.1,3.31",
+          "high": "31->2020-05-13,245.74,6.6",
           "low": "3->2020-03-30,-48.41,-1.3"
         }
       }
@@ -2288,9 +2572,9 @@ var triggerLogObj指数 = {
           "low": "4->2021-02-24,-330.81,-5.73"
         },
         "nextSecondDelivery周三": {
-          "close": "24->2021-03-24,-839.69,-14.56",
+          "close": "24->2021-03-24,-839.7,-14.56",
           "high": "1->2021-02-19,10.46,0.18",
-          "low": "24->2021-03-24,-839.69,-14.56"
+          "low": "24->2021-03-24,-839.7,-14.56"
         }
       }
     ],
@@ -2304,9 +2588,9 @@ var triggerLogObj指数 = {
           "low": "3->2021-02-24,-341.27,-5.91"
         },
         "nextSecondDelivery周三": {
-          "close": "23->2021-03-24,-850.15,-14.71",
+          "close": "23->2021-03-24,-850.16,-14.71",
           "high": ",0,0",
-          "low": "23->2021-03-24,-850.15,-14.71"
+          "low": "23->2021-03-24,-850.16,-14.71"
         }
       }
     ],
@@ -2322,9 +2606,9 @@ var triggerLogObj指数 = {
           "low": "2->2021-02-24,-159.76,-2.85"
         },
         "nextSecondDelivery周三": {
-          "close": "22->2021-03-24,-668.64,-11.95",
+          "close": "22->2021-03-24,-668.65,-11.95",
           "high": ",0,0",
-          "low": "22->2021-03-24,-668.64,-11.95"
+          "low": "22->2021-03-24,-668.65,-11.95"
         }
       }
     ],
@@ -2337,8 +2621,8 @@ var triggerLogObj指数 = {
           "low": "4->2022-05-09,-43.67,-1.11"
         },
         "nextSecondDelivery周三": {
-          "close": "35->2022-06-22,349.51,8.91",
-          "high": "33->2022-06-20,409.32,10.44",
+          "close": "35->2022-06-22,349.52,8.91",
+          "high": "33->2022-06-20,409.33,10.44",
           "low": "4->2022-05-09,-43.67,-1.11"
         }
       }
@@ -2402,12 +2686,12 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "15->2022-11-23,95.72,2.6",
-          "high": "9->2022-11-15,188.16,5.12",
+          "high": "9->2022-11-15,188.17,5.12",
           "low": "1->2022-11-03,-29.91,-0.81"
         },
         "nextSecondDelivery周三": {
-          "close": "40->2022-12-28,193.45,5.26",
-          "high": "27->2022-12-09,320.43,8.71",
+          "close": "40->2022-12-28,193.46,5.26",
+          "high": "27->2022-12-09,320.44,8.71",
           "low": "1->2022-11-03,-29.91,-0.81"
         }
       }
@@ -2416,12 +2700,12 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "nextFirstDelivery周三": {
-          "close": "17->2023-02-22,-94.4,-2.25",
+          "close": "17->2023-02-22,-94.39,-2.25",
           "high": ",0,0",
           "low": "14->2023-02-17,-166.84,-3.97"
         },
         "nextSecondDelivery周三": {
-          "close": "37->2023-03-22,-201.91,-4.81",
+          "close": "37->2023-03-22,-201.9,-4.81",
           "high": ",0,0",
           "low": "35->2023-03-20,-262.27,-6.24"
         }
@@ -2432,14 +2716,14 @@ var triggerLogObj指数 = {
       "上证50低位KDJ",
       {
         "nextFirstDelivery周三": {
-          "close": "12->2023-12-27,-83.09,-2.43",
+          "close": "12->2023-12-27,-83.1,-2.43",
           "high": "1->2023-12-12,7.35,0.21",
           "low": "7->2023-12-20,-121.95,-3.57"
         },
         "nextSecondDelivery周三": {
-          "close": "31->2024-01-24,-142.34,-4.16",
+          "close": "31->2024-01-24,-142.35,-4.16",
           "high": "14->2023-12-29,11.66,0.34",
-          "low": "29->2024-01-22,-200.55,-5.86"
+          "low": "29->2024-01-22,-200.55,-5.87"
         }
       }
     ],
@@ -2481,11 +2765,11 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "11->2024-02-28,249.84,7.81",
-          "high": "10->2024-02-27,294.37,9.2",
+          "high": "10->2024-02-27,294.36,9.2",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
-          "close": "31->2024-03-27,302.37,9.45",
+          "close": "31->2024-03-27,302.36,9.45",
           "high": "24->2024-03-18,403.11,12.6",
           "low": ",0,0"
         }
@@ -2496,11 +2780,11 @@ var triggerLogObj指数 = {
       {
         "nextFirstDelivery周三": {
           "close": "10->2024-02-28,138.57,4.18",
-          "high": "9->2024-02-27,183.1,5.53",
+          "high": "9->2024-02-27,183.09,5.53",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
-          "close": "30->2024-03-27,191.1,5.77",
+          "close": "30->2024-03-27,191.09,5.77",
           "high": "23->2024-03-18,291.84,8.81",
           "low": ",0,0"
         }
@@ -2540,8 +2824,8 @@ var triggerLogObj指数 = {
       "日周低位九KDJ",
       {
         "nextFirstDelivery周三": {
-          "close": "4->2024-09-25,205.49,6.43",
-          "high": "4->2024-09-25,205.49,6.43",
+          "close": "4->2024-09-25,205.5,6.43",
+          "high": "4->2024-09-25,205.5,6.43",
           "low": ",0,0"
         },
         "nextSecondDelivery周三": {
@@ -2552,86 +2836,203 @@ var triggerLogObj指数 = {
       }
     ]
   },
-  "恒生低位KDJ": [
+  "日周低位九转": [
     {
-      "trigDate": "1998-07-15",
-      "quantName": "恒生低位KDJ",
-      "percent": 3.39
+      "trigDate": "2002-11-14",
+      "quantName": "日周低位九转",
+      "trueCount": 2
     },
     {
-      "trigDate": "1998-09-07",
-      "quantName": "恒生低位KDJ",
-      "percent": 7.86
+      "trigDate": "2002-11-20",
+      "quantName": "日周低位九转",
+      "trueCount": 4
     },
     {
-      "trigDate": "1998-09-24",
-      "quantName": "恒生低位KDJ",
-      "percent": 4.4
+      "trigDate": "2002-11-21",
+      "quantName": "日周低位九转",
+      "trueCount": 4
     },
     {
-      "trigDate": "2001-09-04",
-      "quantName": "恒生低位KDJ",
-      "percent": 2.15
+      "trigDate": "2002-11-26",
+      "quantName": "日周低位九转",
+      "trueCount": 4
     },
     {
-      "trigDate": "2001-09-14",
-      "quantName": "恒生低位KDJ",
-      "percent": 0.9
+      "trigDate": "2002-11-27",
+      "quantName": "日周低位九转",
+      "trueCount": 4
     },
     {
-      "trigDate": "2003-03-03",
-      "quantName": "恒生低位KDJ",
-      "percent": 1.6
+      "trigDate": "2005-06-02",
+      "quantName": "日周低位九转",
+      "trueCount": 6
     },
     {
-      "trigDate": "2003-04-04",
-      "quantName": "恒生低位KDJ",
-      "percent": 2.02
+      "trigDate": "2005-06-03",
+      "quantName": "日周低位九转",
+      "trueCount": 6
     },
     {
-      "trigDate": "2003-04-29",
-      "quantName": "恒生低位KDJ",
-      "percent": 3.67
-    },
-    {
-      "trigDate": "2008-10-13",
-      "quantName": "恒生低位KDJ",
-      "percent": 10.24
+      "trigDate": "2008-10-27",
+      "quantName": "日周低位九转",
+      "trueCount": 5
     },
     {
       "trigDate": "2008-10-28",
-      "quantName": "恒生低位KDJ",
-      "percent": 14.35
+      "quantName": "日周低位九转",
+      "trueCount": 5
     },
     {
-      "trigDate": "2015-12-16",
-      "quantName": "恒生低位KDJ",
-      "percent": 2.01
+      "trigDate": "2008-10-31",
+      "quantName": "日周低位九转",
+      "trueCount": 5
     },
     {
-      "trigDate": "2021-12-07",
-      "quantName": "恒生低位KDJ",
-      "percent": 2.72
+      "trigDate": "2008-11-03",
+      "quantName": "日周低位九转",
+      "trueCount": 3
     },
     {
-      "trigDate": "2022-03-16",
-      "quantName": "恒生低位KDJ",
-      "percent": 9.08
+      "trigDate": "2010-07-05",
+      "quantName": "日周低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2010-07-06",
+      "quantName": "日周低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2011-09-26",
+      "quantName": "日周低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2011-09-29",
+      "quantName": "日周低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2012-08-27",
+      "quantName": "日周低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-08-29",
+      "quantName": "日周低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-08-30",
+      "quantName": "日周低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-08-31",
+      "quantName": "日周低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-09-05",
+      "quantName": "日周低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-10-28",
+      "quantName": "日周低位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2022-10-31",
+      "quantName": "日周低位九转",
+      "trueCount": 5
     },
     {
       "trigDate": "2022-11-01",
-      "quantName": "恒生低位KDJ",
-      "percent": 5.23
+      "quantName": "日周低位九转",
+      "trueCount": 7
     },
     {
-      "trigDate": "2022-11-29",
-      "quantName": "恒生低位KDJ",
-      "percent": 5.24
+      "trigDate": "2024-02-02",
+      "quantName": "日周低位九转",
+      "trueCount": 3
     },
     {
-      "trigDate": "2024-01-23",
-      "quantName": "恒生低位KDJ",
-      "percent": 2.63
+      "trigDate": "2024-02-05",
+      "quantName": "日周低位九转",
+      "trueCount": 3
+    }
+  ],
+  "日周低位九KDJ": [
+    {
+      "trigDate": "2003-09-24",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 7
+    },
+    {
+      "trigDate": "2005-05-19",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2005-06-06",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2005-06-07",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2008-10-21",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2008-10-22",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2011-10-12",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2011-10-13",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-08-02",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-09-03",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2012-09-04",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-11-02",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 7
+    },
+    {
+      "trigDate": "2024-09-18",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2024-09-19",
+      "quantName": "日周低位九KDJ",
+      "trueCount": 6
     }
   ],
   "上证低位KDJ": [
@@ -2716,357 +3117,101 @@ var triggerLogObj指数 = {
       "percent": 1.44
     }
   ],
-  "日周低位九转": [
-    {
-      "trigDate": "2005-06-02",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2005-06-03",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2008-10-27",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2008-10-28",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2008-10-31",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2008-11-03",
-      "quantName": "日周低位九转",
-      "trueCount": 4
-    },
-    {
-      "trigDate": "2010-07-05",
-      "quantName": "日周低位九转",
-      "trueCount": 3
-    },
-    {
-      "trigDate": "2010-07-06",
-      "quantName": "日周低位九转",
-      "trueCount": 3
-    },
-    {
-      "trigDate": "2011-09-26",
-      "quantName": "日周低位九转",
-      "trueCount": 4
-    },
-    {
-      "trigDate": "2011-09-29",
-      "quantName": "日周低位九转",
-      "trueCount": 3
-    },
-    {
-      "trigDate": "2012-08-27",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-08-29",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-08-30",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-08-31",
-      "quantName": "日周低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-09-05",
-      "quantName": "日周低位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2022-10-28",
-      "quantName": "日周低位九转",
-      "trueCount": 4
-    },
-    {
-      "trigDate": "2022-10-31",
-      "quantName": "日周低位九转",
-      "trueCount": 5
-    },
-    {
-      "trigDate": "2022-11-01",
-      "quantName": "日周低位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2024-02-02",
-      "quantName": "日周低位九转",
-      "trueCount": 3
-    },
-    {
-      "trigDate": "2024-02-05",
-      "quantName": "日周低位九转",
-      "trueCount": 3
-    }
-  ],
-  "日周低位九KDJ": [
-    {
-      "trigDate": "2005-06-06",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2005-06-07",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2011-10-12",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2011-10-13",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-08-02",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-09-03",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2012-09-04",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2022-11-02",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2024-09-18",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2024-09-19",
-      "quantName": "日周低位九KDJ",
-      "trueCount": 6
-    }
-  ],
-  "日月高位九转": [
-    {
-      "trigDate": "2006-09-18",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2006-09-19",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2006-11-24",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2006-11-27",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2006-11-28",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2006-12-05",
-      "quantName": "日月高位九转",
-      "trueCount": 5
-    },
-    {
-      "trigDate": "2006-12-21",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2006-12-28",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2006-12-29",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2007-01-09",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2007-01-10",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2007-01-11",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2007-01-23",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2007-01-24",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2007-10-17",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2008-01-14",
-      "quantName": "日月高位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2009-11-23",
-      "quantName": "日月高位九转",
-      "trueCount": 4
-    },
-    {
-      "trigDate": "2018-01-23",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2018-01-24",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2018-01-25",
-      "quantName": "日月高位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2021-02-18",
-      "quantName": "日月高位九转",
-      "trueCount": 4
-    },
-    {
-      "trigDate": "2021-02-19",
-      "quantName": "日月高位九转",
-      "trueCount": 4
-    },
-    {
-      "trigDate": "2021-02-22",
-      "quantName": "日月高位九转",
-      "trueCount": 4
-    }
-  ],
   "日周高位九转": [
+    {
+      "trigDate": "2004-02-04",
+      "quantName": "日周高位九转",
+      "trueCount": 2
+    },
+    {
+      "trigDate": "2004-02-05",
+      "quantName": "日周高位九转",
+      "trueCount": 2
+    },
+    {
+      "trigDate": "2004-02-10",
+      "quantName": "日周高位九转",
+      "trueCount": 3
+    },
     {
       "trigDate": "2006-11-01",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2006-11-02",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2006-11-03",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-06",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-07",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-08",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-17",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2006-11-20",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2006-11-21",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2006-11-22",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2006-11-23",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2006-11-24",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 5
     },
     {
       "trigDate": "2006-11-27",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-28",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-30",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2006-12-01",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2006-12-04",
@@ -3111,12 +3256,12 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2006-12-28",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2006-12-29",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2007-01-09",
@@ -3151,7 +3296,7 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2007-01-26",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 5
     },
     {
       "trigDate": "2007-01-29",
@@ -3161,7 +3306,7 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2007-02-16",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2007-05-10",
@@ -3176,7 +3321,7 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2007-05-24",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2007-05-25",
@@ -3216,17 +3361,17 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2007-10-17",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2009-07-02",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2009-07-03",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2009-07-06",
@@ -3276,37 +3421,37 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2009-07-24",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2009-07-27",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2009-07-28",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2011-04-08",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 2
     },
     {
       "trigDate": "2013-02-06",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 3
     },
     {
       "trigDate": "2013-02-07",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2013-02-08",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 4
     },
     {
       "trigDate": "2015-01-05",
@@ -3429,176 +3574,432 @@ var triggerLogObj指数 = {
       "trueCount": 5
     }
   ],
+  "日月低位九转": [
+    {
+      "trigDate": "2005-04-27",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2005-05-09",
+      "quantName": "日月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2005-05-10",
+      "quantName": "日月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2005-05-11",
+      "quantName": "日月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2005-05-12",
+      "quantName": "日月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2005-06-02",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2005-06-03",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2008-10-27",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2008-10-28",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2008-10-31",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2018-12-28",
+      "quantName": "日月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2019-01-02",
+      "quantName": "日月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2019-01-03",
+      "quantName": "日月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-10-31",
+      "quantName": "日月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2022-11-01",
+      "quantName": "日月低位九转",
+      "trueCount": 5
+    }
+  ],
+  "周月低位九转": [
+    {
+      "trigDate": "2005-05-11",
+      "quantName": "周月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2005-05-12",
+      "quantName": "周月低位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2005-06-02",
+      "quantName": "周月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2005-06-03",
+      "quantName": "周月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2008-10-27",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2008-10-28",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2008-10-31",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2008-11-03",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-10-28",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-10-31",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2022-11-01",
+      "quantName": "周月低位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2024-02-02",
+      "quantName": "周月低位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2024-02-05",
+      "quantName": "周月低位九转",
+      "trueCount": 5
+    }
+  ],
+  "日月高位九转": [
+    {
+      "trigDate": "2006-09-18",
+      "quantName": "日月高位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2006-09-19",
+      "quantName": "日月高位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2006-11-24",
+      "quantName": "日月高位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2006-11-27",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2006-11-28",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2006-12-05",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2006-12-21",
+      "quantName": "日月高位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2006-12-28",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2006-12-29",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2007-01-09",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2007-01-10",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2007-01-11",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2007-01-23",
+      "quantName": "日月高位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2007-01-24",
+      "quantName": "日月高位九转",
+      "trueCount": 5
+    },
+    {
+      "trigDate": "2007-10-17",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2008-01-14",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2009-11-23",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2018-01-23",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2018-01-24",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2018-01-25",
+      "quantName": "日月高位九转",
+      "trueCount": 6
+    },
+    {
+      "trigDate": "2021-02-18",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2021-02-19",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    },
+    {
+      "trigDate": "2021-02-22",
+      "quantName": "日月高位九转",
+      "trueCount": 4
+    }
+  ],
   "周月高位九转": [
     {
       "trigDate": "2006-11-01",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-02",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-03",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-06",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-07",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-17",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-20",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-21",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-22",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-23",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-24",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-27",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-28",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-11-30",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-04",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-05",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-18",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-19",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-21",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-27",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-28",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2006-12-29",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-01-09",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-01-10",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-01-11",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-01-23",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-01-24",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-02-16",
       "quantName": "周月高位九转",
-      "trueCount": 8
+      "trueCount": 6
     },
     {
       "trigDate": "2007-10-11",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-10-12",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-10-15",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-10-16",
       "quantName": "周月高位九转",
-      "trueCount": 7
+      "trueCount": 6
     },
     {
       "trigDate": "2007-10-17",
       "quantName": "周月高位九转",
-      "trueCount": 8
-    },
-    {
-      "trigDate": "2009-11-23",
-      "quantName": "周月高位九转",
-      "trueCount": 3
+      "trueCount": 6
     },
     {
       "trigDate": "2015-05-25",
@@ -3712,11 +4113,6 @@ var triggerLogObj指数 = {
       "percent": -0.83
     },
     {
-      "trigDate": "2006-12-21",
-      "quantName": "沪深300高位KDJ",
-      "percent": -1.42
-    },
-    {
       "trigDate": "2007-01-12",
       "quantName": "沪深300高位KDJ",
       "percent": -2.59
@@ -3772,118 +4168,17 @@ var triggerLogObj指数 = {
       "percent": -3.14
     }
   ],
-  "恒生高位KDJ": [
-    {
-      "trigDate": "2007-01-04",
-      "quantName": "恒生高位KDJ",
-      "percent": -1.9
-    },
-    {
-      "trigDate": "2007-01-26",
-      "quantName": "恒生高位KDJ",
-      "percent": -1.88
-    },
-    {
-      "trigDate": "2007-11-02",
-      "quantName": "恒生高位KDJ",
-      "percent": -3.25
-    },
-    {
-      "trigDate": "2017-11-23",
-      "quantName": "恒生高位KDJ",
-      "percent": -0.99
-    }
-  ],
-  "日月低位九转": [
-    {
-      "trigDate": "2008-10-27",
-      "quantName": "日月低位九转",
-      "trueCount": 5
-    },
-    {
-      "trigDate": "2008-10-28",
-      "quantName": "日月低位九转",
-      "trueCount": 5
-    },
-    {
-      "trigDate": "2008-10-31",
-      "quantName": "日月低位九转",
-      "trueCount": 5
-    },
-    {
-      "trigDate": "2018-12-28",
-      "quantName": "日月低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2019-01-02",
-      "quantName": "日月低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2019-01-03",
-      "quantName": "日月低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2022-10-31",
-      "quantName": "日月低位九转",
-      "trueCount": 3
-    },
-    {
-      "trigDate": "2022-11-01",
-      "quantName": "日月低位九转",
-      "trueCount": 5
-    }
-  ],
-  "周月低位九转": [
-    {
-      "trigDate": "2008-10-27",
-      "quantName": "周月低位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2008-10-28",
-      "quantName": "周月低位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2008-10-31",
-      "quantName": "周月低位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2008-11-03",
-      "quantName": "周月低位九转",
-      "trueCount": 7
-    },
-    {
-      "trigDate": "2022-10-28",
-      "quantName": "周月低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2022-10-31",
-      "quantName": "周月低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2022-11-01",
-      "quantName": "周月低位九转",
-      "trueCount": 6
-    },
-    {
-      "trigDate": "2024-02-02",
-      "quantName": "周月低位九转",
-      "trueCount": 5
-    },
-    {
-      "trigDate": "2024-02-05",
-      "quantName": "周月低位九转",
-      "trueCount": 5
-    }
-  ],
   "沪深300低位KDJ": [
+    {
+      "trigDate": "2008-10-28",
+      "quantName": "沪深300低位KDJ",
+      "percent": 3.09
+    },
+    {
+      "trigDate": "2008-11-05",
+      "quantName": "沪深300低位KDJ",
+      "percent": 3.91
+    },
     {
       "trigDate": "2011-10-12",
       "quantName": "沪深300低位KDJ",
@@ -3990,6 +4285,40 @@ var triggerLogObj指数 = {
       "trigDate": "2024-01-18",
       "quantName": "上证50低位KDJ",
       "percent": 1.78
+    }
+  ],
+  "恒生高位KDJ": [
+    {
+      "trigDate": "2017-11-23",
+      "quantName": "恒生高位KDJ",
+      "percent": -0.99
+    }
+  ],
+  "恒生低位KDJ": [
+    {
+      "trigDate": "2021-12-07",
+      "quantName": "恒生低位KDJ",
+      "percent": 2.72
+    },
+    {
+      "trigDate": "2022-03-16",
+      "quantName": "恒生低位KDJ",
+      "percent": 9.08
+    },
+    {
+      "trigDate": "2022-11-01",
+      "quantName": "恒生低位KDJ",
+      "percent": 5.23
+    },
+    {
+      "trigDate": "2022-11-29",
+      "quantName": "恒生低位KDJ",
+      "percent": 5.24
+    },
+    {
+      "trigDate": "2024-01-23",
+      "quantName": "恒生低位KDJ",
+      "percent": 2.63
     }
   ]
 }

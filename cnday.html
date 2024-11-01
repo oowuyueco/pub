@@ -148,51 +148,6 @@
     <script type="text/javascript" src="./cn/雪球行情/中粮糖业.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/广农糖业.js"></script>
     <script>
-        function xueqiuFormatDate(stamp, period = "month") {
-            var date = new Date(stamp);
-            var y = date.getFullYear(),
-                m = date.getMonth() + 1,
-                d = date.getDate();
-            if (m < 10)
-                m = '0' + m;
-            if (d < 10)
-                d = '0' + d;
-
-            if (period == "month") {
-                var current_date = new Date();
-                var current_y = current_date.getFullYear(),
-                    current_m = current_date.getMonth() + 1,
-                    current_d = current_date.getDate();
-                if (current_m < 10)
-                    current_m = '0' + current_m;
-                if (current_d < 10)
-                    current_d = '0' + current_d;
-
-                if ((y + '-' + m) == (current_y + '-' + current_m)) { //当月不处理
-                    var t = y + '-' + m + '-' + d;
-                } else {
-                    var t = y + '-' + m + '-28';
-                }
-            }
-
-            if (period == "day") {
-                var t = y + '-' + m + '-' + d;
-            }
-
-
-            return t;
-        }
-
-        function sectorIndexToObj(ele, period = "month") {
-            let newItem = {}
-            newItem.stamp = ele[0]
-            newItem.date = xueqiuFormatDate(ele[0], period)
-            newItem.open = ele[2] //open
-            newItem.high = ele[3] //open
-            newItem.low = ele[4] //open
-            newItem.close = ele[5] //close
-            return newItem
-        }
 
         function sectorIndexYoY(ele, index, datasArr) {
 
@@ -236,23 +191,8 @@
 
         }
 
-        上证 = 上证.data.item.map((ele, index, arr) => {
-            return sectorIndexToObj(ele, "day")
-        }).map((ele, index, arr) => {
-            return ele //sectorIndexYoY(ele, index, arr)
-        })
-        沪深300 = 沪深300.data.item.map((ele, index, arr) => {
-            return sectorIndexToObj(ele, "day")
-        }).map((ele, index, arr) => {
-            return ele //sectorIndexYoY(ele, index, arr)
-        })
-        恒生 = 恒生.data.item.map((ele, index, arr) => {
-            return sectorIndexToObj(ele, "day")
-        }).map((ele, index, arr) => {
-            return ele //sectorIndexYoY(ele, index, arr)
-        })
-
         let currentName = decodeURI(getQueryVariable("name")) == "上证" ? "上证" : "沪深300"
+        
     </script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
     <script>

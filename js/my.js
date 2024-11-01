@@ -364,8 +364,33 @@ function xueqiuFormatDate(stamp, period = "month") {
     return t;
 }
 
+Array.prototype.akData2Obj = function (period = "day") {
+    let dataList = this
+    dataList = dataList.map((data, index) => {
+        if (data.日期 || data.开盘) {
+            return {
+                "date": data.日期.substring(0, 10),
+                "open": data.开盘,
+                "high": data.最高,
+                "low": data.最低,
+                "close": data.收盘,
+                "volume": data.成交量,
+                "timestamp": "",
+                "percent": PtPPercent(dataList[index - 1], data)
+            }
+        }
+
+        data.date = data.date.substring(0, 10)
+        data.timestamp = ""//未用到
+        data.percent = PtPPercent(dataList[index - 1], data)
+        return data
+    })
+    return dataList
+}
+
 Array.prototype.xueqiuData2Obj = function (period = "day") {
     let dataList = this
+    if (dataList[1].close) return dataList //兼容
     dataList = dataList.map((data, index) => {
         return {
             date: xueqiuFormatDate(data[0], period),
@@ -748,6 +773,11 @@ function curtPercent(periodItem) {
 
 //同比涨跌幅 昨收买-今收卖 / 昨收买   标准
 function PtPPercent(prePeriodItem, currentPeriodItem) {
+
+    if(!prePeriodItem) return 0
+    if (prePeriodItem.收盘) prePeriodItem.close = prePeriodItem.收盘
+    if (currentPeriodItem.收盘) currentPeriodItem.close = currentPeriodItem.收盘
+
     return parseFloat(((currentPeriodItem.close - prePeriodItem.close) / prePeriodItem.close * 100).toFixed(2))
 }
 
