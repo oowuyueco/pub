@@ -80,19 +80,7 @@
                     })
             }
             if (site == "xueqiu") {
-                dayDatas = dayDatas.data.item.map(function (data) {
-                    return {
-                        date: xueqiuFormatDate(data[0], "day"),
-                        timestamp: data[0],
-                        open: data[2],
-                        high: data[3],
-                        low: data[4],
-                        close: data[5],
-                        percent: data[7],
-                        volume: Math.ceil(+data[1]),
-                        turnover: 0
-                    }
-                })
+                dayDatas = dayDatas
             }
             if (site == "ths") {
                 dayDatas = dayDatas.map(function (data) {

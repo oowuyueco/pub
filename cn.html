@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <script type="text/javascript" src="./js/echarts.min.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
+    <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
     <script type="text/javascript" src="./cn/利润同比,亏损增减.js"></script>
     <script type="text/javascript" src="./cn/股债差300平均,滚动市盈率300.js"></script>
@@ -292,8 +293,221 @@
     <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
+    <script type="text/javascript" src="./cn/雪球行情/期权策略.js"></script>
     <script>
 
+        //从后往前N 包含当前的前N个
+        Array.prototype.cal9转 = function (kline交易日, priod, N = 5) {
+            var candleList = this
+            if (candleList.length < 20) return candleList
+
+            for (let endIndex = candleList.length - 1; candleList.length - N <= endIndex; endIndex--) {
+
+                if (endIndex == candleList.length - 1) {
+                    if (priod == "week" && new Date(kline交易日).getDay() < 3) continue
+                    if (priod == "month" && +kline交易日.substring(8, 10) < 18) continue
+                }
+
+                let is9转up = true
+                let is9转down = true
+                for (var i = 0; i <= 8; i++) {
+                    is9转down = is9转down && (candleList[endIndex - i - 4].close > candleList[endIndex - i].close)
+                    is9转up = is9转up && (candleList[endIndex - i - 4].close < candleList[endIndex - i].close)
+                }
+
+                if (is9转up) {
+                    for (var i = 0; i <= 8; i++)
+                        candleList[endIndex - i]["is9转up"] = 9 - i
+                    //break
+                }
+                if (is9转down) {
+                    for (var i = 0; i <= 8; i++)
+                        candleList[endIndex - i]["is9转down"] = 9 - i
+                    //break
+                }
+            }
+
+            return candleList
+        }
+        let 标星dateArr = [] //理论最高点
+        function test300标星(testDate) {
+            const found = 标星dateArr.find((element) => element == testDate)
+            //console.log(found)
+            if (found) return found
+
+            testDateIndex = 沪深300.findIndex(ele => ele.date == testDate)
+
+            沪深300currentDayList = 沪深300.slice(0, testDateIndex + 1).calBoll().cal9转(testDate, "day").calKdj().calMacd()
+            沪深300currentDayList = calculationBias(沪深300currentDayList)
+
+            沪深300currentWeekList = dayToPeriod(沪深300currentDayList, "week").calBoll().cal9转(testDate, "week").calKdj().calMacd()
+            沪深300currentWeekList = calculationBias(沪深300currentWeekList)
+
+            沪深300currentMonthList = dayToPeriod(沪深300currentDayList, "month").calBoll().cal9转(testDate, "month").calKdj().calMacd().maN(5, 'close').maN(40, 'close').maN(80, 'close')
+            沪深300currentMonthList = calculationBias(沪深300currentMonthList)
+
+            let currentDayList = 沪深300currentDayList
+            let currentWeekList = 沪深300currentWeekList
+            let currentMonthList = 沪深300currentMonthList
+
+            let pre3Day = currentDayList[currentDayList.length - 4]
+            let pre2Day = currentDayList[currentDayList.length - 3]
+            let pre1Day = currentDayList[currentDayList.length - 2]
+            let currentDay = currentDayList[currentDayList.length - 1]
+
+            let pre3Week = currentWeekList[currentWeekList.length - 4]
+            let pre2Week = currentWeekList[currentWeekList.length - 3]
+            let pre1Week = currentWeekList[currentWeekList.length - 2]
+            let currentWeek = currentWeekList[currentWeekList.length - 1]
+
+            let pre3Month = currentMonthList[currentMonthList.length - 4]
+            let pre2Month = currentMonthList[currentMonthList.length - 3]
+            let pre1Month = currentMonthList[currentMonthList.length - 2]
+            let currentMonth = currentMonthList[currentMonthList.length - 1]
+
+            if (currentMonthList.length < 8) return
+
+            function 前六月有强加速() {
+                //不包含自己前6个月
+                let cut = 0
+                for (let index = 1; index <= 6; index++) {
+                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
+                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
+                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
+                    if (
+                        pre1Month.dea >= 0 && pre1Month.bar > 0 &&
+                        pre1Month.diff > pre2Month.diff && pre1Month.dea > pre2Month.dea &&
+                        pre1Month.diff - pre2Month.diff + 1 >= pre1Month.dea - pre2Month.dea &&
+                        pre1Month.bias.bias3 > 0 && pre2Month.bias.bias3 > 0 &&
+                        pre1Month.bias.bias3 > pre1Month.bias.bias2 &&
+                        (curtAmp(pre1Month) > 30 && pre1Month.bias.bias3 - pre2Month.bias.bias3 > 0)
+                    ) {
+                        cut++
+                    }
+                }
+                return cut
+            }
+
+            function 有连续四月强加速() {
+                //包含自己前四个月
+                let cut = 0
+                for (let index = 1; index <= 4; index++) {
+                    let pre4Month = currentMonthList[currentMonthList.length - (index + 4)]
+                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
+                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
+                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
+                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
+                    if (
+                        curtPercent(currentMonth) > 0 && curtPercent(pre1Month) > 0 && curtPercent(pre2Month) > 0 && curtPercent(pre3Month) > 0 &&
+                        PtPPercent(pre1Month, currentMonth) > 0 &&
+                        PtPPercent(pre2Month, pre1Month) > 0 &&
+                        PtPPercent(pre3Month, pre2Month) > 0 &&
+                        PtPPercent(pre4Month, pre3Month) > 0 &&
+
+                        currentMonth.close > currentMonth.ma5 && currentMonth.ma5 > pre1Month.ma5 && currentMonth.K > pre1Month.K &&
+                        pre1Month.close > pre1Month.ma5 && pre1Month.ma5 > pre2Month.ma5 && currentMonth.D > pre1Month.D &&
+                        pre2Month.close > pre2Month.ma5 && pre2Month.ma5 > pre3Month.ma5 && currentMonth.J > pre1Month.J &&
+                        pre3Month.close > pre3Month.ma5 && pre3Month.ma5 > pre4Month.ma5
+                    ) {
+                        cut++
+                    }
+                }
+                return cut
+            }
+
+            function 有连续三月强加速加九转() {
+                //包含自己前三个月
+                let cut = 0
+                for (let index = 1; index <= 3; index++) {
+
+                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
+                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
+                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
+                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
+                    if (
+                        curtPercent(currentMonth) > 0 && curtPercent(pre1Month) > 0 && curtPercent(pre2Month) > 0 &&
+
+                        PtPPercent(pre1Month, currentMonth) > 0 &&
+                        PtPPercent(pre2Month, pre1Month) > 0 &&
+                        PtPPercent(pre3Month, pre2Month) > 0 &&
+
+
+                        currentMonth.close > currentMonth.ma5 && currentMonth.ma5 > pre1Month.ma5 && currentMonth.K > pre1Month.K &&
+                        pre1Month.close > pre1Month.ma5 && pre1Month.ma5 > pre2Month.ma5 && currentMonth.D > pre1Month.D &&
+                        pre2Month.high > pre2Month.ma5 && pre2Month.ma5 > pre3Month.ma5 && currentMonth.J > pre1Month.J &&
+
+                        (currentMonth.is9转up >= 9 || pre1Month.is9转up >= 9 || pre2Month.is9转up >= 9)
+
+                    ) {
+                        cut++
+                    }
+                }
+                return cut
+            }
+
+            function 上一个月非强加速() {
+                return !(
+                    pre1Month.dea >= 0 && pre1Month.bar > 0 &&
+                    pre1Month.diff > pre2Month.diff && pre1Month.dea > pre2Month.dea &&
+                    pre1Month.diff - pre2Month.diff + 1 >= pre1Month.dea - pre2Month.dea &&
+                    pre1Month.bias.bias3 > 0 && pre2Month.bias.bias3 > 0 &&
+                    pre1Month.bias.bias3 > pre1Month.bias.bias2 &&
+                    (curtAmp(pre1Month) > 30 && pre1Month.bias.bias3 - pre2Month.bias.bias3 > 1) &&
+                    (
+                        (
+                            pre1Week.dea >= 0 && pre1Week.bar > 0 &&
+                            pre1Week.diff > pre2Week.diff && pre1Week.dea > pre2Week.dea &&
+                            pre1Week.diff - pre2Week.diff + 1 >= pre1Week.dea - pre2Week.dea &&
+                            pre1Week.bias.bias3 > 0 && pre2Week.bias.bias3 > 0 &&
+                            pre1Week.bias.bias3 > pre1Week.bias.bias2 &&
+                            (curtAmp(pre1Month) > 30 && pre1Week.bias.bias3 - pre2Week.bias.bias3 > 1)
+                        )
+                        ||
+                        (
+                            pre1Week.ups < currentWeek.ups &&
+                            pre1Week.mas < currentWeek.mas &&
+                            pre1Week.lows < currentWeek.lows
+                        )
+                        ||
+                        (
+                            pre1Week.ups < currentWeek.ups &&
+                            pre1Week.mas < currentWeek.mas &&
+                            (pre1Week.diff < currentWeek.diff || pre1Week.dea < currentWeek.dea)
+                        )
+                        ||
+                        (
+                            pre1Week.K < currentWeek.K &&
+                            pre1Week.D < currentWeek.D &&
+                            pre1Week.J < currentWeek.J
+                        )
+                        ||
+                        (
+                            pre1Week.bar < currentWeek.bar &&
+                            pre1Week.diff < currentWeek.diff &&
+                            pre1Week.dea < currentWeek.dea
+                        )
+                        ||
+                        (
+                            pre1Week.bias.bias1 < currentWeek.bias.bias1 &&
+                            pre1Week.bias.bias2 < currentWeek.bias.bias2 &&
+                            pre1Week.bias.bias3 < currentWeek.bias.bias3
+                        )
+                    )
+                )
+            }
+            if (
+                currentMonth.bar > 0 && currentMonth.diff > -30 &&  //当前高位
+                上一个月非强加速() &&//上一个月非强加速
+                (前六月有强加速() > 1 || 有连续四月强加速() > 1 || 有连续三月强加速加九转() >= 1)
+            ) {
+                标星dateArr.push(testDate)
+                return true //标星
+            }
+
+            return false
+        }
+
+        ////////////////////
         function toChartDataByDay() {
             let 指数策略ByDay = []
             let trigDateArr = Object.keys(triggerLogObj指数.按日期排序).sort((a, b) => dateToStamp(b) - dateToStamp(a))
@@ -303,7 +517,10 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                let type
+                if (trig策略s[0].includes("高位")) type = test300标星(date) ? "高位★" : "高位"
+                else type = "低位"
+
                 if (Object.keys(profileN).length <= 0) continue
 
 
@@ -324,7 +541,10 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                let type
+                if (trig策略s[0].includes("高位")) type = test300标星(date) ? "高位★" : "高位"
+                else type = "低位"
+
                 if (Object.keys(profileN).length <= 0) continue
 
                 let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
@@ -347,7 +567,10 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                let type
+                if (trig策略s[0].includes("高位")) type = test300标星(date) ? "高位★" : "高位"
+                else type = "低位"
+
                 if (Object.keys(profileN).length <= 0) continue
 
                 let 包含当天最近N天触发的日期 = trigDateArr.filter(eledate => dateToStamp(date) >= dateToStamp(eledate) && dateToStamp(eledate) >= dateToStamp(date) - N * 86400000)
@@ -356,11 +579,45 @@
                     let eleArr = triggerLogObj指数.按日期排序[itemDate]
                     let trig策略s = eleArr.toSpliced(-1, 1)
                     let profileN = eleArr[eleArr.length - 1]
-                    let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                    let type
+                    if (trig策略s[0].includes("高位")) type = test300标星(date) ? "高位★" : "高位"
+                    else type = "低位"
+
                     return [itemDate, trig策略s, profileN]
                 })
 
-                let byDateArr = [date, type, 包含当天最近N天触发的]
+                let 前N天策略总数 = 0
+                包含当天最近N天触发的.forEach(element => { 前N天策略总数 += element[1].length })
+
+                let next1DateSplitArr = profileN?.nextFirstDelivery周三 ? profileN.nextFirstDelivery周三.close.split("->") : ""
+                let next1kline = [
+                    0,//open
+                    profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                    profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                    profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+
+                    profileN.nextFirstDelivery周三 ?
+                        `${next1DateSplitArr[0]}后1周三` + next1DateSplitArr[1].split(",")[0] :
+                        `after${profileN.after.close.split("->")[0]}`,
+
+                    profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+                ]
+
+                let next2DateSplitArr = profileN?.nextSecondDelivery周三 ? profileN.nextSecondDelivery周三.close.split("->") : ""
+                let next2kline = [
+                    0,//open
+                    profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                    profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                    profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+
+                    profileN.nextSecondDelivery周三 ?
+                        `${next2DateSplitArr[0]}后2周三` + next2DateSplitArr[1].split(",")[0] :
+                        `after${profileN.after.close.split("->")[0]}`,
+
+                    profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+                ]
+
+                let byDateArr = [date, 前N天策略总数, 包含当天最近N天触发的, type, ...next2kline]
                 指数策略ByDay统计前N天.push(byDateArr)
             }
 
@@ -376,7 +633,10 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type = trig策略s[0].includes("高位") ? "高位" : "低位"
+                let type
+                if (trig策略s[0].includes("高位")) type = test300标星(date) ? "高位★" : "高位"
+                else type = "低位"
+
                 if (Object.keys(profileN).length <= 0) continue
 
                 let key
@@ -403,39 +663,159 @@
         let 指数策略By后一期权日 = toBy期权日("nextFirstDelivery周三")
         let 指数策略By后二期权日 = toBy期权日("nextSecondDelivery周三")
 
-        let 指数策略高位ByDay = 指数策略ByDay.filter(item => item[3] == "高位").map(item => [item[0], item[2], item[4]])
-        let 指数策略低位ByDay = 指数策略ByDay.filter(item => item[3] == "低位").map(item => [item[0], item[2], item[4]])
+        let 指数策略高位ByDay = 指数策略ByDay.filter(item => item[3].includes("高位")).map(item => [item[0], item[2], item[3], item[4]])
+        let 指数策略低位ByDay = 指数策略ByDay.filter(item => item[3].includes("低位")).map(item => [item[0], item[2], item[3], item[4]])
 
-        let 指数策略高位ByDay过滤后N天 = 指数策略ByDay过滤后N天.filter(item => item[3] == "高位").map(item => [item[0], item[2], item[4]])
-        let 指数策略低位ByDay过滤后N天 = 指数策略ByDay过滤后N天.filter(item => item[3] == "低位").map(item => [item[0], item[2], item[4]])
+        let 指数策略高位ByDay过滤后N天 = 指数策略ByDay过滤后N天.filter(item => item[3].includes("高位")).map(item => [item[0], item[2], item[4]])
+        let 指数策略低位ByDay过滤后N天 = 指数策略ByDay过滤后N天.filter(item => item[3].includes("低位")).map(item => [item[0], item[2], item[4]])
 
-        let 指数策略高位ByDay统计前N天 = 指数策略ByDay统计前N天.filter(item => item[1] == "高位").map(item => [item[0], item[2]])
-        let 指数策略低位ByDay统计前N天 = 指数策略ByDay统计前N天.filter(item => item[1] == "低位").map(item => [item[0], item[2]])
+        let 指数策略高位ByDay统计前N天 = 指数策略ByDay统计前N天.filter(item => item[3].includes("高位"))//.map(item => [item[0], item[2]])
+        let 指数策略低位ByDay统计前N天 = 指数策略ByDay统计前N天.filter(item => item[3].includes("低位"))
 
         //Object.fromEntries()
         let 指数策略高位By后一期权日 = Object.entries(指数策略By后一期权日).filter(([key, byDayArr]) => key.includes("高位")).map(([key, byDayArr]) => {
             byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
-            return [key.replace("高位_", ""), byDayArr]
+            let n天策略总数 = 0
+            byDayArr.forEach(element => { n天策略总数 += element[1].length })
+            return [key.replace("高位_", ""), n天策略总数, byDayArr]
         })
         let 指数策略低位By后一期权日 = Object.entries(指数策略By后一期权日).filter(([key, byDayArr]) => key.includes("低位")).map(([key, byDayArr]) => {
             byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
-            return [key.replace("低位_", ""), byDayArr]
+            let n天策略总数 = 0
+            byDayArr.forEach(element => { n天策略总数 += element[1].length })
+            return [key.replace("低位_", ""), n天策略总数, byDayArr]
         })
 
         let 指数策略高位By后二期权日 = Object.entries(指数策略By后二期权日).filter(([key, byDayArr]) => key.includes("高位")).map(([key, byDayArr]) => {
             byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
-            return [key.replace("高位_", ""), byDayArr]
+            let n天策略总数 = 0
+            byDayArr.forEach(element => { n天策略总数 += element[1].length })
+            return [key.replace("高位_", ""), n天策略总数, byDayArr]
         })
         let 指数策略低位By后二期权日 = Object.entries(指数策略By后二期权日).filter(([key, byDayArr]) => key.includes("低位")).map(([key, byDayArr]) => {
             byDayArr = byDayArr.map(item => [item[0], item[2], item[4]])
-            return [key.replace("低位_", ""), byDayArr]
+            let n天策略总数 = 0
+            byDayArr.forEach(element => { n天策略总数 += element[1].length })
+            return [key.replace("低位_", ""), n天策略总数, byDayArr]
         })
 
-
         console.log("沪深300最新日期=", 沪深300[沪深300.length - 1])
-        console.log("指数策略高位", 指数策略高位ByDay, 指数策略高位ByDay过滤后N天, 指数策略高位ByDay统计前N天, 指数策略高位By后一期权日, 指数策略高位By后二期权日)
-        console.log("指数策略低位", 指数策略低位ByDay, 指数策略低位ByDay过滤后N天, 指数策略低位ByDay统计前N天, 指数策略低位By后一期权日, 指数策略低位By后二期权日)
+        console.log("指数策略高位", 指数策略高位ByDay, 指数策略高位ByDay统计前N天, 指数策略高位By后二期权日)
+        console.log("指数策略低位", 指数策略低位ByDay, 指数策略低位ByDay统计前N天, 指数策略低位By后二期权日)
 
+
+        /////////////
+        function 下降区间toByDay统计前N天(N = 5) {
+
+            let 下降区间ByDay统计前N天 = {}
+
+            let 日期区间Arr = Object.keys(triggerLogObj期权.下降日期区间)
+            for (let index = 日期区间Arr.length - 1; index >= 0; index--) {
+
+                let 日期区间 = 日期区间Arr[index];
+                let triggerDaysObj = triggerLogObj期权.下降日期区间[日期区间]
+
+                let 区间内触发日期Arr = Object.keys(triggerDaysObj)
+                for (let ii = 区间内触发日期Arr.length - 1; ii >= 0; ii--) {
+                    let triggerDate = 区间内触发日期Arr[ii]
+
+                    let triggerEleArr = triggerLogObj期权.下降日期区间[日期区间][triggerDate]
+                    let trig策略s = triggerEleArr.toSpliced(-1, 1).map((item) => { return item.quantName })
+                    let profileN = triggerEleArr[triggerEleArr.length - 1]
+
+                    let 包含当天最近N天触发的日期 = 区间内触发日期Arr.filter(eledate => dateToStamp(triggerDate) >= dateToStamp(eledate) && dateToStamp(eledate) >= dateToStamp(triggerDate) - N * 86400000)
+
+                    let 包含当天最近N天触发的 = 包含当天最近N天触发的日期.map((itemDate) => {
+                        let eleArr = triggerLogObj期权.下降日期区间[日期区间][itemDate]
+                        let trig策略s = eleArr.toSpliced(-1, 1).map((item) => { return item.quantName })
+                        let profileN = eleArr[eleArr.length - 1]
+                        return [itemDate, trig策略s, profileN]
+                    })
+
+                    let 前N天策略总数 = 0
+                    包含当天最近N天触发的.forEach(element => { 前N天策略总数 += element[1].length })
+
+                    let next1DateSplitArr = profileN?.nextFirstDelivery周三 ? profileN.nextFirstDelivery周三.close.split("->") : ""
+                    let next1kline = [
+                        0,//open
+                        profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                        profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                        profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+
+                        profileN.nextFirstDelivery周三 ?
+                            `${next1DateSplitArr[0]}后1周三` + next1DateSplitArr[1].split(",")[0] :
+                            `after${profileN.after.close.split("->")[0]}`,
+
+                        profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+                    ]
+
+                    let next2DateSplitArr = profileN?.nextSecondDelivery周三 ? profileN.nextSecondDelivery周三.close.split("->") : ""
+                    let next2kline = [
+                        0,//open
+                        profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                        profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                        profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+
+                        profileN.nextSecondDelivery周三 ?
+                            `${next2DateSplitArr[0]}后2周三` + next2DateSplitArr[1].split(",")[0] :
+                            `after${profileN.after.close.split("->")[0]}`,
+
+                        profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+                    ]
+
+                    let byDateArr = [triggerDate, 前N天策略总数, 包含当天最近N天触发的, ...next2kline]
+
+                    if (typeof 下降区间ByDay统计前N天[日期区间] !== "undefined") 下降区间ByDay统计前N天[日期区间].push(byDateArr)
+                    else 下降区间ByDay统计前N天[日期区间] = [byDateArr]
+                }
+            }
+            return 下降区间ByDay统计前N天//.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+        }
+
+        function 下降区间toBy期权日(nextN期权周三 = "nextFirstDelivery周三") {
+
+            let 下降区间By期权日 = {}
+
+            let 日期区间Arr = Object.keys(triggerLogObj期权.下降日期区间)
+            for (let index = 日期区间Arr.length - 1; index >= 0; index--) {
+
+                let 日期区间 = 日期区间Arr[index]
+                下降区间By期权日[日期区间] = {}
+                let triggerDaysObj = triggerLogObj期权.下降日期区间[日期区间]
+
+                let 区间内触发日期Arr = Object.keys(triggerDaysObj).sort((a, b) => dateToStamp(b) - dateToStamp(a))
+
+                for (let ii = 区间内触发日期Arr.length - 1; ii >= 0; ii--) {
+                    let triggerDate = 区间内触发日期Arr[ii]
+                    let triggerEleArr = triggerLogObj期权.下降日期区间[日期区间][triggerDate]
+                    let trig策略s = triggerEleArr.toSpliced(-1, 1).map((item) => { return item.quantName })
+                    let profileN = triggerEleArr[triggerEleArr.length - 1]
+
+                    let key
+                    let N = nextN期权周三 == "nextFirstDelivery周三" ? 1 : 2
+                    if (profileN[nextN期权周三]) {
+                        key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                    }
+                    else {
+                        key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `${type}_后${N}周三` + profileN.after.nextSecondDelivery周三
+                    }
+
+                    let byDateArr = [triggerDate, trig策略s.length, trig策略s, profileN]
+
+
+                    if (下降区间By期权日[日期区间].hasOwnProperty(key))
+                        下降区间By期权日[日期区间][key].push(byDateArr)
+                    else {
+                        下降区间By期权日[日期区间][key] = [byDateArr]
+                    }
+
+                }
+            }
+
+            return 下降区间By期权日//.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+        }
+
+        console.log("下降区间", 下降区间toByDay统计前N天(), 下降区间toBy期权日())
     </script>
 
 </head>
@@ -993,7 +1373,7 @@
                         }
                     },
                     interval: 5,
-                    max: 39,
+                    max: 50,
                     min: -25,
                     position: "right",
                 },
@@ -1387,6 +1767,29 @@
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 6,
+                    symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 3,
+                    data: 指数策略高位ByDay.filter((item) => {
+                        return item[2].includes("★")
+                    }).map((item) => {
+                        return [item[0], item[1].length, item[1]]
+                    }).addStartEnd()
+                },
+
+                { //策略
+                    name: '大盘策略',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1398,7 +1801,9 @@
                         return 8
                     },
                     zlevel: 3,
-                    data: 指数策略高位ByDay.map((item) => {
+                    data: 指数策略高位ByDay.filter((item) => {
+                        return !item[2].includes("★")
+                    }).map((item) => {
                         return [item[0], item[1].length, item[1]]
                     }).addStartEnd()
                 },
@@ -1786,7 +2191,7 @@
 
                     },
                     lineStyle: {
-                        width: 1,
+                        width: 1.2,
                         type: 'dotted',
 
                     },
