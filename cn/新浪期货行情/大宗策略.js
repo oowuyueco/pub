@@ -6634,14 +6634,14 @@ var triggerLogObj大宗={
                     1.79,
                     0.46
                 ],
-                "day17LowUp": [
+                "day18LowUp": [
                     "12,2024-10-25",
                     -1.79,
                     "17,2024-11-01",
                     8.19,
-                    8.19
+                    7.88
                 ],
-                "lastDay": 17
+                "lastDay": 18
             }
         },
         {
@@ -8040,14 +8040,14 @@ var triggerLogObj大宗={
                     4.86,
                     1.75
                 ],
-                "day30LowUp": [
+                "day32LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "29,2024-10-31",
                     13.62,
-                    13.45
+                    12.02
                 ],
-                "lastDay": 30
+                "lastDay": 32
             }
         },
         {
@@ -8108,14 +8108,14 @@ var triggerLogObj大宗={
                     20.55,
                     6.43
                 ],
-                "day29LowUp": [
+                "day31LowUp": [
                     "5,2024-09-23",
                     -4.05,
                     "10,2024-09-30",
                     20.55,
-                    4.25
+                    5.89
                 ],
-                "lastDay": 29
+                "lastDay": 31
             }
         },
         {
@@ -8694,14 +8694,14 @@ var triggerLogObj大宗={
                     5.41,
                     0.77
                 ],
-                "day29LowUp": [
+                "day31LowUp": [
                     "11,2024-10-08",
                     -0.36,
                     "28,2024-10-31",
                     14.21,
-                    14.05
+                    12.6
                 ],
-                "lastDay": 29
+                "lastDay": 31
             }
         },
         {
@@ -8743,4 +8743,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-11-01"
+var runLastKlineDate = "2024-11-05"
