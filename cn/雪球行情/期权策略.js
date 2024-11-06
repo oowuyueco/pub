@@ -1408,7 +1408,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2021-02-23=>2024-11-05": {
+    "2021-02-23=>2024-11-06": {
       "2021-02-23": [
         {
           "trigDate": "2021-02-23",
@@ -2427,4 +2427,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2024-11-05"
+var runLastKlineDate = "2024-11-06"
