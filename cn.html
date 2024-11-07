@@ -703,7 +703,7 @@
 
             // if(currentMonth.date == "2024-09-19")
             //     debugger
-            
+
             if (
                 currentMonth.bar < 0 && (currentMonth.J <= 0 || currentMonth.diff <= 0) &&  //当前底位
                 //上一个月非强加速() &&//上一个月非强加速
@@ -925,7 +925,7 @@
 
 
         /////////////
-        function 区间toByDay统计前N天(N = 0, 区间类型 = "下降日期区间") {
+        function 区间toByDay统计前N天(区间类型 = "上升日期区间", N = 0) {
 
             let 区间ByDay统计前N天 = {}
             区间ByDay统计前N天.All = []
@@ -1006,7 +1006,7 @@
             return 区间ByDay统计前N天
         }
 
-        function 区间toBy期权日(nextN期权周三 = "nextFirstDelivery周三", 区间类型 = "下降日期区间") {
+        function 区间toBy期权日(区间类型 = "上升日期区间", nextN期权周三 = "nextFirstDelivery周三",) {
 
             let 区间By期权日 = {}
 
@@ -1049,7 +1049,8 @@
             return 区间By期权日//.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
         }
 
-        console.log("下降区间", 区间toByDay统计前N天(), 区间toBy期权日())
+        console.log("上升区间", 区间toByDay统计前N天(), 区间toBy期权日())
+        console.log("下降区间", 区间toByDay统计前N天("下降日期区间"), 区间toBy期权日("下降日期区间"))
     </script>
 
 </head>
