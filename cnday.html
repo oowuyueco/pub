@@ -1325,8 +1325,69 @@
 
 
 
-
+                {
+                    name: '月KdjMacd双死叉副高位',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 13.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.月KdjMacd双死叉副高位.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '月KdjMacd双死叉主高位',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 10.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.月KdjMacd双死叉主高位.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+               
                 ///////////////////////////////////////////////////
+                {
+                    name: '月KdjMacd双死叉副低位',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.月KdjMacd双死叉副低位.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
                 {
                     name: '同花顺策略总数',
                     type: 'scatter',

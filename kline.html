@@ -100,7 +100,7 @@
             klinecharts.registerIndicator({
                 name: 'newMa',
                 shortName: 'newMa',
-                calcParams: [3],
+                calcParams: [5],
                 figures: [
                     { key: 'newMa', title: 'newMa: ', type: 'line' },
                 ],
@@ -118,7 +118,7 @@
 
                 calc: (kLineDataList, { calcParams, figures }) => {
                     return kLineDataList.map(kLineData => {
-                        return { newMa: kLineData.ma3 }
+                        return { newMa: kLineData.ma5 }
                     })
                 }
             })
@@ -309,6 +309,8 @@
             let monthNewMacd = chartMonth.createIndicator('newMACD')
             let monthNewBias = chartMonth.createIndicator('newBias')
             let monthNew9转 = chartMonth.createIndicator('new9转')
+
+            let monthNewMa5 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
 
             document.addEventListener("keydown", function (event) {
@@ -369,7 +371,7 @@
                 let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd()
                 currentWeekList = calculationBias(currentWeekList)
 
-                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd()
+                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd().maN(5, 'close')
                 currentMonthList = calculationBias(currentMonthList)
 
                 if (noChart) {

@@ -728,7 +728,7 @@
         //console.log(标星LowDateArr)
 
 
-        ////////////////////
+        ///指数策略/////////////////
         function toChartDataByDay() {
             let 指数策略ByDay = []
 
@@ -769,7 +769,7 @@
 
                 let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
 
-                if (index == trigDateArr.length - 2)//continue 去掉一个！！
+                if (指数策略ByDay过滤后N天.length==0)//continue 去掉一个！！
                     指数策略ByDay过滤后N天.unshift(byDateArr)
                 else if (dateToStamp(date) >= dateToStamp(指数策略ByDay过滤后N天[0][0]) + N * 86400000) //过滤后N天 1号后N天过滤掉
                     指数策略ByDay过滤后N天.unshift(byDateArr)
@@ -924,7 +924,7 @@
         console.log("指数策略低位", 指数策略低位ByDay, 指数策略低位ByDay统计前N天, 指数策略低位By后二期权日)
 
 
-        /////////////
+        //期权策略///////////
         function 区间toByDay统计前N天(区间类型 = "上升日期区间", N = 0) {
 
             let 区间ByDay统计前N天 = {}
