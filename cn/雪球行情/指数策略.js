@@ -1103,7 +1103,8 @@ var triggerLogObj指数 = {
           "close": "34->2007-11-28,-1111.33,-19.29",
           "high": "3->2007-10-16,117.12,2.03",
           "low": "34->2007-11-28,-1111.33,-19.29"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-12": [
@@ -1119,7 +1120,8 @@ var triggerLogObj指数 = {
           "close": "33->2007-11-28,-1088.47,-18.97",
           "high": "2->2007-10-16,139.98,2.44",
           "low": "33->2007-11-28,-1088.47,-18.97"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-15": [
@@ -1135,7 +1137,8 @@ var triggerLogObj指数 = {
           "close": "32->2007-11-28,-1172.7,-20.14",
           "high": "1->2007-10-16,55.76,0.96",
           "low": "32->2007-11-28,-1172.7,-20.14"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-16": [
@@ -1151,7 +1154,8 @@ var triggerLogObj指数 = {
           "close": "31->2007-11-28,-1228.45,-20.9",
           "high": ",0,0",
           "low": "31->2007-11-28,-1228.45,-20.9"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-17": [
@@ -1168,7 +1172,8 @@ var triggerLogObj指数 = {
           "close": "30->2007-11-28,-1175.37,-20.18",
           "high": ",0,0",
           "low": "30->2007-11-28,-1175.37,-20.18"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-18": [
@@ -1183,7 +1188,8 @@ var triggerLogObj指数 = {
           "close": "29->2007-11-28,-967,-17.22",
           "high": "9->2007-10-31,72.8,1.3",
           "low": "29->2007-11-28,-967,-17.22"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-22": [
@@ -1198,7 +1204,8 @@ var triggerLogObj指数 = {
           "close": "27->2007-11-28,-823.93,-15.06",
           "high": "7->2007-10-31,215.87,3.94",
           "low": "27->2007-11-28,-823.93,-15.06"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-25": [
@@ -1213,7 +1220,8 @@ var triggerLogObj指数 = {
           "close": "44->2007-12-26,-68.77,-1.29",
           "high": "4->2007-10-31,354.75,6.65",
           "low": "24->2007-11-28,-685.04,-12.84"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-26": [
@@ -1228,7 +1236,8 @@ var triggerLogObj指数 = {
           "close": "43->2007-12-26,-129.78,-2.41",
           "high": "3->2007-10-31,293.74,5.44",
           "low": "23->2007-11-28,-746.06,-13.83"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-10-29": [
@@ -1243,7 +1252,8 @@ var triggerLogObj指数 = {
           "close": "42->2007-12-26,-243.33,-4.42",
           "high": "2->2007-10-31,180.19,3.27",
           "low": "22->2007-11-28,-859.61,-15.61"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-11-01": [
@@ -1258,7 +1268,8 @@ var triggerLogObj指数 = {
           "close": "39->2007-12-26,-340.21,-6.07",
           "high": ",0,0",
           "low": "19->2007-11-28,-956.48,-17.06"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-11-02": [
@@ -1274,7 +1285,8 @@ var triggerLogObj指数 = {
           "close": "38->2007-12-26,-207.9,-3.8",
           "high": ",0,0",
           "low": "18->2007-11-28,-824.18,-15.06"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-11-05": [
@@ -1289,7 +1301,8 @@ var triggerLogObj指数 = {
           "close": "37->2007-12-26,-95.28,-1.78",
           "high": ",0,0",
           "low": "17->2007-11-28,-711.55,-13.27"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-11-06": [
@@ -1304,7 +1317,8 @@ var triggerLogObj指数 = {
           "close": "36->2007-12-26,-52.52,-0.99",
           "high": "1->2007-11-07,33.08,0.62",
           "low": "16->2007-11-28,-668.8,-12.58"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-11-07": [
@@ -1319,7 +1333,8 @@ var triggerLogObj指数 = {
           "close": "35->2007-12-26,-85.6,-1.6",
           "high": ",0,0",
           "low": "15->2007-11-28,-701.88,-13.12"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-11-08": [
@@ -1334,7 +1349,8 @@ var triggerLogObj指数 = {
           "close": "34->2007-12-26,171.36,3.36",
           "high": "34->2007-12-26,171.36,3.36",
           "low": "14->2007-11-28,-444.92,-8.73"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2007-12-27": [
@@ -1349,7 +1365,8 @@ var triggerLogObj指数 = {
           "close": "37->2008-02-27,-727.76,-13.56",
           "high": "10->2008-01-14,364.23,6.79",
           "low": "36->2008-02-26,-852,-15.87"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2008-01-14": [
@@ -1364,7 +1381,8 @@ var triggerLogObj指数 = {
           "close": "27->2008-02-27,-1091.99,-19.05",
           "high": ",0,0",
           "low": "26->2008-02-26,-1216.22,-21.22"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2008-10-27": [
@@ -1381,7 +1399,8 @@ var triggerLogObj指数 = {
           "close": "42->2008-12-24,232.4,14.05",
           "high": "32->2008-12-10,441.72,26.7",
           "low": "6->2008-11-04,-26.91,-1.63"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2008-10-28": [
@@ -1400,7 +1419,8 @@ var triggerLogObj指数 = {
           "close": "41->2008-12-24,181.26,10.63",
           "high": "31->2008-12-10,390.57,22.9",
           "low": "5->2008-11-04,-78.06,-4.58"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2008-10-31": [
@@ -1417,7 +1437,8 @@ var triggerLogObj指数 = {
           "close": "38->2008-12-24,223.41,13.43",
           "high": "28->2008-12-10,432.73,26.01",
           "low": "2->2008-11-04,-35.9,-2.16"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2008-11-03": [
@@ -1433,7 +1454,8 @@ var triggerLogObj指数 = {
           "close": "37->2008-12-24,233.53,14.12",
           "high": "27->2008-12-10,442.85,26.78",
           "low": "1->2008-11-04,-25.78,-1.56"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2008-12-03": [
@@ -1448,7 +1470,8 @@ var triggerLogObj指数 = {
           "close": "53->2009-02-25,351.58,18.01",
           "high": "46->2009-02-16,509.58,26.1",
           "low": "20->2008-12-31,-134.95,-6.91"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2009-07-02": [
@@ -1643,7 +1666,8 @@ var triggerLogObj指数 = {
           "close": "42->2009-09-23,-683.56,-18.26",
           "high": "5->2009-08-03,43.41,1.16",
           "low": "25->2009-08-31,-913.36,-24.4"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2009-07-28": [
@@ -1658,7 +1682,8 @@ var triggerLogObj指数 = {
           "close": "41->2009-09-23,-695.75,-18.52",
           "high": "4->2009-08-03,31.21,0.83",
           "low": "24->2009-08-31,-925.55,-24.64"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2009-11-23": [
@@ -1674,7 +1699,8 @@ var triggerLogObj指数 = {
           "close": "22->2009-12-23,-329.03,-8.98",
           "high": "10->2009-12-07,3.32,0.09",
           "low": "21->2009-12-22,-359.97,-9.82"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2010-07-05": [
@@ -2043,7 +2069,8 @@ var triggerLogObj指数 = {
           "close": "30->2012-10-24,107.9,4.91",
           "high": "28->2012-10-22,141.72,6.44",
           "low": "15->2012-09-26,-14.98,-0.68"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2012-09-27": [
@@ -2058,7 +2085,8 @@ var triggerLogObj指数 = {
           "close": "39->2012-11-28,-122.56,-5.44",
           "high": "12->2012-10-22,89.88,3.99",
           "low": "39->2012-11-28,-122.56,-5.44"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2012-11-01": [
@@ -2074,7 +2102,8 @@ var triggerLogObj指数 = {
           "close": "39->2012-12-26,159.74,6.95",
           "high": "39->2012-12-26,159.74,6.95",
           "low": "22->2012-12-03,-189.03,-8.23"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2012-12-05": [
@@ -2269,7 +2298,8 @@ var triggerLogObj指数 = {
           "close": "22->2014-04-23,35.87,1.66",
           "high": "13->2014-04-10,114.96,5.33",
           "low": "6->2014-03-31,-12.49,-0.58"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2014-05-12": [
@@ -2284,7 +2314,8 @@ var triggerLogObj指数 = {
           "close": "31->2014-06-25,-46.68,-2.14",
           "high": "24->2014-06-16,11.8,0.54",
           "low": "5->2014-05-19,-64.91,-2.98"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2015-01-05": [
@@ -2468,7 +2499,8 @@ var triggerLogObj指数 = {
           "close": "31->2015-07-22,-1196.59,-22.35",
           "high": ",0,0",
           "low": "21->2015-07-08,-1690.71,-31.58"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-09": [
@@ -2483,7 +2515,8 @@ var triggerLogObj指数 = {
           "close": "30->2015-07-22,-1160.3,-21.82",
           "high": "3->2015-06-12,17.65,0.33",
           "low": "20->2015-07-08,-1654.42,-31.11"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-10": [
@@ -2498,7 +2531,8 @@ var triggerLogObj指数 = {
           "close": "29->2015-07-22,-1151.95,-21.7",
           "high": "2->2015-06-12,26,0.49",
           "low": "19->2015-07-08,-1646.07,-31"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-11": [
@@ -2514,7 +2548,8 @@ var triggerLogObj指数 = {
           "close": "28->2015-07-22,-1149.43,-21.66",
           "high": "1->2015-06-12,28.52,0.54",
           "low": "18->2015-07-08,-1643.55,-30.97"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-12": [
@@ -2530,7 +2565,8 @@ var triggerLogObj指数 = {
           "close": "27->2015-07-22,-1177.95,-22.08",
           "high": ",0,0",
           "low": "17->2015-07-08,-1672.08,-31.34"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-15": [
@@ -2546,7 +2582,8 @@ var triggerLogObj指数 = {
           "close": "26->2015-07-22,-1064.01,-20.38",
           "high": ",0,0",
           "low": "16->2015-07-08,-1558.13,-29.84"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-18": [
@@ -2561,7 +2598,8 @@ var triggerLogObj指数 = {
           "close": "23->2015-07-22,-773.39,-15.69",
           "high": ",0,0",
           "low": "13->2015-07-08,-1267.51,-25.71"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-19": [
@@ -2576,7 +2614,8 @@ var triggerLogObj指数 = {
           "close": "22->2015-07-22,-479.89,-10.35",
           "high": "2->2015-06-24,243.07,5.24",
           "low": "12->2015-07-08,-974.01,-21.01"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-23": [
@@ -2591,7 +2630,8 @@ var triggerLogObj指数 = {
           "close": "21->2015-07-22,-628.93,-13.14",
           "high": "1->2015-06-24,94.03,1.96",
           "low": "11->2015-07-08,-1123.05,-23.46"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2015-06-24": [
@@ -2606,7 +2646,8 @@ var triggerLogObj指数 = {
           "close": "45->2015-08-26,-1854.43,-38",
           "high": ",0,0",
           "low": "45->2015-08-26,-1854.43,-38"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2016-03-03": [
@@ -2622,7 +2663,8 @@ var triggerLogObj指数 = {
           "close": "38->2016-04-27,107.49,3.51",
           "high": "29->2016-04-14,217.41,7.11",
           "low": "5->2016-03-10,-45.28,-1.48"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2017-04-07": [
@@ -2683,7 +2725,8 @@ var triggerLogObj指数 = {
           "close": "25->2018-02-28,-224.47,-5.28",
           "high": "5->2018-01-24,141.77,3.34",
           "low": "17->2018-02-09,-407.46,-9.59"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2018-01-23": [
@@ -2698,7 +2741,8 @@ var triggerLogObj指数 = {
           "close": "21->2018-02-28,-358.97,-8.19",
           "high": "1->2018-01-24,7.27,0.17",
           "low": "13->2018-02-09,-541.96,-12.37"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2018-01-24": [
@@ -2713,7 +2757,8 @@ var triggerLogObj指数 = {
           "close": "40->2018-03-28,-547.17,-12.46",
           "high": ",0,0",
           "low": "12->2018-02-09,-549.23,-12.51"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2018-01-25": [
@@ -2730,7 +2775,8 @@ var triggerLogObj指数 = {
           "close": "39->2018-03-28,-522.36,-11.97",
           "high": "1->2018-01-26,16.22,0.37",
           "low": "11->2018-02-09,-524.43,-12.01"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2018-10-19": [
@@ -2775,7 +2821,8 @@ var triggerLogObj指数 = {
           "close": "36->2019-02-27,667.74,22.18",
           "high": "34->2019-02-25,718.83,23.88",
           "low": "2->2019-01-03,-45.81,-1.52"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2019-01-02": [
@@ -2790,7 +2837,8 @@ var triggerLogObj指数 = {
           "close": "35->2019-02-27,708.85,23.87",
           "high": "33->2019-02-25,759.94,25.59",
           "low": "1->2019-01-03,-4.7,-0.16"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2019-01-03": [
@@ -2805,7 +2853,8 @@ var triggerLogObj指数 = {
           "close": "34->2019-02-27,713.55,24.07",
           "high": "32->2019-02-25,764.64,25.79",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2019-01-04": [
@@ -2821,7 +2870,8 @@ var triggerLogObj指数 = {
           "close": "33->2019-02-27,642.52,21.16",
           "high": "31->2019-02-25,693.61,22.85",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2019-04-04": [
@@ -2943,7 +2993,8 @@ var triggerLogObj指数 = {
           "close": "24->2021-03-24,-839.69,-14.56",
           "high": "1->2021-02-19,10.46,0.18",
           "low": "24->2021-03-24,-839.69,-14.56"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2021-02-19": [
@@ -2959,7 +3010,8 @@ var triggerLogObj指数 = {
           "close": "23->2021-03-24,-850.15,-14.71",
           "high": ",0,0",
           "low": "23->2021-03-24,-850.15,-14.71"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2021-02-22": [
@@ -2977,7 +3029,8 @@ var triggerLogObj指数 = {
           "close": "22->2021-03-24,-668.64,-11.95",
           "high": ",0,0",
           "low": "22->2021-03-24,-668.64,-11.95"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2021-03-02": [
@@ -2992,7 +3045,8 @@ var triggerLogObj指数 = {
           "close": "40->2021-04-28,-230.39,-4.31",
           "high": "1->2021-03-03,102.58,1.92",
           "low": "17->2021-03-25,-423.28,-7.91"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2021-03-04": [
@@ -3007,7 +3061,8 @@ var triggerLogObj指数 = {
           "close": "38->2021-04-28,-161.47,-3.06",
           "high": ",0,0",
           "low": "15->2021-03-25,-354.36,-6.71"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2021-03-05": [
@@ -3022,7 +3077,8 @@ var triggerLogObj指数 = {
           "close": "37->2021-04-28,-143.56,-2.73",
           "high": ",0,0",
           "low": "14->2021-03-25,-336.45,-6.39"
-        }
+        },
+        "标星": "高位★"
       }
     ],
     "2022-01-14": [
@@ -3287,7 +3343,8 @@ var triggerLogObj指数 = {
           "close": "31->2024-01-24,-142.34,-4.16",
           "high": "14->2023-12-29,11.66,0.34",
           "low": "29->2024-01-22,-200.55,-5.86"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-01-18": [
@@ -3303,7 +3360,8 @@ var triggerLogObj指数 = {
           "close": "23->2024-02-28,175.53,5.36",
           "high": "22->2024-02-27,220.06,6.72",
           "low": "11->2024-02-02,-95.1,-2.9"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-02-02": [
@@ -3319,7 +3377,8 @@ var triggerLogObj指数 = {
           "close": "32->2024-03-27,323.16,10.16",
           "high": "25->2024-03-18,423.9,13.33",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-02-05": [
@@ -3335,7 +3394,8 @@ var triggerLogObj指数 = {
           "close": "31->2024-03-27,302.37,9.45",
           "high": "24->2024-03-18,403.11,12.6",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-02-06": [
@@ -3350,7 +3410,8 @@ var triggerLogObj指数 = {
           "close": "30->2024-03-27,191.1,5.77",
           "high": "23->2024-03-18,291.84,8.81",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-02-07": [
@@ -3365,7 +3426,8 @@ var triggerLogObj指数 = {
           "close": "29->2024-03-27,159.16,4.76",
           "high": "22->2024-03-18,259.9,7.77",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-02": [
@@ -3380,7 +3442,8 @@ var triggerLogObj指数 = {
           "close": "30->2024-10-23,708.2,21.69",
           "high": "19->2024-10-08,991.09,30.35",
           "low": "9->2024-09-13,-105.76,-3.24"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-04": [
@@ -3395,7 +3458,8 @@ var triggerLogObj指数 = {
           "close": "28->2024-10-23,721.05,22.17",
           "high": "17->2024-10-08,1003.94,30.87",
           "low": "7->2024-09-13,-92.91,-2.86"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-05": [
@@ -3410,7 +3474,8 @@ var triggerLogObj指数 = {
           "close": "27->2024-10-23,715.45,21.96",
           "high": "16->2024-10-08,998.34,30.64",
           "low": "6->2024-09-13,-98.51,-3.02"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-06": [
@@ -3425,7 +3490,8 @@ var triggerLogObj指数 = {
           "close": "26->2024-10-23,741.86,22.96",
           "high": "15->2024-10-08,1024.75,31.71",
           "low": "5->2024-09-13,-72.1,-2.23"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-09": [
@@ -3440,7 +3506,8 @@ var triggerLogObj指数 = {
           "close": "25->2024-10-23,780.26,24.44",
           "high": "14->2024-10-08,1063.15,33.3",
           "low": "4->2024-09-13,-33.7,-1.06"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-10": [
@@ -3455,7 +3522,8 @@ var triggerLogObj指数 = {
           "close": "24->2024-10-23,777.45,24.33",
           "high": "13->2024-10-08,1060.34,33.18",
           "low": "3->2024-09-13,-36.51,-1.14"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-11": [
@@ -3470,7 +3538,8 @@ var triggerLogObj指数 = {
           "close": "23->2024-10-23,787.08,24.7",
           "high": "12->2024-10-08,1069.97,33.58",
           "low": "2->2024-09-13,-26.88,-0.84"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-12": [
@@ -3485,7 +3554,8 @@ var triggerLogObj指数 = {
           "close": "22->2024-10-23,800.74,25.24",
           "high": "11->2024-10-08,1083.63,34.16",
           "low": "1->2024-09-13,-13.22,-0.42"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-13": [
@@ -3500,7 +3570,8 @@ var triggerLogObj指数 = {
           "close": "21->2024-10-23,813.96,25.76",
           "high": "10->2024-10-08,1096.85,34.72",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-18": [
@@ -3516,7 +3587,8 @@ var triggerLogObj指数 = {
           "close": "20->2024-10-23,802.2,25.3",
           "high": "9->2024-10-08,1085.09,34.22",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-19": [
@@ -3532,7 +3604,8 @@ var triggerLogObj指数 = {
           "close": "19->2024-10-23,777.17,24.32",
           "high": "8->2024-10-08,1060.06,33.17",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-20": [
@@ -3547,7 +3620,8 @@ var triggerLogObj指数 = {
           "close": "18->2024-10-23,772.16,24.12",
           "high": "7->2024-10-08,1055.05,32.96",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ],
     "2024-09-23": [
@@ -3562,7 +3636,8 @@ var triggerLogObj指数 = {
           "close": "17->2024-10-23,760.45,23.67",
           "high": "6->2024-10-08,1043.34,32.47",
           "low": ",0,0"
-        }
+        },
+        "标星": "低位★"
       }
     ]
   },
@@ -3652,236 +3727,92 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2001-07-16",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-17",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-18",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-19",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-24",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-25",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-26",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2001-07-27",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2022-01-14",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2022-01-21",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2022-01-24",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2023-08-16",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2023-08-17",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2023-08-18",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2023-08-22",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2023-08-29",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2023-08-30",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2023-08-31",
       "quantName": "月KdjMacd双死叉副高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        false
-      ]
+      "trueCount": 4
     }
   ],
   "上证低位KDJ": [
@@ -5048,366 +4979,142 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2007-02-02",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-02-05",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-02-06",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-03-01",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-03-02",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-03-05",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-03-06",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-03-07",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-03-14",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-09-11",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-10-22",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-10-25",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-10-26",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-10-29",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2007-11-01",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-11-02",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-11-05",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-11-06",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-11-07",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-11-08",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2007-12-27",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2015-06-18",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2015-06-19",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 6,
-      "testInfo": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 6
     },
     {
       "trigDate": "2015-06-23",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 4,
-      "testInfo": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2015-06-24",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2021-03-02",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2021-03-04",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     },
     {
       "trigDate": "2021-03-05",
       "quantName": "月KdjMacd双死叉主高位",
-      "trueCount": 2,
-      "testInfo": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ]
+      "trueCount": 2
     }
   ],
   "日月低位九转": [
@@ -5612,431 +5319,167 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2012-07-24",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 3,
-      "testInfo": [
-        true,
-        false,
-        false,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 3
     },
     {
       "trigDate": "2012-07-25",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-07-26",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-07-27",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-07-30",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-07-31",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-08-01",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-08-27",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-08-28",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-08-29",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-08-30",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2012-08-31",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2013-07-04",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2013-07-05",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2013-07-08",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 5,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 5
     },
     {
       "trigDate": "2013-07-09",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 5,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        true
-      ]
+      "trueCount": 5
     },
     {
       "trigDate": "2013-07-10",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        false,
-        true,
-        true
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2014-02-25",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 3,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 3
     },
     {
       "trigDate": "2014-02-26",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 3,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 3
     },
     {
       "trigDate": "2014-02-27",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 3,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        false,
-        false
-      ]
+      "trueCount": 3
     },
     {
       "trigDate": "2024-09-02",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-04",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-05",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-06",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-09",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-10",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-11",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-12",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-13",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-18",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-19",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-20",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     },
     {
       "trigDate": "2024-09-23",
       "quantName": "月KdjMacd双死叉副低位",
-      "trueCount": 4,
-      "testInfo": [
-        true,
-        false,
-        true,
-        true,
-        true,
-        false
-      ]
+      "trueCount": 4
     }
   ]
 }

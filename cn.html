@@ -330,404 +330,6 @@
             return candleList
         }
 
-        let 标星已经完成 = false
-        let 标星HighDateArr = [] //理论最高点
-        let 标星LowDateArr = []  //理论最低点
-        function test300标星high(testDate) {
-
-            if (标星已经完成 === true) {
-                const found = 标星HighDateArr.find((element) => element == testDate)
-                if (found) return true
-                else return false
-            }
-
-            testDateIndex = 沪深300.findIndex(ele => ele.date == testDate)
-
-            沪深300currentDayList = 沪深300.slice(0, testDateIndex + 1).calBoll().cal9转(testDate, "day").calKdj().calMacd()
-            沪深300currentDayList = calculationBias(沪深300currentDayList)
-
-            沪深300currentWeekList = dayToPeriod(沪深300currentDayList, "week").calBoll().cal9转(testDate, "week").calKdj().calMacd()
-            沪深300currentWeekList = calculationBias(沪深300currentWeekList)
-
-            沪深300currentMonthList = dayToPeriod(沪深300currentDayList, "month").calBoll().cal9转(testDate, "month").calKdj().calMacd().maN(5, 'close').maN(40, 'close').maN(80, 'close')
-            沪深300currentMonthList = calculationBias(沪深300currentMonthList)
-
-            let currentDayList = 沪深300currentDayList
-            let currentWeekList = 沪深300currentWeekList
-            let currentMonthList = 沪深300currentMonthList
-
-            let pre3Day = currentDayList[currentDayList.length - 4]
-            let pre2Day = currentDayList[currentDayList.length - 3]
-            let pre1Day = currentDayList[currentDayList.length - 2]
-            let currentDay = currentDayList[currentDayList.length - 1]
-
-            let pre3Week = currentWeekList[currentWeekList.length - 4]
-            let pre2Week = currentWeekList[currentWeekList.length - 3]
-            let pre1Week = currentWeekList[currentWeekList.length - 2]
-            let currentWeek = currentWeekList[currentWeekList.length - 1]
-
-            let pre3Month = currentMonthList[currentMonthList.length - 4]
-            let pre2Month = currentMonthList[currentMonthList.length - 3]
-            let pre1Month = currentMonthList[currentMonthList.length - 2]
-            let currentMonth = currentMonthList[currentMonthList.length - 1]
-
-            if (currentMonthList.length < 8) return
-
-            function 前六月有强加速() {
-                //不包含自己前6个月
-                let cut = 0
-                for (let index = 1; index <= 6; index++) {
-                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    if (
-                        pre1Month.dea >= 0 && pre1Month.bar > 0 &&
-                        pre1Month.diff > pre2Month.diff && pre1Month.dea > pre2Month.dea &&
-                        pre1Month.diff - pre2Month.diff + 1 >= pre1Month.dea - pre2Month.dea &&
-                        pre1Month.bias.bias3 > 0 && pre2Month.bias.bias3 > 0 &&
-                        pre1Month.bias.bias3 > pre1Month.bias.bias2 &&
-                        (curtAmp(pre1Month) > 30 && pre1Month.bias.bias3 - pre2Month.bias.bias3 > 0)
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            function 有连续四月强加速() {
-                //包含自己前四个月
-                let cut = 0
-                for (let index = 1; index <= 4; index++) {
-                    let pre4Month = currentMonthList[currentMonthList.length - (index + 4)]
-                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
-                    if (
-                        curtPercent(currentMonth) > 0 && curtPercent(pre1Month) > 0 && curtPercent(pre2Month) > 0 && curtPercent(pre3Month) > 0 &&
-                        PtPPercent(pre1Month, currentMonth) > 0 &&
-                        PtPPercent(pre2Month, pre1Month) > 0 &&
-                        PtPPercent(pre3Month, pre2Month) > 0 &&
-                        PtPPercent(pre4Month, pre3Month) > 0 &&
-
-                        currentMonth.close > currentMonth.ma5 && currentMonth.ma5 > pre1Month.ma5 && currentMonth.K > pre1Month.K &&
-                        pre1Month.close > pre1Month.ma5 && pre1Month.ma5 > pre2Month.ma5 && currentMonth.D > pre1Month.D &&
-                        pre2Month.close > pre2Month.ma5 && pre2Month.ma5 > pre3Month.ma5 && currentMonth.J > pre1Month.J &&
-                        pre3Month.close > pre3Month.ma5 && pre3Month.ma5 > pre4Month.ma5
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            function 有连续三月强加速加九转() {
-                //包含自己前三个月
-                let cut = 0
-                for (let index = 1; index <= 3; index++) {
-
-                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
-                    if (
-                        curtPercent(currentMonth) > 0 && curtPercent(pre1Month) > 0 && curtPercent(pre2Month) > 0 &&
-
-                        PtPPercent(pre1Month, currentMonth) > 0 &&
-                        PtPPercent(pre2Month, pre1Month) > 0 &&
-                        PtPPercent(pre3Month, pre2Month) > 0 &&
-
-
-                        currentMonth.close > currentMonth.ma5 && currentMonth.ma5 > pre1Month.ma5 && currentMonth.K > pre1Month.K &&
-                        pre1Month.close > pre1Month.ma5 && pre1Month.ma5 > pre2Month.ma5 && currentMonth.D > pre1Month.D &&
-                        pre2Month.high > pre2Month.ma5 && pre2Month.ma5 > pre3Month.ma5 && currentMonth.J > pre1Month.J &&
-
-                        (currentMonth.is9转up >= 9 || pre1Month.is9转up >= 9 || pre2Month.is9转up >= 9)
-
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            function 上一个月非强加速() {
-                return !(
-                    pre1Month.dea >= 0 && pre1Month.bar > 0 &&
-                    pre1Month.diff > pre2Month.diff && pre1Month.dea > pre2Month.dea &&
-                    pre1Month.diff - pre2Month.diff + 1 >= pre1Month.dea - pre2Month.dea &&
-                    pre1Month.bias.bias3 > 0 && pre2Month.bias.bias3 > 0 &&
-                    pre1Month.bias.bias3 > pre1Month.bias.bias2 &&
-                    (curtAmp(pre1Month) > 30 && pre1Month.bias.bias3 - pre2Month.bias.bias3 > 1) &&
-                    (
-                        (
-                            pre1Week.dea >= 0 && pre1Week.bar > 0 &&
-                            pre1Week.diff > pre2Week.diff && pre1Week.dea > pre2Week.dea &&
-                            pre1Week.diff - pre2Week.diff + 1 >= pre1Week.dea - pre2Week.dea &&
-                            pre1Week.bias.bias3 > 0 && pre2Week.bias.bias3 > 0 &&
-                            pre1Week.bias.bias3 > pre1Week.bias.bias2 &&
-                            (curtAmp(pre1Month) > 30 && pre1Week.bias.bias3 - pre2Week.bias.bias3 > 1)
-                        )
-                        ||
-                        (
-                            pre1Week.ups < currentWeek.ups &&
-                            pre1Week.mas < currentWeek.mas &&
-                            pre1Week.lows < currentWeek.lows
-                        )
-                        ||
-                        (
-                            pre1Week.ups < currentWeek.ups &&
-                            pre1Week.mas < currentWeek.mas &&
-                            (pre1Week.diff < currentWeek.diff || pre1Week.dea < currentWeek.dea)
-                        )
-                        ||
-                        (
-                            pre1Week.K < currentWeek.K &&
-                            pre1Week.D < currentWeek.D &&
-                            pre1Week.J < currentWeek.J
-                        )
-                        ||
-                        (
-                            pre1Week.bar < currentWeek.bar &&
-                            pre1Week.diff < currentWeek.diff &&
-                            pre1Week.dea < currentWeek.dea
-                        )
-                        ||
-                        (
-                            pre1Week.bias.bias1 < currentWeek.bias.bias1 &&
-                            pre1Week.bias.bias2 < currentWeek.bias.bias2 &&
-                            pre1Week.bias.bias3 < currentWeek.bias.bias3
-                        )
-                    )
-                )
-            }
-            if (
-                currentMonth.bar > 0 && currentMonth.diff > -30 &&  //当前高位
-                上一个月非强加速() &&//上一个月非强加速
-                (前六月有强加速() > 1 || 有连续四月强加速() > 1 || 有连续三月强加速加九转() >= 1)
-            ) {
-                标星HighDateArr.push(testDate)
-                return true //标星
-            }
-
-            return false
-        }
-        function test300标星low(testDate) {
-            if (标星已经完成 === true) {
-                const found = 标星LowDateArr.find((element) => element == testDate)
-                if (found) return true
-                else return false
-            }
-
-            testDateIndex = 沪深300.findIndex(ele => ele.date == testDate)
-
-            沪深300currentDayList = 沪深300.slice(0, testDateIndex + 1).calBoll().cal9转(testDate, "day").calKdj().calMacd()
-            沪深300currentDayList = calculationBias(沪深300currentDayList)
-
-            沪深300currentWeekList = dayToPeriod(沪深300currentDayList, "week").calBoll().cal9转(testDate, "week").calKdj().calMacd()
-            沪深300currentWeekList = calculationBias(沪深300currentWeekList)
-
-            沪深300currentMonthList = dayToPeriod(沪深300currentDayList, "month").calBoll().cal9转(testDate, "month").calKdj().calMacd().maN(5, 'close').maN(40, 'close').maN(80, 'close')
-            沪深300currentMonthList = calculationBias(沪深300currentMonthList)
-
-            let currentDayList = 沪深300currentDayList
-            let currentWeekList = 沪深300currentWeekList
-            let currentMonthList = 沪深300currentMonthList
-
-            let pre3Day = currentDayList[currentDayList.length - 4]
-            let pre2Day = currentDayList[currentDayList.length - 3]
-            let pre1Day = currentDayList[currentDayList.length - 2]
-            let currentDay = currentDayList[currentDayList.length - 1]
-
-            let pre3Week = currentWeekList[currentWeekList.length - 4]
-            let pre2Week = currentWeekList[currentWeekList.length - 3]
-            let pre1Week = currentWeekList[currentWeekList.length - 2]
-            let currentWeek = currentWeekList[currentWeekList.length - 1]
-
-            let pre3Month = currentMonthList[currentMonthList.length - 4]
-            let pre2Month = currentMonthList[currentMonthList.length - 3]
-            let pre1Month = currentMonthList[currentMonthList.length - 2]
-            let currentMonth = currentMonthList[currentMonthList.length - 1]
-
-            if (currentMonthList.length < 8) return
-
-            function 有连续四月强加速() {
-                //包含自己前四个月
-                let cut = 0
-                for (let index = 1; index <= 4; index++) {
-                    let pre4Month = currentMonthList[currentMonthList.length - (index + 4)]
-                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
-                    if (
-                        curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 && curtPercent(pre2Month) < 0 && curtPercent(pre3Month) < 0 &&
-                        PtPPercent(pre1Month, currentMonth) < 0 &&
-                        PtPPercent(pre2Month, pre1Month) < 0 &&
-                        PtPPercent(pre3Month, pre2Month) < 0 &&
-                        PtPPercent(pre4Month, pre3Month) < 0 &&
-
-                        currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 &&
-                        pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 &&
-                        pre2Month.close < pre2Month.ma5 && pre2Month.ma5 < pre3Month.ma5 &&
-                        pre3Month.low < pre3Month.ma5 &&//&& pre3Month.ma5 < pre4Month.ma5
-
-                        currentMonth.J < pre1Month.J && pre1Month.J < pre2Month.J && pre2Month.J < pre3Month.J &&
-                        currentMonth.K < pre1Month.K && pre1Month.K < pre2Month.K && pre2Month.K < pre3Month.K &&
-                        currentMonth.D < pre1Month.D && pre1Month.D < pre2Month.D && pre2Month.D < pre3Month.D &&
-
-                        currentMonth.bias.bias3 <= currentMonth.bias.bias2 && currentMonth.bias.bias2 <= currentMonth.bias.bias1 &&
-                        currentMonth.bias.bias3 <= 0 && currentMonth.bar < 0 && currentMonth.diff <= 0
-
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            function 有连续三月强加速加九转() {
-                //包含自己前三个月
-                let cut = 0
-                for (let index = 1; index <= 3; index++) {
-
-                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
-
-                    let ptpless0Count = 0
-                    let PtPPercentArr = [
-                        PtPPercent(pre1Month, currentMonth),
-                        PtPPercent(pre2Month, pre1Month),
-                        PtPPercent(pre3Month, pre2Month)
-                    ]
-                    PtPPercentArr.sort((a, b) => a - b);
-                    PtPPercentArr.forEach(ptp => {
-                        if (ptp < 0) ptpless0Count++
-                    })
-
-                    if (
-                        curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 && curtPercent(pre2Month) < 0 &&
-
-                        ptpless0Count >= 2 &&
-                        PtPPercentArr[PtPPercentArr.length - 1] < 0.65 &&
-
-                        currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 && currentMonth.K < pre1Month.K &&
-                        pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 && currentMonth.D < pre1Month.D &&
-                        pre2Month.low < pre2Month.ma5 && pre2Month.ma5 < pre3Month.ma5 && currentMonth.J < pre1Month.J &&
-
-                        (currentMonth.is9转down >= 9 || pre1Month.is9转down >= 9 || pre2Month.is9转down >= 9)
-
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            function 有连续两月强加速加大跌() {
-                //包含自己前三个月
-                let cut = 0
-                for (let index = 1; index <= 2; index++) {
-
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
-
-                    let ptpless0Count = 0
-                    let PtPPercentArr = [
-                        PtPPercent(pre1Month, currentMonth),
-                        PtPPercent(pre2Month, pre1Month),
-                    ]
-                    PtPPercentArr.sort((a, b) => a - b);
-                    PtPPercentArr.forEach(ptp => {
-                        if (ptp < 0) ptpless0Count++
-                    })
-
-                    if (
-                        curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 &&
-
-                        ptpless0Count == 2 &&
-                        PtPPercentArr[0] < -20 &&
-
-                        currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 && currentMonth.K < pre1Month.K &&
-                        pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 && currentMonth.D < pre1Month.D &&
-
-                        currentMonth.J < 0 && currentMonth.bar < 0
-
-
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            function 有连续三月下跌前8月有标星() {
-                //包含自己前四个月
-                let cut = 0
-                for (let index = 1; index <= 4; index++) {
-                    let pre4Month = currentMonthList[currentMonthList.length - (index + 4)]
-                    let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-                    let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-                    let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-                    let currentMonth = currentMonthList[currentMonthList.length - (index)]
-                    if (
-                        curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 && curtPercent(pre2Month) < 0 && //curtPercent(pre3Month) < 0 &&
-                        PtPPercent(pre1Month, currentMonth) < 0 &&
-                        PtPPercent(pre2Month, pre1Month) < 0 &&
-                        PtPPercent(pre3Month, pre2Month) < 0 &&
-                        //PtPPercent(pre4Month, pre3Month) < 0 &&
-
-                        currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 &&
-                        pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 &&
-                        // pre2Month.close < pre2Month.ma5 && pre2Month.ma5 < pre3Month.ma5 &&
-                        // pre3Month.low < pre3Month.ma5 &&//&& pre3Month.ma5 < pre4Month.ma5
-
-                        currentMonth.J < pre1Month.J &&
-                        currentMonth.K < pre1Month.K &&
-
-                        currentMonth.bias.bias3 <= currentMonth.bias.bias2 && currentMonth.bias.bias3 <= currentMonth.bias.bias1 &&
-                        currentMonth.bias.bias3 <= 0 &&
-
-                        //dateToStamp(date) >= dateToStamp(指数策略ByDay过滤后N天[0][0]) + N * 86400000) //过滤后N天 1号后N天过滤掉
-                        dateToStamp(标星LowDateArr[0]) + 250 * 86400000 >= dateToStamp(testDate)
-
-                    ) {
-                        cut++
-                    }
-                }
-                return cut
-            }
-
-            // if(currentMonth.date == "2024-09-19")
-            //     debugger
-
-            if (
-                currentMonth.bar < 0 && (currentMonth.J <= 0 || currentMonth.diff <= 0) &&  //当前底位
-                //上一个月非强加速() &&//上一个月非强加速
-                // >10  2023  2012 2014 ???
-                (有连续四月强加速() >= 1 || 有连续三月强加速加九转() >= 1 || 有连续两月强加速加大跌() >= 1 || 有连续三月下跌前8月有标星() >= 1)
-            ) {
-                //console.log(testDate)
-                标星LowDateArr.push(testDate)
-                标星LowDateArr.sort((a, b) => dateToStamp(b) - dateToStamp(a))
-                return true //标星
-            }
-
-            return false
-        }
-        let trigDateArr = Object.keys(triggerLogObj指数.按日期排序)
-        for (let index = 0; index < trigDateArr.length; index++) {
-            let date = trigDateArr[index]
-            test300标星high(date)
-            test300标星low(date)
-        }
-        标星已经完成 = true
-        //console.log(标星LowDateArr)
-
-
         ///指数策略/////////////////
         function toChartDataByDay() {
             let 指数策略ByDay = []
@@ -738,12 +340,8 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type
-                if (trig策略s[0].includes("高位")) type = test300标星high(date) ? "高位★" : "高位"
-                else type = test300标星low(date) ? "低位★" : "低位"
-
+                let type = profileN?.标星 ? profileN?.标星 : (trig策略s[0].includes("高位") ? "高位" : "低位")
                 if (Object.keys(profileN).length <= 0) continue
-
 
                 let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
                 指数策略ByDay.push(byDateArr)
@@ -761,15 +359,13 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type
-                if (trig策略s[0].includes("高位")) type = test300标星high(date) ? "高位★" : "高位"
-                else type = test300标星low(date) ? "低位★" : "低位"
+                let type = profileN?.标星 ? profileN?.标星 : (trig策略s[0].includes("高位") ? "高位" : "低位")
 
                 if (Object.keys(profileN).length <= 0) continue
 
                 let byDateArr = [date, trig策略s.length, trig策略s, type, profileN]
 
-                if (指数策略ByDay过滤后N天.length==0)//continue 去掉一个！！
+                if (指数策略ByDay过滤后N天.length == 0)//continue 去掉一个！！
                     指数策略ByDay过滤后N天.unshift(byDateArr)
                 else if (dateToStamp(date) >= dateToStamp(指数策略ByDay过滤后N天[0][0]) + N * 86400000) //过滤后N天 1号后N天过滤掉
                     指数策略ByDay过滤后N天.unshift(byDateArr)
@@ -787,9 +383,7 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type
-                if (trig策略s[0].includes("高位")) type = test300标星high(date) ? "高位★" : "高位"
-                else type = test300标星low(date) ? "低位★" : "低位"
+                let type = profileN?.标星 ? profileN?.标星 : (trig策略s[0].includes("高位") ? "高位" : "低位")
 
                 if (Object.keys(profileN).length <= 0) continue
 
@@ -799,9 +393,7 @@
                     let eleArr = triggerLogObj指数.按日期排序[itemDate]
                     let trig策略s = eleArr.toSpliced(-1, 1)
                     let profileN = eleArr[eleArr.length - 1]
-                    let type
-                    if (trig策略s[0].includes("高位")) type = test300标星high(date) ? "高位★" : "高位"
-                    else type = test300标星low(date) ? "低位★" : "低位"
+                    let type = profileN?.标星 ? profileN?.标星 : (trig策略s[0].includes("高位") ? "高位" : "低位")
 
                     return [itemDate, trig策略s, profileN]
                 })
@@ -853,9 +445,7 @@
                 let eleArr = triggerLogObj指数.按日期排序[date]
                 let trig策略s = eleArr.toSpliced(-1, 1)
                 let profileN = eleArr[eleArr.length - 1]
-                let type
-                if (trig策略s[0].includes("高位")) type = test300标星high(date) ? "高位★" : "高位"
-                else type = test300标星low(date) ? "低位★" : "低位"
+                let type = profileN?.标星 ? profileN?.标星 : (trig策略s[0].includes("高位") ? "高位" : "低位")
 
                 if (Object.keys(profileN).length <= 0) continue
 
