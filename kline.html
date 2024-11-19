@@ -100,9 +100,10 @@
             klinecharts.registerIndicator({
                 name: 'newMa',
                 shortName: 'newMa',
-                calcParams: [5],
+                calcParams: [10],
                 figures: [
-                    { key: 'newMa', title: 'newMa: ', type: 'line' },
+                    { key: 'newMa10', title: 'newMa10: ', type: 'line' },
+                    //{ key: 'newMa20', title: 'newMa20: ', type: 'line' },
                 ],
 
                 styles: {
@@ -118,7 +119,10 @@
 
                 calc: (kLineDataList, { calcParams, figures }) => {
                     return kLineDataList.map(kLineData => {
-                        return { newMa: kLineData.ma5 }
+                        return { 
+                            newMa10: kLineData.ma10 ,
+                            //newMa20: kLineData.ma20 
+                        }
                     })
                 }
             })
@@ -371,7 +375,8 @@
                 let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd()
                 currentWeekList = calculationBias(currentWeekList)
 
-                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd().maN(5, 'close')
+                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd()
+                .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
                 currentMonthList = calculationBias(currentMonthList)
 
                 if (noChart) {
