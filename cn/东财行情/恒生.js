@@ -51133,7 +51133,142 @@ var 恒生 = [
     "open": 3005.29,
     "high": 3042.53,
     "low": 2995.24,
-    "latest": 3040.66,
+    "latest": 3020.32,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-04",
+    "open": 3032.04,
+    "high": 3038.51,
+    "low": 3014.81,
+    "latest": 3035.67,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-05",
+    "open": 3018.91,
+    "high": 3103.86,
+    "low": 3018.91,
+    "latest": 3103.86,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-06",
+    "open": 3080.97,
+    "high": 3090.03,
+    "low": 3020.68,
+    "latest": 3043.28,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-07",
+    "open": 3023.54,
+    "high": 3107.2,
+    "low": 3017.95,
+    "latest": 3104,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-08",
+    "open": 3140.91,
+    "high": 3162.27,
+    "low": 3069.88,
+    "latest": 3074.61,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-11",
+    "open": 3011.16,
+    "high": 3040.04,
+    "low": 2992.04,
+    "latest": 3033.17,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-12",
+    "open": 3021.29,
+    "high": 3050.6,
+    "low": 2937.44,
+    "latest": 2951.71,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-13",
+    "open": 2927.14,
+    "high": 2949.97,
+    "low": 2912.76,
+    "latest": 2947.5,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-14",
+    "open": 2923.96,
+    "high": 2955.2,
+    "low": 2884.9,
+    "latest": 2890.52,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-15",
+    "open": 2899.47,
+    "high": 2917.89,
+    "low": 2877.56,
+    "latest": 2888.8,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-18",
+    "open": 2911.51,
+    "high": 2940.97,
+    "low": 2895.22,
+    "latest": 2908.57,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-19",
+    "open": 2925.91,
+    "high": 2935.58,
+    "low": 2902.54,
+    "latest": 2924.47,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-20",
+    "open": 2919.98,
+    "high": 2944.98,
+    "low": 2915.6,
+    "latest": 2937.91,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-21",
+    "open": 2930.46,
+    "high": 2943.45,
+    "low": 2913.31,
+    "latest": 2919.11,
+    "timestamp": "",
+    "percent": null
+  },
+  {
+    "date": "2024-11-22",
+    "open": 2922.15,
+    "high": 2933.98,
+    "low": 2845.73,
+    "latest": 2859.33,
     "timestamp": "",
     "percent": null
   }
