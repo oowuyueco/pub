@@ -12,8 +12,11 @@ function getQueryVariable(variable) {
 function checkOrTryHttp(dataName, site, fuc,) {
     var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement
     var JS1 = document.createElement("script")
-    if (site == "sina") {
+    if (site == "sinaF") {
         JS1.src = `./cn/新浪期货行情/${dataName}.js`
+    }
+    if (site == "sina") {
+        JS1.src = `./cn/新浪行情/${dataName}.js`
     }
     if (site == "xueqiu") {
         JS1.src = `./cn/雪球行情/${dataName}.js`
