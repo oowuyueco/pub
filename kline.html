@@ -119,8 +119,8 @@
 
                 calc: (kLineDataList, { calcParams, figures }) => {
                     return kLineDataList.map(kLineData => {
-                        return { 
-                            newMa10: kLineData.ma10 ,
+                        return {
+                            newMa10: kLineData.ma10,
                             //newMa20: kLineData.ma20 
                         }
                     })
@@ -207,7 +207,7 @@
                 }
             })
             klinecharts.registerIndicator({
-                name: 'new9转',
+                name: 'new9转back',
                 shortName: 'new9转',
                 calcParams: [],
                 figures: [
@@ -224,6 +224,50 @@
 
                         }
                     })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'new9转',
+                figures: [
+                    { key: 'drawY' }
+                ],
+                calc: (kLineDataList) => {
+                    return kLineDataList.map(
+                        kLineData => ({
+                            drawY: kLineData.lows,
+                            is9转up: kLineData.is9转up,
+                            is9转down: kLineData.is9转down,
+                            text: kLineData.is9转up ?? kLineData.is9转down //fruits[Math.floor(Math.random() * 17)]
+                        }))
+                },
+                draw: ({
+                    ctx,
+                    barSpace,
+                    visibleRange,
+                    indicator,
+                    xAxis,
+                    yAxis
+                }) => {
+                    const fruits = [
+                        '🍏', '🍎', '🍐', '🍊', '🍋', '🍌',
+                        '🍉', '🍇', '🍓', '🍈', '🍒', '🍑',
+                        '🍍', '🥥', '🥝', '🥭', '🥑', '🍏'
+                    ]
+                    const { from, to } = visibleRange
+                    ctx.font = barSpace.gapBar * 1.5 + 'px' + ' Helvetica Neue'
+                    ctx.textAlign = 'center'
+                    const result = indicator.result
+                    for (let i = from; i < to; i++) {
+                        const data = result[i]
+                        const x = xAxis.convertToPixel(i)
+                        const y = yAxis.convertToPixel(data.drawY) + 15
+                        let drawText = ""
+                        if (data.is9转up || data.is9转down)
+                            drawText = data.is9转up ?? data.is9转down  //fruits[Math.floor(Math.random() * 17)] //data.is9转down
+                        ctx.fillStyle = data.is9转up ? "red" : "green"
+                        ctx.fillText(drawText, x, y)
+                    }
+                    return false
                 }
             })
 
@@ -263,7 +307,14 @@
                         downWickColor: '#009b3e',
                         noChangeWickColor: '#888888'
                     },
+                    priceMark: {
+                        last: {
+                            show: false //关闭最新价线
+                        }
+                    }
                 },
+
+
             }
             chartDay.setStyles(normalStyle)
             chartWeek.setStyles(normalStyle)
@@ -298,25 +349,26 @@
             let dayNewKdj = chartDay.createIndicator('newKDJ')
             let dayNewMacd = chartDay.createIndicator('newMACD')
             let dayNewBias = chartDay.createIndicator('newBias')
-            let dayNew9转 = chartDay.createIndicator('new9转')
-            // let dayBias = chartDay.createIndicator('BIAS')
-            // let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            //chartDay.createIndicator('BIAS')
+            //let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let dayNew9转 = chartDay.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
 
             let weekNewKdj = chartWeek.createIndicator('newKDJ')
             let weekNewMacd = chartWeek.createIndicator('newMACD')
             let weekNewBias = chartWeek.createIndicator('newBias')
-            let weekNew9转 = chartWeek.createIndicator('new9转')
             let weekNewBOLL = chartWeek.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let weekNew9转 = chartWeek.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+
 
             chartMonth.createIndicator('VOL')
             let monthNewKdj = chartMonth.createIndicator('newKDJ')
             let monthNewMacd = chartMonth.createIndicator('newMACD')
             let monthNewBias = chartMonth.createIndicator('newBias')
-            let monthNew9转 = chartMonth.createIndicator('new9转')
-
             let monthNewMa5 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let monthNew9转 = chartMonth.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+
 
             document.addEventListener("keydown", function (event) {
                 if (event.keyCode === 37) endIndex--
@@ -377,7 +429,7 @@
                 currentWeekList = calculationBias(currentWeekList)
 
                 let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd()
-                .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
+                    .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
                 currentMonthList = calculationBias(currentMonthList)
 
                 if (noChart) {
