@@ -190,8 +190,8 @@
 
         }
         let currentName = decodeURI(getQueryVariable("name")) == "上证" ? "上证" : "沪深300"
-        
-        
+
+
     </script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
     <script>
@@ -302,7 +302,7 @@
             function noSameOrNday(ele) {
                 return arrNew.find(eleNew => {
                     return ele[5] == eleNew[5] && dateToStamp(ele[0]) <= dateToStamp(eleNew[0]) + 10 * 86400000   //10day过滤10天以内的同名 取反
-                 })
+                })
             }
             for (let index = 0; index < oldArr.length; index++) {
                 const ele = oldArr[index]
@@ -1326,11 +1326,11 @@
 
 
                 {
-                    name: '月KdjMacd双死叉副高位',
+                    name: '上证高位低量',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
-                    symbol: "pin",
+                    symbol: "circle",
                     itemStyle: {
                         normal: {
                             opacity: 1,
@@ -1338,19 +1338,61 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 13.5
+                        return 5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.月KdjMacd双死叉副高位.map((item) => {
+                    data: triggerLogObj指数.上证高位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '沪深300高位低量',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '月KM主高位双死叉',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.月KdjMacd双死叉主高位.map((item) => {
                         return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
                 {
-                    name: '月KdjMacd双死叉主高位',
+                    name: '月KM副高位双死叉',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
-                    symbol: "pin",
+                    symbol: "circle",
                     itemStyle: {
                         normal: {
                             opacity: 1,
@@ -1358,36 +1400,16 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 10.5
+                        return 5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.月KdjMacd双死叉主高位.map((item) => {
-                        return [item.trigDate, item.trueCount]
-                    }).filterAndAddStartEnd()
-                },
-               
-                ///////////////////////////////////////////////////
-                {
-                    name: '月KdjMacd双死叉副低位',
-                    type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 6,
-                    symbol: "pin",
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "black"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 7
-                    },
-                    zlevel: 3,
-                    data: triggerLogObj指数.月KdjMacd双死叉副低位.map((item) => {
+                    data: triggerLogObj指数.月KdjMacd双死叉副高位.map((item) => {
                         return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
 
+
+                ///////////////////////////////////////////////////
                 {
                     name: '同花顺策略总数',
                     type: 'scatter',
@@ -1461,7 +1483,7 @@
                     itemStyle: {
                         normal: {
                             opacity: 2,
-                            color: "blue"
+                            color: "black"
                         }
                     },
                     symbolSize: function (val) {
@@ -1614,6 +1636,67 @@
                     },
                     zlevel: 3,
                     data: triggerLogObj指数.日周低位九KDJ.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '上证低位低量',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证低位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '沪深300低位低量',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300低位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '月KM副低位双死叉',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.月KdjMacd双死叉副低位.map((item) => {
                         return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
