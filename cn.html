@@ -509,9 +509,57 @@
             return [key.replace("低位_", ""), n天策略总数, byDayArr]
         })
 
+
+        function by期权汇总(指数策略低位By后二期权日, type = "up", fromDate = "1977-10-10") {
+            function 统计Sum(arr) {
+                let sum = 0
+                for (let i = 0; i < arr.length; i++) {
+                    if (typeof arr[i] === "number")
+                        sum += arr[i]
+                }
+                return +sum.toFixed(2)
+            }
+            let highestArr = []
+            let lowestArr = []
+
+            for (const By后二期权日Arr of 指数策略低位By后二期权日) {
+                let highest, highestkey
+                let lowest, lowestkey
+                let nextN期权周三key = By后二期权日Arr[0]
+
+                if (dateToStamp(nextN期权周三key.split("周三")[1]) < dateToStamp(fromDate)) continue
+
+                let triggerDayArrArr = By后二期权日Arr[2]
+                for (const triggerDayArr of triggerDayArrArr) {
+                    let close = triggerDayArr[2].nextSecondDelivery周三 ? +triggerDayArr[2].nextSecondDelivery周三.close.split(",")[1] : +triggerDayArr[2].after.close.split(",")[2]//close
+                    if (highest === undefined || highest < close) { highest = close, highestkey = nextN期权周三key }
+                    if (lowest === undefined || lowest > close) { lowest = close, lowestkey = nextN期权周三key }
+                }
+
+                if (type == "up" && highest < 50) highest = "亏损" + highestkey
+                if (type == "up" && highest > 50) highest = +(highest - 50).toFixed(2)
+                if (type == "up" && lowest < 50) lowest = "亏损" + lowestkey
+                if (type == "up" && lowest > 50) lowest = +(highest - 50).toFixed(2)
+
+                if (type == "down" && highest > -50) highest = "亏损" + highestkey
+                if (type == "down" && highest < -50) highest = +(highest + 50).toFixed(2)
+                if (type == "down" && lowest > -50) lowest = "亏损" + lowestkey
+                if (type == "down" && lowest < -50) lowest = +(lowest + 50).toFixed(2)
+
+                highestArr.push(highest)
+                lowestArr.push(lowest)
+            }
+
+            指数策略低位By后二期权日["allHighestArr=>" + 统计Sum(highestArr)] = highestArr
+            指数策略低位By后二期权日["allLowestArr=>" + 统计Sum(lowestArr)] = lowestArr
+
+            return 指数策略低位By后二期权日
+
+        }
+
         console.log("沪深300最新日期=", 沪深300[沪深300.length - 1])
-        console.log("指数策略高位", 指数策略高位ByDay, 指数策略高位ByDay统计前N天, 指数策略高位By后二期权日)
-        console.log("指数策略低位", 指数策略低位ByDay, 指数策略低位ByDay统计前N天, 指数策略低位By后二期权日)
+        console.log("指数策略高位", 指数策略高位ByDay, 指数策略高位ByDay统计前N天, by期权汇总(指数策略高位By后二期权日, "down", "2020-01-01"))
+        console.log("指数策略低位", 指数策略低位ByDay, 指数策略低位ByDay统计前N天, by期权汇总(指数策略低位By后二期权日, "up", "2020-01-01"))
 
 
         //期权策略///////////
@@ -596,7 +644,7 @@
             return 区间ByDay统计前N天
         }
 
-        function 区间toBy期权日(区间类型 = "上升日期区间", nextN期权周三 = "nextFirstDelivery周三",) {
+        function 区间toBy期权日(区间类型 = "上升日期区间", nextN期权周三 = "nextSecondDelivery周三",) {
 
             let 区间By期权日 = {}
 
@@ -621,7 +669,7 @@
                         key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
                     }
                     else {
-                        key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `${type}_后${N}周三` + profileN.after.nextSecondDelivery周三
+                        key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
                     }
 
                     let byDateArr = [triggerDate, trig策略s.length, trig策略s, profileN]
@@ -635,6 +683,56 @@
 
                 }
             }
+
+            ///汇总
+            let allHighestArr = []
+            let allLowestArr = []
+            for (const [日期区间key, nextN期权周三Obj] of Object.entries(区间By期权日)) {
+                let highestArr = []
+                let lowestArr = []
+                for (const [nextN期权周三key, triggerDayArrArr] of Object.entries(nextN期权周三Obj)) {
+                    let highest, highestkey
+                    let lowest, lowestkey
+                    for (const triggerDayArr of triggerDayArrArr) {
+                        let close = triggerDayArr[3].nextSecondDelivery周三 ? +triggerDayArr[3].nextSecondDelivery周三.close.split(",")[1] : +triggerDayArr[3].after.close.split(",")[2]//close
+                        if (highest === undefined || highest < close) { highest = close, highestkey = nextN期权周三key }
+                        if (lowest === undefined || lowest > close) { lowest = close, lowestkey = nextN期权周三key }
+                    }
+
+                    if (区间类型 == "上升日期区间" && highest < 50) highest = "亏损" + highestkey
+                    if (区间类型 == "上升日期区间" && highest > 50) highest = +(highest - 50).toFixed(2)
+                    if (区间类型 == "上升日期区间" && lowest < 50) lowest = "亏损" + lowestkey
+                    if (区间类型 == "上升日期区间" && lowest > 50) lowest = +(highest - 50).toFixed(2)
+
+                    if (区间类型 == "下降日期区间" && highest > -50) highest = "亏损" + highestkey
+                    if (区间类型 == "下降日期区间" && highest < -50) highest = +(highest + 50).toFixed(2)
+                    if (区间类型 == "下降日期区间" && lowest > -50) lowest = "亏损" + lowestkey
+                    if (区间类型 == "下降日期区间" && lowest < -50) lowest = +(lowest + 50).toFixed(2)
+
+
+                    highestArr.push(highest)
+                    lowestArr.push(lowest)
+
+                    allHighestArr.push(highest)
+                    allLowestArr.push(lowest)
+                }
+
+                nextN期权周三Obj["highestArr=>" + 统计Sum(highestArr)] = highestArr
+                nextN期权周三Obj["lowestArr=>" + 统计Sum(lowestArr)] = lowestArr
+            }
+
+            区间By期权日["allHighestArr=>" + 统计Sum(allHighestArr)] = allHighestArr
+            区间By期权日["allLowestArr=>" + 统计Sum(allLowestArr)] = allLowestArr
+            function 统计Sum(arr) {
+                let sum = 0
+                for (let i = 0; i < arr.length; i++) {
+                    if (typeof arr[i] === "number")
+                        sum += arr[i]
+                }
+                return +sum.toFixed(2)
+            }
+            ///汇总
+
 
             return 区间By期权日//.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
         }
