@@ -1464,7 +1464,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2022-11-03=>2024-11-28": {
+    "2022-11-03=>2024-11-29": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -1649,8 +1649,8 @@ var triggerLogObj期权 = {
         },
         {
           "after": {
-            "close": "1->2024-11-28,-34.49,-0.88",
-            "high": ",0,0",
+            "close": "2->2024-11-29,9.54,0.24",
+            "high": "2->2024-11-29,9.54,0.24",
             "low": "1->2024-11-28,-34.49,-0.88",
             "nextFirstDelivery周三": "2024-12-25",
             "nextSecondDelivery周三": "2025-01-22"
@@ -1660,6 +1660,22 @@ var triggerLogObj期权 = {
       "2024-11-28": [
         {
           "trigDate": "2024-11-28",
+          "quantName": "科创50_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": "1->2024-11-29,44.03,1.14",
+            "high": "1->2024-11-29,44.03,1.14",
+            "low": ",0,0",
+            "nextFirstDelivery周三": "2024-12-25",
+            "nextSecondDelivery周三": "2025-01-22"
+          }
+        }
+      ],
+      "2024-11-29": [
+        {
+          "trigDate": "2024-11-29",
           "quantName": "科创50_金叉低连空但",
           "logInfo": ""
         },
@@ -4392,4 +4408,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2024-11-28"
+var runLastKlineDate = "2024-11-29"
