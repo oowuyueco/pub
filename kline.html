@@ -72,7 +72,7 @@
         checkOrTryHttp(dataName, site, () => {
             //统一数据
             let dayDatas = window[dataName]
-            if (site == "sina") {
+            if (site == "sina"||site == "sinaF") {
                 if (!dayDatas[0]?.timestamp)
                     dayDatas = dayDatas.map(function (data) {
                         data.timestamp = new Date(data.date).getTime()
@@ -234,7 +234,8 @@
                 calc: (kLineDataList) => {
                     return kLineDataList.map(
                         kLineData => ({
-                            drawY: kLineData.lows,
+                            drawUps: kLineData.ups,
+                            drawLows: kLineData.lows,
                             is9转up: kLineData.is9转up,
                             is9转down: kLineData.is9转down,
                             text: kLineData.is9转up ?? kLineData.is9转down //fruits[Math.floor(Math.random() * 17)]
@@ -260,11 +261,11 @@
                     for (let i = from; i < to; i++) {
                         const data = result[i]
                         const x = xAxis.convertToPixel(i)
-                        const y = yAxis.convertToPixel(data.drawY) + 15
                         let drawText = ""
                         if (data.is9转up || data.is9转down)
                             drawText = data.is9转up ?? data.is9转down  //fruits[Math.floor(Math.random() * 17)] //data.is9转down
                         ctx.fillStyle = data.is9转up ? "red" : "green"
+                        let y = data.is9转up ? yAxis.convertToPixel(data.drawLows) + 15 : yAxis.convertToPixel(data.drawUps) - 15
                         ctx.fillText(drawText, x, y)
                     }
                     return false
@@ -354,9 +355,11 @@
             let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let dayNew9转 = chartDay.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
 
+            chartWeek.createIndicator('VOL')
             let weekNewKdj = chartWeek.createIndicator('newKDJ')
             let weekNewMacd = chartWeek.createIndicator('newMACD')
             let weekNewBias = chartWeek.createIndicator('newBias')
+            let weekNewMa10 = chartWeek.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let weekNewBOLL = chartWeek.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let weekNew9转 = chartWeek.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
 
@@ -365,7 +368,7 @@
             let monthNewKdj = chartMonth.createIndicator('newKDJ')
             let monthNewMacd = chartMonth.createIndicator('newMACD')
             let monthNewBias = chartMonth.createIndicator('newBias')
-            let monthNewMa5 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            let monthNewMa10 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let monthNew9转 = chartMonth.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
 
@@ -425,7 +428,7 @@
                 let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close").cal9转().calMacd()
                 currentDayList = calculationBias(currentDayList)
 
-                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd()
+                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd().maN(10, 'close')
                 currentWeekList = calculationBias(currentWeekList)
 
                 let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd()
