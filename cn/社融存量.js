@@ -422,6 +422,10 @@ let 社融存量 = [
     [
         "2024-10-28",
         7.8
+    ],
+    [
+        "2024-11-28",
+        7.8
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
