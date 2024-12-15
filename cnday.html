@@ -294,7 +294,13 @@
             let mostUp60orLast = item.day60LowUp ? item.day60LowUp[3] : item[`day${item.lastDay}LowUp`][3]
             let close60orLast = item.day60LowUp ? item.day60LowUp[4] : item[`day${item.lastDay}LowUp`][4]
 
-            return [ele.trigDate, 0, mostUp60orLast, mostLow60orLast, close60orLast, ele.dataName, ele?.trigcalType, item.day60LowUp ? 60 : item.lastDay]
+            return [
+                ele.trigDate,
+                0, mostUp60orLast, mostLow60orLast, close60orLast,
+                ele.dataName,
+                (ele?.trigcalType && ele?.trigcalType != "") ? ele.trigcalType : ele.quantName,
+                item.day60LowUp ? 60 : item.lastDay
+            ]
         }
 
         function fliterNday大宗(oldArr) {
@@ -318,11 +324,14 @@
         //默认按时间排序
         let 大宗高位KDJ = triggerLogObj大宗.高位KDJ.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
         let 大宗高位九转 = triggerLogObj大宗.高位九转.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗高位低量 = triggerLogObj大宗.高位低量.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+
         let 大宗低位KDJ = triggerLogObj大宗.低位KDJ.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
         let 大宗低位九转 = triggerLogObj大宗.低位九转.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗低位低量 = triggerLogObj大宗.低位低量.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
-        let 大宗高位 = [...大宗高位KDJ, ...大宗高位九转].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
-        let 大宗低位 = [...大宗低位KDJ, ...大宗低位九转].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗高位 = [...大宗高位KDJ, ...大宗高位九转, ...大宗高位低量].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗低位 = [...大宗低位KDJ, ...大宗低位九转, ...大宗低位低量].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
         let filter大宗高位 = fliterNday大宗(大宗高位)
         let filter大宗低位 = fliterNday大宗(大宗低位)
@@ -881,34 +890,34 @@
 
             series: [
 
-                // {
-                //     name: "PPI",
-                //     type: "line",
-                //     xAxisIndex: 0,
-                //     yAxisIndex: 0,
-                //     showSymbol: false,
-                //     smooth: true,
-                //     lineStyle: {
-                //         width: 0.9,
-                //     },
-                //     data: PPI.filterAndAddStartEnd()
-                // },
-                // {
-                //     name: 'pmi',
-                //     type: 'line',
-                //     xAxisIndex: 1,
-                //     yAxisIndex: 1,
-                //     showSymbol: false,
-                //     smooth: true,
-                //     lineStyle: {
-                //         width: 1,
-                //         color: "gray"
-                //     },
-                //     data: cn_pmi_平均.map(v => {
-                //         v[1] = parseFloat(v[1]) * 10
-                //         return v
-                //     }).filterAndAddStartEnd(),
-                // },
+                {
+                    name: "ppi",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.9,
+                    },
+                    data: PPI.filterAndAddStartEnd()
+                },
+                {
+                    name: 'pmi',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "gray"
+                    },
+                    data: cn_pmi_平均.map(v => {
+                        v[1] = parseFloat(v[1]) * 10
+                        return v
+                    }).filterAndAddStartEnd(),
+                },
 
                 {
                     name: "油糖比",
@@ -1133,6 +1142,15 @@
                     data: 大宗高位九转.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
+                {
+                    name: '大宗高位低量',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 大宗高位低量.ohlc2oclh().filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
 
                 {
                     name: '大宗低位KDJ',
@@ -1150,6 +1168,15 @@
                     yAxisIndex: 0,
                     zlevel: 3,
                     data: 大宗低位九转.ohlc2oclh().filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
+                {
+                    name: '大宗低位低量',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 大宗低位低量.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
 
@@ -1994,13 +2021,24 @@
             ) {
                 option.yAxis[0].max = 18
                 option.yAxis[0].min = -18
+                params.selected.ppi = false
                 params.selected.油糖比 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+            if (params.name === "ppi" && params.selected["ppi"] === true) {
+                option.yAxis[0].max = 15
+                option.yAxis[0].min = -10
+                params.selected.油糖比 = false
+                params.selected.金融脉动增速us = false
+                params.selected.中美汇 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
             if (params.name === "油糖比" && params.selected["油糖比"] === true) {
                 option.yAxis[0].max = 10
                 option.yAxis[0].min = 0
+                params.selected.ppi = false
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
                 option.legend.selected = params.selected
@@ -2015,13 +2053,24 @@
             ) {
                 option.yAxis[1].max = 40
                 option.yAxis[1].min = 20
+                params.selected.pmi = false
                 params.selected.油糖比 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+            if (params.name === "pmi" && params.selected["pmi"] === true) {
+                option.yAxis[1].max = 50
+                option.yAxis[1].min = -25
+                params.selected.铜金比 = false
+                params.selected.信贷脉冲 = false
+                params.selected.信贷脉冲_MA = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
             if (params.name === "铜金比" && params.selected["铜金比"] === true) {
                 option.yAxis[1].max = 5.5
                 option.yAxis[1].min = 1.2
+                params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
                 option.legend.selected = params.selected
@@ -2095,6 +2144,15 @@
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "铜金比"
+            })
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "ppi"
+            })
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "pmi"
             })
 
         }, "1")

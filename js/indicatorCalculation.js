@@ -1,6 +1,5 @@
 
 //https://github.com/klinecharts/KLineChart/blob/v8.6.3/src/extension/technicalindicator/directionalmovement/movingAverageConvergenceDivergence.js
-
 function calculationMacd(dataList, params = [12, 26, 9]) {
   let closeSum = 0
   let emaShort
@@ -45,8 +44,6 @@ function calculationMacd(dataList, params = [12, 26, 9]) {
     return kLineData
   })
 }
-
-
 function calculationCci(dataList, params = [20]) {
   const p = params[0] - 1
   let tpSum = 0
@@ -75,12 +72,7 @@ function calculationCci(dataList, params = [20]) {
   })
 }
 
-/**
- * 计算BIAS指标
- *
- * @param data
- * @return
- */
+//https://github.com/ljhwh586/klineweb
 function calculationBias(data) {
   // 乖离率=[(当日收盘价-N日平均价)/N日平均价]*100%
   // 参数：6，12、24
@@ -138,11 +130,132 @@ function calculationBias(data) {
   }
   return data
 }
+function calculationRsi(data) {
+  // N日RSI =
+  // N日内收盘涨幅的平均值/(N日内收盘涨幅均值+N日内收盘跌幅均值) ×100%
+  let rsi1 = 0 // 参数6
+  let rsi2 = 0 // 参数12
+  let rsi3 = 0 // 参数24
+
+  let sumCloseA = 0
+  let sumCloseB = 0
+
+  let a1
+  let b1
+  let oldA1 = 0
+  let oldB1 = 0
+
+  let a2
+  let b2
+  let oldA2 = 0
+  let oldB2 = 0
+
+  let a3
+  let b3
+  let oldA3 = 0
+  let oldB3 = 0
+
+  let totalTurnover = 0
+  let totalVolume = 0
+
+  let startIndex = data.length < 130 ? 0 : data.length - 100
+  for (let i = 0; i < data.length; i++) {
+    let turnover = data[i].turnover
+    totalVolume += data[i].volume
+    totalTurnover += turnover
+    if (totalVolume !== 0) {
+      data[i].averagePrice = totalTurnover / totalVolume
+    }
+
+    if (i > 0) {
+      let tmp = data[i].close - data[i - 1].close
+      if (tmp > 0) {
+        sumCloseA += tmp
+      } else {
+        sumCloseB += tmp
+      }
+      let AA = tmp > 0 ? tmp : 0
+      let BB = Math.abs(tmp)
+
+      if (i < 6) {
+        a1 = sumCloseA / (i + 1)
+        b1 = (Math.abs(sumCloseB) + sumCloseA) / (i + 1)
+      } else {
+        a1 = (AA + 5 * oldA1) / 6
+        b1 = (BB + 5 * oldB1) / 6
+      }
+      oldA1 = a1
+      oldB1 = b1
+      rsi1 = a1 / b1 * 100
+
+      if (i < 12) {
+        a2 = sumCloseA / (i + 1)
+        b2 = (Math.abs(sumCloseB) + sumCloseA) / (i + 1)
+      } else {
+        a2 = (AA + 11 * oldA2) / 12
+        b2 = (BB + 11 * oldB2) / 12
+      }
+      oldA2 = a2
+      oldB2 = b2
+      rsi2 = a2 / b2 * 100
+
+      if (i < 24) {
+        a3 = sumCloseA / (i + 1)
+        b3 = (Math.abs(sumCloseB) + sumCloseA) / (i + 1)
+      } else {
+        a3 = (AA + 23 * oldA3) / 24
+        b3 = (BB + 23 * oldB3) / 24
+      }
+      oldA3 = a3
+      oldB3 = b3
+      rsi3 = a3 / b3 * 100
+    }
+    data[i].rsi = { rsi1, rsi2, rsi3 }
+  }
+  return data
+}
+
+//手动
+function calculationWvad(data) {
+  //WVAD = (CLOSE - OPEN) / (HIGH - LOW) * VOL
+  let startIndex = data.length  < 130 ? 0 : data.length - 100
+  for (let i = startIndex; i < data.length; i++) {
+      data[i].wvad = {}
+
+      if(data[i].high - data[i].low==0)
+         data[i].wvad.tmpC = 0
+      else
+        data[i].wvad.tmpC = (data[i].close - data[i].open) / (data[i].high - data[i].low) * data[i].volume
+      
+      if (i > startIndex + 30) {
+          let N = 24
+          let sumN = 0
+          for (let n = 0; n < N; n++) {
+              sumN = sumN + data[i - n].wvad.tmpC
+          }
+          data[i].wvad.wvad = sumN
+      }
+
+      if ( i > startIndex + 36) {
+          let N = 6
+          let sumN = 0
+          for (let n = 0; n < N; n++) {
+              sumN = sumN + data[i - n].wvad.wvad
+          }
+          data[i].wvad.wvadMa6= sumN/N
+
+      }
 
 
-//nodejs 导出   https://github.com/ljhwh586/klineweb  https://github.com/klinecharts/KLineChart
+  }
+  return data
+}
+
+//my.js里的指标 https://github.com/kimboqi/stock-indicators
 if (typeof module !== "undefined" && module.exports) {
   exports.calculationMacd = calculationMacd
   exports.calculationBias = calculationBias
   exports.calculationCci = calculationCci
+  exports.calculationRsi = calculationRsi
+  exports.calculationWvad = calculationWvad
 }

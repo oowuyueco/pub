@@ -777,7 +777,7 @@ function curtPercent(periodItem) {
 //同比涨跌幅 昨收买-今收卖 / 昨收买   标准
 function PtPPercent(prePeriodItem, currentPeriodItem) {
 
-    if(!prePeriodItem) return 0
+    if (!prePeriodItem) return 0
     if (prePeriodItem.收盘) prePeriodItem.close = prePeriodItem.收盘
     if (currentPeriodItem.收盘) currentPeriodItem.close = currentPeriodItem.收盘
 
@@ -828,6 +828,23 @@ function calAvgProf(filterArr, calIndex = 4) {
 
     return parseFloat(avg.toFixed(2))
 }
+
+//最大 最小
+function cal极值(filterArr, calIndex = 4) {
+
+    let max = Number.NEGATIVE_INFINITY
+    let min = Number.POSITIVE_INFINITY
+    for (const element of filterArr) {
+        if (element[calIndex] > max) max = element[calIndex]
+        if (element[calIndex] < min) min = element[calIndex]
+    }
+    return {
+        min: min,
+        max: max
+    }
+
+}
+
 //中位
 function calMedianProf(filterArr, calIndex = 4) {
 
