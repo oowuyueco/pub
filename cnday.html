@@ -440,10 +440,21 @@
                     },
                 },
                 formatter: function (params, ticket, callback) {
-                    //trigger: "item", 时候才有效
-                    //if (params.seriesName && params.seriesName.includes("策略")) {
-                    return params.seriesName + ": " + params.data
-                    //}
+                    if (params.seriesType == "candlestick") {
+                        let quantDataNameDate = params.value[6] + "_" + params.value[5].slice(0, -2) + "_" + params.value[0]
+                        return quantDataNameDate + ": " +
+                            [
+                                params.value[1],//open
+                                params.value[4],//high
+                                params.value[3],//low
+                                params.value[2],//close
+                            ].join('  ') //echartKline to 标准kline
+                    }
+                    else {
+                        return params.seriesName + ": " + params.data
+                    }
+
+
                 },
             },
 
@@ -1394,7 +1405,7 @@
                 },
 
                 {
-                    name: '月KM主高位双死叉',
+                    name: '月KM死叉主高位右侧',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
@@ -1410,12 +1421,12 @@
                         return 5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.月KdjMacd双死叉主高位.map((item) => {
+                    data: triggerLogObj指数.月KM死叉主高位右侧.map((item) => {
                         return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
                 {
-                    name: '月KM副高位双死叉',
+                    name: '月KM死叉副高位右侧',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
@@ -1430,7 +1441,7 @@
                         return 5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.月KdjMacd双死叉副高位.map((item) => {
+                    data: triggerLogObj指数.月KM死叉副高位右侧.map((item) => {
                         return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
