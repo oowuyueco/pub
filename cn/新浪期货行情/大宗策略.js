@@ -602,6 +602,9 @@ var triggerLogObj大宗={
         ],
         "2024-10-09": [
             "低位KDJ_红枣连续"
+        ],
+        "2024-12-16": [
+            "低位九转_双周MACD-KDJ_对二甲苯连续"
         ]
     },
     "高位KDJ": [
@@ -7430,14 +7433,14 @@ var triggerLogObj大宗={
                     8.19,
                     4.66
                 ],
-                "day47LowUp": [
+                "day48LowUp": [
                     "32,2024-11-22",
                     -4.71,
                     "17,2024-11-01",
                     8.19,
-                    -3.22
+                    -2.41
                 ],
-                "lastDay": 47
+                "lastDay": 48
             }
         },
         {
@@ -8843,7 +8846,14 @@ var triggerLogObj大宗={
                     20.71,
                     19.9
                 ],
-                "lastDay": 60
+                "day61LowUp": [
+                    "12,2024-10-08",
+                    -0.87,
+                    "58,2024-12-11",
+                    20.71,
+                    17.08
+                ],
+                "lastDay": 61
             }
         },
         {
@@ -8904,14 +8914,14 @@ var triggerLogObj大宗={
                     20.55,
                     6.43
                 ],
-                "day59LowUp": [
-                    "55,2024-12-09",
-                    -10.37,
+                "day60LowUp": [
+                    "60,2024-12-16",
+                    -11.42,
                     "10,2024-09-30",
                     20.55,
-                    -9.63
+                    -11.42
                 ],
-                "lastDay": 59
+                "lastDay": 60
             }
         },
         {
@@ -9208,6 +9218,23 @@ var triggerLogObj大宗={
                     42.21,
                     32.05
                 ]
+            }
+        },
+        {
+            "dataName": "对二甲苯连续",
+            "quantName": "低位九转",
+            "trigDate": "2024-12-16",
+            "trigIndex": 300,
+            "trigcalType": "双周MACD-KDJ",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         }
     ],
@@ -13396,4 +13423,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-12-13"
+var runLastKlineDate = "2024-12-16"
