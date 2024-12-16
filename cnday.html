@@ -288,18 +288,19 @@
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script type="text/javascript">
 
-        function toKline(ele) {
+        function toKline(ele, N = 60) {
             let item = ele.logProfileN
-            let mostLow60orLast = item.day60LowUp ? item.day60LowUp[1] : item[`day${item.lastDay}LowUp`][1]
-            let mostUp60orLast = item.day60LowUp ? item.day60LowUp[3] : item[`day${item.lastDay}LowUp`][3]
-            let close60orLast = item.day60LowUp ? item.day60LowUp[4] : item[`day${item.lastDay}LowUp`][4]
+            let afterKey = `day${N}LowUp`
+            let mostLowNorLast = typeof item[afterKey] !== "undefined" ? item[afterKey][1] : item[`day${item.lastDay}LowUp`][1]
+            let mostUpNorLast = typeof item[afterKey] !== "undefined" ? item[afterKey][3] : item[`day${item.lastDay}LowUp`][3]
+            let closeNorLast = typeof item[afterKey] !== "undefined" ? item[afterKey][4] : item[`day${item.lastDay}LowUp`][4]
 
             return [
                 ele.trigDate,
-                0, mostUp60orLast, mostLow60orLast, close60orLast,
+                0, mostUpNorLast, mostLowNorLast, closeNorLast,
                 ele.dataName,
                 (ele?.trigcalType && ele?.trigcalType != "") ? ele.trigcalType : ele.quantName,
-                item.day60LowUp ? 60 : item.lastDay
+                item[afterKey] ? N : item.lastDay
             ]
         }
 
@@ -462,7 +463,7 @@
                 left: 70,
                 top: 0,
                 width: 50,
-                height: "95%",
+                height: "90%",
                 backgroundColor: "gray",
                 selector: ['all', 'inverse'],
                 orient: "vertical"

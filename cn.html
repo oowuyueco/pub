@@ -330,7 +330,7 @@
         }
 
         //指数策略
-        function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10) {
+        function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10, nextN期权周三 = "nextThirdDelivery周三") { // nextSecondDelivery周三 nextThirdDelivery周三
 
             let trigDateArr = Object.entries(triggerLogObj指数.按日期排序)
                 .filter((ele, index) => { return ele[1][0].includes(高低位) })
@@ -363,8 +363,10 @@
                 let profileN = ele[2]
 
                 let 期权日key
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let N = nextN期权周三 == "nextFirstDelivery周三" ? 1 : 2
+                let N = 2
+                if (nextN期权周三 == "nextFirstDelivery周三") N = 1
+                if (nextN期权周三 == "nextThirdDelivery周三") N = 3
+
                 if (profileN[nextN期权周三]) {
                     期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
                 }
@@ -387,8 +389,8 @@
                 let type = trigDateArr[0][1][0].includes("高位") ? "高位" : "低位"
                 for (let trigDate of trigDateArr) {
                     let profileN = trigDate[2]
-                    let closePoint = profileN?.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
-                    let closePercent = profileN?.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                    let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                    let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
                     if (closePoint > closeHighest) {
                         closeHighest = closePoint
                         closeHighest百分比 = closePercent
