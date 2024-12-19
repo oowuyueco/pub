@@ -605,6 +605,9 @@ var triggerLogObj大宗={
         ],
         "2024-12-16": [
             "低位九转_双周MACD-KDJ_对二甲苯连续"
+        ],
+        "2024-12-19": [
+            "低位九转_双周MACD-KDJ_PTA连续"
         ]
     },
     "高位KDJ": [
@@ -7433,14 +7436,14 @@ var triggerLogObj大宗={
                     8.19,
                     4.66
                 ],
-                "day50LowUp": [
+                "day51LowUp": [
                     "32,2024-11-22",
                     -4.71,
                     "17,2024-11-01",
                     8.19,
-                    -3.17
+                    -4.66
                 ],
-                "lastDay": 50
+                "lastDay": 51
             }
         },
         {
@@ -8846,14 +8849,14 @@ var triggerLogObj大宗={
                     20.71,
                     19.9
                 ],
-                "day63LowUp": [
+                "day64LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "58,2024-12-11",
                     20.71,
-                    7.5
+                    8.3
                 ],
-                "lastDay": 63
+                "lastDay": 64
             }
         },
         {
@@ -8921,14 +8924,14 @@ var triggerLogObj大宗={
                     20.55,
                     -11.42
                 ],
-                "day62LowUp": [
+                "day63LowUp": [
                     "60,2024-12-16",
                     -11.42,
                     "10,2024-09-30",
                     20.55,
-                    -8.46
+                    -10.53
                 ],
-                "lastDay": 62
+                "lastDay": 63
             }
         },
         {
@@ -9234,14 +9237,31 @@ var triggerLogObj大宗={
             "trigIndex": 300,
             "trigcalType": "双周MACD-KDJ",
             "logProfileN": {
-                "day2LowUp": [
-                    "2,2024-12-18",
-                    -0.52,
+                "day3LowUp": [
+                    "3,2024-12-19",
+                    -1.08,
                     "",
                     0,
-                    -0.52
+                    -1.08
                 ],
-                "lastDay": 2
+                "lastDay": 3
+            }
+        },
+        {
+            "dataName": "PTA连续",
+            "quantName": "低位九转",
+            "trigDate": "2024-12-19",
+            "trigIndex": 4375,
+            "trigcalType": "双周MACD-KDJ",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         }
     ],
@@ -13430,4 +13450,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-12-18"
+var runLastKlineDate = "2024-12-19"
