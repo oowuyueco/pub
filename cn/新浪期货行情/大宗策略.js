@@ -608,6 +608,9 @@ var triggerLogObj大宗={
         ],
         "2024-12-19": [
             "低位九转_双周MACD-KDJ_PTA连续"
+        ],
+        "2024-12-25": [
+            "低位九转_双周MACD-KDJ_花生连续"
         ]
     },
     "高位KDJ": [
@@ -7436,14 +7439,14 @@ var triggerLogObj大宗={
                     8.19,
                     4.66
                 ],
-                "day54LowUp": [
+                "day55LowUp": [
                     "32,2024-11-22",
                     -4.71,
                     "17,2024-11-01",
                     8.19,
-                    -3.68
+                    -3.99
                 ],
-                "lastDay": 54
+                "lastDay": 55
             }
         },
         {
@@ -8849,14 +8852,14 @@ var triggerLogObj大宗={
                     20.71,
                     19.9
                 ],
-                "day67LowUp": [
+                "day68LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "58,2024-12-11",
                     20.71,
-                    5.38
+                    4.93
                 ],
-                "lastDay": 67
+                "lastDay": 68
             }
         },
         {
@@ -8924,14 +8927,14 @@ var triggerLogObj大宗={
                     20.55,
                     -11.42
                 ],
-                "day66LowUp": [
+                "day67LowUp": [
                     "60,2024-12-16",
                     -11.42,
                     "10,2024-09-30",
                     20.55,
                     -10.1
                 ],
-                "lastDay": 66
+                "lastDay": 67
             }
         },
         {
@@ -9237,14 +9240,14 @@ var triggerLogObj大宗={
             "trigIndex": 300,
             "trigcalType": "双周MACD-KDJ",
             "logProfileN": {
-                "day6LowUp": [
+                "day7LowUp": [
                     "3,2024-12-19",
                     -1.08,
                     "5,2024-12-23",
                     2.65,
-                    2.48
+                    2.24
                 ],
-                "lastDay": 6
+                "lastDay": 7
             }
         },
         {
@@ -9254,14 +9257,31 @@ var triggerLogObj大宗={
             "trigIndex": 4375,
             "trigcalType": "双周MACD-KDJ",
             "logProfileN": {
-                "day3LowUp": [
-                    "1,2024-12-20",
-                    -0.28,
+                "day4LowUp": [
+                    "4,2024-12-25",
+                    -0.36,
                     "2,2024-12-23",
                     0.24,
-                    -0.12
+                    -0.36
                 ],
-                "lastDay": 3
+                "lastDay": 4
+            }
+        },
+        {
+            "dataName": "花生连续",
+            "quantName": "低位九转",
+            "trigDate": "2024-12-25",
+            "trigIndex": 944,
+            "trigcalType": "双周MACD-KDJ",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         }
     ],
@@ -13450,4 +13470,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2024-12-24"
+var runLastKlineDate = "2024-12-25"
