@@ -340,19 +340,24 @@
                     newArr[1] = ele[1].toSpliced(-1)
                     newArr[2] = ele[1].at(-1)
                     newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : (newArr[1][0].includes("高位") ? "高位" : "低位")
-                    let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
-                        return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
-                    })
-                    newArr[4] = 包含当天最近N天触发的日期
                     return newArr
                 })
+
             trigDateArr.forEach((ele, index) => {
-                if (index == 0) return ele.push("✔")
+                if (index == 0) return ele[5] = "✔"
                 let last对号 = trigDateArr.findLast(ele => ele.at(-1) == "✔")
                 if (dateToStamp(ele[0]) >= dateToStamp(last对号[0]) + 过滤M * 86400000)
-                    ele.push("✔")
+                    ele[5] = "✔"
                 else
-                    ele.push("✗")
+                    ele[5] = "✗"
+            })
+            trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
+                    return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
+                })
+                包含当天最近N天触发的日期.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                ele[4] = 包含当天最近N天触发的日期
+                return ele
             })
             trigDateArr.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
 
@@ -452,22 +457,30 @@
                     .map((ele, index, preArr) => {
                         let newArr = []
                         newArr[0] = ele[0]
-                        newArr[1] = ele[1].toSpliced(-1)
+                        newArr[1] = ele[1].toSpliced(-1).map((ele, index) => { return ele.quantName })
                         newArr[2] = ele[1].at(-1)
-                        //newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : (newArr[1][0].includes("高位") ? "高位" : "低位")
-                        let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
-                            return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
-                        })
-                        newArr[3] = 包含当天最近N天触发的日期
+                        // newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : (newArr[1][0].includes("高位") ? "高位" : "低位")
+                        // let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
+                        //     return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
+                        // })
+                        // newArr[3] = 包含当天最近N天触发的日期
                         return newArr
                     })
                 trigDateArr.forEach((ele, index) => {
-                    if (index == 0) return ele.push("✔")
+                    if (index == 0) return ele[4] = "✔"
                     let last对号 = trigDateArr.findLast(ele => ele.at(-1) == "✔")
                     if (dateToStamp(ele[0]) >= dateToStamp(last对号[0]) + 过滤M * 86400000)
-                        ele.push("✔")
+                        ele[4] = "✔"
                     else
-                        ele.push("✗")
+                        ele[4] = "✗"
+                })
+                trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                    let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
+                        return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
+                    })
+                    包含当天最近N天触发的日期.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                    ele[3] = 包含当天最近N天触发的日期
+                    return ele
                 })
                 trigDateArr.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
 
