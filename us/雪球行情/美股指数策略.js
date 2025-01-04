@@ -2233,4 +2233,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-01-02"
+var runLastKlineDate = "2025-01-03"
