@@ -7446,14 +7446,14 @@ var triggerLogObj大宗={
                     8.19,
                     -5.63
                 ],
-                "day61LowUp": [
+                "day62LowUp": [
                     "61,2025-01-03",
                     -6.86,
                     "17,2024-11-01",
                     8.19,
                     -6.86
                 ],
-                "lastDay": 61
+                "lastDay": 62
             }
         },
         {
@@ -8859,14 +8859,14 @@ var triggerLogObj大宗={
                     20.71,
                     19.9
                 ],
-                "day74LowUp": [
+                "day75LowUp": [
                     "12,2024-10-08",
                     -0.87,
                     "58,2024-12-11",
                     20.71,
-                    2
+                    2.76
                 ],
-                "lastDay": 74
+                "lastDay": 75
             }
         },
         {
@@ -8934,14 +8934,14 @@ var triggerLogObj大宗={
                     20.55,
                     -11.42
                 ],
-                "day73LowUp": [
+                "day74LowUp": [
                     "60,2024-12-16",
                     -11.42,
                     "10,2024-09-30",
                     20.55,
-                    -10.45
+                    -9.86
                 ],
-                "lastDay": 73
+                "lastDay": 74
             }
         },
         {
@@ -9254,14 +9254,14 @@ var triggerLogObj大宗={
                     2.65,
                     0.84
                 ],
-                "day13LowUp": [
+                "day14LowUp": [
                     "3,2024-12-19",
                     -1.08,
-                    "13,2025-01-03",
-                    3.17,
-                    3.17
+                    "14,2025-01-06",
+                    3.58,
+                    3.58
                 ],
-                "lastDay": 13
+                "lastDay": 14
             }
         },
         {
@@ -9278,7 +9278,14 @@ var triggerLogObj大宗={
                     0.52,
                     0.52
                 ],
-                "lastDay": 10
+                "day11LowUp": [
+                    "6,2024-12-27",
+                    -2.7,
+                    "9,2025-01-02",
+                    0.52,
+                    0.44
+                ],
+                "lastDay": 11
             }
         },
         {
@@ -9288,14 +9295,14 @@ var triggerLogObj大宗={
             "trigIndex": 944,
             "trigcalType": "双周MACD-KDJ",
             "logProfileN": {
-                "day6LowUp": [
+                "day7LowUp": [
                     "6,2025-01-03",
                     -1.28,
                     "2,2024-12-27",
                     0.48,
-                    -1.28
+                    -1.16
                 ],
-                "lastDay": 6
+                "lastDay": 7
             }
         }
     ],
@@ -13484,4 +13491,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-01-03"
+var runLastKlineDate = "2025-01-06"
