@@ -1104,8 +1104,8 @@ let 股债差上证平均 = [
         4.18
     ],
     [
-        "2025-01-01",
-        4.48
+        "2025-01-08",
+        4.47
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
