@@ -741,6 +741,9 @@ var triggerLogObj美股指数 = {
     "2024-12-31": [
       "周月高位九转",
       "周月高位九转"
+    ],
+    "2025-01-08": [
+      "周月高位九转"
     ]
   },
   "日周月高位九转": [
@@ -1917,6 +1920,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2024-12-31",
       "quantName": "周月高位九转",
       "trueCount": 4
+    },
+    {
+      "trigDate": "2025-01-08",
+      "quantName": "周月高位九转",
+      "trueCount": 4
     }
   ],
   "道琼斯低位空但叉": [
@@ -2233,4 +2241,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-01-07"
+var runLastKlineDate = "2025-01-08"

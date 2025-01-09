@@ -5684,7 +5684,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-01-08"
+var runLastKlineDate = "2025-01-09"
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj指数 = triggerLogObj指数
         exports.runLastKlineDate = runLastKlineDate
