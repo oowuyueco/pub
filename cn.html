@@ -565,11 +565,50 @@
         let 下降区间ByDay = 下降区间期权策略.区间ByDay
         let 下降区间By期权日 = 下降区间期权策略.区间By期权日
 
+        function changeConsole(区间By) {
+            let result = {}
+            let allArr = []
+            function toKline(profileN) {
+                let key
+                if (profileN?.nextSecondDelivery周三) key = "nextSecondDelivery周三"
+                //else if (profileN?.nextFirstDelivery周三) key = "nextFirstDelivery周三"
+                else key = "after"
+
+                return [
+                    0,
+                    +profileN[key].high.split(",")[2],
+                    +profileN[key].low.split(",")[2],
+                    +profileN[key].close.split(",")[2],
+
+                    key == "after" ? `after${profileN.after.close.split("->")[0]}` : key,
+                    +profileN[key].close.split(",")[1],
+                ]
+            }
+            for (const [区间Date, trigDateArr] of Object.entries(区间By)) {
+                result[区间Date] = trigDateArr.map((ele, index) => {
+                    let newShowArr = []
+                    newShowArr.push(ele[0])
+                    newShowArr.push(ele[3].length)
+                    newShowArr.push(ele[4])
+                    newShowArr = newShowArr.concat(toKline(ele[2]))
+                    newShowArr.push(ele[1] + "")
+                    return newShowArr
+                })
+                allArr = allArr.concat(result[区间Date])
+            }
+            result["all"] = allArr
+                //.filter((ele, index) => { return ele.at(-1).includes("_one") })
+                .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                //.sort((a, b) => a[8] - b[8])
+
+            return result
+        }
+
         console.groupCollapsed("上升区间ByDay   上升区间By期权日")
-        console.log(上升区间ByDay, 上升区间By期权日)
+        console.log(changeConsole(上升区间ByDay), 上升区间By期权日)
         console.groupEnd()
         console.groupCollapsed("下降区间ByDay   下降区间By期权日")
-        console.log(下降区间ByDay, 下降区间By期权日)
+        console.log(changeConsole(下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
         //大宗策略
@@ -1447,6 +1486,20 @@
                                 color: "green",
                             },
                             yAxis: 5,
+                            x: "7%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.7,
+                                color: "green",
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "18低估",
+                                fontSize: "10",
+                                color: "green",
+                            },
+                            yAxis: 5.5,
                             x: "7%", //固定起点的 x 像素位置
                         },
                         ],
