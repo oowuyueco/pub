@@ -432,7 +432,6 @@
                 trig期权日Arr: trig期权日Arr
             }
         }
-
         let 指数策略高位 = 统计指数策略("高位")
         let 指数策略低位 = 统计指数策略("低位")
         let 指数策略高位ByDay = 指数策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
@@ -440,11 +439,44 @@
         let 指数策略高位By期权日 = 指数策略高位.trig期权日Arr
         let 指数策略低位By期权日 = 指数策略低位.trig期权日Arr
 
+        function changeLog(指数策略By) {
+            let resultArr = []
+            function toKline(profileN) {
+                let key
+                if (profileN?.nextSecondDelivery周三) key = "nextSecondDelivery周三"
+                //else if (profileN?.nextFirstDelivery周三) key = "nextFirstDelivery周三"
+                else key = "after"
+
+                if (!profileN[key]) return []
+                return [
+                    0,
+                    +profileN[key].high.split(",")[2],
+                    +profileN[key].low.split(",")[2],
+                    +profileN[key].close.split(",")[2],
+                    key == "after" ? `after${profileN.after.close.split("->")[0]}` : key,
+                    +profileN[key].close.split(",")[1],
+                ]
+            }
+            resultArr = 指数策略By.map((ele, index) => {
+                let newShowArr = []
+                newShowArr.push(ele[0])
+                newShowArr.push(ele[4].length)
+                newShowArr.push(ele[5])
+                newShowArr = newShowArr.concat(toKline(ele[2]))
+                newShowArr.push(ele[1] + "")
+                return newShowArr
+            })
+            .filter((ele, index) => { return ele.at(-1).includes("日周") })
+            .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+            //.sort((a, b) => a[8] - b[8])
+
+            return resultArr
+        }
         console.groupCollapsed("指数策略高位ByDay   指数策略高位By期权日")
-        console.log(指数策略高位ByDay, 指数策略高位By期权日)
+        console.log(changeLog(指数策略高位ByDay), 指数策略高位By期权日)
         console.groupEnd()
         console.groupCollapsed("指数策略低位ByDay   指数策略低位By期权日")
-        console.log(指数策略低位ByDay, 指数策略低位By期权日)
+        console.log((指数策略低位ByDay), 指数策略低位By期权日)
         console.groupEnd()
 
         //期权策略
@@ -557,7 +589,6 @@
                 区间By期权日: 区间By期权日,
             }
         }
-
         let 上升区间期权策略 = 统计区间期权策略("上升日期区间")
         let 下降区间期权策略 = 统计区间期权策略("下降日期区间")
         let 上升区间ByDay = 上升区间期权策略.区间ByDay
@@ -565,7 +596,7 @@
         let 下降区间ByDay = 下降区间期权策略.区间ByDay
         let 下降区间By期权日 = 下降区间期权策略.区间By期权日
 
-        function changeConsole(区间By) {
+        function changeLog2(区间By) {
             let result = {}
             let allArr = []
             function toKline(profileN) {
@@ -603,12 +634,11 @@
 
             return result
         }
-
         console.groupCollapsed("上升区间ByDay   上升区间By期权日")
-        console.log(changeConsole(上升区间ByDay), 上升区间By期权日)
+        console.log(changeLog2(上升区间ByDay), 上升区间By期权日)
         console.groupEnd()
         console.groupCollapsed("下降区间ByDay   下降区间By期权日")
-        console.log(changeConsole(下降区间ByDay), 下降区间By期权日)
+        console.log((下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
         //大宗策略

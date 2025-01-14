@@ -4006,6 +4006,26 @@ var triggerLogObj指数 = {
         },
         "标星": "低位★"
       }
+    ],
+    "2024-10-08": [
+      "日周高位九转:5周急涨",
+      {
+        "nextFirstDelivery周三": {
+          "close": "11->2024-10-23,-282.89,-6.65",
+          "high": ",0,0",
+          "low": "7->2024-10-17,-467.88,-10.99"
+        },
+        "nextSecondDelivery周三": {
+          "close": "36->2024-11-27,-349.06,-8.2",
+          "high": ",0,0",
+          "low": "7->2024-10-17,-467.88,-10.99"
+        },
+        "nextThirdDelivery周三": {
+          "close": "56->2024-12-25,-270.47,-6.35",
+          "high": ",0,0",
+          "low": "7->2024-10-17,-467.88,-10.99"
+        }
+      }
     ]
   },
   "恒生低位KDJ": [
@@ -5682,11 +5702,17 @@ var triggerLogObj指数 = {
       "quantName": "恒生低位低量",
       "percent": 2.63
     }
+  ],
+  "日周高位九转:5周急涨": [
+    {
+      "trigDate": "2024-10-08",
+      "quantName": "日周高位九转:5周急涨",
+      "trueCount": 4
+    }
   ]
 }
 var runLastKlineDate = "2025-01-13"
-    if (typeof module !== "undefined" && module.exports) {
-        exports.triggerLogObj指数 = triggerLogObj指数
-        exports.runLastKlineDate = runLastKlineDate
-    }
-    
+if (typeof module !== "undefined" && module.exports) {
+    exports.triggerLogObj指数 = triggerLogObj指数
+    exports.runLastKlineDate = runLastKlineDate
+}
