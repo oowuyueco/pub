@@ -1804,7 +1804,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2022-11-03=>2025-01-21": {
+    "2022-11-03=>2025-01-22": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -2033,11 +2033,15 @@ var triggerLogObj期权 = {
           "logInfo": ""
         },
         {
+          "nextFirstDelivery周三": {
+            "close": "7->2025-01-22,74.51,2",
+            "high": "6->2025-01-21,110.1,2.96",
+            "low": ",0,0"
+          },
           "after": {
-            "close": "6->2025-01-21,110.1,2.96",
+            "close": "7->2025-01-22,74.51,2",
             "high": "6->2025-01-21,110.1,2.96",
             "low": ",0,0",
-            "nextFirstDelivery周三": "2025-01-22",
             "nextSecondDelivery周三": "2025-02-26",
             "nextThirdDelivery周三": "2025-03-26"
           }
@@ -2065,11 +2069,15 @@ var triggerLogObj期权 = {
           "logInfo": ""
         },
         {
+          "nextFirstDelivery周三": {
+            "close": "6->2025-01-22,-23.52,-0.62",
+            "high": "5->2025-01-21,12.07,0.32",
+            "low": "1->2025-01-15,-24.51,-0.64"
+          },
           "after": {
-            "close": "5->2025-01-21,12.07,0.32",
+            "close": "6->2025-01-22,-23.52,-0.62",
             "high": "5->2025-01-21,12.07,0.32",
             "low": "1->2025-01-15,-24.51,-0.64",
-            "nextFirstDelivery周三": "2025-01-22",
             "nextSecondDelivery周三": "2025-02-26",
             "nextThirdDelivery周三": "2025-03-26"
           }
@@ -2092,11 +2100,15 @@ var triggerLogObj期权 = {
           "logInfo": ""
         },
         {
+          "nextFirstDelivery周三": {
+            "close": "5->2025-01-22,0.99,0.03",
+            "high": "4->2025-01-21,36.58,0.96",
+            "low": ",0,0"
+          },
           "after": {
-            "close": "4->2025-01-21,36.58,0.96",
+            "close": "5->2025-01-22,0.99,0.03",
             "high": "4->2025-01-21,36.58,0.96",
             "low": ",0,0",
-            "nextFirstDelivery周三": "2025-01-22",
             "nextSecondDelivery周三": "2025-02-26",
             "nextThirdDelivery周三": "2025-03-26"
           }
@@ -5426,4 +5438,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2025-01-21"
+var runLastKlineDate = "2025-01-22"
