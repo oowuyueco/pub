@@ -330,7 +330,7 @@
         }
 
         //指数策略
-        function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10, nextN期权周三 = "nextThirdDelivery周三") { // nextSecondDelivery周三 nextThirdDelivery周三
+        function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10, nextN期权周三 = "nextSecondDelivery周三") { // nextSecondDelivery周三 nextThirdDelivery周三
 
             let trigDateArr = Object.entries(triggerLogObj指数.按日期排序)
                 .filter((ele, index) => { return ele[1][0].includes(高低位) })
@@ -466,7 +466,7 @@
                 newShowArr.push(ele[1] + "")
                 return newShowArr
             })
-            .filter((ele, index) => { return ele.at(-1).includes("日周") })
+            //.filter((ele, index) => { return ele.at(-1).includes("日周") })
             .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
             //.sort((a, b) => a[8] - b[8])
 
@@ -476,7 +476,7 @@
         console.log(changeLog(指数策略高位ByDay), 指数策略高位By期权日)
         console.groupEnd()
         console.groupCollapsed("指数策略低位ByDay   指数策略低位By期权日")
-        console.log((指数策略低位ByDay), 指数策略低位By期权日)
+        console.log(changeLog(指数策略低位ByDay), 指数策略低位By期权日)
         console.groupEnd()
 
         //期权策略
@@ -638,7 +638,7 @@
         console.log(changeLog2(上升区间ByDay), 上升区间By期权日)
         console.groupEnd()
         console.groupCollapsed("下降区间ByDay   下降区间By期权日")
-        console.log((下降区间ByDay), 下降区间By期权日)
+        console.log(changeLog2(下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
         //大宗策略
