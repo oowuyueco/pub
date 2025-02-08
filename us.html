@@ -38,7 +38,7 @@
             if (item白糖) return [stampToDate(item原油[0]), item原油[4] / item白糖[4]]
             else return [item原油[0], ""]
         })
-       
+
 
         //美元指数同比 铜金比同比  糖油比同比 未用
         let 美元指数同比 = 美元指数Day
@@ -109,7 +109,7 @@
                 美股日期低位.push([date, trig策略s.length, trig策略s])
             }
         }
-        console.log("标普500最新日期", 标普500[标普500.length-1])
+        console.log("标普500最新日期", 标普500[标普500.length - 1])
     </script>
 
 </head>
@@ -879,15 +879,15 @@
                             {
                                 lineStyle: {
                                     width: 0.5,
-                                    color: "green",
+                                    color: "#4671c6",
                                 },
                                 label: {
-                                    formatter: "30高估",
+                                    formatter: "高位向下穿30高估",
                                     color: "red",
                                     fontSize: "10",
                                     position: "insideStartTop",
                                 },
-                                yAxis: 10, // 标线值
+                                yAxis: 30, // 标线值
                                 // x: "6.5%",
                             },
 
