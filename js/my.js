@@ -1085,7 +1085,7 @@ if (typeof module !== "undefined" && module.exports) {
     }
 
 
-    exports.sendMailDate = sendMailDate
+    //exports.sendMailDate = sendMailDate
     exports.globalConfigStartDate组1 = globalConfigStartDate组1
     exports.globalConfigStartDate组2 = globalConfigStartDate组2
     exports.globalConfigOnlySendOnTrigBuySell = globalConfigOnlySendOnTrigBuySell
