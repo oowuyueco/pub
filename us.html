@@ -559,6 +559,26 @@
                         color: "#ff5c5c" //red
 
                     },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "#ff5c5c",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "red",
+                                    fontSize: "10",
+                                    position: "insideStartTop",
+                                },
+                                yAxis: 2.5, // 标线值
+                                // x: "6.5%",
+                            },
+
+                        ],
+                    },
                     data: Cpi.addStartEnd()
                 },
                 {
@@ -873,26 +893,26 @@
                         color: "#4671c6" //blue
                     },
                     zlevel: 12,
-                    markLine: {
-                        symbol: ["none", "none"],
-                        data: [
-                            {
-                                lineStyle: {
-                                    width: 0.5,
-                                    color: "#4671c6",
-                                },
-                                label: {
-                                    formatter: "高位向下穿30高估",
-                                    color: "red",
-                                    fontSize: "10",
-                                    position: "insideStartTop",
-                                },
-                                yAxis: 30, // 标线值
-                                // x: "6.5%",
-                            },
+                    // markLine: {
+                    //     symbol: ["none", "none"],
+                    //     data: [
+                    //         {
+                    //             lineStyle: {
+                    //                 width: 0.5,
+                    //                 color: "#4671c6",
+                    //             },
+                    //             label: {
+                    //                 formatter: "高位向下穿30高估",
+                    //                 color: "red",
+                    //                 fontSize: "10",
+                    //                 position: "insideStartTop",
+                    //             },
+                    //             yAxis: 30, // 标线值
+                    //             // x: "6.5%",
+                    //         },
 
-                        ],
-                    },
+                    //     ],
+                    // },
                     data: 全球股市大于200日均线比例Day.chartDataMaN(5).addStartEnd()
 
                 },

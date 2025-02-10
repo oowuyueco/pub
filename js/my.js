@@ -867,13 +867,13 @@ if (typeof module !== "undefined" && module.exports) {
     const os = require('os');
     const nodemailer = require("nodemailer");
 
-    const sendMailDate = "五天之内" //最后一个log发送邮件
+
     const globalConfigStartDate组1 = "2024-01-01"
     const globalConfigStartDate组2 = "2024-01-01"
     const globalConfigOnlySendOnTrigBuySell = true ////单个策略 false每天发送,true只有触发买卖才发送邮件
     const devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
 
-    function isSendMail(trigDate) {
+    function isSendMail(trigDate, sendMailDate = "五天之内") { //发送邮件周期！！！！！
         if (sendMailDate == "五天之内") {
             return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 5 * 86400000
         }
@@ -1123,4 +1123,7 @@ if (typeof module !== "undefined" && module.exports) {
     exports.getDateTime = getDateTime
     exports.getDateTimeByZone = getDateTimeByZone
     exports.getRandom登陆名 = getRandom登陆名
+
+    exports.myjscurrentDayYMD = currentDayYMD
+
 } 

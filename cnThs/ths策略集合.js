@@ -93,73 +93,6 @@ var 策略集合 = {
     ],
     同花顺策略组2A: [
         {
-            name: "月周macd1",
-            query: `最近3天月线周期macd金叉；周线周期macd底背离； 最近10日周kdj金叉且j值小于79，  最近10日日kdj金叉且d值小于39 ，0<pe<=120；pb>0;  排除st；roe从大到小
-            `,
-            daysForSaleStrategy: "35",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 13,
-            fallIncome: 1.3,
-            lowerIncome: 12,
-            stats: "策略回测"
-        },
-
-        {
-            name: "月周macd2",
-            query: `最近3天月线周期macd金叉；周线周期macd底背离； 周kdjj值小于75大于5，周kdj上移，最近10日日kdj金叉且d值小于39， 0<pe<=120；pb>0;  排除st；roe从大到小
-            `,
-            daysForSaleStrategy: "35",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 13,
-            fallIncome: 1.3,
-            lowerIncome: 12,
-            stats: "策略回测"
-        },
-
-        {
-            name: "大市值趋势",
-            query: `市值大于1000亿，非科创板，非创业板，同花顺二级行业龙头，细分行业龙头，过去3年的基本每股收益增长率>3%，过去30个交易日涨跌幅大于-5%小于23，
-                    振幅小于8，股性评分大于12，上市日期从大到小排名， 总市值从小到大排列
-            `,
-            daysForSaleStrategy: "30",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 30,
-            fallIncome: 7,
-            lowerIncome: 11,
-            stats: "策略回测"
-        },
-
-        {
-            name: "小市值低估",
-            query: `总市值大于等于10亿小于等于20亿； 0<pb<=2.5；0<=pe<=25；股息大于0； BIAS买入信号；放量；振幅小于10； 排除st；上市天数>100； 换手率从大到小排列   
-            `,
-            daysForSaleStrategy: "50",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 17,
-            fallIncome: 5,
-            lowerIncome: 12,
-            stats: "策略回测"
-        },
-
-        {
-            name: "大股东增持",
-            query: `今日大股东增持比例大于5%；sar红色；cci小于等于107；资金流入大于-150万；涨跌幅-5~5；排除st；上市天数>100；换手率从大到小 
-            `,
-            daysForSaleStrategy: "20",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 17,
-            fallIncome: 5,
-            lowerIncome: 10.5,
-            stats: "策略回测"
-        },
-    ],
-    同花顺策略组2B: [
-        {
             name: "业绩预增menv",
             query: `业绩预增大于50%，年报收入同比增长大于10，最近10日放量，量比大于1，最近10日振幅大于10小于35，非ST股，非*ST股，非退市，非停牌，总市值从小到大排列
             `,
@@ -171,6 +104,18 @@ var 策略集合 = {
             lowerIncome: 15,
             buyPosition: 0,
             menv: "kdj1",
+            stats: "策略回测"
+        },
+        {
+            name: "大股东增持",
+            query: `今日大股东增持比例大于5%；sar红色；cci小于等于107；资金流入大于-150万；涨跌幅-5~5；排除st；上市天数>100；换手率从大到小 
+            `,
+            daysForSaleStrategy: "20",
+            stockHoldCount: 1,
+            dayBuyStockNum: 1,
+            upperIncome: 17,
+            fallIncome: 5,
+            lowerIncome: 10.5,
             stats: "策略回测"
         },
 
@@ -232,7 +177,57 @@ var 策略集合 = {
             stats: "策略回测"
         },
     ],
-    同花顺策略组2C: [
+    同花顺策略组2B: [
+        {
+            name: "小市值低估",
+            query: `总市值大于等于10亿小于等于20亿； 0<pb<=2.5；0<=pe<=25；股息大于0； BIAS买入信号；放量；振幅小于10； 排除st；上市天数>100； 换手率从大到小排列   
+            `,
+            daysForSaleStrategy: "50",
+            stockHoldCount: 1,
+            dayBuyStockNum: 1,
+            upperIncome: 17,
+            fallIncome: 5,
+            lowerIncome: 12,
+            stats: "策略回测"
+        },
+        {
+            name: "大市值趋势",
+            query: `市值大于1000亿，非科创板，非创业板，同花顺二级行业龙头，细分行业龙头，过去3年的基本每股收益增长率>3%，过去30个交易日涨跌幅大于-5%小于23，
+                    振幅小于8，股性评分大于12，上市日期从大到小排名， 总市值从小到大排列
+            `,
+            daysForSaleStrategy: "30",
+            stockHoldCount: 1,
+            dayBuyStockNum: 1,
+            upperIncome: 30,
+            fallIncome: 7,
+            lowerIncome: 11,
+            stats: "策略回测"
+        },
+        {
+            name: "月周macd1",
+            query: `最近3天月线周期macd金叉；周线周期macd底背离； 最近10日周kdj金叉且j值小于79，  最近10日日kdj金叉且d值小于39 ，0<pe<=120；pb>0;  排除st；roe从大到小
+            `,
+            daysForSaleStrategy: "35",
+            stockHoldCount: 1,
+            dayBuyStockNum: 1,
+            upperIncome: 13,
+            fallIncome: 1.3,
+            lowerIncome: 12,
+            stats: "策略回测"
+        },
+        {
+            name: "月周macd2",
+            query: `最近3天月线周期macd金叉；周线周期macd底背离； 周kdjj值小于75大于5，周kdj上移，最近10日日kdj金叉且d值小于39， 0<pe<=120；pb>0;  排除st；roe从大到小
+            `,
+            daysForSaleStrategy: "35",
+            stockHoldCount: 1,
+            dayBuyStockNum: 1,
+            upperIncome: 13,
+            fallIncome: 1.3,
+            lowerIncome: 12,
+            stats: "策略回测"
+        },
+
         {
             name: "近五日跌停",
             query: `市值小于100亿，最近5日有跌停，换手率小于1.2%，当日涨跌幅小于-1大于-3.5，当日阳线，流动比率大于1，扣非净利润增速大于0.1， 负债率小于90，pb>0，0<pe<=120，
@@ -261,44 +256,8 @@ var 策略集合 = {
             stats: "策略回测"
         },
 
-        {
-            name: "国企低pe高股息",
-            query: `国企，社保持仓，上市1年以上，0<市盈率<11倍，市净率小于2.1，平均股息率大于3%，流动比率大于1，盈利连续增长，最近3年投资性现金流小于0，股价小于20，实际换手率大于1，月macd上移，股息率从大到小 `,
-            daysForSaleStrategy: "10",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 15,
-            fallIncome: 5,
-            lowerIncome: 7,
-            stats: "策略回测"
-        },
+    ],
 
-        {
-            name: "macd底背七日",
-            query: `macd底背离，VR买入信号，成交量大于60日线，前10日的区间主力资金流向>0，流动比率大于1，涨跌幅大于1.5，roe从大到小`,
-            daysForSaleStrategy: "7",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 13,
-            fallIncome: 3,
-            lowerIncome: 10,
-            stats: "策略回测"
-        },
-
-        {
-            name: "六均线两日",
-            query: `行情收盘价>6日的均线，收盘价>昨日的最高价，当日阳线，昨日的macd增长值<0，当日的macd增长值>0，最近7日放量，量比大于1，前7日的区间主力资金流向>0，17>pb>0`,
-            daysForSaleStrategy: "2",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 30,
-            fallIncome: 9,
-            lowerIncome: 13.5,
-            stats: "策略回测"
-        },
-
-   
-    ]
 }
 
 exports.策略集合 = 策略集合
