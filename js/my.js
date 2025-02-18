@@ -877,6 +877,9 @@ if (typeof module !== "undefined" && module.exports) {
         if (sendMailDate == "五天之内") {
             return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 5 * 86400000
         }
+        if (sendMailDate == "三天之内") {
+            return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 3 * 86400000
+        }
 
         if (sendMailDate == "curWeek-email") {
             return getDateInWeekDay(trigDate, 7) == getDateInWeekDay(currentDayYMD, 7)
