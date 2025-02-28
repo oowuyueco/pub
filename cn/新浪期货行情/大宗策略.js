@@ -7446,14 +7446,14 @@ var triggerLogObj大宗={
                     8.19,
                     -5.63
                 ],
-                "day94LowUp": [
+                "day95LowUp": [
                     "65,2025-01-09",
                     -7.06,
                     "17,2024-11-01",
                     8.19,
-                    -3.84
+                    -4.55
                 ],
-                "lastDay": 94
+                "lastDay": 95
             }
         },
         {
@@ -9259,14 +9259,14 @@ var triggerLogObj大宗={
                     8.33,
                     8.01
                 ],
-                "day46LowUp": [
+                "day47LowUp": [
                     "3,2024-12-19",
                     -1.08,
                     "22,2025-01-16",
                     10.43,
-                    2.42
+                    2.15
                 ],
-                "lastDay": 46
+                "lastDay": 47
             }
         },
         {
@@ -9290,14 +9290,14 @@ var triggerLogObj大宗={
                     6.7,
                     5.97
                 ],
-                "day43LowUp": [
+                "day44LowUp": [
                     "6,2024-12-27",
                     -2.7,
                     "19,2025-01-16",
                     6.7,
                     0.81
                 ],
-                "lastDay": 43
+                "lastDay": 44
             }
         },
         {
@@ -9321,14 +9321,14 @@ var triggerLogObj大宗={
                     2.49,
                     0.5
                 ],
-                "day39LowUp": [
+                "day40LowUp": [
                     "10,2025-01-09",
                     -1.81,
                     "35,2025-02-21",
                     4.08,
-                    3.78
+                    3.38
                 ],
-                "lastDay": 39
+                "lastDay": 40
             }
         }
     ],
@@ -13517,4 +13517,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-02-27"
+var runLastKlineDate = "2025-02-28"
