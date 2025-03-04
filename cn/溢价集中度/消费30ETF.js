@@ -51732,6 +51732,25 @@ var dailyDatas消费30ETF = [
             0.0163,
             0.0432
         ]
+    },
+    {
+        "date": "2025-03-04",
+        "open": 0.923,
+        "high": 0.923,
+        "low": 0.911,
+        "close": 0.918,
+        "volume": 370130,
+        "hsl": 6.74,
+        "zf": 1.3,
+        "percent": -0.54,
+        "timestamp": "",
+        "disRate": -0.13,
+        "CYQ": [
+            0.3517,
+            0.92,
+            0.0163,
+            0.0376
+        ]
     }
 ]
 var weeklyDatas消费30ETF = [
@@ -62648,15 +62667,15 @@ var weeklyDatas消费30ETF = [
         "open": 0.941,
         "high": 0.945,
         "low": 0.911,
-        "close": 0.915,
-        "volume": 882958,
-        "hsl": 16.07,
+        "close": 0.918,
+        "volume": 926632,
+        "hsl": 16.87,
         "zf": 3.61,
-        "percent": -2.76,
+        "percent": -2.44,
         "timestamp": "",
-        "disRate": -0.1,
+        "disRate": -0.13,
         "CYQ": [
-            0.3569,
+            0.3527,
             0.92,
             0.0163,
             0.0324
@@ -65225,15 +65244,15 @@ var monthlyDatas消费30ETF = [
         "open": 0.941,
         "high": 0.945,
         "low": 0.911,
-        "close": 0.915,
-        "volume": 882958,
-        "hsl": 16.07,
+        "close": 0.918,
+        "volume": 926632,
+        "hsl": 16.87,
         "zf": 3.61,
-        "percent": -2.76,
+        "percent": -2.44,
         "timestamp": "",
-        "disRate": -0.1,
+        "disRate": -0.13,
         "CYQ": [
-            0.4017,
+            0.3971,
             0.92,
             0.0164,
             0.0274
