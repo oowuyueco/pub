@@ -712,10 +712,16 @@ Array.prototype.mapCYQCalculator = function () {
     let dataList = this;
     dataList = dataList.map((data, index) => {
         let CYQ = myCYQCalculator(dataList, index);
-        delete CYQ.x;
-        delete CYQ.y;
-        data.CYQ = CYQ
+        // delete CYQ.x;
+        // delete CYQ.y;
+        // data.CYQ = CYQ
         // data.benfPart = +CYQ.benefitPart.toFixed(4)
+        data.CYQ = [
+            +CYQ.benefitPart.toFixed(4),
+            +CYQ.avgCost,
+            +CYQ.percentChips["70"].concentration.toFixed(4),
+            +CYQ.percentChips["90"].concentration.toFixed(4),
+        ]
         return data;
     });
     return dataList;
@@ -1335,6 +1341,6 @@ if (typeof module !== "undefined" && module.exports) {
 
     exports.myjscurrentDayYMD = currentDayYMD
     exports.myCYQCalculator = myCYQCalculator
-    
+
 
 } 

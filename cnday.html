@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="./js/echarts.min.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
+    <script type="text/javascript" src="./cn/溢价集中度/沪深300ETF.js"></script>
+    <script type="text/javascript" src="./cn/沪深300同比,上证同比.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
     <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
     <script type="text/javascript" src="./cn/M1,M1_M2.js"></script>
@@ -902,6 +904,8 @@
 
             series: [
 
+
+
                 {
                     name: "ppi",
                     type: "line",
@@ -1135,6 +1139,46 @@
                     data: 信贷脉冲_MA.filterAndAddStartEnd()
                 },
 
+
+                {
+                    name: "获利比例",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.9,
+                    },
+                    data: weeklyDatas沪深300ETF.map((item, index) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item?.CYQ[0] ? item?.CYQ[0] : ""
+                        return tmp
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: "折价率",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.9,
+                    },
+                    data: 沪深300同比.filter(item => {
+                        return parseFloat(item[0].substring(0, 4)) >= 2008
+                    }).filterAndAddStartEnd()
+                    ////先用同比
+                    // data: weeklyDatas沪深300ETF.map((item, index) => {
+                    //     let tmp = []
+                    //     tmp[0] = item.date
+                    //     tmp[1] = item?.disRate ? item?.disRate : ""
+                    //     return tmp
+                    // }).filterAndAddStartEnd()
+                },
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 {
                     name: '大宗高位KDJ',
@@ -2035,6 +2079,7 @@
                 option.yAxis[0].min = -18
                 params.selected.ppi = false
                 params.selected.油糖比 = false
+                params.selected.获利比例 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2044,6 +2089,7 @@
                 params.selected.油糖比 = false
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
+                params.selected.获利比例 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2051,6 +2097,17 @@
                 option.yAxis[0].max = 10
                 option.yAxis[0].min = 0
                 params.selected.ppi = false
+                params.selected.金融脉动增速us = false
+                params.selected.中美汇 = false
+                params.selected.获利比例 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+            if (params.name === "获利比例" && params.selected["获利比例"] === true) {
+                option.yAxis[0].max = 1
+                option.yAxis[0].min = 0
+                params.selected.ppi = false
+                params.selected.油糖比 = false
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
                 option.legend.selected = params.selected
@@ -2067,6 +2124,7 @@
                 option.yAxis[1].min = 20
                 params.selected.pmi = false
                 params.selected.油糖比 = false
+                params.selected.折价率 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2076,6 +2134,7 @@
                 params.selected.铜金比 = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
+                params.selected.折价率 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2085,9 +2144,21 @@
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
+                params.selected.折价率 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
+            if (params.name === "折价率" && params.selected["折价率"] === true) {
+                option.yAxis[1].max = 70
+                option.yAxis[1].min = -50
+                params.selected.pmi = false
+                params.selected.信贷脉冲 = false
+                params.selected.信贷脉冲_MA = false
+                params.selected.铜金比 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+
 
 
             if (params.name === "关闭股票策略" && params.selected["关闭股票策略"] === false) {
@@ -2166,6 +2237,18 @@
                 type: 'legendToggleSelect',
                 name: "pmi"
             })
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "获利比例"
+            })
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "折价率"
+            })
+
+
+
 
         }, "1")
     </script>
