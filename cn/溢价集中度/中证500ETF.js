@@ -52327,6 +52327,25 @@ var dailyDatas中证500ETF = [
             0.0411,
             0.0647
         ]
+    },
+    {
+        "date": "2025-03-05",
+        "open": 5.932,
+        "high": 5.954,
+        "low": 5.881,
+        "close": 5.944,
+        "volume": 2454551,
+        "hsl": 1.5,
+        "zf": 1.23,
+        "percent": 0.25,
+        "timestamp": "",
+        "disRate": 0.09,
+        "CYQ": [
+            0.7547,
+            5.86,
+            0.0411,
+            0.0647
+        ]
     }
 ]
 var weeklyDatas中证500ETF = [
@@ -63383,21 +63402,21 @@ var weeklyDatas中证500ETF = [
         ]
     },
     {
-        "date": "2025-03-04",
+        "date": "2025-03-05",
         "open": 5.867,
         "high": 5.964,
         "low": 5.832,
-        "close": 5.929,
-        "volume": 4799847,
-        "hsl": 2.93,
+        "close": 5.944,
+        "volume": 7254398,
+        "hsl": 4.43,
         "zf": 2.25,
-        "percent": 1.06,
+        "percent": 1.31,
         "timestamp": "",
-        "disRate": 0.03,
+        "disRate": 0.09,
         "CYQ": [
-            0.7342,
+            0.7383,
             5.86,
-            0.0414,
+            0.0367,
             0.0598
         ]
     }
@@ -65996,19 +66015,19 @@ var monthlyDatas中证500ETF = [
         ]
     },
     {
-        "date": "2025-03-04",
+        "date": "2025-03-05",
         "open": 5.867,
         "high": 5.964,
         "low": 5.832,
-        "close": 5.929,
-        "volume": 4799847,
-        "hsl": 2.93,
+        "close": 5.944,
+        "volume": 7254398,
+        "hsl": 4.43,
         "zf": 2.25,
-        "percent": 1.06,
+        "percent": 1.31,
         "timestamp": "",
-        "disRate": 0.03,
+        "disRate": 0.09,
         "CYQ": [
-            0.7887,
+            0.7925,
             5.81,
             0.0367,
             0.0593
