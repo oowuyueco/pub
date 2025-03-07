@@ -55911,6 +55911,25 @@ var dailyDatas沪深300ETF = [
             0.0293,
             0.1031
         ]
+    },
+    {
+        "date": "2025-03-07",
+        "open": 4.04,
+        "high": 4.061,
+        "low": 4.03,
+        "close": 4.039,
+        "volume": 11559971,
+        "hsl": 1.34,
+        "zf": 0.77,
+        "percent": -0.25,
+        "timestamp": "",
+        "disRate": 0.07,
+        "CYQ": [
+            0.6169,
+            4.01,
+            0.0293,
+            0.0997
+        ]
     }
 ]
 var weeklyDatas沪深300ETF = [
@@ -67669,19 +67688,19 @@ var weeklyDatas沪深300ETF = [
         ]
     },
     {
-        "date": "2025-03-06",
+        "date": "2025-03-07",
         "open": 3.995,
         "high": 4.062,
         "low": 3.952,
-        "close": 4.049,
-        "volume": 47208629,
-        "hsl": 5.47,
+        "close": 4.039,
+        "volume": 58768600,
+        "hsl": 6.8,
         "zf": 2.75,
-        "percent": 1.38,
+        "percent": 1.13,
         "timestamp": "",
-        "disRate": -0.05,
+        "disRate": 0.07,
         "CYQ": [
-            0.7815,
+            0.6166,
             4.01,
             0.0293,
             0.0989
@@ -70462,19 +70481,19 @@ var monthlyDatas沪深300ETF = [
         ]
     },
     {
-        "date": "2025-03-06",
+        "date": "2025-03-07",
         "open": 3.995,
         "high": 4.062,
         "low": 3.952,
-        "close": 4.049,
-        "volume": 47208629,
-        "hsl": 5.47,
+        "close": 4.039,
+        "volume": 58768600,
+        "hsl": 6.8,
         "zf": 2.75,
-        "percent": 1.38,
+        "percent": 1.13,
         "timestamp": "",
-        "disRate": -0.05,
+        "disRate": 0.07,
         "CYQ": [
-            0.687,
+            0.5818,
             4.01,
             0.0289,
             0.088
