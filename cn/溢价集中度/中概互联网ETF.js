@@ -35554,6 +35554,24 @@ var dailyDatas中概互联网ETF = [
             0.0453,
             0.1219
         ]
+    },
+    {
+        "date": "2025-03-07",
+        "open": 1.565,
+        "high": 1.611,
+        "low": 1.552,
+        "close": 1.566,
+        "volume": 43438319,
+        "hsl": 17.26,
+        "zf": 3.75,
+        "percent": -0.51,
+        "timestamp": "",
+        "CYQ": [
+            0.8733,
+            1.47,
+            0.0453,
+            0.1219
+        ]
     }
 ]
 var weeklyDatas中概互联网ETF = [
@@ -43038,7 +43056,6 @@ var weeklyDatas中概互联网ETF = [
         "zf": 14.68,
         "percent": 9.97,
         "timestamp": "",
-        "disRate": -0.2,
         "CYQ": [
             0.9491,
             1.49,
@@ -44823,7 +44840,6 @@ var monthlyDatas中概互联网ETF = [
         "zf": 14.68,
         "percent": 9.97,
         "timestamp": "",
-        "disRate": -0.2,
         "CYQ": [
             0.949,
             1.48,
