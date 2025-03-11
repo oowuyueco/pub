@@ -91,17 +91,17 @@ var 策略集合 = {
             stats: "策略回测"
         },
 
-        {
-            name: "六均线两日测试",
-            query: `行情收盘价>6日的均线，收盘价>昨日的最高价，当日阳线，昨日的macd增长值<0，当日的macd增长值>0，最近7日放量，量比大于1，前7日的区间主力资金流向>0，17>pb>0`,
-            daysForSaleStrategy: "2",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 30,
-            fallIncome: 9,
-            lowerIncome: 13.5,
-            stats: "策略回测"
-        },
+        // {
+        //     name: "六均线两日测试",
+        //     query: `行情收盘价>6日的均线，收盘价>昨日的最高价，当日阳线，昨日的macd增长值<0，当日的macd增长值>0，最近7日放量，量比大于1，前7日的区间主力资金流向>0，17>pb>0`,
+        //     daysForSaleStrategy: "2",
+        //     stockHoldCount: 1,
+        //     dayBuyStockNum: 1,
+        //     upperIncome: 30,
+        //     fallIncome: 9,
+        //     lowerIncome: 13.5,
+        //     stats: "策略回测"
+        // },
 
 
     ],

@@ -13,6 +13,7 @@
     <script type="text/javascript" src="./cn/信贷脉冲,房价同比.js"></script>
     <script type="text/javascript" src="./us/中美利差Day,中美汇率Day.js"></script>
     <script type="text/javascript" src="./us/PMI_ISM,金融脉动增速.js"></script>
+    <script type="text/javascript" src="./us/bdi.js"></script>
 
     <script type="text/javascript" src="./us/us原油.js "></script>
     <script type="text/javascript" src="./us/us白糖.js "></script>
@@ -76,66 +77,15 @@
             return true //parseFloat(item[0].substring(0, 4)) >= 2008
         })
 
-        let 中美汇率Day同比 = 中美汇率Day
-            .filter((ele, index, datasArr) => {
-                return true
-
-                // var d = new Date(ele[0])
-                // var n = d.getDay()
-                // if(n==5) return true //周5
-                // if(datasArr.length-1 == index) return true
-
-                // currentMonth = ele[0].substring(5, 7)//月最后一天
-                // if (index < datasArr.length - 1) {
-                //     nextMonth = datasArr[index + 1][0].substring(5, 7)
-                //     return currentMonth != nextMonth
-                // } else {
-                //     return true
-                // }
-            })
-            .map((ele, index, datasArr) => { // yoY 同比
-                let preYearMonthDay = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
-                let preItem = datasArr.find(element => {
-                    return element[0] == preYearMonthDay
-                })
-                if (!preItem) { //去原始数据找
-                    let currentDayInt = parseInt(ele[0].substring(8, 10))
-                    let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
-                    let n = 3
-                    while (-5 < n) { //向前查找
-                        let dayInt = currentDayInt + n
-                        let dayStr = dayInt >= 10 ? '' + dayInt : "0" + dayInt
-                        let preYearMonthDay = '' + preYearMonth + "-" + dayStr
-                        preItem = datasArr.find(element => {
-                            return element[0] == preYearMonthDay
-                        })
-                        if (preItem) break
-                        n--
-                    }
-                }
-                let yoY = ""
-                if (preItem) {
-                    preItem[1] = parseFloat(preItem[1])
-                    ele[1] = parseFloat(ele[1])
-                    yoY = preItem[1] ? ((ele[1] - preItem[1]) / preItem[1]) * 100 : ""
-                }
-                return [ele[0], yoY]
-            })
-            .map((item, index, datasArr) => {
-                if (item[1] !== "") item[1] = -item[1]
-                return item
-                // ??????
-                // if (index < datasArr.length - 1) {
-                //     item[0] = item[0]
-                //     item[1] = -item[1]
-                // }
-            })
-
-        //中美汇率Day同比 = 中美汇率Day同比.chartDataMaN(4)
-        //console.log("中美汇率Day同比", 中美汇率Day同比)
-
         let 信贷脉冲_MA = 信贷脉冲.chartDataMaN(4)
-        //console.log(信贷脉冲_MA,信贷脉冲)
+        let 中美汇率Day同比 = 中美汇率Day.chartDataYoY("day").map((item, index, datasArr) => {
+            if (item[1] !== "") item[1] = -item[1] //仅仅为了展示方便
+            return item
+        })
+
+        //https://sc.macromicro.me/charts/893/commodity-bdi
+        let bdiM = bdi.chartDataDayFilterToPeriod()
+        let bdi同比 = bdiM.chartDataYoY("month")
 
     </script>
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
@@ -927,12 +877,25 @@
                     smooth: true,
                     lineStyle: {
                         width: 1,
-                        color: "gray"
+                        color: "red"
                     },
                     data: cn_pmi_平均.map(v => {
-                        v[1] = parseFloat(v[1]) * 10
+                        v[1] = parseFloat(v[1]) * 100
                         return v
                     }).filterAndAddStartEnd(),
+                },
+                {
+                    name: 'bdi',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "gray"
+                    },
+                    data: bdi同比.filterAndAddStartEnd()
                 },
 
                 {
@@ -2129,8 +2092,8 @@
                 myChart.setOption(option)
             }
             if (params.name === "pmi" && params.selected["pmi"] === true) {
-                option.yAxis[1].max = 50
-                option.yAxis[1].min = -25
+                option.yAxis[1].max = 250
+                option.yAxis[1].min = -155
                 params.selected.铜金比 = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
@@ -2245,6 +2208,12 @@
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "折价率"
+            })
+
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "bdi"
             })
 
 

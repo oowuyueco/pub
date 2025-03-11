@@ -413,7 +413,7 @@ Array.prototype.xueqiuData2Obj = function (period = "day") {
     return dataList
 }
 
-Array.prototype.objYoY = function (period = "day") {
+Array.prototype.kLineObjYoY = function (period = "day") {
     let dataList = this
     dataList = dataList.map((ele, index, dataList) => {
 
@@ -478,6 +478,83 @@ Array.prototype.chartDataMaN = function (MA, dataIndex = 1) {
         copyItem[1] = avg
         return copyItem
     })
+    return dataList
+}
+Array.prototype.chartDataDayFilterToPeriod = function (toPeriod = "month") {
+    let dataList = this
+
+    if (toPeriod == "week") {
+        dataList = dataList.filter((ele, index, datasArr) => {
+            var d = new Date(ele[0])
+            var n = d.getDay()
+            if (n == 5) return true //周5
+            if (datasArr.length - 1 == index) return true  //保留最后一天
+        })
+    }
+    else if (toPeriod == "month") {
+        dataList = dataList.filter((ele, index, datasArr) => {
+            currentMonth = ele[0].substring(5, 7)//月最后一天
+            if (index < datasArr.length - 1) {
+                let nextMonth = datasArr[index + 1][0].substring(5, 7)
+                return currentMonth != nextMonth
+            } else {
+                return true  //保留最后一天
+            }
+        })
+    }
+
+    return dataList
+}
+Array.prototype.chartDataYoY = function (dataPeriod = "month") {
+    let dataList = this
+
+    if (dataPeriod == "day" || dataPeriod == "week")
+        dataList = dataList.map((ele, index, datasArr) => { // yoY 同比
+            let preYearMonthDay = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 10)
+            let preItem = datasArr.find(element => {
+                return element[0] == preYearMonthDay
+            })
+            if (!preItem) { //去原始数据找
+                let currentDayInt = parseInt(ele[0].substring(8, 10))
+                let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
+                let n = 3
+                while (-5 < n) { //向前查找
+                    let dayInt = currentDayInt + n
+                    let dayStr = dayInt >= 10 ? '' + dayInt : "0" + dayInt
+                    let preYearMonthDay = '' + preYearMonth + "-" + dayStr
+                    preItem = datasArr.find(element => {
+                        return element[0] == preYearMonthDay
+                    })
+                    if (preItem) break
+                    n--
+                }
+            }
+            let yoY = ""
+            if (preItem) {
+                preItem[1] = parseFloat(preItem[1])
+                ele[1] = parseFloat(ele[1])
+                yoY = preItem[1] ? ((ele[1] - preItem[1]) / preItem[1]) * 100 : ""
+            }
+            return [ele[0], yoY]
+        })
+
+    if (dataPeriod == "month")
+        dataList = dataList.map((ele, index, datasArr) => { // yoY 同比
+            let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
+            console.log(preYearMonth)
+            let preItem = datasArr.find(element => {
+                return element[0].substring(0, 7) == preYearMonth
+            })
+            let yoY = ""
+            if (preItem) {
+                preItem[1] = parseFloat(preItem[1])
+                ele[1] = parseFloat(ele[1])
+                yoY = preItem[1] ? ((ele[1] - preItem[1]) / preItem[1]) * 100 : ""
+            }
+            return [ele[0], yoY]
+        })
+
+
     return dataList
 }
 
