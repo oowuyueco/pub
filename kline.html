@@ -51,6 +51,10 @@
     <div id="chartWeek" style="height:80%"></div>
     <div id="chartMonth" style="height:80%"></div>
 
+    <!-- <div id="chartDay" style="height:20%"></div>
+    <div id="chartWeek" style="height:40%"></div>
+    <div id="chartMonth" style="height:40%"></div> -->
+
     <script>
         let chartDay = klinecharts.init('chartDay')
         let chartWeek = klinecharts.init('chartWeek')
@@ -72,7 +76,7 @@
         checkOrTryHttp(dataName, site, () => {
             //统一数据
             let dayDatas = window[dataName]
-            if (site == "sina"||site == "sinaF") {
+            if (site == "sina" || site == "sinaF") {
                 if (!dayDatas[0]?.timestamp)
                     dayDatas = dayDatas.map(function (data) {
                         data.timestamp = new Date(data.date).getTime()
@@ -372,6 +376,12 @@
             let monthNewMa10 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let monthNew9转 = chartMonth.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+
+
+
+            // chartDay.createIndicator({ name: "MA", calcParams: [20], }, true, { id: 'candle_pane' })
+            // chartWeek.createIndicator({ name: "MA", calcParams: [20], }, true, { id: 'candle_pane' })
+            // chartMonth.createIndicator({ name: "MA", calcParams: [40, 80], }, true, { id: 'candle_pane' })
 
 
             document.addEventListener("keydown", function (event) {
