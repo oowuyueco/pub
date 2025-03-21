@@ -611,6 +611,9 @@ var triggerLogObj大宗={
         ],
         "2024-12-25": [
             "低位九转_双周MACD-KDJ_花生连续"
+        ],
+        "2025-03-21": [
+            "低位低量_焦炭连续"
         ]
     },
     "高位KDJ": [
@@ -9265,14 +9268,14 @@ var triggerLogObj大宗={
                     10.43,
                     -1.25
                 ],
-                "day61LowUp": [
+                "day62LowUp": [
                     "55,2025-03-12",
                     -3.93,
                     "22,2025-01-16",
                     10.43,
-                    -0.32
+                    -0.12
                 ],
-                "lastDay": 61
+                "lastDay": 62
             }
         },
         {
@@ -9296,14 +9299,14 @@ var triggerLogObj大宗={
                     6.7,
                     5.97
                 ],
-                "day58LowUp": [
+                "day59LowUp": [
                     "52,2025-03-12",
                     -4.72,
                     "19,2025-01-16",
                     6.7,
-                    -1.98
+                    -1.53
                 ],
-                "lastDay": 58
+                "lastDay": 59
             }
         },
         {
@@ -9327,14 +9330,14 @@ var triggerLogObj大宗={
                     2.49,
                     0.5
                 ],
-                "day54LowUp": [
+                "day55LowUp": [
                     "10,2025-01-09",
                     -1.81,
                     "50,2025-03-14",
                     4.51,
-                    2.44
+                    2.72
                 ],
-                "lastDay": 54
+                "lastDay": 55
             }
         }
     ],
@@ -11998,6 +12001,24 @@ var triggerLogObj大宗={
                     44.95
                 ]
             }
+        },
+        {
+            "dataName": "焦炭连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-03-21",
+            "trigAtIndex": 3381,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
         }
     ],
     "高位低量": [
@@ -13523,4 +13544,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-03-20"
+var runLastKlineDate = "2025-03-21"
