@@ -35685,6 +35685,25 @@ var dailyDatas中概互联网ETF = [
             0.0362,
             0.0531
         ]
+    },
+    {
+        "date": "2025-03-21",
+        "open": 1.527,
+        "high": 1.545,
+        "low": 1.493,
+        "close": 1.504,
+        "volume": 35414572,
+        "hsl": 13.71,
+        "zf": 3.4,
+        "percent": -1.76,
+        "timestamp": "",
+        "disRate": 1.46,
+        "CYQ": [
+            0.3437,
+            1.53,
+            0.0362,
+            0.0531
+        ]
     }
 ]
 var weeklyDatas中概互联网ETF = [

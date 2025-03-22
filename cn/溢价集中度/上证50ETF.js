@@ -87857,6 +87857,25 @@ var dailyDatas上证50ETF = [
             0.025,
             0.0782
         ]
+    },
+    {
+        "date": "2025-03-21",
+        "open": 2.772,
+        "high": 2.782,
+        "low": 2.726,
+        "close": 2.734,
+        "volume": 10133600,
+        "hsl": 1.9,
+        "zf": 2.02,
+        "percent": -1.62,
+        "timestamp": "",
+        "disRate": 0.11,
+        "CYQ": [
+            0.673,
+            2.72,
+            0.025,
+            0.0782
+        ]
     }
 ]
 var weeklyDatas上证50ETF = [

@@ -56061,6 +56061,25 @@ var dailyDatas沪深300ETF = [
             0.0256,
             0.0913
         ]
+    },
+    {
+        "date": "2025-03-21",
+        "open": 4.063,
+        "high": 4.079,
+        "low": 4,
+        "close": 4.01,
+        "volume": 10149157,
+        "hsl": 1.19,
+        "zf": 1.94,
+        "percent": -1.62,
+        "timestamp": "",
+        "disRate": 0.04,
+        "CYQ": [
+            0.4111,
+            4.01,
+            0.0256,
+            0.0913
+        ]
     }
 ]
 var weeklyDatas沪深300ETF = [

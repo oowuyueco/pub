@@ -51939,6 +51939,25 @@ var dailyDatas消费30ETF = [
             0.0368,
             0.0473
         ]
+    },
+    {
+        "date": "2025-03-21",
+        "open": 0.961,
+        "high": 0.97,
+        "low": 0.951,
+        "close": 0.952,
+        "volume": 468689,
+        "hsl": 8.47,
+        "zf": 1.97,
+        "percent": -1.35,
+        "timestamp": "",
+        "disRate": 0.16,
+        "CYQ": [
+            0.4683,
+            0.96,
+            0.0368,
+            0.0473
+        ]
     }
 ]
 var weeklyDatas消费30ETF = [
