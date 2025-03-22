@@ -613,6 +613,7 @@ var triggerLogObj大宗={
             "低位九转_双周MACD-KDJ_花生连续"
         ],
         "2025-03-21": [
+            "低位低量_焦炭连续",
             "低位低量_焦炭连续"
         ]
     },
@@ -12000,6 +12001,24 @@ var triggerLogObj大宗={
                     55.05,
                     44.95
                 ]
+            }
+        },
+        {
+            "dataName": "焦炭连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-03-21",
+            "trigAtIndex": 3381,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         },
         {
