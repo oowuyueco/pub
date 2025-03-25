@@ -2242,4 +2242,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-03-21"
+var runLastKlineDate = "2025-03-24"
