@@ -26940,6 +26940,24 @@ var dailyDatas红利低波ETF = [
             0.0137,
             0.0276
         ]
+    },
+    {
+        "date": "2025-03-26",
+        "open": 1.114,
+        "high": 1.116,
+        "low": 1.11,
+        "close": 1.112,
+        "volume": 3869195,
+        "hsl": 3.02,
+        "zf": 0.54,
+        "percent": -0.27,
+        "timestamp": "",
+        "CYQ": [
+            0.903,
+            1.09,
+            0.0137,
+            0.0276
+        ]
     }
 ]
 var weeklyDatas红利低波ETF = [
