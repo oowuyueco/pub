@@ -87914,6 +87914,25 @@ var dailyDatas上证50ETF = [
             0.025,
             0.0782
         ]
+    },
+    {
+        "date": "2025-03-27",
+        "open": 2.735,
+        "high": 2.765,
+        "low": 2.732,
+        "close": 2.75,
+        "volume": 6780263,
+        "hsl": 1.28,
+        "zf": 1.21,
+        "percent": 0.51,
+        "timestamp": "",
+        "disRate": 0.04,
+        "CYQ": [
+            0.8395,
+            2.72,
+            0.025,
+            0.0782
+        ]
     }
 ]
 var weeklyDatas上证50ETF = [
@@ -106333,19 +106352,19 @@ var weeklyDatas上证50ETF = [
         ]
     },
     {
-        "date": "2025-03-25",
+        "date": "2025-03-27",
         "open": 2.733,
-        "high": 2.758,
+        "high": 2.765,
         "low": 2.732,
-        "close": 2.752,
-        "volume": 12326772,
-        "hsl": 2.33,
-        "zf": 0.95,
-        "percent": 0.66,
+        "close": 2.75,
+        "volume": 27019908,
+        "hsl": 5.06,
+        "zf": 1.21,
+        "percent": 0.59,
         "timestamp": "",
-        "disRate": 0.09,
+        "disRate": 0.04,
         "CYQ": [
-            0.8082,
+            0.8131,
             2.72,
             0.025,
             0.0782
@@ -109936,19 +109955,19 @@ var monthlyDatas上证50ETF = [
         ]
     },
     {
-        "date": "2025-03-25",
+        "date": "2025-03-27",
         "open": 2.704,
         "high": 2.819,
         "low": 2.665,
-        "close": 2.752,
-        "volume": 132303604,
-        "hsl": 24.96,
+        "close": 2.75,
+        "volume": 146996740,
+        "hsl": 27.55,
         "zf": 5.69,
-        "percent": 1.74,
+        "percent": 1.66,
         "timestamp": "",
-        "disRate": 0.09,
+        "disRate": 0.04,
         "CYQ": [
-            0.7441,
+            0.7389,
             2.71,
             0.0244,
             0.0446
