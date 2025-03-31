@@ -35780,6 +35780,25 @@ var dailyDatas中概互联网ETF = [
             0.0244,
             0.0488
         ]
+    },
+    {
+        "date": "2025-03-31",
+        "open": 1.462,
+        "high": 1.47,
+        "low": 1.437,
+        "close": 1.449,
+        "volume": 24672899,
+        "hsl": 9.55,
+        "zf": 2.23,
+        "percent": -2.16,
+        "timestamp": "",
+        "disRate": 1.21,
+        "CYQ": [
+            0.0623,
+            1.5,
+            0.0286,
+            0.0488
+        ]
     }
 ]
 var weeklyDatas中概互联网ETF = [
@@ -43327,6 +43346,25 @@ var weeklyDatas中概互联网ETF = [
             0.0203,
             0.0284
         ]
+    },
+    {
+        "date": "2025-03-31",
+        "open": 1.462,
+        "high": 1.47,
+        "low": 1.437,
+        "close": 1.449,
+        "volume": 24672899,
+        "hsl": 9.55,
+        "zf": 2.23,
+        "percent": -2.16,
+        "timestamp": "",
+        "disRate": 1.21,
+        "CYQ": [
+            0.0262,
+            1.5,
+            0.0204,
+            0.0368
+        ]
     }
 ]
 var monthlyDatas中概互联网ETF = [
@@ -45095,21 +45133,21 @@ var monthlyDatas中概互联网ETF = [
         ]
     },
     {
-        "date": "2025-03-28",
+        "date": "2025-03-31",
         "open": 1.443,
         "high": 1.611,
         "low": 1.402,
-        "close": 1.481,
-        "volume": 604499016,
-        "hsl": 234.03,
+        "close": 1.449,
+        "volume": 629171915,
+        "hsl": 243.59,
         "zf": 14.68,
-        "percent": 4,
+        "percent": 1.76,
         "timestamp": "",
-        "disRate": -0.41,
+        "disRate": 1.21,
         "CYQ": [
-            0.3935,
+            0.131,
             1.49,
-            0.0328,
+            0.0288,
             0.0493
         ]
     }
