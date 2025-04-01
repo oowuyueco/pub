@@ -745,6 +745,9 @@ var triggerLogObj美股指数 = {
     "2025-01-08": [
       "周月高位九转",
       "周月高位九转"
+    ],
+    "2025-03-31": [
+      "纳指低位空但叉"
     ]
   },
   "日周月高位九转": [
@@ -2151,6 +2154,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2022-09-27",
       "quantName": "纳指低位空但叉",
       "percent": 0.25
+    },
+    {
+      "trigDate": "2025-03-31",
+      "quantName": "纳指低位空但叉",
+      "percent": -0.14
     }
   ],
   "标普500高位空但叉": [
@@ -2242,4 +2250,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-03-28"
+var runLastKlineDate = "2025-03-31"
