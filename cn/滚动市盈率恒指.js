@@ -1206,6 +1206,10 @@ let 滚动市盈率恒指 = [
     [
         "2025-02-28",
         13.25
+    ],
+    [
+        "2025-03-28",
+        11.76
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
