@@ -466,8 +466,8 @@
                 newShowArr.push(ele[1] + "")
                 return newShowArr
             })
-            //.filter((ele, index) => { return ele.at(-1).includes("日周") })
-            .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                //.filter((ele, index) => { return ele.at(-1).includes("日周") })
+                .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
             //.sort((a, b) => a[8] - b[8])
 
             return resultArr
@@ -489,7 +489,13 @@
                     .map((ele, index, preArr) => {
                         let newArr = []
                         newArr[0] = ele[0]
-                        newArr[1] = ele[1].toSpliced(-1).map((ele, index) => { return ele.quantName })
+                        newArr[1] = ele[1].toSpliced(-1).map((ele, index) => ele.quantName +
+
+                            (function (ar) {
+                                return ele.logInfo //""
+                            })(ele.logInfo) //test
+
+                        )
                         newArr[2] = ele[1].at(-1)
                         // newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : (newArr[1][0].includes("高位") ? "高位" : "低位")
                         // let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
@@ -631,6 +637,11 @@
                 //.filter((ele, index) => { return ele.at(-1).includes("_one") })
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
                 //.sort((a, b) => a[8] - b[8])
+                .map((ele, index) => {
+                    if (ele[7] == "nextFirstDelivery周三") ele[7] = "next1周三"
+                    if (ele[7] == "nextSecondDelivery周三") ele[7] = "next2周三"
+                    return ele
+                })
 
             return result
         }
