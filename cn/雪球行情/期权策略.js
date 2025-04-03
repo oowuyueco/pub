@@ -1775,7 +1775,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2022-11-03=>2025-04-02": {
+    "2022-11-03=>2025-04-03": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -2091,6 +2091,23 @@ var triggerLogObj期权 = {
             "close": "44->2025-03-26,123.33,3.25",
             "high": "39->2025-03-19,214.14,5.64",
             "low": "9->2025-02-05,-0.95,-0.03"
+          }
+        }
+      ],
+      "2025-04-03": [
+        {
+          "trigDate": "2025-04-03",
+          "quantName": "上证50_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": ",0,0",
+            "high": ",0,0",
+            "low": ",0,0",
+            "nextFirstDelivery周三": "2025-04-23",
+            "nextSecondDelivery周三": "2025-05-28",
+            "nextThirdDelivery周三": "2025-06-25"
           }
         }
       ]
@@ -5418,4 +5435,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2025-04-02"
+var runLastKlineDate = "2025-04-03"
