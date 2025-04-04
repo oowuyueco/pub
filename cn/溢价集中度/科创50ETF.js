@@ -19078,6 +19078,24 @@ var dailyDatas科创50ETF = [
             0.0358,
             0.0681
         ]
+    },
+    {
+        "date": "2025-04-03",
+        "open": 1.065,
+        "high": 1.082,
+        "low": 1.063,
+        "close": 1.068,
+        "volume": 27275063,
+        "hsl": 3.53,
+        "zf": 1.77,
+        "percent": -0.56,
+        "timestamp": "",
+        "CYQ": [
+            0.1483,
+            1.1,
+            0.0358,
+            0.0681
+        ]
     }
 ]
 var weeklyDatas科创50ETF = [
@@ -23110,7 +23128,6 @@ var weeklyDatas科创50ETF = [
         "zf": 2.41,
         "percent": -1.2,
         "timestamp": "",
-        "disRate": 0.1,
         "CYQ": [
             0.133,
             1.12,
@@ -24086,7 +24103,6 @@ var monthlyDatas科创50ETF = [
         "zf": 2.33,
         "percent": -0.56,
         "timestamp": "",
-        "disRate": 0.1,
         "CYQ": [
             0.037,
             1.12,

@@ -110098,7 +110098,6 @@ var monthlyDatas上证50ETF = [
         "zf": 1.54,
         "percent": -0.18,
         "timestamp": "",
-        "disRate": 0.04,
         "CYQ": [
             0.6002,
             2.71,
