@@ -1775,7 +1775,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2022-11-03=>2025-04-03": {
+    "2022-11-03=>2025-04-07": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -2102,9 +2102,9 @@ var triggerLogObj期权 = {
         },
         {
           "after": {
-            "close": ",0,0",
+            "close": "1->2025-04-07,-272.06,-7.05",
             "high": ",0,0",
-            "low": ",0,0",
+            "low": "1->2025-04-07,-272.06,-7.05",
             "nextFirstDelivery周三": "2025-04-23",
             "nextSecondDelivery周三": "2025-05-28",
             "nextThirdDelivery周三": "2025-06-25"
@@ -5435,4 +5435,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2025-04-03"
+var runLastKlineDate = "2025-04-07"
