@@ -748,6 +748,10 @@ var triggerLogObj美股指数 = {
     ],
     "2025-03-31": [
       "纳指低位空但叉"
+    ],
+    "2025-04-07": [
+      "标普500低位空但叉",
+      "纳指低位空但叉"
     ]
   },
   "日周月高位九转": [
@@ -954,6 +958,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2022-09-27",
       "quantName": "标普500低位空但叉",
       "percent": -0.21
+    },
+    {
+      "trigDate": "2025-04-07",
+      "quantName": "标普500低位空但叉",
+      "percent": -0.23
     }
   ],
   "周月低位九转": [
@@ -2159,6 +2168,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2025-03-31",
       "quantName": "纳指低位空但叉",
       "percent": -0.14
+    },
+    {
+      "trigDate": "2025-04-07",
+      "quantName": "纳指低位空但叉",
+      "percent": 0.1
     }
   ],
   "标普500高位空但叉": [
@@ -2250,4 +2264,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-04-04"
+var runLastKlineDate = "2025-04-07"
