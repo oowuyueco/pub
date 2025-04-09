@@ -61363,6 +61363,25 @@ var dailyDatas大宗商品ETF = [
             0.0394,
             0.0732
         ]
+    },
+    {
+        "date": "2025-04-09",
+        "open": 0.829,
+        "high": 0.84,
+        "low": 0.809,
+        "close": 0.838,
+        "volume": 29164,
+        "hsl": 1.58,
+        "zf": 3.73,
+        "percent": 0.84,
+        "timestamp": "",
+        "disRate": 0.45,
+        "CYQ": [
+            0.091,
+            0.88,
+            0.0394,
+            0.068
+        ]
     }
 ]
 var weeklyDatas大宗商品ETF = [
@@ -74439,19 +74458,19 @@ var weeklyDatas大宗商品ETF = [
         ]
     },
     {
-        "date": "2025-04-08",
+        "date": "2025-04-09",
         "open": 0.836,
         "high": 0.85,
         "low": 0.791,
-        "close": 0.831,
-        "volume": 99834,
-        "hsl": 5.4,
+        "close": 0.838,
+        "volume": 128998,
+        "hsl": 6.98,
         "zf": 6.73,
-        "percent": -5.25,
+        "percent": -4.45,
         "timestamp": "",
-        "disRate": 0.22,
+        "disRate": 0.45,
         "CYQ": [
-            0.0547,
+            0.0919,
             0.88,
             0.0394,
             0.068
@@ -77539,19 +77558,19 @@ var monthlyDatas大宗商品ETF = [
         ]
     },
     {
-        "date": "2025-04-08",
+        "date": "2025-04-09",
         "open": 0.878,
         "high": 0.89,
         "low": 0.791,
-        "close": 0.831,
-        "volume": 154102,
-        "hsl": 8.33,
+        "close": 0.838,
+        "volume": 183266,
+        "hsl": 9.91,
         "zf": 11.28,
-        "percent": -5.35,
+        "percent": -4.56,
         "timestamp": "",
-        "disRate": 0.22,
+        "disRate": 0.45,
         "CYQ": [
-            0.0625,
+            0.1246,
             0.87,
             0.0399,
             0.068
