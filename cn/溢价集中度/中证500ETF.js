@@ -52835,6 +52835,25 @@ var dailyDatas中证500ETF = [
             0.0604,
             0.0697
         ]
+    },
+    {
+        "date": "2025-04-11",
+        "open": 5.51,
+        "high": 5.628,
+        "low": 5.509,
+        "close": 5.573,
+        "volume": 2220743,
+        "hsl": 1.17,
+        "zf": 2.15,
+        "percent": 0.69,
+        "timestamp": "",
+        "disRate": -0.04,
+        "CYQ": [
+            0.3403,
+            5.86,
+            0.0604,
+            0.0697
+        ]
     }
 ]
 var weeklyDatas中证500ETF = [

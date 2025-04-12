@@ -61419,6 +61419,25 @@ var dailyDatas大宗商品ETF = [
             0.0394,
             0.068
         ]
+    },
+    {
+        "date": "2025-04-11",
+        "open": 0.855,
+        "high": 0.859,
+        "low": 0.854,
+        "close": 0.857,
+        "volume": 19533,
+        "hsl": 1.07,
+        "zf": 0.58,
+        "percent": 0.23,
+        "timestamp": "",
+        "disRate": 0.05,
+        "CYQ": [
+            0.2355,
+            0.88,
+            0.0394,
+            0.068
+        ]
     }
 ]
 var weeklyDatas大宗商品ETF = [
