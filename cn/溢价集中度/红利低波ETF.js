@@ -27278,6 +27278,25 @@ var dailyDatas红利低波ETF = [
             0.0137,
             0.0276
         ]
+    },
+    {
+        "date": "2025-04-17",
+        "open": 1.114,
+        "high": 1.119,
+        "low": 1.109,
+        "close": 1.117,
+        "volume": 2406760,
+        "hsl": 1.7,
+        "zf": 0.9,
+        "percent": 0.09,
+        "timestamp": "",
+        "disRate": 0.03,
+        "CYQ": [
+            0.868,
+            1.09,
+            0.0137,
+            0.0276
+        ]
     }
 ]
 var weeklyDatas红利低波ETF = [
@@ -33029,19 +33048,19 @@ var weeklyDatas红利低波ETF = [
         ]
     },
     {
-        "date": "2025-04-16",
+        "date": "2025-04-17",
         "open": 1.089,
-        "high": 1.117,
+        "high": 1.119,
         "low": 1.085,
-        "close": 1.116,
-        "volume": 8979639,
-        "hsl": 6.37,
-        "zf": 2.94,
-        "percent": 2.67,
+        "close": 1.117,
+        "volume": 11386398,
+        "hsl": 8.07,
+        "zf": 3.13,
+        "percent": 2.76,
         "timestamp": "",
-        "disRate": 0.14,
+        "disRate": 0.03,
         "CYQ": [
-            0.8796,
+            0.8788,
             1.09,
             0.0137,
             0.0276
@@ -34401,19 +34420,19 @@ var monthlyDatas红利低波ETF = [
         ]
     },
     {
-        "date": "2025-04-16",
+        "date": "2025-04-17",
         "open": 1.111,
         "high": 1.126,
         "low": 1.042,
-        "close": 1.116,
-        "volume": 47068253,
-        "hsl": 33.39,
+        "close": 1.117,
+        "volume": 49475012,
+        "hsl": 35.05,
         "zf": 7.55,
-        "percent": 0.36,
+        "percent": 0.45,
         "timestamp": "",
-        "disRate": 0.14,
+        "disRate": 0.03,
         "CYQ": [
-            0.9098,
+            0.91,
             1.1,
             0.0137,
             0.0229
