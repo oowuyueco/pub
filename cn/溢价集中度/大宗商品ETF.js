@@ -77738,7 +77738,6 @@ var monthlyDatas大宗商品ETF = [
         "zf": 11.28,
         "percent": -1.82,
         "timestamp": "",
-        "disRate": 0.01,
         "CYQ": [
             0.3754,
             0.86,

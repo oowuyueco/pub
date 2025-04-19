@@ -65985,7 +65985,6 @@ var monthlyDatas消费30ETF = [
         "zf": 8.8,
         "percent": 2.41,
         "timestamp": "",
-        "disRate": -0.44,
         "CYQ": [
             0.9519,
             0.95,
