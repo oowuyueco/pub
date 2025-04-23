@@ -7,7 +7,9 @@ var 科创50 = [
     "low": 1000,
     "close": 1000,
     "percent": 0,
-    "volume": 102090116
+    "volume": 102090116,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-02",
@@ -17,7 +19,9 @@ var 科创50 = [
     "low": 1005.6174,
     "close": 1019.7234,
     "percent": 1.97,
-    "volume": 165906987
+    "volume": 165906987,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-03",
@@ -27,7 +31,9 @@ var 科创50 = [
     "low": 1018.6813,
     "close": 1024.4819,
     "percent": 0.47,
-    "volume": 166149031
+    "volume": 166149031,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-06",
@@ -37,7 +43,9 @@ var 科创50 = [
     "low": 1019.9989,
     "close": 1027.2773,
     "percent": 0.27,
-    "volume": 184335092
+    "volume": 184335092,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-07",
@@ -47,7 +55,9 @@ var 科创50 = [
     "low": 1019.8577,
     "close": 1043.0833,
     "percent": 1.54,
-    "volume": 187496602
+    "volume": 187496602,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-08",
@@ -57,7 +67,9 @@ var 科创50 = [
     "low": 1034.5129,
     "close": 1051.1599,
     "percent": 0.77,
-    "volume": 237912351
+    "volume": 237912351,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-09",
@@ -67,7 +79,9 @@ var 科创50 = [
     "low": 1060.5802,
     "close": 1078.3117,
     "percent": 2.58,
-    "volume": 211330302
+    "volume": 211330302,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-10",
@@ -77,7 +91,9 @@ var 科创50 = [
     "low": 1076.4379,
     "close": 1076.4379,
     "percent": -0.17,
-    "volume": 190319403
+    "volume": 190319403,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-13",
@@ -87,7 +103,9 @@ var 科创50 = [
     "low": 1069.7789,
     "close": 1105.8481,
     "percent": 2.73,
-    "volume": 185966316
+    "volume": 185966316,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-14",
@@ -97,7 +115,9 @@ var 科创50 = [
     "low": 1107.7757,
     "close": 1118.3063,
     "percent": 1.13,
-    "volume": 245350228
+    "volume": 245350228,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-15",
@@ -107,7 +127,9 @@ var 科创50 = [
     "low": 1105.5754,
     "close": 1114.7655,
     "percent": -0.32,
-    "volume": 179932386
+    "volume": 179932386,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-16",
@@ -117,7 +139,9 @@ var 科创50 = [
     "low": 1116.5084,
     "close": 1154.3028,
     "percent": 3.55,
-    "volume": 224341670
+    "volume": 224341670,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-17",
@@ -127,7 +151,9 @@ var 科创50 = [
     "low": 1159.372,
     "close": 1238.6638,
     "percent": 7.31,
-    "volume": 440888969
+    "volume": 440888969,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-20",
@@ -137,7 +163,9 @@ var 科创50 = [
     "low": 1208.6903,
     "close": 1240.5094,
     "percent": 0.15,
-    "volume": 368152283
+    "volume": 368152283,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-21",
@@ -147,7 +175,9 @@ var 科创50 = [
     "low": 1194.7968,
     "close": 1195.0142,
     "percent": -3.67,
-    "volume": 274756549
+    "volume": 274756549,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-22",
@@ -157,7 +187,9 @@ var 科创50 = [
     "low": 1157.2903,
     "close": 1244.5246,
     "percent": 4.14,
-    "volume": 342102813
+    "volume": 342102813,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-01-23",
@@ -167,7 +199,9 @@ var 科创50 = [
     "low": 1177.0936,
     "close": 1202.1022,
     "percent": -3.41,
-    "volume": 273515940
+    "volume": 273515940,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-03",
@@ -177,7 +211,9 @@ var 科创50 = [
     "low": 1015.5965,
     "close": 1030.5503,
     "percent": -14.27,
-    "volume": 386047260
+    "volume": 386047260,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-04",
@@ -187,7 +223,9 @@ var 科创50 = [
     "low": 1049.9556,
     "close": 1153.2316,
     "percent": 11.9,
-    "volume": 347965965
+    "volume": 347965965,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-05",
@@ -197,7 +235,9 @@ var 科创50 = [
     "low": 1166.9733,
     "close": 1203.6128,
     "percent": 4.37,
-    "volume": 392035999
+    "volume": 392035999,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-06",
@@ -207,7 +247,9 @@ var 科创50 = [
     "low": 1191.7314,
     "close": 1238.7573,
     "percent": 2.92,
-    "volume": 368434113
+    "volume": 368434113,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-07",
@@ -217,7 +259,9 @@ var 科创50 = [
     "low": 1234.2337,
     "close": 1307.7568,
     "percent": 5.57,
-    "volume": 374551341
+    "volume": 374551341,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-10",
@@ -227,7 +271,9 @@ var 科创50 = [
     "low": 1293.4299,
     "close": 1322.2502,
     "percent": 1.11,
-    "volume": 439487378
+    "volume": 439487378,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-11",
@@ -237,7 +283,9 @@ var 科创50 = [
     "low": 1266.2142,
     "close": 1283.5724,
     "percent": -2.93,
-    "volume": 330464613
+    "volume": 330464613,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-12",
@@ -247,7 +295,9 @@ var 科创50 = [
     "low": 1274.7963,
     "close": 1348.7019,
     "percent": 5.07,
-    "volume": 311360771
+    "volume": 311360771,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-13",
@@ -257,7 +307,9 @@ var 科创50 = [
     "low": 1353.0449,
     "close": 1360.7094,
     "percent": 0.89,
-    "volume": 399888022
+    "volume": 399888022,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-14",
@@ -267,7 +319,9 @@ var 科创50 = [
     "low": 1305.9737,
     "close": 1327.224,
     "percent": -2.46,
-    "volume": 353707254
+    "volume": 353707254,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-17",
@@ -277,7 +331,9 @@ var 科创50 = [
     "low": 1332.9652,
     "close": 1381.5532,
     "percent": 4.09,
-    "volume": 327901095
+    "volume": 327901095,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-18",
@@ -287,7 +343,9 @@ var 科创50 = [
     "low": 1372.5255,
     "close": 1399.3841,
     "percent": 1.29,
-    "volume": 323524083
+    "volume": 323524083,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-19",
@@ -297,7 +355,9 @@ var 科创50 = [
     "low": 1373.4439,
     "close": 1373.4439,
     "percent": -1.85,
-    "volume": 320905108
+    "volume": 320905108,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-20",
@@ -307,7 +367,9 @@ var 科创50 = [
     "low": 1321.7335,
     "close": 1348.3377,
     "percent": -1.83,
-    "volume": 282919053
+    "volume": 282919053,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-21",
@@ -317,7 +379,9 @@ var 科创50 = [
     "low": 1337.5566,
     "close": 1346.8628,
     "percent": -0.11,
-    "volume": 241927963
+    "volume": 241927963,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-24",
@@ -327,7 +391,9 @@ var 科创50 = [
     "low": 1328.7467,
     "close": 1351.7098,
     "percent": 0.36,
-    "volume": 251136226
+    "volume": 251136226,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-25",
@@ -337,7 +403,9 @@ var 科创50 = [
     "low": 1312.4786,
     "close": 1367.3683,
     "percent": 1.16,
-    "volume": 292358949
+    "volume": 292358949,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-26",
@@ -347,7 +415,9 @@ var 科创50 = [
     "low": 1286.3453,
     "close": 1288.2418,
     "percent": -5.79,
-    "volume": 315549537
+    "volume": 315549537,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-27",
@@ -357,7 +427,9 @@ var 科创50 = [
     "low": 1251.4512,
     "close": 1264.9407,
     "percent": -1.81,
-    "volume": 218239827
+    "volume": 218239827,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-02-28",
@@ -367,7 +439,9 @@ var 科创50 = [
     "low": 1187.0962,
     "close": 1191.0548,
     "percent": -5.84,
-    "volume": 260673872
+    "volume": 260673872,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-02",
@@ -377,7 +451,9 @@ var 科创50 = [
     "low": 1194.9372,
     "close": 1252.6243,
     "percent": 5.17,
-    "volume": 292826072
+    "volume": 292826072,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-03",
@@ -387,7 +463,9 @@ var 科创50 = [
     "low": 1272.0626,
     "close": 1285.0342,
     "percent": 2.59,
-    "volume": 296796136
+    "volume": 296796136,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-04",
@@ -397,7 +475,9 @@ var 科创50 = [
     "low": 1226.8024,
     "close": 1255.7232,
     "percent": -2.28,
-    "volume": 193242042
+    "volume": 193242042,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-05",
@@ -407,7 +487,9 @@ var 科创50 = [
     "low": 1246.7144,
     "close": 1264.7876,
     "percent": 0.72,
-    "volume": 262145959
+    "volume": 262145959,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-06",
@@ -417,7 +499,9 @@ var 科创50 = [
     "low": 1237.6234,
     "close": 1243.3725,
     "percent": -1.69,
-    "volume": 182990820
+    "volume": 182990820,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-09",
@@ -427,7 +511,9 @@ var 科创50 = [
     "low": 1171.8592,
     "close": 1171.8592,
     "percent": -5.75,
-    "volume": 234517251
+    "volume": 234517251,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-10",
@@ -437,7 +523,9 @@ var 科创50 = [
     "low": 1135.2091,
     "close": 1216.3284,
     "percent": 3.8,
-    "volume": 243077326
+    "volume": 243077326,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-11",
@@ -447,7 +535,9 @@ var 科创50 = [
     "low": 1184.7101,
     "close": 1184.7101,
     "percent": -2.6,
-    "volume": 284299305
+    "volume": 284299305,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-12",
@@ -457,7 +547,9 @@ var 科创50 = [
     "low": 1151.7852,
     "close": 1167.0649,
     "percent": -1.49,
-    "volume": 175273209
+    "volume": 175273209,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-13",
@@ -467,7 +559,9 @@ var 科创50 = [
     "low": 1103.9561,
     "close": 1175.2816,
     "percent": 0.7,
-    "volume": 201067415
+    "volume": 201067415,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-16",
@@ -477,7 +571,9 @@ var 科创50 = [
     "low": 1115.0839,
     "close": 1115.0839,
     "percent": -5.12,
-    "volume": 192052179
+    "volume": 192052179,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-17",
@@ -487,7 +583,9 @@ var 科创50 = [
     "low": 1079.8384,
     "close": 1131.5472,
     "percent": 1.48,
-    "volume": 171222118
+    "volume": 171222118,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-18",
@@ -497,7 +595,9 @@ var 科创50 = [
     "low": 1115.0188,
     "close": 1115.0188,
     "percent": -1.46,
-    "volume": 177120122
+    "volume": 177120122,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-19",
@@ -507,7 +607,9 @@ var 科创50 = [
     "low": 1091.24,
     "close": 1128.9734,
     "percent": 1.25,
-    "volume": 162440873
+    "volume": 162440873,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-20",
@@ -517,7 +619,9 @@ var 科创50 = [
     "low": 1114.291,
     "close": 1127.3694,
     "percent": -0.14,
-    "volume": 123823848
+    "volume": 123823848,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-23",
@@ -527,7 +631,9 @@ var 科创50 = [
     "low": 1037.5282,
     "close": 1039.8841,
     "percent": -7.76,
-    "volume": 160985605
+    "volume": 160985605,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-24",
@@ -537,7 +643,9 @@ var 科创50 = [
     "low": 1020.2491,
     "close": 1060.8431,
     "percent": 2.02,
-    "volume": 128689586
+    "volume": 128689586,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-25",
@@ -547,7 +655,9 @@ var 科创50 = [
     "low": 1094.1629,
     "close": 1101.3194,
     "percent": 3.82,
-    "volume": 148927443
+    "volume": 148927443,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-26",
@@ -557,7 +667,9 @@ var 科创50 = [
     "low": 1091.0044,
     "close": 1095.3381,
     "percent": -0.54,
-    "volume": 106191661
+    "volume": 106191661,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-27",
@@ -567,7 +679,9 @@ var 科创50 = [
     "low": 1082.9317,
     "close": 1084.5054,
     "percent": -0.99,
-    "volume": 131457605
+    "volume": 131457605,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-30",
@@ -577,7 +691,9 @@ var 科创50 = [
     "low": 1021.4988,
     "close": 1035.8273,
     "percent": -4.49,
-    "volume": 122368363
+    "volume": 122368363,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-03-31",
@@ -587,7 +703,9 @@ var 科创50 = [
     "low": 1027.2243,
     "close": 1029.7493,
     "percent": -0.59,
-    "volume": 90623043
+    "volume": 90623043,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-01",
@@ -597,7 +715,9 @@ var 科创50 = [
     "low": 1026.575,
     "close": 1037.9274,
     "percent": 0.79,
-    "volume": 98042280
+    "volume": 98042280,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-02",
@@ -607,7 +727,9 @@ var 科创50 = [
     "low": 1033.559,
     "close": 1094.8263,
     "percent": 5.48,
-    "volume": 110178325
+    "volume": 110178325,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-03",
@@ -617,7 +739,9 @@ var 科创50 = [
     "low": 1074.1858,
     "close": 1080.5303,
     "percent": -1.31,
-    "volume": 94951658
+    "volume": 94951658,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-07",
@@ -627,7 +751,9 @@ var 科创50 = [
     "low": 1108.7778,
     "close": 1111.6535,
     "percent": 2.88,
-    "volume": 111452591
+    "volume": 111452591,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-08",
@@ -637,7 +763,9 @@ var 科创50 = [
     "low": 1100.3095,
     "close": 1104.1448,
     "percent": -0.68,
-    "volume": 89813540
+    "volume": 89813540,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-09",
@@ -647,7 +775,9 @@ var 科创50 = [
     "low": 1094.9236,
     "close": 1101.2814,
     "percent": -0.26,
-    "volume": 82133870
+    "volume": 82133870,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-10",
@@ -657,7 +787,9 @@ var 科创50 = [
     "low": 1054.3459,
     "close": 1058.44,
     "percent": -3.89,
-    "volume": 100964372
+    "volume": 100964372,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-13",
@@ -667,7 +799,9 @@ var 科创50 = [
     "low": 1038.818,
     "close": 1042.1452,
     "percent": -1.54,
-    "volume": 67618853
+    "volume": 67618853,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-14",
@@ -677,7 +811,9 @@ var 科创50 = [
     "low": 1049.2117,
     "close": 1073.2172,
     "percent": 2.98,
-    "volume": 70567612
+    "volume": 70567612,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-15",
@@ -687,7 +823,9 @@ var 科创50 = [
     "low": 1076.9412,
     "close": 1088.203,
     "percent": 1.4,
-    "volume": 81856129
+    "volume": 81856129,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-16",
@@ -697,7 +835,9 @@ var 科创50 = [
     "low": 1080.8726,
     "close": 1091.9326,
     "percent": 0.34,
-    "volume": 73003011
+    "volume": 73003011,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-17",
@@ -707,7 +847,9 @@ var 科创50 = [
     "low": 1102.6574,
     "close": 1117.07,
     "percent": 2.3,
-    "volume": 144351118
+    "volume": 144351118,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-20",
@@ -717,7 +859,9 @@ var 科创50 = [
     "low": 1115.7224,
     "close": 1133.361,
     "percent": 1.46,
-    "volume": 93872771
+    "volume": 93872771,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-21",
@@ -727,7 +871,9 @@ var 科创50 = [
     "low": 1108.476,
     "close": 1119.2289,
     "percent": -1.25,
-    "volume": 88406560
+    "volume": 88406560,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-22",
@@ -737,7 +883,9 @@ var 科创50 = [
     "low": 1108.6826,
     "close": 1135.8487,
     "percent": 1.49,
-    "volume": 85565078
+    "volume": 85565078,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-23",
@@ -747,7 +895,9 @@ var 科创50 = [
     "low": 1140.5493,
     "close": 1149.7162,
     "percent": 1.22,
-    "volume": 118832048
+    "volume": 118832048,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-24",
@@ -757,7 +907,9 @@ var 科创50 = [
     "low": 1139.3054,
     "close": 1144.153,
     "percent": -0.48,
-    "volume": 129037593
+    "volume": 129037593,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-27",
@@ -767,7 +919,9 @@ var 科创50 = [
     "low": 1136.2336,
     "close": 1138.0998,
     "percent": -0.53,
-    "volume": 88370033
+    "volume": 88370033,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-28",
@@ -777,7 +931,9 @@ var 科创50 = [
     "low": 1037.26,
     "close": 1113.5126,
     "percent": -2.16,
-    "volume": 158296596
+    "volume": 158296596,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-29",
@@ -787,7 +943,9 @@ var 科创50 = [
     "low": 1102.5717,
     "close": 1102.6982,
     "percent": -0.97,
-    "volume": 89978997
+    "volume": 89978997,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-04-30",
@@ -797,7 +955,9 @@ var 科创50 = [
     "low": 1107.4261,
     "close": 1166.348,
     "percent": 5.77,
-    "volume": 138747171
+    "volume": 138747171,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-06",
@@ -807,7 +967,9 @@ var 科创50 = [
     "low": 1155.117,
     "close": 1247.5125,
     "percent": 6.96,
-    "volume": 217181485
+    "volume": 217181485,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-07",
@@ -817,7 +979,9 @@ var 科创50 = [
     "low": 1218.2383,
     "close": 1224.1045,
     "percent": -1.88,
-    "volume": 161951936
+    "volume": 161951936,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-08",
@@ -827,7 +991,9 @@ var 科创50 = [
     "low": 1230.9069,
     "close": 1240.2455,
     "percent": 1.32,
-    "volume": 144063840
+    "volume": 144063840,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-11",
@@ -837,7 +1003,9 @@ var 科创50 = [
     "low": 1215.9698,
     "close": 1226.0614,
     "percent": -1.14,
-    "volume": 116680749
+    "volume": 116680749,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-12",
@@ -847,7 +1015,9 @@ var 科创50 = [
     "low": 1203.1469,
     "close": 1233.5918,
     "percent": 0.61,
-    "volume": 108314234
+    "volume": 108314234,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-13",
@@ -857,7 +1027,9 @@ var 科创50 = [
     "low": 1227.7222,
     "close": 1247.034,
     "percent": 1.09,
-    "volume": 109820020
+    "volume": 109820020,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-14",
@@ -867,7 +1039,9 @@ var 科创50 = [
     "low": 1238.2297,
     "close": 1242.1685,
     "percent": -0.39,
-    "volume": 127744198
+    "volume": 127744198,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-15",
@@ -877,7 +1051,9 @@ var 科创50 = [
     "low": 1244.7412,
     "close": 1270.4805,
     "percent": 2.28,
-    "volume": 128687238
+    "volume": 128687238,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-18",
@@ -887,7 +1063,9 @@ var 科创50 = [
     "low": 1253.3279,
     "close": 1254.299,
     "percent": -1.27,
-    "volume": 151773963
+    "volume": 151773963,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-19",
@@ -897,7 +1075,9 @@ var 科创50 = [
     "low": 1260.2208,
     "close": 1324.4176,
     "percent": 5.59,
-    "volume": 148417094
+    "volume": 148417094,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-20",
@@ -907,7 +1087,9 @@ var 科创50 = [
     "low": 1297.6731,
     "close": 1306.9976,
     "percent": -1.32,
-    "volume": 201616810
+    "volume": 201616810,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-21",
@@ -917,7 +1099,9 @@ var 科创50 = [
     "low": 1251.5228,
     "close": 1251.9308,
     "percent": -4.21,
-    "volume": 152917671
+    "volume": 152917671,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-22",
@@ -927,7 +1111,9 @@ var 科创50 = [
     "low": 1208.8198,
     "close": 1230.6585,
     "percent": -1.7,
-    "volume": 133437360
+    "volume": 133437360,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-25",
@@ -937,7 +1123,9 @@ var 科创50 = [
     "low": 1205.7252,
     "close": 1212.0871,
     "percent": -1.51,
-    "volume": 99724588
+    "volume": 99724588,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-26",
@@ -947,7 +1135,9 @@ var 科创50 = [
     "low": 1217.6223,
     "close": 1272.6605,
     "percent": 5,
-    "volume": 143623033
+    "volume": 143623033,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-27",
@@ -957,7 +1147,9 @@ var 科创50 = [
     "low": 1251.0817,
     "close": 1253.272,
     "percent": -1.52,
-    "volume": 147229634
+    "volume": 147229634,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-28",
@@ -967,7 +1159,9 @@ var 科创50 = [
     "low": 1206.6174,
     "close": 1232.2199,
     "percent": -1.68,
-    "volume": 127009914
+    "volume": 127009914,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-05-29",
@@ -977,7 +1171,9 @@ var 科创50 = [
     "low": 1227.2003,
     "close": 1246.1109,
     "percent": 1.13,
-    "volume": 125881880
+    "volume": 125881880,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-01",
@@ -987,7 +1183,9 @@ var 科创50 = [
     "low": 1257.9659,
     "close": 1300.7411,
     "percent": 4.38,
-    "volume": 168550636
+    "volume": 168550636,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-02",
@@ -997,7 +1195,9 @@ var 科创50 = [
     "low": 1294.2191,
     "close": 1305.6365,
     "percent": 0.38,
-    "volume": 160370741
+    "volume": 160370741,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-03",
@@ -1007,7 +1207,9 @@ var 科创50 = [
     "low": 1293.595,
     "close": 1294.2802,
     "percent": -0.87,
-    "volume": 157891795
+    "volume": 157891795,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-04",
@@ -1017,7 +1219,9 @@ var 科创50 = [
     "low": 1291.2077,
     "close": 1299.8034,
     "percent": 0.43,
-    "volume": 186573206
+    "volume": 186573206,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-05",
@@ -1027,7 +1231,9 @@ var 科创50 = [
     "low": 1292.0506,
     "close": 1297.3057,
     "percent": -0.19,
-    "volume": 159726228
+    "volume": 159726228,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-08",
@@ -1037,7 +1243,9 @@ var 科创50 = [
     "low": 1277.2889,
     "close": 1280.0526,
     "percent": -1.33,
-    "volume": 149418346
+    "volume": 149418346,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-09",
@@ -1047,7 +1255,9 @@ var 科创50 = [
     "low": 1269.1124,
     "close": 1278.5069,
     "percent": -0.12,
-    "volume": 120208771
+    "volume": 120208771,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-10",
@@ -1057,7 +1267,9 @@ var 科创50 = [
     "low": 1265.1112,
     "close": 1269.978,
     "percent": -0.67,
-    "volume": 107419496
+    "volume": 107419496,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-11",
@@ -1067,7 +1279,9 @@ var 科创50 = [
     "low": 1265.3776,
     "close": 1273.5896,
     "percent": 0.28,
-    "volume": 130943837
+    "volume": 130943837,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-12",
@@ -1077,7 +1291,9 @@ var 科创50 = [
     "low": 1246.8028,
     "close": 1262.2901,
     "percent": -0.89,
-    "volume": 104428796
+    "volume": 104428796,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-15",
@@ -1087,7 +1303,9 @@ var 科创50 = [
     "low": 1249.5828,
     "close": 1249.9087,
     "percent": -0.98,
-    "volume": 122567360
+    "volume": 122567360,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-16",
@@ -1097,7 +1315,9 @@ var 科创50 = [
     "low": 1259.0858,
     "close": 1289.1346,
     "percent": 3.14,
-    "volume": 133849768
+    "volume": 133849768,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-17",
@@ -1107,7 +1327,9 @@ var 科创50 = [
     "low": 1280.5193,
     "close": 1291.1171,
     "percent": 0.15,
-    "volume": 151391484
+    "volume": 151391484,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-18",
@@ -1117,7 +1339,9 @@ var 科创50 = [
     "low": 1286.4731,
     "close": 1302.3711,
     "percent": 0.87,
-    "volume": 139344674
+    "volume": 139344674,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-19",
@@ -1127,7 +1351,9 @@ var 科创50 = [
     "low": 1301.0208,
     "close": 1325.1466,
     "percent": 1.75,
-    "volume": 122962822
+    "volume": 122962822,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-22",
@@ -1137,7 +1363,9 @@ var 科创50 = [
     "low": 1347.9423,
     "close": 1371.2069,
     "percent": 3.48,
-    "volume": 203494454
+    "volume": 203494454,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-23",
@@ -1147,7 +1375,9 @@ var 科创50 = [
     "low": 1365.3292,
     "close": 1407.1925,
     "percent": 2.62,
-    "volume": 141352499
+    "volume": 141352499,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-24",
@@ -1157,7 +1387,9 @@ var 科创50 = [
     "low": 1406.8688,
     "close": 1424.2771,
     "percent": 1.21,
-    "volume": 189403495
+    "volume": 189403495,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-29",
@@ -1167,7 +1399,9 @@ var 科创50 = [
     "low": 1393.7148,
     "close": 1401.644,
     "percent": -1.59,
-    "volume": 157755877
+    "volume": 157755877,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-06-30",
@@ -1177,7 +1411,9 @@ var 科创50 = [
     "low": 1410.5773,
     "close": 1447.8856,
     "percent": 3.3,
-    "volume": 155924789
+    "volume": 155924789,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-01",
@@ -1187,7 +1423,9 @@ var 科创50 = [
     "low": 1417.503,
     "close": 1439.8778,
     "percent": -0.55,
-    "volume": 167100256
+    "volume": 167100256,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-02",
@@ -1197,7 +1435,9 @@ var 科创50 = [
     "low": 1424.2912,
     "close": 1437.0521,
     "percent": -0.2,
-    "volume": 177661687
+    "volume": 177661687,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-03",
@@ -1207,7 +1447,9 @@ var 科创50 = [
     "low": 1408.0329,
     "close": 1438.5851,
     "percent": 0.11,
-    "volume": 181236089
+    "volume": 181236089,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-06",
@@ -1217,7 +1459,9 @@ var 科创50 = [
     "low": 1445.6071,
     "close": 1538.402,
     "percent": 6.94,
-    "volume": 351757706
+    "volume": 351757706,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-07",
@@ -1227,7 +1471,9 @@ var 科创50 = [
     "low": 1550.2963,
     "close": 1572.1891,
     "percent": 2.2,
-    "volume": 357665743
+    "volume": 357665743,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-08",
@@ -1237,7 +1483,9 @@ var 科创50 = [
     "low": 1568.3719,
     "close": 1599.9053,
     "percent": 1.76,
-    "volume": 252891996
+    "volume": 252891996,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-09",
@@ -1247,7 +1495,9 @@ var 科创50 = [
     "low": 1596.9839,
     "close": 1666.8503,
     "percent": 4.18,
-    "volume": 348758204
+    "volume": 348758204,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-10",
@@ -1257,7 +1507,9 @@ var 科创50 = [
     "low": 1641.6481,
     "close": 1654.8265,
     "percent": -0.72,
-    "volume": 274890521
+    "volume": 274890521,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-13",
@@ -1267,7 +1519,9 @@ var 科创50 = [
     "low": 1647.1828,
     "close": 1721.9764,
     "percent": 4.06,
-    "volume": 304811979
+    "volume": 304811979,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-14",
@@ -1277,7 +1531,9 @@ var 科创50 = [
     "low": 1653.7972,
     "close": 1701.5825,
     "percent": -1.18,
-    "volume": 348267763
+    "volume": 348267763,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-15",
@@ -1287,7 +1543,9 @@ var 科创50 = [
     "low": 1612.035,
     "close": 1612.035,
     "percent": -5.26,
-    "volume": 292698954
+    "volume": 292698954,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-16",
@@ -1297,7 +1555,9 @@ var 科创50 = [
     "low": 1463.9089,
     "close": 1469.7978,
     "percent": -8.82,
-    "volume": 256912329
+    "volume": 256912329,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-17",
@@ -1307,7 +1567,9 @@ var 科创50 = [
     "low": 1433.7229,
     "close": 1443.3965,
     "percent": -1.8,
-    "volume": 154635054
+    "volume": 154635054,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-20",
@@ -1317,7 +1579,9 @@ var 科创50 = [
     "low": 1392.959,
     "close": 1459.034,
     "percent": 1.08,
-    "volume": 173256166
+    "volume": 173256166,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-21",
@@ -1327,7 +1591,9 @@ var 科创50 = [
     "low": 1456.4869,
     "close": 1490.1714,
     "percent": 2.13,
-    "volume": 164225676
+    "volume": 164225676,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-22",
@@ -1337,7 +1603,9 @@ var 科创50 = [
     "low": 1474.0152,
     "close": 1497.2306,
     "percent": 0.47,
-    "volume": 301260784
+    "volume": 301260784,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-23",
@@ -1347,7 +1615,9 @@ var 科创50 = [
     "low": 1465.7055,
     "close": 1494.1393,
     "percent": -0.21,
-    "volume": 232446583
+    "volume": 232446583,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-24",
@@ -1357,7 +1627,9 @@ var 科创50 = [
     "low": 1389.3051,
     "close": 1389.3051,
     "percent": -7.02,
-    "volume": 317758682
+    "volume": 317758682,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-27",
@@ -1367,7 +1639,9 @@ var 科创50 = [
     "low": 1365.7782,
     "close": 1374.5189,
     "percent": -1.06,
-    "volume": 157965656
+    "volume": 157965656,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-28",
@@ -1377,7 +1651,9 @@ var 科创50 = [
     "low": 1385.7933,
     "close": 1400.5354,
     "percent": 1.89,
-    "volume": 144273762
+    "volume": 144273762,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-29",
@@ -1387,7 +1663,9 @@ var 科创50 = [
     "low": 1400.9202,
     "close": 1476.9248,
     "percent": 5.45,
-    "volume": 195015729
+    "volume": 195015729,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-30",
@@ -1397,7 +1675,9 @@ var 科创50 = [
     "low": 1470.4394,
     "close": 1472.7915,
     "percent": -0.28,
-    "volume": 170630839
+    "volume": 170630839,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-07-31",
@@ -1407,7 +1687,9 @@ var 科创50 = [
     "low": 1469.0996,
     "close": 1512.9765,
     "percent": 2.73,
-    "volume": 171835590
+    "volume": 171835590,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-03",
@@ -1417,7 +1699,9 @@ var 科创50 = [
     "low": 1533.2272,
     "close": 1622.8133,
     "percent": 7.26,
-    "volume": 262740474
+    "volume": 262740474,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-04",
@@ -1427,7 +1711,9 @@ var 科创50 = [
     "low": 1555.9264,
     "close": 1566.0553,
     "percent": -3.5,
-    "volume": 203627556
+    "volume": 203627556,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-05",
@@ -1437,7 +1723,9 @@ var 科创50 = [
     "low": 1558.273,
     "close": 1588.6219,
     "percent": 1.44,
-    "volume": 173097126
+    "volume": 173097126,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-06",
@@ -1447,7 +1735,9 @@ var 科创50 = [
     "low": 1555.5976,
     "close": 1573.8691,
     "percent": -0.93,
-    "volume": 175444878
+    "volume": 175444878,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-07",
@@ -1457,7 +1747,9 @@ var 科创50 = [
     "low": 1494.9116,
     "close": 1526.8035,
     "percent": -2.99,
-    "volume": 192596809
+    "volume": 192596809,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-10",
@@ -1467,7 +1759,9 @@ var 科创50 = [
     "low": 1509.6091,
     "close": 1535.5971,
     "percent": 0.58,
-    "volume": 177399138
+    "volume": 177399138,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-11",
@@ -1477,7 +1771,9 @@ var 科创50 = [
     "low": 1491.8414,
     "close": 1491.8414,
     "percent": -2.85,
-    "volume": 161333338
+    "volume": 161333338,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-12",
@@ -1487,7 +1783,9 @@ var 科创50 = [
     "low": 1426.7328,
     "close": 1458.6425,
     "percent": -2.23,
-    "volume": 172448546
+    "volume": 172448546,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-13",
@@ -1497,7 +1795,9 @@ var 科创50 = [
     "low": 1459.7162,
     "close": 1468.2291,
     "percent": 0.66,
-    "volume": 134856142
+    "volume": 134856142,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-14",
@@ -1507,7 +1807,9 @@ var 科创50 = [
     "low": 1455.4512,
     "close": 1484.0407,
     "percent": 1.08,
-    "volume": 125329896
+    "volume": 125329896,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-17",
@@ -1517,7 +1819,9 @@ var 科创50 = [
     "low": 1473.9493,
     "close": 1496.4003,
     "percent": 0.83,
-    "volume": 165296771
+    "volume": 165296771,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-18",
@@ -1527,7 +1831,9 @@ var 科创50 = [
     "low": 1495.7682,
     "close": 1512.5092,
     "percent": 1.08,
-    "volume": 155087509
+    "volume": 155087509,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-19",
@@ -1537,7 +1843,9 @@ var 科创50 = [
     "low": 1472.0213,
     "close": 1472.0213,
     "percent": -2.68,
-    "volume": 168359812
+    "volume": 168359812,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-20",
@@ -1547,7 +1855,9 @@ var 科创50 = [
     "low": 1442.3223,
     "close": 1442.5793,
     "percent": -2,
-    "volume": 117335150
+    "volume": 117335150,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-21",
@@ -1557,7 +1867,9 @@ var 科创50 = [
     "low": 1445.9133,
     "close": 1447.7135,
     "percent": 0.36,
-    "volume": 120853904
+    "volume": 120853904,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-24",
@@ -1567,7 +1879,9 @@ var 科创50 = [
     "low": 1427.218,
     "close": 1450.6667,
     "percent": 0.2,
-    "volume": 119742053
+    "volume": 119742053,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-25",
@@ -1577,7 +1891,9 @@ var 科创50 = [
     "low": 1426.1053,
     "close": 1427.7049,
     "percent": -1.58,
-    "volume": 117761881
+    "volume": 117761881,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-26",
@@ -1587,7 +1903,9 @@ var 科创50 = [
     "low": 1377.5878,
     "close": 1383.305,
     "percent": -3.11,
-    "volume": 154325711
+    "volume": 154325711,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-27",
@@ -1597,7 +1915,9 @@ var 科创50 = [
     "low": 1384.7064,
     "close": 1417.5587,
     "percent": 2.48,
-    "volume": 133196518
+    "volume": 133196518,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-28",
@@ -1607,7 +1927,9 @@ var 科创50 = [
     "low": 1394.335,
     "close": 1413.6374,
     "percent": -0.28,
-    "volume": 130178102
+    "volume": 130178102,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-08-31",
@@ -1617,7 +1939,9 @@ var 科创50 = [
     "low": 1417.6635,
     "close": 1423.2355,
     "percent": 0.68,
-    "volume": 146419252
+    "volume": 146419252,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-01",
@@ -1627,7 +1951,9 @@ var 科创50 = [
     "low": 1421.0268,
     "close": 1426.6506,
     "percent": 0.24,
-    "volume": 114998590
+    "volume": 114998590,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-02",
@@ -1637,7 +1963,9 @@ var 科创50 = [
     "low": 1412.079,
     "close": 1422.9527,
     "percent": -0.26,
-    "volume": 112765141
+    "volume": 112765141,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-03",
@@ -1647,7 +1975,9 @@ var 科创50 = [
     "low": 1399.5093,
     "close": 1402.1444,
     "percent": -1.46,
-    "volume": 106983109
+    "volume": 106983109,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-04",
@@ -1657,7 +1987,9 @@ var 科创50 = [
     "low": 1377.394,
     "close": 1390.2836,
     "percent": -0.85,
-    "volume": 102549565
+    "volume": 102549565,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-07",
@@ -1667,7 +1999,9 @@ var 科创50 = [
     "low": 1351.5889,
     "close": 1356.6991,
     "percent": -2.42,
-    "volume": 127136542
+    "volume": 127136542,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-08",
@@ -1677,7 +2011,9 @@ var 科创50 = [
     "low": 1330.3172,
     "close": 1344.6125,
     "percent": -0.89,
-    "volume": 107862948
+    "volume": 107862948,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-09",
@@ -1687,7 +2023,9 @@ var 科创50 = [
     "low": 1289.7525,
     "close": 1298.0785,
     "percent": -3.46,
-    "volume": 200377732
+    "volume": 200377732,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-10",
@@ -1697,7 +2035,9 @@ var 科创50 = [
     "low": 1277.8146,
     "close": 1280.1888,
     "percent": -1.38,
-    "volume": 131759767
+    "volume": 131759767,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-11",
@@ -1707,7 +2047,9 @@ var 科创50 = [
     "low": 1278.4042,
     "close": 1312.5123,
     "percent": 2.53,
-    "volume": 88360899
+    "volume": 88360899,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-14",
@@ -1717,7 +2059,9 @@ var 科创50 = [
     "low": 1334.9848,
     "close": 1348.0697,
     "percent": 2.71,
-    "volume": 135884252
+    "volume": 135884252,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-15",
@@ -1727,7 +2071,9 @@ var 科创50 = [
     "low": 1335.6523,
     "close": 1364.6026,
     "percent": 1.23,
-    "volume": 110397444
+    "volume": 110397444,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-16",
@@ -1737,7 +2083,9 @@ var 科创50 = [
     "low": 1343.8077,
     "close": 1349.672,
     "percent": -1.09,
-    "volume": 85150685
+    "volume": 85150685,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-17",
@@ -1747,7 +2095,9 @@ var 科创50 = [
     "low": 1335.9204,
     "close": 1383.5899,
     "percent": 2.51,
-    "volume": 211738987
+    "volume": 211738987,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-18",
@@ -1757,7 +2107,9 @@ var 科创50 = [
     "low": 1382.8002,
     "close": 1403.8989,
     "percent": 1.47,
-    "volume": 159985461
+    "volume": 159985461,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-21",
@@ -1767,7 +2119,9 @@ var 科创50 = [
     "low": 1391.5718,
     "close": 1397.7464,
     "percent": -0.44,
-    "volume": 124980477
+    "volume": 124980477,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-22",
@@ -1777,7 +2131,9 @@ var 科创50 = [
     "low": 1381.5313,
     "close": 1390.0862,
     "percent": -0.55,
-    "volume": 120443015
+    "volume": 120443015,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-23",
@@ -1787,7 +2143,9 @@ var 科创50 = [
     "low": 1401.3748,
     "close": 1423.9036,
     "percent": 2.43,
-    "volume": 205041936
+    "volume": 205041936,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-24",
@@ -1797,7 +2155,9 @@ var 科创50 = [
     "low": 1392.1694,
     "close": 1394.9264,
     "percent": -2.04,
-    "volume": 151423923
+    "volume": 151423923,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-25",
@@ -1807,7 +2167,9 @@ var 科创50 = [
     "low": 1361.9616,
     "close": 1364.0245,
     "percent": -2.22,
-    "volume": 108522827
+    "volume": 108522827,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-28",
@@ -1817,7 +2179,9 @@ var 科创50 = [
     "low": 1337.246,
     "close": 1338.9521,
     "percent": -1.84,
-    "volume": 91111509
+    "volume": 91111509,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-29",
@@ -1827,7 +2191,9 @@ var 科创50 = [
     "low": 1345.9908,
     "close": 1389.9628,
     "percent": 3.81,
-    "volume": 110307599
+    "volume": 110307599,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-09-30",
@@ -1837,7 +2203,9 @@ var 科创50 = [
     "low": 1394.8632,
     "close": 1418.7961,
     "percent": 2.07,
-    "volume": 114064705
+    "volume": 114064705,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-09",
@@ -1847,7 +2215,9 @@ var 科创50 = [
     "low": 1446.5161,
     "close": 1465.9592,
     "percent": 3.32,
-    "volume": 154500333
+    "volume": 154500333,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-12",
@@ -1857,7 +2227,9 @@ var 科创50 = [
     "low": 1470.4561,
     "close": 1490.5754,
     "percent": 1.68,
-    "volume": 191896323
+    "volume": 191896323,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-13",
@@ -1867,7 +2239,9 @@ var 科创50 = [
     "low": 1488.5631,
     "close": 1497.5956,
     "percent": 0.47,
-    "volume": 138784833
+    "volume": 138784833,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-14",
@@ -1877,7 +2251,9 @@ var 科创50 = [
     "low": 1484.121,
     "close": 1488.6697,
     "percent": -0.6,
-    "volume": 138650712
+    "volume": 138650712,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-15",
@@ -1887,7 +2263,9 @@ var 科创50 = [
     "low": 1452.864,
     "close": 1453.7888,
     "percent": -2.34,
-    "volume": 104785457
+    "volume": 104785457,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-16",
@@ -1897,7 +2275,9 @@ var 科创50 = [
     "low": 1429.4425,
     "close": 1438.5283,
     "percent": -1.05,
-    "volume": 104263073
+    "volume": 104263073,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-19",
@@ -1907,7 +2287,9 @@ var 科创50 = [
     "low": 1411.3674,
     "close": 1412.1484,
     "percent": -1.83,
-    "volume": 100507057
+    "volume": 100507057,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-20",
@@ -1917,7 +2299,9 @@ var 科创50 = [
     "low": 1405.3858,
     "close": 1426.181,
     "percent": 0.99,
-    "volume": 89125995
+    "volume": 89125995,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-21",
@@ -1927,7 +2311,9 @@ var 科创50 = [
     "low": 1396.9655,
     "close": 1396.9773,
     "percent": -2.05,
-    "volume": 107782528
+    "volume": 107782528,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-22",
@@ -1937,7 +2323,9 @@ var 科创50 = [
     "low": 1375.1141,
     "close": 1376.5805,
     "percent": -1.46,
-    "volume": 85625278
+    "volume": 85625278,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-23",
@@ -1947,7 +2335,9 @@ var 科创50 = [
     "low": 1336.527,
     "close": 1336.527,
     "percent": -2.91,
-    "volume": 99389555
+    "volume": 99389555,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-26",
@@ -1957,7 +2347,9 @@ var 科创50 = [
     "low": 1317.2282,
     "close": 1356.1074,
     "percent": 1.47,
-    "volume": 83751167
+    "volume": 83751167,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-27",
@@ -1967,7 +2359,9 @@ var 科创50 = [
     "low": 1359.1758,
     "close": 1385.7453,
     "percent": 2.19,
-    "volume": 83326248
+    "volume": 83326248,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-28",
@@ -1977,7 +2371,9 @@ var 科创50 = [
     "low": 1393.1404,
     "close": 1406.0746,
     "percent": 1.47,
-    "volume": 103059419
+    "volume": 103059419,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-29",
@@ -1987,7 +2383,9 @@ var 科创50 = [
     "low": 1392.8018,
     "close": 1412.0554,
     "percent": 0.43,
-    "volume": 109925795
+    "volume": 109925795,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-10-30",
@@ -1997,7 +2395,9 @@ var 科创50 = [
     "low": 1393.9095,
     "close": 1393.9095,
     "percent": -1.29,
-    "volume": 143577796
+    "volume": 143577796,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-02",
@@ -2007,7 +2407,9 @@ var 科创50 = [
     "low": 1371.0303,
     "close": 1400.9122,
     "percent": 0.5,
-    "volume": 123017638
+    "volume": 123017638,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-03",
@@ -2017,7 +2419,9 @@ var 科创50 = [
     "low": 1403.643,
     "close": 1449.0069,
     "percent": 3.43,
-    "volume": 113125270
+    "volume": 113125270,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-04",
@@ -2027,7 +2431,9 @@ var 科创50 = [
     "low": 1446.8716,
     "close": 1458.8958,
     "percent": 0.68,
-    "volume": 93621116
+    "volume": 93621116,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-05",
@@ -2037,7 +2443,9 @@ var 科创50 = [
     "low": 1455.0121,
     "close": 1475.3752,
     "percent": 1.13,
-    "volume": 120175634
+    "volume": 120175634,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-06",
@@ -2047,7 +2455,9 @@ var 科创50 = [
     "low": 1431.3576,
     "close": 1441.4739,
     "percent": -2.3,
-    "volume": 116655418
+    "volume": 116655418,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-09",
@@ -2057,7 +2467,9 @@ var 科创50 = [
     "low": 1444.2122,
     "close": 1485.1478,
     "percent": 3.03,
-    "volume": 182499932
+    "volume": 182499932,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-10",
@@ -2067,7 +2479,9 @@ var 科创50 = [
     "low": 1441.404,
     "close": 1441.9651,
     "percent": -2.91,
-    "volume": 117214932
+    "volume": 117214932,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-11",
@@ -2077,7 +2491,9 @@ var 科创50 = [
     "low": 1395.51,
     "close": 1395.51,
     "percent": -3.22,
-    "volume": 103010340
+    "volume": 103010340,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-12",
@@ -2087,7 +2503,9 @@ var 科创50 = [
     "low": 1404.8095,
     "close": 1413.2937,
     "percent": 1.27,
-    "volume": 82633413
+    "volume": 82633413,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-13",
@@ -2097,7 +2515,9 @@ var 科创50 = [
     "low": 1403.8426,
     "close": 1436.887,
     "percent": 1.67,
-    "volume": 95438149
+    "volume": 95438149,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-16",
@@ -2107,7 +2527,9 @@ var 科创50 = [
     "low": 1445.0323,
     "close": 1446.9514,
     "percent": 0.7,
-    "volume": 151922126
+    "volume": 151922126,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-17",
@@ -2117,7 +2539,9 @@ var 科创50 = [
     "low": 1426.538,
     "close": 1430.8085,
     "percent": -1.12,
-    "volume": 116400219
+    "volume": 116400219,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-18",
@@ -2127,7 +2551,9 @@ var 科创50 = [
     "low": 1418.6626,
     "close": 1419.2263,
     "percent": -0.81,
-    "volume": 103015893
+    "volume": 103015893,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-19",
@@ -2137,7 +2563,9 @@ var 科创50 = [
     "low": 1410.8612,
     "close": 1435.9246,
     "percent": 1.18,
-    "volume": 87772978
+    "volume": 87772978,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-20",
@@ -2147,7 +2575,9 @@ var 科创50 = [
     "low": 1429.2232,
     "close": 1430.7198,
     "percent": -0.36,
-    "volume": 92145365
+    "volume": 92145365,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-23",
@@ -2157,7 +2587,9 @@ var 科创50 = [
     "low": 1412.708,
     "close": 1418.1015,
     "percent": -0.88,
-    "volume": 110188903
+    "volume": 110188903,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-24",
@@ -2167,7 +2599,9 @@ var 科创50 = [
     "low": 1412.0245,
     "close": 1412.7466,
     "percent": -0.38,
-    "volume": 95910818
+    "volume": 95910818,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-25",
@@ -2177,7 +2611,9 @@ var 科创50 = [
     "low": 1388.316,
     "close": 1388.3639,
     "percent": -1.73,
-    "volume": 100504926
+    "volume": 100504926,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-26",
@@ -2187,7 +2623,9 @@ var 科创50 = [
     "low": 1380.8531,
     "close": 1385.3103,
     "percent": -0.22,
-    "volume": 85831194
+    "volume": 85831194,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-27",
@@ -2197,7 +2635,9 @@ var 科创50 = [
     "low": 1381.7331,
     "close": 1387.7688,
     "percent": 0.18,
-    "volume": 83507687
+    "volume": 83507687,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-11-30",
@@ -2207,7 +2647,9 @@ var 科创50 = [
     "low": 1383.4072,
     "close": 1385.4828,
     "percent": -0.17,
-    "volume": 115761791
+    "volume": 115761791,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-01",
@@ -2217,7 +2659,9 @@ var 科创50 = [
     "low": 1386.5779,
     "close": 1404.2375,
     "percent": 1.35,
-    "volume": 89651649
+    "volume": 89651649,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-02",
@@ -2227,7 +2671,9 @@ var 科创50 = [
     "low": 1406.4463,
     "close": 1408.4882,
     "percent": 0.3,
-    "volume": 112340253
+    "volume": 112340253,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-03",
@@ -2237,7 +2683,9 @@ var 科创50 = [
     "low": 1399.8139,
     "close": 1410.8293,
     "percent": 0.17,
-    "volume": 91608767
+    "volume": 91608767,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-04",
@@ -2247,7 +2695,9 @@ var 科创50 = [
     "low": 1402.3658,
     "close": 1404.8659,
     "percent": -0.42,
-    "volume": 81279478
+    "volume": 81279478,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-07",
@@ -2257,7 +2707,9 @@ var 科创50 = [
     "low": 1404.4193,
     "close": 1406.1942,
     "percent": 0.1,
-    "volume": 114011790
+    "volume": 114011790,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-08",
@@ -2267,7 +2719,9 @@ var 科创50 = [
     "low": 1398.0646,
     "close": 1398.7299,
     "percent": -0.53,
-    "volume": 126364749
+    "volume": 126364749,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-09",
@@ -2277,7 +2731,9 @@ var 科创50 = [
     "low": 1365.0375,
     "close": 1365.0375,
     "percent": -2.41,
-    "volume": 151853414
+    "volume": 151853414,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-10",
@@ -2287,7 +2743,9 @@ var 科创50 = [
     "low": 1357.6862,
     "close": 1360.1843,
     "percent": -0.36,
-    "volume": 168930335
+    "volume": 168930335,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-11",
@@ -2297,7 +2755,9 @@ var 科创50 = [
     "low": 1346.3846,
     "close": 1362.9608,
     "percent": 0.2,
-    "volume": 249308884
+    "volume": 249308884,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-14",
@@ -2307,7 +2767,9 @@ var 科创50 = [
     "low": 1356.0271,
     "close": 1375.0636,
     "percent": 0.89,
-    "volume": 192992196
+    "volume": 192992196,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-15",
@@ -2317,7 +2779,9 @@ var 科创50 = [
     "low": 1358.3551,
     "close": 1363.1833,
     "percent": -0.86,
-    "volume": 202310335
+    "volume": 202310335,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-16",
@@ -2327,7 +2791,9 @@ var 科创50 = [
     "low": 1341.5923,
     "close": 1345.1327,
     "percent": -1.32,
-    "volume": 219678934
+    "volume": 219678934,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-17",
@@ -2337,7 +2803,9 @@ var 科创50 = [
     "low": 1343.2814,
     "close": 1363.3595,
     "percent": 1.36,
-    "volume": 175518337
+    "volume": 175518337,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-18",
@@ -2347,7 +2815,9 @@ var 科创50 = [
     "low": 1358.6609,
     "close": 1361.108,
     "percent": -0.17,
-    "volume": 164691583
+    "volume": 164691583,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-21",
@@ -2357,7 +2827,9 @@ var 科创50 = [
     "low": 1359.6852,
     "close": 1388.6685,
     "percent": 2.03,
-    "volume": 198381484
+    "volume": 198381484,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-22",
@@ -2367,7 +2839,9 @@ var 科创50 = [
     "low": 1356.5371,
     "close": 1358.6186,
     "percent": -2.16,
-    "volume": 185044245
+    "volume": 185044245,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-23",
@@ -2377,7 +2851,9 @@ var 科创50 = [
     "low": 1356.4229,
     "close": 1376.5953,
     "percent": 1.32,
-    "volume": 176575270
+    "volume": 176575270,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-24",
@@ -2387,7 +2863,9 @@ var 科创50 = [
     "low": 1348.0134,
     "close": 1348.0134,
     "percent": -2.08,
-    "volume": 158088501
+    "volume": 158088501,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-25",
@@ -2397,7 +2875,9 @@ var 科创50 = [
     "low": 1343.4093,
     "close": 1349.7932,
     "percent": 0.13,
-    "volume": 151953708
+    "volume": 151953708,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-28",
@@ -2407,7 +2887,9 @@ var 科创50 = [
     "low": 1335.7061,
     "close": 1339.0069,
     "percent": -0.8,
-    "volume": 164114355
+    "volume": 164114355,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-29",
@@ -2417,7 +2899,9 @@ var 科创50 = [
     "low": 1336.9104,
     "close": 1337.4697,
     "percent": -0.12,
-    "volume": 140743720
+    "volume": 140743720,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-30",
@@ -2427,7 +2911,9 @@ var 科创50 = [
     "low": 1336.7202,
     "close": 1362.9107,
     "percent": 1.9,
-    "volume": 198135748
+    "volume": 198135748,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2020-12-31",
@@ -2437,7 +2923,9 @@ var 科创50 = [
     "low": 1370.4414,
     "close": 1393.0272,
     "percent": 2.21,
-    "volume": 226877386
+    "volume": 226877386,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-04",
@@ -2447,7 +2935,9 @@ var 科创50 = [
     "low": 1397.5047,
     "close": 1422.1246,
     "percent": 2.09,
-    "volume": 226209084
+    "volume": 226209084,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-05",
@@ -2457,7 +2947,9 @@ var 科创50 = [
     "low": 1411.6738,
     "close": 1425.1601,
     "percent": 0.21,
-    "volume": 243516740
+    "volume": 243516740,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-06",
@@ -2467,7 +2959,9 @@ var 科创50 = [
     "low": 1409.907,
     "close": 1415.0222,
     "percent": -0.71,
-    "volume": 255938745
+    "volume": 255938745,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-07",
@@ -2477,7 +2971,9 @@ var 科创50 = [
     "low": 1372.1734,
     "close": 1381.9421,
     "percent": -2.34,
-    "volume": 241362208
+    "volume": 241362208,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-08",
@@ -2487,7 +2983,9 @@ var 科创50 = [
     "low": 1367.7764,
     "close": 1378.7398,
     "percent": -0.23,
-    "volume": 233493730
+    "volume": 233493730,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-11",
@@ -2497,7 +2995,9 @@ var 科创50 = [
     "low": 1380.396,
     "close": 1390.6554,
     "percent": 0.86,
-    "volume": 261926466
+    "volume": 261926466,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-12",
@@ -2507,7 +3007,9 @@ var 科创50 = [
     "low": 1383.5566,
     "close": 1405.2227,
     "percent": 1.05,
-    "volume": 187406871
+    "volume": 187406871,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-13",
@@ -2517,7 +3019,9 @@ var 科创50 = [
     "low": 1390.6188,
     "close": 1407.4146,
     "percent": 0.16,
-    "volume": 241864870
+    "volume": 241864870,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-14",
@@ -2527,7 +3031,9 @@ var 科创50 = [
     "low": 1405.7063,
     "close": 1447.2669,
     "percent": 2.83,
-    "volume": 421889309
+    "volume": 421889309,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-15",
@@ -2537,7 +3043,9 @@ var 科创50 = [
     "low": 1432.5857,
     "close": 1447.5828,
     "percent": 0.02,
-    "volume": 311857185
+    "volume": 311857185,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-18",
@@ -2547,7 +3055,9 @@ var 科创50 = [
     "low": 1440.7731,
     "close": 1481.2494,
     "percent": 2.33,
-    "volume": 269640619
+    "volume": 269640619,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-19",
@@ -2557,7 +3067,9 @@ var 科创50 = [
     "low": 1443.9205,
     "close": 1443.9205,
     "percent": -2.52,
-    "volume": 248880002
+    "volume": 248880002,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-20",
@@ -2567,7 +3079,9 @@ var 科创50 = [
     "low": 1450.7178,
     "close": 1481.4526,
     "percent": 2.6,
-    "volume": 219018690
+    "volume": 219018690,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-21",
@@ -2577,7 +3091,9 @@ var 科创50 = [
     "low": 1469.9159,
     "close": 1482.2847,
     "percent": 0.06,
-    "volume": 219482534
+    "volume": 219482534,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-22",
@@ -2587,7 +3103,9 @@ var 科创50 = [
     "low": 1456.6122,
     "close": 1486.3075,
     "percent": 0.27,
-    "volume": 227471669
+    "volume": 227471669,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-25",
@@ -2597,7 +3115,9 @@ var 科创50 = [
     "low": 1474.237,
     "close": 1498.5951,
     "percent": 0.83,
-    "volume": 215620488
+    "volume": 215620488,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-26",
@@ -2607,7 +3127,9 @@ var 科创50 = [
     "low": 1473.4111,
     "close": 1478.4511,
     "percent": -1.34,
-    "volume": 194746465
+    "volume": 194746465,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-27",
@@ -2617,7 +3139,9 @@ var 科创50 = [
     "low": 1447.0935,
     "close": 1458.3724,
     "percent": -1.36,
-    "volume": 163643532
+    "volume": 163643532,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-28",
@@ -2627,7 +3151,9 @@ var 科创50 = [
     "low": 1421.4982,
     "close": 1421.5872,
     "percent": -2.52,
-    "volume": 149344743
+    "volume": 149344743,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-01-29",
@@ -2637,7 +3163,9 @@ var 科创50 = [
     "low": 1402.7936,
     "close": 1421.9619,
     "percent": 0.03,
-    "volume": 172904465
+    "volume": 172904465,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-01",
@@ -2647,7 +3175,9 @@ var 科创50 = [
     "low": 1412.7618,
     "close": 1421.4808,
     "percent": -0.03,
-    "volume": 140889623
+    "volume": 140889623,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-02",
@@ -2657,7 +3187,9 @@ var 科创50 = [
     "low": 1417.6187,
     "close": 1438.0585,
     "percent": 1.17,
-    "volume": 143798605
+    "volume": 143798605,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-03",
@@ -2667,7 +3199,9 @@ var 科创50 = [
     "low": 1410.1466,
     "close": 1410.1466,
     "percent": -1.94,
-    "volume": 197920135
+    "volume": 197920135,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-04",
@@ -2677,7 +3211,9 @@ var 科创50 = [
     "low": 1368.8479,
     "close": 1394.0966,
     "percent": -1.14,
-    "volume": 186370510
+    "volume": 186370510,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-05",
@@ -2687,7 +3223,9 @@ var 科创50 = [
     "low": 1368.8004,
     "close": 1368.8004,
     "percent": -1.82,
-    "volume": 169214376
+    "volume": 169214376,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-08",
@@ -2697,7 +3235,9 @@ var 科创50 = [
     "low": 1371.7544,
     "close": 1382.4817,
     "percent": 1,
-    "volume": 130526410
+    "volume": 130526410,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-09",
@@ -2707,7 +3247,9 @@ var 科创50 = [
     "low": 1389.0652,
     "close": 1427.6823,
     "percent": 3.27,
-    "volume": 142835400
+    "volume": 142835400,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-10",
@@ -2717,7 +3259,9 @@ var 科创50 = [
     "low": 1413.64,
     "close": 1437.0248,
     "percent": 0.65,
-    "volume": 152693835
+    "volume": 152693835,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-18",
@@ -2727,7 +3271,9 @@ var 科创50 = [
     "low": 1429.7401,
     "close": 1429.7401,
     "percent": -0.51,
-    "volume": 213531602
+    "volume": 213531602,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-19",
@@ -2737,7 +3283,9 @@ var 科创50 = [
     "low": 1404.8158,
     "close": 1427.9066,
     "percent": -0.13,
-    "volume": 170331564
+    "volume": 170331564,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-22",
@@ -2747,7 +3295,9 @@ var 科创50 = [
     "low": 1389.1261,
     "close": 1389.916,
     "percent": -2.66,
-    "volume": 229679704
+    "volume": 229679704,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-23",
@@ -2757,7 +3307,9 @@ var 科创50 = [
     "low": 1371.6266,
     "close": 1390.5265,
     "percent": 0.04,
-    "volume": 169855255
+    "volume": 169855255,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-24",
@@ -2767,7 +3319,9 @@ var 科创50 = [
     "low": 1363.4151,
     "close": 1365.6373,
     "percent": -1.79,
-    "volume": 179892505
+    "volume": 179892505,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-25",
@@ -2777,7 +3331,9 @@ var 科创50 = [
     "low": 1349.7111,
     "close": 1349.7111,
     "percent": -1.17,
-    "volume": 160949955
+    "volume": 160949955,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-02-26",
@@ -2787,7 +3343,9 @@ var 科创50 = [
     "low": 1319.8903,
     "close": 1325.5865,
     "percent": -1.79,
-    "volume": 158902325
+    "volume": 158902325,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-01",
@@ -2797,7 +3355,9 @@ var 科创50 = [
     "low": 1337.887,
     "close": 1358.1412,
     "percent": 2.46,
-    "volume": 177828561
+    "volume": 177828561,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-02",
@@ -2807,7 +3367,9 @@ var 科创50 = [
     "low": 1345.7115,
     "close": 1352.0437,
     "percent": -0.45,
-    "volume": 177372764
+    "volume": 177372764,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-03",
@@ -2817,7 +3379,9 @@ var 科创50 = [
     "low": 1341.0823,
     "close": 1359.3978,
     "percent": 0.54,
-    "volume": 133152105
+    "volume": 133152105,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-04",
@@ -2827,7 +3391,9 @@ var 科创50 = [
     "low": 1323.0225,
     "close": 1324.1584,
     "percent": -2.59,
-    "volume": 204439708
+    "volume": 204439708,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-05",
@@ -2837,7 +3403,9 @@ var 科创50 = [
     "low": 1307.0637,
     "close": 1329.8392,
     "percent": 0.43,
-    "volume": 137937518
+    "volume": 137937518,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-08",
@@ -2847,7 +3415,9 @@ var 科创50 = [
     "low": 1275.4563,
     "close": 1275.4563,
     "percent": -4.09,
-    "volume": 194655799
+    "volume": 194655799,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-09",
@@ -2857,7 +3427,9 @@ var 科创50 = [
     "low": 1228.3787,
     "close": 1230.1371,
     "percent": -3.55,
-    "volume": 181049436
+    "volume": 181049436,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-10",
@@ -2867,7 +3439,9 @@ var 科创50 = [
     "low": 1230.6561,
     "close": 1232.7351,
     "percent": 0.21,
-    "volume": 133160301
+    "volume": 133160301,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-11",
@@ -2877,7 +3451,9 @@ var 科创50 = [
     "low": 1229.2108,
     "close": 1267.301,
     "percent": 2.8,
-    "volume": 157883547
+    "volume": 157883547,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-12",
@@ -2887,7 +3463,9 @@ var 科创50 = [
     "low": 1251.8983,
     "close": 1261.3246,
     "percent": -0.47,
-    "volume": 125499249
+    "volume": 125499249,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-15",
@@ -2897,7 +3475,9 @@ var 科创50 = [
     "low": 1215.3509,
     "close": 1223.3899,
     "percent": -3.01,
-    "volume": 142602796
+    "volume": 142602796,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-16",
@@ -2907,7 +3487,9 @@ var 科创50 = [
     "low": 1213.7504,
     "close": 1220.3665,
     "percent": -0.25,
-    "volume": 134289405
+    "volume": 134289405,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-17",
@@ -2917,7 +3499,9 @@ var 科创50 = [
     "low": 1214.2069,
     "close": 1236.5407,
     "percent": 1.33,
-    "volume": 114863713
+    "volume": 114863713,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-18",
@@ -2927,7 +3511,9 @@ var 科创50 = [
     "low": 1239.7548,
     "close": 1241.31,
     "percent": 0.39,
-    "volume": 120712690
+    "volume": 120712690,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-19",
@@ -2937,7 +3523,9 @@ var 科创50 = [
     "low": 1224.4469,
     "close": 1231.2923,
     "percent": -0.81,
-    "volume": 146246481
+    "volume": 146246481,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-22",
@@ -2947,7 +3535,9 @@ var 科创50 = [
     "low": 1229.467,
     "close": 1242.7556,
     "percent": 0.93,
-    "volume": 112874685
+    "volume": 112874685,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-23",
@@ -2957,7 +3547,9 @@ var 科创50 = [
     "low": 1234.4874,
     "close": 1236.4736,
     "percent": -0.51,
-    "volume": 126709555
+    "volume": 126709555,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-24",
@@ -2967,7 +3559,9 @@ var 科创50 = [
     "low": 1220.6086,
     "close": 1221.4469,
     "percent": -1.22,
-    "volume": 125498547
+    "volume": 125498547,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-25",
@@ -2977,7 +3571,9 @@ var 科创50 = [
     "low": 1212.8301,
     "close": 1219.7098,
     "percent": -0.14,
-    "volume": 113586503
+    "volume": 113586503,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-26",
@@ -2987,7 +3583,9 @@ var 科创50 = [
     "low": 1224.6435,
     "close": 1256.6638,
     "percent": 3.03,
-    "volume": 132586857
+    "volume": 132586857,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-29",
@@ -2997,7 +3595,9 @@ var 科创50 = [
     "low": 1250.3599,
     "close": 1250.7696,
     "percent": -0.47,
-    "volume": 116066800
+    "volume": 116066800,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-30",
@@ -3007,7 +3607,9 @@ var 科创50 = [
     "low": 1245.3573,
     "close": 1248.3416,
     "percent": -0.19,
-    "volume": 112539510
+    "volume": 112539510,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-03-31",
@@ -3017,7 +3619,9 @@ var 科创50 = [
     "low": 1238.0164,
     "close": 1248.3317,
     "percent": 0,
-    "volume": 111212530
+    "volume": 111212530,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-01",
@@ -3027,7 +3631,9 @@ var 科创50 = [
     "low": 1250.9979,
     "close": 1266.7452,
     "percent": 1.48,
-    "volume": 152857963
+    "volume": 152857963,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-02",
@@ -3037,7 +3643,9 @@ var 科创50 = [
     "low": 1276.0342,
     "close": 1299.9199,
     "percent": 2.62,
-    "volume": 218527502
+    "volume": 218527502,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-06",
@@ -3047,7 +3655,9 @@ var 科创50 = [
     "low": 1293.7297,
     "close": 1296.6197,
     "percent": -0.25,
-    "volume": 123530507
+    "volume": 123530507,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-07",
@@ -3057,7 +3667,9 @@ var 科创50 = [
     "low": 1283.7387,
     "close": 1298.7848,
     "percent": 0.17,
-    "volume": 133724519
+    "volume": 133724519,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-08",
@@ -3067,7 +3679,9 @@ var 科创50 = [
     "low": 1287.5283,
     "close": 1291.8566,
     "percent": -0.53,
-    "volume": 139954481
+    "volume": 139954481,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-09",
@@ -3077,7 +3691,9 @@ var 科创50 = [
     "low": 1270.925,
     "close": 1271.4429,
     "percent": -1.58,
-    "volume": 122499461
+    "volume": 122499461,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-12",
@@ -3087,7 +3703,9 @@ var 科创50 = [
     "low": 1241.1111,
     "close": 1243.496,
     "percent": -2.2,
-    "volume": 132630179
+    "volume": 132630179,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-13",
@@ -3097,7 +3715,9 @@ var 科创50 = [
     "low": 1240.4368,
     "close": 1241.398,
     "percent": -0.17,
-    "volume": 102168387
+    "volume": 102168387,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-14",
@@ -3107,7 +3727,9 @@ var 科创50 = [
     "low": 1243.2447,
     "close": 1254.7098,
     "percent": 1.07,
-    "volume": 113884036
+    "volume": 113884036,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-15",
@@ -3117,7 +3739,9 @@ var 科创50 = [
     "low": 1246.1268,
     "close": 1264.1578,
     "percent": 0.75,
-    "volume": 119895438
+    "volume": 119895438,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-16",
@@ -3127,7 +3751,9 @@ var 科创50 = [
     "low": 1258.4366,
     "close": 1274.7024,
     "percent": 0.83,
-    "volume": 133554536
+    "volume": 133554536,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-19",
@@ -3137,7 +3763,9 @@ var 科创50 = [
     "low": 1271.6995,
     "close": 1299.0072,
     "percent": 1.91,
-    "volume": 167305204
+    "volume": 167305204,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-20",
@@ -3147,7 +3775,9 @@ var 科创50 = [
     "low": 1290.5027,
     "close": 1290.5027,
     "percent": -0.66,
-    "volume": 161773329
+    "volume": 161773329,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-21",
@@ -3157,7 +3787,9 @@ var 科创50 = [
     "low": 1276.9668,
     "close": 1286.855,
     "percent": -0.28,
-    "volume": 135453296
+    "volume": 135453296,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-22",
@@ -3167,7 +3799,9 @@ var 科创50 = [
     "low": 1288.5833,
     "close": 1305.1805,
     "percent": 1.42,
-    "volume": 132543057
+    "volume": 132543057,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-23",
@@ -3177,7 +3811,9 @@ var 科创50 = [
     "low": 1303.2926,
     "close": 1311.8273,
     "percent": 0.51,
-    "volume": 117294509
+    "volume": 117294509,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-26",
@@ -3187,7 +3823,9 @@ var 科创50 = [
     "low": 1314.9073,
     "close": 1314.9073,
     "percent": 0.24,
-    "volume": 201584198
+    "volume": 201584198,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-27",
@@ -3197,7 +3835,9 @@ var 科创50 = [
     "low": 1299.0856,
     "close": 1311.9129,
     "percent": -0.23,
-    "volume": 143302285
+    "volume": 143302285,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-28",
@@ -3207,7 +3847,9 @@ var 科创50 = [
     "low": 1304.7859,
     "close": 1324.2359,
     "percent": 0.94,
-    "volume": 126962982
+    "volume": 126962982,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-29",
@@ -3217,7 +3859,9 @@ var 科创50 = [
     "low": 1314.8383,
     "close": 1324.0547,
     "percent": -0.01,
-    "volume": 149430540
+    "volume": 149430540,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-04-30",
@@ -3227,7 +3871,9 @@ var 科创50 = [
     "low": 1314.5051,
     "close": 1322.2396,
     "percent": -0.14,
-    "volume": 181221344
+    "volume": 181221344,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-06",
@@ -3237,7 +3883,9 @@ var 科创50 = [
     "low": 1299.38,
     "close": 1310.1251,
     "percent": -0.92,
-    "volume": 143573640
+    "volume": 143573640,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-07",
@@ -3247,7 +3895,9 @@ var 科创50 = [
     "low": 1263.8969,
     "close": 1263.8969,
     "percent": -3.53,
-    "volume": 160294135
+    "volume": 160294135,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-10",
@@ -3257,7 +3907,9 @@ var 科创50 = [
     "low": 1250.3518,
     "close": 1254.486,
     "percent": -0.75,
-    "volume": 148820371
+    "volume": 148820371,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-11",
@@ -3267,7 +3919,9 @@ var 科创50 = [
     "low": 1240.3891,
     "close": 1258.1073,
     "percent": 0.29,
-    "volume": 119237004
+    "volume": 119237004,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-12",
@@ -3277,7 +3931,9 @@ var 科创50 = [
     "low": 1252.7573,
     "close": 1270.9075,
     "percent": 1.02,
-    "volume": 131270629
+    "volume": 131270629,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-13",
@@ -3287,7 +3943,9 @@ var 科创50 = [
     "low": 1257.8667,
     "close": 1275.4767,
     "percent": 0.36,
-    "volume": 142064685
+    "volume": 142064685,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-14",
@@ -3297,7 +3955,9 @@ var 科创50 = [
     "low": 1276.8416,
     "close": 1300.5353,
     "percent": 1.97,
-    "volume": 149662441
+    "volume": 149662441,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-17",
@@ -3307,7 +3967,9 @@ var 科创50 = [
     "low": 1303.0828,
     "close": 1328.9165,
     "percent": 2.18,
-    "volume": 174721019
+    "volume": 174721019,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-18",
@@ -3317,7 +3979,9 @@ var 科创50 = [
     "low": 1317.4191,
     "close": 1321.6411,
     "percent": -0.55,
-    "volume": 129009841
+    "volume": 129009841,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-19",
@@ -3327,7 +3991,9 @@ var 科创50 = [
     "low": 1320.6797,
     "close": 1326.1434,
     "percent": 0.34,
-    "volume": 125694935
+    "volume": 125694935,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-20",
@@ -3337,7 +4003,9 @@ var 科创50 = [
     "low": 1322.0458,
     "close": 1329.7909,
     "percent": 0.28,
-    "volume": 129974824
+    "volume": 129974824,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-21",
@@ -3347,7 +4015,9 @@ var 科创50 = [
     "low": 1314.8762,
     "close": 1315.2065,
     "percent": -1.1,
-    "volume": 150574136
+    "volume": 150574136,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-24",
@@ -3357,7 +4027,9 @@ var 科创50 = [
     "low": 1305.4624,
     "close": 1330.8722,
     "percent": 1.19,
-    "volume": 160986998
+    "volume": 160986998,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-25",
@@ -3367,7 +4039,9 @@ var 科创50 = [
     "low": 1329.6763,
     "close": 1370.1211,
     "percent": 2.95,
-    "volume": 180323696
+    "volume": 180323696,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-26",
@@ -3377,7 +4051,9 @@ var 科创50 = [
     "low": 1361.4319,
     "close": 1364.0369,
     "percent": -0.44,
-    "volume": 167695031
+    "volume": 167695031,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-27",
@@ -3387,7 +4063,9 @@ var 科创50 = [
     "low": 1362.9474,
     "close": 1397.7685,
     "percent": 2.47,
-    "volume": 288585962
+    "volume": 288585962,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-28",
@@ -3397,7 +4075,9 @@ var 科创50 = [
     "low": 1382.6197,
     "close": 1386.0386,
     "percent": -0.84,
-    "volume": 216464152
+    "volume": 216464152,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-05-31",
@@ -3407,7 +4087,9 @@ var 科创50 = [
     "low": 1398.1926,
     "close": 1442.6682,
     "percent": 4.09,
-    "volume": 238863707
+    "volume": 238863707,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-01",
@@ -3417,7 +4099,9 @@ var 科创50 = [
     "low": 1437.317,
     "close": 1460.5432,
     "percent": 1.24,
-    "volume": 315974251
+    "volume": 315974251,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-02",
@@ -3427,7 +4111,9 @@ var 科创50 = [
     "low": 1425.5336,
     "close": 1426.8466,
     "percent": -2.31,
-    "volume": 270787979
+    "volume": 270787979,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-03",
@@ -3437,7 +4123,9 @@ var 科创50 = [
     "low": 1413.512,
     "close": 1414.5343,
     "percent": -0.86,
-    "volume": 204524452
+    "volume": 204524452,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-04",
@@ -3447,7 +4135,9 @@ var 科创50 = [
     "low": 1406.3146,
     "close": 1431.522,
     "percent": 1.2,
-    "volume": 218602804
+    "volume": 218602804,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-07",
@@ -3457,7 +4147,9 @@ var 科创50 = [
     "low": 1427.0756,
     "close": 1433.5651,
     "percent": 0.14,
-    "volume": 263324119
+    "volume": 263324119,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-08",
@@ -3467,7 +4159,9 @@ var 科创50 = [
     "low": 1412.4568,
     "close": 1419.0751,
     "percent": -1.01,
-    "volume": 236310214
+    "volume": 236310214,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-09",
@@ -3477,7 +4171,9 @@ var 科创50 = [
     "low": 1418.5259,
     "close": 1427.3211,
     "percent": 0.58,
-    "volume": 206788776
+    "volume": 206788776,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-10",
@@ -3487,7 +4183,9 @@ var 科创50 = [
     "low": 1427.8708,
     "close": 1450.4039,
     "percent": 1.62,
-    "volume": 277999522
+    "volume": 277999522,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-11",
@@ -3497,7 +4195,9 @@ var 科创50 = [
     "low": 1435.9983,
     "close": 1436.2755,
     "percent": -0.97,
-    "volume": 313937866
+    "volume": 313937866,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-15",
@@ -3507,7 +4207,9 @@ var 科创50 = [
     "low": 1439.28,
     "close": 1448.2004,
     "percent": 0.83,
-    "volume": 246890253
+    "volume": 246890253,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-16",
@@ -3517,7 +4219,9 @@ var 科创50 = [
     "low": 1405.9315,
     "close": 1406.4701,
     "percent": -2.88,
-    "volume": 226982853
+    "volume": 226982853,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-17",
@@ -3527,7 +4231,9 @@ var 科创50 = [
     "low": 1409.0465,
     "close": 1473.5119,
     "percent": 4.77,
-    "volume": 378399556
+    "volume": 378399556,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-18",
@@ -3537,7 +4243,9 @@ var 科创50 = [
     "low": 1475.2089,
     "close": 1494.701,
     "percent": 1.44,
-    "volume": 320243323
+    "volume": 320243323,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-21",
@@ -3547,7 +4255,9 @@ var 科创50 = [
     "low": 1485.6601,
     "close": 1528.1267,
     "percent": 2.24,
-    "volume": 291619777
+    "volume": 291619777,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-22",
@@ -3557,7 +4267,9 @@ var 科创50 = [
     "low": 1512.8618,
     "close": 1523.3628,
     "percent": -0.31,
-    "volume": 263688235
+    "volume": 263688235,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-23",
@@ -3567,7 +4279,9 @@ var 科创50 = [
     "low": 1520.7163,
     "close": 1534.3008,
     "percent": 0.72,
-    "volume": 311191299
+    "volume": 311191299,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-24",
@@ -3577,7 +4291,9 @@ var 科创50 = [
     "low": 1498.4564,
     "close": 1504.808,
     "percent": -1.92,
-    "volume": 250563079
+    "volume": 250563079,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-25",
@@ -3587,7 +4303,9 @@ var 科创50 = [
     "low": 1504.058,
     "close": 1534.8495,
     "percent": 2,
-    "volume": 280765454
+    "volume": 280765454,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-28",
@@ -3597,7 +4315,9 @@ var 科创50 = [
     "low": 1538.0185,
     "close": 1562.9796,
     "percent": 1.83,
-    "volume": 282858584
+    "volume": 282858584,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-29",
@@ -3607,7 +4327,9 @@ var 科创50 = [
     "low": 1548.2777,
     "close": 1562.0783,
     "percent": -0.06,
-    "volume": 239672454
+    "volume": 239672454,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-06-30",
@@ -3617,7 +4339,9 @@ var 科创50 = [
     "low": 1564.3165,
     "close": 1588.2167,
     "percent": 1.67,
-    "volume": 315445910
+    "volume": 315445910,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-01",
@@ -3627,7 +4351,9 @@ var 科创50 = [
     "low": 1571.4334,
     "close": 1579.8041,
     "percent": -0.53,
-    "volume": 278840791
+    "volume": 278840791,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-02",
@@ -3637,7 +4363,9 @@ var 科创50 = [
     "low": 1535.2992,
     "close": 1538.1578,
     "percent": -2.64,
-    "volume": 263768707
+    "volume": 263768707,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-05",
@@ -3647,7 +4375,9 @@ var 科创50 = [
     "low": 1545.6785,
     "close": 1575.8944,
     "percent": 2.45,
-    "volume": 280180405
+    "volume": 280180405,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-06",
@@ -3657,7 +4387,9 @@ var 科创50 = [
     "low": 1511.7726,
     "close": 1532.7917,
     "percent": -2.74,
-    "volume": 305357989
+    "volume": 305357989,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-07",
@@ -3667,7 +4399,9 @@ var 科创50 = [
     "low": 1523.5577,
     "close": 1570.028,
     "percent": 2.43,
-    "volume": 275969223
+    "volume": 275969223,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-08",
@@ -3677,7 +4411,9 @@ var 科创50 = [
     "low": 1577.4972,
     "close": 1610.775,
     "percent": 2.6,
-    "volume": 327994560
+    "volume": 327994560,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-09",
@@ -3687,7 +4423,9 @@ var 科创50 = [
     "low": 1561.9669,
     "close": 1583.7142,
     "percent": -1.68,
-    "volume": 255328274
+    "volume": 255328274,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-12",
@@ -3697,7 +4435,9 @@ var 科创50 = [
     "low": 1582.4535,
     "close": 1601.6058,
     "percent": 1.13,
-    "volume": 272676470
+    "volume": 272676470,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-13",
@@ -3707,7 +4447,9 @@ var 科创50 = [
     "low": 1575.9804,
     "close": 1590.9772,
     "percent": -0.66,
-    "volume": 260157689
+    "volume": 260157689,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-14",
@@ -3717,7 +4459,9 @@ var 科创50 = [
     "low": 1556.7197,
     "close": 1556.7197,
     "percent": -2.15,
-    "volume": 220585786
+    "volume": 220585786,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-15",
@@ -3727,7 +4471,9 @@ var 科创50 = [
     "low": 1541.0855,
     "close": 1560.7038,
     "percent": 0.26,
-    "volume": 240138812
+    "volume": 240138812,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-16",
@@ -3737,7 +4483,9 @@ var 科创50 = [
     "low": 1525.0719,
     "close": 1525.2341,
     "percent": -2.27,
-    "volume": 277500121
+    "volume": 277500121,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-19",
@@ -3747,7 +4495,9 @@ var 科创50 = [
     "low": 1507.5162,
     "close": 1514.1809,
     "percent": -0.73,
-    "volume": 265043807
+    "volume": 265043807,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-20",
@@ -3757,7 +4507,9 @@ var 科创50 = [
     "low": 1505.078,
     "close": 1522.6266,
     "percent": 0.56,
-    "volume": 204191868
+    "volume": 204191868,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-21",
@@ -3767,7 +4519,9 @@ var 科创50 = [
     "low": 1528.5975,
     "close": 1565.6381,
     "percent": 2.83,
-    "volume": 269188382
+    "volume": 269188382,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-22",
@@ -3777,7 +4531,9 @@ var 科创50 = [
     "low": 1553.7225,
     "close": 1582.1315,
     "percent": 1.05,
-    "volume": 338358985
+    "volume": 338358985,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-23",
@@ -3787,7 +4543,9 @@ var 科创50 = [
     "low": 1548.5061,
     "close": 1563.4901,
     "percent": -1.18,
-    "volume": 305248746
+    "volume": 305248746,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-26",
@@ -3797,7 +4555,9 @@ var 科创50 = [
     "low": 1502.4532,
     "close": 1556.9791,
     "percent": -0.42,
-    "volume": 425819723
+    "volume": 425819723,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-27",
@@ -3807,7 +4567,9 @@ var 科创50 = [
     "low": 1545.2893,
     "close": 1545.2893,
     "percent": -0.75,
-    "volume": 737410955
+    "volume": 737410955,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-28",
@@ -3817,7 +4579,9 @@ var 科创50 = [
     "low": 1502.4056,
     "close": 1518.7028,
     "percent": -1.72,
-    "volume": 497866197
+    "volume": 497866197,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-29",
@@ -3827,7 +4591,9 @@ var 科创50 = [
     "low": 1549.3488,
     "close": 1588.4654,
     "percent": 4.59,
-    "volume": 457562000
+    "volume": 457562000,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-07-30",
@@ -3837,7 +4603,9 @@ var 科创50 = [
     "low": 1573.2956,
     "close": 1591.2189,
     "percent": 0.17,
-    "volume": 453933135
+    "volume": 453933135,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-02",
@@ -3847,7 +4615,9 @@ var 科创50 = [
     "low": 1572.8989,
     "close": 1599.474,
     "percent": 0.52,
-    "volume": 470318283
+    "volume": 470318283,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-03",
@@ -3857,7 +4627,9 @@ var 科创50 = [
     "low": 1561.4132,
     "close": 1564.1926,
     "percent": -2.21,
-    "volume": 422913810
+    "volume": 422913810,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-04",
@@ -3867,7 +4639,9 @@ var 科创50 = [
     "low": 1566.4455,
     "close": 1605.8939,
     "percent": 2.67,
-    "volume": 349625744
+    "volume": 349625744,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-05",
@@ -3877,7 +4651,9 @@ var 科创50 = [
     "low": 1592.5559,
     "close": 1604.8067,
     "percent": -0.07,
-    "volume": 368328953
+    "volume": 368328953,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-06",
@@ -3887,7 +4663,9 @@ var 科创50 = [
     "low": 1576.0585,
     "close": 1586.6732,
     "percent": -1.13,
-    "volume": 421638253
+    "volume": 421638253,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-09",
@@ -3897,7 +4675,9 @@ var 科创50 = [
     "low": 1551.722,
     "close": 1574.4378,
     "percent": -0.77,
-    "volume": 317835221
+    "volume": 317835221,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-10",
@@ -3907,7 +4687,9 @@ var 科创50 = [
     "low": 1573.1007,
     "close": 1588.1949,
     "percent": 0.87,
-    "volume": 343564527
+    "volume": 343564527,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-11",
@@ -3917,7 +4699,9 @@ var 科创50 = [
     "low": 1566.7512,
     "close": 1578.7892,
     "percent": -0.59,
-    "volume": 294845043
+    "volume": 294845043,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-12",
@@ -3927,7 +4711,9 @@ var 科创50 = [
     "low": 1572.1463,
     "close": 1586.5007,
     "percent": 0.49,
-    "volume": 279700188
+    "volume": 279700188,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-13",
@@ -3937,7 +4723,9 @@ var 科创50 = [
     "low": 1552.1404,
     "close": 1552.7807,
     "percent": -2.13,
-    "volume": 333221047
+    "volume": 333221047,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-16",
@@ -3947,7 +4735,9 @@ var 科创50 = [
     "low": 1540.2875,
     "close": 1547.931,
     "percent": -0.31,
-    "volume": 256716333
+    "volume": 256716333,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-17",
@@ -3957,7 +4747,9 @@ var 科创50 = [
     "low": 1507.53,
     "close": 1509.2474,
     "percent": -2.5,
-    "volume": 243998399
+    "volume": 243998399,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-18",
@@ -3967,7 +4759,9 @@ var 科创50 = [
     "low": 1503.5337,
     "close": 1507.9887,
     "percent": -0.08,
-    "volume": 220534349
+    "volume": 220534349,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-19",
@@ -3977,7 +4771,9 @@ var 科创50 = [
     "low": 1509.7193,
     "close": 1546.1101,
     "percent": 2.53,
-    "volume": 256623298
+    "volume": 256623298,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-20",
@@ -3987,7 +4783,9 @@ var 科创50 = [
     "low": 1515.5048,
     "close": 1529.0863,
     "percent": -1.1,
-    "volume": 254958544
+    "volume": 254958544,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-23",
@@ -3997,7 +4795,9 @@ var 科创50 = [
     "low": 1529.7061,
     "close": 1564.1109,
     "percent": 2.29,
-    "volume": 240320201
+    "volume": 240320201,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-24",
@@ -4007,7 +4807,9 @@ var 科创50 = [
     "low": 1551.5119,
     "close": 1578.0306,
     "percent": 0.89,
-    "volume": 265186819
+    "volume": 265186819,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-25",
@@ -4017,7 +4819,9 @@ var 科创50 = [
     "low": 1536.4506,
     "close": 1542.7755,
     "percent": -2.23,
-    "volume": 267002850
+    "volume": 267002850,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-26",
@@ -4027,7 +4831,9 @@ var 科创50 = [
     "low": 1497.3375,
     "close": 1497.3375,
     "percent": -2.95,
-    "volume": 288152459
+    "volume": 288152459,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-27",
@@ -4037,7 +4843,9 @@ var 科创50 = [
     "low": 1478.2007,
     "close": 1480.3136,
     "percent": -1.14,
-    "volume": 266048899
+    "volume": 266048899,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-30",
@@ -4047,7 +4855,9 @@ var 科创50 = [
     "low": 1463.8699,
     "close": 1471.4549,
     "percent": -0.6,
-    "volume": 321327833
+    "volume": 321327833,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-08-31",
@@ -4057,7 +4867,9 @@ var 科创50 = [
     "low": 1425.5374,
     "close": 1441.1735,
     "percent": -2.06,
-    "volume": 307539656
+    "volume": 307539656,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-01",
@@ -4067,7 +4879,9 @@ var 科创50 = [
     "low": 1405.1546,
     "close": 1424.6643,
     "percent": -1.15,
-    "volume": 296849208
+    "volume": 296849208,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-02",
@@ -4077,7 +4891,9 @@ var 科创50 = [
     "low": 1397.1166,
     "close": 1399.4817,
     "percent": -1.77,
-    "volume": 251372279
+    "volume": 251372279,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-03",
@@ -4087,7 +4903,9 @@ var 科创50 = [
     "low": 1385.6239,
     "close": 1400.8903,
     "percent": 0.1,
-    "volume": 275473792
+    "volume": 275473792,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-06",
@@ -4097,7 +4915,9 @@ var 科创50 = [
     "low": 1398.2434,
     "close": 1438.9954,
     "percent": 2.72,
-    "volume": 222839568
+    "volume": 222839568,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-07",
@@ -4107,7 +4927,9 @@ var 科创50 = [
     "low": 1433.7907,
     "close": 1438.5692,
     "percent": -0.03,
-    "volume": 196125079
+    "volume": 196125079,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-08",
@@ -4117,7 +4939,9 @@ var 科创50 = [
     "low": 1411.1363,
     "close": 1412.7232,
     "percent": -1.8,
-    "volume": 206186098
+    "volume": 206186098,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-09",
@@ -4127,7 +4951,9 @@ var 科创50 = [
     "low": 1394.3296,
     "close": 1402.1908,
     "percent": -0.75,
-    "volume": 227779802
+    "volume": 227779802,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-10",
@@ -4137,7 +4963,9 @@ var 科创50 = [
     "low": 1394.8807,
     "close": 1426.814,
     "percent": 1.76,
-    "volume": 275340499
+    "volume": 275340499,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-13",
@@ -4147,7 +4975,9 @@ var 科创50 = [
     "low": 1384.4339,
     "close": 1384.4339,
     "percent": -2.97,
-    "volume": 231170377
+    "volume": 231170377,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-14",
@@ -4157,7 +4987,9 @@ var 科创50 = [
     "low": 1384.2828,
     "close": 1396.6687,
     "percent": 0.88,
-    "volume": 226155979
+    "volume": 226155979,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-15",
@@ -4167,7 +4999,9 @@ var 科创50 = [
     "low": 1380.6265,
     "close": 1384.5213,
     "percent": -0.87,
-    "volume": 176849681
+    "volume": 176849681,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-16",
@@ -4177,7 +5011,9 @@ var 科创50 = [
     "low": 1348.533,
     "close": 1351.4252,
     "percent": -2.39,
-    "volume": 207148245
+    "volume": 207148245,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-17",
@@ -4187,7 +5023,9 @@ var 科创50 = [
     "low": 1333.389,
     "close": 1349.6849,
     "percent": -0.13,
-    "volume": 196021056
+    "volume": 196021056,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-22",
@@ -4197,7 +5035,9 @@ var 科创50 = [
     "low": 1338.0143,
     "close": 1355.2812,
     "percent": 0.42,
-    "volume": 181848123
+    "volume": 181848123,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-23",
@@ -4207,7 +5047,9 @@ var 科创50 = [
     "low": 1355.9174,
     "close": 1363.7869,
     "percent": 0.63,
-    "volume": 167229208
+    "volume": 167229208,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-24",
@@ -4217,7 +5059,9 @@ var 科创50 = [
     "low": 1362.9793,
     "close": 1374.9996,
     "percent": 0.82,
-    "volume": 186947014
+    "volume": 186947014,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-27",
@@ -4227,7 +5071,9 @@ var 科创50 = [
     "low": 1357.9702,
     "close": 1368.6906,
     "percent": -0.46,
-    "volume": 194475887
+    "volume": 194475887,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-28",
@@ -4237,7 +5083,9 @@ var 科创50 = [
     "low": 1352.7355,
     "close": 1354.096,
     "percent": -1.07,
-    "volume": 159709337
+    "volume": 159709337,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-29",
@@ -4247,7 +5095,9 @@ var 科创50 = [
     "low": 1337.8859,
     "close": 1345.7698,
     "percent": -0.62,
-    "volume": 192441749
+    "volume": 192441749,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-09-30",
@@ -4257,7 +5107,9 @@ var 科创50 = [
     "low": 1348.6498,
     "close": 1368.7158,
     "percent": 1.71,
-    "volume": 144857923
+    "volume": 144857923,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-08",
@@ -4267,7 +5119,9 @@ var 科创50 = [
     "low": 1361.9973,
     "close": 1364.4582,
     "percent": -0.31,
-    "volume": 154123136
+    "volume": 154123136,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-11",
@@ -4277,7 +5131,9 @@ var 科创50 = [
     "low": 1349.1258,
     "close": 1349.7708,
     "percent": -1.08,
-    "volume": 151301476
+    "volume": 151301476,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-12",
@@ -4287,7 +5143,9 @@ var 科创50 = [
     "low": 1313.7967,
     "close": 1319.3895,
     "percent": -2.25,
-    "volume": 162464585
+    "volume": 162464585,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-13",
@@ -4297,7 +5155,9 @@ var 科创50 = [
     "low": 1322.8884,
     "close": 1344.763,
     "percent": 1.92,
-    "volume": 156553836
+    "volume": 156553836,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-14",
@@ -4307,7 +5167,9 @@ var 科创50 = [
     "low": 1339.9886,
     "close": 1347.268,
     "percent": 0.19,
-    "volume": 130076115
+    "volume": 130076115,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-15",
@@ -4317,7 +5179,9 @@ var 科创50 = [
     "low": 1347.7336,
     "close": 1363.1635,
     "percent": 1.18,
-    "volume": 158086673
+    "volume": 158086673,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-18",
@@ -4327,7 +5191,9 @@ var 科创50 = [
     "low": 1340.214,
     "close": 1352.5749,
     "percent": -0.78,
-    "volume": 159394784
+    "volume": 159394784,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-19",
@@ -4337,7 +5203,9 @@ var 科创50 = [
     "low": 1355.0701,
     "close": 1366.7911,
     "percent": 1.05,
-    "volume": 136385619
+    "volume": 136385619,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-20",
@@ -4347,7 +5215,9 @@ var 科创50 = [
     "low": 1367.7383,
     "close": 1373.5931,
     "percent": 0.5,
-    "volume": 157171492
+    "volume": 157171492,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-21",
@@ -4357,7 +5227,9 @@ var 科创50 = [
     "low": 1356.7776,
     "close": 1362.4049,
     "percent": -0.82,
-    "volume": 153376783
+    "volume": 153376783,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-22",
@@ -4367,7 +5239,9 @@ var 科创50 = [
     "low": 1361.4617,
     "close": 1368.1361,
     "percent": 0.42,
-    "volume": 204436722
+    "volume": 204436722,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-25",
@@ -4377,7 +5251,9 @@ var 科创50 = [
     "low": 1361.5749,
     "close": 1380.3089,
     "percent": 0.89,
-    "volume": 173563875
+    "volume": 173563875,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-26",
@@ -4387,7 +5263,9 @@ var 科创50 = [
     "low": 1373.4417,
     "close": 1376.1258,
     "percent": -0.3,
-    "volume": 177427293
+    "volume": 177427293,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-27",
@@ -4397,7 +5275,9 @@ var 科创50 = [
     "low": 1355.0096,
     "close": 1361.8173,
     "percent": -1.04,
-    "volume": 218498684
+    "volume": 218498684,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-28",
@@ -4407,7 +5287,9 @@ var 科创50 = [
     "low": 1355.7965,
     "close": 1356.3747,
     "percent": -0.4,
-    "volume": 195651554
+    "volume": 195651554,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-10-29",
@@ -4417,7 +5299,9 @@ var 科创50 = [
     "low": 1363.25,
     "close": 1396.1953,
     "percent": 2.94,
-    "volume": 240981770
+    "volume": 240981770,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-01",
@@ -4427,7 +5311,9 @@ var 科创50 = [
     "low": 1395.8318,
     "close": 1404.2078,
     "percent": 0.57,
-    "volume": 234933012
+    "volume": 234933012,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-02",
@@ -4437,7 +5323,9 @@ var 科创50 = [
     "low": 1397.767,
     "close": 1405.6406,
     "percent": 0.1,
-    "volume": 281933844
+    "volume": 281933844,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-03",
@@ -4447,7 +5335,9 @@ var 科创50 = [
     "low": 1387.4208,
     "close": 1399.5496,
     "percent": -0.43,
-    "volume": 209888787
+    "volume": 209888787,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-04",
@@ -4457,7 +5347,9 @@ var 科创50 = [
     "low": 1404.6586,
     "close": 1410.7421,
     "percent": 0.8,
-    "volume": 203834796
+    "volume": 203834796,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-05",
@@ -4467,7 +5359,9 @@ var 科创50 = [
     "low": 1396.7382,
     "close": 1396.7382,
     "percent": -0.99,
-    "volume": 217288495
+    "volume": 217288495,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-08",
@@ -4477,7 +5371,9 @@ var 科创50 = [
     "low": 1384.805,
     "close": 1400.7951,
     "percent": 0.29,
-    "volume": 200543416
+    "volume": 200543416,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-09",
@@ -4487,7 +5383,9 @@ var 科创50 = [
     "low": 1404.2919,
     "close": 1420.5088,
     "percent": 1.41,
-    "volume": 250274327
+    "volume": 250274327,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-10",
@@ -4497,7 +5395,9 @@ var 科创50 = [
     "low": 1401.9553,
     "close": 1420.4519,
     "percent": 0,
-    "volume": 238631568
+    "volume": 238631568,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-11",
@@ -4507,7 +5407,9 @@ var 科创50 = [
     "low": 1418.4838,
     "close": 1437.1496,
     "percent": 1.18,
-    "volume": 298636369
+    "volume": 298636369,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-12",
@@ -4517,7 +5419,9 @@ var 科创50 = [
     "low": 1430.7015,
     "close": 1440.1568,
     "percent": 0.21,
-    "volume": 291361006
+    "volume": 291361006,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-15",
@@ -4527,7 +5431,9 @@ var 科创50 = [
     "low": 1430.6635,
     "close": 1432.5994,
     "percent": -0.53,
-    "volume": 229638331
+    "volume": 229638331,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-16",
@@ -4537,7 +5443,9 @@ var 科创50 = [
     "low": 1419.248,
     "close": 1421.275,
     "percent": -0.79,
-    "volume": 205511845
+    "volume": 205511845,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-17",
@@ -4547,7 +5455,9 @@ var 科创50 = [
     "low": 1416.7566,
     "close": 1436.1583,
     "percent": 1.05,
-    "volume": 181223200
+    "volume": 181223200,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-18",
@@ -4557,7 +5467,9 @@ var 科创50 = [
     "low": 1419.4395,
     "close": 1423.9704,
     "percent": -0.85,
-    "volume": 185473296
+    "volume": 185473296,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-19",
@@ -4567,7 +5479,9 @@ var 科创50 = [
     "low": 1424.7588,
     "close": 1444.7839,
     "percent": 1.46,
-    "volume": 194082186
+    "volume": 194082186,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-22",
@@ -4577,7 +5491,9 @@ var 科创50 = [
     "low": 1449.4523,
     "close": 1479.9875,
     "percent": 2.44,
-    "volume": 272206812
+    "volume": 272206812,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-23",
@@ -4587,7 +5503,9 @@ var 科创50 = [
     "low": 1476.0543,
     "close": 1476.2529,
     "percent": -0.25,
-    "volume": 242050334
+    "volume": 242050334,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-24",
@@ -4597,7 +5515,9 @@ var 科创50 = [
     "low": 1471.9944,
     "close": 1472.2248,
     "percent": -0.27,
-    "volume": 227451537
+    "volume": 227451537,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-25",
@@ -4607,7 +5527,9 @@ var 科创50 = [
     "low": 1467.0447,
     "close": 1468.072,
     "percent": -0.28,
-    "volume": 207379813
+    "volume": 207379813,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-26",
@@ -4617,7 +5539,9 @@ var 科创50 = [
     "low": 1452.4093,
     "close": 1459.9318,
     "percent": -0.55,
-    "volume": 200244194
+    "volume": 200244194,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-29",
@@ -4627,7 +5551,9 @@ var 科创50 = [
     "low": 1448.498,
     "close": 1471.2292,
     "percent": 0.77,
-    "volume": 241695664
+    "volume": 241695664,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-11-30",
@@ -4637,7 +5563,9 @@ var 科创50 = [
     "low": 1464.9528,
     "close": 1475.7129,
     "percent": 0.31,
-    "volume": 215029388
+    "volume": 215029388,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-01",
@@ -4647,7 +5575,9 @@ var 科创50 = [
     "low": 1453.9984,
     "close": 1456.4829,
     "percent": -1.3,
-    "volume": 191538959
+    "volume": 191538959,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-02",
@@ -4657,7 +5587,9 @@ var 科创50 = [
     "low": 1428.1968,
     "close": 1429.5001,
     "percent": -1.85,
-    "volume": 188216945
+    "volume": 188216945,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-03",
@@ -4667,7 +5599,9 @@ var 科创50 = [
     "low": 1432.2288,
     "close": 1444.8339,
     "percent": 1.07,
-    "volume": 207018094
+    "volume": 207018094,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-06",
@@ -4677,7 +5611,9 @@ var 科创50 = [
     "low": 1405.7709,
     "close": 1405.7709,
     "percent": -2.7,
-    "volume": 214315065
+    "volume": 214315065,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-07",
@@ -4687,7 +5623,9 @@ var 科创50 = [
     "low": 1380.8566,
     "close": 1389.437,
     "percent": -1.16,
-    "volume": 193176791
+    "volume": 193176791,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-08",
@@ -4697,7 +5635,9 @@ var 科创50 = [
     "low": 1394.9887,
     "close": 1415.3738,
     "percent": 1.87,
-    "volume": 190068127
+    "volume": 190068127,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-09",
@@ -4707,7 +5647,9 @@ var 科创50 = [
     "low": 1411.4021,
     "close": 1434.5223,
     "percent": 1.35,
-    "volume": 259260743
+    "volume": 259260743,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-10",
@@ -4717,7 +5659,9 @@ var 科创50 = [
     "low": 1426.7841,
     "close": 1435.7029,
     "percent": 0.08,
-    "volume": 387400312
+    "volume": 387400312,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-13",
@@ -4727,7 +5671,9 @@ var 科创50 = [
     "low": 1436.1711,
     "close": 1445.7068,
     "percent": 0.7,
-    "volume": 256189286
+    "volume": 256189286,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-14",
@@ -4737,7 +5683,9 @@ var 科创50 = [
     "low": 1436.4872,
     "close": 1439.4694,
     "percent": -0.43,
-    "volume": 192637874
+    "volume": 192637874,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-15",
@@ -4747,7 +5695,9 @@ var 科创50 = [
     "low": 1424.8996,
     "close": 1424.8996,
     "percent": -1.01,
-    "volume": 192602785
+    "volume": 192602785,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-16",
@@ -4757,7 +5707,9 @@ var 科创50 = [
     "low": 1420.1142,
     "close": 1425.929,
     "percent": 0.07,
-    "volume": 177554110
+    "volume": 177554110,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-17",
@@ -4767,7 +5719,9 @@ var 科创50 = [
     "low": 1396.4925,
     "close": 1399.0595,
     "percent": -1.88,
-    "volume": 194268068
+    "volume": 194268068,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-20",
@@ -4777,7 +5731,9 @@ var 科创50 = [
     "low": 1363.9563,
     "close": 1363.9563,
     "percent": -2.51,
-    "volume": 205223551
+    "volume": 205223551,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-21",
@@ -4787,7 +5743,9 @@ var 科创50 = [
     "low": 1364.8954,
     "close": 1374.6495,
     "percent": 0.78,
-    "volume": 166127765
+    "volume": 166127765,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-22",
@@ -4797,7 +5755,9 @@ var 科创50 = [
     "low": 1374.4698,
     "close": 1375.03,
     "percent": 0.03,
-    "volume": 151565388
+    "volume": 151565388,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-23",
@@ -4807,7 +5767,9 @@ var 科创50 = [
     "low": 1371.2903,
     "close": 1375.9682,
     "percent": 0.07,
-    "volume": 145166516
+    "volume": 145166516,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-24",
@@ -4817,7 +5779,9 @@ var 科创50 = [
     "low": 1354.0903,
     "close": 1358.7302,
     "percent": -1.25,
-    "volume": 163021852
+    "volume": 163021852,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-27",
@@ -4827,7 +5791,9 @@ var 科创50 = [
     "low": 1349.4793,
     "close": 1355.6359,
     "percent": -0.23,
-    "volume": 134278329
+    "volume": 134278329,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-28",
@@ -4837,7 +5803,9 @@ var 科创50 = [
     "low": 1355.6539,
     "close": 1369.6193,
     "percent": 1.03,
-    "volume": 132369609
+    "volume": 132369609,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-29",
@@ -4847,7 +5815,9 @@ var 科创50 = [
     "low": 1352.7639,
     "close": 1356.2141,
     "percent": -0.98,
-    "volume": 128804294
+    "volume": 128804294,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-30",
@@ -4857,7 +5827,9 @@ var 科创50 = [
     "low": 1355.9679,
     "close": 1375.5603,
     "percent": 1.43,
-    "volume": 146167649
+    "volume": 146167649,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2021-12-31",
@@ -4867,7 +5839,9 @@ var 科创50 = [
     "low": 1384.2783,
     "close": 1398.1941,
     "percent": 1.65,
-    "volume": 174665238
+    "volume": 174665238,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-04",
@@ -4877,7 +5851,9 @@ var 科创50 = [
     "low": 1362.8696,
     "close": 1364.9895,
     "percent": -2.38,
-    "volume": 230536084
+    "volume": 230536084,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-05",
@@ -4887,7 +5863,9 @@ var 科创50 = [
     "low": 1328.8403,
     "close": 1333.3349,
     "percent": -2.32,
-    "volume": 205415451
+    "volume": 205415451,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-06",
@@ -4897,7 +5875,9 @@ var 科创50 = [
     "low": 1310.892,
     "close": 1320.935,
     "percent": -0.93,
-    "volume": 175566233
+    "volume": 175566233,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-07",
@@ -4907,7 +5887,9 @@ var 科创50 = [
     "low": 1305.4919,
     "close": 1305.4919,
     "percent": -1.17,
-    "volume": 178315803
+    "volume": 178315803,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-10",
@@ -4917,7 +5899,9 @@ var 科创50 = [
     "low": 1297.3171,
     "close": 1318.2666,
     "percent": 0.98,
-    "volume": 178200075
+    "volume": 178200075,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-11",
@@ -4927,7 +5911,9 @@ var 科创50 = [
     "low": 1292.0506,
     "close": 1294.4039,
     "percent": -1.81,
-    "volume": 169586344
+    "volume": 169586344,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-12",
@@ -4937,7 +5923,9 @@ var 科创50 = [
     "low": 1298.6229,
     "close": 1316.3532,
     "percent": 1.7,
-    "volume": 174301261
+    "volume": 174301261,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-13",
@@ -4947,7 +5935,9 @@ var 科创50 = [
     "low": 1294.6528,
     "close": 1294.6528,
     "percent": -1.65,
-    "volume": 170052789
+    "volume": 170052789,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-14",
@@ -4957,7 +5947,9 @@ var 科创50 = [
     "low": 1289.3819,
     "close": 1312.2923,
     "percent": 1.36,
-    "volume": 221518746
+    "volume": 221518746,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-17",
@@ -4967,7 +5959,9 @@ var 科创50 = [
     "low": 1317.385,
     "close": 1338.3172,
     "percent": 1.98,
-    "volume": 219986114
+    "volume": 219986114,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-18",
@@ -4977,7 +5971,9 @@ var 科创50 = [
     "low": 1337.858,
     "close": 1342.356,
     "percent": 0.3,
-    "volume": 227390295
+    "volume": 227390295,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-19",
@@ -4987,7 +5983,9 @@ var 科创50 = [
     "low": 1319.4691,
     "close": 1324.089,
     "percent": -1.36,
-    "volume": 166227899
+    "volume": 166227899,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-20",
@@ -4997,7 +5995,9 @@ var 科创50 = [
     "low": 1305.3484,
     "close": 1306.0231,
     "percent": -1.36,
-    "volume": 170296426
+    "volume": 170296426,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-21",
@@ -5007,7 +6007,9 @@ var 科创50 = [
     "low": 1289.5939,
     "close": 1290.4058,
     "percent": -1.2,
-    "volume": 186900192
+    "volume": 186900192,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-24",
@@ -5017,7 +6019,9 @@ var 科创50 = [
     "low": 1286.1386,
     "close": 1307.7417,
     "percent": 1.34,
-    "volume": 181901937
+    "volume": 181901937,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-25",
@@ -5027,7 +6031,9 @@ var 科创50 = [
     "low": 1277.0039,
     "close": 1277.0039,
     "percent": -2.35,
-    "volume": 190715900
+    "volume": 190715900,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-26",
@@ -5037,7 +6043,9 @@ var 科创50 = [
     "low": 1265.2251,
     "close": 1276.3623,
     "percent": -0.05,
-    "volume": 163092784
+    "volume": 163092784,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-27",
@@ -5047,7 +6055,9 @@ var 科创50 = [
     "low": 1240.4076,
     "close": 1240.5544,
     "percent": -2.81,
-    "volume": 175362414
+    "volume": 175362414,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-01-28",
@@ -5057,7 +6067,9 @@ var 科创50 = [
     "low": 1229.2236,
     "close": 1229.2236,
     "percent": -0.91,
-    "volume": 155173315
+    "volume": 155173315,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-07",
@@ -5067,7 +6079,9 @@ var 科创50 = [
     "low": 1230.994,
     "close": 1233.6183,
     "percent": 0.36,
-    "volume": 142171529
+    "volume": 142171529,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-08",
@@ -5077,7 +6091,9 @@ var 科创50 = [
     "low": 1194.2442,
     "close": 1204.0542,
     "percent": -2.4,
-    "volume": 156328591
+    "volume": 156328591,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-09",
@@ -5087,7 +6103,9 @@ var 科创50 = [
     "low": 1195.9925,
     "close": 1210.2863,
     "percent": 0.52,
-    "volume": 149908335
+    "volume": 149908335,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-10",
@@ -5097,7 +6115,9 @@ var 科创50 = [
     "low": 1183.9259,
     "close": 1188.1974,
     "percent": -1.83,
-    "volume": 181296530
+    "volume": 181296530,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-11",
@@ -5107,7 +6127,9 @@ var 科创50 = [
     "low": 1169.5897,
     "close": 1169.5897,
     "percent": -1.57,
-    "volume": 168730011
+    "volume": 168730011,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-14",
@@ -5117,7 +6139,9 @@ var 科创50 = [
     "low": 1161.8449,
     "close": 1169.4422,
     "percent": -0.01,
-    "volume": 133853977
+    "volume": 133853977,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-15",
@@ -5127,7 +6151,9 @@ var 科创50 = [
     "low": 1172.7708,
     "close": 1203.1244,
     "percent": 2.88,
-    "volume": 164738386
+    "volume": 164738386,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-16",
@@ -5137,7 +6163,9 @@ var 科创50 = [
     "low": 1197.2399,
     "close": 1197.5615,
     "percent": -0.46,
-    "volume": 118141106
+    "volume": 118141106,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-17",
@@ -5147,7 +6175,9 @@ var 科创50 = [
     "low": 1196.5983,
     "close": 1207.8211,
     "percent": 0.86,
-    "volume": 143403765
+    "volume": 143403765,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-18",
@@ -5157,7 +6187,9 @@ var 科创50 = [
     "low": 1198.0547,
     "close": 1204.3706,
     "percent": -0.29,
-    "volume": 133142138
+    "volume": 133142138,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-21",
@@ -5167,7 +6199,9 @@ var 科创50 = [
     "low": 1193.0185,
     "close": 1193.6012,
     "percent": -0.89,
-    "volume": 145611352
+    "volume": 145611352,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-22",
@@ -5177,7 +6211,9 @@ var 科创50 = [
     "low": 1170.4409,
     "close": 1183.9818,
     "percent": -0.81,
-    "volume": 163386346
+    "volume": 163386346,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-23",
@@ -5187,7 +6223,9 @@ var 科创50 = [
     "low": 1182.4218,
     "close": 1231.077,
     "percent": 3.98,
-    "volume": 232276130
+    "volume": 232276130,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-24",
@@ -5197,7 +6235,9 @@ var 科创50 = [
     "low": 1201.3948,
     "close": 1214.9889,
     "percent": -1.31,
-    "volume": 243331593
+    "volume": 243331593,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-25",
@@ -5207,7 +6247,9 @@ var 科创50 = [
     "low": 1231.5406,
     "close": 1240.8776,
     "percent": 2.13,
-    "volume": 197566671
+    "volume": 197566671,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-02-28",
@@ -5217,7 +6259,9 @@ var 科创50 = [
     "low": 1236.5103,
     "close": 1249.5852,
     "percent": 0.7,
-    "volume": 215608779
+    "volume": 215608779,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-01",
@@ -5227,7 +6271,9 @@ var 科创50 = [
     "low": 1233.5453,
     "close": 1239.0191,
     "percent": -0.85,
-    "volume": 176291441
+    "volume": 176291441,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-02",
@@ -5237,7 +6283,9 @@ var 科创50 = [
     "low": 1219.3631,
     "close": 1230.2783,
     "percent": -0.71,
-    "volume": 149062214
+    "volume": 149062214,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-03",
@@ -5247,7 +6295,9 @@ var 科创50 = [
     "low": 1209.3682,
     "close": 1209.8187,
     "percent": -1.66,
-    "volume": 172679964
+    "volume": 172679964,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-04",
@@ -5257,7 +6307,9 @@ var 科创50 = [
     "low": 1199.6334,
     "close": 1203.0891,
     "percent": -0.56,
-    "volume": 175840239
+    "volume": 175840239,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-07",
@@ -5267,7 +6319,9 @@ var 科创50 = [
     "low": 1166.8842,
     "close": 1169.9826,
     "percent": -2.75,
-    "volume": 190107008
+    "volume": 190107008,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-08",
@@ -5277,7 +6331,9 @@ var 科创50 = [
     "low": 1136.4949,
     "close": 1137.0749,
     "percent": -2.81,
-    "volume": 241442232
+    "volume": 241442232,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-09",
@@ -5287,7 +6343,9 @@ var 科创50 = [
     "low": 1097.1492,
     "close": 1129.6472,
     "percent": -0.65,
-    "volume": 275392906
+    "volume": 275392906,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-10",
@@ -5297,7 +6355,9 @@ var 科创50 = [
     "low": 1152.4771,
     "close": 1153.3576,
     "percent": 2.1,
-    "volume": 246565850
+    "volume": 246565850,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-11",
@@ -5307,7 +6367,9 @@ var 科创50 = [
     "low": 1126.616,
     "close": 1161.2101,
     "percent": 0.68,
-    "volume": 262160979
+    "volume": 262160979,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-14",
@@ -5317,7 +6379,9 @@ var 科创50 = [
     "low": 1126.282,
     "close": 1126.282,
     "percent": -3.01,
-    "volume": 224769457
+    "volume": 224769457,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-15",
@@ -5327,7 +6391,9 @@ var 科创50 = [
     "low": 1093.4329,
     "close": 1093.4329,
     "percent": -2.92,
-    "volume": 283671567
+    "volume": 283671567,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-16",
@@ -5337,7 +6403,9 @@ var 科创50 = [
     "low": 1074.0023,
     "close": 1125.4845,
     "percent": 2.93,
-    "volume": 288887385
+    "volume": 288887385,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-17",
@@ -5347,7 +6415,9 @@ var 科创50 = [
     "low": 1140.3314,
     "close": 1142.713,
     "percent": 1.53,
-    "volume": 299623724
+    "volume": 299623724,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-18",
@@ -5357,7 +6427,9 @@ var 科创50 = [
     "low": 1125.97,
     "close": 1144.3213,
     "percent": 0.14,
-    "volume": 196170010
+    "volume": 196170010,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-21",
@@ -5367,7 +6439,9 @@ var 科创50 = [
     "low": 1143.5474,
     "close": 1152.3256,
     "percent": 0.7,
-    "volume": 208238377
+    "volume": 208238377,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-22",
@@ -5377,7 +6451,9 @@ var 科创50 = [
     "low": 1132.8863,
     "close": 1134.3184,
     "percent": -1.56,
-    "volume": 183939777
+    "volume": 183939777,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-23",
@@ -5387,7 +6463,9 @@ var 科创50 = [
     "low": 1130.5553,
     "close": 1144.0887,
     "percent": 0.86,
-    "volume": 163412199
+    "volume": 163412199,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-24",
@@ -5397,7 +6475,9 @@ var 科创50 = [
     "low": 1123.5171,
     "close": 1134.57,
     "percent": -0.83,
-    "volume": 157407425
+    "volume": 157407425,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-25",
@@ -5407,7 +6487,9 @@ var 科创50 = [
     "low": 1106.8628,
     "close": 1106.8628,
     "percent": -2.44,
-    "volume": 160270955
+    "volume": 160270955,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-28",
@@ -5417,7 +6499,9 @@ var 科创50 = [
     "low": 1086.0223,
     "close": 1090.7343,
     "percent": -1.46,
-    "volume": 145097472
+    "volume": 145097472,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-29",
@@ -5427,7 +6511,9 @@ var 科创50 = [
     "low": 1079.855,
     "close": 1079.933,
     "percent": -0.99,
-    "volume": 139862753
+    "volume": 139862753,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-30",
@@ -5437,7 +6523,9 @@ var 科创50 = [
     "low": 1084.7638,
     "close": 1112.5187,
     "percent": 3.02,
-    "volume": 161827287
+    "volume": 161827287,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-03-31",
@@ -5447,7 +6535,9 @@ var 科创50 = [
     "low": 1088.3116,
     "close": 1091.0588,
     "percent": -1.93,
-    "volume": 160640949
+    "volume": 160640949,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-01",
@@ -5457,7 +6547,9 @@ var 科创50 = [
     "low": 1079.1872,
     "close": 1089.1948,
     "percent": -0.17,
-    "volume": 144834446
+    "volume": 144834446,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-06",
@@ -5467,7 +6559,9 @@ var 科创50 = [
     "low": 1055.5742,
     "close": 1058.4928,
     "percent": -2.82,
-    "volume": 188124946
+    "volume": 188124946,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-07",
@@ -5477,7 +6571,9 @@ var 科创50 = [
     "low": 1036.0738,
     "close": 1036.0738,
     "percent": -2.12,
-    "volume": 167889090
+    "volume": 167889090,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-08",
@@ -5487,7 +6583,9 @@ var 科创50 = [
     "low": 1018.9922,
     "close": 1027.2439,
     "percent": -0.85,
-    "volume": 165074455
+    "volume": 165074455,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-11",
@@ -5497,7 +6595,9 @@ var 科创50 = [
     "low": 986.8142,
     "close": 988.7614,
     "percent": -3.75,
-    "volume": 190267504
+    "volume": 190267504,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-12",
@@ -5507,7 +6607,9 @@ var 科创50 = [
     "low": 970.1386,
     "close": 994.4384,
     "percent": 0.57,
-    "volume": 165116661
+    "volume": 165116661,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-13",
@@ -5517,7 +6619,9 @@ var 科创50 = [
     "low": 964.8323,
     "close": 964.8323,
     "percent": -2.98,
-    "volume": 135049440
+    "volume": 135049440,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-14",
@@ -5527,7 +6631,9 @@ var 科创50 = [
     "low": 962.5935,
     "close": 975.5741,
     "percent": 1.11,
-    "volume": 171462859
+    "volume": 171462859,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-15",
@@ -5537,7 +6643,9 @@ var 科创50 = [
     "low": 958.8608,
     "close": 973.3632,
     "percent": -0.23,
-    "volume": 154125524
+    "volume": 154125524,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-18",
@@ -5547,7 +6655,9 @@ var 科创50 = [
     "low": 969.0596,
     "close": 1004.6079,
     "percent": 3.21,
-    "volume": 169407967
+    "volume": 169407967,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-19",
@@ -5557,7 +6667,9 @@ var 科创50 = [
     "low": 988.8046,
     "close": 989.933,
     "percent": -1.46,
-    "volume": 138296993
+    "volume": 138296993,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-20",
@@ -5567,7 +6679,9 @@ var 科创50 = [
     "low": 973.5103,
     "close": 973.5103,
     "percent": -1.66,
-    "volume": 128057298
+    "volume": 128057298,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-21",
@@ -5577,7 +6691,9 @@ var 科创50 = [
     "low": 955.2317,
     "close": 957.7174,
     "percent": -1.62,
-    "volume": 168514753
+    "volume": 168514753,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-22",
@@ -5587,7 +6703,9 @@ var 科创50 = [
     "low": 941.542,
     "close": 942.0686,
     "percent": -1.63,
-    "volume": 150289082
+    "volume": 150289082,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-25",
@@ -5597,7 +6715,9 @@ var 科创50 = [
     "low": 884.305,
     "close": 884.305,
     "percent": -6.13,
-    "volume": 232935386
+    "volume": 232935386,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-26",
@@ -5607,7 +6727,9 @@ var 科创50 = [
     "low": 866.9066,
     "close": 868.0672,
     "percent": -1.84,
-    "volume": 209207991
+    "volume": 209207991,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-27",
@@ -5617,7 +6739,9 @@ var 科创50 = [
     "low": 854.1825,
     "close": 906.4327,
     "percent": 4.42,
-    "volume": 237227868
+    "volume": 237227868,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-28",
@@ -5627,7 +6751,9 @@ var 科创50 = [
     "low": 890.7861,
     "close": 903.0644,
     "percent": -0.37,
-    "volume": 214713691
+    "volume": 214713691,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-04-29",
@@ -5637,7 +6763,9 @@ var 科创50 = [
     "low": 904.4898,
     "close": 947.1508,
     "percent": 4.88,
-    "volume": 241893900
+    "volume": 241893900,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-05",
@@ -5647,7 +6775,9 @@ var 科创50 = [
     "low": 944.5541,
     "close": 956.1269,
     "percent": 0.95,
-    "volume": 230643953
+    "volume": 230643953,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-06",
@@ -5657,7 +6787,9 @@ var 科创50 = [
     "low": 933.0105,
     "close": 942.2273,
     "percent": -1.45,
-    "volume": 175590133
+    "volume": 175590133,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-09",
@@ -5667,7 +6799,9 @@ var 科创50 = [
     "low": 938.3929,
     "close": 946.7246,
     "percent": 0.48,
-    "volume": 160395069
+    "volume": 160395069,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-10",
@@ -5677,7 +6811,9 @@ var 科创50 = [
     "low": 935.0588,
     "close": 972.1412,
     "percent": 2.69,
-    "volume": 217871441
+    "volume": 217871441,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-11",
@@ -5687,7 +6823,9 @@ var 科创50 = [
     "low": 974.5371,
     "close": 1002.4561,
     "percent": 3.12,
-    "volume": 275443902
+    "volume": 275443902,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-12",
@@ -5697,7 +6835,9 @@ var 科创50 = [
     "low": 999.5382,
     "close": 1013.0628,
     "percent": 1.06,
-    "volume": 201107608
+    "volume": 201107608,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-13",
@@ -5707,7 +6847,9 @@ var 科创50 = [
     "low": 1003.3016,
     "close": 1010.8038,
     "percent": -0.22,
-    "volume": 169787341
+    "volume": 169787341,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-16",
@@ -5717,7 +6859,9 @@ var 科创50 = [
     "low": 996.5062,
     "close": 996.5062,
     "percent": -1.41,
-    "volume": 177390039
+    "volume": 177390039,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-17",
@@ -5727,7 +6871,9 @@ var 科创50 = [
     "low": 995.5793,
     "close": 1010.3701,
     "percent": 1.39,
-    "volume": 188623118
+    "volume": 188623118,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-18",
@@ -5737,7 +6883,9 @@ var 科创50 = [
     "low": 1011.5259,
     "close": 1013.9971,
     "percent": 0.36,
-    "volume": 173487619
+    "volume": 173487619,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-19",
@@ -5747,7 +6895,9 @@ var 科创50 = [
     "low": 1002.6563,
     "close": 1036.3409,
     "percent": 2.2,
-    "volume": 217072300
+    "volume": 217072300,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-20",
@@ -5757,7 +6907,9 @@ var 科创50 = [
     "low": 1029.4693,
     "close": 1045.3768,
     "percent": 0.87,
-    "volume": 220760981
+    "volume": 220760981,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-23",
@@ -5767,7 +6919,9 @@ var 科创50 = [
     "low": 1034.574,
     "close": 1046.1456,
     "percent": 0.07,
-    "volume": 200230771
+    "volume": 200230771,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-24",
@@ -5777,7 +6931,9 @@ var 科创50 = [
     "low": 996.6481,
     "close": 996.6481,
     "percent": -4.73,
-    "volume": 258762500
+    "volume": 258762500,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-25",
@@ -5787,7 +6943,9 @@ var 科创50 = [
     "low": 994.6841,
     "close": 1006.5233,
     "percent": 0.99,
-    "volume": 172144301
+    "volume": 172144301,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-26",
@@ -5797,7 +6955,9 @@ var 科创50 = [
     "low": 989.2802,
     "close": 1004.2564,
     "percent": -0.23,
-    "volume": 168920432
+    "volume": 168920432,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-27",
@@ -5807,7 +6967,9 @@ var 科创50 = [
     "low": 989.0788,
     "close": 993.6989,
     "percent": -1.05,
-    "volume": 169840794
+    "volume": 169840794,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-30",
@@ -5817,7 +6979,9 @@ var 科创50 = [
     "low": 986.6226,
     "close": 1001.5398,
     "percent": 0.79,
-    "volume": 191587366
+    "volume": 191587366,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-05-31",
@@ -5827,7 +6991,9 @@ var 科创50 = [
     "low": 993.9943,
     "close": 1035.3156,
     "percent": 3.37,
-    "volume": 317239246
+    "volume": 317239246,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-01",
@@ -5837,7 +7003,9 @@ var 科创50 = [
     "low": 1026.1425,
     "close": 1031.5833,
     "percent": -0.36,
-    "volume": 280336501
+    "volume": 280336501,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-02",
@@ -5847,7 +7015,9 @@ var 科创50 = [
     "low": 1028.6856,
     "close": 1079.8543,
     "percent": 4.68,
-    "volume": 433362644
+    "volume": 433362644,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-06",
@@ -5857,7 +7027,9 @@ var 科创50 = [
     "low": 1084.6559,
     "close": 1121.5374,
     "percent": 3.86,
-    "volume": 464000416
+    "volume": 464000416,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-07",
@@ -5867,7 +7039,9 @@ var 科创50 = [
     "low": 1105.5046,
     "close": 1111.3951,
     "percent": -0.9,
-    "volume": 336730349
+    "volume": 336730349,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-08",
@@ -5877,7 +7051,9 @@ var 科创50 = [
     "low": 1093.5757,
     "close": 1111.6738,
     "percent": 0.03,
-    "volume": 289285142
+    "volume": 289285142,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-09",
@@ -5887,7 +7063,9 @@ var 科创50 = [
     "low": 1075.17,
     "close": 1081.1731,
     "percent": -2.74,
-    "volume": 259779669
+    "volume": 259779669,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-10",
@@ -5897,7 +7075,9 @@ var 科创50 = [
     "low": 1073.5283,
     "close": 1102.8486,
     "percent": 2.01,
-    "volume": 416652370
+    "volume": 416652370,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-13",
@@ -5907,7 +7087,9 @@ var 科创50 = [
     "low": 1082.9203,
     "close": 1088.3773,
     "percent": -1.31,
-    "volume": 353799978
+    "volume": 353799978,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-14",
@@ -5917,7 +7099,9 @@ var 科创50 = [
     "low": 1040.2813,
     "close": 1070.5371,
     "percent": -1.64,
-    "volume": 374094663
+    "volume": 374094663,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-15",
@@ -5927,7 +7111,9 @@ var 科创50 = [
     "low": 1061.4185,
     "close": 1062.7133,
     "percent": -0.73,
-    "volume": 360020795
+    "volume": 360020795,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-16",
@@ -5937,7 +7123,9 @@ var 科创50 = [
     "low": 1065.6901,
     "close": 1078.9466,
     "percent": 1.53,
-    "volume": 301119944
+    "volume": 301119944,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-17",
@@ -5947,7 +7135,9 @@ var 科创50 = [
     "low": 1066.2209,
     "close": 1092.0872,
     "percent": 1.22,
-    "volume": 329986800
+    "volume": 329986800,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-20",
@@ -5957,7 +7147,9 @@ var 科创50 = [
     "low": 1090.5312,
     "close": 1095.3284,
     "percent": 0.3,
-    "volume": 349074314
+    "volume": 349074314,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-21",
@@ -5967,7 +7159,9 @@ var 科创50 = [
     "low": 1075.0417,
     "close": 1083.0207,
     "percent": -1.12,
-    "volume": 341328955
+    "volume": 341328955,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-22",
@@ -5977,7 +7171,9 @@ var 科创50 = [
     "low": 1063.6742,
     "close": 1063.6899,
     "percent": -1.79,
-    "volume": 311046735
+    "volume": 311046735,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-23",
@@ -5987,7 +7183,9 @@ var 科创50 = [
     "low": 1055.2714,
     "close": 1081.8438,
     "percent": 1.71,
-    "volume": 305119082
+    "volume": 305119082,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-24",
@@ -5997,7 +7195,9 @@ var 科创50 = [
     "low": 1084.6086,
     "close": 1101.4769,
     "percent": 1.82,
-    "volume": 337457099
+    "volume": 337457099,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-27",
@@ -6007,7 +7207,9 @@ var 科创50 = [
     "low": 1102.9716,
     "close": 1103.3992,
     "percent": 0.18,
-    "volume": 367578767
+    "volume": 367578767,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-28",
@@ -6017,7 +7219,9 @@ var 科创50 = [
     "low": 1087.8323,
     "close": 1117.2841,
     "percent": 1.26,
-    "volume": 360809883
+    "volume": 360809883,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-29",
@@ -6027,7 +7231,9 @@ var 科创50 = [
     "low": 1090.0696,
     "close": 1090.6826,
     "percent": -2.38,
-    "volume": 356184174
+    "volume": 356184174,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-06-30",
@@ -6037,7 +7243,9 @@ var 科创50 = [
     "low": 1090.8569,
     "close": 1105.6673,
     "percent": 1.37,
-    "volume": 336576638
+    "volume": 336576638,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-01",
@@ -6047,7 +7255,9 @@ var 科创50 = [
     "low": 1087.0466,
     "close": 1089.0285,
     "percent": -1.51,
-    "volume": 367407685
+    "volume": 367407685,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-04",
@@ -6057,7 +7267,9 @@ var 科创50 = [
     "low": 1078.0538,
     "close": 1095.09,
     "percent": 0.56,
-    "volume": 395075954
+    "volume": 395075954,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-05",
@@ -6067,7 +7279,9 @@ var 科创50 = [
     "low": 1077.9466,
     "close": 1090.9295,
     "percent": -0.38,
-    "volume": 332118076
+    "volume": 332118076,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-06",
@@ -6077,7 +7291,9 @@ var 科创50 = [
     "low": 1091.7672,
     "close": 1101.7488,
     "percent": 0.99,
-    "volume": 328410126
+    "volume": 328410126,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-07",
@@ -6087,7 +7303,9 @@ var 科创50 = [
     "low": 1088.1147,
     "close": 1111.6734,
     "percent": 0.9,
-    "volume": 313991385
+    "volume": 313991385,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-08",
@@ -6097,7 +7315,9 @@ var 科创50 = [
     "low": 1103.0121,
     "close": 1104.0217,
     "percent": -0.69,
-    "volume": 286354073
+    "volume": 286354073,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-11",
@@ -6107,7 +7327,9 @@ var 科创50 = [
     "low": 1071.7472,
     "close": 1081.1633,
     "percent": -2.07,
-    "volume": 281716812
+    "volume": 281716812,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-12",
@@ -6117,7 +7339,9 @@ var 科创50 = [
     "low": 1049.2413,
     "close": 1049.2413,
     "percent": -2.95,
-    "volume": 260214242
+    "volume": 260214242,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-13",
@@ -6127,7 +7351,9 @@ var 科创50 = [
     "low": 1042.6265,
     "close": 1052.7915,
     "percent": 0.34,
-    "volume": 252552667
+    "volume": 252552667,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-14",
@@ -6137,7 +7363,9 @@ var 科创50 = [
     "low": 1052.431,
     "close": 1076.8067,
     "percent": 2.28,
-    "volume": 289886982
+    "volume": 289886982,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-15",
@@ -6147,7 +7375,9 @@ var 科创50 = [
     "low": 1072.2621,
     "close": 1072.2621,
     "percent": -0.42,
-    "volume": 252750657
+    "volume": 252750657,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-18",
@@ -6157,7 +7387,9 @@ var 科创50 = [
     "low": 1055.2021,
     "close": 1069.3315,
     "percent": -0.27,
-    "volume": 309464413
+    "volume": 309464413,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-19",
@@ -6167,7 +7399,9 @@ var 科创50 = [
     "low": 1053.7987,
     "close": 1061.853,
     "percent": -0.7,
-    "volume": 285035359
+    "volume": 285035359,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-20",
@@ -6177,7 +7411,9 @@ var 科创50 = [
     "low": 1066.1995,
     "close": 1079.5267,
     "percent": 1.66,
-    "volume": 262283351
+    "volume": 262283351,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-21",
@@ -6187,7 +7423,9 @@ var 科创50 = [
     "low": 1080.6466,
     "close": 1091.4069,
     "percent": 1.1,
-    "volume": 362416135
+    "volume": 362416135,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-22",
@@ -6197,7 +7435,9 @@ var 科创50 = [
     "low": 1077.075,
     "close": 1084.9743,
     "percent": -0.59,
-    "volume": 278286658
+    "volume": 278286658,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-25",
@@ -6207,7 +7447,9 @@ var 科创50 = [
     "low": 1071.6429,
     "close": 1073.7609,
     "percent": -1.03,
-    "volume": 246030225
+    "volume": 246030225,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-26",
@@ -6217,7 +7459,9 @@ var 科创50 = [
     "low": 1067.6573,
     "close": 1084.6573,
     "percent": 1.02,
-    "volume": 266726445
+    "volume": 266726445,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-27",
@@ -6227,7 +7471,9 @@ var 科创50 = [
     "low": 1083.6709,
     "close": 1095.6989,
     "percent": 1.02,
-    "volume": 272563647
+    "volume": 272563647,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-28",
@@ -6237,7 +7483,9 @@ var 科创50 = [
     "low": 1096.1725,
     "close": 1108.791,
     "percent": 1.2,
-    "volume": 328204970
+    "volume": 328204970,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-07-29",
@@ -6247,7 +7495,9 @@ var 科创50 = [
     "low": 1087.8803,
     "close": 1088.9128,
     "percent": -1.79,
-    "volume": 253829667
+    "volume": 253829667,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-01",
@@ -6257,7 +7507,9 @@ var 科创50 = [
     "low": 1069.2067,
     "close": 1100.182,
     "percent": 1.04,
-    "volume": 277021472
+    "volume": 277021472,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-02",
@@ -6267,7 +7519,9 @@ var 科创50 = [
     "low": 1080.7946,
     "close": 1094.9147,
     "percent": -0.48,
-    "volume": 357300965
+    "volume": 357300965,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-03",
@@ -6277,7 +7531,9 @@ var 科创50 = [
     "low": 1092.4116,
     "close": 1100.3484,
     "percent": 0.5,
-    "volume": 433272427
+    "volume": 433272427,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-04",
@@ -6287,7 +7543,9 @@ var 科创50 = [
     "low": 1102.2013,
     "close": 1110.9173,
     "percent": 0.96,
-    "volume": 308998352
+    "volume": 308998352,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-05",
@@ -6297,7 +7555,9 @@ var 科创50 = [
     "low": 1115.0158,
     "close": 1157.333,
     "percent": 4.18,
-    "volume": 461820458
+    "volume": 461820458,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-08",
@@ -6307,7 +7567,9 @@ var 科创50 = [
     "low": 1146.7695,
     "close": 1152.5774,
     "percent": -0.41,
-    "volume": 423598615
+    "volume": 423598615,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-09",
@@ -6317,7 +7579,9 @@ var 科创50 = [
     "low": 1144.9,
     "close": 1162.3201,
     "percent": 0.85,
-    "volume": 389855089
+    "volume": 389855089,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-10",
@@ -6327,7 +7591,9 @@ var 科创50 = [
     "low": 1154.1744,
     "close": 1156.1562,
     "percent": -0.53,
-    "volume": 370696229
+    "volume": 370696229,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-11",
@@ -6337,7 +7603,9 @@ var 科创50 = [
     "low": 1152.5175,
     "close": 1173.1444,
     "percent": 1.47,
-    "volume": 356301038
+    "volume": 356301038,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-12",
@@ -6347,7 +7615,9 @@ var 科创50 = [
     "low": 1146.1911,
     "close": 1146.1911,
     "percent": -2.3,
-    "volume": 295096216
+    "volume": 295096216,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-15",
@@ -6357,7 +7627,9 @@ var 科创50 = [
     "low": 1143.3126,
     "close": 1143.7474,
     "percent": -0.21,
-    "volume": 288307884
+    "volume": 288307884,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-16",
@@ -6367,7 +7639,9 @@ var 科创50 = [
     "low": 1134.5056,
     "close": 1137.3016,
     "percent": -0.56,
-    "volume": 297609093
+    "volume": 297609093,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-17",
@@ -6377,7 +7651,9 @@ var 科创50 = [
     "low": 1128.8096,
     "close": 1132.3118,
     "percent": -0.44,
-    "volume": 296371852
+    "volume": 296371852,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-18",
@@ -6387,7 +7663,9 @@ var 科创50 = [
     "low": 1132.6024,
     "close": 1146.6341,
     "percent": 1.27,
-    "volume": 352830833
+    "volume": 352830833,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-19",
@@ -6397,7 +7675,9 @@ var 科创50 = [
     "low": 1108.4523,
     "close": 1108.4523,
     "percent": -3.33,
-    "volume": 440968552
+    "volume": 440968552,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-22",
@@ -6407,7 +7687,9 @@ var 科创50 = [
     "low": 1100.8636,
     "close": 1107.2809,
     "percent": -0.11,
-    "volume": 352006674
+    "volume": 352006674,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-23",
@@ -6417,7 +7699,9 @@ var 科创50 = [
     "low": 1106.6822,
     "close": 1107.2996,
     "percent": 0,
-    "volume": 277731446
+    "volume": 277731446,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-24",
@@ -6427,7 +7711,9 @@ var 科创50 = [
     "low": 1068.9834,
     "close": 1068.9834,
     "percent": -3.46,
-    "volume": 316247408
+    "volume": 316247408,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-25",
@@ -6437,7 +7723,9 @@ var 科创50 = [
     "low": 1045.7112,
     "close": 1055.8892,
     "percent": -1.23,
-    "volume": 272984926
+    "volume": 272984926,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-26",
@@ -6447,7 +7735,9 @@ var 科创50 = [
     "low": 1044.9991,
     "close": 1045.9939,
     "percent": -0.94,
-    "volume": 227983755
+    "volume": 227983755,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-29",
@@ -6457,7 +7747,9 @@ var 科创50 = [
     "low": 1032.0405,
     "close": 1054.2849,
     "percent": 0.79,
-    "volume": 287861957
+    "volume": 287861957,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-30",
@@ -6467,7 +7759,9 @@ var 科创50 = [
     "low": 1048.3992,
     "close": 1050.282,
     "percent": -0.38,
-    "volume": 239200442
+    "volume": 239200442,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-08-31",
@@ -6477,7 +7771,9 @@ var 科创50 = [
     "low": 1024.9877,
     "close": 1029.6563,
     "percent": -1.96,
-    "volume": 271098021
+    "volume": 271098021,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-01",
@@ -6487,7 +7783,9 @@ var 科创50 = [
     "low": 1025.6604,
     "close": 1025.6604,
     "percent": -0.39,
-    "volume": 261395818
+    "volume": 261395818,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-02",
@@ -6497,7 +7795,9 @@ var 科创50 = [
     "low": 1022.6334,
     "close": 1030.1202,
     "percent": 0.44,
-    "volume": 247502493
+    "volume": 247502493,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-05",
@@ -6507,7 +7807,9 @@ var 科创50 = [
     "low": 1019.3194,
     "close": 1024.3926,
     "percent": -0.56,
-    "volume": 263422060
+    "volume": 263422060,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-06",
@@ -6517,7 +7819,9 @@ var 科创50 = [
     "low": 1017.4791,
     "close": 1035.7838,
     "percent": 1.11,
-    "volume": 272298332
+    "volume": 272298332,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-07",
@@ -6527,7 +7831,9 @@ var 科创50 = [
     "low": 1032.0249,
     "close": 1049.5792,
     "percent": 1.33,
-    "volume": 287002430
+    "volume": 287002430,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-08",
@@ -6537,7 +7843,9 @@ var 科创50 = [
     "low": 1040.7534,
     "close": 1040.773,
     "percent": -0.84,
-    "volume": 229862155
+    "volume": 229862155,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-09",
@@ -6547,7 +7855,9 @@ var 科创50 = [
     "low": 1022.8635,
     "close": 1033.7844,
     "percent": -0.67,
-    "volume": 216185500
+    "volume": 216185500,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-13",
@@ -6557,7 +7867,9 @@ var 科创50 = [
     "low": 1029.2084,
     "close": 1031.1703,
     "percent": -0.25,
-    "volume": 200110159
+    "volume": 200110159,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-14",
@@ -6567,7 +7879,9 @@ var 科创50 = [
     "low": 1018.0742,
     "close": 1031.3041,
     "percent": 0.01,
-    "volume": 192793680
+    "volume": 192793680,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-15",
@@ -6577,7 +7891,9 @@ var 科创50 = [
     "low": 991.3252,
     "close": 1000.0806,
     "percent": -3.03,
-    "volume": 288889467
+    "volume": 288889467,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-16",
@@ -6587,7 +7903,9 @@ var 科创50 = [
     "low": 997.3582,
     "close": 998.5183,
     "percent": -0.16,
-    "volume": 249745853
+    "volume": 249745853,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-19",
@@ -6597,7 +7915,9 @@ var 科创50 = [
     "low": 972.1357,
     "close": 975.5475,
     "percent": -2.3,
-    "volume": 225157121
+    "volume": 225157121,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-20",
@@ -6607,7 +7927,9 @@ var 科创50 = [
     "low": 980.5607,
     "close": 985.1511,
     "percent": 0.98,
-    "volume": 206172473
+    "volume": 206172473,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-21",
@@ -6617,7 +7939,9 @@ var 科创50 = [
     "low": 970.393,
     "close": 970.393,
     "percent": -1.5,
-    "volume": 197071893
+    "volume": 197071893,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-22",
@@ -6627,7 +7951,9 @@ var 科创50 = [
     "low": 964.9591,
     "close": 975.8694,
     "percent": 0.56,
-    "volume": 176369745
+    "volume": 176369745,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-23",
@@ -6637,7 +7963,9 @@ var 科创50 = [
     "low": 957.5664,
     "close": 960.9396,
     "percent": -1.53,
-    "volume": 216590352
+    "volume": 216590352,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-26",
@@ -6647,7 +7975,9 @@ var 科创50 = [
     "low": 955.0406,
     "close": 961.8285,
     "percent": 0.09,
-    "volume": 207889684
+    "volume": 207889684,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-27",
@@ -6657,7 +7987,9 @@ var 科创50 = [
     "low": 960.1342,
     "close": 976.4454,
     "percent": 1.52,
-    "volume": 211659073
+    "volume": 211659073,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-28",
@@ -6667,7 +7999,9 @@ var 科创50 = [
     "low": 955.7523,
     "close": 956.1881,
     "percent": -2.08,
-    "volume": 179106269
+    "volume": 179106269,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-29",
@@ -6677,7 +8011,9 @@ var 科创50 = [
     "low": 956.5628,
     "close": 961.4745,
     "percent": 0.55,
-    "volume": 184981327
+    "volume": 184981327,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-09-30",
@@ -6687,7 +8023,9 @@ var 科创50 = [
     "low": 938.5302,
     "close": 939.3764,
     "percent": -2.3,
-    "volume": 178643651
+    "volume": 178643651,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-10",
@@ -6697,7 +8035,9 @@ var 科创50 = [
     "low": 895.9415,
     "close": 897.3351,
     "percent": -4.48,
-    "volume": 227813861
+    "volume": 227813861,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-11",
@@ -6707,7 +8047,9 @@ var 科创50 = [
     "low": 890.8323,
     "close": 892.7394,
     "percent": -0.51,
-    "volume": 209280842
+    "volume": 209280842,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-12",
@@ -6717,7 +8059,9 @@ var 科创50 = [
     "low": 877.3915,
     "close": 924.9136,
     "percent": 3.6,
-    "volume": 271847321
+    "volume": 271847321,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-13",
@@ -6727,7 +8071,9 @@ var 科创50 = [
     "low": 917.3966,
     "close": 926.5204,
     "percent": 0.17,
-    "volume": 247187324
+    "volume": 247187324,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-14",
@@ -6737,7 +8083,9 @@ var 科创50 = [
     "low": 927.5575,
     "close": 954.9238,
     "percent": 3.07,
-    "volume": 345691952
+    "volume": 345691952,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-17",
@@ -6747,7 +8095,9 @@ var 科创50 = [
     "low": 948.3081,
     "close": 963.224,
     "percent": 0.87,
-    "volume": 310837719
+    "volume": 310837719,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-18",
@@ -6757,7 +8107,9 @@ var 科创50 = [
     "low": 953.2274,
     "close": 959.9996,
     "percent": -0.34,
-    "volume": 247381597
+    "volume": 247381597,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-19",
@@ -6767,7 +8119,9 @@ var 科创50 = [
     "low": 949.4982,
     "close": 949.4982,
     "percent": -1.09,
-    "volume": 242282183
+    "volume": 242282183,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-20",
@@ -6777,7 +8131,9 @@ var 科创50 = [
     "low": 940.9862,
     "close": 963.9517,
     "percent": 1.52,
-    "volume": 329668426
+    "volume": 329668426,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-21",
@@ -6787,7 +8143,9 @@ var 科创50 = [
     "low": 953.8963,
     "close": 967.9802,
     "percent": 0.42,
-    "volume": 302432256
+    "volume": 302432256,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-24",
@@ -6797,7 +8155,9 @@ var 科创50 = [
     "low": 964.0953,
     "close": 969.4925,
     "percent": 0.16,
-    "volume": 307116860
+    "volume": 307116860,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-25",
@@ -6807,7 +8167,9 @@ var 科创50 = [
     "low": 956.967,
     "close": 971.3335,
     "percent": 0.19,
-    "volume": 293099320
+    "volume": 293099320,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-26",
@@ -6817,7 +8179,9 @@ var 科创50 = [
     "low": 972.4515,
     "close": 1003.2545,
     "percent": 3.29,
-    "volume": 374308301
+    "volume": 374308301,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-27",
@@ -6827,7 +8191,9 @@ var 科创50 = [
     "low": 997.1124,
     "close": 1004.9093,
     "percent": 0.17,
-    "volume": 413865902
+    "volume": 413865902,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-28",
@@ -6837,7 +8203,9 @@ var 科创50 = [
     "low": 991.3394,
     "close": 993.7213,
     "percent": -1.11,
-    "volume": 389578774
+    "volume": 389578774,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-10-31",
@@ -6847,7 +8215,9 @@ var 科创50 = [
     "low": 991.8868,
     "close": 1010.327,
     "percent": 1.67,
-    "volume": 442804080
+    "volume": 442804080,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-01",
@@ -6857,7 +8227,9 @@ var 科创50 = [
     "low": 1003.1714,
     "close": 1024.5224,
     "percent": 1.41,
-    "volume": 402896098
+    "volume": 402896098,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-02",
@@ -6867,7 +8239,9 @@ var 科创50 = [
     "low": 1020.0744,
     "close": 1037.1791,
     "percent": 1.24,
-    "volume": 419021474
+    "volume": 419021474,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-03",
@@ -6877,7 +8251,9 @@ var 科创50 = [
     "low": 1028.4327,
     "close": 1048.0698,
     "percent": 1.05,
-    "volume": 375997941
+    "volume": 375997941,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-04",
@@ -6887,7 +8263,9 @@ var 科创50 = [
     "low": 1048.891,
     "close": 1072.8704,
     "percent": 2.37,
-    "volume": 395661615
+    "volume": 395661615,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-07",
@@ -6897,7 +8275,9 @@ var 科创50 = [
     "low": 1058.7104,
     "close": 1061.3507,
     "percent": -1.07,
-    "volume": 356250265
+    "volume": 356250265,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-08",
@@ -6907,7 +8287,9 @@ var 科创50 = [
     "low": 1041.9237,
     "close": 1051.7094,
     "percent": -0.91,
-    "volume": 270041987
+    "volume": 270041987,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-09",
@@ -6917,7 +8299,9 @@ var 科创50 = [
     "low": 1037.1994,
     "close": 1037.5267,
     "percent": -1.35,
-    "volume": 234389044
+    "volume": 234389044,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-10",
@@ -6927,7 +8311,9 @@ var 科创50 = [
     "low": 1021.9872,
     "close": 1023.0641,
     "percent": -1.39,
-    "volume": 258542545
+    "volume": 258542545,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-11",
@@ -6937,7 +8323,9 @@ var 科创50 = [
     "low": 1023.265,
     "close": 1023.265,
     "percent": 0.02,
-    "volume": 342474719
+    "volume": 342474719,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-14",
@@ -6947,7 +8335,9 @@ var 科创50 = [
     "low": 1015.0136,
     "close": 1022.9133,
     "percent": -0.03,
-    "volume": 314527208
+    "volume": 314527208,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-15",
@@ -6957,7 +8347,9 @@ var 科创50 = [
     "low": 1022.0414,
     "close": 1052.0449,
     "percent": 2.85,
-    "volume": 394641735
+    "volume": 394641735,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-16",
@@ -6967,7 +8359,9 @@ var 科创50 = [
     "low": 1034.9767,
     "close": 1036.4919,
     "percent": -1.48,
-    "volume": 273488184
+    "volume": 273488184,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-17",
@@ -6977,7 +8371,9 @@ var 科创50 = [
     "low": 1016.1945,
     "close": 1041.6727,
     "percent": 0.5,
-    "volume": 306642639
+    "volume": 306642639,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-18",
@@ -6987,7 +8383,9 @@ var 科创50 = [
     "low": 1030.9843,
     "close": 1031.9923,
     "percent": -0.93,
-    "volume": 323567488
+    "volume": 323567488,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-21",
@@ -6997,7 +8395,9 @@ var 科创50 = [
     "low": 1021.3468,
     "close": 1032.4723,
     "percent": 0.05,
-    "volume": 251682516
+    "volume": 251682516,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-22",
@@ -7007,7 +8407,9 @@ var 科创50 = [
     "low": 1015.4389,
     "close": 1017.8215,
     "percent": -1.42,
-    "volume": 343200348
+    "volume": 343200348,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-23",
@@ -7017,7 +8419,9 @@ var 科创50 = [
     "low": 994.678,
     "close": 1017.0158,
     "percent": -0.08,
-    "volume": 327303585
+    "volume": 327303585,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-24",
@@ -7027,7 +8431,9 @@ var 科创50 = [
     "low": 1014.4265,
     "close": 1015.3554,
     "percent": -0.16,
-    "volume": 287946393
+    "volume": 287946393,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-25",
@@ -7037,7 +8443,9 @@ var 科创50 = [
     "low": 999.9884,
     "close": 999.9884,
     "percent": -1.51,
-    "volume": 294782854
+    "volume": 294782854,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-28",
@@ -7047,7 +8455,9 @@ var 科创50 = [
     "low": 983.5944,
     "close": 992.8115,
     "percent": -0.72,
-    "volume": 298337209
+    "volume": 298337209,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-29",
@@ -7057,7 +8467,9 @@ var 科创50 = [
     "low": 990.3402,
     "close": 1002.4473,
     "percent": 0.97,
-    "volume": 316863620
+    "volume": 316863620,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-11-30",
@@ -7067,7 +8479,9 @@ var 科创50 = [
     "low": 991.7778,
     "close": 1000.2634,
     "percent": -0.22,
-    "volume": 307788927
+    "volume": 307788927,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-01",
@@ -7077,7 +8491,9 @@ var 科创50 = [
     "low": 1006.1483,
     "close": 1009.3323,
     "percent": 0.91,
-    "volume": 308451841
+    "volume": 308451841,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-02",
@@ -7087,7 +8503,9 @@ var 科创50 = [
     "low": 1005.6315,
     "close": 1008.1448,
     "percent": -0.12,
-    "volume": 294841200
+    "volume": 294841200,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-05",
@@ -7097,7 +8515,9 @@ var 科创50 = [
     "low": 999.8382,
     "close": 1003.6,
     "percent": -0.45,
-    "volume": 392553765
+    "volume": 392553765,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-06",
@@ -7107,7 +8527,9 @@ var 科创50 = [
     "low": 1001.0393,
     "close": 1003.1362,
     "percent": -0.05,
-    "volume": 384228146
+    "volume": 384228146,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-07",
@@ -7117,7 +8539,9 @@ var 科创50 = [
     "low": 998.4955,
     "close": 1000.4748,
     "percent": -0.27,
-    "volume": 328763014
+    "volume": 328763014,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-08",
@@ -7127,7 +8551,9 @@ var 科创50 = [
     "low": 995.9853,
     "close": 997.3145,
     "percent": -0.32,
-    "volume": 365958409
+    "volume": 365958409,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-09",
@@ -7137,7 +8563,9 @@ var 科创50 = [
     "low": 993.3654,
     "close": 1001.6859,
     "percent": 0.44,
-    "volume": 608898039
+    "volume": 608898039,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-12",
@@ -7147,7 +8575,9 @@ var 科创50 = [
     "low": 997.6176,
     "close": 1004.6215,
     "percent": 0.29,
-    "volume": 390317637
+    "volume": 390317637,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-13",
@@ -7157,7 +8587,9 @@ var 科创50 = [
     "low": 989.182,
     "close": 989.3074,
     "percent": -1.52,
-    "volume": 302227831
+    "volume": 302227831,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-14",
@@ -7167,7 +8599,9 @@ var 科创50 = [
     "low": 983.8682,
     "close": 984.2188,
     "percent": -0.51,
-    "volume": 326689856
+    "volume": 326689856,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-15",
@@ -7177,7 +8611,9 @@ var 科创50 = [
     "low": 985.1521,
     "close": 989.1978,
     "percent": 0.51,
-    "volume": 242003540
+    "volume": 242003540,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-16",
@@ -7187,7 +8623,9 @@ var 科创50 = [
     "low": 974.2448,
     "close": 978.3607,
     "percent": -1.1,
-    "volume": 268062984
+    "volume": 268062984,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-19",
@@ -7197,7 +8635,9 @@ var 科创50 = [
     "low": 955.5033,
     "close": 956.1861,
     "percent": -2.27,
-    "volume": 254341926
+    "volume": 254341926,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-20",
@@ -7207,7 +8647,9 @@ var 科创50 = [
     "low": 951.5645,
     "close": 952.7674,
     "percent": -0.36,
-    "volume": 225086848
+    "volume": 225086848,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-21",
@@ -7217,7 +8659,9 @@ var 科创50 = [
     "low": 937.7693,
     "close": 940.8352,
     "percent": -1.25,
-    "volume": 181095166
+    "volume": 181095166,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-22",
@@ -7227,7 +8671,9 @@ var 科创50 = [
     "low": 929.062,
     "close": 930.8047,
     "percent": -1.07,
-    "volume": 212105891
+    "volume": 212105891,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-23",
@@ -7237,7 +8683,9 @@ var 科创50 = [
     "low": 915.3114,
     "close": 920.3509,
     "percent": -1.12,
-    "volume": 204023247
+    "volume": 204023247,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-26",
@@ -7247,7 +8695,9 @@ var 科创50 = [
     "low": 920.7353,
     "close": 951.1103,
     "percent": 3.34,
-    "volume": 255354702
+    "volume": 255354702,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-27",
@@ -7257,7 +8707,9 @@ var 科创50 = [
     "low": 948.508,
     "close": 963.1355,
     "percent": 1.26,
-    "volume": 236837243
+    "volume": 236837243,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-28",
@@ -7267,7 +8719,9 @@ var 科创50 = [
     "low": 957.2375,
     "close": 957.2743,
     "percent": -0.61,
-    "volume": 200710700
+    "volume": 200710700,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-29",
@@ -7277,7 +8731,9 @@ var 科创50 = [
     "low": 956.0979,
     "close": 962.2531,
     "percent": 0.52,
-    "volume": 197523002
+    "volume": 197523002,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2022-12-30",
@@ -7287,7 +8743,9 @@ var 科创50 = [
     "low": 959.7384,
     "close": 959.9046,
     "percent": -0.24,
-    "volume": 179590004
+    "volume": 179590004,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-03",
@@ -7297,7 +8755,9 @@ var 科创50 = [
     "low": 958.7478,
     "close": 979.9129,
     "percent": 2.08,
-    "volume": 252245377
+    "volume": 252245377,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-04",
@@ -7307,7 +8767,9 @@ var 科创50 = [
     "low": 966.7193,
     "close": 972.3783,
     "percent": -0.77,
-    "volume": 232161941
+    "volume": 232161941,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-05",
@@ -7317,7 +8779,9 @@ var 科创50 = [
     "low": 972.0935,
     "close": 983.5199,
     "percent": 1.15,
-    "volume": 259813494
+    "volume": 259813494,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-06",
@@ -7327,7 +8791,9 @@ var 科创50 = [
     "low": 985.9935,
     "close": 991.0953,
     "percent": 0.77,
-    "volume": 343837531
+    "volume": 343837531,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-09",
@@ -7337,7 +8803,9 @@ var 科创50 = [
     "low": 986.6283,
     "close": 988.6687,
     "percent": -0.25,
-    "volume": 253088059
+    "volume": 253088059,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-10",
@@ -7347,7 +8815,9 @@ var 科创50 = [
     "low": 989.0848,
     "close": 990.3153,
     "percent": 0.17,
-    "volume": 212406446
+    "volume": 212406446,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-11",
@@ -7357,7 +8827,9 @@ var 科创50 = [
     "low": 973.9616,
     "close": 973.9616,
     "percent": -1.65,
-    "volume": 218461819
+    "volume": 218461819,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-12",
@@ -7367,7 +8839,9 @@ var 科创50 = [
     "low": 971.7273,
     "close": 974.1936,
     "percent": 0.02,
-    "volume": 222952948
+    "volume": 222952948,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-13",
@@ -7377,7 +8851,9 @@ var 科创50 = [
     "low": 968.1072,
     "close": 974.3119,
     "percent": 0.01,
-    "volume": 203777239
+    "volume": 203777239,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-16",
@@ -7387,7 +8863,9 @@ var 科创50 = [
     "low": 972.7034,
     "close": 992.6128,
     "percent": 1.88,
-    "volume": 358093741
+    "volume": 358093741,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-17",
@@ -7397,7 +8875,9 @@ var 科创50 = [
     "low": 994.6421,
     "close": 1003.6766,
     "percent": 1.12,
-    "volume": 242356138
+    "volume": 242356138,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-18",
@@ -7407,7 +8887,9 @@ var 科创50 = [
     "low": 1004.9802,
     "close": 1006.7456,
     "percent": 0.31,
-    "volume": 197321023
+    "volume": 197321023,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-19",
@@ -7417,7 +8899,9 @@ var 科创50 = [
     "low": 1004.7855,
     "close": 1023.6513,
     "percent": 1.68,
-    "volume": 224389273
+    "volume": 224389273,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-20",
@@ -7427,7 +8911,9 @@ var 科创50 = [
     "low": 1024.8053,
     "close": 1029.1351,
     "percent": 0.54,
-    "volume": 221179006
+    "volume": 221179006,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-30",
@@ -7437,7 +8923,9 @@ var 科创50 = [
     "low": 1031.6098,
     "close": 1031.6098,
     "percent": 0.24,
-    "volume": 422914268
+    "volume": 422914268,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-01-31",
@@ -7447,7 +8935,9 @@ var 科创50 = [
     "low": 1014.3579,
     "close": 1014.3579,
     "percent": -1.67,
-    "volume": 301869921
+    "volume": 301869921,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-01",
@@ -7457,7 +8947,9 @@ var 科创50 = [
     "low": 1011.4405,
     "close": 1026.3979,
     "percent": 1.19,
-    "volume": 318856769
+    "volume": 318856769,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-02",
@@ -7467,7 +8959,9 @@ var 科创50 = [
     "low": 1030.0897,
     "close": 1031.6796,
     "percent": 0.52,
-    "volume": 358709299
+    "volume": 358709299,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-03",
@@ -7477,7 +8971,9 @@ var 科创50 = [
     "low": 1017.9209,
     "close": 1033.8699,
     "percent": 0.21,
-    "volume": 260581432
+    "volume": 260581432,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-06",
@@ -7487,7 +8983,9 @@ var 科创50 = [
     "low": 1021.4365,
     "close": 1024.4264,
     "percent": -0.91,
-    "volume": 271323763
+    "volume": 271323763,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-07",
@@ -7497,7 +8995,9 @@ var 科创50 = [
     "low": 1014.9944,
     "close": 1020.1662,
     "percent": -0.42,
-    "volume": 248806345
+    "volume": 248806345,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-08",
@@ -7507,7 +9007,9 @@ var 科创50 = [
     "low": 1010.6939,
     "close": 1010.6939,
     "percent": -0.93,
-    "volume": 229414383
+    "volume": 229414383,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-09",
@@ -7517,7 +9019,9 @@ var 科创50 = [
     "low": 1007.839,
     "close": 1036.8609,
     "percent": 2.59,
-    "volume": 332865899
+    "volume": 332865899,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-10",
@@ -7527,7 +9031,9 @@ var 科创50 = [
     "low": 1019.6187,
     "close": 1024.5381,
     "percent": -1.19,
-    "volume": 314944280
+    "volume": 314944280,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-13",
@@ -7537,7 +9043,9 @@ var 科创50 = [
     "low": 1020.5503,
     "close": 1024.0364,
     "percent": -0.05,
-    "volume": 301104883
+    "volume": 301104883,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-14",
@@ -7547,7 +9055,9 @@ var 科创50 = [
     "low": 1017.2851,
     "close": 1022.6687,
     "percent": -0.13,
-    "volume": 265546706
+    "volume": 265546706,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-15",
@@ -7557,7 +9067,9 @@ var 科创50 = [
     "low": 1016.3416,
     "close": 1024.2168,
     "percent": 0.15,
-    "volume": 342396388
+    "volume": 342396388,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-16",
@@ -7567,7 +9079,9 @@ var 科创50 = [
     "low": 1003.2367,
     "close": 1005.1801,
     "percent": -1.86,
-    "volume": 380585769
+    "volume": 380585769,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-17",
@@ -7577,7 +9091,9 @@ var 科创50 = [
     "low": 986.3345,
     "close": 986.3345,
     "percent": -1.88,
-    "volume": 285835035
+    "volume": 285835035,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-20",
@@ -7587,7 +9103,9 @@ var 科创50 = [
     "low": 981.4016,
     "close": 998.8316,
     "percent": 1.27,
-    "volume": 274188708
+    "volume": 274188708,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-21",
@@ -7597,7 +9115,9 @@ var 科创50 = [
     "low": 990.2353,
     "close": 995.7254,
     "percent": -0.31,
-    "volume": 257621765
+    "volume": 257621765,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-22",
@@ -7607,7 +9127,9 @@ var 科创50 = [
     "low": 987.8026,
     "close": 989.6533,
     "percent": -0.61,
-    "volume": 193071438
+    "volume": 193071438,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-23",
@@ -7617,7 +9139,9 @@ var 科创50 = [
     "low": 988.196,
     "close": 992.4615,
     "percent": 0.28,
-    "volume": 255840885
+    "volume": 255840885,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-24",
@@ -7627,7 +9151,9 @@ var 科创50 = [
     "low": 989.2168,
     "close": 990.6316,
     "percent": -0.18,
-    "volume": 243714818
+    "volume": 243714818,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-27",
@@ -7637,7 +9163,9 @@ var 科创50 = [
     "low": 984.3526,
     "close": 986.2822,
     "percent": -0.44,
-    "volume": 278120428
+    "volume": 278120428,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-02-28",
@@ -7647,7 +9175,9 @@ var 科创50 = [
     "low": 981.0504,
     "close": 990.4668,
     "percent": 0.42,
-    "volume": 298112961
+    "volume": 298112961,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-01",
@@ -7657,7 +9187,9 @@ var 科创50 = [
     "low": 985.4225,
     "close": 994.6341,
     "percent": 0.42,
-    "volume": 371550526
+    "volume": 371550526,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-02",
@@ -7667,7 +9199,9 @@ var 科创50 = [
     "low": 988.4357,
     "close": 988.8944,
     "percent": -0.58,
-    "volume": 294984095
+    "volume": 294984095,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-03",
@@ -7677,7 +9211,9 @@ var 科创50 = [
     "low": 990.4354,
     "close": 998.9005,
     "percent": 1.01,
-    "volume": 357453518
+    "volume": 357453518,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-06",
@@ -7687,7 +9223,9 @@ var 科创50 = [
     "low": 993.2542,
     "close": 1007.6348,
     "percent": 0.87,
-    "volume": 389609464
+    "volume": 389609464,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-07",
@@ -7697,7 +9235,9 @@ var 科创50 = [
     "low": 990.4738,
     "close": 990.575,
     "percent": -1.69,
-    "volume": 359445178
+    "volume": 359445178,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-08",
@@ -7707,7 +9247,9 @@ var 科创50 = [
     "low": 989.1236,
     "close": 994.8859,
     "percent": 0.44,
-    "volume": 267468185
+    "volume": 267468185,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-09",
@@ -7717,7 +9259,9 @@ var 科创50 = [
     "low": 994.3586,
     "close": 998.3033,
     "percent": 0.34,
-    "volume": 291613944
+    "volume": 291613944,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-10",
@@ -7727,7 +9271,9 @@ var 科创50 = [
     "low": 989.0508,
     "close": 993.5523,
     "percent": -0.48,
-    "volume": 399946691
+    "volume": 399946691,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-13",
@@ -7737,7 +9283,9 @@ var 科创50 = [
     "low": 992.7746,
     "close": 998.907,
     "percent": 0.54,
-    "volume": 350858205
+    "volume": 350858205,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-14",
@@ -7747,7 +9295,9 @@ var 科创50 = [
     "low": 989.632,
     "close": 1013.3905,
     "percent": 1.45,
-    "volume": 556303288
+    "volume": 556303288,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-15",
@@ -7757,7 +9307,9 @@ var 科创50 = [
     "low": 1007.3043,
     "close": 1007.3043,
     "percent": -0.6,
-    "volume": 469241649
+    "volume": 469241649,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-16",
@@ -7767,7 +9319,9 @@ var 科创50 = [
     "low": 990.4919,
     "close": 992.4353,
     "percent": -1.48,
-    "volume": 487586352
+    "volume": 487586352,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-17",
@@ -7777,7 +9331,9 @@ var 科创50 = [
     "low": 999.1811,
     "close": 1015.7576,
     "percent": 2.35,
-    "volume": 615227386
+    "volume": 615227386,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-20",
@@ -7787,7 +9343,9 @@ var 科创50 = [
     "low": 1016.2288,
     "close": 1025.3214,
     "percent": 0.94,
-    "volume": 585638108
+    "volume": 585638108,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-21",
@@ -7797,7 +9355,9 @@ var 科创50 = [
     "low": 1020.8505,
     "close": 1030.1859,
     "percent": 0.47,
-    "volume": 415727039
+    "volume": 415727039,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-22",
@@ -7807,7 +9367,9 @@ var 科创50 = [
     "low": 1028.9211,
     "close": 1034.0494,
     "percent": 0.38,
-    "volume": 435278600
+    "volume": 435278600,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-23",
@@ -7817,7 +9379,9 @@ var 科创50 = [
     "low": 1030.4658,
     "close": 1058.988,
     "percent": 2.41,
-    "volume": 569829372
+    "volume": 569829372,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-24",
@@ -7827,7 +9391,9 @@ var 科创50 = [
     "low": 1052.3859,
     "close": 1060.9866,
     "percent": 0.19,
-    "volume": 496546404
+    "volume": 496546404,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-27",
@@ -7837,7 +9403,9 @@ var 科创50 = [
     "low": 1045.724,
     "close": 1057.4871,
     "percent": -0.33,
-    "volume": 532019058
+    "volume": 532019058,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-28",
@@ -7847,7 +9415,9 @@ var 科创50 = [
     "low": 1037.4201,
     "close": 1038.6253,
     "percent": -1.78,
-    "volume": 427864489
+    "volume": 427864489,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-29",
@@ -7857,7 +9427,9 @@ var 科创50 = [
     "low": 1036.5919,
     "close": 1062.1363,
     "percent": 2.26,
-    "volume": 510839760
+    "volume": 510839760,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-30",
@@ -7867,7 +9439,9 @@ var 科创50 = [
     "low": 1053.579,
     "close": 1065.6903,
     "percent": 0.34,
-    "volume": 451236010
+    "volume": 451236010,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-03-31",
@@ -7877,7 +9451,9 @@ var 科创50 = [
     "low": 1063.288,
     "close": 1081.5406,
     "percent": 1.49,
-    "volume": 448629840
+    "volume": 448629840,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-03",
@@ -7887,7 +9463,9 @@ var 科创50 = [
     "low": 1093.0752,
     "close": 1126.4885,
     "percent": 4.16,
-    "volume": 687767404
+    "volume": 687767404,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-04",
@@ -7897,7 +9475,9 @@ var 科创50 = [
     "low": 1120.6812,
     "close": 1129.0844,
     "percent": 0.23,
-    "volume": 816347182
+    "volume": 816347182,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-06",
@@ -7907,7 +9487,9 @@ var 科创50 = [
     "low": 1127.0315,
     "close": 1146.9642,
     "percent": 1.58,
-    "volume": 803889966
+    "volume": 803889966,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-07",
@@ -7917,7 +9499,9 @@ var 科创50 = [
     "low": 1144.519,
     "close": 1161.0214,
     "percent": 1.23,
-    "volume": 588450425
+    "volume": 588450425,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-10",
@@ -7927,7 +9511,9 @@ var 科创50 = [
     "low": 1129.1723,
     "close": 1129.1723,
     "percent": -2.74,
-    "volume": 670119891
+    "volume": 670119891,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-11",
@@ -7937,7 +9523,9 @@ var 科创50 = [
     "low": 1109.5098,
     "close": 1121.7403,
     "percent": -0.66,
-    "volume": 581264851
+    "volume": 581264851,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-12",
@@ -7947,7 +9535,9 @@ var 科创50 = [
     "low": 1116.2966,
     "close": 1129.4062,
     "percent": 0.68,
-    "volume": 576207175
+    "volume": 576207175,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-13",
@@ -7957,7 +9547,9 @@ var 科创50 = [
     "low": 1098.8997,
     "close": 1100.126,
     "percent": -2.59,
-    "volume": 498549641
+    "volume": 498549641,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-14",
@@ -7967,7 +9559,9 @@ var 科创50 = [
     "low": 1097.2871,
     "close": 1136.2134,
     "percent": 3.28,
-    "volume": 633546953
+    "volume": 633546953,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-17",
@@ -7977,7 +9571,9 @@ var 科创50 = [
     "low": 1134.0508,
     "close": 1140.1304,
     "percent": 0.35,
-    "volume": 557730383
+    "volume": 557730383,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-18",
@@ -7987,7 +9583,9 @@ var 科创50 = [
     "low": 1117.3435,
     "close": 1129.8172,
     "percent": -0.91,
-    "volume": 513796111
+    "volume": 513796111,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-19",
@@ -7997,7 +9595,9 @@ var 科创50 = [
     "low": 1128.9894,
     "close": 1134.4042,
     "percent": 0.41,
-    "volume": 590754690
+    "volume": 590754690,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-20",
@@ -8007,7 +9607,9 @@ var 科创50 = [
     "low": 1134.9375,
     "close": 1164.9479,
     "percent": 2.69,
-    "volume": 845716798
+    "volume": 845716798,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-21",
@@ -8017,7 +9619,9 @@ var 科创50 = [
     "low": 1116.8253,
     "close": 1116.8253,
     "percent": -4.13,
-    "volume": 796004725
+    "volume": 796004725,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-24",
@@ -8027,7 +9631,9 @@ var 科创50 = [
     "low": 1090.8668,
     "close": 1096.3775,
     "percent": -1.83,
-    "volume": 689418675
+    "volume": 689418675,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-25",
@@ -8037,7 +9643,9 @@ var 科创50 = [
     "low": 1072.2918,
     "close": 1076.8646,
     "percent": -1.78,
-    "volume": 669734035
+    "volume": 669734035,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-26",
@@ -8047,7 +9655,9 @@ var 科创50 = [
     "low": 1062.5998,
     "close": 1069.0054,
     "percent": -0.73,
-    "volume": 716155437
+    "volume": 716155437,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-27",
@@ -8057,7 +9667,9 @@ var 科创50 = [
     "low": 1060.2896,
     "close": 1068.012,
     "percent": -0.09,
-    "volume": 531203420
+    "volume": 531203420,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-04-28",
@@ -8067,7 +9679,9 @@ var 科创50 = [
     "low": 1060.7062,
     "close": 1087.8687,
     "percent": 1.86,
-    "volume": 577992439
+    "volume": 577992439,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-04",
@@ -8077,7 +9691,9 @@ var 科创50 = [
     "low": 1061.1684,
     "close": 1064.2045,
     "percent": -2.18,
-    "volume": 547659381
+    "volume": 547659381,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-05",
@@ -8087,7 +9703,9 @@ var 科创50 = [
     "low": 1047.2881,
     "close": 1049.0885,
     "percent": -1.42,
-    "volume": 431187763
+    "volume": 431187763,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-08",
@@ -8097,7 +9715,9 @@ var 科创50 = [
     "low": 1048.8699,
     "close": 1057.2139,
     "percent": 0.78,
-    "volume": 405624114
+    "volume": 405624114,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-09",
@@ -8107,7 +9727,9 @@ var 科创50 = [
     "low": 1034.2125,
     "close": 1034.2125,
     "percent": -2.18,
-    "volume": 538421450
+    "volume": 538421450,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-10",
@@ -8117,7 +9739,9 @@ var 科创50 = [
     "low": 1019.1503,
     "close": 1025.706,
     "percent": -0.82,
-    "volume": 487600090
+    "volume": 487600090,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-11",
@@ -8127,7 +9751,9 @@ var 科创50 = [
     "low": 1025.971,
     "close": 1025.971,
     "percent": 0.03,
-    "volume": 331728950
+    "volume": 331728950,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-12",
@@ -8137,7 +9763,9 @@ var 科创50 = [
     "low": 1014.1053,
     "close": 1014.1053,
     "percent": -1.16,
-    "volume": 380719600
+    "volume": 380719600,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-15",
@@ -8147,7 +9775,9 @@ var 科创50 = [
     "low": 1008.0179,
     "close": 1025.7852,
     "percent": 1.15,
-    "volume": 409359926
+    "volume": 409359926,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-16",
@@ -8157,7 +9787,9 @@ var 科创50 = [
     "low": 1023.3629,
     "close": 1025.8657,
     "percent": 0.01,
-    "volume": 333612358
+    "volume": 333612358,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-17",
@@ -8167,7 +9799,9 @@ var 科创50 = [
     "low": 1024.3951,
     "close": 1029.6495,
     "percent": 0.37,
-    "volume": 297781428
+    "volume": 297781428,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-18",
@@ -8177,7 +9811,9 @@ var 科创50 = [
     "low": 1029.8926,
     "close": 1034.8223,
     "percent": 0.5,
-    "volume": 336449700
+    "volume": 336449700,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-19",
@@ -8187,7 +9823,9 @@ var 科创50 = [
     "low": 1037.667,
     "close": 1040.1612,
     "percent": 0.52,
-    "volume": 327482796
+    "volume": 327482796,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-22",
@@ -8197,7 +9835,9 @@ var 科创50 = [
     "low": 1028.1204,
     "close": 1032.1119,
     "percent": -0.77,
-    "volume": 272546546
+    "volume": 272546546,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-23",
@@ -8207,7 +9847,9 @@ var 科创50 = [
     "low": 1016.1058,
     "close": 1016.1058,
     "percent": -1.55,
-    "volume": 275031801
+    "volume": 275031801,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-24",
@@ -8217,7 +9859,9 @@ var 科创50 = [
     "low": 1007.7365,
     "close": 1011.7736,
     "percent": -0.43,
-    "volume": 423524911
+    "volume": 423524911,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-25",
@@ -8227,7 +9871,9 @@ var 科创50 = [
     "low": 1007.0291,
     "close": 1021.7194,
     "percent": 0.98,
-    "volume": 392516583
+    "volume": 392516583,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-26",
@@ -8237,7 +9883,9 @@ var 科创50 = [
     "low": 1023.8581,
     "close": 1038.6613,
     "percent": 1.66,
-    "volume": 342135482
+    "volume": 342135482,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-29",
@@ -8247,7 +9895,9 @@ var 科创50 = [
     "low": 1027.8683,
     "close": 1028.3796,
     "percent": -0.99,
-    "volume": 503242007
+    "volume": 503242007,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-30",
@@ -8257,7 +9907,9 @@ var 科创50 = [
     "low": 1025.0721,
     "close": 1044.4253,
     "percent": 1.56,
-    "volume": 391313643
+    "volume": 391313643,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-05-31",
@@ -8267,7 +9919,9 @@ var 科创50 = [
     "low": 1040.3388,
     "close": 1053.9095,
     "percent": 0.91,
-    "volume": 482928511
+    "volume": 482928511,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-01",
@@ -8277,7 +9931,9 @@ var 科创50 = [
     "low": 1048.9543,
     "close": 1053.549,
     "percent": -0.03,
-    "volume": 393400168
+    "volume": 393400168,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-02",
@@ -8287,7 +9943,9 @@ var 科创50 = [
     "low": 1048.51,
     "close": 1053.2906,
     "percent": -0.03,
-    "volume": 375879273
+    "volume": 375879273,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-05",
@@ -8297,7 +9955,9 @@ var 科创50 = [
     "low": 1050.2911,
     "close": 1051.7336,
     "percent": -0.15,
-    "volume": 373523439
+    "volume": 373523439,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-06",
@@ -8307,7 +9967,9 @@ var 科创50 = [
     "low": 1022.9844,
     "close": 1022.9844,
     "percent": -2.73,
-    "volume": 368138988
+    "volume": 368138988,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-07",
@@ -8317,7 +9979,9 @@ var 科创50 = [
     "low": 1015.8345,
     "close": 1019.0507,
     "percent": -0.39,
-    "volume": 325014241
+    "volume": 325014241,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-08",
@@ -8327,7 +9991,9 @@ var 科创50 = [
     "low": 1004.8874,
     "close": 1007.1198,
     "percent": -1.17,
-    "volume": 410022789
+    "volume": 410022789,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-09",
@@ -8337,7 +10003,9 @@ var 科创50 = [
     "low": 1005.1904,
     "close": 1032.5511,
     "percent": 2.53,
-    "volume": 687191158
+    "volume": 687191158,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-12",
@@ -8347,7 +10015,9 @@ var 科创50 = [
     "low": 1023.177,
     "close": 1026.6392,
     "percent": -0.57,
-    "volume": 437757823
+    "volume": 437757823,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-13",
@@ -8357,7 +10027,9 @@ var 科创50 = [
     "low": 1022.6494,
     "close": 1039.4628,
     "percent": 1.25,
-    "volume": 398824069
+    "volume": 398824069,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-14",
@@ -8367,7 +10039,9 @@ var 科创50 = [
     "low": 1031.9004,
     "close": 1035.3137,
     "percent": -0.4,
-    "volume": 329444779
+    "volume": 329444779,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-15",
@@ -8377,7 +10051,9 @@ var 科创50 = [
     "low": 1029.9037,
     "close": 1033.8504,
     "percent": -0.14,
-    "volume": 403135011
+    "volume": 403135011,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-16",
@@ -8387,7 +10063,9 @@ var 科创50 = [
     "low": 1034.4248,
     "close": 1052.883,
     "percent": 1.84,
-    "volume": 422904937
+    "volume": 422904937,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-19",
@@ -8397,7 +10075,9 @@ var 科创50 = [
     "low": 1046.5685,
     "close": 1055.4542,
     "percent": 0.24,
-    "volume": 373642700
+    "volume": 373642700,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-20",
@@ -8407,7 +10087,9 @@ var 科创50 = [
     "low": 1043.8494,
     "close": 1055.4121,
     "percent": 0,
-    "volume": 414960336
+    "volume": 414960336,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-21",
@@ -8417,7 +10099,9 @@ var 科创50 = [
     "low": 1020.2215,
     "close": 1020.2215,
     "percent": -3.33,
-    "volume": 335338225
+    "volume": 335338225,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-26",
@@ -8427,7 +10111,9 @@ var 科创50 = [
     "low": 1008.4065,
     "close": 1010.3139,
     "percent": -0.97,
-    "volume": 393941436
+    "volume": 393941436,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-27",
@@ -8437,7 +10123,9 @@ var 科创50 = [
     "low": 1008.5033,
     "close": 1011.3516,
     "percent": 0.1,
-    "volume": 343199276
+    "volume": 343199276,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-28",
@@ -8447,7 +10135,9 @@ var 科创50 = [
     "low": 998.7528,
     "close": 1008.2187,
     "percent": -0.31,
-    "volume": 344432903
+    "volume": 344432903,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-29",
@@ -8457,7 +10147,9 @@ var 科创50 = [
     "low": 1001.4576,
     "close": 1001.4576,
     "percent": -0.67,
-    "volume": 312190977
+    "volume": 312190977,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-06-30",
@@ -8467,7 +10159,9 @@ var 科创50 = [
     "low": 999.1819,
     "close": 1005.1499,
     "percent": 0.37,
-    "volume": 309419801
+    "volume": 309419801,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-03",
@@ -8477,7 +10171,9 @@ var 科创50 = [
     "low": 999.9406,
     "close": 1008.3989,
     "percent": 0.32,
-    "volume": 421868111
+    "volume": 421868111,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-04",
@@ -8487,7 +10183,9 @@ var 科创50 = [
     "low": 1005.7244,
     "close": 1015.3962,
     "percent": 0.69,
-    "volume": 352508594
+    "volume": 352508594,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-05",
@@ -8497,7 +10195,9 @@ var 科创50 = [
     "low": 1005.3294,
     "close": 1005.7315,
     "percent": -0.95,
-    "volume": 285157717
+    "volume": 285157717,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-06",
@@ -8507,7 +10207,9 @@ var 科创50 = [
     "low": 1001.7834,
     "close": 1002.1114,
     "percent": -0.36,
-    "volume": 285142475
+    "volume": 285142475,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-07",
@@ -8517,7 +10219,9 @@ var 科创50 = [
     "low": 990.5543,
     "close": 991.8494,
     "percent": -1.02,
-    "volume": 287710462
+    "volume": 287710462,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-10",
@@ -8527,7 +10231,9 @@ var 科创50 = [
     "low": 990.7475,
     "close": 993.731,
     "percent": 0.19,
-    "volume": 275074599
+    "volume": 275074599,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-11",
@@ -8537,7 +10243,9 @@ var 科创50 = [
     "low": 994.4246,
     "close": 1001.4141,
     "percent": 0.77,
-    "volume": 297128031
+    "volume": 297128031,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-12",
@@ -8547,7 +10255,9 @@ var 科创50 = [
     "low": 984.0646,
     "close": 984.9812,
     "percent": -1.64,
-    "volume": 349246013
+    "volume": 349246013,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-13",
@@ -8557,7 +10267,9 @@ var 科创50 = [
     "low": 988.6965,
     "close": 995.9727,
     "percent": 1.12,
-    "volume": 293353425
+    "volume": 293353425,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-14",
@@ -8567,7 +10279,9 @@ var 科创50 = [
     "low": 991.0028,
     "close": 991.5585,
     "percent": -0.44,
-    "volume": 320273114
+    "volume": 320273114,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-17",
@@ -8577,7 +10291,9 @@ var 科创50 = [
     "low": 982.6172,
     "close": 984.8212,
     "percent": -0.68,
-    "volume": 274577057
+    "volume": 274577057,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-18",
@@ -8587,7 +10303,9 @@ var 科创50 = [
     "low": 980.0185,
     "close": 980.0185,
     "percent": -0.49,
-    "volume": 259320015
+    "volume": 259320015,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-19",
@@ -8597,7 +10315,9 @@ var 科创50 = [
     "low": 974.1086,
     "close": 975.1149,
     "percent": -0.5,
-    "volume": 222785443
+    "volume": 222785443,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-20",
@@ -8607,7 +10327,9 @@ var 科创50 = [
     "low": 960.8683,
     "close": 961.1299,
     "percent": -1.43,
-    "volume": 222958921
+    "volume": 222958921,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-21",
@@ -8617,7 +10339,9 @@ var 科创50 = [
     "low": 954.7559,
     "close": 955.5486,
     "percent": -0.58,
-    "volume": 231398993
+    "volume": 231398993,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-24",
@@ -8627,7 +10351,9 @@ var 科创50 = [
     "low": 949.7182,
     "close": 950.5518,
     "percent": -0.52,
-    "volume": 194577555
+    "volume": 194577555,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-25",
@@ -8637,7 +10363,9 @@ var 科创50 = [
     "low": 957.6311,
     "close": 964.3961,
     "percent": 1.46,
-    "volume": 236336450
+    "volume": 236336450,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-26",
@@ -8647,7 +10375,9 @@ var 科创50 = [
     "low": 959.49,
     "close": 961.5966,
     "percent": -0.29,
-    "volume": 211861421
+    "volume": 211861421,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-27",
@@ -8657,7 +10387,9 @@ var 科创50 = [
     "low": 951.5904,
     "close": 952.2957,
     "percent": -0.97,
-    "volume": 236110818
+    "volume": 236110818,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-28",
@@ -8667,7 +10399,9 @@ var 科创50 = [
     "low": 949.2216,
     "close": 962.6446,
     "percent": 1.09,
-    "volume": 259766765
+    "volume": 259766765,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-07-31",
@@ -8677,7 +10411,9 @@ var 科创50 = [
     "low": 961.6886,
     "close": 968.9942,
     "percent": 0.66,
-    "volume": 321841846
+    "volume": 321841846,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-01",
@@ -8687,7 +10423,9 @@ var 科创50 = [
     "low": 966.5777,
     "close": 969.6827,
     "percent": 0.07,
-    "volume": 286751520
+    "volume": 286751520,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-02",
@@ -8697,7 +10435,9 @@ var 科创50 = [
     "low": 966.7737,
     "close": 968.4389,
     "percent": -0.13,
-    "volume": 260184767
+    "volume": 260184767,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-03",
@@ -8707,7 +10447,9 @@ var 科创50 = [
     "low": 962.5496,
     "close": 970.3727,
     "percent": 0.2,
-    "volume": 274695190
+    "volume": 274695190,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-04",
@@ -8717,7 +10459,9 @@ var 科创50 = [
     "low": 969.5008,
     "close": 975.7777,
     "percent": 0.56,
-    "volume": 285033218
+    "volume": 285033218,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-07",
@@ -8727,7 +10471,9 @@ var 科创50 = [
     "low": 967.6298,
     "close": 968.8975,
     "percent": -0.71,
-    "volume": 238645530
+    "volume": 238645530,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-08",
@@ -8737,7 +10483,9 @@ var 科创50 = [
     "low": 965.5322,
     "close": 965.5322,
     "percent": -0.35,
-    "volume": 211711915
+    "volume": 211711915,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-09",
@@ -8747,7 +10495,9 @@ var 科创50 = [
     "low": 956.9188,
     "close": 957.3687,
     "percent": -0.85,
-    "volume": 187017109
+    "volume": 187017109,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-10",
@@ -8757,7 +10507,9 @@ var 科创50 = [
     "low": 954.7971,
     "close": 959.17,
     "percent": 0.19,
-    "volume": 187908388
+    "volume": 187908388,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-11",
@@ -8767,7 +10519,9 @@ var 科创50 = [
     "low": 938.7653,
     "close": 938.7653,
     "percent": -2.13,
-    "volume": 246244524
+    "volume": 246244524,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-14",
@@ -8777,7 +10531,9 @@ var 科创50 = [
     "low": 921.1713,
     "close": 930.4953,
     "percent": -0.88,
-    "volume": 271907642
+    "volume": 271907642,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-15",
@@ -8787,7 +10543,9 @@ var 科创50 = [
     "low": 911.9993,
     "close": 917.4499,
     "percent": -1.4,
-    "volume": 352614753
+    "volume": 352614753,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-16",
@@ -8797,7 +10555,9 @@ var 科创50 = [
     "low": 901.7868,
     "close": 901.7868,
     "percent": -1.71,
-    "volume": 269476847
+    "volume": 269476847,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-17",
@@ -8807,7 +10567,9 @@ var 科创50 = [
     "low": 898.1509,
     "close": 910.3779,
     "percent": 0.95,
-    "volume": 265412742
+    "volume": 265412742,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-18",
@@ -8817,7 +10579,9 @@ var 科创50 = [
     "low": 904.2486,
     "close": 904.2486,
     "percent": -0.67,
-    "volume": 261578108
+    "volume": 261578108,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-21",
@@ -8827,7 +10591,9 @@ var 科创50 = [
     "low": 892.0927,
     "close": 892.0927,
     "percent": -1.34,
-    "volume": 246779469
+    "volume": 246779469,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-22",
@@ -8837,7 +10603,9 @@ var 科创50 = [
     "low": 877.7931,
     "close": 901.1284,
     "percent": 1.01,
-    "volume": 319495889
+    "volume": 319495889,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-23",
@@ -8847,7 +10615,9 @@ var 科创50 = [
     "low": 879.4591,
     "close": 879.4591,
     "percent": -2.41,
-    "volume": 235049677
+    "volume": 235049677,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-24",
@@ -8857,7 +10627,9 @@ var 科创50 = [
     "low": 880.6142,
     "close": 885.4764,
     "percent": 0.68,
-    "volume": 313887101
+    "volume": 313887101,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-25",
@@ -8867,7 +10639,9 @@ var 科创50 = [
     "low": 865.9793,
     "close": 870.3989,
     "percent": -1.7,
-    "volume": 282751949
+    "volume": 282751949,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-28",
@@ -8877,7 +10651,9 @@ var 科创50 = [
     "low": 879.3554,
     "close": 880.1914,
     "percent": 1.13,
-    "volume": 424009670
+    "volume": 424009670,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-29",
@@ -8887,7 +10663,9 @@ var 科创50 = [
     "low": 878.7799,
     "close": 916.4552,
     "percent": 4.12,
-    "volume": 470447222
+    "volume": 470447222,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-30",
@@ -8897,7 +10675,9 @@ var 科创50 = [
     "low": 932.3093,
     "close": 939.6482,
     "percent": 2.53,
-    "volume": 551898343
+    "volume": 551898343,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-08-31",
@@ -8907,7 +10687,9 @@ var 科创50 = [
     "low": 936.1949,
     "close": 942.6127,
     "percent": 0.32,
-    "volume": 491387592
+    "volume": 491387592,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-01",
@@ -8917,7 +10699,9 @@ var 科创50 = [
     "low": 927.4942,
     "close": 934.7868,
     "percent": -0.83,
-    "volume": 313685975
+    "volume": 313685975,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-04",
@@ -8927,7 +10711,9 @@ var 科创50 = [
     "low": 930.4128,
     "close": 942.4277,
     "percent": 0.82,
-    "volume": 374720849
+    "volume": 374720849,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-05",
@@ -8937,7 +10723,9 @@ var 科创50 = [
     "low": 929.4915,
     "close": 930.6288,
     "percent": -1.25,
-    "volume": 379857636
+    "volume": 379857636,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-06",
@@ -8947,7 +10735,9 @@ var 科创50 = [
     "low": 921.931,
     "close": 934.6043,
     "percent": 0.43,
-    "volume": 366371587
+    "volume": 366371587,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-07",
@@ -8957,7 +10747,9 @@ var 科创50 = [
     "low": 899.8284,
     "close": 899.8284,
     "percent": -3.72,
-    "volume": 422681592
+    "volume": 422681592,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-08",
@@ -8967,7 +10759,9 @@ var 科创50 = [
     "low": 894.5972,
     "close": 901.5064,
     "percent": 0.19,
-    "volume": 284540618
+    "volume": 284540618,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-11",
@@ -8977,7 +10771,9 @@ var 科创50 = [
     "low": 901.5419,
     "close": 907.505,
     "percent": 0.67,
-    "volume": 330897115
+    "volume": 330897115,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-12",
@@ -8987,7 +10783,9 @@ var 科创50 = [
     "low": 901.6222,
     "close": 901.6222,
     "percent": -0.65,
-    "volume": 227315937
+    "volume": 227315937,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-13",
@@ -8997,7 +10795,9 @@ var 科创50 = [
     "low": 883.1819,
     "close": 889.1317,
     "percent": -1.39,
-    "volume": 243037852
+    "volume": 243037852,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-14",
@@ -9007,7 +10807,9 @@ var 科创50 = [
     "low": 878.1134,
     "close": 880.8019,
     "percent": -0.94,
-    "volume": 220830000
+    "volume": 220830000,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-15",
@@ -9017,7 +10819,9 @@ var 科创50 = [
     "low": 876.7342,
     "close": 887.0133,
     "percent": 0.71,
-    "volume": 326667826
+    "volume": 326667826,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-18",
@@ -9027,7 +10831,9 @@ var 科创50 = [
     "low": 878.555,
     "close": 879.5336,
     "percent": -0.84,
-    "volume": 278597650
+    "volume": 278597650,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-19",
@@ -9037,7 +10843,9 @@ var 科创50 = [
     "low": 870.7961,
     "close": 873.6179,
     "percent": -0.67,
-    "volume": 200076405
+    "volume": 200076405,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-20",
@@ -9047,7 +10855,9 @@ var 科创50 = [
     "low": 866.0227,
     "close": 866.0227,
     "percent": -0.87,
-    "volume": 173903668
+    "volume": 173903668,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-21",
@@ -9057,7 +10867,9 @@ var 科创50 = [
     "low": 860.3942,
     "close": 860.3942,
     "percent": -0.65,
-    "volume": 180235972
+    "volume": 180235972,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-22",
@@ -9067,7 +10879,9 @@ var 科创50 = [
     "low": 860.2282,
     "close": 882.8781,
     "percent": 2.61,
-    "volume": 282757395
+    "volume": 282757395,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-25",
@@ -9077,7 +10891,9 @@ var 科创50 = [
     "low": 874.5546,
     "close": 874.5546,
     "percent": -0.94,
-    "volume": 234069741
+    "volume": 234069741,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-26",
@@ -9087,7 +10903,9 @@ var 科创50 = [
     "low": 875.5102,
     "close": 876.0511,
     "percent": 0.17,
-    "volume": 223099059
+    "volume": 223099059,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-27",
@@ -9097,7 +10915,9 @@ var 科创50 = [
     "low": 875.4349,
     "close": 880.17,
     "percent": 0.47,
-    "volume": 275342610
+    "volume": 275342610,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-09-28",
@@ -9107,7 +10927,9 @@ var 科创50 = [
     "low": 878.851,
     "close": 887.7997,
     "percent": 0.87,
-    "volume": 243733479
+    "volume": 243733479,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-09",
@@ -9117,7 +10939,9 @@ var 科创50 = [
     "low": 882.1324,
     "close": 887.2116,
     "percent": -0.07,
-    "volume": 247684226
+    "volume": 247684226,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-10",
@@ -9127,7 +10951,9 @@ var 科创50 = [
     "low": 882.0438,
     "close": 882.0438,
     "percent": -0.58,
-    "volume": 305081127
+    "volume": 305081127,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-11",
@@ -9137,7 +10963,9 @@ var 科创50 = [
     "low": 884.5826,
     "close": 893.4485,
     "percent": 1.29,
-    "volume": 347104613
+    "volume": 347104613,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-12",
@@ -9147,7 +10975,9 @@ var 科创50 = [
     "low": 891.4342,
     "close": 899.984,
     "percent": 0.73,
-    "volume": 322927936
+    "volume": 322927936,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-13",
@@ -9157,7 +10987,9 @@ var 科创50 = [
     "low": 889.0378,
     "close": 891.7201,
     "percent": -0.92,
-    "volume": 272726514
+    "volume": 272726514,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-16",
@@ -9167,7 +10999,9 @@ var 科创50 = [
     "low": 871.9891,
     "close": 874.0259,
     "percent": -1.98,
-    "volume": 272130272
+    "volume": 272130272,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-17",
@@ -9177,7 +11011,9 @@ var 科创50 = [
     "low": 872.0191,
     "close": 882.1911,
     "percent": 0.93,
-    "volume": 239802135
+    "volume": 239802135,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-18",
@@ -9187,7 +11023,9 @@ var 科创50 = [
     "low": 869.6444,
     "close": 869.7617,
     "percent": -1.41,
-    "volume": 291251270
+    "volume": 291251270,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-19",
@@ -9197,7 +11035,9 @@ var 科创50 = [
     "low": 864.4592,
     "close": 870.1011,
     "percent": 0.04,
-    "volume": 413030014
+    "volume": 413030014,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-20",
@@ -9207,7 +11047,9 @@ var 科创50 = [
     "low": 861.4613,
     "close": 861.8094,
     "percent": -0.95,
-    "volume": 392139160
+    "volume": 392139160,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-23",
@@ -9217,7 +11059,9 @@ var 科创50 = [
     "low": 837.1621,
     "close": 840.1435,
     "percent": -2.51,
-    "volume": 335959329
+    "volume": 335959329,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-24",
@@ -9227,7 +11071,9 @@ var 科创50 = [
     "low": 840.4746,
     "close": 850.6143,
     "percent": 1.25,
-    "volume": 334372630
+    "volume": 334372630,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-25",
@@ -9237,7 +11083,9 @@ var 科创50 = [
     "low": 848.6462,
     "close": 848.6462,
     "percent": -0.23,
-    "volume": 293169809
+    "volume": 293169809,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-26",
@@ -9247,7 +11095,9 @@ var 科创50 = [
     "low": 838.1388,
     "close": 849.3092,
     "percent": 0.08,
-    "volume": 282096329
+    "volume": 282096329,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-27",
@@ -9257,7 +11107,9 @@ var 科创50 = [
     "low": 843.8766,
     "close": 861.8515,
     "percent": 1.48,
-    "volume": 362648605
+    "volume": 362648605,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-30",
@@ -9267,7 +11119,9 @@ var 科创50 = [
     "low": 862.1169,
     "close": 878.1287,
     "percent": 1.89,
-    "volume": 493875051
+    "volume": 493875051,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-10-31",
@@ -9277,7 +11131,9 @@ var 科创50 = [
     "low": 870.0559,
     "close": 874.4056,
     "percent": -0.42,
-    "volume": 378010833
+    "volume": 378010833,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-01",
@@ -9287,7 +11143,9 @@ var 科创50 = [
     "low": 869.9184,
     "close": 869.9184,
     "percent": -0.51,
-    "volume": 355063435
+    "volume": 355063435,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-02",
@@ -9297,7 +11155,9 @@ var 科创50 = [
     "low": 859.9318,
     "close": 859.9318,
     "percent": -1.15,
-    "volume": 307492343
+    "volume": 307492343,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-03",
@@ -9307,7 +11167,9 @@ var 科创50 = [
     "low": 861.5448,
     "close": 875.3725,
     "percent": 1.8,
-    "volume": 362971628
+    "volume": 362971628,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-06",
@@ -9317,7 +11179,9 @@ var 科创50 = [
     "low": 880.603,
     "close": 890.2066,
     "percent": 1.7,
-    "volume": 502630438
+    "volume": 502630438,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-07",
@@ -9327,7 +11191,9 @@ var 科创50 = [
     "low": 884.0593,
     "close": 891.4561,
     "percent": 0.14,
-    "volume": 410405904
+    "volume": 410405904,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-08",
@@ -9337,7 +11203,9 @@ var 科创50 = [
     "low": 890.8733,
     "close": 899.6256,
     "percent": 0.92,
-    "volume": 546978324
+    "volume": 546978324,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-09",
@@ -9347,7 +11215,9 @@ var 科创50 = [
     "low": 891.9222,
     "close": 893.7984,
     "percent": -0.65,
-    "volume": 522680978
+    "volume": 522680978,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-10",
@@ -9357,7 +11227,9 @@ var 科创50 = [
     "low": 887.3002,
     "close": 889.7499,
     "percent": -0.45,
-    "volume": 360725944
+    "volume": 360725944,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-13",
@@ -9367,7 +11239,9 @@ var 科创50 = [
     "low": 889.8041,
     "close": 896.5514,
     "percent": 0.76,
-    "volume": 323684982
+    "volume": 323684982,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-14",
@@ -9377,7 +11251,9 @@ var 科创50 = [
     "low": 895.1622,
     "close": 904.3414,
     "percent": 0.87,
-    "volume": 411850032
+    "volume": 411850032,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-15",
@@ -9387,7 +11263,9 @@ var 科创50 = [
     "low": 900.8936,
     "close": 902.1803,
     "percent": -0.24,
-    "volume": 404540539
+    "volume": 404540539,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-16",
@@ -9397,7 +11275,9 @@ var 科创50 = [
     "low": 887.1106,
     "close": 887.1106,
     "percent": -1.67,
-    "volume": 310948267
+    "volume": 310948267,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-17",
@@ -9407,7 +11287,9 @@ var 科创50 = [
     "low": 885.4734,
     "close": 891.3804,
     "percent": 0.48,
-    "volume": 241032768
+    "volume": 241032768,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-20",
@@ -9417,7 +11299,9 @@ var 科创50 = [
     "low": 883.5813,
     "close": 892.631,
     "percent": 0.14,
-    "volume": 339377606
+    "volume": 339377606,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-21",
@@ -9427,7 +11311,9 @@ var 科创50 = [
     "low": 884.895,
     "close": 884.895,
     "percent": -0.87,
-    "volume": 305616940
+    "volume": 305616940,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-22",
@@ -9437,7 +11323,9 @@ var 科创50 = [
     "low": 870.7602,
     "close": 870.7602,
     "percent": -1.6,
-    "volume": 266414351
+    "volume": 266414351,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-23",
@@ -9447,7 +11335,9 @@ var 科创50 = [
     "low": 867.5796,
     "close": 877.7704,
     "percent": 0.81,
-    "volume": 270553977
+    "volume": 270553977,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-24",
@@ -9457,7 +11347,9 @@ var 科创50 = [
     "low": 864.0314,
     "close": 864.774,
     "percent": -1.48,
-    "volume": 254649325
+    "volume": 254649325,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-27",
@@ -9467,7 +11359,9 @@ var 科创50 = [
     "low": 861.9293,
     "close": 868.0296,
     "percent": 0.38,
-    "volume": 384963673
+    "volume": 384963673,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-28",
@@ -9477,7 +11371,9 @@ var 科创50 = [
     "low": 865.8629,
     "close": 871.9062,
     "percent": 0.45,
-    "volume": 361416131
+    "volume": 361416131,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-29",
@@ -9487,7 +11383,9 @@ var 科创50 = [
     "low": 862.0363,
     "close": 862.0363,
     "percent": -1.13,
-    "volume": 364485254
+    "volume": 364485254,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-11-30",
@@ -9497,7 +11395,9 @@ var 科创50 = [
     "low": 858.3457,
     "close": 865.6845,
     "percent": 0.42,
-    "volume": 446915632
+    "volume": 446915632,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-01",
@@ -9507,7 +11407,9 @@ var 科创50 = [
     "low": 857.0906,
     "close": 867.5365,
     "percent": 0.21,
-    "volume": 364111615
+    "volume": 364111615,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-04",
@@ -9517,7 +11419,9 @@ var 科创50 = [
     "low": 861.9199,
     "close": 861.9199,
     "percent": -0.65,
-    "volume": 332188482
+    "volume": 332188482,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-05",
@@ -9527,7 +11431,9 @@ var 科创50 = [
     "low": 845.7995,
     "close": 845.7995,
     "percent": -1.87,
-    "volume": 335116371
+    "volume": 335116371,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-06",
@@ -9537,7 +11443,9 @@ var 科创50 = [
     "low": 843.8153,
     "close": 848.7905,
     "percent": 0.35,
-    "volume": 392712097
+    "volume": 392712097,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-07",
@@ -9547,7 +11455,9 @@ var 科创50 = [
     "low": 839.6895,
     "close": 847.4761,
     "percent": -0.16,
-    "volume": 457866952
+    "volume": 457866952,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-08",
@@ -9557,7 +11467,9 @@ var 科创50 = [
     "low": 848.9985,
     "close": 868.2336,
     "percent": 2.45,
-    "volume": 765772528
+    "volume": 765772528,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-11",
@@ -9567,7 +11479,9 @@ var 科创50 = [
     "low": 859.9154,
     "close": 878.5159,
     "percent": 1.18,
-    "volume": 473102803
+    "volume": 473102803,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-12",
@@ -9577,7 +11491,9 @@ var 科创50 = [
     "low": 867.2239,
     "close": 869.9668,
     "percent": -0.97,
-    "volume": 334807187
+    "volume": 334807187,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-13",
@@ -9587,7 +11503,9 @@ var 科创50 = [
     "low": 861.2509,
     "close": 861.2509,
     "percent": -1,
-    "volume": 328983164
+    "volume": 328983164,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-14",
@@ -9597,7 +11515,9 @@ var 科创50 = [
     "low": 855.8458,
     "close": 855.8981,
     "percent": -0.62,
-    "volume": 263643073
+    "volume": 263643073,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-15",
@@ -9607,7 +11527,9 @@ var 科创50 = [
     "low": 847.1695,
     "close": 847.5071,
     "percent": -0.98,
-    "volume": 275203635
+    "volume": 275203635,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-18",
@@ -9617,7 +11539,9 @@ var 科创50 = [
     "low": 838.4247,
     "close": 840.6808,
     "percent": -0.81,
-    "volume": 257439894
+    "volume": 257439894,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-19",
@@ -9627,7 +11551,9 @@ var 科创50 = [
     "low": 839.6436,
     "close": 845.8585,
     "percent": 0.62,
-    "volume": 249453026
+    "volume": 249453026,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-20",
@@ -9637,7 +11563,9 @@ var 科创50 = [
     "low": 835.4581,
     "close": 835.7127,
     "percent": -1.2,
-    "volume": 230243719
+    "volume": 230243719,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-21",
@@ -9647,7 +11575,9 @@ var 科创50 = [
     "low": 832.3702,
     "close": 847.817,
     "percent": 1.45,
-    "volume": 316790510
+    "volume": 316790510,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-22",
@@ -9657,7 +11587,9 @@ var 科创50 = [
     "low": 840.4126,
     "close": 843.3183,
     "percent": -0.53,
-    "volume": 329647859
+    "volume": 329647859,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-25",
@@ -9667,7 +11599,9 @@ var 科创50 = [
     "low": 835.5765,
     "close": 837.2222,
     "percent": -0.72,
-    "volume": 275584635
+    "volume": 275584635,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-26",
@@ -9677,7 +11611,9 @@ var 科创50 = [
     "low": 822.4997,
     "close": 825.2579,
     "percent": -1.43,
-    "volume": 230413104
+    "volume": 230413104,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-27",
@@ -9687,7 +11623,9 @@ var 科创50 = [
     "low": 826.8309,
     "close": 830.0574,
     "percent": 0.58,
-    "volume": 265536951
+    "volume": 265536951,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-28",
@@ -9697,7 +11635,9 @@ var 科创50 = [
     "low": 828.4013,
     "close": 850.3852,
     "percent": 2.45,
-    "volume": 455135170
+    "volume": 455135170,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2023-12-29",
@@ -9707,7 +11647,9 @@ var 科创50 = [
     "low": 849.4594,
     "close": 852.0047,
     "percent": 0.19,
-    "volume": 336622123
+    "volume": 336622123,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-02",
@@ -9717,7 +11659,9 @@ var 科创50 = [
     "low": 839.8013,
     "close": 839.8013,
     "percent": -1.43,
-    "volume": 275595747
+    "volume": 275595747,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-03",
@@ -9727,7 +11671,9 @@ var 科创50 = [
     "low": 827.8494,
     "close": 829.7722,
     "percent": -1.19,
-    "volume": 257018226
+    "volume": 257018226,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-04",
@@ -9737,7 +11683,9 @@ var 科创50 = [
     "low": 818.1406,
     "close": 823.8475,
     "percent": -0.71,
-    "volume": 262662520
+    "volume": 262662520,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-05",
@@ -9747,7 +11695,9 @@ var 科创50 = [
     "low": 805.109,
     "close": 807.7294,
     "percent": -1.96,
-    "volume": 276040375
+    "volume": 276040375,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-08",
@@ -9757,7 +11707,9 @@ var 科创50 = [
     "low": 784.1704,
     "close": 784.4333,
     "percent": -2.88,
-    "volume": 295239608
+    "volume": 295239608,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-09",
@@ -9767,7 +11719,9 @@ var 科创50 = [
     "low": 777.6773,
     "close": 782.9263,
     "percent": -0.19,
-    "volume": 297549041
+    "volume": 297549041,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-10",
@@ -9777,7 +11731,9 @@ var 科创50 = [
     "low": 773.2285,
     "close": 777.1527,
     "percent": -0.74,
-    "volume": 281445810
+    "volume": 281445810,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-11",
@@ -9787,7 +11743,9 @@ var 科创50 = [
     "low": 775.3721,
     "close": 789.8641,
     "percent": 1.64,
-    "volume": 283362427
+    "volume": 283362427,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-12",
@@ -9797,7 +11755,9 @@ var 科创50 = [
     "low": 778.3584,
     "close": 778.3584,
     "percent": -1.46,
-    "volume": 299829400
+    "volume": 299829400,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-15",
@@ -9807,7 +11767,9 @@ var 科创50 = [
     "low": 772.8595,
     "close": 773.4052,
     "percent": -0.64,
-    "volume": 260440086
+    "volume": 260440086,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-16",
@@ -9817,7 +11779,9 @@ var 科创50 = [
     "low": 765.9711,
     "close": 777.4032,
     "percent": 0.52,
-    "volume": 306515034
+    "volume": 306515034,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-17",
@@ -9827,7 +11791,9 @@ var 科创50 = [
     "low": 757.0449,
     "close": 757.0449,
     "percent": -2.62,
-    "volume": 249674807
+    "volume": 249674807,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-18",
@@ -9837,7 +11803,9 @@ var 科创50 = [
     "low": 742.9305,
     "close": 768.2822,
     "percent": 1.48,
-    "volume": 410735921
+    "volume": 410735921,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-19",
@@ -9847,7 +11815,9 @@ var 科创50 = [
     "low": 762.5209,
     "close": 765.4702,
     "percent": -0.37,
-    "volume": 316208954
+    "volume": 316208954,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-22",
@@ -9857,7 +11827,9 @@ var 科创50 = [
     "low": 740.8917,
     "close": 742.2272,
     "percent": -3.04,
-    "volume": 358637823
+    "volume": 358637823,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-23",
@@ -9867,7 +11839,9 @@ var 科创50 = [
     "low": 738.3827,
     "close": 749.7431,
     "percent": 1.01,
-    "volume": 359488249
+    "volume": 359488249,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-24",
@@ -9877,7 +11851,9 @@ var 科创50 = [
     "low": 728.499,
     "close": 750.2749,
     "percent": 0.07,
-    "volume": 359405675
+    "volume": 359405675,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-25",
@@ -9887,7 +11863,9 @@ var 科创50 = [
     "low": 746.7005,
     "close": 765.7909,
     "percent": 2.07,
-    "volume": 450804912
+    "volume": 450804912,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-26",
@@ -9897,7 +11875,9 @@ var 科创50 = [
     "low": 746.0958,
     "close": 746.0958,
     "percent": -2.57,
-    "volume": 347279173
+    "volume": 347279173,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-29",
@@ -9907,7 +11887,9 @@ var 科创50 = [
     "low": 725.3075,
     "close": 725.3075,
     "percent": -2.79,
-    "volume": 450582709
+    "volume": 450582709,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-30",
@@ -9917,7 +11899,9 @@ var 科创50 = [
     "low": 697.8454,
     "close": 697.8454,
     "percent": -3.79,
-    "volume": 343237741
+    "volume": 343237741,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-01-31",
@@ -9927,7 +11911,9 @@ var 科创50 = [
     "low": 681.5978,
     "close": 684.8518,
     "percent": -1.86,
-    "volume": 401058280
+    "volume": 401058280,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-01",
@@ -9937,7 +11923,9 @@ var 科创50 = [
     "low": 679.6243,
     "close": 690.0051,
     "percent": 0.75,
-    "volume": 353458757
+    "volume": 353458757,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-02",
@@ -9947,7 +11935,9 @@ var 科创50 = [
     "low": 661.7049,
     "close": 673.4071,
     "percent": -2.41,
-    "volume": 421634629
+    "volume": 421634629,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-05",
@@ -9957,7 +11947,9 @@ var 科创50 = [
     "low": 641.3401,
     "close": 676.7933,
     "percent": 0.5,
-    "volume": 545344075
+    "volume": 545344075,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-06",
@@ -9967,7 +11959,9 @@ var 科创50 = [
     "low": 673.9721,
     "close": 720.7998,
     "percent": 6.5,
-    "volume": 519876110
+    "volume": 519876110,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-07",
@@ -9977,7 +11971,9 @@ var 科创50 = [
     "low": 723.3118,
     "close": 743.4228,
     "percent": 3.14,
-    "volume": 616634535
+    "volume": 616634535,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-08",
@@ -9987,7 +11983,9 @@ var 科创50 = [
     "low": 745.8323,
     "close": 751.5037,
     "percent": 1.09,
-    "volume": 554963682
+    "volume": 554963682,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-19",
@@ -9997,7 +11995,9 @@ var 科创50 = [
     "low": 750.455,
     "close": 763.3156,
     "percent": 1.57,
-    "volume": 492867690
+    "volume": 492867690,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-20",
@@ -10007,7 +12007,9 @@ var 科创50 = [
     "low": 749.0685,
     "close": 754.7015,
     "percent": -1.13,
-    "volume": 334294127
+    "volume": 334294127,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-21",
@@ -10017,7 +12019,9 @@ var 科创50 = [
     "low": 747.2273,
     "close": 755.1553,
     "percent": 0.06,
-    "volume": 404566780
+    "volume": 404566780,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-22",
@@ -10027,7 +12031,9 @@ var 科创50 = [
     "low": 757.2603,
     "close": 762.3821,
     "percent": 0.96,
-    "volume": 356074332
+    "volume": 356074332,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-23",
@@ -10037,7 +12043,9 @@ var 科创50 = [
     "low": 755.8066,
     "close": 764.4822,
     "percent": 0.28,
-    "volume": 370273008
+    "volume": 370273008,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-26",
@@ -10047,7 +12055,9 @@ var 科创50 = [
     "low": 762.3828,
     "close": 768.4884,
     "percent": 0.52,
-    "volume": 459637345
+    "volume": 459637345,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-27",
@@ -10057,7 +12067,9 @@ var 科创50 = [
     "low": 763.0354,
     "close": 796.9074,
     "percent": 3.7,
-    "volume": 480664264
+    "volume": 480664264,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-28",
@@ -10067,7 +12079,9 @@ var 科创50 = [
     "low": 771.5923,
     "close": 771.5923,
     "percent": -3.18,
-    "volume": 602971687
+    "volume": 602971687,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-02-29",
@@ -10077,7 +12091,9 @@ var 科创50 = [
     "low": 769.5572,
     "close": 807.707,
     "percent": 4.68,
-    "volume": 592730507
+    "volume": 592730507,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-01",
@@ -10087,7 +12103,9 @@ var 科创50 = [
     "low": 805.4488,
     "close": 815.4867,
     "percent": 0.96,
-    "volume": 525423115
+    "volume": 525423115,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-04",
@@ -10097,7 +12115,9 @@ var 科创50 = [
     "low": 808.1407,
     "close": 818.5129,
     "percent": 0.37,
-    "volume": 476915423
+    "volume": 476915423,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-05",
@@ -10107,7 +12127,9 @@ var 科创50 = [
     "low": 812.6212,
     "close": 817.7722,
     "percent": -0.09,
-    "volume": 471673908
+    "volume": 471673908,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-06",
@@ -10117,7 +12139,9 @@ var 科创50 = [
     "low": 806.2512,
     "close": 811.8985,
     "percent": -0.72,
-    "volume": 444813163
+    "volume": 444813163,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-07",
@@ -10127,7 +12151,9 @@ var 科创50 = [
     "low": 794.2385,
     "close": 794.2385,
     "percent": -2.18,
-    "volume": 500957504
+    "volume": 500957504,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-08",
@@ -10137,7 +12163,9 @@ var 科创50 = [
     "low": 792.6049,
     "close": 803.2,
     "percent": 1.13,
-    "volume": 481370502
+    "volume": 481370502,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-11",
@@ -10147,7 +12175,9 @@ var 科创50 = [
     "low": 800.8992,
     "close": 818.4387,
     "percent": 1.9,
-    "volume": 507397588
+    "volume": 507397588,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-12",
@@ -10157,7 +12187,9 @@ var 科创50 = [
     "low": 814.6842,
     "close": 817.7503,
     "percent": -0.08,
-    "volume": 478020550
+    "volume": 478020550,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-13",
@@ -10167,7 +12199,9 @@ var 科创50 = [
     "low": 814.0063,
     "close": 814.932,
     "percent": -0.35,
-    "volume": 404983911
+    "volume": 404983911,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-14",
@@ -10177,7 +12211,9 @@ var 科创50 = [
     "low": 799.3002,
     "close": 804.8555,
     "percent": -1.24,
-    "volume": 373920910
+    "volume": 373920910,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-15",
@@ -10187,7 +12223,9 @@ var 科创50 = [
     "low": 794.8781,
     "close": 808.6736,
     "percent": 0.47,
-    "volume": 367216774
+    "volume": 367216774,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-18",
@@ -10197,7 +12235,9 @@ var 科创50 = [
     "low": 810.387,
     "close": 825.3999,
     "percent": 2.07,
-    "volume": 427764869
+    "volume": 427764869,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-19",
@@ -10207,7 +12247,9 @@ var 科创50 = [
     "low": 811.7743,
     "close": 811.7743,
     "percent": -1.65,
-    "volume": 373021611
+    "volume": 373021611,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-20",
@@ -10217,7 +12259,9 @@ var 科创50 = [
     "low": 806.693,
     "close": 814.0271,
     "percent": 0.28,
-    "volume": 317828599
+    "volume": 317828599,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-21",
@@ -10227,7 +12271,9 @@ var 科创50 = [
     "low": 805.9485,
     "close": 806.1377,
     "percent": -0.97,
-    "volume": 378251587
+    "volume": 378251587,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-22",
@@ -10237,7 +12283,9 @@ var 科创50 = [
     "low": 793.8236,
     "close": 794.2012,
     "percent": -1.48,
-    "volume": 393878064
+    "volume": 393878064,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-25",
@@ -10247,7 +12295,9 @@ var 科创50 = [
     "low": 781.6464,
     "close": 781.6464,
     "percent": -1.58,
-    "volume": 350784710
+    "volume": 350784710,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-26",
@@ -10257,7 +12307,9 @@ var 科创50 = [
     "low": 770.0273,
     "close": 772.0888,
     "percent": -1.22,
-    "volume": 332015981
+    "volume": 332015981,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-27",
@@ -10267,7 +12319,9 @@ var 科创50 = [
     "low": 752.8206,
     "close": 752.8206,
     "percent": -2.5,
-    "volume": 338564839
+    "volume": 338564839,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-28",
@@ -10277,7 +12331,9 @@ var 科创50 = [
     "low": 753.8955,
     "close": 763.275,
     "percent": 1.39,
-    "volume": 334929522
+    "volume": 334929522,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-03-29",
@@ -10287,7 +12343,9 @@ var 科创50 = [
     "low": 751.4561,
     "close": 762.7416,
     "percent": -0.07,
-    "volume": 277378701
+    "volume": 277378701,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-01",
@@ -10297,7 +12355,9 @@ var 科创50 = [
     "low": 765.6326,
     "close": 775.526,
     "percent": 1.68,
-    "volume": 336025180
+    "volume": 336025180,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-02",
@@ -10307,7 +12367,9 @@ var 科创50 = [
     "low": 764.6269,
     "close": 768.7872,
     "percent": -0.87,
-    "volume": 294104333
+    "volume": 294104333,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-03",
@@ -10317,7 +12379,9 @@ var 科创50 = [
     "low": 756.4698,
     "close": 756.7635,
     "percent": -1.56,
-    "volume": 325992467
+    "volume": 325992467,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-08",
@@ -10327,7 +12391,9 @@ var 科创50 = [
     "low": 740.6654,
     "close": 740.6654,
     "percent": -2.13,
-    "volume": 338441180
+    "volume": 338441180,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-09",
@@ -10337,7 +12403,9 @@ var 科创50 = [
     "low": 737.1256,
     "close": 749.6261,
     "percent": 1.21,
-    "volume": 284971886
+    "volume": 284971886,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-10",
@@ -10347,7 +12415,9 @@ var 科创50 = [
     "low": 732.596,
     "close": 735.7337,
     "percent": -1.85,
-    "volume": 271684842
+    "volume": 271684842,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-11",
@@ -10357,7 +12427,9 @@ var 科创50 = [
     "low": 735.6702,
     "close": 738.6744,
     "percent": 0.4,
-    "volume": 348804118
+    "volume": 348804118,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-12",
@@ -10367,7 +12439,9 @@ var 科创50 = [
     "low": 738.4295,
     "close": 738.4295,
     "percent": -0.03,
-    "volume": 377182435
+    "volume": 377182435,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-15",
@@ -10377,7 +12451,9 @@ var 科创50 = [
     "low": 738.5478,
     "close": 750.8985,
     "percent": 1.69,
-    "volume": 412498049
+    "volume": 412498049,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-16",
@@ -10387,7 +12463,9 @@ var 科创50 = [
     "low": 733.147,
     "close": 733.147,
     "percent": -2.36,
-    "volume": 343406335
+    "volume": 343406335,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-17",
@@ -10397,7 +12475,9 @@ var 科创50 = [
     "low": 737.6575,
     "close": 750.8884,
     "percent": 2.42,
-    "volume": 363333117
+    "volume": 363333117,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-18",
@@ -10407,7 +12487,9 @@ var 科创50 = [
     "low": 741.6954,
     "close": 745.6946,
     "percent": -0.69,
-    "volume": 338215519
+    "volume": 338215519,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-19",
@@ -10417,7 +12499,9 @@ var 科创50 = [
     "low": 729.8185,
     "close": 730.5623,
     "percent": -2.03,
-    "volume": 338340711
+    "volume": 338340711,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-22",
@@ -10427,7 +12511,9 @@ var 科创50 = [
     "low": 722.5794,
     "close": 731.811,
     "percent": 0.17,
-    "volume": 316577882
+    "volume": 316577882,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-23",
@@ -10437,7 +12523,9 @@ var 科创50 = [
     "low": 725.5156,
     "close": 727.8534,
     "percent": -0.54,
-    "volume": 281268745
+    "volume": 281268745,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-24",
@@ -10447,7 +12535,9 @@ var 科创50 = [
     "low": 730.0725,
     "close": 738.635,
     "percent": 1.48,
-    "volume": 305997194
+    "volume": 305997194,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-25",
@@ -10457,7 +12547,9 @@ var 科创50 = [
     "low": 731.6926,
     "close": 733.3441,
     "percent": -0.72,
-    "volume": 293131054
+    "volume": 293131054,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-26",
@@ -10467,7 +12559,9 @@ var 科创50 = [
     "low": 733.0156,
     "close": 752.2498,
     "percent": 2.58,
-    "volume": 473126801
+    "volume": 473126801,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-29",
@@ -10477,7 +12571,9 @@ var 科创50 = [
     "low": 752.9244,
     "close": 776.1538,
     "percent": 3.18,
-    "volume": 615028995
+    "volume": 615028995,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-04-30",
@@ -10487,7 +12583,9 @@ var 科创50 = [
     "low": 765.8774,
     "close": 767.4642,
     "percent": -1.12,
-    "volume": 439612911
+    "volume": 439612911,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-06",
@@ -10497,7 +12595,9 @@ var 科创50 = [
     "low": 774.36,
     "close": 777.6628,
     "percent": 1.33,
-    "volume": 448559684
+    "volume": 448559684,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-07",
@@ -10507,7 +12607,9 @@ var 科创50 = [
     "low": 768.624,
     "close": 769.7918,
     "percent": -1.01,
-    "volume": 356765880
+    "volume": 356765880,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-08",
@@ -10517,7 +12619,9 @@ var 科创50 = [
     "low": 761.5813,
     "close": 761.6581,
     "percent": -1.06,
-    "volume": 310783341
+    "volume": 310783341,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-09",
@@ -10527,7 +12631,9 @@ var 科创50 = [
     "low": 762.4008,
     "close": 778.8728,
     "percent": 2.26,
-    "volume": 473420000
+    "volume": 473420000,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-10",
@@ -10537,7 +12643,9 @@ var 科创50 = [
     "low": 764.737,
     "close": 767.1724,
     "percent": -1.5,
-    "volume": 363484971
+    "volume": 363484971,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-13",
@@ -10547,7 +12655,9 @@ var 科创50 = [
     "low": 760.0977,
     "close": 763.6902,
     "percent": -0.45,
-    "volume": 350313005
+    "volume": 350313005,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-14",
@@ -10557,7 +12667,9 @@ var 科创50 = [
     "low": 759.6505,
     "close": 760.3047,
     "percent": -0.44,
-    "volume": 265576651
+    "volume": 265576651,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-15",
@@ -10567,7 +12679,9 @@ var 科创50 = [
     "low": 749.4741,
     "close": 749.4741,
     "percent": -1.42,
-    "volume": 263428038
+    "volume": 263428038,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-16",
@@ -10577,7 +12691,9 @@ var 科创50 = [
     "low": 745.1858,
     "close": 746.4715,
     "percent": -0.4,
-    "volume": 288570133
+    "volume": 288570133,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-17",
@@ -10587,7 +12703,9 @@ var 科创50 = [
     "low": 743.0837,
     "close": 754.4177,
     "percent": 1.07,
-    "volume": 368112976
+    "volume": 368112976,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-20",
@@ -10597,7 +12715,9 @@ var 科创50 = [
     "low": 750.5587,
     "close": 753.5418,
     "percent": -0.12,
-    "volume": 399579788
+    "volume": 399579788,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-21",
@@ -10607,7 +12727,9 @@ var 科创50 = [
     "low": 747.6803,
     "close": 748.2354,
     "percent": -0.7,
-    "volume": 266632843
+    "volume": 266632843,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-22",
@@ -10617,7 +12739,9 @@ var 科创50 = [
     "low": 744.09,
     "close": 754.9728,
     "percent": 0.9,
-    "volume": 529042026
+    "volume": 529042026,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-23",
@@ -10627,7 +12751,9 @@ var 科创50 = [
     "low": 741.5687,
     "close": 742.3957,
     "percent": -1.67,
-    "volume": 385086687
+    "volume": 385086687,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-24",
@@ -10637,7 +12763,9 @@ var 科创50 = [
     "low": 727.0209,
     "close": 727.207,
     "percent": -2.05,
-    "volume": 382592764
+    "volume": 382592764,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-27",
@@ -10647,7 +12775,9 @@ var 科创50 = [
     "low": 720.4725,
     "close": 738.6533,
     "percent": 1.57,
-    "volume": 406238273
+    "volume": 406238273,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-28",
@@ -10657,7 +12787,9 @@ var 科创50 = [
     "low": 734.8485,
     "close": 734.8485,
     "percent": -0.52,
-    "volume": 360148314
+    "volume": 360148314,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-29",
@@ -10667,7 +12799,9 @@ var 科创50 = [
     "low": 731.7116,
     "close": 734.3334,
     "percent": -0.07,
-    "volume": 415551455
+    "volume": 415551455,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-30",
@@ -10677,7 +12811,9 @@ var 科创50 = [
     "low": 733.5473,
     "close": 742.7039,
     "percent": 1.14,
-    "volume": 410331189
+    "volume": 410331189,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-05-31",
@@ -10687,7 +12823,9 @@ var 科创50 = [
     "low": 741.6414,
     "close": 743.2275,
     "percent": 0.07,
-    "volume": 397393872
+    "volume": 397393872,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-03",
@@ -10697,7 +12835,9 @@ var 科创50 = [
     "low": 743.4528,
     "close": 750.427,
     "percent": 0.97,
-    "volume": 625587297
+    "volume": 625587297,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-04",
@@ -10707,7 +12847,9 @@ var 科创50 = [
     "low": 747.7409,
     "close": 753.6378,
     "percent": 0.43,
-    "volume": 415315093
+    "volume": 415315093,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-05",
@@ -10717,7 +12859,9 @@ var 科创50 = [
     "low": 751.8269,
     "close": 752.0445,
     "percent": -0.21,
-    "volume": 400623451
+    "volume": 400623451,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-06",
@@ -10727,7 +12871,9 @@ var 科创50 = [
     "low": 743.229,
     "close": 743.229,
     "percent": -1.17,
-    "volume": 476992033
+    "volume": 476992033,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-07",
@@ -10737,7 +12883,9 @@ var 科创50 = [
     "low": 732.7145,
     "close": 737.9261,
     "percent": -0.71,
-    "volume": 389314242
+    "volume": 389314242,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-11",
@@ -10747,7 +12895,9 @@ var 科创50 = [
     "low": 735.8375,
     "close": 755.8345,
     "percent": 2.43,
-    "volume": 512807489
+    "volume": 512807489,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-12",
@@ -10757,7 +12907,9 @@ var 科创50 = [
     "low": 754.1045,
     "close": 754.9332,
     "percent": -0.12,
-    "volume": 482919539
+    "volume": 482919539,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-13",
@@ -10767,7 +12919,9 @@ var 科创50 = [
     "low": 756.0612,
     "close": 758.9817,
     "percent": 0.54,
-    "volume": 571928362
+    "volume": 571928362,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-14",
@@ -10777,7 +12931,9 @@ var 科创50 = [
     "low": 750.8986,
     "close": 754.2607,
     "percent": -0.62,
-    "volume": 917422537
+    "volume": 917422537,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-17",
@@ -10787,7 +12943,9 @@ var 科创50 = [
     "low": 749.9432,
     "close": 757.1061,
     "percent": 0.38,
-    "volume": 643134846
+    "volume": 643134846,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-18",
@@ -10797,7 +12955,9 @@ var 科创50 = [
     "low": 753.6293,
     "close": 756.9043,
     "percent": -0.03,
-    "volume": 499578285
+    "volume": 499578285,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-19",
@@ -10807,7 +12967,9 @@ var 科创50 = [
     "low": 747.9582,
     "close": 751.6883,
     "percent": -0.69,
-    "volume": 488736063
+    "volume": 488736063,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-20",
@@ -10817,7 +12979,9 @@ var 科创50 = [
     "low": 752.1525,
     "close": 755.151,
     "percent": 0.46,
-    "volume": 613119884
+    "volume": 613119884,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-21",
@@ -10827,7 +12991,9 @@ var 科创50 = [
     "low": 747.0762,
     "close": 758.3742,
     "percent": 0.43,
-    "volume": 448496740
+    "volume": 448496740,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-24",
@@ -10837,7 +13003,9 @@ var 科创50 = [
     "low": 738.487,
     "close": 739.142,
     "percent": -2.54,
-    "volume": 603254344
+    "volume": 603254344,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-25",
@@ -10847,7 +13015,9 @@ var 科创50 = [
     "low": 714.2922,
     "close": 717.7494,
     "percent": -2.89,
-    "volume": 539176136
+    "volume": 539176136,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-26",
@@ -10857,7 +13027,9 @@ var 科创50 = [
     "low": 713.472,
     "close": 729.6442,
     "percent": 1.66,
-    "volume": 474964559
+    "volume": 474964559,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-27",
@@ -10867,7 +13039,9 @@ var 科创50 = [
     "low": 715.3569,
     "close": 715.3569,
     "percent": -1.96,
-    "volume": 360983011
+    "volume": 360983011,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-06-28",
@@ -10877,7 +13051,9 @@ var 科创50 = [
     "low": 710.7553,
     "close": 712.0772,
     "percent": -0.46,
-    "volume": 436386570
+    "volume": 436386570,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-01",
@@ -10887,7 +13063,9 @@ var 科创50 = [
     "low": 699.8814,
     "close": 709.6033,
     "percent": -0.35,
-    "volume": 361606095
+    "volume": 361606095,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-02",
@@ -10897,7 +13075,9 @@ var 科创50 = [
     "low": 698.7028,
     "close": 699.1231,
     "percent": -1.48,
-    "volume": 333730508
+    "volume": 333730508,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-03",
@@ -10907,7 +13087,9 @@ var 科创50 = [
     "low": 693.9173,
     "close": 701.7847,
     "percent": 0.38,
-    "volume": 365157494
+    "volume": 365157494,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-04",
@@ -10917,7 +13099,9 @@ var 科创50 = [
     "low": 690.2474,
     "close": 690.3758,
     "percent": -1.63,
-    "volume": 321460085
+    "volume": 321460085,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-05",
@@ -10927,7 +13111,9 @@ var 科创50 = [
     "low": 684.3064,
     "close": 698.8491,
     "percent": 1.23,
-    "volume": 330948143
+    "volume": 330948143,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-08",
@@ -10937,7 +13123,9 @@ var 科创50 = [
     "low": 691.3047,
     "close": 692.4881,
     "percent": -0.91,
-    "volume": 406966969
+    "volume": 406966969,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-09",
@@ -10947,7 +13135,9 @@ var 科创50 = [
     "low": 689.7865,
     "close": 709.8883,
     "percent": 2.51,
-    "volume": 516251730
+    "volume": 516251730,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-10",
@@ -10957,7 +13147,9 @@ var 科创50 = [
     "low": 707.1942,
     "close": 710.3694,
     "percent": 0.07,
-    "volume": 381961272
+    "volume": 381961272,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-11",
@@ -10967,7 +13159,9 @@ var 科创50 = [
     "low": 713.2999,
     "close": 718.0401,
     "percent": 1.08,
-    "volume": 462914072
+    "volume": 462914072,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-12",
@@ -10977,7 +13171,9 @@ var 科创50 = [
     "low": 711.2053,
     "close": 718.3699,
     "percent": 0.05,
-    "volume": 376064941
+    "volume": 376064941,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-15",
@@ -10987,7 +13183,9 @@ var 科创50 = [
     "low": 713.1152,
     "close": 715.8637,
     "percent": -0.35,
-    "volume": 355811573
+    "volume": 355811573,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-16",
@@ -10997,7 +13195,9 @@ var 科创50 = [
     "low": 712.7583,
     "close": 732.0639,
     "percent": 2.26,
-    "volume": 450173820
+    "volume": 450173820,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-17",
@@ -11007,7 +13207,9 @@ var 科创50 = [
     "low": 729.0023,
     "close": 729.0023,
     "percent": -0.42,
-    "volume": 448698856
+    "volume": 448698856,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-18",
@@ -11017,7 +13219,9 @@ var 科创50 = [
     "low": 719.1738,
     "close": 735.4103,
     "percent": 0.88,
-    "volume": 524333046
+    "volume": 524333046,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-19",
@@ -11027,7 +13231,9 @@ var 科创50 = [
     "low": 731.4085,
     "close": 749.4706,
     "percent": 1.91,
-    "volume": 579844364
+    "volume": 579844364,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-22",
@@ -11037,7 +13243,9 @@ var 科创50 = [
     "low": 748.1007,
     "close": 752.0007,
     "percent": 0.34,
-    "volume": 480597561
+    "volume": 480597561,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-23",
@@ -11047,7 +13255,9 @@ var 科创50 = [
     "low": 721.0971,
     "close": 721.1077,
     "percent": -4.11,
-    "volume": 428081633
+    "volume": 428081633,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-24",
@@ -11057,7 +13267,9 @@ var 科创50 = [
     "low": 712.5029,
     "close": 713.3213,
     "percent": -1.08,
-    "volume": 373510287
+    "volume": 373510287,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-25",
@@ -11067,7 +13279,9 @@ var 科创50 = [
     "low": 708.9356,
     "close": 713.8829,
     "percent": 0.08,
-    "volume": 382218573
+    "volume": 382218573,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-26",
@@ -11077,7 +13291,9 @@ var 科创50 = [
     "low": 711.0809,
     "close": 719.8702,
     "percent": 0.84,
-    "volume": 323530900
+    "volume": 323530900,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-29",
@@ -11087,7 +13303,9 @@ var 科创50 = [
     "low": 707.597,
     "close": 707.597,
     "percent": -1.71,
-    "volume": 342202855
+    "volume": 342202855,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-30",
@@ -11097,7 +13315,9 @@ var 科创50 = [
     "low": 701.0161,
     "close": 710.0148,
     "percent": 0.34,
-    "volume": 324773241
+    "volume": 324773241,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-07-31",
@@ -11107,7 +13327,9 @@ var 科创50 = [
     "low": 707.6596,
     "close": 743.3738,
     "percent": 4.7,
-    "volume": 498492235
+    "volume": 498492235,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-01",
@@ -11117,7 +13339,9 @@ var 科创50 = [
     "low": 735.7915,
     "close": 738.8707,
     "percent": -0.61,
-    "volume": 427619129
+    "volume": 427619129,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-02",
@@ -11127,7 +13351,9 @@ var 科创50 = [
     "low": 725.6604,
     "close": 725.6604,
     "percent": -1.79,
-    "volume": 368161876
+    "volume": 368161876,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-05",
@@ -11137,7 +13363,9 @@ var 科创50 = [
     "low": 704.296,
     "close": 704.296,
     "percent": -2.94,
-    "volume": 455944896
+    "volume": 455944896,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-06",
@@ -11147,7 +13375,9 @@ var 科创50 = [
     "low": 705.1407,
     "close": 713.8638,
     "percent": 1.36,
-    "volume": 380670597
+    "volume": 380670597,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-07",
@@ -11157,7 +13387,9 @@ var 科创50 = [
     "low": 707.3364,
     "close": 707.5875,
     "percent": -0.88,
-    "volume": 272349975
+    "volume": 272349975,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-08",
@@ -11167,7 +13399,9 @@ var 科创50 = [
     "low": 700.3173,
     "close": 708.9226,
     "percent": 0.19,
-    "volume": 315469287
+    "volume": 315469287,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-09",
@@ -11177,7 +13411,9 @@ var 科创50 = [
     "low": 705.5456,
     "close": 705.5456,
     "percent": -0.48,
-    "volume": 292571529
+    "volume": 292571529,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-12",
@@ -11187,7 +13423,9 @@ var 科创50 = [
     "low": 704.2494,
     "close": 707.3313,
     "percent": 0.25,
-    "volume": 268666617
+    "volume": 268666617,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-13",
@@ -11197,7 +13435,9 @@ var 科创50 = [
     "low": 703.0377,
     "close": 710.7468,
     "percent": 0.48,
-    "volume": 262761072
+    "volume": 262761072,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-14",
@@ -11207,7 +13447,9 @@ var 科创50 = [
     "low": 700.9303,
     "close": 700.9303,
     "percent": -1.38,
-    "volume": 244018595
+    "volume": 244018595,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-15",
@@ -11217,7 +13459,9 @@ var 科创50 = [
     "low": 699.0944,
     "close": 707.5509,
     "percent": 0.95,
-    "volume": 343648840
+    "volume": 343648840,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-16",
@@ -11227,7 +13471,9 @@ var 科创50 = [
     "low": 704.2974,
     "close": 705.2244,
     "percent": -0.33,
-    "volume": 270107800
+    "volume": 270107800,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-19",
@@ -11237,7 +13483,9 @@ var 科创50 = [
     "low": 703.2334,
     "close": 703.3217,
     "percent": -0.27,
-    "volume": 273288747
+    "volume": 273288747,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-20",
@@ -11247,7 +13495,9 @@ var 科创50 = [
     "low": 692.077,
     "close": 693.5231,
     "percent": -1.39,
-    "volume": 251764630
+    "volume": 251764630,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-21",
@@ -11257,7 +13507,9 @@ var 科创50 = [
     "low": 691.1343,
     "close": 691.6357,
     "percent": -0.27,
-    "volume": 227915781
+    "volume": 227915781,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-22",
@@ -11267,7 +13519,9 @@ var 科创50 = [
     "low": 684.3935,
     "close": 685.5308,
     "percent": -0.88,
-    "volume": 281461016
+    "volume": 281461016,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-23",
@@ -11277,7 +13531,9 @@ var 科创50 = [
     "low": 676.7198,
     "close": 685.7587,
     "percent": 0.03,
-    "volume": 250224373
+    "volume": 250224373,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-26",
@@ -11287,7 +13543,9 @@ var 科创50 = [
     "low": 679.891,
     "close": 682.4987,
     "percent": -0.48,
-    "volume": 264956970
+    "volume": 264956970,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-27",
@@ -11297,7 +13555,9 @@ var 科创50 = [
     "low": 673.0625,
     "close": 674.3472,
     "percent": -1.19,
-    "volume": 274112198
+    "volume": 274112198,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-28",
@@ -11307,7 +13567,9 @@ var 科创50 = [
     "low": 669.7066,
     "close": 671.2199,
     "percent": -0.46,
-    "volume": 242983203
+    "volume": 242983203,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-29",
@@ -11317,7 +13579,9 @@ var 科创50 = [
     "low": 667.497,
     "close": 679.595,
     "percent": 1.25,
-    "volume": 296257423
+    "volume": 296257423,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-08-30",
@@ -11327,7 +13591,9 @@ var 科创50 = [
     "low": 678.6132,
     "close": 694.1639,
     "percent": 2.14,
-    "volume": 466204547
+    "volume": 466204547,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-02",
@@ -11337,7 +13603,9 @@ var 科创50 = [
     "low": 670.0109,
     "close": 670.0109,
     "percent": -3.48,
-    "volume": 408179847
+    "volume": 408179847,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-03",
@@ -11347,7 +13615,9 @@ var 科创50 = [
     "low": 670.0647,
     "close": 674.9553,
     "percent": 0.74,
-    "volume": 306555868
+    "volume": 306555868,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-04",
@@ -11357,7 +13627,9 @@ var 科创50 = [
     "low": 668.9308,
     "close": 672.284,
     "percent": -0.4,
-    "volume": 241035793
+    "volume": 241035793,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-05",
@@ -11367,7 +13639,9 @@ var 科创50 = [
     "low": 670.3016,
     "close": 671.2645,
     "percent": -0.15,
-    "volume": 242829293
+    "volume": 242829293,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-06",
@@ -11377,7 +13651,9 @@ var 科创50 = [
     "low": 662.337,
     "close": 662.337,
     "percent": -1.33,
-    "volume": 246938906
+    "volume": 246938906,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-09",
@@ -11387,7 +13663,9 @@ var 科创50 = [
     "low": 652.9651,
     "close": 654.9387,
     "percent": -1.12,
-    "volume": 249732704
+    "volume": 249732704,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-10",
@@ -11397,7 +13675,9 @@ var 科创50 = [
     "low": 649.5055,
     "close": 660.0144,
     "percent": 0.78,
-    "volume": 249426507
+    "volume": 249426507,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-11",
@@ -11407,7 +13687,9 @@ var 科创50 = [
     "low": 657.3864,
     "close": 664.3321,
     "percent": 0.65,
-    "volume": 292335092
+    "volume": 292335092,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-12",
@@ -11417,7 +13699,9 @@ var 科创50 = [
     "low": 658.8537,
     "close": 658.8537,
     "percent": -0.83,
-    "volume": 300827653
+    "volume": 300827653,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-13",
@@ -11427,7 +13711,9 @@ var 科创50 = [
     "low": 650.7955,
     "close": 655.0457,
     "percent": -0.58,
-    "volume": 346360491
+    "volume": 346360491,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-18",
@@ -11437,7 +13723,9 @@ var 科创50 = [
     "low": 642.3363,
     "close": 647.4088,
     "percent": -1.17,
-    "volume": 299156433
+    "volume": 299156433,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-19",
@@ -11447,7 +13735,9 @@ var 科创50 = [
     "low": 644.7932,
     "close": 651.4661,
     "percent": 0.63,
-    "volume": 347059592
+    "volume": 347059592,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-20",
@@ -11457,7 +13747,9 @@ var 科创50 = [
     "low": 643.0961,
     "close": 648.3597,
     "percent": -0.48,
-    "volume": 286888778
+    "volume": 286888778,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-23",
@@ -11467,7 +13759,9 @@ var 科创50 = [
     "low": 643.0421,
     "close": 643.0421,
     "percent": -0.82,
-    "volume": 275770620
+    "volume": 275770620,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-24",
@@ -11477,7 +13771,9 @@ var 科创50 = [
     "low": 640.7423,
     "close": 667.0485,
     "percent": 3.73,
-    "volume": 511201020
+    "volume": 511201020,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-25",
@@ -11487,7 +13783,9 @@ var 科创50 = [
     "low": 667.1036,
     "close": 667.3379,
     "percent": 0.04,
-    "volume": 522622288
+    "volume": 522622288,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-26",
@@ -11497,7 +13795,9 @@ var 科创50 = [
     "low": 664.4755,
     "close": 693.1492,
     "percent": 3.87,
-    "volume": 536397129
+    "volume": 536397129,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-27",
@@ -11507,7 +13807,9 @@ var 科创50 = [
     "low": 704.5219,
     "close": 740.0158,
     "percent": 6.76,
-    "volume": 500850183
+    "volume": 500850183,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-09-30",
@@ -11517,7 +13819,9 @@ var 科创50 = [
     "low": 782.3069,
     "close": 872.3653,
     "percent": 17.89,
-    "volume": 1637527856
+    "volume": 1637527856,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-08",
@@ -11527,7 +13831,9 @@ var 科创50 = [
     "low": 981.6124,
     "close": 1023.9672,
     "percent": 17.38,
-    "volume": 2291390563
+    "volume": 2291390563,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-09",
@@ -11537,7 +13843,9 @@ var 科创50 = [
     "low": 971.908,
     "close": 997.8521,
     "percent": -2.55,
-    "volume": 2367512512
+    "volume": 2367512512,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-10",
@@ -11547,7 +13855,9 @@ var 科创50 = [
     "low": 954.172,
     "close": 954.172,
     "percent": -4.38,
-    "volume": 1541633947
+    "volume": 1541633947,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-11",
@@ -11557,7 +13867,9 @@ var 科创50 = [
     "low": 896.3296,
     "close": 898.8988,
     "percent": -5.79,
-    "volume": 1057682433
+    "volume": 1057682433,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-14",
@@ -11567,7 +13879,9 @@ var 科创50 = [
     "low": 875.6964,
     "close": 925.9552,
     "percent": 3.01,
-    "volume": 1076626678
+    "volume": 1076626678,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-15",
@@ -11577,7 +13891,9 @@ var 科创50 = [
     "low": 898.827,
     "close": 898.827,
     "percent": -2.93,
-    "volume": 931997092
+    "volume": 931997092,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-16",
@@ -11587,7 +13903,9 @@ var 科创50 = [
     "low": 873.7957,
     "close": 875.6891,
     "percent": -2.57,
-    "volume": 733104696
+    "volume": 733104696,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-17",
@@ -11597,7 +13915,9 @@ var 科创50 = [
     "low": 879.0962,
     "close": 879.0962,
     "percent": 0.39,
-    "volume": 746998568
+    "volume": 746998568,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-18",
@@ -11607,7 +13927,9 @@ var 科创50 = [
     "low": 879.6272,
     "close": 978.661,
     "percent": 11.33,
-    "volume": 1526347034
+    "volume": 1526347034,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-21",
@@ -11617,7 +13939,9 @@ var 科创50 = [
     "low": 979.1649,
     "close": 1000.3749,
     "percent": 2.22,
-    "volume": 1848234444
+    "volume": 1848234444,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-22",
@@ -11627,7 +13951,9 @@ var 科创50 = [
     "low": 973.3576,
     "close": 985.8337,
     "percent": -1.45,
-    "volume": 1299285299
+    "volume": 1299285299,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-23",
@@ -11637,7 +13963,9 @@ var 科创50 = [
     "low": 974.9615,
     "close": 979.1514,
     "percent": -0.68,
-    "volume": 1261816218
+    "volume": 1261816218,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-24",
@@ -11647,7 +13975,9 @@ var 科创50 = [
     "low": 968.9927,
     "close": 977.6006,
     "percent": -0.16,
-    "volume": 868664719
+    "volume": 868664719,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-25",
@@ -11657,7 +13987,9 @@ var 科创50 = [
     "low": 976.7414,
     "close": 991.2157,
     "percent": 1.39,
-    "volume": 1157389543
+    "volume": 1157389543,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-28",
@@ -11667,7 +13999,9 @@ var 科创50 = [
     "low": 978.2366,
     "close": 986.5596,
     "percent": -0.47,
-    "volume": 907848156
+    "volume": 907848156,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-29",
@@ -11677,7 +14011,9 @@ var 科创50 = [
     "low": 975.3716,
     "close": 975.3716,
     "percent": -1.13,
-    "volume": 1039213435
+    "volume": 1039213435,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-30",
@@ -11687,7 +14023,9 @@ var 科创50 = [
     "low": 950.6495,
     "close": 958.8217,
     "percent": -1.7,
-    "volume": 962893541
+    "volume": 962893541,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-10-31",
@@ -11697,7 +14035,9 @@ var 科创50 = [
     "low": 948.4115,
     "close": 969.4476,
     "percent": 1.11,
-    "volume": 1080036035
+    "volume": 1080036035,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-01",
@@ -11707,7 +14047,9 @@ var 科创50 = [
     "low": 939.7645,
     "close": 939.7645,
     "percent": -3.06,
-    "volume": 867759933
+    "volume": 867759933,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-04",
@@ -11717,7 +14059,9 @@ var 科创50 = [
     "low": 938.1907,
     "close": 954.6674,
     "percent": 1.59,
-    "volume": 622598493
+    "volume": 622598493,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-05",
@@ -11727,7 +14071,9 @@ var 科创50 = [
     "low": 954.1407,
     "close": 996.1688,
     "percent": 4.35,
-    "volume": 1167570210
+    "volume": 1167570210,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-06",
@@ -11737,7 +14083,9 @@ var 科创50 = [
     "low": 992.7908,
     "close": 998.0947,
     "percent": 0.19,
-    "volume": 1265136478
+    "volume": 1265136478,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-07",
@@ -11747,7 +14095,9 @@ var 科创50 = [
     "low": 986.5019,
     "close": 1028.4392,
     "percent": 3.04,
-    "volume": 1284113836
+    "volume": 1284113836,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-08",
@@ -11757,7 +14107,9 @@ var 科创50 = [
     "low": 1025.6366,
     "close": 1025.6366,
     "percent": -0.27,
-    "volume": 1697143980
+    "volume": 1697143980,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-11",
@@ -11767,7 +14119,9 @@ var 科创50 = [
     "low": 1033.547,
     "close": 1073.8354,
     "percent": 4.7,
-    "volume": 1814167034
+    "volume": 1814167034,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-12",
@@ -11777,7 +14131,9 @@ var 科创50 = [
     "low": 1044.3823,
     "close": 1050.5373,
     "percent": -2.17,
-    "volume": 1514569984
+    "volume": 1514569984,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-13",
@@ -11787,7 +14143,9 @@ var 科创50 = [
     "low": 1041.5484,
     "close": 1061.3661,
     "percent": 1.03,
-    "volume": 1091457243
+    "volume": 1091457243,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-14",
@@ -11797,7 +14155,9 @@ var 科创50 = [
     "low": 1027.1113,
     "close": 1027.3161,
     "percent": -3.21,
-    "volume": 951590028
+    "volume": 951590028,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-15",
@@ -11807,7 +14167,9 @@ var 科创50 = [
     "low": 986.8755,
     "close": 986.8755,
     "percent": -3.94,
-    "volume": 968850259
+    "volume": 968850259,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-18",
@@ -11817,7 +14179,9 @@ var 科创50 = [
     "low": 963.468,
     "close": 968.7134,
     "percent": -1.84,
-    "volume": 865925760
+    "volume": 865925760,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-19",
@@ -11827,7 +14191,9 @@ var 科创50 = [
     "low": 961.582,
     "close": 998.015,
     "percent": 3.03,
-    "volume": 758963630
+    "volume": 758963630,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-20",
@@ -11837,7 +14203,9 @@ var 科创50 = [
     "low": 988.3234,
     "close": 1002.5393,
     "percent": 0.45,
-    "volume": 681479498
+    "volume": 681479498,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-21",
@@ -11847,7 +14215,9 @@ var 科创50 = [
     "low": 1002.9749,
     "close": 1011.4631,
     "percent": 0.89,
-    "volume": 730221561
+    "volume": 730221561,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-22",
@@ -11857,7 +14227,9 @@ var 科创50 = [
     "low": 969.3527,
     "close": 969.3527,
     "percent": -4.16,
-    "volume": 797046574
+    "volume": 797046574,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-25",
@@ -11867,7 +14239,9 @@ var 科创50 = [
     "low": 941.4087,
     "close": 957.921,
     "percent": -1.18,
-    "volume": 682298864
+    "volume": 682298864,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-26",
@@ -11877,7 +14251,9 @@ var 科创50 = [
     "low": 951.0459,
     "close": 951.5933,
     "percent": -0.66,
-    "volume": 516596889
+    "volume": 516596889,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-27",
@@ -11887,7 +14263,9 @@ var 科创50 = [
     "low": 941.9478,
     "close": 985.9747,
     "percent": 3.61,
-    "volume": 732682282
+    "volume": 732682282,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-28",
@@ -11897,7 +14275,9 @@ var 科创50 = [
     "low": 982.9969,
     "close": 983.6835,
     "percent": -0.23,
-    "volume": 702852183
+    "volume": 702852183,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-11-29",
@@ -11907,7 +14287,9 @@ var 科创50 = [
     "low": 980.1184,
     "close": 1007.3914,
     "percent": 2.41,
-    "volume": 880084499
+    "volume": 880084499,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-02",
@@ -11917,7 +14299,9 @@ var 科创50 = [
     "low": 1007.3269,
     "close": 1015.7865,
     "percent": 0.83,
-    "volume": 882093802
+    "volume": 882093802,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-03",
@@ -11927,7 +14311,9 @@ var 科创50 = [
     "low": 998.2695,
     "close": 1005.2649,
     "percent": -1.04,
-    "volume": 772046020
+    "volume": 772046020,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-04",
@@ -11937,7 +14323,9 @@ var 科创50 = [
     "low": 996.3187,
     "close": 999.3578,
     "percent": -0.59,
-    "volume": 885706863
+    "volume": 885706863,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-05",
@@ -11947,7 +14335,9 @@ var 科创50 = [
     "low": 993.1681,
     "close": 1001.8442,
     "percent": 0.25,
-    "volume": 590800606
+    "volume": 590800606,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-06",
@@ -11957,7 +14347,9 @@ var 科创50 = [
     "low": 996.2592,
     "close": 1014.4464,
     "percent": 1.26,
-    "volume": 809886055
+    "volume": 809886055,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-09",
@@ -11967,7 +14359,9 @@ var 科创50 = [
     "low": 997.5839,
     "close": 1003.3821,
     "percent": -1.09,
-    "volume": 674342315
+    "volume": 674342315,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-10",
@@ -11977,7 +14371,9 @@ var 科创50 = [
     "low": 1009.5673,
     "close": 1010.9107,
     "percent": 0.75,
-    "volume": 897720009
+    "volume": 897720009,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-11",
@@ -11987,7 +14383,9 @@ var 科创50 = [
     "low": 1004.2378,
     "close": 1007.1882,
     "percent": -0.37,
-    "volume": 829932454
+    "volume": 829932454,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-12",
@@ -11997,7 +14395,9 @@ var 科创50 = [
     "low": 999.9193,
     "close": 1010.8953,
     "percent": 0.37,
-    "volume": 795871997
+    "volume": 795871997,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-13",
@@ -12007,7 +14407,9 @@ var 科创50 = [
     "low": 989.7764,
     "close": 989.7764,
     "percent": -2.09,
-    "volume": 1493424530
+    "volume": 1493424530,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-16",
@@ -12017,7 +14419,9 @@ var 科创50 = [
     "low": 971.9887,
     "close": 975.2684,
     "percent": -1.47,
-    "volume": 834927456
+    "volume": 834927456,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-17",
@@ -12027,7 +14431,9 @@ var 科创50 = [
     "low": 966.1207,
     "close": 967.2764,
     "percent": -0.82,
-    "volume": 540282605
+    "volume": 540282605,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-18",
@@ -12037,7 +14443,9 @@ var 科创50 = [
     "low": 966.6447,
     "close": 981.5127,
     "percent": 1.47,
-    "volume": 557128791
+    "volume": 557128791,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-19",
@@ -12047,7 +14455,9 @@ var 科创50 = [
     "low": 969.381,
     "close": 993.002,
     "percent": 1.17,
-    "volume": 659808529
+    "volume": 659808529,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-20",
@@ -12057,7 +14467,9 @@ var 科创50 = [
     "low": 990.058,
     "close": 1011.2094,
     "percent": 1.83,
-    "volume": 947624295
+    "volume": 947624295,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-23",
@@ -12067,7 +14479,9 @@ var 科创50 = [
     "low": 998.529,
     "close": 998.6073,
     "percent": -1.25,
-    "volume": 878762426
+    "volume": 878762426,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-24",
@@ -12077,7 +14491,9 @@ var 科创50 = [
     "low": 992.8396,
     "close": 1014.017,
     "percent": 1.54,
-    "volume": 676624072
+    "volume": 676624072,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-25",
@@ -12087,7 +14503,9 @@ var 科创50 = [
     "low": 1009.9506,
     "close": 1017.3567,
     "percent": 0.33,
-    "volume": 696305801
+    "volume": 696305801,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-26",
@@ -12097,7 +14515,9 @@ var 科创50 = [
     "low": 1014.0695,
     "close": 1027.023,
     "percent": 0.95,
-    "volume": 725416393
+    "volume": 725416393,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-27",
@@ -12107,7 +14527,9 @@ var 科创50 = [
     "low": 1018.5794,
     "close": 1018.5794,
     "percent": -0.82,
-    "volume": 845229294
+    "volume": 845229294,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-30",
@@ -12117,7 +14539,9 @@ var 科创50 = [
     "low": 1013.5319,
     "close": 1020.6332,
     "percent": 0.2,
-    "volume": 687428291
+    "volume": 687428291,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2024-12-31",
@@ -12127,7 +14551,9 @@ var 科创50 = [
     "low": 988.9346,
     "close": 988.9346,
     "percent": -3.11,
-    "volume": 729141242
+    "volume": 729141242,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-02",
@@ -12137,7 +14563,9 @@ var 科创50 = [
     "low": 946.6539,
     "close": 955.3334,
     "percent": -3.4,
-    "volume": 746345556
+    "volume": 746345556,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-03",
@@ -12147,7 +14575,9 @@ var 科创50 = [
     "low": 941.48,
     "close": 941.8192,
     "percent": -1.42,
-    "volume": 602927367
+    "volume": 602927367,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-06",
@@ -12157,7 +14587,9 @@ var 科创50 = [
     "low": 933.2323,
     "close": 938.7069,
     "percent": -0.33,
-    "volume": 494765389
+    "volume": 494765389,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-07",
@@ -12167,7 +14599,9 @@ var 科创50 = [
     "low": 938.5985,
     "close": 965.5297,
     "percent": 2.86,
-    "volume": 560780232
+    "volume": 560780232,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-08",
@@ -12177,7 +14611,9 @@ var 科创50 = [
     "low": 938.8594,
     "close": 965.1194,
     "percent": -0.04,
-    "volume": 617672416
+    "volume": 617672416,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-09",
@@ -12187,7 +14623,9 @@ var 科创50 = [
     "low": 961.4394,
     "close": 961.4394,
     "percent": -0.38,
-    "volume": 545885378
+    "volume": 545885378,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-10",
@@ -12197,7 +14635,9 @@ var 科创50 = [
     "low": 950.5917,
     "close": 950.5917,
     "percent": -1.13,
-    "volume": 653186020
+    "volume": 653186020,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-13",
@@ -12207,7 +14647,9 @@ var 科创50 = [
     "low": 938.3822,
     "close": 952.1857,
     "percent": 0.17,
-    "volume": 518265363
+    "volume": 518265363,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-14",
@@ -12217,7 +14659,9 @@ var 科创50 = [
     "low": 948.8242,
     "close": 981.7794,
     "percent": 3.11,
-    "volume": 717669791
+    "volume": 717669791,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-15",
@@ -12227,7 +14671,9 @@ var 科创50 = [
     "low": 975.1214,
     "close": 977.6609,
     "percent": -0.42,
-    "volume": 657254631
+    "volume": 657254631,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-16",
@@ -12237,7 +14683,9 @@ var 科创50 = [
     "low": 955.2385,
     "close": 956.3965,
     "percent": -2.18,
-    "volume": 747426043
+    "volume": 747426043,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-17",
@@ -12247,7 +14695,9 @@ var 科创50 = [
     "low": 948.5996,
     "close": 965.9032,
     "percent": 0.99,
-    "volume": 664767047
+    "volume": 664767047,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-20",
@@ -12257,7 +14707,9 @@ var 科创50 = [
     "low": 965.1843,
     "close": 968.2712,
     "percent": 0.25,
-    "volume": 565571926
+    "volume": 565571926,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-21",
@@ -12267,7 +14719,9 @@ var 科创50 = [
     "low": 965.8895,
     "close": 976.296,
     "percent": 0.83,
-    "volume": 641570762
+    "volume": 641570762,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-22",
@@ -12277,7 +14731,9 @@ var 科创50 = [
     "low": 967.8453,
     "close": 975.34,
     "percent": -0.1,
-    "volume": 547772168
+    "volume": 547772168,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-23",
@@ -12287,7 +14743,9 @@ var 科创50 = [
     "low": 966.1063,
     "close": 966.1063,
     "percent": -0.95,
-    "volume": 662841822
+    "volume": 662841822,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-24",
@@ -12297,7 +14755,9 @@ var 科创50 = [
     "low": 966.0923,
     "close": 974.8343,
     "percent": 0.9,
-    "volume": 545581953
+    "volume": 545581953,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-01-27",
@@ -12307,7 +14767,9 @@ var 科创50 = [
     "low": 955.0901,
     "close": 955.0901,
     "percent": -2.03,
-    "volume": 534105584
+    "volume": 534105584,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-05",
@@ -12317,7 +14779,9 @@ var 科创50 = [
     "low": 978.4105,
     "close": 982.8287,
     "percent": 2.9,
-    "volume": 787830014
+    "volume": 787830014,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-06",
@@ -12327,7 +14791,9 @@ var 科创50 = [
     "low": 977.0185,
     "close": 1011.22,
     "percent": 2.89,
-    "volume": 901897926
+    "volume": 901897926,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-07",
@@ -12337,7 +14803,9 @@ var 科创50 = [
     "low": 1007.5459,
     "close": 1018.7988,
     "percent": 0.75,
-    "volume": 1043693929
+    "volume": 1043693929,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-10",
@@ -12347,7 +14815,9 @@ var 科创50 = [
     "low": 1022.5243,
     "close": 1036.7653,
     "percent": 1.76,
-    "volume": 821804821
+    "volume": 821804821,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-11",
@@ -12357,7 +14827,9 @@ var 科创50 = [
     "low": 1020.6053,
     "close": 1024.4123,
     "percent": -1.19,
-    "volume": 722229778
+    "volume": 722229778,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-12",
@@ -12367,7 +14839,9 @@ var 科创50 = [
     "low": 1023.3337,
     "close": 1041.1367,
     "percent": 1.63,
-    "volume": 817007254
+    "volume": 817007254,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-13",
@@ -12377,7 +14851,9 @@ var 科创50 = [
     "low": 1017.0875,
     "close": 1017.0875,
     "percent": -2.31,
-    "volume": 706633808
+    "volume": 706633808,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-14",
@@ -12387,7 +14863,9 @@ var 科创50 = [
     "low": 1011.8989,
     "close": 1022.4635,
     "percent": 0.53,
-    "volume": 730172173
+    "volume": 730172173,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-17",
@@ -12397,7 +14875,9 @@ var 科创50 = [
     "low": 1029.2314,
     "close": 1037.307,
     "percent": 1.45,
-    "volume": 796916174
+    "volume": 796916174,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-18",
@@ -12407,7 +14887,9 @@ var 科创50 = [
     "low": 1007.2564,
     "close": 1011.1684,
     "percent": -2.52,
-    "volume": 783746491
+    "volume": 783746491,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-19",
@@ -12417,7 +14899,9 @@ var 科创50 = [
     "low": 1010.6692,
     "close": 1034.5705,
     "percent": 2.31,
-    "volume": 960904689
+    "volume": 960904689,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-20",
@@ -12427,7 +14911,9 @@ var 科创50 = [
     "low": 1026.8093,
     "close": 1033.0853,
     "percent": -0.14,
-    "volume": 831691895
+    "volume": 831691895,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-21",
@@ -12437,7 +14923,9 @@ var 科创50 = [
     "low": 1040.2221,
     "close": 1094.7739,
     "percent": 5.97,
-    "volume": 1263189168
+    "volume": 1263189168,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-24",
@@ -12447,7 +14935,9 @@ var 科创50 = [
     "low": 1093.0295,
     "close": 1100.0535,
     "percent": 0.48,
-    "volume": 1007704669
+    "volume": 1007704669,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-25",
@@ -12457,7 +14947,9 @@ var 科创50 = [
     "low": 1083.9402,
     "close": 1102.9013,
     "percent": 0.26,
-    "volume": 992674442
+    "volume": 992674442,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-26",
@@ -12467,7 +14959,9 @@ var 科创50 = [
     "low": 1096.9414,
     "close": 1126.8204,
     "percent": 2.17,
-    "volume": 1177727772
+    "volume": 1177727772,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-27",
@@ -12477,7 +14971,9 @@ var 科创50 = [
     "low": 1102.7306,
     "close": 1126.2871,
     "percent": -0.05,
-    "volume": 1059824213
+    "volume": 1059824213,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-02-28",
@@ -12487,7 +14983,9 @@ var 科创50 = [
     "low": 1077.1336,
     "close": 1078.7976,
     "percent": -4.22,
-    "volume": 1100278172
+    "volume": 1100278172,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-03",
@@ -12497,7 +14995,9 @@ var 科创50 = [
     "low": 1058.0726,
     "close": 1062.3506,
     "percent": -1.53,
-    "volume": 896283915
+    "volume": 896283915,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-04",
@@ -12507,7 +15007,9 @@ var 科创50 = [
     "low": 1052.468,
     "close": 1080.6648,
     "percent": 1.72,
-    "volume": 810914621
+    "volume": 810914621,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-05",
@@ -12517,7 +15019,9 @@ var 科创50 = [
     "low": 1072.5938,
     "close": 1083.8168,
     "percent": 0.29,
-    "volume": 715338429
+    "volume": 715338429,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-06",
@@ -12527,7 +15031,9 @@ var 科创50 = [
     "low": 1100.4422,
     "close": 1121.5846,
     "percent": 3.49,
-    "volume": 956305494
+    "volume": 956305494,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-07",
@@ -12537,7 +15043,9 @@ var 科创50 = [
     "low": 1104.9336,
     "close": 1107.6228,
     "percent": -1.25,
-    "volume": 807235865
+    "volume": 807235865,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-10",
@@ -12547,7 +15055,9 @@ var 科创50 = [
     "low": 1088.6519,
     "close": 1105.164,
     "percent": -0.22,
-    "volume": 740080048
+    "volume": 740080048,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-11",
@@ -12557,7 +15067,9 @@ var 科创50 = [
     "low": 1086.3833,
     "close": 1100.7418,
     "percent": -0.4,
-    "volume": 688111474
+    "volume": 688111474,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-12",
@@ -12567,7 +15079,9 @@ var 科创50 = [
     "low": 1092.708,
     "close": 1092.708,
     "percent": -0.73,
-    "volume": 658625820
+    "volume": 658625820,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-13",
@@ -12577,7 +15091,9 @@ var 科创50 = [
     "low": 1065.8072,
     "close": 1069.7033,
     "percent": -2.11,
-    "volume": 723402721
+    "volume": 723402721,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-14",
@@ -12587,7 +15103,9 @@ var 科创50 = [
     "low": 1070.2849,
     "close": 1088.1125,
     "percent": 1.72,
-    "volume": 730353908
+    "volume": 730353908,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-17",
@@ -12597,7 +15115,9 @@ var 科创50 = [
     "low": 1080.9393,
     "close": 1083.2131,
     "percent": -0.45,
-    "volume": 640170601
+    "volume": 640170601,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-18",
@@ -12607,7 +15127,9 @@ var 科创50 = [
     "low": 1087.3446,
     "close": 1089.8254,
     "percent": 0.61,
-    "volume": 647930605
+    "volume": 647930605,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-19",
@@ -12617,7 +15139,9 @@ var 科创50 = [
     "low": 1075.9002,
     "close": 1076.9373,
     "percent": -1.18,
-    "volume": 541079408
+    "volume": 541079408,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-20",
@@ -12627,7 +15151,9 @@ var 科创50 = [
     "low": 1064.793,
     "close": 1064.793,
     "percent": -1.13,
-    "volume": 509089878
+    "volume": 509089878,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-21",
@@ -12637,7 +15163,9 @@ var 科创50 = [
     "low": 1038.3135,
     "close": 1042.8926,
     "percent": -2.06,
-    "volume": 621512087
+    "volume": 621512087,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-24",
@@ -12647,7 +15175,9 @@ var 科创50 = [
     "low": 1030.3918,
     "close": 1045.9417,
     "percent": 0.29,
-    "volume": 595845576
+    "volume": 595845576,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-25",
@@ -12657,7 +15187,9 @@ var 科创50 = [
     "low": 1028.9553,
     "close": 1031.6971,
     "percent": -1.36,
-    "volume": 503432923
+    "volume": 503432923,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-26",
@@ -12667,7 +15199,9 @@ var 科创50 = [
     "low": 1029.0548,
     "close": 1029.0548,
     "percent": -0.26,
-    "volume": 422890173
+    "volume": 422890173,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-27",
@@ -12677,7 +15211,9 @@ var 科创50 = [
     "low": 1026.91,
     "close": 1040.5698,
     "percent": 1.12,
-    "volume": 531008510
+    "volume": 531008510,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-28",
@@ -12687,7 +15223,9 @@ var 科创50 = [
     "low": 1029.4763,
     "close": 1029.4763,
     "percent": -1.07,
-    "volume": 425316968
+    "volume": 425316968,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-03-31",
@@ -12697,7 +15235,9 @@ var 科创50 = [
     "low": 1012.946,
     "close": 1022.7139,
     "percent": -0.66,
-    "volume": 510965440
+    "volume": 510965440,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-01",
@@ -12707,7 +15247,9 @@ var 科创50 = [
     "low": 1023.739,
     "close": 1024.3755,
     "percent": 0.16,
-    "volume": 508244261
+    "volume": 508244261,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-02",
@@ -12717,7 +15259,9 @@ var 科创50 = [
     "low": 1020.7239,
     "close": 1022.7483,
     "percent": -0.16,
-    "volume": 354801680
+    "volume": 354801680,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-03",
@@ -12727,7 +15271,9 @@ var 科创50 = [
     "low": 1011.6049,
     "close": 1018.0724,
     "percent": -0.46,
-    "volume": 463622367
+    "volume": 463622367,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-07",
@@ -12737,7 +15283,9 @@ var 科创50 = [
     "low": 877.6902,
     "close": 924.1733,
     "percent": -9.22,
-    "volume": 1168939792
+    "volume": 1168939792,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-08",
@@ -12747,7 +15295,9 @@ var 科创50 = [
     "low": 923.7672,
     "close": 940.0906,
     "percent": 1.72,
-    "volume": 894676893
+    "volume": 894676893,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-09",
@@ -12757,7 +15307,9 @@ var 科创50 = [
     "low": 917.548,
     "close": 980.5689,
     "percent": 4.31,
-    "volume": 925387597
+    "volume": 925387597,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-10",
@@ -12767,7 +15319,9 @@ var 科创50 = [
     "low": 985.8062,
     "close": 991.2244,
     "percent": 1.09,
-    "volume": 698586429
+    "volume": 698586429,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-11",
@@ -12777,7 +15331,9 @@ var 科创50 = [
     "low": 987.52,
     "close": 1011.7085,
     "percent": 2.07,
-    "volume": 756411666
+    "volume": 756411666,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-14",
@@ -12787,7 +15343,9 @@ var 科创50 = [
     "low": 1006.2684,
     "close": 1014.2834,
     "percent": 0.25,
-    "volume": 553808671
+    "volume": 553808671,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-15",
@@ -12797,7 +15355,9 @@ var 科创50 = [
     "low": 995.7957,
     "close": 1006.3395,
     "percent": -0.78,
-    "volume": 410208546
+    "volume": 410208546,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-16",
@@ -12807,7 +15367,9 @@ var 科创50 = [
     "low": 996.3808,
     "close": 1014.5088,
     "percent": 0.81,
-    "volume": 461582074
+    "volume": 461582074,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-17",
@@ -12817,7 +15379,9 @@ var 科创50 = [
     "low": 1006.3576,
     "close": 1016.8118,
     "percent": 0.23,
-    "volume": 374853289
+    "volume": 374853289,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-18",
@@ -12827,7 +15391,9 @@ var 科创50 = [
     "low": 1003.5574,
     "close": 1008.597,
     "percent": -0.81,
-    "volume": 300095971
+    "volume": 300095971,
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2025-04-21",
@@ -12837,7 +15403,9 @@ var 科创50 = [
     "low": 1008.56,
     "close": 1019.41,
     "percent": 1.07,
-    "volume": 339410900
+    "volume": 339410900,
+    "hsl": 0.57,
+    "zgs": 595457719.2982457
   },
   {
     "date": "2025-04-22",
@@ -12847,6 +15415,20 @@ var 科创50 = [
     "low": 1012.6,
     "close": 1016.22,
     "percent": -0.31,
-    "volume": 427546700
+    "volume": 427546700,
+    "hsl": 0.72,
+    "zgs": 593814861.1111112
+  },
+  {
+    "date": "2025-04-23",
+    "timestamp": 1745337600000,
+    "open": 1019.02,
+    "high": 1022.66,
+    "low": 1010.09,
+    "close": 1012.65,
+    "percent": -0.35,
+    "volume": 405506800,
+    "hsl": 0.68,
+    "zgs": 596333529.4117646
   }
 ]
