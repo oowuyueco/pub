@@ -804,20 +804,36 @@ Array.prototype.mapCYQCalculator = function () {
     let dataList = this;
     dataList = dataList.map((data, index) => {
         let CYQ = myCYQCalculator(dataList, index);
-        // delete CYQ.x;
-        // delete CYQ.y;
-        // data.CYQ = CYQ
-        // data.benfPart = +CYQ.benefitPart.toFixed(4)
         data.CYQ = [
-            +CYQ.benefitPart.toFixed(4),
+            +(CYQ.benefitPart * 100).toFixed(2),
+            +(CYQ.percentChips["70"].concentration * 100).toFixed(2),
+            +(CYQ.percentChips["90"].concentration * 100).toFixed(2),
             +CYQ.avgCost,
-            +CYQ.percentChips["70"].concentration.toFixed(4),
-            +CYQ.percentChips["90"].concentration.toFixed(4),
         ]
         return data;
     });
     return dataList;
-};
+}
+function getDWMbenfPart(currentDayList, currentWeekList, currentMonthList) {
+    let dayCYQ = myCYQCalculator(currentDayList, currentDayList.length - 1)
+    let weekCYQ = myCYQCalculator(currentWeekList, currentWeekList.length - 1)
+    let monthCYQ = myCYQCalculator(currentMonthList, currentMonthList.length - 1)
+
+    function reFormat(CYQ) {
+        return [
+            +(CYQ.benefitPart * 100).toFixed(2),
+            +(CYQ.percentChips["70"].concentration * 100).toFixed(2),
+            +(CYQ.percentChips["90"].concentration * 100).toFixed(2),
+            +CYQ.avgCost,
+        ]
+    }
+
+    return {
+        日: reFormat(dayCYQ),
+        周: reFormat(weekCYQ),
+        月: reFormat(monthCYQ)
+    }
+}
 
 
 //技术指标https://github.com/kimboqi/stock-indicators
@@ -1436,7 +1452,9 @@ if (typeof module !== "undefined" && module.exports) {
     exports.getRandom登陆名 = getRandom登陆名
 
     exports.myjscurrentDayYMD = currentDayYMD
+
     exports.myCYQCalculator = myCYQCalculator
+    exports.getDWMbenfPart = getDWMbenfPart
 
 
 } 
