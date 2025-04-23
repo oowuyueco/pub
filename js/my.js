@@ -381,6 +381,7 @@ Array.prototype.akData2Obj = function (period = "day") {
                 "close": data.收盘,
                 "volume": data.成交量,
                 "hsl": data?.换手率,
+                "zgs": data.成交量 / data?.换手率,
                 "zf": data?.振幅,
                 "percent": data?.涨跌幅 ?? PtPPercent(dataList[index - 1], data),
                 "timestamp": "",
@@ -408,6 +409,8 @@ Array.prototype.xueqiuData2Obj = function (period = "day") {
             close: data[5],
             percent: data[7],
             volume: Math.ceil(+data[1]),
+            hsl: data[8], //turnoverrate
+            zgs: data[1] / data[8]  //换手率hsl = 成交量volume / 总股数zgs × 100%
         }
     })
     return dataList
@@ -601,7 +604,19 @@ Array.prototype.ohlc2oclh = function () {
 //--------------------------quotechart2022/src/modules/tools/indicator/cyq.ts----------
 //--------------------------webpack://quotechart2022/src/modules/kline/calculate.ts----
 //--------------------------webpack://quotechart2022/src/modules/kline/cyq.ts----------
-function myCYQCalculator(klinedata, index) {
+function myCYQCalculator(allklinedata, allindex) {
+
+    //随着视图放大缩小k线数量变化！！！！！ 这里取东财网页默认的
+    if (allklinedata.length >= 210) {
+        var klinedata = allklinedata.slice(allindex - 209, allindex + 1)
+        var index = 209
+    } else {
+        var klinedata = allklinedata
+        var index = allindex
+    }
+
+    //
+
     var maxprice = 0;
     var minprice = 0;
 
@@ -838,6 +853,8 @@ function dayToPeriod(dayIndexList, period) {
                 "low": low,
                 "close": close,
                 "volume": volume,
+                "hsl": volume / dayIndex.zgs, //turnoverrate
+                "zgs": dayIndex.zgs,  //换手率hsl = 成交量volume / 总股数zgs × 100%
                 "period": period
             }
             periodIndexList.push(prPeriodIndex)
@@ -866,6 +883,8 @@ function dayToPeriod(dayIndexList, period) {
                 "low": low,
                 "close": close,
                 "volume": volume,
+                "hsl": volume / dayIndex.zgs, //turnoverrate
+                "zgs": dayIndex.zgs,  //换手率hsl = 成交量volume / 总股数zgs × 100%
                 "period": period
             }
             periodIndexList.push(currentPeriodIndex)
