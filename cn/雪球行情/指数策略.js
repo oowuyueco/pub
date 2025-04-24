@@ -4008,7 +4008,7 @@ var triggerLogObj指数 = {
       }
     ],
     "2024-10-08": [
-      "日周高位九转:5周急涨",
+      "日周高位九转",
       {
         "nextFirstDelivery周三": {
           "close": "11->2024-10-23,-282.89,-6.65",
@@ -4571,312 +4571,380 @@ var triggerLogObj指数 = {
     {
       "trigDate": "2006-11-01",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 5,
+      "九转详情": ":双周:上证50"
     },
     {
       "trigDate": "2006-11-02",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 5,
+      "九转详情": ":双周:上证50"
     },
     {
       "trigDate": "2006-11-03",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2006-11-06",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2006-11-07",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2006-11-08",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2006-11-17",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2006-11-20",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2006-11-21",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2006-11-22",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2006-11-23",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2006-11-24",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:上证:上证50"
     },
     {
       "trigDate": "2006-11-27",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2007-05-28",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2007-05-29",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2007-10-11",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2007-10-12",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2007-10-15",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2007-10-16",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2007-10-17",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-02",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-03",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-06",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-07",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-09",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-10",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-15",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2009-07-16",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2009-07-20",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2009-07-22",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2009-07-23",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2009-07-24",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-27",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2009-07-28",
       "quantName": "日周高位九转",
-      "trueCount": 7
+      "trueCount": 7,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2011-04-08",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2013-02-06",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2013-02-07",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 5,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2013-02-08",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 5,
+      "九转详情": ":双周:沪深300"
     },
     {
       "trigDate": "2015-01-05",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-01-06",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-01-07",
       "quantName": "日周高位九转",
-      "trueCount": 3
+      "trueCount": 3,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-04-22",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2015-04-23",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2015-04-24",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2015-04-28",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":双周:沪深300:上证:上证50"
     },
     {
       "trigDate": "2015-05-25",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-05-26",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-05-27",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-06-08",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-06-09",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-06-10",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-06-11",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2015-06-12",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2017-04-07",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2017-04-10",
       "quantName": "日周高位九转",
-      "trueCount": 2
+      "trueCount": 2,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2019-04-04",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2019-04-08",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2019-04-10",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":双周"
     },
     {
       "trigDate": "2021-01-08",
       "quantName": "日周高位九转",
-      "trueCount": 4
+      "trueCount": 4,
+      "九转详情": ":沪深300"
     },
     {
       "trigDate": "2021-01-12",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 5,
+      "九转详情": ":沪深300"
     },
     {
       "trigDate": "2021-01-13",
       "quantName": "日周高位九转",
-      "trueCount": 6
+      "trueCount": 6,
+      "九转详情": ":沪深300:上证50"
     },
     {
       "trigDate": "2023-01-30",
       "quantName": "日周高位九转",
-      "trueCount": 5
+      "trueCount": 5,
+      "九转详情": ":上证50"
+    },
+    {
+      "trigDate": "2024-10-08",
+      "quantName": "日周高位九转",
+      "trueCount": 4,
+      "九转详情": ":5周急涨"
     }
   ],
   "周月高位九转": [
@@ -5701,13 +5769,6 @@ var triggerLogObj指数 = {
       "trigDate": "2024-01-23",
       "quantName": "恒生低位低量",
       "percent": 2.63
-    }
-  ],
-  "日周高位九转:5周急涨": [
-    {
-      "trigDate": "2024-10-08",
-      "quantName": "日周高位九转:5周急涨",
-      "trueCount": 4
     }
   ]
 }
