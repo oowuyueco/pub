@@ -756,6 +756,9 @@ var triggerLogObj美股指数 = {
     ],
     "2025-04-24": [
       "日周低位九转"
+    ],
+    "2025-04-25": [
+      "日周低位九转"
     ]
   },
   "日周月高位九转": [
@@ -1788,6 +1791,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2025-04-24",
       "quantName": "日周低位九转",
       "trueCount": 6
+    },
+    {
+      "trigDate": "2025-04-25",
+      "quantName": "日周低位九转",
+      "trueCount": 6
     }
   ],
   "标普500高位KDJ": [
@@ -2278,4 +2286,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-04-24"
+var runLastKlineDate = "2025-04-25"
