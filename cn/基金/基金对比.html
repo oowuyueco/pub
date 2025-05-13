@@ -1,0 +1,272 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-simple
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script type="text/javascript" src="基金对比.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+      legend: {
+        inactiveColor: '#9a9393',
+        left: "0.5%",
+        top: "-0.5%"
+      },
+      tooltip: {
+        trigger: "axis",
+        show: true,
+        position: ["13%", "5%"],
+        order: "seriesDesc",
+        // formatter: function (params, ticket, callback) {
+        //   return null;
+        // },
+        axisPointer: {
+          type: "cross",
+          show: true,
+          crossStyle: {
+            width: 0.6,
+            color: "black", // 鼠标十字横轴
+          },
+        },
+      },
+      axisPointer: {
+        type: "cross",
+        show: true,
+        link: [{
+          xAxisIndex: "all",
+        },],
+        lineStyle: {
+          color: "black", // 鼠标十字竖轴
+          lineStyle: {
+            width: 0.6,
+            color: "black", // 鼠标十字竖轴
+          },
+        },
+      },
+
+
+      dataZoom: [
+        {
+          show: true,
+          realtime: true,
+          start: 0,
+          end: 100,
+          xAxisIndex: [0],
+          bottom: 15,
+        },
+      ],
+      xAxis: {
+        type: "time",
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          name: "长安偏债",
+          data: last_万家科技_长安偏债.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = ele.长安偏债
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+        {
+          name: "沪深300",
+          data: last_万家科技_长安偏债.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = ele.沪深300 ?? last_长安偏债.find(item => item.date == ele.date)?.沪深300
+            tmp[1] = tmp[1]
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+
+        {
+          name: "万家科技",
+          data: last_万家科技_长安偏债.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = ele.万家科技
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+
+
+        {
+          name: "中债8沪深2",
+          data: last_长安偏债.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = ele.中债8沪深2
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+
+        {
+          name: "长安偏债2",
+          data: last_长安偏债.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = ele.长安偏债
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+
+        {
+          name: "沪深3002",
+          data: last_长安偏债.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = ele.沪深300
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+
+
+
+    function preNup_curLow1(dataList, name1, name2, preN = 200, nearestN = 4) {
+
+      //200 4  1
+      let needLength = preN + nearestN + 1
+      if (dataList.length < needLength) return false
+      if (dataList.at(-1)[name1] === null || dataList.at(-1)[name2] === null) return false
+      if (isNaN(dataList.at(-1)[name1]) || isNaN(dataList.at(-1)[name2])) return false
+
+
+      let preN1up2 = true
+      let endIndex = 0 - needLength
+      for (let index = -6; endIndex < index; index--) {
+        if (dataList.at(index)[name1] <= dataList.at(index)[name2]) {
+          preN1up2 = false
+          return false
+        }
+      }
+
+      if (dataList.at(-1)[name1] <= dataList.at(-1)[name2]) {
+        let endIndex = 0 - (preN * 2)
+        for (let index = (0 - nearestN); endIndex < index; index--) {
+          if (dataList.at(index)[name1] <= dataList.at(index)[name2])
+            return false
+        }
+        return true
+      }
+    }
+
+    for (let index = 0; index <= last_万家科技_长安偏债.length - 1; index++) {
+      let curDataList = last_万家科技_长安偏债.slice(0, index + 1)
+      if (preNup_curLow1(curDataList, "万家科技", "长安偏债", 200, 5))
+        console.log(curDataList.at(-1))
+    }
+
+
+
+    
+    function preNup_curLow2(dataList, name1, name2, preN = 25, nearestN = 2) {
+
+      //25 2  1
+      let needLength = preN + nearestN + 1
+      if (dataList.length < needLength) return false
+      if (dataList.at(-1)[name1] === null || dataList.at(-1)[name2] === null) return false
+
+      let preN1up2 = true
+      let endIndex = 0 - needLength
+      for (let index = -6; endIndex < index; index--) {
+        if (dataList.at(index)[name1] <= dataList.at(index)[name2]) {
+          preN1up2 = false
+          return false
+        }
+      }
+
+      if (dataList.at(-1)[name1] <= dataList.at(-1)[name2]) return true
+
+      if (dataList.at(-1)[name1] <= (dataList.at(-1)[name2] + 2)) {
+        let endIndex = 0 - (preN * 2)
+        for (let index = -1; endIndex < index; index--) {
+          if (dataList.at(index)[name1] <= dataList.at(index)[name2])
+            return false
+        }
+        return true
+      }
+
+    }
+
+    for (let index = 0; index <= last_长安偏债.length - 1; index++) {
+      let curDataList = last_长安偏债.slice(0, index + 1)
+      if (preNup_curLow2(curDataList, "沪深300", "中债8沪深2", 25, 2))
+        console.log(curDataList.at(-1))
+    }
+
+  </script>
+</body>
+
+</html>
