@@ -1078,6 +1078,10 @@ let 零售汽车 = [
     [
         "2025-03-28",
         "5.5000"
+    ],
+    [
+        "2025-04-28",
+        "0.7000"
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
