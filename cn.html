@@ -7,6 +7,7 @@
     <script type="text/javascript" src="./js/my.js"></script>
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
+    <script type="text/javascript" src="./cn/PPI_eastmoney.js"></script>
     <script type="text/javascript" src="./cn/利润同比,亏损增减.js"></script>
     <script type="text/javascript" src="./cn/股债差300平均,滚动市盈率300.js"></script>
     <script type="text/javascript" src="./cn/滚动市盈率恒指.js"></script>
@@ -1074,6 +1075,8 @@
                         show: false
                     },
                     position: "left",
+                    max: 115,
+                    min: 90
                 },
 
                 { //利润亏损
@@ -1263,7 +1266,7 @@
             series: [
 
                 { //ppi
-                    name: "ppi",
+                    name: "ppi同比",
                     type: "line",
                     xAxisIndex: 0,
                     yAxisIndex: 0,
@@ -1329,6 +1332,97 @@
                     },
                     data: PPI.addStartEnd(),
                 },
+                {
+                    name: "ppi基数",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        //color: "red",
+                        width: 1.2,
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.95,
+                                    color: "#0079cd" //"#0081B6",
+                                },
+
+                                {
+                                    offset: 0.25,
+                                    color: "#FD4142" //"#FD4142",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    data: PPI_eastmoney.map((ele, index) => {
+                        return [
+                            ele.REPORT_DATE.substring(0, 8) + "28",
+                            ele.BASE
+                        ]
+                    }).addStartEnd()
+                },
+                {
+                    name: "ppi基数",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        type: "dotted",
+                        color: "black",//
+                        width: 1,
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.5,
+                                color: "#ff535c",
+                            },
+                            label: {
+                                formatter: "上下穿5",
+                                color: "#ff535c",
+                                fontSize: 10,
+                                position: "insideStartTop",
+                            },
+                            yAxis: 105, // 标线值
+                        },
+
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "black",
+                            },
+                            label: {
+                                formatter: "0",
+                                color: "#0081B6",
+                                fontSize: 10,
+                                position: "insideStartBottom",
+                            },
+                            yAxis: 100, // 标线值
+                        },
+                        ],
+                    },
+                    data: PPI_eastmoney.map((ele, index) => {
+                        return [
+                            ele.REPORT_DATE.substring(0, 8) + "28",
+                            ele.BASE_ACCUMULATE
+                        ]
+                    }).addStartEnd()
+                },
+
 
                 { //利润亏损
                     name: '红利$蓝亏',

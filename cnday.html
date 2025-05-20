@@ -855,7 +855,6 @@
             series: [
 
 
-
                 {
                     name: "ppi",
                     type: "line",
@@ -1103,45 +1102,45 @@
                 },
 
 
-                {
-                    name: "获利比例",
-                    type: "line",
-                    xAxisIndex: 0,
-                    yAxisIndex: 0,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 0.9,
-                    },
-                    data: weeklyDatas沪深300ETF.map((item, index) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item?.CYQ[0] ? item?.CYQ[0] : ""
-                        return tmp
-                    }).filterAndAddStartEnd()
-                },
+                // {
+                //     name: "获利比例",
+                //     type: "line",
+                //     xAxisIndex: 0,
+                //     yAxisIndex: 0,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 0.9,
+                //     },
+                //     data: weeklyDatas沪深300ETF.map((item, index) => {
+                //         let tmp = []
+                //         tmp[0] = item.date
+                //         tmp[1] = item?.CYQ[0] ? item?.CYQ[0] : ""
+                //         return tmp
+                //     }).filterAndAddStartEnd()
+                // },
 
-                {
-                    name: "折价率",
-                    type: "line",
-                    xAxisIndex: 1,
-                    yAxisIndex: 1,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 0.9,
-                    },
-                    data: 沪深300同比.filter(item => {
-                        return parseFloat(item[0].substring(0, 4)) >= 2008
-                    }).filterAndAddStartEnd()
-                    ////先用同比
-                    // data: weeklyDatas沪深300ETF.map((item, index) => {
-                    //     let tmp = []
-                    //     tmp[0] = item.date
-                    //     tmp[1] = item?.disRate ? item?.disRate : ""
-                    //     return tmp
-                    // }).filterAndAddStartEnd()
-                },
+                // {
+                //     name: "折价率",
+                //     type: "line",
+                //     xAxisIndex: 1,
+                //     yAxisIndex: 1,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 0.9,
+                //     },
+                //     data: 沪深300同比.filter(item => {
+                //         return parseFloat(item[0].substring(0, 4)) >= 2008
+                //     }).filterAndAddStartEnd()
+                //     ////先用同比
+                //     // data: weeklyDatas沪深300ETF.map((item, index) => {
+                //     //     let tmp = []
+                //     //     tmp[0] = item.date
+                //     //     tmp[1] = item?.disRate ? item?.disRate : ""
+                //     //     return tmp
+                //     // }).filterAndAddStartEnd()
+                // },
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 {
                     name: '大宗高位KDJ',
