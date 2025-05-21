@@ -544,7 +544,7 @@ Array.prototype.chartDataYoY = function (dataPeriod = "month") {
     if (dataPeriod == "month")
         dataList = dataList.map((ele, index, datasArr) => { // yoY 同比
             let preYearMonth = '' + (parseInt(ele[0].substring(0, 4)) - 1) + ele[0].substring(4, 7)
-            console.log(preYearMonth)
+            //console.log(preYearMonth)
             let preItem = datasArr.find(element => {
                 return element[0].substring(0, 7) == preYearMonth
             })
