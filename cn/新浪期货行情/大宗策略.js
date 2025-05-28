@@ -621,6 +621,9 @@ var triggerLogObj大宗={
         ],
         "2025-05-16": [
             "低位KDJ_焦煤连续"
+        ],
+        "2025-05-28": [
+            "低位低量_焦炭连续"
         ]
     },
     "高位KDJ": [
@@ -7649,14 +7652,14 @@ var triggerLogObj大宗={
             ],
             "trigDate": "2025-05-16",
             "logProfileN": {
-                "day7LowUp": [
-                    "6,2025-05-26",
-                    -6.22,
+                "day8LowUp": [
+                    "8,2025-05-28",
+                    -8.62,
                     "",
                     0,
-                    -6.22
+                    -8.62
                 ],
-                "lastDay": 7
+                "lastDay": 8
             }
         }
     ],
@@ -9502,14 +9505,14 @@ var triggerLogObj大宗={
                     4.51,
                     2.64
                 ],
-                "day98LowUp": [
+                "day99LowUp": [
                     "10,2025-01-09",
                     -1.81,
                     "95,2025-05-22",
                     5.44,
-                    5.01
+                    5.19
                 ],
-                "lastDay": 98
+                "lastDay": 99
             }
         },
         {
@@ -9526,14 +9529,14 @@ var triggerLogObj大宗={
                     0,
                     -6.32
                 ],
-                "day17LowUp": [
-                    "17,2025-05-27",
-                    -10.54,
+                "day18LowUp": [
+                    "18,2025-05-28",
+                    -11.7,
                     "",
                     0,
-                    -10.54
+                    -11.7
                 ],
-                "lastDay": 17
+                "lastDay": 18
             }
         }
     ],
@@ -12220,14 +12223,14 @@ var triggerLogObj大宗={
                     7.29,
                     2.47
                 ],
-                "day43LowUp": [
-                    "43,2025-05-27",
-                    -11.2,
+                "day44LowUp": [
+                    "44,2025-05-28",
+                    -12.86,
                     "7,2025-04-01",
                     7.29,
-                    -11.2
+                    -12.86
                 ],
-                "lastDay": 43
+                "lastDay": 44
             }
         },
         {
@@ -12252,14 +12255,32 @@ var triggerLogObj大宗={
                     7.29,
                     2.47
                 ],
-                "day43LowUp": [
-                    "43,2025-05-27",
-                    -11.2,
+                "day44LowUp": [
+                    "44,2025-05-28",
+                    -12.86,
                     "7,2025-04-01",
                     7.29,
-                    -11.2
+                    -12.86
                 ],
-                "lastDay": 43
+                "lastDay": 44
+            }
+        },
+        {
+            "dataName": "焦炭连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-05-28",
+            "trigAtIndex": 3425,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         }
     ],
@@ -13786,4 +13807,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-05-27"
+var runLastKlineDate = "2025-05-28"
