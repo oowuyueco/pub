@@ -9,7 +9,49 @@
     <script type="text/javascript" src="./js/klinecharts.min.js"></script>
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
+
     <script>
+
+        let jsLoadCount = 0
+        function checkOrTryHttpNew(dataName, site, fuc) {
+            var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement
+
+            var JS1 = document.createElement("script")
+            if (site == "sinaF") {
+                JS1.src = `./cn/新浪期货行情/${dataName}.js`
+            }
+            if (site == "sina") {
+                JS1.src = `./cn/新浪行情/${dataName}.js`
+            }
+            if (site == "xueqiu") {
+                JS1.src = `./cn/雪球行情/${dataName}.js`
+                if (dataName.includes("标普") || dataName.includes("纳指") || dataName.includes("道琼斯"))
+                    JS1.src = `./us/雪球行情/${dataName}.js`
+            }
+            if (site == "ths") {
+                JS1.src = `./cn/同花顺行情/${dataName}.js`
+            }
+
+
+            var JS2 = document.createElement("script")
+            JS2.src = `./cn/雪球行情/test策略.js`
+
+            JS1.onload = JS2.onload = function () {
+                jsLoadCount++
+                if (jsLoadCount == 2 && fuc) {
+                    window.trigDateArr = typeof test策略 !== "undefined" && typeof test策略[dataName] !== "undefined" ? test策略[dataName] : []
+                    window.unionAll = typeof test策略 !== "undefined" && typeof test策略?.unionAll ? test策略?.unionAll : []
+                    console.log(window.unionAll)
+                    fuc()
+                }
+            }
+            JS1.onerror = JS2.onerror = function (e) { console.error(e) }
+
+
+            head.insertBefore(JS1, head.firstChild);
+            head.insertBefore(JS2, head.firstChild);
+        }
+
         //从后往前N 包含当前的前N个  cnindex
         Array.prototype.cal9转 = function (当前交易日期, priod, N = 5) {
             var candleList = this
@@ -43,6 +85,7 @@
 
             return candleList
         }
+
     </script>
 </head>
 
@@ -56,24 +99,27 @@
     <div id="chartMonth" style="height:40%"></div> -->
 
     <script>
-        let chartDay = klinecharts.init('chartDay')
-        let chartWeek = klinecharts.init('chartWeek')
-        let chartMonth = klinecharts.init('chartMonth')
+        var chartDay = klinecharts.init('chartDay')
+        var chartWeek = klinecharts.init('chartWeek')
+        var chartMonth = klinecharts.init('chartMonth')
 
-        let site = decodeURI(getQueryVariable("site"))
-        let dataName = decodeURI(getQueryVariable("name"))
-        let edate = getQueryVariable("edate") //总回测数据 70开始  endate结束
-        let backday = getQueryVariable("backday") //回测开始点 结束往前天数
-        let noChart = getQueryVariable("noChart")  // ?site=xueqiu&name=沪深300&edate=2018-10-19&&backday=2
+        var site = decodeURI(getQueryVariable("site"))
+        var dataName = decodeURI(getQueryVariable("name"))
+        var edate = getQueryVariable("edate") //总回测数据 70开始  endate结束
+        var backday = getQueryVariable("backday") //回测开始点 结束往前天数
+        var noChart = getQueryVariable("noChart")  // ?site=xueqiu&name=沪深300&edate=2018-10-19&&backday=2
 
         //等效for循环for1
-        let currentDayIndex
-        let endIndex
-        let conditon1 = []
-        let conditon12 = []
-        let logNameDateCondAtter = []
+        var currentDayIndex
+        var endIndex
+        var conditon1 = []
+        var conditon12 = []
+        var logNameDateCondAtter = []
 
-        checkOrTryHttp(dataName, site, () => {
+        var isdayDraged = false
+        var isLeftButtonPressed = false
+
+        checkOrTryHttpNew(dataName, site, () => {
             //统一数据
             let dayDatas = window[dataName]
             if (site == "sina" || site == "sinaF") {
@@ -276,6 +322,70 @@
                 }
             })
 
+            klinecharts.registerIndicator({
+                name: 'newTest1',
+                shortName: 'newTest1',
+                calcParams: [],
+                figures: [
+                    { key: 'count', title: 'count: ', type: 'bar' },
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        let count = null
+                        let findele = window.unionAll.find(ele => ele[0] == kLineData.date)
+                        if (findele && (findele[2].includes(window.dataName) || findele[1] > 112)) count = findele[1]
+                        return {
+                            "count": count
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'newTest2',
+                figures: [
+                    { key: 'drawY' }
+                ],
+                calc: (kLineDataList) => {
+                    return kLineDataList.map(
+                        (kLineData) => ({
+                            drawUps: kLineData.ups,
+                            drawLows: kLineData.lows,
+                            date: kLineData.date,
+                            trig: window.trigDateArr.includes(kLineData.date)// == "2025-01-13"
+                        }))
+                },
+                draw: ({
+                    ctx,
+                    barSpace,
+                    visibleRange,
+                    indicator,
+                    xAxis,
+                    yAxis
+                }) => {
+                    const fruits = [
+                        '🍏', '🍎', '🍐', '🍊', '🍋', '🍌',
+                        '🍉', '🍇', '🍓', '🍈', '🍒', '🍑',
+                        '🍍', '🥥', '🥝', '🥭', '🥑', '🍏'
+                    ]
+                    const { from, to } = visibleRange
+                    ctx.font = barSpace.gapBar * 3.5 + 'px' + ' Helvetica Neue'
+                    ctx.textAlign = 'center'
+                    const result = indicator.result
+                    for (let i = from; i < to; i++) {
+                        const data = result[i]
+
+                        const x = xAxis.convertToPixel(i)
+                        let drawText = ""
+                        if (data.trig)
+                            drawText = "👆K"//fruits[1]  // data.is9转up ?? data.is9转down  //fruits[Math.floor(Math.random() * 17)] //data.is9转down
+                        ctx.fillStyle = data.trig ? "black" : "green"
+                        let y = yAxis.convertToPixel(data.drawLows) + 15// : yAxis.convertToPixel(data.drawUps) - 15
+                        ctx.fillText(drawText, x, y)
+                    }
+                    return false
+                }
+            })
 
             let normalStyle = {
                 grid: {
@@ -352,13 +462,14 @@
             })
 
             chartDay.createIndicator('VOL')
+            //let dayNewTest1 = chartDay.createIndicator('newTest1')
             let dayNewKdj = chartDay.createIndicator('newKDJ')
             let dayNewMacd = chartDay.createIndicator('newMACD')
             let dayNewBias = chartDay.createIndicator('newBias')
             //chartDay.createIndicator('BIAS')
             //let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
-            let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
-            let dayNew9转 = chartDay.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+            //let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            //let dayNew9转 = chartDay.createIndicator({ name: "trigDate" }, true, { id: 'candle_pane' }) //('new9转back')
 
             chartWeek.createIndicator('VOL')
             let weekNewKdj = chartWeek.createIndicator('newKDJ')
@@ -376,7 +487,6 @@
             let monthNewMa10 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let monthNew9转 = chartMonth.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
-
 
 
             // chartDay.createIndicator({ name: "MA", calcParams: [20], }, true, { id: 'candle_pane' })
@@ -413,6 +523,37 @@
                     // 触发事件
                 }
             })
+            document.addEventListener('mousedown', (event) => {
+                if (event.button === 0) {
+                    isLeftButtonPressed = true;
+                }
+            })
+            document.addEventListener('mouseup', (event) => {
+                if (isLeftButtonPressed && event.button === 0 && isdayDraged) {
+                    forSetInterval(endIndex, endIndex, dayDatas, false)
+                }
+            })
+            chartDay.subscribeAction(
+                'onVisibleRangeChange', //拖动 day kline
+                (onData) => {
+                    endIndex = onData.to
+                    isdayDraged = true
+                }
+            )
+            chartDay.subscribeAction(
+                'onCandleBarClick', //双击 day kline
+                (onData) => {
+                    resEndIndex = dayDatas.findIndex(ele => ele.date == onData.data.date)
+                    resEndIndex++
+                    if (resEndIndex) {
+                        console.log(resEndIndex, onData.data.date)
+                        endIndex = resEndIndex
+                        //forSetInterval(endIndex, endIndex, dayDatas, false)
+                        chartDay.scrollToDataIndex(endIndex)
+
+                    }
+                }
+            )
 
 
             endIndex = dayDatas.length
@@ -429,7 +570,7 @@
             forSetInterval(currentDayIndex, endIndex, dayDatas)
         })
 
-        function forSetInterval(currentDayIndex, endIndex, dayDatas) {
+        function forSetInterval(currentDayIndex, endIndex, dayDatas, applyDay = true) {
             let timer = setInterval(function () {
                 if (timer && currentDayIndex > endIndex) { //for2
                     clearInterval(timer)
@@ -448,13 +589,16 @@
 
                 if (noChart) {
                 } else {
-                    chartDay.applyNewData(currentDayList)
+                    if (applyDay) chartDay.applyNewData(currentDayList)
                     chartWeek.applyNewData(currentWeekList)
                     chartMonth.applyNewData(currentMonthList)
                 }
                 currentDayIndex++ //for3
             }, 1)
         }
+
+
+
 
     </script>
 </body>
