@@ -624,6 +624,10 @@ var triggerLogObj大宗={
         ],
         "2025-05-28": [
             "低位低量_焦炭连续"
+        ],
+        "2025-06-03": [
+            "低位低量_硅铁连续",
+            "低位低量_工业硅连续"
         ]
     },
     "高位KDJ": [
@@ -7659,7 +7663,14 @@ var triggerLogObj大宗={
                     0,
                     -14.84
                 ],
-                "lastDay": 10
+                "day11LowUp": [
+                    "11,2025-06-03",
+                    -15.66,
+                    "",
+                    0,
+                    -15.66
+                ],
+                "lastDay": 11
             }
         }
     ],
@@ -9535,7 +9546,14 @@ var triggerLogObj大宗={
                     0,
                     -12.86
                 ],
-                "lastDay": 20
+                "day21LowUp": [
+                    "21,2025-06-03",
+                    -13.88,
+                    "",
+                    0,
+                    -13.88
+                ],
+                "lastDay": 21
             }
         }
     ],
@@ -12222,14 +12240,14 @@ var triggerLogObj大宗={
                     7.29,
                     2.47
                 ],
-                "day46LowUp": [
-                    "46,2025-05-30",
-                    -14.84,
+                "day47LowUp": [
+                    "47,2025-06-03",
+                    -15.43,
                     "7,2025-04-01",
                     7.29,
-                    -14.84
+                    -15.43
                 ],
-                "lastDay": 46
+                "lastDay": 47
             }
         },
         {
@@ -12254,14 +12272,14 @@ var triggerLogObj大宗={
                     7.29,
                     2.47
                 ],
-                "day46LowUp": [
-                    "46,2025-05-30",
-                    -14.84,
+                "day47LowUp": [
+                    "47,2025-06-03",
+                    -15.43,
                     "7,2025-04-01",
                     7.29,
-                    -14.84
+                    -15.43
                 ],
-                "lastDay": 46
+                "lastDay": 47
             }
         },
         {
@@ -12272,14 +12290,50 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day2LowUp": [
-                    "2,2025-05-30",
-                    -2.28,
+                "day3LowUp": [
+                    "3,2025-06-03",
+                    -2.95,
                     "",
                     0,
-                    -2.28
+                    -2.95
                 ],
-                "lastDay": 2
+                "lastDay": 3
+            }
+        },
+        {
+            "dataName": "硅铁连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-06-03",
+            "trigAtIndex": 2594,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
+        },
+        {
+            "dataName": "工业硅连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-06-03",
+            "trigAtIndex": 588,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         }
     ],
@@ -13806,4 +13860,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-05-30"
+var runLastKlineDate = "2025-06-03"
