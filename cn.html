@@ -331,18 +331,24 @@
         }
 
         //指数策略
+        let 标星冲突不显示 = true
+
         function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10, nextN期权周三 = "nextSecondDelivery周三") { // nextSecondDelivery周三 nextThirdDelivery周三
 
             let trigDateArr = Object.entries(triggerLogObj指数.按日期排序)
                 .filter((ele, index) => { return ele[1][0].includes(高低位) })
-                .map((ele, index, preArr) => {
-                    let newArr = []
-                    newArr[0] = ele[0]
-                    newArr[1] = ele[1].toSpliced(-1)
-                    newArr[2] = ele[1].at(-1)
-                    newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : (newArr[1][0].includes("高位") ? "高位" : "低位")
-                    return newArr
-                })
+
+            if (标星冲突不显示)
+                trigDateArr = trigDateArr.filter((ele, index) => { return !ele[1].at(-1)?.冲突 }) ///标星冲突不显示
+
+            trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                let newArr = []
+                newArr[0] = ele[0]
+                newArr[1] = ele[1].toSpliced(-1)
+                newArr[2] = ele[1].at(-1)
+                newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : (newArr[1][0].includes("高位") ? "高位" : "低位")
+                return newArr
+            })
 
             trigDateArr.forEach((ele, index) => {
                 if (index == 0) return ele[5] = "✔"
