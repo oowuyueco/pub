@@ -2270,6 +2270,12 @@
         })
 
         setTimeout(() => {
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "ppi基数"
+            });
+
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "上证"

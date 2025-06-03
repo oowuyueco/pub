@@ -1109,7 +1109,7 @@ let 商品房销售 = [
     ],
     [
         "2025-04-28",
-        "-2.8000"
+        "-3.2000"
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
