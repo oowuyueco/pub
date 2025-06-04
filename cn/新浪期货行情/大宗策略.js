@@ -628,6 +628,9 @@ var triggerLogObj大宗={
         "2025-06-03": [
             "低位低量_硅铁连续",
             "低位低量_工业硅连续"
+        ],
+        "2025-06-04": [
+            "低位低量_工业硅连续"
         ]
     },
     "高位KDJ": [
@@ -7663,14 +7666,14 @@ var triggerLogObj大宗={
                     0,
                     -14.84
                 ],
-                "day11LowUp": [
+                "day12LowUp": [
                     "11,2025-06-03",
                     -15.66,
                     "",
                     0,
-                    -15.66
+                    -9.91
                 ],
-                "lastDay": 11
+                "lastDay": 12
             }
         }
     ],
@@ -9546,14 +9549,14 @@ var triggerLogObj大宗={
                     0,
                     -12.86
                 ],
-                "day21LowUp": [
+                "day22LowUp": [
                     "21,2025-06-03",
                     -13.88,
                     "",
                     0,
-                    -13.88
+                    -10.97
                 ],
-                "lastDay": 21
+                "lastDay": 22
             }
         }
     ],
@@ -12240,14 +12243,14 @@ var triggerLogObj大宗={
                     7.29,
                     2.47
                 ],
-                "day47LowUp": [
+                "day48LowUp": [
                     "47,2025-06-03",
                     -15.43,
                     "7,2025-04-01",
                     7.29,
-                    -15.43
+                    -10.97
                 ],
-                "lastDay": 47
+                "lastDay": 48
             }
         },
         {
@@ -12272,14 +12275,14 @@ var triggerLogObj大宗={
                     7.29,
                     2.47
                 ],
-                "day47LowUp": [
+                "day48LowUp": [
                     "47,2025-06-03",
                     -15.43,
                     "7,2025-04-01",
                     7.29,
-                    -15.43
+                    -10.97
                 ],
-                "lastDay": 47
+                "lastDay": 48
             }
         },
         {
@@ -12290,14 +12293,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day3LowUp": [
+                "day4LowUp": [
                     "3,2025-06-03",
                     -2.95,
-                    "",
-                    0,
-                    -2.95
+                    "4,2025-06-04",
+                    2.17,
+                    2.17
                 ],
-                "lastDay": 3
+                "lastDay": 4
             }
         },
         {
@@ -12308,14 +12311,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day0LowUp": [
+                "day1LowUp": [
                     "",
                     0,
-                    "",
-                    0,
-                    0
+                    "1,2025-06-04",
+                    1.3,
+                    1.3
                 ],
-                "lastDay": 0
+                "lastDay": 1
             }
         },
         {
@@ -12323,6 +12326,24 @@ var triggerLogObj大宗={
             "quantName": "低位低量",
             "trigDate": "2025-06-03",
             "trigAtIndex": 588,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day1LowUp": [
+                    "",
+                    0,
+                    "1,2025-06-04",
+                    3.03,
+                    3.03
+                ],
+                "lastDay": 1
+            }
+        },
+        {
+            "dataName": "工业硅连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-06-04",
+            "trigAtIndex": 589,
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
@@ -13860,4 +13881,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-06-03"
+var runLastKlineDate = "2025-06-04"
