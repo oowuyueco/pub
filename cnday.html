@@ -1479,6 +1479,71 @@
                 },
 
 
+                 {
+                    name: '高位空但叉',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300高位空但叉.map((item) => {
+                        return [item.trigDate, item.percent, "沪深300高位空但叉"]
+                    }).filterAndAddStartEnd()
+                },
+
+                
+                 {
+                    name: '高位空但叉',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位空但叉.map((item) => {
+                        return [item.trigDate, item.percent, "上证高位空但叉"]
+                    }).filterAndAddStartEnd()
+                },
+
+                
+                 {
+                    name: '高位空但叉',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50高位空但叉.map((item) => {
+                        return [item.trigDate, item.percent, "上证50高位空但叉"]
+                    }).filterAndAddStartEnd()
+                },
+
                 ///////////////////////////////////////////////////
                 {
                     name: '同花顺策略总数',
