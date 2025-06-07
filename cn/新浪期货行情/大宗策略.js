@@ -636,6 +636,7 @@ var triggerLogObj大宗={
             "低位低量_工业硅连续"
         ],
         "2025-06-06": [
+            "低位低量_工业硅连续",
             "低位低量_工业硅连续"
         ]
     },
@@ -12424,6 +12425,24 @@ var triggerLogObj大宗={
                     1.54
                 ],
                 "lastDay": 1
+            }
+        },
+        {
+            "dataName": "工业硅连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-06-06",
+            "trigAtIndex": 591,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         },
         {
