@@ -1,4 +1,4 @@
-var 利润同比 = [
+let 利润同比 = [
     [
         "2002-02-28",
         -11.3
@@ -912,7 +912,7 @@ var 利润同比 = [
         1.4
     ]
 ]
-var 亏损增减 = [
+let 亏损增减 = [
     [
         "2002-02-28",
         5.4
@@ -1826,5 +1826,7 @@ var 亏损增减 = [
         -0.4
     ]
 ]
-if (typeof module !== "undefined" && module.exports) { exports.利润同比 = 利润同比 
- exports.亏损增减 = 亏损增减 }
+if (typeof module !== "undefined" && module.exports) {
+    exports.利润同比 = 利润同比
+    exports.亏损增减 = 亏损增减
+}
