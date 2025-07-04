@@ -7772,14 +7772,14 @@ var triggerLogObj大宗={
                     0,
                     -6.69
                 ],
-                "day33LowUp": [
+                "day34LowUp": [
                     "11,2025-06-03",
                     -15.66,
                     "33,2025-07-03",
                     0.41,
-                    0.41
+                    -1.52
                 ],
-                "lastDay": 33
+                "lastDay": 34
             }
         },
         {
@@ -7793,14 +7793,14 @@ var triggerLogObj大宗={
             ],
             "trigDate": "2025-07-01",
             "logProfileN": {
-                "day2LowUp": [
+                "day3LowUp": [
                     "",
                     0,
                     "1,2025-07-02",
                     3.15,
-                    2.28
+                    1.78
                 ],
-                "lastDay": 2
+                "lastDay": 3
             }
         }
     ],
@@ -9676,14 +9676,14 @@ var triggerLogObj大宗={
                     0,
                     -12.86
                 ],
-                "day43LowUp": [
+                "day44LowUp": [
                     "29,2025-06-13",
                     -15.99,
                     "",
                     0,
-                    -14.03
+                    -14.68
                 ],
-                "lastDay": 43
+                "lastDay": 44
             }
         }
     ],
@@ -12377,14 +12377,14 @@ var triggerLogObj大宗={
                     7.29,
                     -9.86
                 ],
-                "day69LowUp": [
+                "day70LowUp": [
                     "47,2025-06-03",
                     -15.43,
                     "7,2025-04-01",
                     7.29,
-                    -5.89
+                    -6.71
                 ],
-                "lastDay": 69
+                "lastDay": 70
             }
         },
         {
@@ -12416,14 +12416,14 @@ var triggerLogObj大宗={
                     7.29,
                     -9.86
                 ],
-                "day69LowUp": [
+                "day70LowUp": [
                     "47,2025-06-03",
                     -15.43,
                     "7,2025-04-01",
                     7.29,
-                    -5.89
+                    -6.71
                 ],
-                "lastDay": 69
+                "lastDay": 70
             }
         },
         {
@@ -12448,14 +12448,14 @@ var triggerLogObj大宗={
                     4.26,
                     4.26
                 ],
-                "day25LowUp": [
+                "day26LowUp": [
                     "3,2025-06-03",
                     -2.95,
                     "25,2025-07-03",
                     7.99,
-                    7.99
+                    7.06
                 ],
-                "lastDay": 25
+                "lastDay": 26
             }
         },
         {
@@ -12480,14 +12480,14 @@ var triggerLogObj大宗={
                     5.98,
                     3.74
                 ],
-                "day22LowUp": [
+                "day23LowUp": [
                     "",
                     0,
                     "21,2025-07-02",
                     7.01,
-                    6.1
+                    5.59
                 ],
-                "lastDay": 22
+                "lastDay": 23
             }
         },
         {
@@ -12512,14 +12512,14 @@ var triggerLogObj大宗={
                     13.76,
                     9.6
                 ],
-                "day22LowUp": [
+                "day23LowUp": [
                     "",
                     0,
                     "21,2025-07-02",
                     15.88,
-                    13.06
+                    12.63
                 ],
-                "lastDay": 22
+                "lastDay": 23
             }
         },
         {
@@ -12544,14 +12544,14 @@ var triggerLogObj大宗={
                     12.47,
                     12.47
                 ],
-                "day21LowUp": [
+                "day22LowUp": [
                     "1,2025-06-05",
                     -1.92,
                     "20,2025-07-02",
                     12.47,
-                    9.73
+                    9.32
                 ],
-                "lastDay": 21
+                "lastDay": 22
             }
         },
         {
@@ -12576,6 +12576,38 @@ var triggerLogObj大宗={
                     14.66,
                     11.87
                 ],
+                "day21LowUp": [
+                    "",
+                    0,
+                    "19,2025-07-02",
+                    14.66,
+                    11.45
+                ],
+                "lastDay": 21
+            }
+        },
+        {
+            "dataName": "工业硅连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-06-06",
+            "trigAtIndex": 591,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day10LowUp": [
+                    "",
+                    0,
+                    "3,2025-06-11",
+                    3.37,
+                    1.65
+                ],
+                "day20LowUp": [
+                    "",
+                    0,
+                    "18,2025-07-02",
+                    12.93,
+                    9.77
+                ],
                 "lastDay": 20
             }
         },
@@ -12594,39 +12626,14 @@ var triggerLogObj大宗={
                     3.37,
                     1.65
                 ],
-                "day19LowUp": [
+                "day20LowUp": [
                     "",
                     0,
                     "18,2025-07-02",
                     12.93,
-                    10.18
+                    9.77
                 ],
-                "lastDay": 19
-            }
-        },
-        {
-            "dataName": "工业硅连续",
-            "quantName": "低位低量",
-            "trigDate": "2025-06-06",
-            "trigAtIndex": 591,
-            "dataType": "工业",
-            "trigcalType": "",
-            "logProfileN": {
-                "day10LowUp": [
-                    "",
-                    0,
-                    "3,2025-06-11",
-                    3.37,
-                    1.65
-                ],
-                "day19LowUp": [
-                    "",
-                    0,
-                    "18,2025-07-02",
-                    12.93,
-                    10.18
-                ],
-                "lastDay": 19
+                "lastDay": 20
             }
         }
     ],
@@ -14153,4 +14160,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-07-03"
+var runLastKlineDate = "2025-07-04"
