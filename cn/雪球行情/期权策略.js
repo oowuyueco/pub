@@ -4,7 +4,7 @@ var triggerLogObj期权 = {
       "2008-12-04": [
         {
           "trigDate": "2008-12-04",
-          "quantName": "上证50_低位KMVol金叉",
+          "quantName": "上证50_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -57,7 +57,7 @@ var triggerLogObj期权 = {
       "2009-01-06": [
         {
           "trigDate": "2009-01-06",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -426,7 +426,7 @@ var triggerLogObj期权 = {
       "2012-11-06": [
         {
           "trigDate": "2012-11-06",
-          "quantName": "沪深300_低位KMVol金叉",
+          "quantName": "沪深300_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -450,7 +450,7 @@ var triggerLogObj期权 = {
       "2012-11-07": [
         {
           "trigDate": "2012-11-07",
-          "quantName": "上证_低位KMVol金叉",
+          "quantName": "上证_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -503,12 +503,12 @@ var triggerLogObj期权 = {
       "2013-04-10": [
         {
           "trigDate": "2013-04-10",
-          "quantName": "上证_周downMas绿空绿红_false",
+          "quantName": "上证_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2013-04-10",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -532,12 +532,12 @@ var triggerLogObj期权 = {
       "2013-04-11": [
         {
           "trigDate": "2013-04-11",
-          "quantName": "上证_周downMas绿空绿红_false",
+          "quantName": "上证_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2013-04-11",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -561,12 +561,12 @@ var triggerLogObj期权 = {
       "2013-04-12": [
         {
           "trigDate": "2013-04-12",
-          "quantName": "上证_周downMas绿空绿红_false",
+          "quantName": "上证_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2013-04-12",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -614,7 +614,7 @@ var triggerLogObj期权 = {
       "2014-07-01": [
         {
           "trigDate": "2014-07-01",
-          "quantName": "上证_低位KMVol金叉",
+          "quantName": "上证_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -691,7 +691,7 @@ var triggerLogObj期权 = {
       "2014-07-15": [
         {
           "trigDate": "2014-07-15",
-          "quantName": "沪深300_低位KMVol金叉",
+          "quantName": "沪深300_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -715,7 +715,7 @@ var triggerLogObj期权 = {
       "2014-07-16": [
         {
           "trigDate": "2014-07-16",
-          "quantName": "沪深300_低位KMVol金叉",
+          "quantName": "沪深300_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -985,7 +985,7 @@ var triggerLogObj期权 = {
       "2015-03-12": [
         {
           "trigDate": "2015-03-12",
-          "quantName": "上证50_低位KMVol金叉",
+          "quantName": "上证50_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -1011,7 +1011,7 @@ var triggerLogObj期权 = {
       "2016-06-22": [
         {
           "trigDate": "2016-06-22",
-          "quantName": "沪深300_低位KMVol金叉",
+          "quantName": "沪深300_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -1035,7 +1035,7 @@ var triggerLogObj期权 = {
       "2016-06-23": [
         {
           "trigDate": "2016-06-23",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1059,7 +1059,7 @@ var triggerLogObj期权 = {
       "2017-05-12": [
         {
           "trigDate": "2017-05-12",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1207,10 +1207,63 @@ var triggerLogObj期权 = {
       ]
     },
     "2018-12-28=>2021-02-18": {
+      "2019-05-27": [
+        {
+          "trigDate": "2019-05-27",
+          "quantName": "沪深300_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "trigDate": "2019-05-27",
+          "quantName": "上证50_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "21->2019-06-26,157.13,4.32",
+            "high": "19->2019-06-24,204.07,5.61",
+            "low": "8->2019-06-06,-72.52,-1.99"
+          },
+          "nextSecondDelivery周三": {
+            "close": "41->2019-07-24,182.63,5.02",
+            "high": "25->2019-07-02,299.97,8.25",
+            "low": "8->2019-06-06,-72.52,-1.99"
+          },
+          "nextThirdDelivery周三": {
+            "close": "66->2019-08-28,165.38,4.55",
+            "high": "25->2019-07-02,299.97,8.25",
+            "low": "8->2019-06-06,-72.52,-1.99"
+          }
+        }
+      ],
+      "2019-05-28": [
+        {
+          "trigDate": "2019-05-28",
+          "quantName": "上证_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "20->2019-06-26,122.07,3.32",
+            "high": "18->2019-06-24,169.01,4.6",
+            "low": "7->2019-06-06,-107.58,-2.93"
+          },
+          "nextSecondDelivery周三": {
+            "close": "40->2019-07-24,147.57,4.02",
+            "high": "24->2019-07-02,264.91,7.21",
+            "low": "7->2019-06-06,-107.58,-2.93"
+          },
+          "nextThirdDelivery周三": {
+            "close": "65->2019-08-28,130.32,3.55",
+            "high": "24->2019-07-02,264.91,7.21",
+            "low": "7->2019-06-06,-107.58,-2.93"
+          }
+        }
+      ],
       "2019-05-31": [
         {
           "trigDate": "2019-05-31",
-          "quantName": "沪深300_周downMas绿空绿红_false",
+          "quantName": "沪深300_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1228,6 +1281,78 @@ var triggerLogObj期权 = {
             "close": "62->2019-08-28,172.79,4.76",
             "high": "21->2019-07-02,307.38,8.47",
             "low": "4->2019-06-06,-65.11,-1.79"
+          }
+        }
+      ],
+      "2019-11-25": [
+        {
+          "trigDate": "2019-11-25",
+          "quantName": "上证_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "2->2019-11-27,-2.59,-0.07",
+            "high": "1->2019-11-26,13.44,0.35",
+            "low": "2->2019-11-27,-2.59,-0.07"
+          },
+          "nextSecondDelivery周三": {
+            "close": "22->2019-12-25,112.66,2.9",
+            "high": "16->2019-12-17,163.59,4.22",
+            "low": "4->2019-11-29,-49.54,-1.28"
+          },
+          "nextThirdDelivery周三": {
+            "close": "41->2020-01-22,253.72,6.54",
+            "high": "34->2020-01-13,325.78,8.4",
+            "low": "4->2019-11-29,-49.54,-1.28"
+          }
+        }
+      ],
+      "2019-11-26": [
+        {
+          "trigDate": "2019-11-26",
+          "quantName": "上证_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "1->2019-11-27,-16.03,-0.41",
+            "high": ",0,0",
+            "low": "1->2019-11-27,-16.03,-0.41"
+          },
+          "nextSecondDelivery周三": {
+            "close": "21->2019-12-25,99.22,2.55",
+            "high": "15->2019-12-17,150.15,3.86",
+            "low": "3->2019-11-29,-62.98,-1.62"
+          },
+          "nextThirdDelivery周三": {
+            "close": "40->2020-01-22,240.28,6.17",
+            "high": "33->2020-01-13,312.34,8.03",
+            "low": "3->2019-11-29,-62.98,-1.62"
+          }
+        }
+      ],
+      "2019-11-27": [
+        {
+          "trigDate": "2019-11-27",
+          "quantName": "上证_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "20->2019-12-25,115.25,2.97",
+            "high": "14->2019-12-17,166.18,4.29",
+            "low": "2->2019-11-29,-46.95,-1.21"
+          },
+          "nextSecondDelivery周三": {
+            "close": "39->2020-01-22,256.31,6.61",
+            "high": "32->2020-01-13,328.37,8.47",
+            "low": "2->2019-11-29,-46.95,-1.21"
+          },
+          "nextThirdDelivery周三": {
+            "close": "58->2020-02-26,197.4,5.09",
+            "high": "32->2020-01-13,328.37,8.47",
+            "low": "41->2020-02-03,-187.26,-4.83"
           }
         }
       ],
@@ -1475,7 +1600,7 @@ var triggerLogObj期权 = {
       "2020-11-03": [
         {
           "trigDate": "2020-11-03",
-          "quantName": "上证_周downMas绿空绿红_false",
+          "quantName": "上证_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1517,6 +1642,54 @@ var triggerLogObj期权 = {
             "close": "55->2021-02-24,370.47,7.31",
             "high": "50->2021-02-10,740.62,14.62",
             "low": "8->2020-12-11,-177.47,-3.5"
+          }
+        }
+      ],
+      "2020-12-02": [
+        {
+          "trigDate": "2020-12-02",
+          "quantName": "科创50_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "15->2020-12-23,-60.02,-1.18",
+            "high": ",0,0",
+            "low": "7->2020-12-11,-177.51,-3.5"
+          },
+          "nextSecondDelivery周三": {
+            "close": "39->2021-01-27,460.86,9.1",
+            "high": "37->2021-01-25,558.78,11.03",
+            "low": "7->2020-12-11,-177.51,-3.5"
+          },
+          "nextThirdDelivery周三": {
+            "close": "54->2021-02-24,370.43,7.31",
+            "high": "49->2021-02-10,740.58,14.62",
+            "low": "7->2020-12-11,-177.51,-3.5"
+          }
+        }
+      ],
+      "2020-12-03": [
+        {
+          "trigDate": "2020-12-03",
+          "quantName": "科创50_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "14->2020-12-23,-49.94,-0.99",
+            "high": "1->2020-12-04,8.86,0.18",
+            "low": "6->2020-12-11,-167.43,-3.31"
+          },
+          "nextSecondDelivery周三": {
+            "close": "38->2021-01-27,470.94,9.31",
+            "high": "36->2021-01-25,568.86,11.25",
+            "low": "6->2020-12-11,-167.43,-3.31"
+          },
+          "nextThirdDelivery周三": {
+            "close": "53->2021-02-24,380.51,7.52",
+            "high": "48->2021-02-10,750.66,14.84",
+            "low": "6->2020-12-11,-167.43,-3.31"
           }
         }
       ],
@@ -1649,6 +1822,11 @@ var triggerLogObj期权 = {
           "logInfo": ""
         },
         {
+          "trigDate": "2022-12-27",
+          "quantName": "沪深300_金叉低连空但",
+          "logInfo": ""
+        },
+        {
           "nextFirstDelivery周三": {
             "close": "1->2022-12-28,-16.59,-0.43",
             "high": ",0,0",
@@ -1669,7 +1847,7 @@ var triggerLogObj期权 = {
       "2023-12-27": [
         {
           "trigDate": "2023-12-27",
-          "quantName": "沪深300_低位KMVol金叉",
+          "quantName": "沪深300_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -1693,7 +1871,7 @@ var triggerLogObj期权 = {
       "2024-01-18": [
         {
           "trigDate": "2024-01-18",
-          "quantName": "沪深300_低位KMVol金叉",
+          "quantName": "沪深300_低位MVol金叉",
           "logInfo": ""
         },
         {
@@ -1862,7 +2040,7 @@ var triggerLogObj期权 = {
       "2025-04-09": [
         {
           "trigDate": "2025-04-09",
-          "quantName": "科创50_周downMas绿空绿红_false",
+          "quantName": "科创50_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1899,6 +2077,27 @@ var triggerLogObj期权 = {
             "close": "25->2025-07-04,123.5,3.2",
             "high": "25->2025-07-04,123.5,3.2",
             "low": "1->2025-05-30,-18.47,-0.48",
+            "nextSecondDelivery周三": "2025-07-23",
+            "nextThirdDelivery周三": "2025-08-27"
+          }
+        }
+      ],
+      "2025-06-23": [
+        {
+          "trigDate": "2025-06-23",
+          "quantName": "沪深300_周downMas绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "nextFirstDelivery周三": {
+            "close": "2->2025-06-25,102.17,2.65",
+            "high": "2->2025-06-25,102.17,2.65",
+            "low": ",0,0"
+          },
+          "after": {
+            "close": "9->2025-07-04,124.3,3.22",
+            "high": "9->2025-07-04,124.3,3.22",
+            "low": ",0,0",
             "nextSecondDelivery周三": "2025-07-23",
             "nextThirdDelivery周三": "2025-08-27"
           }
