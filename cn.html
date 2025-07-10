@@ -1957,6 +1957,52 @@
 
 
 
+                { //期权策略
+                    name: '期权策略',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
+                    //symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 3
+                    },
+                    zlevel: 3,
+                    data: changeLog2(上升区间ByDay).all.filter((item) => {
+                        return true
+                    }).map((item) => {
+                        return [item[0], -21.5]
+                    }).addStartEnd()
+                },
+                { //期权策略
+                    name: '期权策略',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
+                    // /symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 3
+                    },
+                    zlevel: 3,
+                    data: changeLog2(下降区间ByDay).all.filter((item) => {
+                        return true
+                    }).map((item) => {
+                        return [item[0], -20]
+                    }).addStartEnd()
+                },
+
+
                 { //pmi
                     name: 'pmi',
                     type: 'line',
@@ -2279,6 +2325,11 @@
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "上证"
+            });
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "期权策略"
             });
 
             myChart.dispatchAction({
