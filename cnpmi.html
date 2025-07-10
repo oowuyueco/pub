@@ -13,16 +13,42 @@
     <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
 
+    <!---month "2025-05-28",  "2025-06-28",  "2025-07-09",-->
     <script type="text/javascript" src="./cn/沪深300PE中位数,全A股PE中位数,十年期国债利率倒数.js"></script>
     <script type="text/javascript" src="./cn/股债差300平均,滚动市盈率300.js"></script>
 
+    <!---day week-->
     <script type="text/javascript" src="./cn/沪深300风险溢价差_jiucai.js"></script>
-    <script type="text/javascript" src="./cn/沪深300PE中位数_lixinger.js"></script>
     <script type="text/javascript" src="./cn/十年期国债收益率_jiucai.js"></script>
+    <script type="text/javascript" src="./cn/沪深300PE中位数_lixinger.js"></script>
 
 
     <script type="text/javascript" src="./js/my.js"></script>
     <script type="text/javascript" src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "_WXPtJfJWg8b19aaf",//emailjs 10025***** sog****** 
+            })
+        })();
+        function sendMail(msg) {
+            const templateParams = {
+                message: msg,
+            };
+            emailjs.send("service_76sgm8l", "template_fdryx48", templateParams).then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                },
+            );
+        }
+
+        //currentDayYM = "2025-02" //test
+    </script>
 
     <script type="text/javascript">
         var dom = document.getElementById('container');
@@ -149,6 +175,7 @@
             let buyLog = `[${pmiArr}] [${stockArr},${stockPe}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
             this.buySellLog.push(buyLog)
             console.log(`    ${buyLog}`)
+            if (currentDayYM == pmiArr[0].substring(0, 7)) sendMail(buyLog)
 
             this.assetLog.push([pmiArr[0], this.allAsset(), `buy_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
@@ -171,6 +198,7 @@
             let sellLog = `[${pmiArr}] [${stockArr},${stockPe}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
             this.buySellLog.push(sellLog)
             console.log(`    ${sellLog}`)
+            if (currentDayYM == pmiArr[0].substring(0, 7)) sendMail(sellLog)
 
             this.assetLog.push([pmiArr[0], this.allAsset(), `sell_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
@@ -245,8 +273,8 @@
 
             for (var i = 2; i < pmiData.length; i++) {
 
-                var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]//week
-                var hs300PeMiddelNext = hs300PeMiddel //findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)[1]
+                var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
+                var hs300PeMiddelNext = hs300PeMiddel
                 var tenYearPe = findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
                 var guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
 
@@ -339,12 +367,6 @@
                 var tenYearPe = findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
                 var guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
 
-
-                if (pmiData[i][0] == "2024-01-01" || pmiData[i][0] == "2020-0114-01") {
-                    console.log(
-                        pmiData[i], hs300PeMiddel, hs300PeMiddelNext, tenYearPe, guzhaicha
-                    )
-                }
 
                 function buyCond() {
                     if (

@@ -1233,7 +1233,7 @@ if (typeof module !== "undefined" && module.exports) {
                 });
                 transporter.sendMail({
                     from: '"oowuyue" <oowuyue@163.com>', // sender address
-                    to: toMails,//"3434384699@qq.com, 851616860@qq.com", // list of receivers
+                    to: toMails,//851616860@qq.com //1002579008@qq.com
                     subject: subject, // Subject line
                     text: "", // plain text body
                     html: msgHtml == "" ? subject : msgHtml, // html body
