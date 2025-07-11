@@ -155,7 +155,8 @@
             console.log((JSON.stringify(this)))
             return this
         }
-        asset.prototype.buy = function (pmiArr, stockName, stockPe, stockArr, biliArr, count, buyCond) {
+        asset.prototype.buy = function (condArr, stockName, stockArr, biliArr, count, buyCond) {
+
 
             let bili = biliArr[count]
             let buyPrice = stockArr[1]
@@ -172,15 +173,15 @@
             }
             this.stocks[stockName].allCost = parseFloat(this.stocks[stockName].allCost.toFixed(2))
 
-            let buyLog = `[${pmiArr}] [${stockArr},${stockPe}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
+            let buyLog = `[${condArr.join("  ")}] [${stockArr}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
             this.buySellLog.push(buyLog)
             console.log(`    ${buyLog}`)
-            if (currentDayYM == pmiArr[0].substring(0, 7)) sendMail(buyLog)
+            if (currentDayYM == condArr[0].substring(0, 7)) sendMail(buyLog)
 
-            this.assetLog.push([pmiArr[0], this.allAsset(), `buy_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
+            this.assetLog.push([condArr, this.allAsset(), `buy_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
         }
-        asset.prototype.sell = function (pmiArr, stockName, stockPe, stockArr, biliArr, count, sellCond) {
+        asset.prototype.sell = function (condArr, stockName, stockArr, biliArr, count, sellCond) {
 
             let bili = biliArr[count]
             let currentAmount = this.stocks[stockName].currentAmount
@@ -195,12 +196,12 @@
 
             this.stocks[stockName].allIncome = parseFloat(this.stocks[stockName].allIncome.toFixed(2))
 
-            let sellLog = `[${pmiArr}] [${stockArr},${stockPe}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
+            let sellLog = `[${condArr.join("  ")}] [${stockArr}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
             this.buySellLog.push(sellLog)
             console.log(`    ${sellLog}`)
-            if (currentDayYM == pmiArr[0].substring(0, 7)) sendMail(sellLog)
+            if (currentDayYM == condArr[0].substring(0, 7)) sendMail(sellLog)
 
-            this.assetLog.push([pmiArr[0], this.allAsset(), `sell_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
+            this.assetLog.push([condArr, this.allAsset(), `sell_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
         }
         asset.prototype.allAsset = function (stockDate = null) {
@@ -275,7 +276,7 @@
 
                 var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
                 var hs300PeMiddelNext = hs300PeMiddel
-                var tenYearPe = findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
+                var tenYearPe = +findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
                 var guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
 
                 function buyCond() {
@@ -311,7 +312,7 @@
                     sellCount = 0
                     if (pre == "buy3") continue
                     let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
-                    myasset.buy(pmiData[i], "HS300", hs300PeMiddel, hs300, buybili, buyCount, buyCond())
+                    myasset.buy([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, buybili, buyCount, buyCond())
                     pre = "buy" + (++buyCount)
                 }
 
@@ -344,7 +345,7 @@
                     if (Object.keys(myasset.stocks).length === 0) continue
                     if (pre == "sell3") continue
                     let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
-                    myasset.sell(pmiData[i], "HS300", hs300PeMiddel, hs300, sellbili, sellCount, sellCond())
+                    myasset.sell([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, sellbili, sellCount, sellCond())
                     pre = "sell" + (++sellCount)
                 }
             }
@@ -364,7 +365,7 @@
 
                 var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]//week
                 var hs300PeMiddelNext = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)[1]
-                var tenYearPe = findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
+                var tenYearPe = +findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1].toFixed(4)
                 var guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
 
 
@@ -401,7 +402,7 @@
                     sellCount = 0
                     if (pre == "buy3") continue
                     let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
-                    myasset.buy(pmiData[i], "HS300", hs300PeMiddel, hs300, buybili, buyCount, buyCond())
+                    myasset.buy([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, buybili, buyCount, buyCond())
                     pre = "buy" + (++buyCount)
                 }
 
@@ -435,7 +436,7 @@
                     if (Object.keys(myasset.stocks).length === 0) continue
                     if (pre == "sell3") continue
                     let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
-                    myasset.sell(pmiData[i], "HS300", hs300PeMiddel, hs300, sellbili, sellCount, sellCond())
+                    myasset.sell([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, sellbili, sellCount, sellCond())
                     pre = "sell" + (++sellCount)
                 }
             }
