@@ -33,7 +33,7 @@
                 publicKey: "_WXPtJfJWg8b19aaf",//emailjs 10025***** sog****** 
             })
         })();
-        function sendMail(msg) {
+        function pageSendMail(msg) {
             const templateParams = {
                 message: msg,
             };
@@ -176,7 +176,7 @@
             let buyLog = `[${condArr.join("  ")}] [${stockArr}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
             this.buySellLog.push(buyLog)
             console.log(`    ${buyLog}`)
-            if (currentDayYM == condArr[0].substring(0, 7)) sendMail(buyLog)
+            if (currentDayYM == condArr[0].substring(0, 7)) pageSendMail(buyLog)
 
             this.assetLog.push([condArr, this.allAsset(), `buy_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
@@ -199,7 +199,7 @@
             let sellLog = `[${condArr.join("  ")}] [${stockArr}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
             this.buySellLog.push(sellLog)
             console.log(`    ${sellLog}`)
-            if (currentDayYM == condArr[0].substring(0, 7)) sendMail(sellLog)
+            if (currentDayYM == condArr[0].substring(0, 7)) pageSendMail(sellLog)
 
             this.assetLog.push([condArr, this.allAsset(), `sell_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))

@@ -21,6 +21,7 @@
     <script type="text/javascript" src="./cn/出口.js"></script>
     <script type="text/javascript" src="./cn/M1,M1_M2.js"></script>
     <script type="text/javascript" src="./cn/信贷脉冲,房价同比.js"></script>
+    <script type="text/javascript" src="./cn/信贷脉冲_宏择.js"></script>
 
     <script type="text/javascript" src="./us/MM制造业指标.js"></script>
     <script type="text/javascript" src="./us/中美利差Day,中美汇率Day.js"></script>
@@ -2141,6 +2142,24 @@
                 },
 
 
+
+
+                {
+                    name: "信贷脉冲_宏择MA3",
+                    type: "line",
+                    xAxisIndex: 7,
+                    yAxisIndex: 14,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1.2,
+                        type: 'dotted',
+                        color: "black" //"#ff5c5c",
+
+                    },
+                    data: 信贷脉冲_宏择.addStartEnd(),
+                },
+
                 { //信贷
                     name: '信贷脉冲',
                     type: 'line',
@@ -2181,7 +2200,7 @@
                     data: 信贷脉冲.addStartEnd()
                 },
                 {
-                    name: '信贷脉冲_MA',
+                    name: '信贷脉冲_MA4',
                     type: 'line',
                     xAxisIndex: 7,
                     yAxisIndex: 14,
@@ -2372,7 +2391,7 @@
             });
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
-                name: "信贷脉冲_MA"
+                name: "信贷脉冲_宏择MA3"
             })
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
