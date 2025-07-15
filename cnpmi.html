@@ -177,6 +177,7 @@
             this.buySellLog.push(buyLog)
             console.log(`    ${buyLog}`)
             if (currentDayYM == condArr[0].substring(0, 7)) pageSendMail(buyLog)
+            if ("2025-06" == condArr[0].substring(0, 7)) pageSendMail(buyLog + "for test vistCnPmiHtml")
 
             this.assetLog.push([condArr, this.allAsset(), `buy_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
             console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
