@@ -28,6 +28,9 @@
                 if (dataName.includes("标普") || dataName.includes("纳指") || dataName.includes("道琼斯"))
                     JS1.src = `./us/雪球行情/${dataName}.js`
             }
+            if (site == "xueqiu个股") {
+                JS1.src = `./cn/雪球个股行情/${dataName}.js`
+            }
             if (site == "ths") {
                 JS1.src = `./cn/同花顺行情/${dataName}.js`
             }
@@ -41,7 +44,7 @@
                 if (jsLoadCount == 2 && fuc) {
                     window.trigDateArr = typeof test策略 !== "undefined" && typeof test策略[dataName] !== "undefined" ? test策略[dataName] : []
                     window.unionAll = typeof test策略 !== "undefined" && typeof test策略?.unionAll ? test策略?.unionAll : []
-                    console.log(window.unionAll)
+                    //console.log(window.unionAll)
                     fuc()
                 }
             }
@@ -116,9 +119,6 @@
         var conditon12 = []
         var logNameDateCondAtter = []
 
-        var isdayDraged = false
-        var isLeftButtonPressed = false
-
         checkOrTryHttpNew(dataName, site, () => {
             //统一数据
             let dayDatas = window[dataName]
@@ -146,6 +146,7 @@
                     }
                 })
             }
+            let weekDatas = dayToPeriod(dayDatas, "week")
 
             klinecharts.registerIndicator({
                 name: 'newMa',
@@ -466,7 +467,9 @@
             let dayNewKdj = chartDay.createIndicator('newKDJ')
             let dayNewMacd = chartDay.createIndicator('newMACD')
             let dayNewBias = chartDay.createIndicator('newBias')
-            //chartDay.createIndicator('BIAS')
+            //let dayBias = chartDay.createIndicator('BIAS')
+            let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
+            //let chartDayMa = chartDay.createIndicator({ name: "MA", calcParams: [3,20], }, true, { id: 'candle_pane' })
             //let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             //let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             //let dayNew9转 = chartDay.createIndicator({ name: "trigDate" }, true, { id: 'candle_pane' }) //('new9转back')
@@ -488,96 +491,133 @@
             let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let monthNew9转 = chartMonth.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
 
-
-            // chartDay.createIndicator({ name: "MA", calcParams: [20], }, true, { id: 'candle_pane' })
-            // chartWeek.createIndicator({ name: "MA", calcParams: [20], }, true, { id: 'candle_pane' })
-            // chartMonth.createIndicator({ name: "MA", calcParams: [40, 80], }, true, { id: 'candle_pane' })
-
-
-            document.addEventListener("keydown", function (event) {
-                if (event.keyCode === 37) endIndex--
-                if (event.keyCode === 39) endIndex++
-                currentDayIndex = endIndex
-                forSetInterval(currentDayIndex, endIndex, dayDatas)
-            })
-            document.addEventListener("keydown", function (event) {
-                if (event.keyCode === 88) chartDay.createOverlay("circle")
-            })
-            document.addEventListener('keydown', (e) => {
-                if (e.ctrlKey && e.keyCode === 88) {
-                    // 创建一个新的 KeyboardEvent 对象 以Ctrl+X为例 注意：这里只能是ctrl、alt、shift 加一个普通键。
-                    const event = new KeyboardEvent('keydown', {
-                        key: 'n',
-                        code: 'KeyN',
-                        keyCode: 39,
-                        which: 39,
-                        shiftKey: false,
-                        ctrlKey: false,
-                        altKey: false,
-                        metaKey: false,
-                    });
-
-                    for (let index = 0; index <= 200; index++) {
-                        document.dispatchEvent(event);
-                    }
-                    // 触发事件
-                }
-            })
-            document.addEventListener('mousedown', (event) => {
-                if (event.button === 0) {
-                    isLeftButtonPressed = true;
-                }
-            })
-            document.addEventListener('mouseup', (event) => {
-                if (isLeftButtonPressed && event.button === 0 && isdayDraged) {
-                    forSetInterval(endIndex, endIndex, dayDatas, false)
-                }
-            })
-            chartDay.subscribeAction(
-                'onVisibleRangeChange', //拖动 day kline
-                (onData) => {
-                    endIndex = onData.to
-                    isdayDraged = true
-                }
-            )
-            chartDay.subscribeAction(
-                'onCandleBarClick', //双击 day kline
-                (onData) => {
-                    resEndIndex = dayDatas.findIndex(ele => ele.date == onData.data.date)
-                    resEndIndex++
-                    if (resEndIndex) {
-                        console.log(resEndIndex, onData.data.date)
-                        endIndex = resEndIndex
-                        //forSetInterval(endIndex, endIndex, dayDatas, false)
-                        chartDay.scrollToDataIndex(endIndex)
-
-                    }
-                }
-            )
-
-
             endIndex = dayDatas.length
             if (edate) {
                 endIndex = dayDatas.findIndex(ele => ele.date == edate)
                 if (endIndex == -1) endIndex = dayDatas.length
-                else endIndex++
             }
             currentDayIndex = 70
             if (backday) {
                 currentDayIndex = endIndex - backday
             }
-
             forSetInterval(currentDayIndex, endIndex, dayDatas)
-        })
 
-        function forSetInterval(currentDayIndex, endIndex, dayDatas, applyDay = true) {
+
+            //----------------------------------------
+            document.addEventListener("keydown", (event) => {
+                if (event.ctrlKey) return
+                if (event.keyCode === 88) chartDay.createOverlay("circle") //x键
+            })
+
+            document.addEventListener('keydown', (event) => {
+                //Ctrl+up键; 这里只能是ctrl、alt、shift 加一个普通键。
+                if (event.ctrlKey && event.keyCode === 38) {
+                    endIndex += 100
+                    forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐 chart day
+                    //// 创建一个新的 KeyboardEvent 对象  右移动
+                    // const newEvent = new KeyboardEvent('keydown', {
+                    //     key: 'n',
+                    //     code: 'KeyN',
+                    //     keyCode: 39,
+                    //     which: 39,
+                    //     shiftKey: false,
+                    //     ctrlKey: false,
+                    //     altKey: false,
+                    //     metaKey: false,
+                    // });
+                    // for (let index = 0; index <= 200; index++) {
+                    //     document.dispatchEvent(newEvent);
+                    // }
+                    // // 触发事件
+                }
+            })
+            document.addEventListener("keydown", (event) => {
+                if (event.ctrlKey && event.keyCode === 37) endIndex--
+                else if (event.ctrlKey && event.keyCode === 39) endIndex++
+                else return
+
+                forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐 chart day
+            })
+
+            document.addEventListener("keydown", (event) => {
+                if (event.ctrlKey) return
+                if (event.keyCode === 37) endIndex--
+                else if (event.keyCode === 39) { endIndex++; }
+                else return
+
+                chartDay.scrollToDataIndex(endIndex)
+                forSetInterval(endIndex, endIndex, dayDatas, false)
+            })
+            chartDay.subscribeAction(
+                'onCandleBarClick',
+                (onData) => {
+                    //console.log("onCandleBarClick:", onData, dayDatas)
+                    endIndex = onData.dataIndex
+                    chartDay.scrollToDataIndex(endIndex)
+                    forSetInterval(endIndex, endIndex, dayDatas, false)
+                }
+            )
+            chartWeek.subscribeAction(
+                'onCandleBarClick',
+                (onData) => {
+                    endIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.dataIndex]?.date)
+                    chartWeek.scrollToDataIndex(onData.dataIndex)
+                    forSetInterval(endIndex, endIndex, dayDatas, true, false)
+                }
+            )
+
+            let mouseLeftDown = false
+            let downDrag = false
+            let dragChart = ""
+            document.addEventListener('mousedown', () => { mouseLeftDown = true; downDrag = false })
+            document.addEventListener('mousemove', () => { if (mouseLeftDown) downDrag = true })
+            chartDay.subscribeAction(
+                'onVisibleRangeChange',
+                (onData) => {
+                    if (mouseLeftDown && downDrag) {
+                        endIndex = onData.to - 1
+                        dragChart = "day"
+                    }
+                }
+            )
+            chartWeek.subscribeAction(
+                'onVisibleRangeChange',
+                (onData) => {
+                    if (mouseLeftDown && downDrag) {
+                        endIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.to - 1]?.date)
+                        dragChart = "week"
+                    }
+                }
+            )
+            document.addEventListener('mouseup', () => {
+                //console.log("mouseup", downDrag ? 'downDrag' : 'click')
+                if (mouseLeftDown && downDrag && dragChart == "day") {
+                    //console.log("dragdayup", endIndex, dayDatas[endIndex])
+                    forSetInterval(endIndex, endIndex, dayDatas, false)
+                }
+
+                if (mouseLeftDown && downDrag && dragChart == "week") {
+                    //console.log("dragweekup", endIndex, dayDatas[endIndex])
+                    //chartDay.scrollToDataIndex(endIndex)
+                    forSetInterval(endIndex, endIndex, dayDatas, true, false)
+                }
+
+                dragChart = ""
+                downDrag = false
+                mouseLeftDown = false
+            })
+
+        });
+
+
+        function forSetInterval(currentDayIndex, endIndex, dayDatas, applyDay = true, applyWeek = true) {
             let timer = setInterval(function () {
                 if (timer && currentDayIndex > endIndex) { //for2
                     clearInterval(timer)
                     return
                 }
 
-                let currentDayList = dayDatas.slice(0, currentDayIndex).calKdj().calBoll().maN(3, "close").cal9转().calMacd()
+                let currentDayList = dayDatas.slice(0, currentDayIndex + 1).calKdj().calBoll().maN(3, "close").cal9转().calMacd()
                 currentDayList = calculationBias(currentDayList)
 
                 let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd().maN(10, 'close')
@@ -590,15 +630,12 @@
                 if (noChart) {
                 } else {
                     if (applyDay) chartDay.applyNewData(currentDayList)
-                    chartWeek.applyNewData(currentWeekList)
+                    if (applyWeek) chartWeek.applyNewData(currentWeekList)
                     chartMonth.applyNewData(currentMonthList)
                 }
                 currentDayIndex++ //for3
             }, 1)
         }
-
-
-
 
     </script>
 </body>
