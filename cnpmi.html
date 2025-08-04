@@ -364,10 +364,11 @@
 
             for (var i = 2; i < pmiData.length; i++) {
 
-                var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]//week
-                var hs300PeMiddelNext = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)[1]
-                var tenYearPe = +findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1].toFixed(4)
-                var guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
+                let hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]//week
+                let hs300PeMiddelNext = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)?.at(1)   ///////
+                if (!hs300PeMiddelNext) hs300PeMiddelNext = hs300PeMiddel
+                let tenYearPe = +findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1].toFixed(4)
+                let guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
 
 
                 function buyCond() {

@@ -28,16 +28,15 @@
                 if (dataName.includes("标普") || dataName.includes("纳指") || dataName.includes("道琼斯"))
                     JS1.src = `./us/雪球行情/${dataName}.js`
             }
-            if (site == "xueqiu个股") {
-                JS1.src = `./cn/雪球个股行情/${dataName}.js`
-            }
             if (site == "ths") {
                 JS1.src = `./cn/同花顺行情/${dataName}.js`
             }
-
+            if (site == "tempData") {
+                JS1.src = `../../tempData/${dataName}.js`
+            }
 
             var JS2 = document.createElement("script")
-            JS2.src = `./cn/雪球行情/test策略.js`
+            JS2.src = `../../tempData/test策略.js`
 
             JS1.onload = JS2.onload = function () {
                 jsLoadCount++
