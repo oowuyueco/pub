@@ -11,9 +11,12 @@
     <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
     <script type="text/javascript" src="./cn/M1,M1_M2.js"></script>
     <script type="text/javascript" src="./cn/信贷脉冲,房价同比.js"></script>
+    <script type="text/javascript" src="./cn/境外持仓股票,境外持仓债券.js"></script>
     <script type="text/javascript" src="./us/中美利差Day,中美汇率Day.js"></script>
     <script type="text/javascript" src="./us/PMI_ISM,金融脉动增速.js"></script>
     <script type="text/javascript" src="./us/bdi.js"></script>
+    <script type="text/javascript" src="./us/Rate周-Assets周.js"></script>
+
 
     <script type="text/javascript" src="./us/us原油.js "></script>
     <script type="text/javascript" src="./us/us白糖.js "></script>
@@ -1129,45 +1132,56 @@
                 },
 
 
-                // {
-                //     name: "获利比例",
-                //     type: "line",
-                //     xAxisIndex: 0,
-                //     yAxisIndex: 0,
-                //     showSymbol: false,
-                //     smooth: true,
-                //     lineStyle: {
-                //         width: 0.9,
-                //     },
-                //     data: weeklyDatas沪深300ETF.map((item, index) => {
-                //         let tmp = []
-                //         tmp[0] = item.date
-                //         tmp[1] = item?.CYQ[0] ? item?.CYQ[0] : ""
-                //         return tmp
-                //     }).filterAndAddStartEnd()
-                // },
+                {
+                    name: "Assets周",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.9,
+                    },
+                    data: Assets周.map((item, index) => {
+                        // let tmp = []
+                        // tmp[0] = item.date
+                        // tmp[1] = item?.CYQ[0] ? item?.CYQ[0] : ""
+                        return item
+                    }).filterAndAddStartEnd()
+                },
 
-                // {
-                //     name: "折价率",
-                //     type: "line",
-                //     xAxisIndex: 1,
-                //     yAxisIndex: 1,
-                //     showSymbol: false,
-                //     smooth: true,
-                //     lineStyle: {
-                //         width: 0.9,
-                //     },
-                //     data: 沪深300同比.filter(item => {
-                //         return parseFloat(item[0].substring(0, 4)) >= 2008
-                //     }).filterAndAddStartEnd()
-                //     ////先用同比
-                //     // data: weeklyDatas沪深300ETF.map((item, index) => {
-                //     //     let tmp = []
-                //     //     tmp[0] = item.date
-                //     //     tmp[1] = item?.disRate ? item?.disRate : ""
-                //     //     return tmp
-                //     // }).filterAndAddStartEnd()
-                // },
+                {
+                    name: "境外持仓",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "#FD4142",
+                    },
+                    data: 境外持仓股票.map((item, index) => {
+                        item[1] = parseFloat(item[1]) / 1000
+                        return item
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: "境外持仓",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1.2,
+                        color: "#22aa62",
+                    },
+                    data: 境外持仓债券.map((item, index) => {
+                        item[1] = parseFloat(item[1]) / 1000
+                        return item
+                    }).filterAndAddStartEnd()
+                },
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 {
                     name: '大宗高位KDJ',
@@ -2194,7 +2208,7 @@
                 option.yAxis[0].min = -18
                 params.selected.ppi = false
                 params.selected.油糖比 = false
-                params.selected.获利比例 = false
+                params.selected.Assets周 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2204,7 +2218,7 @@
                 params.selected.油糖比 = false
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
-                params.selected.获利比例 = false
+                params.selected.Assets周 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2214,13 +2228,13 @@
                 params.selected.ppi = false
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
-                params.selected.获利比例 = false
+                params.selected.Assets周 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
-            if (params.name === "获利比例" && params.selected["获利比例"] === true) {
-                option.yAxis[0].max = 1
-                option.yAxis[0].min = 0
+            if (params.name === "Assets周" && params.selected["Assets周"] === true) {
+                option.yAxis[0].max = 12
+                option.yAxis[0].min = 0.5
                 params.selected.ppi = false
                 params.selected.油糖比 = false
                 params.selected.金融脉动增速us = false
@@ -2239,7 +2253,7 @@
                 option.yAxis[1].min = 20
                 params.selected.pmi = false
                 params.selected.油糖比 = false
-                params.selected.折价率 = false
+                params.selected.境外持仓 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2249,7 +2263,7 @@
                 params.selected.铜金比 = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
-                params.selected.折价率 = false
+                params.selected.境外持仓 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2259,13 +2273,13 @@
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
-                params.selected.折价率 = false
+                params.selected.境外持仓 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
-            if (params.name === "折价率" && params.selected["折价率"] === true) {
-                option.yAxis[1].max = 70
-                option.yAxis[1].min = -50
+            if (params.name === "境外持仓" && params.selected["境外持仓"] === true) {
+                option.yAxis[1].max = 60
+                option.yAxis[1].min = 5
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
@@ -2355,11 +2369,11 @@
 
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
-                name: "获利比例"
+                name: "Assets周"
             })
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
-                name: "折价率"
+                name: "境外持仓"
             })
 
 

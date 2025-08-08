@@ -47,7 +47,27 @@
             );
         }
 
-        //currentDayYM = "2025-02" //test
+        //currentDayYM = "2020-03" //test
+    </script>
+
+
+    <script type="text/javascript" src="./us/Rate周-Assets周.js"></script>
+    <script>
+        let Assets周环比 = Assets周.map((current, index) => {
+            if (index == 0) return [current[0], null, current[1]]
+            if (!current[1]) return [current[0], null, current[1]]
+
+            let pre = Assets周[index - 1]
+            let 环比 = +((current[1] - pre[1]) / pre[1] * 100).toFixed(2)
+            return [current[0], 环比, current[1]]
+        })
+
+        for (let index = 0; index < Assets周环比.length; index++) {
+            const element = Assets周环比[index];
+            if (element[1] > 5 && currentDayYM == element[0].substring(0, 7))
+                pageSendMail("fed asset up!!!")
+        }
+
     </script>
 
     <script type="text/javascript">
@@ -508,11 +528,11 @@
         //assetLogChart
         let assetLogChart = lastAsset.assetLog.addStartEnd().map(ele => {
             if (ele[2]?.includes("buy"))
-                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'red', borderWidth: 11 } } //symbolSize: 5.5
+                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'green', borderWidth: 11 } } //symbolSize: 5.5
             if (ele[2]?.includes("sell"))
-                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'green' } }
+                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'red' } }
             if (ele[2] && ele[2] == "stockLastDate")
-                return { value: [ele[0], ele[1]], symbol: 'arrow', symbolSize: 5, itemStyle: { color: 'black' } }
+                return { value: [ele[0], ele[1]], symbol: 'arrow', symbolSize: 5, itemStyle: { color: 'white' } }
 
             return { value: [ele[0], ele[1]], symbol: 'none', symbolSize: 0 }
         })
@@ -532,9 +552,9 @@
                 }
             },
             legend: {
-                type: "scroll",
+                //type: "scroll",
                 left: 60,
-                width: "90%",
+                width: "65%",
                 inactiveColor: 'white',
                 selector: ['all', 'inverse']
             },
@@ -663,6 +683,8 @@
                     splitLine: {
                         show: true
                     },
+                    min: -5,
+                    max: 13
                 },
                 {
                     gridIndex: 0,
@@ -708,7 +730,7 @@
                     },
                     position: "right",
                     min: 10,
-                    max: 50
+                    max: 70
                 },
 
             ],
@@ -766,8 +788,8 @@
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 1,
-                        color: "black"
+                        width: 1.2,
+                        color: "#4e8faa"
                     },
                     data: 股债差300平均.addStartEnd(),
                 },
@@ -780,12 +802,40 @@
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 1,
+                        width: 1.2,
                         type: "dotted",
-                        color: "black"
+                        color: "#4e8faa"
                     },
                     data: 沪深300风险溢价差_jiucai.addStartEnd(),
                 },
+
+
+                // {
+                //     name: 'Assets周环比',
+                //     type: 'bar',
+                //     xAxisIndex: 0,
+                //     yAxisIndex: 0,
+                //     showSymbol: false,
+                //     smooth: true,
+
+                //     data: Assets周环比.addStartEnd(),
+                // },
+                // {
+                //     name: "Assets周",
+                //     type: "line",
+                //     xAxisIndex: 0,
+                //     yAxisIndex: 1,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 0.9,
+                //     },
+                //     data: Assets周.map((item, index) => {
+                //         item[1] = parseFloat(item[1]) * 100000
+                //         return item
+                //     }).addStartEnd()
+                // },
+
 
                 {
                     name: 'assetLog',
@@ -795,8 +845,8 @@
                     showSymbol: true,
                     smooth: false,
                     lineStyle: {
-                        width: 1,
-                        //color: "blue"
+                        width: 0.7,
+                        color: "black"
                     },
                     itemStyle: {
                         with: 12
@@ -865,7 +915,7 @@
                     showSymbol: false,
                     lineStyle: {
                         width: 1.5,
-                        color: "black"
+                        color: "#338129"
                     },
                 },
 
@@ -877,14 +927,14 @@
                     data: 十年期国债收益率_jiucai.map((ele, index) => {
                         let newArr = []
                         newArr[0] = ele[0]
-                        newArr[1] = 1 / (ele[1] / 100);
+                        newArr[1] = +(1 / (ele[1] / 100)).toFixed(4);
                         return newArr;
                     }).addStartEnd(),
                     showSymbol: false,
                     lineStyle: {
                         type: "dotted",
                         width: 1.2,
-                        color: "black"
+                        color: "#338129"
                     },
                 },
             ]
