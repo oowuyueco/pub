@@ -4210,6 +4210,18 @@ var 沪深300PE中位数_lixinger = [
     [
         "2025-08-07",
         21.1317
+    ],
+    [
+        "2025-08-12",
+        21.3603
+    ],
+    [
+        "2025-08-13",
+        21.178
+    ],
+    [
+        "2025-08-14",
+        21.2399
     ]
 ]
 if (typeof module !== "undefined" && module.exports) { exports.沪深300PE中位数_lixinger = 沪深300PE中位数_lixinger
