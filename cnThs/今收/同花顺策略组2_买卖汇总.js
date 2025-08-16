@@ -1,4 +1,4 @@
-var runDateTime组2 = "2025-08-15 20:16:15"
+var runDateTime组2 = "2025-08-16 20:15:04"
 var 最近实际收盘日期组2 = "null"
 
 var 同花顺策略组2A买卖汇总 =  {
