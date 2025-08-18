@@ -5048,6 +5048,20 @@ var triggerLogObj指数 = {
           "nextThirdDelivery周三": "2025-06-25"
         }
       }
+    ],
+    "2025-08-18": [
+      "上证50高位空但叉",
+      "日周高位九转",
+      {
+        "after": {
+          "close": ",0,0",
+          "high": ",0,0",
+          "low": ",0,0",
+          "nextFirstDelivery周三": "2025-08-27",
+          "nextSecondDelivery周三": "2025-09-24",
+          "nextThirdDelivery周三": "2025-10-22"
+        }
+      }
     ]
   },
   "上证低位空但叉": [
@@ -6237,6 +6251,12 @@ var triggerLogObj指数 = {
       "quantName": "日周高位九转",
       "trueCount": 4,
       "九转详情": ":5周急涨"
+    },
+    {
+      "trigDate": "2025-08-18",
+      "quantName": "日周高位九转",
+      "trueCount": 4,
+      "九转详情": ":上证"
     }
   ],
   "周月高位九转": [
@@ -6573,6 +6593,11 @@ var triggerLogObj指数 = {
       "trigDate": "2025-03-19",
       "quantName": "上证50高位空但叉",
       "percent": 0.26
+    },
+    {
+      "trigDate": "2025-08-18",
+      "quantName": "上证50高位空但叉",
+      "percent": 0.21
     }
   ],
   "恒生高位KDJ": [
@@ -7398,7 +7423,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-08-15"
+var runLastKlineDate = "2025-08-18"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
