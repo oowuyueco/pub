@@ -5062,6 +5062,32 @@ var triggerLogObj指数 = {
           "nextThirdDelivery周三": "2025-10-22"
         }
       }
+    ],
+    "2025-08-19": [
+      "日周高位九转",
+      {
+        "after": {
+          "close": "1->2025-08-20,48.03,1.14",
+          "high": "1->2025-08-20,48.03,1.14",
+          "low": ",0,0",
+          "nextFirstDelivery周三": "2025-08-27",
+          "nextSecondDelivery周三": "2025-09-24",
+          "nextThirdDelivery周三": "2025-10-22"
+        }
+      }
+    ],
+    "2025-08-20": [
+      "日周高位九转",
+      {
+        "after": {
+          "close": ",0,0",
+          "high": ",0,0",
+          "low": ",0,0",
+          "nextFirstDelivery周三": "2025-08-27",
+          "nextSecondDelivery周三": "2025-09-24",
+          "nextThirdDelivery周三": "2025-10-22"
+        }
+      }
     ]
   },
   "上证低位空但叉": [
@@ -6257,6 +6283,18 @@ var triggerLogObj指数 = {
       "quantName": "日周高位九转",
       "trueCount": 4,
       "九转详情": ":上证"
+    },
+    {
+      "trigDate": "2025-08-19",
+      "quantName": "日周高位九转",
+      "trueCount": 4,
+      "九转详情": ":上证"
+    },
+    {
+      "trigDate": "2025-08-20",
+      "quantName": "日周高位九转",
+      "trueCount": 5,
+      "九转详情": ":双周:沪深300:上证"
     }
   ],
   "周月高位九转": [
@@ -7423,7 +7461,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-08-18"
+var runLastKlineDate = "2025-08-20"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
