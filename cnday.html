@@ -1150,22 +1150,39 @@
                     }).filterAndAddStartEnd()
                 },
 
-                {
-                    name: "境外持仓",
-                    type: "line",
-                    xAxisIndex: 1,
-                    yAxisIndex: 1,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 1,
-                        color: "#FD4142",
-                    },
-                    data: 境外持仓股票.map((item, index) => {
-                        item[1] = parseFloat(item[1]) / 1000
-                        return item
-                    }).filterAndAddStartEnd()
-                },
+                // {
+                //     name: "境外持仓",
+                //     type: "line",
+                //     xAxisIndex: 1,
+                //     yAxisIndex: 1,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 1,
+                //         color: "#FD4142",
+                //     },
+                //     data: 境外持仓股票.map((item, index) => {
+                //         item[1] = parseFloat(item[1]) / 1000
+                //         return item
+                //     }).filterAndAddStartEnd()
+                // },
+                // {
+                //     name: "境外持仓",
+                //     type: "line",
+                //     xAxisIndex: 1,
+                //     yAxisIndex: 1,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 1.2,
+                //         color: "#22aa62",
+                //     },
+                //     data: 境外持仓债券.map((item, index) => {
+                //         item[1] = parseFloat(item[1]) / 1000
+                //         return item
+                //     }).filterAndAddStartEnd()
+                // },
+
                 {
                     name: "境外持仓",
                     type: "line",
@@ -1177,8 +1194,45 @@
                         width: 1.2,
                         color: "#22aa62",
                     },
-                    data: 境外持仓债券.map((item, index) => {
-                        item[1] = parseFloat(item[1]) / 1000
+                    // markLine: {
+                    //     symbol: ["none", "none"],
+                    //     data: [
+                    //         {
+                    //             lineStyle: {
+                    //                 width: 1,
+                    //                 type:"dotted",
+                    //                 color: "black",
+                    //             },
+                    //             label: {
+                    //                 formatter: "",
+                    //                 fontSize: "10",
+                    //                 color: "black",
+                    //                 position: "start",
+                    //             },
+                    //             yAxis: -1.2, // 标线值
+                    //             x: "0%", //固定起点的 x 像素位置
+                    //         },
+
+                    //          {
+                    //             lineStyle: {
+                    //                 width: 1,
+                    //                 type:"dotted",
+                    //                 color: "green",
+                    //             },
+                    //             label: {
+                    //                 formatter: "",
+                    //                 fontSize: "10",
+                    //                 color: "green",
+                    //                 position: "start",
+                    //             },
+                    //             yAxis: -6.3, // 标线值
+                    //             x: "0%", //固定起点的 x 像素位置
+                    //         }
+                    //     ],
+                    // },
+                    data: 境外持仓股票.map((item, index) => {
+                        item[1] = (parseFloat(item[1]) - parseFloat(境外持仓债券[index][1])) / 1000
+                        console.log(item)
                         return item
                     }).filterAndAddStartEnd()
                 },
@@ -2278,8 +2332,8 @@
                 myChart.setOption(option)
             }
             if (params.name === "境外持仓" && params.selected["境外持仓"] === true) {
-                option.yAxis[1].max = 60
-                option.yAxis[1].min = 5
+                option.yAxis[1].max = 5    //60
+                option.yAxis[1].min = -21  //5
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
