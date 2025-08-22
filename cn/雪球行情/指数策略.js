@@ -5051,8 +5051,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "3->2025-08-21,48.66,1.15",
-          "high": "3->2025-08-21,48.66,1.15",
+          "close": "4->2025-08-22,138.59,3.27",
+          "high": "4->2025-08-22,138.59,3.27",
           "low": "1->2025-08-19,-16.04,-0.38",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5064,8 +5064,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "2->2025-08-21,64.7,1.53",
-          "high": "2->2025-08-21,64.7,1.53",
+          "close": "3->2025-08-22,154.63,3.66",
+          "high": "3->2025-08-22,154.63,3.66",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5077,8 +5077,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "1->2025-08-21,16.67,0.39",
-          "high": "1->2025-08-21,16.67,0.39",
+          "close": "2->2025-08-22,106.6,2.5",
+          "high": "2->2025-08-22,106.6,2.5",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5087,6 +5087,19 @@ var triggerLogObj指数 = {
       }
     ],
     "2025-08-21": [
+      "日周高位九转",
+      {
+        "after": {
+          "close": "1->2025-08-22,89.93,2.1",
+          "high": "1->2025-08-22,89.93,2.1",
+          "low": ",0,0",
+          "nextFirstDelivery周三": "2025-08-27",
+          "nextSecondDelivery周三": "2025-09-24",
+          "nextThirdDelivery周三": "2025-10-22"
+        }
+      }
+    ],
+    "2025-08-22": [
       "日周高位九转",
       {
         "after": {
@@ -6342,6 +6355,12 @@ var triggerLogObj指数 = {
       "quantName": "日周高位九转",
       "trueCount": 5,
       "九转详情": ":双周:沪深300:上证"
+    },
+    {
+      "trigDate": "2025-08-22",
+      "quantName": "日周高位九转",
+      "trueCount": 5,
+      "九转详情": ":双周:沪深300:上证"
     }
   ],
   "周月高位九转": [
@@ -7531,7 +7550,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-08-21"
+var runLastKlineDate = "2025-08-22"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
