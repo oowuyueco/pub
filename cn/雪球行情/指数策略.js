@@ -5051,8 +5051,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "4->2025-08-22,138.59,3.27",
-          "high": "4->2025-08-22,138.59,3.27",
+          "close": "5->2025-08-25,229.81,5.42",
+          "high": "5->2025-08-25,229.81,5.42",
           "low": "1->2025-08-19,-16.04,-0.38",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5064,8 +5064,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "3->2025-08-22,154.63,3.66",
-          "high": "3->2025-08-22,154.63,3.66",
+          "close": "4->2025-08-25,245.85,5.82",
+          "high": "4->2025-08-25,245.85,5.82",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5077,8 +5077,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "2->2025-08-22,106.6,2.5",
-          "high": "2->2025-08-22,106.6,2.5",
+          "close": "3->2025-08-25,197.82,4.63",
+          "high": "3->2025-08-25,197.82,4.63",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5090,8 +5090,8 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "1->2025-08-22,89.93,2.1",
-          "high": "1->2025-08-22,89.93,2.1",
+          "close": "2->2025-08-25,181.15,4.22",
+          "high": "2->2025-08-25,181.15,4.22",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
           "nextSecondDelivery周三": "2025-09-24",
@@ -5100,6 +5100,19 @@ var triggerLogObj指数 = {
       }
     ],
     "2025-08-22": [
+      "日周高位九转",
+      {
+        "after": {
+          "close": "1->2025-08-25,91.22,2.08",
+          "high": "1->2025-08-25,91.22,2.08",
+          "low": ",0,0",
+          "nextFirstDelivery周三": "2025-08-27",
+          "nextSecondDelivery周三": "2025-09-24",
+          "nextThirdDelivery周三": "2025-10-22"
+        }
+      }
+    ],
+    "2025-08-25": [
       "日周高位九转",
       {
         "after": {
@@ -6361,6 +6374,12 @@ var triggerLogObj指数 = {
       "quantName": "日周高位九转",
       "trueCount": 5,
       "九转详情": ":双周:沪深300:上证"
+    },
+    {
+      "trigDate": "2025-08-25",
+      "quantName": "日周高位九转",
+      "trueCount": 5,
+      "九转详情": ":双周:沪深300:上证"
     }
   ],
   "周月高位九转": [
@@ -7550,7 +7569,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-08-22"
+var runLastKlineDate = "2025-08-25"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
