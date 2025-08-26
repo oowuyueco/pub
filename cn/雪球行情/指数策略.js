@@ -5051,7 +5051,7 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "5->2025-08-25,229.81,5.42",
+          "close": "6->2025-08-26,213.18,5.03",
           "high": "5->2025-08-25,229.81,5.42",
           "low": "1->2025-08-19,-16.04,-0.38",
           "nextFirstDelivery周三": "2025-08-27",
@@ -5064,7 +5064,7 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "4->2025-08-25,245.85,5.82",
+          "close": "5->2025-08-26,229.22,5.43",
           "high": "4->2025-08-25,245.85,5.82",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
@@ -5077,7 +5077,7 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "3->2025-08-25,197.82,4.63",
+          "close": "4->2025-08-26,181.19,4.24",
           "high": "3->2025-08-25,197.82,4.63",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
@@ -5090,7 +5090,7 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "2->2025-08-25,181.15,4.22",
+          "close": "3->2025-08-26,164.52,3.84",
           "high": "2->2025-08-25,181.15,4.22",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
@@ -5103,7 +5103,7 @@ var triggerLogObj指数 = {
       "日周高位九转",
       {
         "after": {
-          "close": "1->2025-08-25,91.22,2.08",
+          "close": "2->2025-08-26,74.59,1.7",
           "high": "1->2025-08-25,91.22,2.08",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-08-27",
@@ -5113,6 +5113,20 @@ var triggerLogObj指数 = {
       }
     ],
     "2025-08-25": [
+      "日周高位九转",
+      {
+        "after": {
+          "close": "1->2025-08-26,-16.63,-0.37",
+          "high": ",0,0",
+          "low": "1->2025-08-26,-16.63,-0.37",
+          "nextFirstDelivery周三": "2025-08-27",
+          "nextSecondDelivery周三": "2025-09-24",
+          "nextThirdDelivery周三": "2025-10-22"
+        }
+      }
+    ],
+    "2025-08-26": [
+      "恒生高位空但叉",
       "日周高位九转",
       {
         "after": {
@@ -5253,6 +5267,12 @@ var triggerLogObj指数 = {
       "quantName": "恒生高位空但叉",
       "详情": "type1",
       "percent": 0.47
+    },
+    {
+      "trigDate": "2025-08-26",
+      "quantName": "恒生高位空但叉",
+      "详情": "type1",
+      "percent": -1.18
     }
   ],
   "上证高位空但叉": [
@@ -6377,6 +6397,12 @@ var triggerLogObj指数 = {
     },
     {
       "trigDate": "2025-08-25",
+      "quantName": "日周高位九转",
+      "trueCount": 5,
+      "九转详情": ":双周:沪深300:上证"
+    },
+    {
+      "trigDate": "2025-08-26",
       "quantName": "日周高位九转",
       "trueCount": 5,
       "九转详情": ":双周:沪深300:上证"
@@ -7569,7 +7595,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-08-25"
+var runLastKlineDate = "2025-08-26"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
