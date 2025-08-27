@@ -333,7 +333,6 @@
 
         //指数策略
         let 标星冲突不显示 = true
-
         function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10, nextN期权周三 = "nextSecondDelivery周三") { // nextSecondDelivery周三 nextThirdDelivery周三
 
             let trigDateArr = Object.entries(triggerLogObj指数.按日期排序)
@@ -471,7 +470,9 @@
                 newShowArr.push(ele[4].length)
                 newShowArr.push(ele[5])
                 newShowArr = newShowArr.concat(toKline(ele[2]))
-                newShowArr.push(ele[1] + "")
+
+                let testInfo = ""//triggerLogObj指数.日周高位九转.find(e=>e.trigDate==ele[0])?.九转详情
+                newShowArr.push(ele[1] + testInfo)
                 return newShowArr
             })
                 //.filter((ele, index) => { return ele.at(-1).includes("日周") })
@@ -488,7 +489,8 @@
         console.groupEnd()
 
         //期权策略
-        function 统计区间期权策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10, nextN期权周三 = "nextSecondDelivery周三") {
+        let nextN期权周三 = "nextSecondDelivery周三"
+        function 统计区间期权策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10) {
             let 区间ByDay = {}
             let 区间By期权日 = {}
             for (let [日期区间, 区间trigDateArr] of Object.entries(triggerLogObj期权[区间类型])) {
@@ -539,7 +541,7 @@
 
                     let 期权日key
                     let N = 2
-                    if (nextN期权周三 == "nextFirstDelivery周三") N = 1
+                    if (nextN期权周三 == "nextSecondDelivery周三") N = 2
                     if (nextN期权周三 == "nextThirdDelivery周三") N = 3
                     if (profileN[nextN期权周三]) {
                         期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
@@ -615,8 +617,8 @@
             let allArr = []
             function toKline(profileN) {
                 let key
-                if (profileN?.nextSecondDelivery周三) key = "nextSecondDelivery周三"
-                //else if (profileN?.nextFirstDelivery周三) key = "nextFirstDelivery周三"
+                if (profileN?.nextSecondDelivery周三 && nextN期权周三 == "nextSecondDelivery周三") key = "nextSecondDelivery周三"
+                else if (profileN?.nextThirdDelivery周三 && nextN期权周三 == "nextThirdDelivery周三") key = "nextThirdDelivery周三"
                 else key = "after"
 
                 return [
@@ -646,8 +648,8 @@
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
                 //.sort((a, b) => a[8] - b[8])
                 .map((ele, index) => {
-                    if (ele[7] == "nextFirstDelivery周三") ele[7] = "next1周三"
                     if (ele[7] == "nextSecondDelivery周三") ele[7] = "next2周三"
+                    if (ele[7] == "nextThirdDelivery周三") ele[7] = "next3周三"
                     return ele
                 })
 

@@ -469,8 +469,8 @@
             //let dayBias = chartDay.createIndicator('BIAS')
             let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
             //let chartDayMa = chartDay.createIndicator({ name: "MA", calcParams: [3,20], }, true, { id: 'candle_pane' })
-            //let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
-            //let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             //let dayNew9转 = chartDay.createIndicator({ name: "trigDate" }, true, { id: 'candle_pane' }) //('new9转back')
 
             chartWeek.createIndicator('VOL')
@@ -503,65 +503,35 @@
 
 
             //----------------------------------------
-            document.addEventListener("keydown", (event) => {
-                if (event.ctrlKey) return
-                if (event.keyCode === 88) chartDay.createOverlay("circle") //x键
-            })
 
-            document.addEventListener('keydown', (event) => {
-                //Ctrl+up键; 这里只能是ctrl、alt、shift 加一个普通键。
-                if (event.ctrlKey && event.keyCode === 38) {
-                    endIndex += 100
-                    forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐 chart day
-                    //// 创建一个新的 KeyboardEvent 对象  右移动
-                    // const newEvent = new KeyboardEvent('keydown', {
-                    //     key: 'n',
-                    //     code: 'KeyN',
-                    //     keyCode: 39,
-                    //     which: 39,
-                    //     shiftKey: false,
-                    //     ctrlKey: false,
-                    //     altKey: false,
-                    //     metaKey: false,
-                    // });
-                    // for (let index = 0; index <= 200; index++) {
-                    //     document.dispatchEvent(newEvent);
-                    // }
-                    // // 触发事件
+            document.addEventListener("keydown", (event) => {
+                if (event.keyCode === 88) {
+                    chartDay.createOverlay("circle") //x键
+                    return
                 }
-            })
-            document.addEventListener("keydown", (event) => {
-                if (event.ctrlKey && event.keyCode === 37) endIndex--
-                else if (event.ctrlKey && event.keyCode === 39) endIndex++
-                else return
 
-                forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐 chart day
+                if (event.keyCode === 37) endIndex-- //左右上键
+                if (event.keyCode === 39) endIndex++
+                if (event.keyCode === 38) endIndex = dayDatas.length - 1 < endIndex + 100 ? dayDatas.length - 1 : endIndex + 100
+                forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐chartDay
             })
 
-            document.addEventListener("keydown", (event) => {
-                if (event.ctrlKey) return
-                if (event.keyCode === 37) endIndex--
-                else if (event.keyCode === 39) { endIndex++; }
-                else return
-
-                chartDay.scrollToDataIndex(endIndex)
-                forSetInterval(endIndex, endIndex, dayDatas, false)
-            })
             chartDay.subscribeAction(
                 'onCandleBarClick',
                 (onData) => {
-                    //console.log("onCandleBarClick:", onData, dayDatas)
                     endIndex = onData.dataIndex
-                    chartDay.scrollToDataIndex(endIndex)
-                    forSetInterval(endIndex, endIndex, dayDatas, false)
+                    forSetInterval(endIndex, endIndex, dayDatas, true)
+                    // chartDay.scrollToDataIndex(endIndex)
+                    // forSetInterval(endIndex, endIndex, dayDatas, false)
                 }
             )
             chartWeek.subscribeAction(
                 'onCandleBarClick',
                 (onData) => {
                     endIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.dataIndex]?.date)
-                    chartWeek.scrollToDataIndex(onData.dataIndex)
-                    forSetInterval(endIndex, endIndex, dayDatas, true, false)
+                    forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐chartDay
+                    // chartWeek.scrollToDataIndex(onData.dataIndex)
+                    // forSetInterval(endIndex, endIndex, dayDatas, true, false)
                 }
             )
 
@@ -583,22 +553,19 @@
                 'onVisibleRangeChange',
                 (onData) => {
                     if (mouseLeftDown && downDrag) {
-                        endIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.to - 1]?.date)
+                        let newEndIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.to - 1]?.date)
+                        endIndex = endIndex < newEndIndex ? endIndex : newEndIndex
                         dragChart = "week"
                     }
                 }
             )
             document.addEventListener('mouseup', () => {
-                //console.log("mouseup", downDrag ? 'downDrag' : 'click')
                 if (mouseLeftDown && downDrag && dragChart == "day") {
-                    //console.log("dragdayup", endIndex, dayDatas[endIndex])
-                    forSetInterval(endIndex, endIndex, dayDatas, false)
+                    forSetInterval(endIndex, endIndex, dayDatas, true)
                 }
 
                 if (mouseLeftDown && downDrag && dragChart == "week") {
-                    //console.log("dragweekup", endIndex, dayDatas[endIndex])
-                    //chartDay.scrollToDataIndex(endIndex)
-                    forSetInterval(endIndex, endIndex, dayDatas, true, false)
+                    forSetInterval(endIndex, endIndex, dayDatas, true, true)
                 }
 
                 dragChart = ""
@@ -616,7 +583,7 @@
                     return
                 }
 
-                let currentDayList = dayDatas.slice(0, currentDayIndex + 1).calKdj().calBoll().maN(3, "close").cal9转().calMacd()
+                let currentDayList = dayDatas.slice(0, currentDayIndex + 1).calKdj().calBoll().maN(10, "close").cal9转().calMacd()
                 currentDayList = calculationBias(currentDayList)
 
                 let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd().maN(10, 'close')
@@ -628,6 +595,7 @@
 
                 if (noChart) {
                 } else {
+                    //applyDay重置对齐
                     if (applyDay) chartDay.applyNewData(currentDayList)
                     if (applyWeek) chartWeek.applyNewData(currentWeekList)
                     chartMonth.applyNewData(currentMonthList)
