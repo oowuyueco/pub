@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="icon" href="data:image/x-icon;base64,">
     <script type="text/javascript" src="./js/echarts.min.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
     <!-- <script type="text/javascript" src="./cn/溢价集中度/沪深300ETF.js"></script> -->
@@ -1232,7 +1233,7 @@
                     // },
                     data: 境外持仓股票.map((item, index) => {
                         item[1] = (parseFloat(item[1]) - parseFloat(境外持仓债券[index][1])) / 1000
-                        console.log(item)
+                        //console.log(item)
                         return item
                     }).filterAndAddStartEnd()
                 },
