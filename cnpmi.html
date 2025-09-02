@@ -9,7 +9,6 @@
 <body style="height: 100%;width: 100%; margin: 0">
     <div id="container" style="height: 100%; width: 100%;"></div>
 
-
     <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
@@ -43,11 +42,43 @@
                     console.log('SUCCESS!', response.status, response.text);
                 },
                 (error) => {
-                    console.log('FAILED...', error);
+                    //备用
+                    fetch("https://formspree.io/f/mkgvzrak", {
+                        "headers": {
+                            "accept": "application/json",
+                            "content-type": "multipart/form-data; boundary=----WebKitFormBoundary7BiiMuHUYFddmElg",
+                            "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+                            "sec-ch-ua-mobile": "?0",
+                            "sec-ch-ua-platform": "\"Windows\""
+                        },
+                        "referrer": "",
+                        "body": `------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\noowuyue@163.com\r\n------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"message\"\r\n\r\n${msg}\r\n------WebKitFormBoundary7BiiMuHUYFddmElg--\r\n`,
+                        "method": "POST",
+                        "mode": "cors",
+                        "credentials": "omit"
+                    }).then(response => {
+                        if (response.ok) {
+                            console.log("ok")
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    let errorStr = data["errors"].map(error => error["message"]).join(", ")
+                                    console.log(errorStr)
+                                } else {
+                                    let errorStr = "Oops! There was a problem submitting your form"
+                                    console.log(errorStr)
+                                }
+                            })
+                        }
+                    }).catch(error => {
+                        let errorStr = "Oops! There was a problem submitting your form"
+                        console.log(errorStr)
+                    });;
                 },
             );
         }
 
+        //pageSendMail("fukyou")
         //currentDayYM = "2020-03" //test
     </script>
 
@@ -694,7 +725,8 @@
                         show: true
                     },
                     position: "right",
-                    max: 1500000
+                    max: 3000000,
+                    min: 100000
                 },
 
                 {
