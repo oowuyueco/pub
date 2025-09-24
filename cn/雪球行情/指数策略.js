@@ -4298,11 +4298,15 @@ var triggerLogObj指数 = {
           "low": "2->2025-08-27,-83.09,-1.86"
         },
         "after": {
-          "close": "21->2025-09-23,50.56,1.13",
-          "high": "17->2025-09-17,81.8,1.83",
+          "close": "22->2025-09-24,96.85,2.17",
+          "high": "22->2025-09-24,96.85,2.17",
           "low": "8->2025-09-04,-104.01,-2.33",
-          "nextSecondDelivery周三": "2025-09-24",
           "nextThirdDelivery周三": "2025-10-22"
+        },
+        "nextSecondDelivery周三": {
+          "close": "22->2025-09-24,96.85,2.17",
+          "high": "22->2025-09-24,96.85,2.17",
+          "low": "8->2025-09-04,-104.01,-2.33"
         }
       }
     ],
@@ -4316,11 +4320,15 @@ var triggerLogObj指数 = {
           "low": "1->2025-08-27,-66.46,-1.49"
         },
         "after": {
-          "close": "20->2025-09-23,67.19,1.51",
-          "high": "16->2025-09-17,98.43,2.21",
+          "close": "21->2025-09-24,113.48,2.55",
+          "high": "21->2025-09-24,113.48,2.55",
           "low": "7->2025-09-04,-87.38,-1.96",
-          "nextSecondDelivery周三": "2025-09-24",
           "nextThirdDelivery周三": "2025-10-22"
+        },
+        "nextSecondDelivery周三": {
+          "close": "21->2025-09-24,113.48,2.55",
+          "high": "21->2025-09-24,113.48,2.55",
+          "low": "7->2025-09-04,-87.38,-1.96"
         }
       }
     ]
@@ -6450,7 +6458,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-09-23"
+var runLastKlineDate = "2025-09-24"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
