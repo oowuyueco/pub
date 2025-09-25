@@ -443,7 +443,7 @@
             },
 
             legend: {
-                left: 70,
+                left: 55,
                 top: 0,
                 width: 50,
                 height: "90%",
@@ -1399,6 +1399,68 @@
                 },
 
 
+                 {
+                    name: '沪深300高位三周量降',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 13.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300高位三周量降.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证高位三周量降',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 10.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位三周量降.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50高位三周量降',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50高位三周量降.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
 
 
                 {
@@ -1757,6 +1819,68 @@
                     },
                     zlevel: 3,
                     data: triggerLogObj指数.上证50低位KDJ.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
+                   {
+                    name: '沪深300低位三周量降',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 12.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300低位三周量降.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证低位三周量降',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorB
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证低位三周量降.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50低位三周量降',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorC
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50低位三周量降.map((item) => {
                         return [item.trigDate, item.percent]
                     }).filterAndAddStartEnd()
                 },

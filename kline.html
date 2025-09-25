@@ -10,6 +10,8 @@
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
 
+    <script type="text/javascript" src="../../tempData/test策略.js"></script>
+
     <script>
 
         let jsLoadCount = 0
@@ -352,7 +354,9 @@
                             drawUps: kLineData.ups,
                             drawLows: kLineData.lows,
                             date: kLineData.date,
-                            trig: window.trigDateArr.includes(kLineData.date)// == "2025-01-13"
+                            trig: window.test策略["unionAll"].find((value, index) => {
+                               return value[0] == kLineData.date
+                            })
                         }))
                 },
                 draw: ({
@@ -467,7 +471,7 @@
             let dayNewMacd = chartDay.createIndicator('newMACD')
             let dayNewBias = chartDay.createIndicator('newBias')
             //let dayBias = chartDay.createIndicator('BIAS')
-            let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
+            //let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
             //let chartDayMa = chartDay.createIndicator({ name: "MA", calcParams: [3,20], }, true, { id: 'candle_pane' })
             let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
@@ -480,6 +484,7 @@
             let weekNewMa10 = chartWeek.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let weekNewBOLL = chartWeek.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             let weekNew9转 = chartWeek.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+            //let weekNewTest2 = chartWeek.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
 
 
             chartMonth.createIndicator('VOL')
