@@ -293,6 +293,7 @@
 
     </script>
 
+    <script type="text/javascript" src="../../test/沪深300ETF.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
@@ -663,7 +664,104 @@
         console.log(changeLog2(下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
-        //大宗策略
+        //合并所有期权日
+        let 上升区间By期权日合并 = Object.entries(上升区间By期权日)
+            .reduce((accumulator, item) => {
+                accumulator = [...accumulator, ...item[1]]
+                return accumulator
+            }, [],)
+            .map((ele, index) => {
+                ele.push(" ↑ ")
+                return ele
+            },)
+
+        let 下降区间By期权日合并 = Object.entries(下降区间By期权日)
+            .reduce((accumulator, item) => {
+                accumulator = [...accumulator, ...item[1]]
+                return accumulator
+            }, [],)
+            .map((ele, index) => {
+                ele.push(" ↓ ")
+                return ele
+            },)
+
+        let 所有By期权日合并 = [...指数策略高位By期权日, ...指数策略低位By期权日, ...上升区间By期权日合并, ...下降区间By期权日合并]
+        所有By期权日合并.sort((a, b) => dateToStamp(b[0].substring(4)) - dateToStamp(a[0].substring(4)))
+
+
+
+        //['2025-01-13', '2025-02-26', '3.81 购 3.92' ]
+        function calDayWeekMonthKline(nameCode, kline交易日) {
+            nameCode.currentDayList = []
+            nameCode.currentWeekList = []
+            nameCode.currentMonthList = []
+            let currentDayIndex = nameCode.dayDatas.findIndex(ele => { return ele.date == kline交易日 });
+            if (currentDayIndex > 70) {
+                let dayStart = (currentDayIndex + 1) - 100 > 0 ? (currentDayIndex + 1) - 100 : 0 //day计算最近100天
+                nameCode.currentDayList = nameCode.dayDatas.slice(dayStart, currentDayIndex + 1)
+                    .calBoll().cal9转(kline交易日, "day").calKdj().calMacd().maN(10, "close")
+                nameCode.currentDayList = calculationBias(nameCode.currentDayList)
+                nameCode.currentDayList = calculationCci(nameCode.currentDayList)
+
+                let weekDayStart = (currentDayIndex + 1) - 500 > 0 ? (currentDayIndex + 1) - 500 : 0 //week最近100周500天
+                nameCode.currentWeekList = dayToPeriod(nameCode.dayDatas.slice(weekDayStart, currentDayIndex + 1), "week")
+                    .calBoll().cal9转(kline交易日, "week").calKdj().calMacd().maN(10, 'close')
+                nameCode.currentWeekList = calculationBias(nameCode.currentWeekList)
+                nameCode.currentWeekList = calculationCci(nameCode.currentWeekList)
+
+                let monthDayStart = 0 //month全部
+                nameCode.currentMonthList = dayToPeriod(nameCode.dayDatas.slice(monthDayStart, currentDayIndex + 1), "month")
+                    .calBoll().cal9转(kline交易日, "month").calKdj().calMacd()
+                    .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
+                nameCode.currentMonthList = calculationBias(nameCode.currentMonthList)
+                nameCode.currentMonthList = calculationCci(nameCode.currentMonthList)
+            }
+            return nameCode
+        }
+        let nameCode沪深300 = { name: "沪深300", code: "SH000300", dayDatas: 沪深300 }
+
+        let 期权策略建议 = []
+        for (let index = 0; index < 所有By期权日合并.length; index++) {
+            const element = 所有By期权日合并[index]
+            if (+element[1].at(-1)[0].substring(0, 4) < 2020) continue
+            let endDate = element[0].substring(4)
+
+            for (let atId = -1; atId >= 0 - element[1].length; atId--) {
+                const eleArr = element[1]
+                if (atId !== -1 && eleArr.at(atId)[4] !== "✔") continue
+                let startDate = eleArr.at(atId)[0]
+                let startClose = 沪深300ETF.find(e => e.date == startDate).close
+
+                let type = "购"
+                let excpEndClose = +(startClose * 1.03).toFixed(4)
+                if (element[2].includes("↓") || element[2].includes("高位")) {
+                    type = "沽"
+                    excpEndClose = +(startClose * 0.97).toFixed(4)
+                }
+
+                let pushArr = [startDate, endDate, `${startClose} ${type} ${excpEndClose}`]
+                pushArr.info = element[2]
+                期权策略建议.push(pushArr)
+            }
+        }
+
+        期权策略建议 = Array.from(new Map(
+            期权策略建议.map(item => [`${item[0]}-${item[1]}`, item])
+        ).values())
+        期权策略建议.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+
+
+        console.groupCollapsed("所有By期权日合并")
+        console.log(所有By期权日合并, 期权策略建议)
+        console.groupEnd()
+
+
+        //&edate=2020-02-03&&backday=2      -7.88     周日close低lows
+        //&edate=2020-03-23&&backday=2      -3.36
+        //&edate=2025-04-07&&backday=2      -7.5
+        //2020-02-21 ['沪深300_ma10UpMas低连空但']
+        // 9-30 三周量价
+
     </script>
 
 </head>
