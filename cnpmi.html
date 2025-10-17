@@ -28,12 +28,60 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "_WXPtJfJWg8b19aaf",//emailjs 10025***** sog****** 
-            })
-        })();
+        let needBack = false
+        try {
+            (function () {
+                emailjs.init({
+                    publicKey: "_WXPtJfJWg8b19aaf",//emailjs 10025***** sog****** 
+                })
+            })();
+        }
+        catch (error) {
+            console.log("emailjs load error")
+            needBack = true
+        }
+
+        function pageSendMailBack(msg) {
+            //备用
+            fetch("https://formspree.io/f/mkgvzrak", {
+                "headers": {
+                    "accept": "application/json",
+                    "content-type": "multipart/form-data; boundary=----WebKitFormBoundary7BiiMuHUYFddmElg",
+                    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-platform": "\"Windows\""
+                },
+                "referrer": "",
+                "body": `------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\noowuyue@163.com\r\n------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"message\"\r\n\r\n${msg}\r\n------WebKitFormBoundary7BiiMuHUYFddmElg--\r\n`,
+                "method": "POST",
+                "mode": "cors",
+                "credentials": "omit"
+            }).then(response => {
+                if (response.ok) {
+                    console.log("备用ok")
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            let errorStr = data["errors"].map(error => error["message"]).join(", ")
+                            console.log("备用" + errorStr)
+                        } else {
+                            let errorStr = "备用 Oops! There was a problem submitting your form"
+                            console.log(errorStr)
+                        }
+                    })
+                }
+            }).catch(error => {
+                let errorStr = "备用 Oops! There was a problem submitting your form"
+                console.log(errorStr)
+            });;
+        }
+
         function pageSendMail(msg) {
+            if (needBack) {
+                pageSendMailBack(msg)
+                return
+            }
+
             const templateParams = {
                 message: msg,
             };
@@ -42,38 +90,8 @@
                     console.log('SUCCESS!', response.status, response.text);
                 },
                 (error) => {
-                    //备用
-                    fetch("https://formspree.io/f/mkgvzrak", {
-                        "headers": {
-                            "accept": "application/json",
-                            "content-type": "multipart/form-data; boundary=----WebKitFormBoundary7BiiMuHUYFddmElg",
-                            "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
-                            "sec-ch-ua-mobile": "?0",
-                            "sec-ch-ua-platform": "\"Windows\""
-                        },
-                        "referrer": "",
-                        "body": `------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\noowuyue@163.com\r\n------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"message\"\r\n\r\n${msg}\r\n------WebKitFormBoundary7BiiMuHUYFddmElg--\r\n`,
-                        "method": "POST",
-                        "mode": "cors",
-                        "credentials": "omit"
-                    }).then(response => {
-                        if (response.ok) {
-                            console.log("ok")
-                        } else {
-                            response.json().then(data => {
-                                if (Object.hasOwn(data, 'errors')) {
-                                    let errorStr = data["errors"].map(error => error["message"]).join(", ")
-                                    console.log(errorStr)
-                                } else {
-                                    let errorStr = "Oops! There was a problem submitting your form"
-                                    console.log(errorStr)
-                                }
-                            })
-                        }
-                    }).catch(error => {
-                        let errorStr = "Oops! There was a problem submitting your form"
-                        console.log(errorStr)
-                    });;
+                    console.log("emailjs send error")
+                    pageSendMailBack(msg)
                 },
             );
         }
