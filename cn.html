@@ -806,6 +806,7 @@
 
     </script>
 
+    <script type="text/javascript" src="./cn/雪球行情/上证50ETF.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/沪深300ETF.js"></script>
     <script>
         function isNumber(value) {
@@ -856,8 +857,9 @@
             }
             return nameCode
         }
-        let nameCode沪深300 = { name: "沪深300", code: "SH000300", dayDatas: 沪深300 }
+        //let nameCode沪深300 = { name: "沪深300", code: "SH000300", dayDatas: 沪深300 }
         沪深300ETF = 沪深300ETF.map((ele, index) => { ele.index = index; return ele; })
+        上证50ETF = 上证50ETF.map((ele, index) => { ele.index = index; return ele; })
 
         for (let index = 0; index < 所有By期权日合并.length; index++) {
             let element = 所有By期权日合并[index]
@@ -959,27 +961,30 @@
         }
 
         //抽取
+        let etfType="沪深300ETF"
         let 期权策略建议 = []
         for (let index = 0; index < 所有By期权日合并.length; index++) {
             const element = 所有By期权日合并[index]
-            if (+element[1].at(-1)[0].substring(0, 4) < 2020) continue
             let endDate = element[0].substring(4)
+
+            if(+endDate.substring(0,4) < 2015) continue
+            if(+endDate.substring(0,4) < 2020) etfType = "上证50ETF"
 
             for (let atId = -1; atId >= (0 - element[1].length); atId--) {
                 const eleArr = element[1]
                 if (atId !== -1 && !eleArr.at(atId).at(-1).includes("-&")) continue
                 let startDate = eleArr.at(atId)[0]
-                let startClose = 沪深300ETF.find(e => e.date == startDate).close
+                let startClose = etfType=="沪深300ETF" ? 沪深300ETF.find(e => e.date == startDate).close : 上证50ETF.find(e => e.date == startDate).close
                 startClose = +startClose.toFixed(3)
 
-                let type = "购"
+                let direType = "购"
                 let excpEndClose = +(startClose * 1.03).toFixed(3)
                 if (element[2].includes("↓") || element[2].includes("高")) {
-                    type = "沽"
+                    direType = "沽"
                     excpEndClose = +(startClose * 0.97).toFixed(3)
                 }
 
-                let pushArr = [startDate, endDate, element[2], `${startClose} ${type} ${excpEndClose}`]
+                let pushArr = [startDate, endDate, element[2], `${startClose} ${direType}${etfType} ${excpEndClose}`]
                 //pushArr.push( element[2] )
                 期权策略建议.push(pushArr)
             }
@@ -996,8 +1001,12 @@
 
     </script>
 
+
+
+
     <script type="text/javascript" src="../../test/1optionData.js"></script>
     <script>
+        //沽向上取  购向下取
         //nodejs里面获取profile后模拟
         console.groupCollapsed("模拟真实")
         statList = statList.map((ele, index) => {
@@ -1023,7 +1032,7 @@
 
         function getBuyCashAnd入金(curBuy) {
             let buyCash = 0
-            let cur入金 = 0
+            let curBuy入金 = 0
             let 百分比 = 0.1
 
             if (asset.现金 * 百分比 > 单次最大投资) buyCash = 单次最大投资;
@@ -1039,11 +1048,36 @@
             }
 
             if (asset.现金 < buyCash) {
-                cur入金 = buyCash - asset.现金;
+                curBuy入金 = buyCash - asset.现金;
             }
 
-            return [buyCash, cur入金, buyCount]
+            return [buyCash, curBuy入金, buyCount]
         }
+
+        function extr张数(str) {
+            // 使用正则表达式匹配下划线和"张"之间的数字
+            const regex = /:(\d+)张/g;
+            const matches = [];
+            let match;
+            
+            // 循环获取所有匹配结果
+            while ((match = regex.exec(str)) !== null) {
+                // 将匹配到的数字字符串转换为整数并存入数组
+                matches.push(parseInt(match[1], 10));
+            }
+            
+            return +matches[0];
+        }
+
+        function get持仓日数(curSell) {
+            let startDate = curSell[5].substring(0,10)
+            let startIndex = 沪深300ETF.findIndex(e => e.date == startDate)
+            let endDate = curSell[6].replace("提前","").substring(0,10)
+            let endIndex = 沪深300ETF.findIndex(e => e.date == endDate)
+
+            return endIndex-startIndex
+        }
+
 
         for (let i = 0; i < dateList.length; i++) {
             let curDate = dateList[i];
@@ -1074,38 +1108,57 @@
                 ) curSellAsset期权Arr.unshift(getKeyId(ele))
             }) //当日到期
 
-            let curAllSellCash = 0
+           
+            let curAllSell入金
+            let curAllSellCash 
             if (curSellAsset期权Arr.length > 0) {
                 for (let ii = 0; ii < curSellAsset期权Arr.length; ii++) {
                     let curSellIndex = asset.期权.findIndex(ele => getKeyId(ele) == curSellAsset期权Arr[ii])
 
-                    let 张数 = +asset.期权[curSellIndex][4].split("_")[1]
+                    let 张数 =   extr张数(asset.期权[curSellIndex][4])
                     let sellCash = (asset.期权[curSellIndex][buyCashIndex] - 张数 * 单张费用) * (1 + asset.期权[curSellIndex][profileIndex])
                     sellCash = sellCash - 张数 * 单张费用
                     总sellCash += sellCash
-                    sellCash = +sellCash.toFixed(2)
-                    asset.期权[curSellIndex][sellCashIndex] = sellCash
-                    asset.期权 = asset.期权.filter((item) => getKeyId(item) != curSellAsset期权Arr[ii])
+                    curAllSellCash = sellCash + (curAllSellCash ?? 0)
+                    
+                    if(sellCash<0 && asset.现金 + sellCash<0){
+                        curSell入金 =  0-(asset.现金 + sellCash)//补足手续费
+                        总入金 = 总入金 + curSell入金
+                        curAllSell入金 =  curSell入金 + (curAllSell入金 ?? 0)
+                        asset.现金 = asset.现金 + curSell入金
+                        asset.现金 = +asset.现金.toFixed(2)
+                        curSell入金 = +curSell入金.toFixed(2)
+                        need入金[asset.期权[curSellIndex][0] + " " + asset.期权[curSellIndex][1] + " sell "] = curSell入金
+                        console.log(curDate + " 补足卖手续费入金", curSell入金, "=>", JSON.parse(JSON.stringify(asset)))
+                    }
+
                     asset.现金 = asset.现金 + sellCash
                     asset.现金 = +asset.现金.toFixed(2)
-                    curAllSellCash += sellCash
-                }
+                    sellCash = +sellCash.toFixed(2)
+                    
+                    asset.期权[curSellIndex][sellCashIndex] = sellCash
+                    asset.期权[curSellIndex][4] += ":"+get持仓日数(asset.期权[curSellIndex])+"日"
+                    //asset.期权 = asset.期权.filter((item) => getKeyId(item) != curSellAsset期权Arr[ii])
+
+                }//for
+
                 curAllSellCash = +curAllSellCash.toFixed(2)
-                console.log(curDate + " 卖出", curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)));
-            }
+                console.log(curAllSell入金 ?   "           卖出" : curDate + " 卖出", curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)))
+
+            }//if
 
 
             //-----------------------------------------------------------------
             let curBuy = statList.find((e) => e[5].includes(curDate) && !arrayHasIndex(e, buyCashIndex))
             if (curBuy) {
-                let [buyCash, cur入金, buyCount] = getBuyCashAnd入金(curBuy)
-                if (cur入金 > 0) {
-                    总入金 = 总入金 + cur入金;
-                    asset.现金 = asset.现金 + cur入金
+                let [buyCash, curbuy入金, buyCount] = getBuyCashAnd入金(curBuy)
+                if (curbuy入金 > 0) {
+                    总入金 = 总入金 + curbuy入金;
+                    asset.现金 = asset.现金 + curbuy入金
                     asset.现金 = +asset.现金.toFixed(2)
-                    cur入金 = +cur入金.toFixed(2)
-                    need入金[curBuy[0] + " " + curBuy[1]] = cur入金
-                    console.log(curAllSellCash != 0 ? "           入金" : curDate + " 入金", cur入金, "=>", JSON.parse(JSON.stringify(asset)))
+                    curbuy入金 = +curbuy入金.toFixed(2)
+                    need入金[curBuy[0] + " " + curBuy[1] + " buy"] = curbuy入金
+                   console.log(curAllSellCash ? "           补足买入金" : curDate + " 补足买入金", curbuy入金, "=>", JSON.parse(JSON.stringify(asset)))
                 }
 
                 总buyCash += buyCash
@@ -1113,10 +1166,10 @@
                 asset.现金 = +asset.现金.toFixed(2)
                 buyCash = +buyCash.toFixed(2)
                 curBuy[buyCashIndex] = buyCash
-                curBuy[4] = curBuy[4] + "_" + buyCount //购买张数
+                curBuy[4] = curBuy[4].replace(".xlsx","") + ":" + buyCount + "张" //购买张数
                 asset.期权.unshift(curBuy)
 
-                console.log(curAllSellCash != 0 || cur入金 !== 0 ? "           买入" : curDate + " 买入", buyCash, "=>", JSON.parse(JSON.stringify(asset)))
+                console.log(curAllSellCash|| curbuy入金>0 ? "           买入" : curDate + " 买入", buyCash, "=>", JSON.parse(JSON.stringify(asset)))
             }
 
         }
@@ -1129,14 +1182,18 @@
             "总入金收益率:", +((asset.现金 - 总入金) / 总入金 * 100).toFixed(4) + "%",
             "总buyCash收益率:", +((asset.现金 - 总buyCash) / 总buyCash * 100).toFixed(4) + "%"
         )
-
-        // let test总buyCash = 0
-        // let test总sellCash = 0
-        // asset.期权.forEach(ele=>{
-        //     test总buyCash+=ele.at(-2)
-        //     test总sellCash+=ele.at(-1)
-        // })
-        // console.log(test总buyCash,test总sellCash,   test总sellCash-test总buyCash+总入金)
+     
+        let test总buyCash = 0
+        let test总sellCash = 0
+        asset.期权.forEach(ele=>{
+            test总buyCash+=ele.at(-2)
+            test总sellCash+=ele.at(-1)
+        })
+        console.log(
+            "总buyCash", +test总buyCash.toFixed(2),
+            "总sellCash",+test总sellCash.toFixed(2), 
+            "总sellCash-总sellCash+总入金", +(test总sellCash-test总buyCash+总入金).toFixed(2)
+        )
         console.groupEnd()
 
 
