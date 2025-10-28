@@ -39034,5 +39034,101 @@ var 沪深300ETF = [
     "volume": 812463337,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-17",
+    "timestamp": 1760630400000,
+    "open": 4.715,
+    "high": 4.724,
+    "low": 4.612,
+    "close": 4.624,
+    "percent": -2.05,
+    "volume": 840058205,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-20",
+    "timestamp": 1760889600000,
+    "open": 4.651,
+    "high": 4.678,
+    "low": 4.624,
+    "close": 4.64,
+    "percent": 0.35,
+    "volume": 764417805,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-21",
+    "timestamp": 1760976000000,
+    "open": 4.656,
+    "high": 4.723,
+    "low": 4.652,
+    "close": 4.71,
+    "percent": 1.51,
+    "volume": 959868519,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-22",
+    "timestamp": 1761062400000,
+    "open": 4.69,
+    "high": 4.708,
+    "low": 4.668,
+    "close": 4.695,
+    "percent": -0.32,
+    "volume": 554484198,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-23",
+    "timestamp": 1761148800000,
+    "open": 4.687,
+    "high": 4.719,
+    "low": 4.642,
+    "close": 4.713,
+    "percent": 0.38,
+    "volume": 699342841,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-24",
+    "timestamp": 1761235200000,
+    "open": 4.728,
+    "high": 4.772,
+    "low": 4.727,
+    "close": 4.77,
+    "percent": 1.21,
+    "volume": 865303618,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-27",
+    "timestamp": 1761494400000,
+    "open": 4.808,
+    "high": 4.831,
+    "low": 4.796,
+    "close": 4.826,
+    "percent": 1.17,
+    "volume": 758524912,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-28",
+    "timestamp": 1761580800000,
+    "open": 4.815,
+    "high": 4.85,
+    "low": 4.792,
+    "close": 4.802,
+    "percent": -0.5,
+    "volume": 725949138,
+    "hsl": 0,
+    "zgs": null
   }
 ]

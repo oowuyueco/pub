@@ -60226,5 +60226,89 @@ var 上证50ETF = [
     "volume": 1047601211,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-20",
+    "timestamp": 1760889600000,
+    "open": 3.121,
+    "high": 3.134,
+    "low": 3.103,
+    "close": 3.111,
+    "percent": 0.03,
+    "volume": 906814037,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-21",
+    "timestamp": 1760976000000,
+    "open": 3.118,
+    "high": 3.152,
+    "low": 3.114,
+    "close": 3.144,
+    "percent": 1.06,
+    "volume": 852424800,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-22",
+    "timestamp": 1761062400000,
+    "open": 3.127,
+    "high": 3.153,
+    "low": 3.122,
+    "close": 3.148,
+    "percent": 0.13,
+    "volume": 793070110,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-23",
+    "timestamp": 1761148800000,
+    "open": 3.145,
+    "high": 3.172,
+    "low": 3.121,
+    "close": 3.167,
+    "percent": 0.6,
+    "volume": 576569281,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-24",
+    "timestamp": 1761235200000,
+    "open": 3.175,
+    "high": 3.199,
+    "low": 3.171,
+    "close": 3.192,
+    "percent": 0.79,
+    "volume": 681061847,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-27",
+    "timestamp": 1761494400000,
+    "open": 3.208,
+    "high": 3.225,
+    "low": 3.2,
+    "close": 3.216,
+    "percent": 0.75,
+    "volume": 946697220,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-10-28",
+    "timestamp": 1761580800000,
+    "open": 3.212,
+    "high": 3.223,
+    "low": 3.19,
+    "close": 3.196,
+    "percent": -0.62,
+    "volume": 784301490,
+    "hsl": 0,
+    "zgs": null
   }
 ]
