@@ -197,4 +197,5 @@ var triggerLogObj基金 = {
         "债A股8PK上证B",
         "招商债券PK创业板B"
     ]
-}
+};
+var runDate = "2025-10-28";
