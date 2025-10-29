@@ -363,6 +363,7 @@
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/期权策略.js"></script>
+    <!-- <script type="text/javascript" src="./cn/基金/基金策略.js"></script> -->
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script>
         Array.prototype.cal9转 = function (kline交易日, priod, N = 5) {
@@ -1001,7 +1002,7 @@
     </script>
 
 
-    <script type="text/javascript" src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="./js/xlsx.full.min.js"></script>
     <script>
 
         ////手动交易  1手动写入买入时间价格cash 脚本完成交易   2手动写入卖出时间价格cash  脚本完成交易
@@ -1109,7 +1110,7 @@
 
 
         console.groupCollapsed("期权策略建议    期权买卖List")
-        console.log(JSON.parse(JSON.stringify(期权策略建议)), JSON.parse(JSON.stringify(期权买卖List)))
+        console.log(期权策略建议, 期权买卖List)
         console.groupEnd()
 
 
@@ -2966,6 +2967,29 @@
                 },
 
 
+                //  { //基金策略
+                //     name: '基金策略',
+                //     type: 'scatter',
+                //     xAxisIndex: 6,
+                //     yAxisIndex: 12,
+                //     // /symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                //     itemStyle: {
+                //         normal: {
+                //             opacity: 1,
+                //             color: "red"
+                //         }
+                //     },
+                //     symbolSize: function (val) {
+                //         return 3
+                //     },
+                //     zlevel: 3,
+                //     data: 基金策略.filter((item) => {
+                //         return item[2].includes("高") || item[2].includes("↓")
+                //     }).map((item) => {
+                //         return [item[0], -20]
+                //     }).addStartEnd()
+                // },
+
 
                 { //期权策略
                     name: '期权策略',
@@ -2983,10 +3007,10 @@
                         return 3
                     },
                     zlevel: 3,
-                    data: changeLog2(上升区间ByDay).all.filter((item) => {
-                        return true
+                    data: 期权策略建议.filter((item) => {
+                        return item[2].includes("低") || item[2].includes("↑")
                     }).map((item) => {
-                        return [item[0], -21.5]
+                        return [item[0], -22.5]
                     }).addStartEnd()
                 },
                 { //期权策略
@@ -3005,8 +3029,8 @@
                         return 3
                     },
                     zlevel: 3,
-                    data: changeLog2(下降区间ByDay).all.filter((item) => {
-                        return true
+                    data: 期权策略建议.filter((item) => {
+                        return item[2].includes("高") || item[2].includes("↓")
                     }).map((item) => {
                         return [item[0], -20]
                     }).addStartEnd()
