@@ -106,9 +106,9 @@ function getDateTimeByZone(timezone = 8, preNDay = 0) {
     //.substring(0,10) YMD
 }
 
-let currentDayYMD = stampToDate(new Date().getTime())
-let currentDayYM = currentDayYMD.substring(0, 7)
-let preDayYMD = stampToDate(new Date().getTime() - 24 * 60 * 60 * 1000)
+const currentDayYMD = stampToDate(new Date().getTime())
+const currentDayYM = currentDayYMD.substring(0, 7)
+const preDayYMD = stampToDate(new Date().getTime() - 24 * 60 * 60 * 1000)
 
 //统一显示格式 DateTime [date,data]
 function unifyDate(site, date, dataName = "") {
@@ -1418,6 +1418,8 @@ if (typeof module !== "undefined" && module.exports) {
     exports.globalConfigOnlySendOnTrigBuySell = globalConfigOnlySendOnTrigBuySell
     exports.devTestEnv = devTestEnv
 
+    exports.currentDayYMD = currentDayYMD
+
     exports.stampToDate = stampToDate
     exports.dateToStamp = dateToStamp
     exports.getDateInWeekDay = getDateInWeekDay
@@ -1451,10 +1453,6 @@ if (typeof module !== "undefined" && module.exports) {
     exports.getDateTimeByZone = getDateTimeByZone
     exports.getRandom登陆名 = getRandom登陆名
 
-    exports.myjscurrentDayYMD = currentDayYMD
-
     exports.myCYQCalculator = myCYQCalculator
     exports.getDWMbenfPart = getDWMbenfPart
-
-
 } 
