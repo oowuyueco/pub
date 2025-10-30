@@ -60322,5 +60322,17 @@ var 上证50ETF = [
     "volume": 630345860,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-30",
+    "timestamp": 1761753600000,
+    "open": 3.205,
+    "high": 3.223,
+    "low": 3.188,
+    "close": 3.193,
+    "percent": -0.53,
+    "volume": 986908581,
+    "hsl": 0,
+    "zgs": null
   }
 ]

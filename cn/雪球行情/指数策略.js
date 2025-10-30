@@ -3776,7 +3776,7 @@ var triggerLogObj指数 = {
       "上证50高位空但叉",
       {
         "after": {
-          "close": "1->2025-10-29,55.87,1.19",
+          "close": "2->2025-10-30,17.94,0.38",
           "high": "1->2025-10-29,55.87,1.19",
           "low": ",0,0",
           "nextFirstDelivery周三": "2025-11-26",
@@ -5820,7 +5820,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2025-10-29"
+var runLastKlineDate = "2025-10-30"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
