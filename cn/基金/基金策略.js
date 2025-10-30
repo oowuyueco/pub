@@ -198,4 +198,4 @@ var triggerLogObj基金 = {
         "招商债券PK创业板B"
     ]
 };
-var runDate = "2025-10-30";
+var runDate = "2025-10-31";
