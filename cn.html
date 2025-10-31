@@ -7,7 +7,7 @@
     <script type="text/javascript" src="./js/echarts.min.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="./js/email.min.js"></script>
     <script type="text/javascript">
         let needBack = false
         try {
@@ -363,7 +363,7 @@
     <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
     <script type="text/javascript" src="./cn/雪球行情/期权策略.js"></script>
-    <!-- <script type="text/javascript" src="./cn/基金/基金策略.js"></script> -->
+    <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script>
         Array.prototype.cal9转 = function (kline交易日, priod, N = 5) {
@@ -595,6 +595,200 @@
         console.log(changeLog(指数策略低位ByDay), 指数策略低位By期权日)
         console.groupEnd()
 
+
+        //基金策略
+        function 统计基金策略(高低位 = "低位", 汇总N = 5, 过滤M = 10) { // nextSecondDelivery周三 nextThirdDelivery周三
+
+            let trigDateArr = Object.entries(triggerLogObj基金)
+                .filter((ele, index) => { return ele[1][0].includes(高低位) })
+
+            trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                let newArr = []
+                newArr[0] = ele[1].at(-1)?.kDate ?? ele[0]
+                newArr[1] = ele[1].toSpliced(-1)
+                newArr[2] = ele[1].at(-1)
+                newArr[3] = "低位"
+                return newArr
+            })
+
+            trigDateArr.forEach((ele, index) => {
+                if (index == 0) return ele[5] = "✔"
+                let last对号 = trigDateArr.findLast(ele => ele.at(-1) == "✔")
+                if (dateToStamp(ele[0]) >= dateToStamp(last对号[0]) + 过滤M * 86400000)
+                    ele[5] = "✔"
+                else
+                    ele[5] = "✗"
+            })
+            trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
+                    return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
+                })
+                包含当天最近N天触发的日期.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                ele[4] = 包含当天最近N天触发的日期
+                return ele
+            })
+            trigDateArr.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+
+            let trig期权日Arr = [], trig期权日Obj = {}
+            trigDateArr.forEach((ele, index) => {
+                let date = ele[0]
+                let trig策略s = ele[1]
+                let profileN = ele[2]
+
+                let nextN期权周三 = "nextSecondDelivery周三"
+                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                for (var i = 0; i < nextArr.length; i++) {
+                    let nextNDelivery周三 = nextArr[i]
+                    if (profileN[nextNDelivery周三]) {
+                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                        if (closeDay > min期权days) {
+                            nextN期权周三 = nextNDelivery周三
+                            break
+                        }
+                    }
+                }
+
+                let 期权日key
+                let N = 2
+                if (nextN期权周三 == "nextFirstDelivery周三") N = 1
+                if (nextN期权周三 == "nextThirdDelivery周三") N = 3
+
+                if (profileN[nextN期权周三]) {
+                    期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                }
+                else if (profileN.after) {
+                    期权日key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
+                }
+                if (!期权日key) return
+
+
+                if (trig期权日Obj.hasOwnProperty(期权日key)) {
+                    trig期权日Obj[期权日key].push(ele)
+                }
+                else {
+                    trig期权日Obj[期权日key] = [ele]
+                }
+            })
+            for (let [nextN期权周三key, trigDateArr] of Object.entries(trig期权日Obj)) {
+
+                let nextN期权周三 = "nextSecondDelivery周三"
+                if (nextN期权周三key.includes("后3周三")) nextN期权周三 = "nextThirdDelivery周三"
+
+                let closeHighest = -1000000, closeHighest百分比 = -1000000
+                let closeLowes = 1000000, closeLowes百分比 = 1000000
+                let type = trigDateArr[0][1][0].includes("高位") ? "高位" : "低位"
+                for (let trigDate of trigDateArr) {
+                    let profileN = trigDate[2]
+                    let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                    let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                    if (closePoint > closeHighest) {
+                        closeHighest = closePoint
+                        closeHighest百分比 = closePercent
+                    }
+                    if (closePoint < closeLowes) {
+                        closeLowes = closePoint
+                        closeLowes百分比 = closePercent
+                    }
+                    if (profileN?.标星) type = profileN?.标星.replace("位", "")
+                }
+
+                let trig期权日Info = [nextN期权周三key, trigDateArr, type]
+                trig期权日Info.maxRatio = closeHighest百分比
+                trig期权日Info.minRatio = closeLowes百分比
+                trig期权日Arr.push(trig期权日Info)
+            }
+            trig期权日Arr.sort((a, b) => dateToStamp(b[0].substring(4)) - dateToStamp(a[0].substring(4)))
+            trig期权日Arr.maxRatio统计 = {
+                maxRatio中位: calMedianProf(trig期权日Arr, "maxRatio"),
+                maxRatio平均: calAvgProf(trig期权日Arr, "maxRatio"),
+                maxRatio最大: cal极值(trig期权日Arr, "maxRatio").max,
+                maxRatio最小: cal极值(trig期权日Arr, "maxRatio").min,
+            }
+            trig期权日Arr.minRatio统计 = {
+                minRatio中位: calMedianProf(trig期权日Arr, "minRatio"),
+                minRatio平均: calAvgProf(trig期权日Arr, "minRatio"),
+                minRatio最大: cal极值(trig期权日Arr, "minRatio").max,
+                minRatio最小: cal极值(trig期权日Arr, "minRatio").min,
+            }
+
+
+            return {
+                trigDateArr: trigDateArr,
+                trig期权日Arr: trig期权日Arr
+            }
+        }
+        let 基金策略高位 = 统计基金策略("高位")
+        let 基金策略低位 = 统计基金策略("低位")
+
+        let 基金策略高位ByDay = 基金策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+        let 基金策略低位ByDay = 基金策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+        let 基金策略高位By期权日 = 基金策略高位.trig期权日Arr
+        let 基金策略低位By期权日 = 基金策略低位.trig期权日Arr
+
+        function changeLog1(基金策略By) {
+            let resultArr = []
+            function toKline(profileN) {
+                let key
+
+                let nextN期权周三 = "nextSecondDelivery周三"
+                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                for (var i = 0; i < nextArr.length; i++) {
+                    let nextNDelivery周三 = nextArr[i]
+                    if (profileN[nextNDelivery周三]) {
+                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                        if (closeDay > min期权days) {
+                            nextN期权周三 = nextNDelivery周三
+                            break
+                        }
+                    }
+                }
+
+                if (profileN?.nextSecondDelivery周三 && nextN期权周三 == "nextSecondDelivery周三") key = "nextSecondDelivery周三"
+                else if (profileN?.nextThirdDelivery周三 && nextN期权周三 == "nextThirdDelivery周三") key = "nextThirdDelivery周三"
+                else key = "after"
+
+                if (!profileN[key]) return []
+                return [
+                    0,
+                    +profileN[key].high.split(",")[2],
+                    +profileN[key].low.split(",")[2],
+                    +profileN[key].close.split(",")[2],
+
+                    key == "after" ? `after${profileN.after.close.split("->")[0]}` : key,
+                    profileN[key].close.split(",")[0],
+                    +profileN[key].close.split(",")[1],
+                ]
+            }
+            resultArr = 基金策略By.map((ele, index) => {
+                let newShowArr = []
+                newShowArr.push(ele[0])
+                newShowArr.push(ele[4].length)
+                newShowArr.push(ele[5])
+                newShowArr = newShowArr.concat(toKline(ele[2]))
+
+                //console.log(ele[2])
+                let testInfo = ele[2]?.testInfo// triggerLogObj指数.日周高位九转.find(e=>e.trigDate==ele[0])?.九转详情
+                newShowArr.push(ele[1] + testInfo)
+                return newShowArr
+            })
+                //.filter((ele, index) => { return ele.at(-1).includes("日周") })
+                .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                .sort((a, b) => a[9] - b[9])
+                .map((ele, index) => {
+                    if (ele[7] == "nextSecondDelivery周三") ele[7] = "后2周三"
+                    if (ele[7] == "nextThirdDelivery周三") ele[7] = "后3周三"
+                    return ele
+                })
+
+            return resultArr
+        }
+        console.groupCollapsed("基金策略高位ByDay   基金策略高位By期权日")
+        console.log(changeLog1(基金策略高位ByDay), 基金策略高位By期权日)
+        console.groupEnd()
+        console.groupCollapsed("基金策略低位ByDay   基金策略低位By期权日")
+        console.log(changeLog1(基金策略低位ByDay), 基金策略低位By期权日)
+        console.groupEnd()
+
         //期权策略
         function 统计区间期权策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10) {
             let 区间ByDay = {}
@@ -798,10 +992,10 @@
 
             return result
         }
-        console.groupCollapsed("上升区间ByDay       上升区间By期权日")
+        console.groupCollapsed("期权策略上区ByDay   期权策略上区By期权日")
         console.log(changeLog2(上升区间ByDay), 上升区间By期权日)
         console.groupEnd()
-        console.groupCollapsed("下降区间ByDay       下降区间By期权日")
+        console.groupCollapsed("期权策略下区ByDay   期权策略下区By期权日")
         console.log(changeLog2(下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
@@ -826,8 +1020,8 @@
             return num < 0 ? -result : result;
         }
 
-        //合并所有期权日
-        let 所有By期权日合并 = [...指数策略高位By期权日, ...指数策略低位By期权日, ...上升区间By期权日.all, ...下降区间By期权日.all]
+        //合并所有期权日  ...基金策略高位By期权日, ...基金策略低位By期权日,
+        let 所有By期权日合并 = [...指数策略高位By期权日, ...指数策略低位By期权日, ...基金策略高位By期权日, ...基金策略低位By期权日, ...上升区间By期权日.all, ...下降区间By期权日.all]
         所有By期权日合并.sort((a, b) => dateToStamp(b[0].substring(4)) - dateToStamp(a[0].substring(4)))
 
         //标记
@@ -858,9 +1052,6 @@
             }
             return nameCode
         }
-        //沪深300ETF = 沪深300ETF.map((ele, index) => { ele.index = index; return ele; })
-        //上证50ETF = 上证50ETF.map((ele, index) => { ele.index = index; return ele; })
-
         for (let index = 0; index < 所有By期权日合并.length; index++) {
             let element = 所有By期权日合并[index]
             if (+element[1].at(-1)[0].substring(0, 4) < 2013) continue
@@ -1007,7 +1198,7 @@
 
         ////手动交易  1手动写入买入时间价格cash 脚本完成交易   2手动写入卖出时间价格cash  脚本完成交易
         // 期权策略建议.unshift(["2025-09-26", "2025-10-10", "高位", "3.557 沽沪深300ETF 3.252"])
-        // 期权策略建议[0].tAr = "日周九转"
+        // 期权策略建议[0].tAr = "日周九转测试手动"
         let 手动买卖 = [
             //["2025-09-26", "2025-10-10", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-10沽3300:20张', '2025-09-29开盘价', '2025-10-10开盘价', 0.0152, 0.0152, 0, 3240,3240],
             //["2025-09-26", "2025-10-10", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-10沽3300:20张', '2025-09-29开盘价', null, 0.0152, null, null, 3240],
@@ -1045,6 +1236,7 @@
             ["2022-04-28", "2022-06-22", "低位", "3.69 购沪深300ETF模拟 3.801", "2022-06-22购3800.xlsx"],
             ["2022-04-25", "2022-06-22", "低位", "3.594 购沪深300ETF模拟 3.702", "2022-06-22购3700.xlsx"],
             ["2022-03-28", "2022-05-25", " ↓ ", "3.906 沽沪深300ETF模拟 3.789", "2022-05-25沽38000.xlsx"],
+            ['2022-03-15', '2022-04-27', '低位', '3.745 购沪深300ETF模拟 3.857', "2022-04-27购3800.xlsx"],
             ["2022-02-23", "2022-04-27", " ↓ ", "4.35 沽沪深300ETF模拟 4.219", "2022-04-27沽4200.xlsx"],
             ["2022-01-24", "2022-03-23", " ↓ ", "4.511 沽沪深300ETF模拟 4.376", "2022-03-23沽4400.xlsx"],
             ["2022-01-21", "2022-03-23", "高位", "4.51 沽沪深300ETF模拟 4.375", "2022-03-23沽4400.xlsx"],
@@ -1068,9 +1260,11 @@
             ["2019-05-27", "2019-07-24", " ↑ ", "2.471 购上证50ETF模拟 2.545", "2019-07-24购2500.xlsx"],
             ["2019-04-19", "2019-06-26", "高位", "2.753 沽上证50ETF模拟 2.67", "2019-06-26沽2700.xlsx"],
             ["2019-04-08", "2019-05-22", "高位", "2.68 沽上证50ETF模拟 2.6", "2019-05-22沽2600.xlsx"],
+            ['2019-01-28', '2019-03-27', '低位', '2.212 购上证50ETF模拟 2.278', "2019-03-27购2303A.xlsx"],
             ["2019-01-02", "2019-02-27", "低★", "2.053 购上证50ETF模拟 2.115", "2019-02-27购2100.xlsx"],
             ["2018-12-27", "2019-02-27", "低★", "2.071 购上证50ETF模拟 2.133", "2019-02-27购2100.xlsx"],
             ["2018-12-21", "2019-01-23", "低★", "2.096 购上证50ETF模拟 2.159", "2019-01-23购2100.xlsx"],
+            ['2018-10-16', '2018-11-28', '低位', '2.202 购上证50ETF模拟 2.268', "2018-11-28购2300.xlsx"],
             ["2018-09-03", "2018-10-24", " ↓ ", "2.242 沽上证50ETF模拟 2.175", "2018-12-26沽2205A.xlsx"],
             ["2018-06-08", "2018-07-25", " ↓ ", "2.367 沽上证50ETF模拟 2.296", "2018-09-26沽2350.xlsx"],
             ["2018-02-28", "2018-04-25", " ↓ ", "2.562 沽上证50ETF模拟 2.485", "2018-04-25沽2700.xlsx"],
@@ -1084,6 +1278,8 @@
             ["2016-06-22", "2016-08-24", " ↑ ", "1.821 购上证50ETF模拟 1.876", "2016-09-28购1900.xlsx"],
             ["2016-05-17", "2016-06-22", "低位", "1.781 购上证50ETF模拟 1.834", "2016-06-22购1800.xlsx"],
             ["2016-03-03", "2016-04-27", "低★", "1.76 购上证50ETF模拟 1.813", "2016-04-27购1850.xlsx"],
+            ['2016-02-01', '2016-03-23', '低位', '1.665 购上证50ETF模拟 1.715', "2016-03-23购1800.xlsx"],
+            ['2016-01-26', '2016-03-23', '低位', '1.679 购上证50ETF模拟 1.729', "2016-03-23购1800.xlsx"],
             ["2015-12-25", "2016-02-24", " ↓ ", "2.131 沽上证50ETF模拟 2.067", "2016-03-23沽2000.xlsx"],
             ["2015-12-09", "2016-01-27", " ↓ ", "2.031 沽上证50ETF模拟 1.97", "2016-03-23沽2000.xlsx"],
             ["2015-07-22", "2015-09-23", " ↓ ", "2.347 沽上证50ETF模拟 2.277", "2015-09-23沽2300.xlsx"],
@@ -1096,17 +1292,25 @@
             ["2015-03-12", "2015-04-22", " ↑ ", "2.099 购上证50ETF模拟 2.162", "2015-04-22购2200.xlsx"],
             ["2015-02-10", "2015-03-25", " ↑ ", "2.031 购上证50ETF模拟 2.092", "2015-03-25购2200.xlsx"],
         ];
-        模拟买卖 = []
+        //模拟买卖 = [] 
 
-        let 策略startDate = "2019-12-18" //设置开始日期同时减小计算量
+        let 策略startDate = "2013-12-18" //设置开始日期同时减小计算量
         let 期权买卖List = 期权策略建议
             .map((ele, index) => {
-                let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2] == e[0] + e[1] + e[2]);
-                if (s1) { s1.tAr = ele.tAr; return s1 }//模拟
-                let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2] == e[0] + e[1] + e[2]);
-                if (s2) { s2.tAr = ele.tAr; return s2 }//手动
+                let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].replace("★", "位") == e[0] + e[1] + e[2].replace("★", "位"));
+                if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
+                else {
+                    s1 = 模拟买卖.find((e) => ele[1] + ele[2].replace("★", "位") == e[1] + e[2].replace("★", "位"));
+                    if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
+                }
+
+                let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].replace("★", "位") == e[0] + e[1] + e[2].replace("★", "位"));
+                if (s2) {  s2.tAr=ele.tAr;  return s2 }//手动
+
                 return ele //未决
-            }).filter( e => 策略startDate < e[1])
+            })
+            .filter(e => e !== null)
+            .filter(e => 策略startDate < e[1])
 
 
         console.groupCollapsed("期权策略建议    期权买卖List")
@@ -1365,6 +1569,7 @@
             let startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0])
             for (let i = startOldestIndex; i < 沪深300.length; i++) {
                 let curDate = 沪深300[i].date;
+                let curDateHasConsole = false;
                 function getKeyId(期权arr) {
                     return 期权arr[0] + 期权arr[1] + 期权arr[2];
                 }
@@ -1377,12 +1582,13 @@
                 let buyCashIndex = 10;
                 let sellCashIndex = 11;
 
-                //触发买入时间价格写入数组
+                //模拟触发买入时间价格写入数组  未定触发买入通知
                 let trigBuy = 期权买卖List.find((e) => e[0] == curDate && !arrayHasIndex(e, buyDateIndex) && !arrayHasIndex(e, buyPriceIndex));
                 if (trigBuy && !trigBuy[3].includes("模拟") && !trigBuy[3].includes("手动")) {
                     let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}手动开盘买入`
                     if (curDate == currentDayYMD) pageSendMail(msg + `预期买入金额${getBuyCashAnd入金(trigBuy)} <br>\r\n ${trigBuy}`)
                     console.log(msg, currentDayYMD)
+                    curDateHasConsole = true
                 }
                 if (trigBuy && trigBuy[3].includes("模拟")) {
                     let excelFileName = trigBuy[4].includes(".xlsx") ? trigBuy[4] : trigBuy[4].split(":")[0] + ".xlsx";
@@ -1406,7 +1612,7 @@
                 }
 
 
-                //触发卖出时间价格写入数组
+                //模拟触发卖出时间价格写入数组   手动触发卖出通知
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
                     let asset期权 = asset.期权[index];
                     if (arrayHasIndex(asset期权, sellDateIndex)) continue;
@@ -1483,6 +1689,7 @@
                         let msg = `${curDate} 触发收盘通知下个交易日${asset期权[1]}到期手动开盘卖出`
                         if (curDate == currentDayYMD) pageSendMail(msg + `<br>\r\n ${asset期权}`)
                         console.log(msg, currentDayYMD)
+                        curDateHasConsole = true
                     }
 
                     if (
@@ -1501,12 +1708,15 @@
                         let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}提前手动开盘卖出`
                         if (curDate == currentDayYMD) pageSendMail(msg + ` <br>\r\n ${asset期权}`)
                         console.log(msg, currentDayYMD)
+                        curDateHasConsole = true
                     }
                 }
 
                 //实际卖出Cash
                 let curAllSell入金;
                 let curAllSellCash;
+                let cur模拟SellCount = 0;
+                let cur手动SellCount = 0;
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
                     let asset期权 = asset.期权[index];
                     if (!arrayHasIndex(asset期权, sellDateIndex)) continue;
@@ -1532,6 +1742,7 @@
                         curSell入金 = +curSell入金.toFixed(2);
                         need入金[asset期权[0] + " " + asset期权[1] + " sell "] = curSell入金;
                         console.log(curDate + " 补足卖手续费入金", curSell入金, "=>", JSON.parse(JSON.stringify(asset)));
+                        curDateHasConsole = true;
                     }
                     sellCash = +sellCash.toFixed(2);
                     asset期权[sellCashIndex] = sellCash;
@@ -1541,10 +1752,8 @@
                     //asset.期权 = asset.期权.filter((item) => getKeyId(item) != getKeyId(asset期权))
                     asset.现金 = asset.现金 + sellCash;
                     asset.现金 = +asset.现金.toFixed(2);
-                    if (index == 0 && curAllSellCash) {
-                        curAllSellCash = +curAllSellCash.toFixed(2);
-                        console.log(curAllSell入金 ? "           卖出" : curDate + " 卖出", curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)));
-                    }
+
+                    cur模拟SellCount++
                 }
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
                     let asset期权 = asset.期权[index];
@@ -1568,6 +1777,7 @@
                         curSell入金 = +curSell入金.toFixed(2);
                         need入金[asset期权[0] + " " + asset期权[1] + " sell "] = curSell入金;
                         console.log(curDate + " 补足卖手续费入金手动", curSell入金, "=>", JSON.parse(JSON.stringify(asset)));
+                        curDateHasConsole = true
                     }
                     sellCash = +sellCash.toFixed(2);
                     asset期权[4] += ":" + get持仓日数(asset期权) + "日";
@@ -1576,54 +1786,92 @@
                     //asset.期权 = asset.期权.filter((item) => getKeyId(item) != getKeyId(asset期权))
                     asset.现金 = asset.现金 + sellCash;
                     asset.现金 = +asset.现金.toFixed(2);
-                    if (index == 0 && curAllSellCash) {
-                        curAllSellCash = +curAllSellCash.toFixed(2);
-                        console.log(curAllSell入金 ? "           卖出手动" : curDate + " 卖出手动", curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)));
-                    }
-
+                    cur手动SellCount++
+                }
+                if (curAllSellCash) {
+                    curAllSellCash = +curAllSellCash.toFixed(2);
+                    let curSellTypeCount = "卖出"
+                    if (cur模拟SellCount > 0) curSellTypeCount = curSellTypeCount + "模拟" + cur模拟SellCount
+                    if (cur手动SellCount > 0) curSellTypeCount = curSellTypeCount + "手动" + cur手动SellCount
+                    console.log(curDateHasConsole ? "             " + curSellTypeCount : curDate + " " + curSellTypeCount, curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)));
+                    curDateHasConsole = true
                 }
 
                 //实际买入Cash
-                let curBuy = 期权买卖List.find((e) => arrayHasIndex(e, buyDateIndex) && e[buyDateIndex].includes(curDate));
-                if (curBuy && curBuy[3].includes("模拟") && !arrayHasIndex(curBuy, buyCashIndex)) {
+                let curAllBuy入金;
+                let curAllBuyCash;
+                let cur模拟BuyCount = 0;
+                let cur手动BuyCount = 0;
+                for (let index = 期权买卖List.length - 1; index >= 0; index--) {
+                    let curBuy = 期权买卖List[index];
+                    if (!arrayHasIndex(curBuy, buyDateIndex)) continue;
+                    if (!arrayHasIndex(curBuy, buyPriceIndex)) continue;
+                    if (!curBuy[buyDateIndex].includes(curDate)) continue
+                    if (!curBuy[3].includes("模拟")) continue
+                    if (arrayHasIndex(curBuy, buyCashIndex)) continue;
+
                     let [buyCash, curbuy入金, buyCount] = getBuyCashAnd入金(curBuy);
                     if (curbuy入金 > 0) {
                         总入金 = 总入金 + curbuy入金;
+                        curAllBuy入金 = curbuy入金 + (curAllBuy入金 ?? 0);
                         asset.现金 = asset.现金 + curbuy入金;
                         asset.现金 = +asset.现金.toFixed(2);
                         curbuy入金 = +curbuy入金.toFixed(2);
                         need入金[curBuy[0] + " " + curBuy[1] + " buy"] = curbuy入金;
-                        console.log(curAllSellCash ? "           补足买入金" : curDate + " 补足买入金", curbuy入金, "=>", JSON.parse(JSON.stringify(asset)));
+                        console.log(curDateHasConsole ? "           补足买入金" : curDate + " 补足买入金", curbuy入金, "=>", JSON.parse(JSON.stringify(asset)));
+                        curDateHasConsole = true
                     }
 
-                    总buyCash += buyCash;
+                    总buyCash = 总buyCash + buyCash;
+                    curAllBuyCash = buyCash + (curAllBuyCash ?? 0);
                     buyCash = +buyCash.toFixed(2);
                     curBuy[buyCashIndex] = buyCash;
                     curBuy[4] = curBuy[4].replace(".xlsx", "") + ":" + buyCount + "张"; //购买张数
-                    
+
                     asset.现金 = asset.现金 - buyCash;
                     asset.现金 = +asset.现金.toFixed(2);
                     asset.期权.unshift(curBuy);
-                    console.log(curAllSellCash || curbuy入金 > 0 ? "           买入" : curDate + " 买入", buyCash, "=>", JSON.parse(JSON.stringify(asset)));
+
+                    cur模拟BuyCount++;
                 }
-                if (curBuy && curBuy[3].includes("手动") && arrayHasIndex(curBuy, buyCashIndex)) {
+                for (let index = 期权买卖List.length - 1; index >= 0; index--) {
+                    let curBuy = 期权买卖List[index];
+                    if(curDate=="2025-10-29")
+                       debugger
+                    if (!arrayHasIndex(curBuy, buyDateIndex)) continue;
+                    if (!arrayHasIndex(curBuy, buyPriceIndex)) continue;
+                    if (!curBuy[buyDateIndex].includes(curDate)) continue
+                    if (!curBuy[3].includes("手动")) continue
+                    if (!arrayHasIndex(curBuy, buyCashIndex)) continue;
+
                     let buyCash = curBuy[buyCashIndex]
                     总buyCash += buyCash
+                    curAllBuyCash = buyCash + (curAllBuyCash ?? 0);
                     let curbuy入金
                     if (asset.现金 < buyCash) {
                         curbuy入金 = buyCash - asset.现金
                         总入金 = 总入金 + curbuy入金
+                        curAllBuy入金 = curbuy入金 + (curAllBuy入金 ?? 0);
                         asset.现金 = asset.现金 + curbuy入金
                         asset.现金 = +asset.现金.toFixed(2);
                         curbuy入金 = +curbuy入金.toFixed(2);
                         need入金[curBuy[0] + " " + curBuy[1] + " buy"] = curbuy入金;
-                        console.log(curAllSellCash ? "           补足买入金手动" : curDate + " 补足买入金手动", curbuy入金, "=>", JSON.parse(JSON.stringify(asset)));
+                        console.log(curDateHasConsole ? "           补足买入金手动" : curDate + " 补足买入金手动", curbuy入金, "=>", JSON.parse(JSON.stringify(asset)));
                     }
 
                     asset.现金 = asset.现金 - buyCash;
                     asset.现金 = +asset.现金.toFixed(2);
                     asset.期权.unshift(curBuy);
-                    console.log(curAllSellCash || curbuy入金 > 0 ? "           买入手动" : curDate + " 买入手动", buyCash, "=>", JSON.parse(JSON.stringify(asset)));
+
+                    cur手动BuyCount++;
+                }
+                if (curAllBuyCash) {
+                    curAllBuyCash = +curAllBuyCash.toFixed(2);
+                    let curBuyTypeCount = "买入"
+                    if (cur模拟BuyCount > 0) curBuyTypeCount = curBuyTypeCount + "模拟" + cur模拟BuyCount
+                    if (cur手动BuyCount > 0) curBuyTypeCount = curBuyTypeCount + "手动" + cur手动BuyCount
+                    console.log(curDateHasConsole ? "           " + curBuyTypeCount : curDate + " " + curBuyTypeCount, curAllBuyCash, "=>", JSON.parse(JSON.stringify(asset)))
+                    curDateHasConsole = true
                 }
 
             }

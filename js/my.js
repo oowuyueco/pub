@@ -106,6 +106,36 @@ function getDateTimeByZone(timezone = 8, preNDay = 0) {
     //.substring(0,10) YMD
 }
 
+//获取指定日期前N天或后N天的日期。
+function getPreNexDate(dateStr, days) {
+    // 验证输入
+    if (!dateStr || typeof dateStr !== 'string') {
+        throw new Error('日期参数必须是字符串格式');
+    }
+
+    if (isNaN(days) || typeof days !== 'number') {
+        throw new Error('天数参数必须是数字');
+    }
+
+    // 解析日期
+    const date = new Date(dateStr);
+
+    // 验证日期有效性
+    if (isNaN(date.getTime())) {
+        throw new Error('无效的日期格式，请使用YYYY-MM-DD格式');
+    }
+
+    // 计算新日期
+    date.setDate(date.getDate() + days);
+
+    // 格式化返回结果
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
+}
+
 const currentDayYMD = stampToDate(new Date().getTime())
 const currentDayYM = currentDayYMD.substring(0, 7)
 const preDayYMD = stampToDate(new Date().getTime() - 24 * 60 * 60 * 1000)
@@ -1251,7 +1281,14 @@ if (typeof module !== "undefined" && module.exports) {
 
     function writeDataToFile(dataName, dayDatas, folder = "./data/") {
         let promise = new Promise((resolve, reject) => {
-            fs.writeFile(`${folder}${dataName}.js`, `var ${dataName} = ` + JSON.stringify(dayDatas, null, 2), 'utf8', (err) => {
+
+            let dataFileStr = `var ${dataName} = ` + JSON.stringify(dayDatas, null, 2) + ";\r\n"
+            dataFileStr += `
+if (typeof module !== "undefined" && module.exports) {
+    exports.${dataName} = ${dataName}
+};
+`
+            fs.writeFile(`${folder}${dataName}.js`, dataFileStr, 'utf8', (err) => {
                 if (err) {
                     console.log(`${dataName}写入失败${err}`)
                     resolve(false)
@@ -1420,6 +1457,7 @@ if (typeof module !== "undefined" && module.exports) {
 
     exports.currentDayYMD = currentDayYMD
 
+    exports.getPreNexDate = getPreNexDate
     exports.stampToDate = stampToDate
     exports.dateToStamp = dateToStamp
     exports.getDateInWeekDay = getDateInWeekDay
