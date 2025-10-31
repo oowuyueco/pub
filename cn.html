@@ -767,13 +767,13 @@
                 newShowArr = newShowArr.concat(toKline(ele[2]))
 
                 //console.log(ele[2])
-                let testInfo = ele[2]?.testInfo// triggerLogObj指数.日周高位九转.find(e=>e.trigDate==ele[0])?.九转详情
+                let testInfo = ele[2]?.testInfo ?? ""// triggerLogObj指数.日周高位九转.find(e=>e.trigDate==ele[0])?.九转详情
                 newShowArr.push(ele[1] + testInfo)
                 return newShowArr
             })
                 //.filter((ele, index) => { return ele.at(-1).includes("日周") })
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
-                .sort((a, b) => a[9] - b[9])
+                //.sort((a, b) => a[9] - b[9])
                 .map((ele, index) => {
                     if (ele[7] == "nextSecondDelivery周三") ele[7] = "后2周三"
                     if (ele[7] == "nextThirdDelivery周三") ele[7] = "后3周三"
@@ -999,6 +999,203 @@
         console.log(changeLog2(下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
+
+        //全部策略合并后统计
+        function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) { // nextSecondDelivery周三 nextThirdDelivery周三
+
+            let trigDateArr指数 = Object.entries(triggerLogObj指数.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
+            if (标星冲突不显示) trigDateArr指数 = trigDateArr指数.filter((ele, index) => { return !ele[1].at(-1)?.冲突 }) ///标星冲突不显示
+
+            let trigDateArr基金 = Object.entries(triggerLogObj基金).filter((ele, index) => { return ele[1][0].includes(高低位) })
+
+            let trigDateArr期权 = []
+            Object.entries(triggerLogObj期权.上升日期区间).forEach(([日期区间, 区间trigDateArr]) => {
+                Object.entries(区间trigDateArr).forEach(([trigDate, trigNameObjArr]) => {
+                    let newArrNames = trigNameObjArr.map((ele, index) => {
+                        if (index != trigNameObjArr.length - 1) return ele.quantName
+                        else return ele
+                    })
+                    trigDateArr期权.push([trigDate, newArrNames])
+                })
+            })
+            Object.entries(triggerLogObj期权.下降日期区间).forEach(([日期区间, 区间trigDateArr]) => {
+                Object.entries(区间trigDateArr).forEach(([trigDate, trigNameObjArr]) => {
+                    let newArrNames = trigNameObjArr.map((ele, index) => {
+                        if (index != trigNameObjArr.length - 1) return ele.quantName
+                        else return ele
+                    })
+                    trigDateArr期权.push([trigDate, newArrNames])
+                })
+            })
+
+
+            trigDateArr = [...trigDateArr指数, ...trigDateArr基金, ...trigDateArr期权]
+            trigDateArr.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+
+
+            const dateMap = new Map();
+            trigDateArr.forEach(([date, arr]) => {
+                if (dateMap.has(date)) {
+                    dateMap.get(date).unshift(...arr.toSpliced(-1));
+                    if (arr.at(-1)?.标星) { dateMap.get(date).pop(); dateMap.get(date).push(arr.at(-1)); }
+                } else {
+                    dateMap.set(date, [...arr]);
+                }
+            });
+            trigDateArr = Array.from(dateMap.entries());
+
+
+            function get星位箭头(trigNames, profileN) {
+                if (profileN?.标星) return profileN?.标星.replace("位", "")
+                let allIs位_ = trigNames.every(name => name.includes("位_"))
+                if (allIs位_) return trigNames[0].includes("高位") ? " ↓ " : " ↑ "
+                return trigNames[0].includes("高位") ? "高位" : "低位"
+            }
+            trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                let newArr = []
+                newArr[0] = ele[0] //"2010-10-25"
+                newArr[1] = ele[1].toSpliced(-1) //['上证高位_红但down死叉', '上证50高位_红但down死叉']
+                newArr[2] = ele[1].at(-1) //{…}
+                newArr[3] = get星位箭头(newArr[1], newArr[2])
+                return newArr
+            })
+
+
+
+            function is反向(当前星位箭头, 上次星位箭头) {
+                if ((当前星位箭头.includes("高位") || 当前星位箭头.includes(" ↓ ")) && (上次星位箭头.includes("低位") || 上次星位箭头.includes(" ↑ "))) {
+                    return true
+                }
+                if ((当前星位箭头.includes("低位") || 当前星位箭头.includes(" ↑ ")) && (上次星位箭头.includes("高位") || 上次星位箭头.includes(" ↓ "))) {
+                    return true
+                }
+                return false
+            }
+            trigDateArr.forEach((ele, index) => {
+                if (index == 0) return ele[5] = "✔"
+                let last对号 = trigDateArr.findLast(ele => ele.at(-1) == "✔")
+                if (dateToStamp(ele[0]) >= dateToStamp(last对号[0]) + 过滤M * 86400000)
+                    ele[5] = "✔"
+                else if (is反向(ele[3], last对号[3]))
+                    ele[5] = "✔"
+                else
+                    ele[5] = "✗"
+            })
+
+            trigDateArr = trigDateArr.map((ele, index, preArr) => {
+                let 包含当天最近N天触发的日期 = preArr.filter(preArrEle => {
+                    return dateToStamp(ele[0]) >= dateToStamp(preArrEle[0]) && dateToStamp(preArrEle[0]) >= dateToStamp(ele[0]) - 汇总N * 86400000
+                })
+                包含当天最近N天触发的日期.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+                ele[4] = 包含当天最近N天触发的日期
+                return ele
+            })
+            trigDateArr.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
+
+
+            let trig期权日Arr = [], trig期权日Obj = {}
+            trigDateArr.forEach((ele, index) => {
+                let date = ele[0]
+                let trig策略s = ele[1]
+                let profileN = ele[2]
+                let 位箭 = ele[3]
+
+                let nextN期权周三 = "nextSecondDelivery周三"
+                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                for (var i = 0; i < nextArr.length; i++) {
+                    let nextNDelivery周三 = nextArr[i]
+                    if (profileN[nextNDelivery周三]) {
+                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                        if (closeDay > min期权days) {
+                            nextN期权周三 = nextNDelivery周三
+                            break
+                        }
+                    }
+                }
+
+                let 期权日key
+                let N = 2
+                if (nextN期权周三 == "nextFirstDelivery周三") N = 1
+                if (nextN期权周三 == "nextThirdDelivery周三") N = 3
+
+                if (profileN[nextN期权周三]) {
+                    期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                }
+                else if (profileN.after) {
+                    期权日key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
+                }
+                if (!期权日key) return
+
+                if (位箭.includes("高") || 位箭.includes(" ↓ ")) 期权日key = "沽" + 期权日key
+                else if (位箭.includes("低") || 位箭.includes(" ↑ ")) 期权日key = "购" + 期权日key
+
+
+                if (trig期权日Obj.hasOwnProperty(期权日key)) {
+                    trig期权日Obj[期权日key].push(ele)
+                }
+                else {
+                    trig期权日Obj[期权日key] = [ele]
+                }
+            })
+
+            for (let [nextN期权周三key, trigDateArr] of Object.entries(trig期权日Obj)) {
+
+                let nextN期权周三 = "nextSecondDelivery周三"
+                if (nextN期权周三key.includes("后3周三")) nextN期权周三 = "nextThirdDelivery周三"
+
+                let closeHighest = -1000000, closeHighest百分比 = -1000000
+                let closeLowes = 1000000, closeLowes百分比 = 1000000
+                let type = [...new Set(trigDateArr.map(item => item[3]))]
+                for (let trigDate of trigDateArr) {
+                    let profileN = trigDate[2]
+                    let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                    let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                    if (closePoint > closeHighest) {
+                        closeHighest = closePoint
+                        closeHighest百分比 = closePercent
+                    }
+                    if (closePoint < closeLowes) {
+                        closeLowes = closePoint
+                        closeLowes百分比 = closePercent
+                    }
+                }
+
+                let trig期权日Info = [nextN期权周三key, trigDateArr, type + ""]
+                trig期权日Info.maxRatio = closeHighest百分比
+                trig期权日Info.minRatio = closeLowes百分比
+                trig期权日Arr.push(trig期权日Info)
+            }
+            trig期权日Arr.sort((a, b) => dateToStamp(b[0].substring(4)) - dateToStamp(a[0].substring(4)))
+            trig期权日Arr.maxRatio统计 = {
+                maxRatio中位: calMedianProf(trig期权日Arr, "maxRatio"),
+                maxRatio平均: calAvgProf(trig期权日Arr, "maxRatio"),
+                maxRatio最大: cal极值(trig期权日Arr, "maxRatio").max,
+                maxRatio最小: cal极值(trig期权日Arr, "maxRatio").min,
+            }
+            trig期权日Arr.minRatio统计 = {
+                minRatio中位: calMedianProf(trig期权日Arr, "minRatio"),
+                minRatio平均: calAvgProf(trig期权日Arr, "minRatio"),
+                minRatio最大: cal极值(trig期权日Arr, "minRatio").max,
+                minRatio最小: cal极值(trig期权日Arr, "minRatio").min,
+            }
+
+            return {
+                trigDateArr: trigDateArr,
+                trig期权日Arr: trig期权日Arr
+            }
+        }
+        let 全部策略 = 统计全部策略("位")
+        let 全部策略ByDay = 全部策略.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+        let 全部策略By期权日 = 全部策略.trig期权日Arr
+        console.groupCollapsed("全部策略ByDay       全部策略By期权日")
+        console.log(changeLog1(全部策略ByDay), 全部策略By期权日)
+        console.groupEnd()
+        console.log("    ")
+
+
+        // console.log("2022-04-27", trigDateArr,trig期权日Obj) //2022-04-27 ? 反向
+        // return
+
     </script>
 
     <script type="text/javascript" src="./cn/雪球行情/上证50ETF.js"></script>
@@ -1019,10 +1216,32 @@
             const result = parseInt(firstDigit + zeros, 10);
             return num < 0 ? -result : result;
         }
+        function getEtfByDate(etfList, date) {
+            let curKInfo = etfList.find(e => e.date == date)
+            if (!curKInfo) {
+                let Nlist = [-1, -2, -3, -4, -5, 1, 2]
+                for (let index = 0; index < Nlist.length; index++) {// "2018-12-31"
+                    let preNexDay = getPreNexDate(date, Nlist[index])
+                    curKInfo = etfList.find(ele => { return ele.date == preNexDay })
+                    if (curKInfo) break
+                }
+            }
+            if (!curKInfo) {
+                console.log("无法找到对应ETF数据日期", date)
+                return null
+            }
+            return curKInfo
+        }
 
-        //合并所有期权日  ...基金策略高位By期权日, ...基金策略低位By期权日,
-        let 所有By期权日合并 = [...指数策略高位By期权日, ...指数策略低位By期权日, ...基金策略高位By期权日, ...基金策略低位By期权日, ...上升区间By期权日.all, ...下降区间By期权日.all]
-        所有By期权日合并.sort((a, b) => dateToStamp(b[0].substring(4)) - dateToStamp(a[0].substring(4)))
+        //合并所有期权日 两种合并方式
+        // let allBy期权日 = [...指数策略高位By期权日, ...指数策略低位By期权日, ...基金策略高位By期权日, ...基金策略低位By期权日, ...上升区间By期权日.all, ...下降区间By期权日.all].map((ele, index) => {
+        //     let 位箭 = ele[2]
+        //     if (位箭.includes("高") || 位箭.includes(" ↓ ")) ele[0] = "沽" + ele[0]
+        //     else if (位箭.includes("低") || 位箭.includes(" ↑ ")) ele[0] = "购" + ele[0]
+        //     return ele
+        // })
+        let allBy期权日 = 全部策略By期权日
+        allBy期权日.sort((a, b) => dateToStamp(b[0].substring(4)) - dateToStamp(a[0].substring(4)))
 
         //标记
         function calDayWeekMonthKline(nameCode, kline交易日) {
@@ -1052,12 +1271,11 @@
             }
             return nameCode
         }
-        for (let index = 0; index < 所有By期权日合并.length; index++) {
-            let element = 所有By期权日合并[index]
+        for (let index = 0; index < allBy期权日.length; index++) {
+            let element = allBy期权日[index]
             if (+element[1].at(-1)[0].substring(0, 4) < 2013) continue
 
             let count = 1
-            let firstKInfo
             let kInfoArr = []
 
             function upAllPre(curk) {
@@ -1124,14 +1342,13 @@
             }
 
             for (let idx = element[1].length - 1; idx >= 0; idx--) {
+                let curKInfo = getEtfByDate(沪深300ETF, element[1][idx][0])
                 if (idx == element[1].length - 1) {
                     let oldfuhao = element[1][idx].pop()
                     element[1][idx].push(oldfuhao + "-&")
-                    firstKInfo = 沪深300ETF.find(e => e.date == element[1][idx][0])
-                    kInfoArr.unshift(firstKInfo)
+                    kInfoArr.unshift(curKInfo)//firstKInfo
                     continue
                 } else {
-                    let curKInfo = 沪深300ETF.find(e => e.date == element[1][idx][0])
                     if (element[2].includes("↓") || element[2].includes("高")) {
                         if (allow高位(curKInfo, element[1], idx)) {
                             let oldfuhao = element[1][idx].pop()
@@ -1151,12 +1368,12 @@
             element.count = count
         }
 
-        //抽取
+        //抽取22-4-27  22-3-23
         let etfType = "沪深300ETF"
         let 期权策略建议 = []
-        for (let index = 0; index < 所有By期权日合并.length; index++) {
-            const element = 所有By期权日合并[index]
-            let endDate = element[0].substring(4)
+        for (let index = 0; index < allBy期权日.length; index++) {
+            const element = allBy期权日[index]
+            let endDate = element[0].substring(5)
 
             if (+endDate.substring(0, 4) < 2015) continue
             if (+endDate.substring(0, 4) < 2020) etfType = "上证50ETF"
@@ -1165,7 +1382,7 @@
                 const eleArr = element[1]
                 if (atId !== -1 && !eleArr.at(atId).at(-1).includes("-&")) continue
                 let startDate = eleArr.at(atId)[0]
-                let startClose = etfType == "沪深300ETF" ? 沪深300ETF.find(e => e.date == startDate).close : 上证50ETF.find(e => e.date == startDate).close
+                let startClose = etfType == "沪深300ETF" ? getEtfByDate(沪深300ETF, startDate).close : getEtfByDate(上证50ETF, startDate).close
                 startClose = +startClose.toFixed(3)
 
                 let direType = "购"
@@ -1186,8 +1403,8 @@
         ).values())
         期权策略建议.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
 
-        console.groupCollapsed("所有By期权日合并    期权策略建议")
-        console.log(所有By期权日合并, 期权策略建议)
+        console.groupCollapsed("allBy期权日     期权策略建议")
+        console.log(allBy期权日, 期权策略建议)
         console.groupEnd()
 
     </script>
@@ -1294,18 +1511,23 @@
         ];
         //模拟买卖 = [] 
 
+        String.prototype.unif高低位 = function (search, replacement) {
+            var target = this;
+            target = target.replace("★", "位").replace(" ↓ ", "高位").replace(" ↑ ", "低位").substring(0, 2);
+            return target;
+        };
         let 策略startDate = "2013-12-18" //设置开始日期同时减小计算量
         let 期权买卖List = 期权策略建议
             .map((ele, index) => {
-                let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].replace("★", "位") == e[0] + e[1] + e[2].replace("★", "位"));
+                let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
                 if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
                 else {
-                    s1 = 模拟买卖.find((e) => ele[1] + ele[2].replace("★", "位") == e[1] + e[2].replace("★", "位"));
+                    s1 = 模拟买卖.find((e) => ele[1] + ele[2].unif高低位() == e[1] + e[2].unif高低位());
                     if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
                 }
 
-                let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].replace("★", "位") == e[0] + e[1] + e[2].replace("★", "位"));
-                if (s2) {  s2.tAr=ele.tAr;  return s2 }//手动
+                let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
+                if (s2) { s2.tAr = ele.tAr; return s2 }//手动
 
                 return ele //未决
             })
@@ -1836,8 +2058,7 @@
                 }
                 for (let index = 期权买卖List.length - 1; index >= 0; index--) {
                     let curBuy = 期权买卖List[index];
-                    if(curDate=="2025-10-29")
-                       debugger
+                    //if(curDate=="2025-10-29")debugger
                     if (!arrayHasIndex(curBuy, buyDateIndex)) continue;
                     if (!arrayHasIndex(curBuy, buyPriceIndex)) continue;
                     if (!curBuy[buyDateIndex].includes(curDate)) continue

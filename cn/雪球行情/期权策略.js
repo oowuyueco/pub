@@ -4,7 +4,7 @@ var triggerLogObj期权 = {
       "2008-12-04": [
         {
           "trigDate": "2008-12-04",
-          "quantName": "上证50_低位MVol金叉",
+          "quantName": "上证50低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -28,12 +28,12 @@ var triggerLogObj期权 = {
       "2009-01-05": [
         {
           "trigDate": "2009-01-05",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-01-05",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -57,12 +57,12 @@ var triggerLogObj期权 = {
       "2009-01-06": [
         {
           "trigDate": "2009-01-06",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-01-06",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -86,7 +86,7 @@ var triggerLogObj期权 = {
       "2009-01-07": [
         {
           "trigDate": "2009-01-07",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -110,17 +110,17 @@ var triggerLogObj期权 = {
       "2009-03-04": [
         {
           "trigDate": "2009-03-04",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-03-04",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-03-04",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -144,7 +144,7 @@ var triggerLogObj期权 = {
       "2009-03-06": [
         {
           "trigDate": "2009-03-06",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -168,7 +168,7 @@ var triggerLogObj期权 = {
       "2009-03-18": [
         {
           "trigDate": "2009-03-18",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -192,12 +192,12 @@ var triggerLogObj期权 = {
       "2009-03-19": [
         {
           "trigDate": "2009-03-19",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-03-19",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -221,12 +221,12 @@ var triggerLogObj期权 = {
       "2009-03-20": [
         {
           "trigDate": "2009-03-20",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-03-20",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -250,12 +250,12 @@ var triggerLogObj期权 = {
       "2009-04-30": [
         {
           "trigDate": "2009-04-30",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-04-30",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -279,12 +279,12 @@ var triggerLogObj期权 = {
       "2009-05-08": [
         {
           "trigDate": "2009-05-08",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-05-08",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -308,12 +308,12 @@ var triggerLogObj期权 = {
       "2009-05-11": [
         {
           "trigDate": "2009-05-11",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-05-11",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -337,17 +337,17 @@ var triggerLogObj期权 = {
       "2009-05-12": [
         {
           "trigDate": "2009-05-12",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-05-12",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2009-05-12",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -373,7 +373,7 @@ var triggerLogObj期权 = {
       "2012-11-01": [
         {
           "trigDate": "2012-11-01",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -397,12 +397,12 @@ var triggerLogObj期权 = {
       "2012-11-02": [
         {
           "trigDate": "2012-11-02",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2012-11-02",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -426,7 +426,7 @@ var triggerLogObj期权 = {
       "2012-11-06": [
         {
           "trigDate": "2012-11-06",
-          "quantName": "沪深300_低位MVol金叉",
+          "quantName": "沪深300低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -450,7 +450,7 @@ var triggerLogObj期权 = {
       "2012-11-07": [
         {
           "trigDate": "2012-11-07",
-          "quantName": "上证_低位MVol金叉",
+          "quantName": "上证低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -474,12 +474,12 @@ var triggerLogObj期权 = {
       "2012-12-05": [
         {
           "trigDate": "2012-12-05",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2012-12-05",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -503,7 +503,7 @@ var triggerLogObj期权 = {
       "2013-03-01": [
         {
           "trigDate": "2013-03-01",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -527,12 +527,12 @@ var triggerLogObj期权 = {
       "2013-04-10": [
         {
           "trigDate": "2013-04-10",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2013-04-10",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -556,12 +556,12 @@ var triggerLogObj期权 = {
       "2013-04-11": [
         {
           "trigDate": "2013-04-11",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2013-04-11",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -585,12 +585,12 @@ var triggerLogObj期权 = {
       "2013-04-12": [
         {
           "trigDate": "2013-04-12",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2013-04-12",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -614,7 +614,7 @@ var triggerLogObj期权 = {
       "2013-06-25": [
         {
           "trigDate": "2013-06-25",
-          "quantName": "上证_日九空金叉",
+          "quantName": "上证低位_日九空金叉",
           "logInfo": ""
         },
         {
@@ -638,7 +638,7 @@ var triggerLogObj期权 = {
       "2014-07-01": [
         {
           "trigDate": "2014-07-01",
-          "quantName": "上证_低位MVol金叉",
+          "quantName": "上证低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -662,7 +662,7 @@ var triggerLogObj期权 = {
       "2014-07-07": [
         {
           "trigDate": "2014-07-07",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -686,12 +686,12 @@ var triggerLogObj期权 = {
       "2014-07-08": [
         {
           "trigDate": "2014-07-08",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2014-07-08",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -715,7 +715,7 @@ var triggerLogObj期权 = {
       "2014-07-15": [
         {
           "trigDate": "2014-07-15",
-          "quantName": "沪深300_低位MVol金叉",
+          "quantName": "沪深300低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -739,7 +739,7 @@ var triggerLogObj期权 = {
       "2014-07-16": [
         {
           "trigDate": "2014-07-16",
-          "quantName": "沪深300_低位MVol金叉",
+          "quantName": "沪深300低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -763,7 +763,7 @@ var triggerLogObj期权 = {
       "2014-07-18": [
         {
           "trigDate": "2014-07-18",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -787,7 +787,7 @@ var triggerLogObj期权 = {
       "2014-10-09": [
         {
           "trigDate": "2014-10-09",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -811,7 +811,7 @@ var triggerLogObj期权 = {
       "2014-10-10": [
         {
           "trigDate": "2014-10-10",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -835,12 +835,12 @@ var triggerLogObj期权 = {
       "2014-10-29": [
         {
           "trigDate": "2014-10-29",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2014-10-29",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -864,12 +864,12 @@ var triggerLogObj期权 = {
       "2014-11-05": [
         {
           "trigDate": "2014-11-05",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2014-11-05",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -893,12 +893,12 @@ var triggerLogObj期权 = {
       "2014-11-06": [
         {
           "trigDate": "2014-11-06",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2014-11-06",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -922,7 +922,7 @@ var triggerLogObj期权 = {
       "2014-11-07": [
         {
           "trigDate": "2014-11-07",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -946,12 +946,12 @@ var triggerLogObj期权 = {
       "2015-02-10": [
         {
           "trigDate": "2015-02-10",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2015-02-10",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -975,17 +975,17 @@ var triggerLogObj期权 = {
       "2015-02-11": [
         {
           "trigDate": "2015-02-11",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2015-02-11",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2015-02-11",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1009,17 +1009,17 @@ var triggerLogObj期权 = {
       "2015-02-12": [
         {
           "trigDate": "2015-02-12",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2015-02-12",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2015-02-12",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1043,7 +1043,7 @@ var triggerLogObj期权 = {
       "2015-03-12": [
         {
           "trigDate": "2015-03-12",
-          "quantName": "上证50_低位MVol金叉",
+          "quantName": "上证50低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -1069,7 +1069,7 @@ var triggerLogObj期权 = {
       "2016-06-22": [
         {
           "trigDate": "2016-06-22",
-          "quantName": "沪深300_低位MVol金叉",
+          "quantName": "沪深300低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -1093,7 +1093,7 @@ var triggerLogObj期权 = {
       "2016-06-23": [
         {
           "trigDate": "2016-06-23",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1117,7 +1117,7 @@ var triggerLogObj期权 = {
       "2016-06-27": [
         {
           "trigDate": "2016-06-27",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -1141,7 +1141,7 @@ var triggerLogObj期权 = {
       "2017-05-12": [
         {
           "trigDate": "2017-05-12",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1165,7 +1165,7 @@ var triggerLogObj期权 = {
       "2017-05-18": [
         {
           "trigDate": "2017-05-18",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1189,7 +1189,7 @@ var triggerLogObj期权 = {
       "2017-08-16": [
         {
           "trigDate": "2017-08-16",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1213,7 +1213,7 @@ var triggerLogObj期权 = {
       "2017-10-13": [
         {
           "trigDate": "2017-10-13",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1237,7 +1237,7 @@ var triggerLogObj期权 = {
       "2017-12-05": [
         {
           "trigDate": "2017-12-05",
-          "quantName": "上证_日九空金叉",
+          "quantName": "上证低位_日九空金叉",
           "logInfo": ""
         },
         {
@@ -1261,12 +1261,12 @@ var triggerLogObj期权 = {
       "2017-12-06": [
         {
           "trigDate": "2017-12-06",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2017-12-06",
-          "quantName": "上证_日九空金叉",
+          "quantName": "上证低位_日九空金叉",
           "logInfo": ""
         },
         {
@@ -1290,7 +1290,7 @@ var triggerLogObj期权 = {
       "2017-12-19": [
         {
           "trigDate": "2017-12-19",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -1314,7 +1314,7 @@ var triggerLogObj期权 = {
       "2018-01-03": [
         {
           "trigDate": "2018-01-03",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1340,12 +1340,12 @@ var triggerLogObj期权 = {
       "2019-05-27": [
         {
           "trigDate": "2019-05-27",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2019-05-27",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1369,7 +1369,7 @@ var triggerLogObj期权 = {
       "2019-05-28": [
         {
           "trigDate": "2019-05-28",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1393,7 +1393,7 @@ var triggerLogObj期权 = {
       "2019-05-31": [
         {
           "trigDate": "2019-05-31",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1417,12 +1417,12 @@ var triggerLogObj期权 = {
       "2019-11-25": [
         {
           "trigDate": "2019-11-25",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2019-11-25",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1446,7 +1446,7 @@ var triggerLogObj期权 = {
       "2019-11-26": [
         {
           "trigDate": "2019-11-26",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1470,7 +1470,7 @@ var triggerLogObj期权 = {
       "2019-11-27": [
         {
           "trigDate": "2019-11-27",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1494,7 +1494,7 @@ var triggerLogObj期权 = {
       "2019-12-16": [
         {
           "trigDate": "2019-12-16",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1518,7 +1518,7 @@ var triggerLogObj期权 = {
       "2020-03-23": [
         {
           "trigDate": "2020-03-23",
-          "quantName": "沪深300_日周急跌空但",
+          "quantName": "沪深300低位_日周急跌空但",
           "logInfo": ""
         },
         {
@@ -1542,7 +1542,7 @@ var triggerLogObj期权 = {
       "2020-05-28": [
         {
           "trigDate": "2020-05-28",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1566,7 +1566,7 @@ var triggerLogObj期权 = {
       "2020-06-01": [
         {
           "trigDate": "2020-06-01",
-          "quantName": "科创50_金叉低连空但",
+          "quantName": "科创50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1590,7 +1590,7 @@ var triggerLogObj期权 = {
       "2020-06-04": [
         {
           "trigDate": "2020-06-04",
-          "quantName": "科创50_ma5金叉10绿空绿红",
+          "quantName": "科创50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -1614,7 +1614,7 @@ var triggerLogObj期权 = {
       "2020-06-05": [
         {
           "trigDate": "2020-06-05",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1638,17 +1638,17 @@ var triggerLogObj期权 = {
       "2020-06-08": [
         {
           "trigDate": "2020-06-08",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2020-06-08",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2020-06-08",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1672,17 +1672,17 @@ var triggerLogObj期权 = {
       "2020-06-09": [
         {
           "trigDate": "2020-06-09",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2020-06-09",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2020-06-09",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1706,12 +1706,12 @@ var triggerLogObj期权 = {
       "2020-06-10": [
         {
           "trigDate": "2020-06-10",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2020-06-10",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1735,7 +1735,7 @@ var triggerLogObj期权 = {
       "2020-10-09": [
         {
           "trigDate": "2020-10-09",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1759,7 +1759,7 @@ var triggerLogObj期权 = {
       "2020-10-19": [
         {
           "trigDate": "2020-10-19",
-          "quantName": "上证_ma10UpMas低连空但",
+          "quantName": "上证低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1783,7 +1783,7 @@ var triggerLogObj期权 = {
       "2020-11-03": [
         {
           "trigDate": "2020-11-03",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1807,7 +1807,7 @@ var triggerLogObj期权 = {
       "2020-12-01": [
         {
           "trigDate": "2020-12-01",
-          "quantName": "科创50_金叉低连空但",
+          "quantName": "科创50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1831,7 +1831,7 @@ var triggerLogObj期权 = {
       "2020-12-02": [
         {
           "trigDate": "2020-12-02",
-          "quantName": "科创50_周downMas绿空绿红",
+          "quantName": "科创50低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1855,7 +1855,7 @@ var triggerLogObj期权 = {
       "2020-12-03": [
         {
           "trigDate": "2020-12-03",
-          "quantName": "科创50_周downMas绿空绿红",
+          "quantName": "科创50低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -1879,7 +1879,7 @@ var triggerLogObj期权 = {
       "2020-12-16": [
         {
           "trigDate": "2020-12-16",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1903,7 +1903,7 @@ var triggerLogObj期权 = {
       "2020-12-17": [
         {
           "trigDate": "2020-12-17",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1927,7 +1927,7 @@ var triggerLogObj期权 = {
       "2020-12-28": [
         {
           "trigDate": "2020-12-28",
-          "quantName": "沪深300_ma10UpMas低连空但",
+          "quantName": "沪深300低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -1951,7 +1951,7 @@ var triggerLogObj期权 = {
       "2020-12-30": [
         {
           "trigDate": "2020-12-30",
-          "quantName": "科创50_金叉低连空但",
+          "quantName": "科创50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -1975,7 +1975,7 @@ var triggerLogObj期权 = {
       "2020-12-31": [
         {
           "trigDate": "2020-12-31",
-          "quantName": "科创50_金叉低连空但",
+          "quantName": "科创50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2001,12 +2001,12 @@ var triggerLogObj期权 = {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2022-12-27",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2030,7 +2030,7 @@ var triggerLogObj期权 = {
       "2023-12-27": [
         {
           "trigDate": "2023-12-27",
-          "quantName": "沪深300_低位MVol金叉",
+          "quantName": "沪深300低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -2054,7 +2054,7 @@ var triggerLogObj期权 = {
       "2024-01-18": [
         {
           "trigDate": "2024-01-18",
-          "quantName": "沪深300_低位MVol金叉",
+          "quantName": "沪深300低位_MVol金叉",
           "logInfo": ""
         },
         {
@@ -2078,7 +2078,7 @@ var triggerLogObj期权 = {
       "2024-04-15": [
         {
           "trigDate": "2024-04-15",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2102,7 +2102,7 @@ var triggerLogObj期权 = {
       "2024-04-16": [
         {
           "trigDate": "2024-04-16",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2126,7 +2126,7 @@ var triggerLogObj期权 = {
       "2025-01-13": [
         {
           "trigDate": "2025-01-13",
-          "quantName": "上证_日九空金叉",
+          "quantName": "上证低位_日九空金叉",
           "logInfo": ""
         },
         {
@@ -2150,27 +2150,27 @@ var triggerLogObj期权 = {
       "2025-01-14": [
         {
           "trigDate": "2025-01-14",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2025-01-14",
-          "quantName": "上证_日九空金叉",
+          "quantName": "上证低位_日九空金叉",
           "logInfo": ""
         },
         {
           "trigDate": "2025-01-14",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2025-01-14",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2025-01-14",
-          "quantName": "科创50_ma5金叉10绿空绿红",
+          "quantName": "科创50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2194,17 +2194,17 @@ var triggerLogObj期权 = {
       "2025-01-15": [
         {
           "trigDate": "2025-01-15",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2025-01-15",
-          "quantName": "沪深300_金叉低连空但",
+          "quantName": "沪深300低位_金叉低连空但",
           "logInfo": ""
         },
         {
           "trigDate": "2025-01-15",
-          "quantName": "上证50_金叉低连空但",
+          "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2228,7 +2228,7 @@ var triggerLogObj期权 = {
       "2025-04-07": [
         {
           "trigDate": "2025-04-07",
-          "quantName": "沪深300_日周急跌空但",
+          "quantName": "沪深300低位_日周急跌空但",
           "logInfo": ""
         },
         {
@@ -2252,7 +2252,7 @@ var triggerLogObj期权 = {
       "2025-04-09": [
         {
           "trigDate": "2025-04-09",
-          "quantName": "科创50_周downMas绿空绿红",
+          "quantName": "科创50低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -2276,7 +2276,7 @@ var triggerLogObj期权 = {
       "2025-05-06": [
         {
           "trigDate": "2025-05-06",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2300,7 +2300,7 @@ var triggerLogObj期权 = {
       "2025-05-07": [
         {
           "trigDate": "2025-05-07",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2324,7 +2324,7 @@ var triggerLogObj期权 = {
       "2025-05-29": [
         {
           "trigDate": "2025-05-29",
-          "quantName": "科创50_金叉低连空但",
+          "quantName": "科创50低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2348,7 +2348,7 @@ var triggerLogObj期权 = {
       "2025-06-23": [
         {
           "trigDate": "2025-06-23",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300低位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -2372,7 +2372,7 @@ var triggerLogObj期权 = {
       "2025-06-24": [
         {
           "trigDate": "2025-06-24",
-          "quantName": "上证_金叉低连空但",
+          "quantName": "上证低位_金叉低连空但",
           "logInfo": ""
         },
         {
@@ -2396,7 +2396,7 @@ var triggerLogObj期权 = {
       "2025-07-14": [
         {
           "trigDate": "2025-07-14",
-          "quantName": "科创50_ma5金叉10绿空绿红",
+          "quantName": "科创50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2420,12 +2420,12 @@ var triggerLogObj期权 = {
       "2025-08-11": [
         {
           "trigDate": "2025-08-11",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2025-08-11",
-          "quantName": "科创50_ma5金叉10绿空绿红",
+          "quantName": "科创50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2449,17 +2449,17 @@ var triggerLogObj期权 = {
       "2025-08-12": [
         {
           "trigDate": "2025-08-12",
-          "quantName": "沪深300_ma5金叉10绿空绿红",
+          "quantName": "沪深300低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2025-08-12",
-          "quantName": "上证50_ma5金叉10绿空绿红",
+          "quantName": "上证50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2025-08-12",
-          "quantName": "科创50_ma5金叉10绿空绿红",
+          "quantName": "科创50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2483,7 +2483,7 @@ var triggerLogObj期权 = {
       "2025-08-13": [
         {
           "trigDate": "2025-08-13",
-          "quantName": "上证50_ma5金叉10绿空绿红",
+          "quantName": "上证50低位_ma5金叉10绿空绿红",
           "logInfo": ""
         },
         {
@@ -2507,7 +2507,7 @@ var triggerLogObj期权 = {
       "2025-08-19": [
         {
           "trigDate": "2025-08-19",
-          "quantName": "上证50_ma10UpMas低连空但",
+          "quantName": "上证50低位_ma10UpMas低连空但",
           "logInfo": ""
         },
         {
@@ -2535,32 +2535,32 @@ var triggerLogObj期权 = {
       "2008-01-15": [
         {
           "trigDate": "2008-01-15",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "上证50_高位KDJ死叉",
+          "quantName": "上证50高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -2584,12 +2584,12 @@ var triggerLogObj期权 = {
       "2008-01-16": [
         {
           "trigDate": "2008-01-16",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-16",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -2613,12 +2613,12 @@ var triggerLogObj期权 = {
       "2008-03-11": [
         {
           "trigDate": "2008-03-11",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2008-03-11",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2642,12 +2642,12 @@ var triggerLogObj期权 = {
       "2008-05-08": [
         {
           "trigDate": "2008-05-08",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2008-05-08",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2671,7 +2671,7 @@ var triggerLogObj期权 = {
       "2008-06-05": [
         {
           "trigDate": "2008-06-05",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2695,7 +2695,7 @@ var triggerLogObj期权 = {
       "2008-07-10": [
         {
           "trigDate": "2008-07-10",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2719,7 +2719,7 @@ var triggerLogObj期权 = {
       "2008-08-27": [
         {
           "trigDate": "2008-08-27",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2743,7 +2743,7 @@ var triggerLogObj期权 = {
       "2008-08-28": [
         {
           "trigDate": "2008-08-28",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2767,7 +2767,7 @@ var triggerLogObj期权 = {
       "2008-10-07": [
         {
           "trigDate": "2008-10-07",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2793,27 +2793,27 @@ var triggerLogObj期权 = {
       "2009-07-29": [
         {
           "trigDate": "2009-07-29",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "上证50_高位KDJ死叉",
+          "quantName": "上证50高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -2837,22 +2837,22 @@ var triggerLogObj期权 = {
       "2009-07-30": [
         {
           "trigDate": "2009-07-30",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-30",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-30",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-07-30",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -2876,7 +2876,7 @@ var triggerLogObj期权 = {
       "2009-08-04": [
         {
           "trigDate": "2009-08-04",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -2900,32 +2900,32 @@ var triggerLogObj期权 = {
       "2009-08-05": [
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证50_高位KDJ死叉",
+          "quantName": "上证50高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -2949,27 +2949,27 @@ var triggerLogObj期权 = {
       "2009-08-06": [
         {
           "trigDate": "2009-08-06",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -2993,12 +2993,12 @@ var triggerLogObj期权 = {
       "2009-08-07": [
         {
           "trigDate": "2009-08-07",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-07",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3022,17 +3022,17 @@ var triggerLogObj期权 = {
       "2009-11-13": [
         {
           "trigDate": "2009-11-13",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-13",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-13",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3056,7 +3056,7 @@ var triggerLogObj期权 = {
       "2009-11-19": [
         {
           "trigDate": "2009-11-19",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3080,7 +3080,7 @@ var triggerLogObj期权 = {
       "2009-11-20": [
         {
           "trigDate": "2009-11-20",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3104,12 +3104,12 @@ var triggerLogObj期权 = {
       "2009-11-23": [
         {
           "trigDate": "2009-11-23",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-23",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3133,12 +3133,12 @@ var triggerLogObj期权 = {
       "2009-11-24": [
         {
           "trigDate": "2009-11-24",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-24",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3162,27 +3162,27 @@ var triggerLogObj期权 = {
       "2009-11-25": [
         {
           "trigDate": "2009-11-25",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3206,7 +3206,7 @@ var triggerLogObj期权 = {
       "2009-12-11": [
         {
           "trigDate": "2009-12-11",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3230,12 +3230,12 @@ var triggerLogObj期权 = {
       "2010-01-04": [
         {
           "trigDate": "2010-01-04",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-04",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3259,7 +3259,7 @@ var triggerLogObj期权 = {
       "2010-01-05": [
         {
           "trigDate": "2010-01-05",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3283,12 +3283,12 @@ var triggerLogObj期权 = {
       "2010-01-06": [
         {
           "trigDate": "2010-01-06",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-06",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3312,22 +3312,22 @@ var triggerLogObj期权 = {
       "2010-01-07": [
         {
           "trigDate": "2010-01-07",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-07",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-07",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-07",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3351,27 +3351,27 @@ var triggerLogObj期权 = {
       "2010-01-08": [
         {
           "trigDate": "2010-01-08",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-08",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-08",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-08",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-08",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3395,12 +3395,12 @@ var triggerLogObj期权 = {
       "2010-03-04": [
         {
           "trigDate": "2010-03-04",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-03-04",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -3424,12 +3424,12 @@ var triggerLogObj期权 = {
       "2010-04-07": [
         {
           "trigDate": "2010-04-07",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-04-07",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3453,7 +3453,7 @@ var triggerLogObj期权 = {
       "2010-04-08": [
         {
           "trigDate": "2010-04-08",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3477,17 +3477,17 @@ var triggerLogObj期权 = {
       "2010-04-09": [
         {
           "trigDate": "2010-04-09",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-04-09",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-04-09",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3511,7 +3511,7 @@ var triggerLogObj期权 = {
       "2010-04-12": [
         {
           "trigDate": "2010-04-12",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3535,7 +3535,7 @@ var triggerLogObj期权 = {
       "2010-04-16": [
         {
           "trigDate": "2010-04-16",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -3559,12 +3559,12 @@ var triggerLogObj期权 = {
       "2010-10-18": [
         {
           "trigDate": "2010-10-18",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-18",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3588,7 +3588,7 @@ var triggerLogObj期权 = {
       "2010-10-19": [
         {
           "trigDate": "2010-10-19",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3612,17 +3612,17 @@ var triggerLogObj期权 = {
       "2010-10-20": [
         {
           "trigDate": "2010-10-20",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-20",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-20",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3646,12 +3646,12 @@ var triggerLogObj期权 = {
       "2010-10-21": [
         {
           "trigDate": "2010-10-21",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-21",
-          "quantName": "上证50_高位KDJ死叉",
+          "quantName": "上证50高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -3675,27 +3675,27 @@ var triggerLogObj期权 = {
       "2010-10-22": [
         {
           "trigDate": "2010-10-22",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-22",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-22",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-22",
-          "quantName": "上证50_高位KDJ死叉",
+          "quantName": "上证50高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-22",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3719,12 +3719,12 @@ var triggerLogObj期权 = {
       "2010-10-25": [
         {
           "trigDate": "2010-10-25",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-25",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3748,7 +3748,7 @@ var triggerLogObj期权 = {
       "2010-10-27": [
         {
           "trigDate": "2010-10-27",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -3772,12 +3772,12 @@ var triggerLogObj期权 = {
       "2010-10-28": [
         {
           "trigDate": "2010-10-28",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-10-28",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3801,7 +3801,7 @@ var triggerLogObj期权 = {
       "2010-10-29": [
         {
           "trigDate": "2010-10-29",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3825,12 +3825,12 @@ var triggerLogObj期权 = {
       "2010-11-11": [
         {
           "trigDate": "2010-11-11",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2010-11-11",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3854,7 +3854,7 @@ var triggerLogObj期权 = {
       "2010-12-20": [
         {
           "trigDate": "2010-12-20",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -3878,7 +3878,7 @@ var triggerLogObj期权 = {
       "2011-03-30": [
         {
           "trigDate": "2011-03-30",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -3902,7 +3902,7 @@ var triggerLogObj期权 = {
       "2011-04-11": [
         {
           "trigDate": "2011-04-11",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3926,17 +3926,17 @@ var triggerLogObj期权 = {
       "2011-04-12": [
         {
           "trigDate": "2011-04-12",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2011-04-12",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2011-04-12",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -3960,17 +3960,17 @@ var triggerLogObj期权 = {
       "2011-04-19": [
         {
           "trigDate": "2011-04-19",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2011-04-19",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2011-04-19",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -3994,17 +3994,17 @@ var triggerLogObj期权 = {
       "2011-07-11": [
         {
           "trigDate": "2011-07-11",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2011-07-11",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2011-07-11",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4028,7 +4028,7 @@ var triggerLogObj期权 = {
       "2011-07-19": [
         {
           "trigDate": "2011-07-19",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -4054,12 +4054,12 @@ var triggerLogObj期权 = {
       "2015-06-16": [
         {
           "trigDate": "2015-06-16",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2015-06-16",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4083,12 +4083,12 @@ var triggerLogObj期权 = {
       "2015-06-17": [
         {
           "trigDate": "2015-06-17",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2015-06-17",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4112,7 +4112,7 @@ var triggerLogObj期权 = {
       "2015-07-16": [
         {
           "trigDate": "2015-07-16",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4136,7 +4136,7 @@ var triggerLogObj期权 = {
       "2015-07-22": [
         {
           "trigDate": "2015-07-22",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4160,7 +4160,7 @@ var triggerLogObj期权 = {
       "2015-08-19": [
         {
           "trigDate": "2015-08-19",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4184,17 +4184,17 @@ var triggerLogObj期权 = {
       "2015-12-09": [
         {
           "trigDate": "2015-12-09",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2015-12-09",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2015-12-09",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4218,7 +4218,7 @@ var triggerLogObj期权 = {
       "2015-12-10": [
         {
           "trigDate": "2015-12-10",
-          "quantName": "上证50_高位KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4242,7 +4242,7 @@ var triggerLogObj期权 = {
       "2015-12-11": [
         {
           "trigDate": "2015-12-11",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4266,12 +4266,12 @@ var triggerLogObj期权 = {
       "2015-12-25": [
         {
           "trigDate": "2015-12-25",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2015-12-25",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4297,17 +4297,17 @@ var triggerLogObj期权 = {
       "2018-01-26": [
         {
           "trigDate": "2018-01-26",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-01-26",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-01-26",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4331,12 +4331,12 @@ var triggerLogObj期权 = {
       "2018-02-28": [
         {
           "trigDate": "2018-02-28",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-02-28",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -4360,12 +4360,12 @@ var triggerLogObj期权 = {
       "2018-03-01": [
         {
           "trigDate": "2018-03-01",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-03-01",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4389,12 +4389,12 @@ var triggerLogObj期权 = {
       "2018-03-02": [
         {
           "trigDate": "2018-03-02",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-03-02",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4418,7 +4418,7 @@ var triggerLogObj期权 = {
       "2018-03-05": [
         {
           "trigDate": "2018-03-05",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4442,7 +4442,7 @@ var triggerLogObj期权 = {
       "2018-03-06": [
         {
           "trigDate": "2018-03-06",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4466,7 +4466,7 @@ var triggerLogObj期权 = {
       "2018-03-15": [
         {
           "trigDate": "2018-03-15",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4490,7 +4490,7 @@ var triggerLogObj期权 = {
       "2018-03-16": [
         {
           "trigDate": "2018-03-16",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4514,12 +4514,12 @@ var triggerLogObj期权 = {
       "2018-03-19": [
         {
           "trigDate": "2018-03-19",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-03-19",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4543,7 +4543,7 @@ var triggerLogObj期权 = {
       "2018-06-08": [
         {
           "trigDate": "2018-06-08",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4567,12 +4567,12 @@ var triggerLogObj期权 = {
       "2018-06-11": [
         {
           "trigDate": "2018-06-11",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2018-06-11",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4596,7 +4596,7 @@ var triggerLogObj期权 = {
       "2018-09-03": [
         {
           "trigDate": "2018-09-03",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4622,22 +4622,22 @@ var triggerLogObj期权 = {
       "2021-02-23": [
         {
           "trigDate": "2021-02-23",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-02-23",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-02-23",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-02-23",
-          "quantName": "科创50_红但down死叉",
+          "quantName": "科创50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4661,12 +4661,12 @@ var triggerLogObj期权 = {
       "2021-05-27": [
         {
           "trigDate": "2021-05-27",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-05-27",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4690,12 +4690,12 @@ var triggerLogObj期权 = {
       "2021-05-31": [
         {
           "trigDate": "2021-05-31",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-05-31",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4719,7 +4719,7 @@ var triggerLogObj期权 = {
       "2021-06-01": [
         {
           "trigDate": "2021-06-01",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4743,12 +4743,12 @@ var triggerLogObj期权 = {
       "2021-06-02": [
         {
           "trigDate": "2021-06-02",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-06-02",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -4772,17 +4772,17 @@ var triggerLogObj期权 = {
       "2021-06-03": [
         {
           "trigDate": "2021-06-03",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-06-03",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2021-06-03",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -4806,22 +4806,22 @@ var triggerLogObj期权 = {
       "2021-06-04": [
         {
           "trigDate": "2021-06-04",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-06-04",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2021-06-04",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2021-06-04",
-          "quantName": "科创50_红但down死叉",
+          "quantName": "科创50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4845,12 +4845,12 @@ var triggerLogObj期权 = {
       "2021-07-15": [
         {
           "trigDate": "2021-07-15",
-          "quantName": "科创50_红但down死叉",
+          "quantName": "科创50高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-07-15",
-          "quantName": "科创50_周downMas绿空绿红",
+          "quantName": "科创50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -4874,7 +4874,7 @@ var triggerLogObj期权 = {
       "2021-11-25": [
         {
           "trigDate": "2021-11-25",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -4898,7 +4898,7 @@ var triggerLogObj期权 = {
       "2021-11-29": [
         {
           "trigDate": "2021-11-29",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4922,7 +4922,7 @@ var triggerLogObj期权 = {
       "2021-12-10": [
         {
           "trigDate": "2021-12-10",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -4946,7 +4946,7 @@ var triggerLogObj期权 = {
       "2021-12-14": [
         {
           "trigDate": "2021-12-14",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -4970,17 +4970,17 @@ var triggerLogObj期权 = {
       "2021-12-15": [
         {
           "trigDate": "2021-12-15",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2021-12-15",
-          "quantName": "沪深300_高位KDJ死叉",
+          "quantName": "沪深300高位_KDJ死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-12-15",
-          "quantName": "上证50_高位KDJ死叉",
+          "quantName": "上证50高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -5004,12 +5004,12 @@ var triggerLogObj期权 = {
       "2021-12-16": [
         {
           "trigDate": "2021-12-16",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2021-12-16",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
@@ -5033,7 +5033,7 @@ var triggerLogObj期权 = {
       "2022-01-06": [
         {
           "trigDate": "2022-01-06",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5057,7 +5057,7 @@ var triggerLogObj期权 = {
       "2022-01-07": [
         {
           "trigDate": "2022-01-07",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5081,12 +5081,12 @@ var triggerLogObj期权 = {
       "2022-01-24": [
         {
           "trigDate": "2022-01-24",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2022-01-24",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5110,7 +5110,7 @@ var triggerLogObj期权 = {
       "2022-02-23": [
         {
           "trigDate": "2022-02-23",
-          "quantName": "上证50_红但down死叉",
+          "quantName": "上证50高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5134,7 +5134,7 @@ var triggerLogObj期权 = {
       "2022-03-04": [
         {
           "trigDate": "2022-03-04",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -5158,7 +5158,7 @@ var triggerLogObj期权 = {
       "2022-03-28": [
         {
           "trigDate": "2022-03-28",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5182,7 +5182,7 @@ var triggerLogObj期权 = {
       "2022-04-07": [
         {
           "trigDate": "2022-04-07",
-          "quantName": "上证_高位KDJ死叉",
+          "quantName": "上证高位_KDJ死叉",
           "logInfo": ""
         },
         {
@@ -5206,7 +5206,7 @@ var triggerLogObj期权 = {
       "2022-04-08": [
         {
           "trigDate": "2022-04-08",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5230,7 +5230,7 @@ var triggerLogObj期权 = {
       "2022-06-30": [
         {
           "trigDate": "2022-06-30",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5254,22 +5254,22 @@ var triggerLogObj期权 = {
       "2022-07-06": [
         {
           "trigDate": "2022-07-06",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-06",
-          "quantName": "沪深300_高位KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉_",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-06",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-06",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -5293,22 +5293,22 @@ var triggerLogObj期权 = {
       "2022-07-07": [
         {
           "trigDate": "2022-07-07",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-07",
-          "quantName": "上证_周downMas绿空绿红",
+          "quantName": "上证高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-07",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-07",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -5332,12 +5332,12 @@ var triggerLogObj期权 = {
       "2022-07-08": [
         {
           "trigDate": "2022-07-08",
-          "quantName": "沪深300_周downMas绿空绿红",
+          "quantName": "沪深300高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-08",
-          "quantName": "上证50_周downMas绿空绿红",
+          "quantName": "上证50高位_周downMas绿空绿红",
           "logInfo": ""
         },
         {
@@ -5361,7 +5361,7 @@ var triggerLogObj期权 = {
       "2022-08-15": [
         {
           "trigDate": "2022-08-15",
-          "quantName": "沪深300_红但down死叉",
+          "quantName": "沪深300高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5385,7 +5385,7 @@ var triggerLogObj期权 = {
       "2022-08-22": [
         {
           "trigDate": "2022-08-22",
-          "quantName": "上证_红但down死叉",
+          "quantName": "上证高位_红但down死叉",
           "logInfo": ""
         },
         {
@@ -5409,7 +5409,7 @@ var triggerLogObj期权 = {
       "2022-09-15": [
         {
           "trigDate": "2022-09-15",
-          "quantName": "上证_高位KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉_",
           "logInfo": ""
         },
         {
