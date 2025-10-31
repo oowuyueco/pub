@@ -122674,5 +122674,21 @@ var 道琼斯 = [
     "volume": 694170434,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-30",
+    "timestamp": 1761796800000,
+    "open": 47446.88,
+    "high": 48014.92,
+    "low": 47381.91,
+    "close": 47522.12,
+    "percent": -0.23,
+    "volume": 614874963,
+    "hsl": 0,
+    "zgs": null
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.道琼斯 = 道琼斯
+};

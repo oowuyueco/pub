@@ -115594,5 +115594,21 @@ var 恒生 = [
     "volume": 353804446790,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-31",
+    "timestamp": 1761840000000,
+    "open": 26263.01,
+    "high": 26283.96,
+    "low": 25906.65,
+    "close": 25906.65,
+    "percent": -1.43,
+    "volume": 257612084201,
+    "hsl": 0,
+    "zgs": null
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.恒生 = 恒生
+};

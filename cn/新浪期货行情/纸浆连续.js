@@ -16778,5 +16778,19 @@ var 纸浆连续 = [
     "volume": 204394,
     "hold": 154629,
     "settle": 5240
+  },
+  {
+    "date": "2025-10-31",
+    "open": 5232,
+    "high": 5262,
+    "low": 5186,
+    "close": 5212,
+    "volume": 229866,
+    "hold": 155284,
+    "settle": 5232
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.纸浆连续 = 纸浆连续
+};

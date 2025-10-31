@@ -16942,5 +16942,21 @@ var 科创50 = [
     "volume": 1358141800,
     "hsl": 2.07,
     "zgs": 656107149.7584542
+  },
+  {
+    "date": "2025-10-31",
+    "timestamp": 1761840000000,
+    "open": 1451.06,
+    "high": 1452.24,
+    "low": 1415.53,
+    "close": 1415.53,
+    "percent": -3.13,
+    "volume": 1407525200,
+    "hsl": 2.15,
+    "zgs": 654662883.7209302
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.科创50 = 科创50
+};

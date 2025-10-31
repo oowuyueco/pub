@@ -74434,5 +74434,21 @@ var 纳指 = [
     "volume": 10613503682,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-30",
+    "timestamp": 1761796800000,
+    "open": 23793.082,
+    "high": 23846.132,
+    "low": 23578.469,
+    "close": 23581.144,
+    "percent": -1.575,
+    "volume": 11161716207,
+    "hsl": 0,
+    "zgs": null
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.纳指 = 纳指
+};

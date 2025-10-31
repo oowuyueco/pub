@@ -165922,5 +165922,21 @@ var 标普500 = [
     "volume": 3970463970,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-30",
+    "timestamp": 1761796800000,
+    "open": 6860.5,
+    "high": 6880.75,
+    "low": 6820.69,
+    "close": 6822.34,
+    "percent": -0.99,
+    "volume": 3911030954,
+    "hsl": 0,
+    "zgs": null
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.标普500 = 标普500
+};

@@ -39154,5 +39154,21 @@ var 沪深300ETF = [
     "volume": 816461854,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-31",
+    "timestamp": 1761840000000,
+    "open": 4.819,
+    "high": 4.826,
+    "low": 4.755,
+    "close": 4.756,
+    "percent": -1.39,
+    "volume": 1432568620,
+    "hsl": 0,
+    "zgs": null
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.沪深300ETF = 沪深300ETF
+};

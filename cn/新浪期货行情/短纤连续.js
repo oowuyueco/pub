@@ -12268,5 +12268,19 @@ var 短纤连续 = [
     "volume": 136879,
     "hold": 142919,
     "settle": 6242
+  },
+  {
+    "date": "2025-10-31",
+    "open": 6208,
+    "high": 6240,
+    "low": 6174,
+    "close": 6198,
+    "volume": 126788,
+    "hold": 123496,
+    "settle": 6200
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.短纤连续 = 短纤连续
+};

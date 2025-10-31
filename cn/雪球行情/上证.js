@@ -102130,5 +102130,21 @@ var 上证 = [
     "volume": 66848560900,
     "hsl": 1.47,
     "zgs": 45475211496.59864
+  },
+  {
+    "date": "2025-10-31",
+    "timestamp": 1761840000000,
+    "open": 3985.06,
+    "high": 3986.74,
+    "low": 3951.73,
+    "close": 3954.79,
+    "percent": -0.81,
+    "volume": 67561540600,
+    "hsl": 1.49,
+    "zgs": 45343315838.92618
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.上证 = 上证
+};

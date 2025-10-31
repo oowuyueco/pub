@@ -60334,5 +60334,21 @@ var 上证50ETF = [
     "volume": 986908581,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-10-31",
+    "timestamp": 1761840000000,
+    "open": 3.194,
+    "high": 3.197,
+    "low": 3.156,
+    "close": 3.16,
+    "percent": -1.03,
+    "volume": 1060663918,
+    "hsl": 0,
+    "zgs": null
   }
-]
+];
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.上证50ETF = 上证50ETF
+};
