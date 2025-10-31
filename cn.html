@@ -607,7 +607,7 @@
                 newArr[0] = ele[1].at(-1)?.kDate ?? ele[0]
                 newArr[1] = ele[1].toSpliced(-1)
                 newArr[2] = ele[1].at(-1)
-                newArr[3] = "低位"
+                newArr[3] = newArr[2]?.标星 ? newArr[2]?.标星.replace("位", "") : 高低位 //(newArr[1][0].includes("高位") ? "高位" : "低位") //"低位"
                 return newArr
             })
 
@@ -1217,20 +1217,21 @@
             return num < 0 ? -result : result;
         }
         function getEtfByDate(etfList, date) {
-            let curKInfo = etfList.find(e => e.date == date)
-            if (!curKInfo) {
+            let curKInfoIndex = etfList.findIndex(e => e.date == date)
+            if (curKInfoIndex <= -1) {
                 let Nlist = [-1, -2, -3, -4, -5, 1, 2]
                 for (let index = 0; index < Nlist.length; index++) {// "2018-12-31"
                     let preNexDay = getPreNexDate(date, Nlist[index])
-                    curKInfo = etfList.find(ele => { return ele.date == preNexDay })
-                    if (curKInfo) break
+                    curKInfoIndex = etfList.findIndex(ele => { return ele.date == preNexDay })
+                    if (curKInfoIndex > -1) break
                 }
             }
-            if (!curKInfo) {
+            if (curKInfoIndex <= -1) {
                 console.log("无法找到对应ETF数据日期", date)
                 return null
             }
-            return curKInfo
+            etfList[curKInfoIndex].index = curKInfoIndex
+            return etfList[curKInfoIndex]
         }
 
         //合并所有期权日 两种合并方式
@@ -1271,6 +1272,7 @@
             }
             return nameCode
         }
+        
         for (let index = 0; index < allBy期权日.length; index++) {
             let element = allBy期权日[index]
             if (+element[1].at(-1)[0].substring(0, 4) < 2013) continue
@@ -1318,6 +1320,15 @@
                 if (cond1) return true
             }
             function allow低位(curKInfo, trigArr, trigArrIndex) {
+
+                let cond_1 = true &&
+                    trigArr[trigArrIndex][3] == "低★" &&
+                    (trigArr[trigArrIndex][1]+"").includes("PK") && //基金
+                    (
+                        (trigArr[trigArrIndex][1]+"").includes("低位B") ||
+                        trigArr[trigArrIndex][1].length >= 3
+                    )  
+                if (cond_1) return true
 
                 let cond0 = true &&
                     trigArr[trigArrIndex][3] == "低★" &&
@@ -1385,14 +1396,15 @@
                 let startClose = etfType == "沪深300ETF" ? getEtfByDate(沪深300ETF, startDate).close : getEtfByDate(上证50ETF, startDate).close
                 startClose = +startClose.toFixed(3)
 
+                let 星位箭 = eleArr.at(atId)[3]
                 let direType = "购"
                 let excpEndClose = +(startClose * 1.03).toFixed(3)
-                if (element[2].includes("↓") || element[2].includes("高")) {
+                if (星位箭.includes("↓") || 星位箭.includes("高")) {
                     direType = "沽"
                     excpEndClose = +(startClose * 0.97).toFixed(3)
                 }
 
-                let pushArr = [startDate, endDate, element[2], `${startClose} ${direType}${etfType} ${excpEndClose}`]
+                let pushArr = [startDate, endDate, 星位箭, `${startClose} ${direType}${etfType} ${excpEndClose}`]
                 pushArr.tAr = eleArr.at(atId)[1] + ""
                 期权策略建议.push(pushArr)
             }
