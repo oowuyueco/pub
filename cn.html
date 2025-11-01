@@ -1528,7 +1528,12 @@
             target = target.replace("★", "位").replace(" ↓ ", "高位").replace(" ↑ ", "低位").substring(0, 2);
             return target;
         };
-        let 策略startDate = "2013-12-18" //设置开始日期同时减小计算量
+
+        let 期权startDate = decodeURI(getQueryVariable("optStartDate"));
+        let 期权endDate = decodeURI(getQueryVariable("optEndDate"));
+        if(期权startDate=="false") 期权startDate = "2013-12-18" //默认设置开始日期同时减小计算量
+        if(期权endDate=="false") 期权endDate = currentDayYMD //默认结束
+
         let 期权买卖List = 期权策略建议
             .map((ele, index) => {
                 let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
@@ -1544,7 +1549,7 @@
                 return ele //未决
             })
             .filter(e => e !== null)
-            .filter(e => 策略startDate < e[1])
+            .filter(e => 期权startDate <= e[0] && e[0] <= 期权endDate)
 
 
         console.groupCollapsed("期权策略建议    期权买卖List")
@@ -1591,12 +1596,34 @@
         let 总入金 = 0;
         let 总buyCash = 0;
         let 总sellCash = 0;
+        let 总费用 = 0;
         let need入金 = {};
         let preStartDate;
         let preEndDate;
         let 单次最小投资 = 3000;
         let 单次最大投资 = 30000;
         let 单张费用 = 10;
+        function need入金groupByYear(input) {
+            const result = {};
+            for (const [key, value] of Object.entries(input)) {
+                // 提取键中的起始年份（第一个日期的前4个字符）
+                const startDate = key.split(' ')[0];
+                const year = startDate.substring(0, 4);
+                
+                // 如果年份组不存在，则初始化一个对象，包含 sum 属性
+                if (!result[year]) {
+                    result[year] = { sum: 0 };
+                }
+                
+                // 将当前键值对添加到年份组中
+                result[year][key] = value;
+                
+                // 更新总和
+                result[year].sum += value;
+                result[year].sum = +result[year].sum.toFixed(2)
+            }
+            return result;
+        }
         function getBuyCashAnd入金(curBuy) {
             let buyCash = 0;
             let curBuy入金 = 0;
@@ -1611,6 +1638,7 @@
                 let optionStartPrice = curBuy[7] * 10000; //1张  3674  curBuy[7]期权价格
                 buyCount = Math.ceil(buyCash / optionStartPrice);
                 buyCash = buyCount * optionStartPrice + buyCount * 单张费用;
+                总费用 = 总费用 + buyCount * 单张费用
             }
 
             if (asset.现金 < buyCash) {
@@ -1799,22 +1827,25 @@
             if (curDateIndex > -1 && curDateIndex < 沪深300.length - 1) return 沪深300[curDateIndex + preNext].date
             else return stampToDate(dateToStamp(curDate) + preNext * 86400000)
         }
+        function getKeyId(期权arr) {
+            return 期权arr[0] + 期权arr[1] + 期权arr[2];
+        }
+        
         async function 模拟交易() {
-            let startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0])
+            const 模拟盈亏 = false;// -1 //Math.random()*2-1 == [-1,1)
+            const startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0]);
+            const typeIndex = 2;
+            const buyDateIndex = 5;
+            const sellDateIndex = 6;
+            const buyPriceIndex = 7;
+            const sellPriceIndex = 8;
+            const profileIndex = 9;
+            const buyCashIndex = 10;
+            const sellCashIndex = 11;
+
             for (let i = startOldestIndex; i < 沪深300.length; i++) {
                 let curDate = 沪深300[i].date;
                 let curDateHasConsole = false;
-                function getKeyId(期权arr) {
-                    return 期权arr[0] + 期权arr[1] + 期权arr[2];
-                }
-                let typeIndex = 2;
-                let buyDateIndex = 5;
-                let sellDateIndex = 6;
-                let buyPriceIndex = 7;
-                let sellPriceIndex = 8;
-                let profileIndex = 9;
-                let buyCashIndex = 10;
-                let sellCashIndex = 11;
 
                 //模拟触发买入时间价格写入数组  未定触发买入通知
                 let trigBuy = 期权买卖List.find((e) => e[0] == curDate && !arrayHasIndex(e, buyDateIndex) && !arrayHasIndex(e, buyPriceIndex));
@@ -1845,7 +1876,6 @@
                     trigBuy[buyPriceIndex] = buyPrice;
                 }
 
-
                 //模拟触发卖出时间价格写入数组   手动触发卖出通知
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
                     let asset期权 = asset.期权[index];
@@ -1875,6 +1905,11 @@
 
                         let buyPrice = asset期权[7];
                         profile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
+                        
+                        if(isNumber(模拟盈亏)){
+                            profile =  模拟盈亏
+                            sellPrice =   buyPrice * (1+profile)
+                        }
 
                         asset期权[sellDateIndex] = sellDate + sellPtype;
                         asset期权[sellPriceIndex] = sellPrice;
@@ -1906,6 +1941,11 @@
 
                         let buyPrice = asset期权[7];
                         profile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
+
+                        if(模拟盈亏){
+                            profile = 模拟盈亏
+                            sellPrice =   buyPrice * (1+profile)
+                        }
 
                         asset期权[sellDateIndex] = "提前" + sellDate + sellPtype;
                         asset期权[sellPriceIndex] = sellPrice;
@@ -1949,6 +1989,7 @@
                 //实际卖出Cash
                 let curAllSell入金;
                 let curAllSellCash;
+                let curAllNeed入金Count = 0;
                 let cur模拟SellCount = 0;
                 let cur手动SellCount = 0;
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
@@ -1965,8 +2006,11 @@
                     // if (asset期权[profileIndex] > 2) asset期权[profileIndex] = 2
                     let sellCash = (asset期权[buyCashIndex] - 张数 * 单张费用) * (1 + asset期权[profileIndex]);
                     sellCash = sellCash - 张数 * 单张费用;
+                    总费用 = 总费用 + 张数 * 单张费用;
                     总sellCash += sellCash;
                     curAllSellCash = sellCash + (curAllSellCash ?? 0);
+
+                    let curSell入金;
                     if (sellCash < 0 && asset.现金 + sellCash < 0) {
                         curSell入金 = 0 - (asset.现金 + sellCash);
                         总入金 = 总入金 + curSell入金;
@@ -1975,12 +2019,11 @@
                         asset.现金 = +asset.现金.toFixed(2);
                         curSell入金 = +curSell入金.toFixed(2);
                         need入金[asset期权[0] + " " + asset期权[1] + " sell "] = curSell入金;
-                        console.log(curDate + " 补足卖手续费入金", curSell入金, "=>", JSON.parse(JSON.stringify(asset)));
-                        curDateHasConsole = true;
+                        curAllNeed入金Count++;
                     }
                     sellCash = +sellCash.toFixed(2);
                     asset期权[sellCashIndex] = sellCash;
-                    asset期权[4] += ":" + get持仓日数(asset期权) + "日";
+                    asset期权[4] = asset期权[4] + ":" + get持仓日数(asset期权) + "日"  + (curSell入金>0?":入金卖":""); //
 
                     ////从后往前所以可以删除而不影响索引！！！！！！
                     //asset.期权 = asset.期权.filter((item) => getKeyId(item) != getKeyId(asset期权))
@@ -2010,8 +2053,7 @@
                         asset.现金 = +asset.现金.toFixed(2);
                         curSell入金 = +curSell入金.toFixed(2);
                         need入金[asset期权[0] + " " + asset期权[1] + " sell "] = curSell入金;
-                        console.log(curDate + " 补足卖手续费入金手动", curSell入金, "=>", JSON.parse(JSON.stringify(asset)));
-                        curDateHasConsole = true
+                        curAllNeed入金Count++;                     
                     }
                     sellCash = +sellCash.toFixed(2);
                     asset期权[4] += ":" + get持仓日数(asset期权) + "日";
@@ -2023,11 +2065,15 @@
                     cur手动SellCount++
                 }
                 if (curAllSellCash) {
+                    if(curAllSell入金>0){
+                        console.log(curDateHasConsole ? "             " + "补足卖手续费入金"+curAllNeed入金Count : curDate + " 补足卖手续费入金"+curAllNeed入金Count, curAllSell入金, "=>", JSON.parse(JSON.stringify(asset)));    
+                        curDateHasConsole = true;
+                    }              
                     curAllSellCash = +curAllSellCash.toFixed(2);
                     let curSellTypeCount = "卖出"
                     if (cur模拟SellCount > 0) curSellTypeCount = curSellTypeCount + "模拟" + cur模拟SellCount
                     if (cur手动SellCount > 0) curSellTypeCount = curSellTypeCount + "手动" + cur手动SellCount
-                    console.log(curDateHasConsole ? "             " + curSellTypeCount : curDate + " " + curSellTypeCount, curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)));
+                    console.log(curDateHasConsole ? "           " + curSellTypeCount : curDate + " " + curSellTypeCount, curAllSellCash, "=>", JSON.parse(JSON.stringify(asset)));
                     curDateHasConsole = true
                 }
 
@@ -2060,7 +2106,7 @@
                     curAllBuyCash = buyCash + (curAllBuyCash ?? 0);
                     buyCash = +buyCash.toFixed(2);
                     curBuy[buyCashIndex] = buyCash;
-                    curBuy[4] = curBuy[4].replace(".xlsx", "") + ":" + buyCount + "张"; //购买张数
+                    curBuy[4] = curBuy[4].replace(".xlsx", "") + (curbuy入金>0?":入金买":"") + ":" + buyCount + "张"; //购买张数
 
                     asset.现金 = asset.现金 - buyCash;
                     asset.现金 = +asset.现金.toFixed(2);
@@ -2124,6 +2170,7 @@
                 test总sellCash += ele.at(-1);
             });
             console.log("总buyCash", +test总buyCash.toFixed(2), "总sellCash", +test总sellCash.toFixed(2), "总sellCash-总sellCash+总入金", +(test总sellCash - test总buyCash + 总入金).toFixed(2));
+            console.log("总费用",总费用,"need入金",need入金groupByYear(need入金))
             console.groupEnd();
 
 
