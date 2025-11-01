@@ -3204,8 +3204,54 @@
                     },
                 },
 
-
                 { //策略
+                    name: '基金策略',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
+                    symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "green"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 3,
+                    data: 基金策略低位ByDay.filter((item) => {
+                        return item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], 19]
+                    }).addStartEnd()
+                },
+
+                { 
+                    name: '基金策略',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
+                    symbol: 'pin',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "green"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 6
+                    },
+                    zlevel: 3,
+                    data: 基金策略低位ByDay.filter((item) => {
+                        return !item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], 18.5]
+                    }).addStartEnd()
+                },
+
+
+                { 
                     name: '大盘策略',
                     type: 'scatter',
                     xAxisIndex: 3,
@@ -3228,7 +3274,7 @@
                     }).addStartEnd()
                 },
 
-                { //策略
+                { 
                     name: '大盘策略',
                     type: 'scatter',
                     xAxisIndex: 3,
@@ -3251,7 +3297,7 @@
                     }).addStartEnd()
                 },
 
-                { //策略
+                {
                     name: '大盘策略',
                     type: 'scatter',
                     xAxisIndex: 3,
@@ -3446,30 +3492,6 @@
                         return tmp
                     }).addStartEnd(),
                 },
-
-
-                //  { //基金策略
-                //     name: '基金策略',
-                //     type: 'scatter',
-                //     xAxisIndex: 6,
-                //     yAxisIndex: 12,
-                //     // /symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
-                //     itemStyle: {
-                //         normal: {
-                //             opacity: 1,
-                //             color: "red"
-                //         }
-                //     },
-                //     symbolSize: function (val) {
-                //         return 3
-                //     },
-                //     zlevel: 3,
-                //     data: 基金策略.filter((item) => {
-                //         return item[2].includes("高") || item[2].includes("↓")
-                //     }).map((item) => {
-                //         return [item[0], -20]
-                //     }).addStartEnd()
-                // },
 
 
                 { //期权策略
@@ -3868,6 +3890,11 @@
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "大盘策略"
+            });
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "基金策略"
             });
 
             myChart.dispatchAction({
