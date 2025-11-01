@@ -1053,7 +1053,7 @@
             }
             trigDateArr = trigDateArr.map((ele, index, preArr) => {
                 let newArr = []
-                newArr[0] = ele[0] //"2010-10-25"
+                newArr[0] = ele[1].at(-1)?.kDate ?? ele[0] //kDate 基金触发日不一定是交易日 
                 newArr[1] = ele[1].toSpliced(-1) //['上证高位_红但down死叉', '上证50高位_红但down死叉']
                 newArr[2] = ele[1].at(-1) //{…}
                 newArr[3] = get星位箭头(newArr[1], newArr[2])
@@ -1663,7 +1663,7 @@
             let trigArrCount = trigArr.length;
             let 高位KDJ死叉Count = 0;
             trigArr.forEach((ele) => {
-                if (ele.includes("高位KDJ死叉")) 高位KDJ死叉Count++;
+                if (ele.includes("_KDJ死叉")) 高位KDJ死叉Count++;
             });
             return 高位KDJ死叉Count == trigArrCount && trigArrCount == 1;
         }
@@ -1672,7 +1672,7 @@
             let trigArrCount = trigArr.length;
             let 红但down死叉Count = 0;
             trigArr.forEach((ele) => {
-                if (ele.includes("红但down死叉")) 红但down死叉Count++;
+                if (ele.includes("_红但down死叉")) 红但down死叉Count++;
             });
             return 红但down死叉Count == trigArrCount && trigArrCount == 1;
         }
