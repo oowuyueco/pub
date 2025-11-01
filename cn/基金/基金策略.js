@@ -820,4 +820,4 @@ var triggerLogObj基金 = {
         }
     ]
 };
-var runDate = "2025-11-01";
+var runDate = "2025-11-02";
