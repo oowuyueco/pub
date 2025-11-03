@@ -39166,6 +39166,18 @@ var 沪深300ETF = [
     "volume": 1432568620,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-11-03",
+    "timestamp": 1762099200000,
+    "open": 4.752,
+    "high": 4.767,
+    "low": 4.705,
+    "close": 4.763,
+    "percent": 0.15,
+    "volume": 775988137,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
