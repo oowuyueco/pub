@@ -1142,6 +1142,10 @@ var 股债差上证平均 = [
     [
         "2025-10-28",
         3.43
+    ],
+    [
+        "2025-11-02",
+        3.43
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {

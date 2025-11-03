@@ -510,6 +510,14 @@ var 财新制造业PMI = [
     [
         "2025-08-28",
         50.5
+    ],
+    [
+        "2025-09-28",
+        51.2
+    ],
+    [
+        "2025-11-28",
+        50.6
     ]
 ]
 var 官方制造业PMI = [
@@ -1364,9 +1372,13 @@ var 官方制造业PMI = [
     [
         "2025-09-28",
         49.8
+    ],
+    [
+        "2025-10-28",
+        49
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
-    exports.财新制造业PMI = 财新制造业PMI
-    exports.官方制造业PMI = 官方制造业PMI
+   exports.财新制造业PMI = 财新制造业PMI
+   exports.官方制造业PMI = 官方制造业PMI
 }
