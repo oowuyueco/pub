@@ -9,6 +9,7 @@
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./js/email.min.js"></script>
     <script type="text/javascript">
+        const startJs = performance.now();
         let needBack = false
         try {
             (function () {
@@ -1608,8 +1609,9 @@
             return `${year}-${month}-${day}`;
         }
         async function readExcel(excelFileName) {
-            const url = "http://127.0.0.1:5500/tempData/期权excel/" + excelFileName;
-            const file = await (await fetch(url)).arrayBuffer();
+            const urllocal = "http://127.0.0.1:5500/tempData/期权excel/" + excelFileName;
+            const urlremote = "https://oowuyue.github.io/eco/期权excel/" + excelFileName;
+            const file = await (await fetch(urlremote)).arrayBuffer();
             const fileContent = XLSX.read(file);
 
             const sheetName = fileContent.SheetNames[0]; // 获取第一张 sheet 的名字
@@ -2256,7 +2258,9 @@
             let need入金统计 = need入金groupByYear(need入金)
             if (need入金统计[currentDayYMD.substring(0, 4)]?.sum > 30000) pageSendMail(currentDayYMD.substring(0, 4) + "年入金已超30000")
             console.log("总费用", 总费用, "need入金统计", need入金统计, "randomProfileArr", randomProfileArr);
-            if (decodeURI(getQueryVariable("testMail")) == "true") pageSendMail("cn-option-模拟交易完成测试：" + getDateTime())
+
+            const endJs = performance.now();
+            if (decodeURI(getQueryVariable("testMail")) == "true") pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒`)
             console.groupEnd();
 
 
