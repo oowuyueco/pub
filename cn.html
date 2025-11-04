@@ -1272,7 +1272,7 @@
             }
             return nameCode
         }
-        
+
         for (let index = 0; index < allBy期权日.length; index++) {
             let element = allBy期权日[index]
             if (+element[1].at(-1)[0].substring(0, 4) < 2013) continue
@@ -1323,11 +1323,11 @@
 
                 let cond_1 = true &&
                     trigArr[trigArrIndex][3] == "低★" &&
-                    (trigArr[trigArrIndex][1]+"").includes("PK") && //基金
+                    (trigArr[trigArrIndex][1] + "").includes("PK") && //基金
                     (
-                        (trigArr[trigArrIndex][1]+"").includes("低位B") ||
+                        (trigArr[trigArrIndex][1] + "").includes("低位B") ||
                         trigArr[trigArrIndex][1].length >= 3
-                    )  
+                    )
                 if (cond_1) return true
 
                 let cond0 = true &&
@@ -1413,7 +1413,7 @@
         期权策略建议 = Array.from(new Map(
             期权策略建议.map(item => [`${item[0]}-${item[1]}`, item])
         ).values())
-       
+
 
         console.groupCollapsed("allBy期权日     期权策略建议")
         console.log(allBy期权日, 期权策略建议)
@@ -1426,14 +1426,14 @@
     <script>
 
         ////手动交易  1手动写入买入时间价格cash 脚本完成交易   2手动写入卖出时间价格cash  脚本完成交易
-        let fuckyou = ["2025-10-29", "2025-10-31", "高位", "3.557 沽沪深300ETF 3.252"]
-        fuckyou.tAr = "测试插入开始手动"
+        let fuckyou = ["2018-10-29", "2018-10-31", "高位", "3.557 沽沪深300ETF 3.252"]
+        fuckyou.tAr = "测试插入开始手动2018,2025"
         期权策略建议.unshift(fuckyou)
         期权策略建议.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
 
         let 手动买卖 = [
-            ["2025-10-29", "2025-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-10沽3300:0张', '2025-10-30开盘价', '2025-10-31开盘价', 0, 0, 0, 0,0],
-            //["2025-10-29", "2025-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-10沽3300:0张', '2025-10-30开盘价', null, 0, null, null, 0],
+            ["2018-10-29", "2018-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2018-10-31沽3300:0张', '2018-10-30开盘价', '2018-10-31开盘价', 0, 0, 0, 0, 0],
+            //["2025-10-29", "2025-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-31沽3300:0张', '2025-10-30开盘价', null, 0, null, null, 0],
         ]
 
         ////模拟xlsx  1脚本写入买入时间价格；  2脚本写入买入cash 脚本完成买入交易； 3脚本写入卖出时间价格； 4脚本写入卖出cash 脚本完成卖出交易
@@ -1531,11 +1531,42 @@
             target = target.replace("★", "位").replace(" ↓ ", "高位").replace(" ↑ ", "低位").substring(0, 2);
             return target;
         };
+        function filterArrayBySecondElement(arr, N) {
+            // 用于记录每个第二个元素值在从后往前遍历中的遇到次数
+            const countMap = {};
+            // 初始化一个布尔数组，标记每个索引是否保留
+            const keepFlags = new Array(arr.length).fill(false);
+
+            // 从后往前遍历数组（从最后一个元素到第一个元素）
+            for (let i = arr.length - 1; i >= 0; i--) {
+                const secondElement = arr[i][1];
+                // 初始化计数（如果未遇到过该值）
+                if (!countMap.hasOwnProperty(secondElement)) {
+                    countMap[secondElement] = 0;
+                }
+                // 增加遇到次数
+                countMap[secondElement] += 1;
+                const k = countMap[secondElement];
+                // 如果遇到次数k小于等于N，则标记保留
+                if (k <= N) {
+                    keepFlags[i] = true;
+                }
+            }
+
+            // 从前往后收集保留的子数组，以保持原始顺序
+            const result = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (keepFlags[i]) {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
 
         let 期权startDate = decodeURI(getQueryVariable("optStartDate"));
         let 期权endDate = decodeURI(getQueryVariable("optEndDate"));
-        if(期权startDate=="false") 期权startDate = "2025-10-29" //默认设置开始日期同时减小计算量
-        if(期权endDate=="false") 期权endDate = currentDayYMD //默认结束
+        if (期权startDate == "false") 期权startDate = "2025-10-29" //默认设置开始日期同时减小计算量
+        if (期权endDate == "false") 期权endDate = currentDayYMD //默认结束
 
         let 期权买卖List = 期权策略建议
             .map((ele, index) => {
@@ -1553,7 +1584,7 @@
             })
             .filter(e => e !== null)
             .filter(e => 期权startDate <= e[0] && e[0] <= 期权endDate)
-
+        //期权买卖List = filterArrayBySecondElement(期权买卖List, 2)
 
         console.groupCollapsed("期权策略建议    期权买卖List")
         console.log(期权策略建议, 期权买卖List)
@@ -1606,8 +1637,8 @@
         let 单次最小投资 = 3000;
         let 单次最大投资 = 30000;
         let 单张费用 = 10;
-        function cloneAsset(asset, hastAr=true){
-            if(hastAr) return structuredClone(asset)
+        function cloneAsset(asset, hastAr = true) {
+            if (hastAr) return structuredClone(asset)
             else return JSON.parse(JSON.stringify(asset))
         }
         function need入金groupByYear(input) {
@@ -1616,15 +1647,15 @@
                 // 提取键中的起始年份（第一个日期的前4个字符）
                 const startDate = key.split(' ')[0];
                 const year = startDate.substring(0, 4);
-                
+
                 // 如果年份组不存在，则初始化一个对象，包含 sum 属性
                 if (!result[year]) {
                     result[year] = { sum: 0 };
                 }
-                
+
                 // 将当前键值对添加到年份组中
                 result[year][key] = value;
-                
+
                 // 更新总和
                 result[year].sum += value;
                 result[year].sum = +result[year].sum.toFixed(2)
@@ -1837,9 +1868,34 @@
         function getKeyId(期权arr) {
             return 期权arr[0] + 期权arr[1] + 期权arr[2];
         }
-        
+        let randomProfileArr = [];
+        function gerRandomProfile(mean = 0, stdDev = 0.3) {
+            let result;
+            do {
+                // Box-Muller变换生成标准正态分布
+                const u1 = Math.random();
+                const u2 = Math.random();
+
+                // 避免除零错误
+                if (u1 === 0) continue;
+
+                // 生成标准正态分布随机数
+                const z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+
+                // 应用均值和标准差
+                result = mean + z0 * stdDev;
+
+                // 循环直到值落在[-1, 1]区间内
+            } while (result < -1 || result > 1);
+            randomProfileArr.push(result);
+            return result;
+
+
+            return +(Math.random() * 2 - 1).toFixed(4) //[-1,1) 随机 -1到2-1之间
+        }
+
         async function 模拟交易() {
-            const 模拟盈亏 = false;// -1 //Math.random()*2-1 == [-1,1)
+            const 模拟盈亏 = false
             const startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0]);
             const typeIndex = 2;
             const buyDateIndex = 5;
@@ -1912,10 +1968,10 @@
 
                         let buyPrice = asset期权[7];
                         profile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
-                        
-                        if(isNumber(模拟盈亏)){
-                            profile =  模拟盈亏
-                            sellPrice =   buyPrice * (1+profile)
+
+                        if (模拟盈亏) {
+                            profile = gerRandomProfile()
+                            sellPrice = buyPrice * (1 + profile)
                         }
 
                         asset期权[sellDateIndex] = sellDate + sellPtype;
@@ -1949,9 +2005,9 @@
                         let buyPrice = asset期权[7];
                         profile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
 
-                        if(模拟盈亏){
-                            profile = 模拟盈亏
-                            sellPrice =   buyPrice * (1+profile)
+                        if (模拟盈亏) {
+                            profile = gerRandomProfile()
+                            sellPrice = buyPrice * (1 + profile)
                         }
 
                         asset期权[sellDateIndex] = "提前" + sellDate + sellPtype;
@@ -2030,7 +2086,7 @@
                     }
                     sellCash = +sellCash.toFixed(2);
                     asset期权[sellCashIndex] = sellCash;
-                    asset期权[4] = asset期权[4] + ":" + get持仓日数(asset期权) + "日"  + (curSell入金>0?":入金卖":""); //
+                    asset期权[4] = asset期权[4] + ":" + get持仓日数(asset期权) + "日" + (curSell入金 > 0 ? ":入金卖" : ""); //
 
                     ////从后往前所以可以删除而不影响索引！！！！！！
                     //asset.期权 = asset.期权.filter((item) => getKeyId(item) != getKeyId(asset期权))
@@ -2042,9 +2098,9 @@
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
                     let asset期权 = asset.期权[index];
 
-                    if (!arrayHasIndex(asset期权, sellDateIndex)){
-                       let cur手动买卖期权 =  手动买卖.find( ele => arrayHasIndex(ele,sellCashIndex) && getKeyId(ele)==getKeyId(asset期权)  )
-                       if(cur手动买卖期权)  {asset.期权[index] = cur手动买卖期权; asset期权 =  asset.期权[index];}
+                    if (!arrayHasIndex(asset期权, sellDateIndex)) {
+                        let cur手动买卖期权 = 手动买卖.find(ele => arrayHasIndex(ele, sellCashIndex) && getKeyId(ele) == getKeyId(asset期权))
+                        if (cur手动买卖期权) { asset.期权[index] = cur手动买卖期权; asset期权 = asset.期权[index]; }
                     }
 
                     if (!arrayHasIndex(asset期权, sellDateIndex)) continue;
@@ -2066,7 +2122,7 @@
                         asset.现金 = +asset.现金.toFixed(2);
                         curSell入金 = +curSell入金.toFixed(2);
                         need入金[asset期权[0] + " " + asset期权[1] + " sell "] = curSell入金;
-                        curAllNeed入金Count++;                     
+                        curAllNeed入金Count++;
                     }
                     sellCash = +sellCash.toFixed(2);
                     asset期权[4] += ":" + get持仓日数(asset期权) + "日";
@@ -2077,11 +2133,11 @@
                     asset.现金 = +asset.现金.toFixed(2);
                     cur手动SellCount++
                 }
-                if (isNumber(curAllSellCash)&&curAllSellCash>=0) {
-                    if(curAllSell入金>0){
-                        console.log(curDateHasConsole ? "             " + "补足卖手续费入金"+curAllNeed入金Count : curDate + " 补足卖手续费入金"+curAllNeed入金Count, curAllSell入金, "=>", cloneAsset(asset));    
+                if (isNumber(curAllSellCash) && curAllSellCash >= 0) {
+                    if (curAllSell入金 > 0) {
+                        console.log(curDateHasConsole ? "             " + "补足卖手续费入金" + curAllNeed入金Count : curDate + " 补足卖手续费入金" + curAllNeed入金Count, curAllSell入金, "=>", cloneAsset(asset));
                         curDateHasConsole = true;
-                    }              
+                    }
                     curAllSellCash = +curAllSellCash.toFixed(2);
                     let curSellTypeCount = "卖出"
                     if (cur模拟SellCount > 0) curSellTypeCount = curSellTypeCount + "模拟" + cur模拟SellCount
@@ -2119,7 +2175,7 @@
                     curAllBuyCash = buyCash + (curAllBuyCash ?? 0);
                     buyCash = +buyCash.toFixed(2);
                     curBuy[buyCashIndex] = buyCash;
-                    curBuy[4] = curBuy[4].replace(".xlsx", "") + (curbuy入金>0?":入金买":"") + ":" + buyCount + "张"; //购买张数
+                    curBuy[4] = curBuy[4].replace(".xlsx", "") + (curbuy入金 > 0 ? ":入金买" : "") + ":" + buyCount + "张"; //购买张数
 
                     asset.现金 = asset.现金 - buyCash;
                     asset.现金 = +asset.现金.toFixed(2);
@@ -2154,15 +2210,15 @@
 
                     asset.现金 = asset.现金 - buyCash;
                     asset.现金 = +asset.现金.toFixed(2);
-                    
-                    if(arrayHasIndex(curBuy,sellCashIndex)){
-                       let cloneCurBuy = [...curBuy] //浅复制                       
-                       cloneCurBuy[sellDateIndex] = null
-                       cloneCurBuy[sellPriceIndex] = null
-                       cloneCurBuy[profileIndex] = null
-                       cloneCurBuy[sellCashIndex] = null
-                       cloneCurBuy.tAr = curBuy.tAr+"dddd"
-                       asset.期权.unshift(cloneCurBuy);
+
+                    if (arrayHasIndex(curBuy, sellCashIndex)) {
+                        let cloneCurBuy = [...curBuy] //浅复制                       
+                        cloneCurBuy[sellDateIndex] = null
+                        cloneCurBuy[sellPriceIndex] = null
+                        cloneCurBuy[profileIndex] = null
+                        cloneCurBuy[sellCashIndex] = null
+                        cloneCurBuy.tAr = curBuy.tAr + "dddd"
+                        asset.期权.unshift(cloneCurBuy);
                     }
                     else {
                         asset.期权.unshift(curBuy);
@@ -2170,12 +2226,12 @@
 
                     cur手动BuyCount++;
                 }
-                if (isNumber(curAllBuyCash) && curAllBuyCash>=0) {
+                if (isNumber(curAllBuyCash) && curAllBuyCash >= 0) {
                     curAllBuyCash = +curAllBuyCash.toFixed(2);
                     let curBuyTypeCount = "买入"
                     if (cur模拟BuyCount > 0) curBuyTypeCount = curBuyTypeCount + "模拟" + cur模拟BuyCount
                     if (cur手动BuyCount > 0) curBuyTypeCount = curBuyTypeCount + "手动" + cur手动BuyCount
-                    console.log(curDateHasConsole ? "           " + curBuyTypeCount : curDate + " " + curBuyTypeCount, curAllBuyCash, "=>", cloneAsset(asset) )
+                    console.log(curDateHasConsole ? "           " + curBuyTypeCount : curDate + " " + curBuyTypeCount, curAllBuyCash, "=>", cloneAsset(asset))
                     curDateHasConsole = true
                 }
 
@@ -2196,10 +2252,11 @@
                 test总sellCash += ele.at(-1);
             });
             console.log("总buyCash", +test总buyCash.toFixed(2), "总sellCash", +test总sellCash.toFixed(2), "总sellCash-总sellCash+总入金", +(test总sellCash - test总buyCash + 总入金).toFixed(2));
-            
+
             let need入金统计 = need入金groupByYear(need入金)
-            if(need入金统计[currentDayYMD.substring(0,4)]?.sum>30000) pageSendMail(currentDayYMD.substring(0,4)+"年入金已超30000")
-            console.log("总费用",总费用,"need入金统计",need入金统计)
+            if (need入金统计[currentDayYMD.substring(0, 4)]?.sum > 30000) pageSendMail(currentDayYMD.substring(0, 4) + "年入金已超30000")
+            console.log("总费用", 总费用, "need入金统计", need入金统计, "randomProfileArr", randomProfileArr);
+            if (decodeURI(getQueryVariable("testMail")) == "true") pageSendMail("cn-option-模拟交易完成测试：" + getDateTime())
             console.groupEnd();
 
 
@@ -3303,7 +3360,7 @@
                     }).addStartEnd()
                 },
 
-                { 
+                {
                     name: '基金策略',
                     type: 'scatter',
                     xAxisIndex: 3,
@@ -3327,7 +3384,7 @@
                 },
 
 
-                { 
+                {
                     name: '大盘策略',
                     type: 'scatter',
                     xAxisIndex: 3,
@@ -3350,7 +3407,7 @@
                     }).addStartEnd()
                 },
 
-                { 
+                {
                     name: '大盘策略',
                     type: 'scatter',
                     xAxisIndex: 3,

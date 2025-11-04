@@ -221,7 +221,8 @@
 
 
         //pmi buy sell
-        let 策略startDate = "2019-12-18" //为了方便选择非月底和1号pmi公布日期   减小计算量
+        let 策略startDate = decodeURI(getQueryVariable("startDate"));
+        if (策略startDate == "false") 策略startDate = "2008-09-01" ////为了方便选择非月底和1号pmi公布日期   减小计算量
         function asset() {
             this.money = 100000
             this.stocks = {}
@@ -345,8 +346,8 @@
             let pre
             let buyCount = 0
             let sellCount = 0
-            let buybili = [0.3, 0.85, 1]  //3 ,5, 2
-            let sellbili = [0.3, 0.85, 1]
+            let buybili = [0.3, 0.9, 1]  //30 ,63, 7
+            let sellbili = [0.3, 0.9, 1]
 
             for (var i = 2; i < pmiData.length; i++) {
                 if (pmiData[i][0] < 策略startDate) continue
@@ -648,17 +649,16 @@
                 {
                     left: 60,
                     right: 80,
-                    top: "0.5%",
-                    height: '50%',
+                    top: "0%",
+                    height: '30%',
                     show: true,
                     backgroundColor: '#c1c4c3',
                 },
                 {
                     left: 60,
                     right: 80,
-
-                    top: "51%",
-                    height: '45%',
+                    top: "30.5%",
+                    height: '21%',
                     show: true,
                     backgroundColor: '#c1c4c3',
                 },
@@ -667,8 +667,7 @@
                 {
                     left: 60,
                     right: 80,
-
-                    top: "51%",
+                    top: "52%",
                     height: '45%',
                     show: true,
                     backgroundColor: '#c1c4c3',
@@ -681,6 +680,28 @@
                 {
                     gridIndex: 0,
                     type: "time",
+                    splitNumber: 30,
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: ['#aaa']
+                        }
+                    },
+
+                },
+
+                {
+                    gridIndex: 1,
+                    type: "time",
                     axisPointer: {
                         show: true, //抓数据十字线焦点圆圈
                         label: {
@@ -690,21 +711,16 @@
                     axisLabel: {
                         show: false // 显示图形底部时间
                     },
-                },
 
-
-                {
-                    gridIndex: 1,
-                    type: "time",
-                    axisPointer: {
-                        show: false, //抓数据十字线焦点圆圈
-                        label: {
-                            show: false // 显示十字线竖线的时间
+                    splitNumber: 30,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: ['#aaa']
                         }
                     },
-                    axisLabel: {
-                        show: false // 显示图形底部时间
-                    },
+
+
                 },
 
 
@@ -728,10 +744,7 @@
                             color: ['#aaa']
                         }
                     },
-                    show: true, //显示0轴黑线
-                    axisLine: {
-                        show: false //显示0轴黑线
-                    },
+
                 },
             ],
 
@@ -740,16 +753,16 @@
                     gridIndex: 0,
                     type: 'value',
                     splitLine: {
-                        show: true
+                        show: false
                     },
-                    min: -5,
-                    max: 13
+                    min: -25,
+                    max: 50
                 },
                 {
                     gridIndex: 0,
                     type: 'value',
                     splitLine: {
-                        show: true
+                        show: false
                     },
                     position: "right",
                     // max: 3000000,
@@ -763,12 +776,15 @@
                         show: false
                     },
 
+                    inverse: true,
+                    min: -3,
+                    max: 8.5
                 },
                 {
                     gridIndex: 1,
                     type: 'value',
                     splitLine: {
-                        show: true
+                        show: false
                     },
                     position: "right",
                 },
@@ -780,23 +796,24 @@
                     splitLine: {
                         show: false
                     },
+                    min: 12,
+                    max: 70
 
                 },
                 {
                     gridIndex: 2,
                     type: 'value',
                     splitLine: {
-                        show: true
+                        show: false
                     },
                     position: "right",
-                    min: 10,
-                    max: 70
                 },
 
             ],
 
             series: [
-                {
+
+                { //pmi
                     name: 'pmi',
                     type: 'line',
                     xAxisIndex: 0,
@@ -804,70 +821,252 @@
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 1,
-                        color: "red"
-                    },
-                    data: cn_pmi.addStartEnd(),
+                        width: 0.7,
+                        color: "#ff61ca", //"black" //
 
+                    },
+                    zlevel: 1,
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "上穿10,15",
+                                    color: "#ff535c",
+                                    fontSize: 8,
+                                    position: "insideStartTop",
+                                },
+                                yAxis: 15, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "#ff535c",
+                                    fontSize: 8,
+                                    position: "insideStartTop",
+                                },
+                                yAxis: 10, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "#0081B6",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: -7, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "下穿-7,-10",
+                                    color: "#0081B6",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: -10, // 标线值
+                            }
+                        ],
+                    },
+                    data: cn_pmi.map((ele, index) => {
+                        ///ele[1] = (ele[1]-50)/10
+                        return ele
+                    }).addStartEnd(),
                 },
 
-                {
-                    name: 'pmi_cx',
-                    type: 'line',
-                    xAxisIndex: 0,
-                    yAxisIndex: 0,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 1,
-                        color: "blue"
-                    },
-                    data: cn_pmi_cx.addStartEnd(),
-                },
-
-                {
-                    name: 'pmi_avg',
-                    type: 'line',
-                    xAxisIndex: 0,
-                    yAxisIndex: 0,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 1,
-                        color: "black"
-                    },
-                    data: cn_pmi_avg.addStartEnd(),
-                },
 
 
-                {
-                    name: '沪深300风险溢价差_默认',
-                    type: 'line',
-                    xAxisIndex: 0,
-                    yAxisIndex: 0,
-                    showSymbol: false,
-                    smooth: true,
-                    lineStyle: {
-                        width: 1.2,
-                        color: "#4e8faa"
-                    },
+                { //股债
+                    name: "沪深300风险溢价差_默认",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 2,
                     data: 股债差300平均.addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 1,
+                    },
+                    zlevel: 1,
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.4,
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.8,
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.2,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "6低估",
+                                fontSize: "10",
+                                color: "green",
+                                position: "start",
+                            },
+                            yAxis: 6, // 标线值
+                            x: "6.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.2,
+                                color: "red",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "3高估",
+                                fontSize: "10",
+                                color: "red",
+                                position: "start",
+                            },
+                            yAxis: 3, // 标线值
+                            x: "6.5%",
+                        },
+
+                            // {
+                            //     lineStyle: {
+                            //         width: 0,
+                            //         color: "#ff000000",
+                            //         type: "solid" // 实线，不写默认虚线
+                            //     },
+
+                            //     yAxis: 0, // 标线值
+
+                            // },
+                        ],
+                    },
                 },
 
-                {
-                    name: '沪深300风险溢价差_备用',
-                    type: 'line',
-                    xAxisIndex: 0,
-                    yAxisIndex: 0,
+                { //股债
+                    name: "沪深300风险溢价差_备用",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 2,
+                    data: 沪深300风险溢价差_jiucai.addStartEnd(),
                     showSymbol: false,
-                    smooth: true,
                     lineStyle: {
                         width: 1.2,
                         type: "dotted",
-                        color: "#4e8faa"
+
                     },
-                    data: 沪深300风险溢价差_jiucai.addStartEnd(),
+                    zlevel: 1,
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.4,
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.8,
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.2,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "6低估",
+                                fontSize: "10",
+                                color: "green",
+                                position: "start",
+                            },
+                            yAxis: 6, // 标线值
+                            x: "6.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.2,
+                                color: "red",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "3高估",
+                                fontSize: "10",
+                                color: "red",
+                                position: "start",
+                            },
+                            yAxis: 3, // 标线值
+                            x: "6.5%",
+                        },
+
+                            // {
+                            //     lineStyle: {
+                            //         width: 0,
+                            //         color: "#ff000000",
+                            //         type: "solid" // 实线，不写默认虚线
+                            //     },
+
+                            //     yAxis: 0, // 标线值
+
+                            // },
+                        ],
+                    },
                 },
+
+
+
 
 
                 // {
@@ -918,8 +1117,8 @@
                 {
                     name: 'HS300',
                     type: 'line',
-                    xAxisIndex: 1,
-                    yAxisIndex: 2,
+                    xAxisIndex: 2,
+                    yAxisIndex: 5,
                     showSymbol: false,
                     lineStyle: {
                         width: 0,
@@ -943,19 +1142,68 @@
                     name: '300中位PE-默认', //300剔除后中位
                     type: 'line',
                     xAxisIndex: 2,
-                    yAxisIndex: 5,
+                    yAxisIndex: 4,
                     data: 沪深300PE中位数.addStartEnd(),
                     showSymbol: false,
                     lineStyle: {
                         width: 1.5,
                         color: "#a45db2"
                     },
+
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0,
+                                color: "#ff535c",
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "30PE高估",
+                                fontSize: "10",
+                                color: "#ff535c",
+                            },
+                            yAxis: 3.5,
+                            x: "7.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.3,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "20PE低估",
+                                fontSize: "10",
+                                color: "green",
+                            },
+                            yAxis: 20,
+                            x: "7.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "18PE低估",
+                                fontSize: "10",
+                                color: "green",
+                            },
+                            yAxis: 18,
+                            x: "7.5%", //固定起点的 x 像素位置
+                        },
+                        ],
+                    },
                 },
                 {
                     name: '300中位PE-备用', //300剔除后中位
                     type: 'line',
                     xAxisIndex: 2,
-                    yAxisIndex: 5,
+                    yAxisIndex: 4,
                     data: 沪深300PE中位数_lixinger.addStartEnd(),
                     showSymbol: false,
                     lineStyle: {
@@ -970,7 +1218,7 @@
                     name: '十年收益率倒数-默认',
                     type: 'line',
                     xAxisIndex: 2,
-                    yAxisIndex: 5,
+                    yAxisIndex: 4,
                     data: 十年期国债利率倒数.addStartEnd(),
                     showSymbol: false,
                     lineStyle: {
@@ -983,7 +1231,7 @@
                     name: '十年收益率倒数-备用',
                     type: 'line',
                     xAxisIndex: 2,
-                    yAxisIndex: 5,
+                    yAxisIndex: 4,
                     data: 十年期国债收益率_jiucai.map((ele, index) => {
                         let newArr = []
                         newArr[0] = ele[0]
