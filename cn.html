@@ -1864,8 +1864,15 @@
         }
         function preNext交易日(curDate, preNext = -1) {
             let curDateIndex = 沪深300.findIndex(e => e.date == curDate)
-            if (curDateIndex > -1 && curDateIndex < 沪深300.length - 1) return 沪深300[curDateIndex + preNext].date
-            else return stampToDate(dateToStamp(curDate) + preNext * 86400000)
+            if (curDateIndex > -1 && curDateIndex + preNext <= 沪深300.length - 1)
+                return 沪深300[curDateIndex + preNext].date
+            else {
+                let resDate = stampToDate(dateToStamp(curDate) + preNext * 86400000)
+                while (new Date(resDate).getDay() == 0 || new Date(resDate).getDay() == 6 || !沪深300.find(e => e.date == resDate)) {
+                    preNext > 0 ? resDate = stampToDate(dateToStamp(resDate) + 86400000) : resDate = stampToDate(dateToStamp(resDate) - 86400000)
+                }
+                return resDate;
+            }
         }
         function getKeyId(期权arr) {
             return 期权arr[0] + 期权arr[1] + 期权arr[2];
@@ -2024,8 +2031,8 @@
                     if (arrayHasIndex(asset期权, sellPriceIndex)) continue;
                     if (!asset期权[3].includes("手动")) continue;
 
-                    if (curDate == preNext交易日(asset期权[1], -1)) {
-                        let msg = `${curDate} 触发收盘通知下个交易日${asset期权[1]}到期手动开盘卖出`
+                    if (curDate == preNext交易日(asset期权[1], -1) || (i == 沪深300.length - 1 && curDate < currentDayYMD && currentDayYMD == preNext交易日(asset期权[1], -1))) {
+                        let msg = `${curDate} 触发通知下个交易日${asset期权[1]}到期手动开盘卖出`
                         if (curDate == currentDayYMD) pageSendMail(msg + `<br>\r\n ${asset期权}`)
                         console.log(msg, currentDayYMD)
                         curDateHasConsole = true
@@ -2257,10 +2264,10 @@
 
             let need入金统计 = need入金groupByYear(need入金)
             if (need入金统计[currentDayYMD.substring(0, 4)]?.sum > 30000) pageSendMail(currentDayYMD.substring(0, 4) + "年入金已超30000")
-            console.log("总费用", 总费用, "need入金统计", need入金统计, "randomProfileArr", randomProfileArr);
+            console.log("总费用", 总费用, "need入金统计", need入金统计);
 
             const endJs = performance.now();
-            if (decodeURI(getQueryVariable("testMail")) == "true") pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒`)
+            if (decodeURI(getQueryVariable("testMail")) == "true") pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒` + "  runDateTime基金策略:" + runDateTime基金策略 + "  asset现金:" + +asset.现金.toFixed(2));
             console.groupEnd();
 
 
