@@ -1330,7 +1330,7 @@ if (typeof module !== "undefined" && module.exports) {
                     console.log(`${dataName} getDataFromFile`)
                     if (format == "json") {
                         if (data.indexOf("=") >= 0)
-                            data = data.substring(data.indexOf("=") + 1)
+                            data = data.substring(data.indexOf("=") + 1, data.lastIndexOf("]") + 1)
                         resolve(JSON.parse(data))//返回json
                     } else {
                         resolve(data)//返回str
