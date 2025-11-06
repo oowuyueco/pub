@@ -1433,6 +1433,7 @@
         期权策略建议.sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
 
         let 手动买卖 = [
+            ['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', '2025-10-29开盘价', null, 0.0888, null, null, 30532,],
             ["2018-10-29", "2018-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2018-10-31沽3300:0张', '2018-10-30开盘价', '2018-10-31开盘价', 0, 0, 0, 0, 0],
             //["2025-10-29", "2025-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-31沽3300:0张', '2025-10-30开盘价', null, 0, null, null, 0],
         ]
@@ -1708,6 +1709,28 @@
             let endIndex = 沪深300ETF.findIndex((e) => e.date == endDate);
             return endIndex - startIndex;
         }
+        function getCurDate区间类型(curDate) {
+            let curDate日期区间 = ""
+            Object.keys(triggerLogObj期权.上升日期区间).forEach(key => {
+                let dateRange = key.split("=>");
+                let startDate = dateRange[0];
+                let endDate = dateRange[1];
+                if (startDate <= curDate && curDate <= endDate) {
+                    curDate日期区间 = "上升日期区间"
+                    return
+                }
+            });
+            Object.keys(triggerLogObj期权.下降日期区间).forEach(key => {
+                let dateRange = key.split("=>");
+                let startDate = dateRange[0];
+                let endDate = dateRange[1];
+                if (startDate <= curDate && curDate <= endDate) {
+                    curDate日期区间 = "下降日期区间"
+                    return false;
+                }
+            });
+            return curDate日期区间
+        }
         function only高位空但叉日周(asset期权) {
             let trigArr = asset期权.tAr.split(",");
             let trigArrCount = trigArr.length;
@@ -1716,6 +1739,30 @@
                 if (ele.includes("高位空但叉") || ele.includes("日周高位九转")) 高位空但叉日周Count++;
             });
             return 高位空但叉日周Count == trigArrCount;
+        }
+        function pmi超低绿lowMas(curDate) {
+            return false; //暂时关闭该条件
+            let 沪深300技术 = {};
+            沪深300技术.dayDatas = 沪深300;
+            沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+            let pre2Day = 沪深300技术.currentDayList.at(-3);
+            let pre1Day = 沪深300技术.currentDayList.at(-2);
+            let curDay = 沪深300技术.currentDayList.at(-1);
+
+            let curDate日期区间 = getCurDate区间类型(curDate)
+
+            let pmiValue
+            if (cn_pmi_平均.at(-1)[0].substring(0, 7) == curDate.substring(0, 7))
+                pmiValue = cn_pmi_平均.at(-1)
+            else
+                pmiValue = cn_pmi_平均.find(e => e[0].substring(0, 7) == getPreMonth(curDate).substring(0, 7))
+
+            if (curDate日期区间 == "上升日期区间" &&
+                pmiValue[1] <= -9.5 &&
+                curDay.close < curDay.mas &&
+                curtPercent(curDay) < 0 &&
+                curDay.percent < 0 // //['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF 4.658'
+            ) return true
         }
         function onlyLessTwo科创50(asset期权) {
             let trigArr = asset期权.tAr.split(",");
@@ -1868,7 +1915,7 @@
                 return 沪深300[curDateIndex + preNext].date
             else {
                 let resDate = stampToDate(dateToStamp(curDate) + preNext * 86400000)
-                while (new Date(resDate).getDay() == 0 || new Date(resDate).getDay() == 6 || !沪深300.find(e => e.date == resDate)) {
+                while (new Date(resDate).getDay() == 0 || new Date(resDate).getDay() == 6) {
                     preNext > 0 ? resDate = stampToDate(dateToStamp(resDate) + 86400000) : resDate = stampToDate(dateToStamp(resDate) - 86400000)
                 }
                 return resDate;
@@ -1997,7 +2044,7 @@
                                 ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
                             ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
                         ) ||
-                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && etf绿空绿lows(curDate)) ||
+                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && (etf绿空绿lows(curDate) || pmi超低绿lowMas(curDate))) ||
                         (asset期权[3].includes("沽") && onlyLessTwo科创50(asset期权) && etf绿空绿lows(curDate)) ||
                         (asset期权[3].includes("沽") && onlyOne高位KDJ死叉(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate)) ||
                         (asset期权[3].includes("沽") && onlyOne红但down死叉T(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate))
@@ -2046,7 +2093,7 @@
                                 ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
                             ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
                         ) ||
-                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && etf绿空绿lows(curDate)) ||
+                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && (etf绿空绿lows(curDate) || pmi超低绿lowMas(curDate))) ||
                         (asset期权[3].includes("沽") && onlyLessTwo科创50(asset期权) && etf绿空绿lows(curDate)) ||
                         (asset期权[3].includes("沽") && onlyOne高位KDJ死叉(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate)) ||
                         (asset期权[3].includes("沽") && onlyOne红但down死叉T(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate))
