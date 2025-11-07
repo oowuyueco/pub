@@ -196,12 +196,12 @@ var 策略集合 = {
             query: `市值大于1000亿，非科创板，非创业板，同花顺二级行业龙头，细分行业龙头，过去3年的基本每股收益增长率>3%，过去30个交易日涨跌幅大于-5%小于23，
                     振幅小于8，股性评分大于12，上市日期从大到小排名， 总市值从小到大排列
             `,
-            daysForSaleStrategy: "30",
+            daysForSaleStrategy: "31",
             stockHoldCount: 1,
             dayBuyStockNum: 1,
             upperIncome: 30,
             fallIncome: 7,
-            lowerIncome: 11,
+            lowerIncome: 13,
             stats: "策略回测"
         },
         {
@@ -213,7 +213,7 @@ var 策略集合 = {
             dayBuyStockNum: 1,
             upperIncome: 17,
             fallIncome: 5,
-            lowerIncome: 12,
+            lowerIncome: 13,
             stats: "策略回测"
         },
 

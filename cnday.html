@@ -347,13 +347,13 @@
         if (typeof 大市值趋势 === "undefined") var 大市值趋势 = []
 
         小市值低估 = 小市值低估.filter(
-            ele => parseFloat(ele[6].substring(0, ele[6].length - 1)) < -8 //亏损大于10
+            ele => parseFloat(ele[6].substring(0, ele[6].length - 1)) < -12.5 //亏损大于10
         ).map((item) => {
             return [item[3], parseFloat(item[6].substring(0, item[6].length - 1))]
         })
 
         大市值趋势 = 大市值趋势.filter((ele, index, arr) => {
-            return parseFloat(ele[6].substring(0, ele[6].length - 1)) < -8 //亏损大于10
+            return parseFloat(ele[6].substring(0, ele[6].length - 1)) < -12.5//亏损大于10
         }).map((item) => {
             return [item[3], parseFloat(item[6].substring(0, item[6].length - 1))]
         })

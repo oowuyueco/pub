@@ -1424,7 +1424,14 @@
 
 
     <script type="text/javascript" src="./js/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="./cnThs/今收/同花顺策略组1_信号统计.js"></script>
+    <script type="text/javascript" src="./cnThs/今收/同花顺策略组2_大小市值信号统计.js"></script>
     <script>
+        if (typeof 技术指标统计 === "undefined") var 技术指标统计 = []
+        if (typeof 小市值低估 === "undefined") var 小市值低估 = []
+        if (typeof 大市值趋势 === "undefined") var 大市值趋势 = []
+        技术指标统计 = 技术指标统计.filter(ele => (ele[1] >= 3 || ele[2].length >= 2))
+        console.log(技术指标统计, 小市值低估, 大市值趋势)
 
         ////手动交易  1手动写入买入时间价格cash 脚本完成交易   2手动写入卖出时间价格cash  脚本完成交易
         let fuckyou = ["2018-10-29", "2018-10-31", "高位", "3.557 沽沪深300ETF 3.252"]
@@ -1740,7 +1747,7 @@
             });
             return 高位空但叉日周Count == trigArrCount;
         }
-        function pmi超低绿lowMas(curDate) {
+        function pmi超低绿lowMas(curDate, asset期权) {
             return false; //暂时关闭该条件
             let 沪深300技术 = {};
             沪深300技术.dayDatas = 沪深300;
@@ -1858,15 +1865,13 @@
 
 
         }
-        function etf绿空绿lows(curDate) {
+        function etf绿空绿lows(curDate, asset期权) {
             let 沪深300技术 = {};
             沪深300技术.dayDatas = 沪深300;
             沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
-
             let pre2Day = 沪深300技术.currentDayList.at(-3);
             let pre1Day = 沪深300技术.currentDayList.at(-2);
             let curDay = 沪深300技术.currentDayList.at(-1);
-
             function bias超低(periodList) {
                 let pre2Period = periodList[periodList.length - 3];
                 let pre1Period = periodList[periodList.length - 2];
@@ -1875,6 +1880,25 @@
                 return 0 >= currentPeriod.bias.bias1 && currentPeriod.bias.bias1 > currentPeriod.bias.bias2 && currentPeriod.bias.bias2 > currentPeriod.bias.bias3 && currentPeriod.bias.bias2 - currentPeriod.bias.bias3 > currentPeriod.bias.bias1 - currentPeriod.bias.bias2 && pre1Period.bias.bias1 > currentPeriod.bias.bias1 && pre1Period.bias.bias2 > currentPeriod.bias.bias2 && pre1Period.bias.bias3 > currentPeriod.bias.bias3;
             }
 
+            function ths反向() {
+                return false //暂时关闭同花顺反向指标
+                for (let i = 0; i < 技术指标统计.length; i++) {
+                    let ti = 技术指标统计[i];
+                    if (ti[0] == curDate && asset期权[0] <= ti[0] && ti[0] < asset期权[1]) return true;
+                }
+                for (let i = 0; i < 小市值低估.length; i++) {
+                    let ti = 小市值低估[i];
+                    if (ti[3] == curDate && asset期权[0] <= ti[3] && ti[3] < asset期权[1]) return true;
+                }
+                for (let i = 0; i < 大市值趋势.length; i++) {
+                    let ti = 大市值趋势[i];
+                    if (ti[3] == curDate && asset期权[0] <= ti[3] && ti[3] < asset期权[1]) return true;
+                }
+            }
+            if (ths反向()) {
+                console.log("ths反向") 
+                return curDay.date; //+ "ths反向" 
+            }
 
             if (
                 //绿空绿 close<lows
@@ -2044,10 +2068,10 @@
                                 ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
                             ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
                         ) ||
-                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && (etf绿空绿lows(curDate) || pmi超低绿lowMas(curDate))) ||
-                        (asset期权[3].includes("沽") && onlyLessTwo科创50(asset期权) && etf绿空绿lows(curDate)) ||
-                        (asset期权[3].includes("沽") && onlyOne高位KDJ死叉(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate)) ||
-                        (asset期权[3].includes("沽") && onlyOne红但down死叉T(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate))
+                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && (etf绿空绿lows(curDate, asset期权) || pmi超低绿lowMas(curDate, asset期权))) ||
+                        (asset期权[3].includes("沽") && onlyLessTwo科创50(asset期权) && etf绿空绿lows(curDate, asset期权)) ||
+                        (asset期权[3].includes("沽") && onlyOne高位KDJ死叉(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate, asset期权)) ||
+                        (asset期权[3].includes("沽") && onlyOne红但down死叉T(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate, asset期权))
                     ) {
                         let endDateIndex = excelFileData.findIndex((e) => e.交易时间 == curDate);
                         if (endDateIndex > -1 && endDateIndex != excelFileData.length - 1) {
@@ -2093,10 +2117,10 @@
                                 ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
                             ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
                         ) ||
-                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && (etf绿空绿lows(curDate) || pmi超低绿lowMas(curDate))) ||
-                        (asset期权[3].includes("沽") && onlyLessTwo科创50(asset期权) && etf绿空绿lows(curDate)) ||
-                        (asset期权[3].includes("沽") && onlyOne高位KDJ死叉(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate)) ||
-                        (asset期权[3].includes("沽") && onlyOne红但down死叉T(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate))
+                        (asset期权[3].includes("沽") && only高位空但叉日周(asset期权) && (etf绿空绿lows(curDate, asset期权) || pmi超低绿lowMas(curDate, asset期权))) ||
+                        (asset期权[3].includes("沽") && onlyLessTwo科创50(asset期权) && etf绿空绿lows(curDate, asset期权)) ||
+                        (asset期权[3].includes("沽") && onlyOne高位KDJ死叉(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate, asset期权)) ||
+                        (asset期权[3].includes("沽") && onlyOne红但down死叉T(asset期权) && !mVKMdownDnoLow(asset期权) && etf绿空绿lows(curDate, asset期权))
                     ) {
                         let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}提前手动开盘卖出`
                         if (curDate == currentDayYMD) pageSendMail(msg + ` <br>\r\n ${asset期权}`)
