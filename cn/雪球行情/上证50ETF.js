@@ -60411,4 +60411,5 @@ var 上证50ETF = [
 
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50ETF = 上证50ETF
+    exports.writeDateTime = "2025-11-09 19:34:29"
 };

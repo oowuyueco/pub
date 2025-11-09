@@ -39231,4 +39231,5 @@ var 沪深300ETF = [
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300ETF = 沪深300ETF
+    exports.writeDateTime = "2025-11-09 19:34:28"
 };
