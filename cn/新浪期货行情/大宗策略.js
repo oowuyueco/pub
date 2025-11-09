@@ -628,6 +628,7 @@ var triggerLogObj大宗={
             "低位低量_甲醇连续"
         ],
         "2025-11-07": [
+            "低位低量_甲醇连续",
             "低位低量_甲醇连续"
         ]
     },
@@ -12496,6 +12497,25 @@ var triggerLogObj大宗={
                     -0.61
                 ],
                 "lastDay": 1
+            }
+        },
+        {
+            "dataName": "甲醇连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-11-07",
+            "trigAtIndex": 2634,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         },
         {
