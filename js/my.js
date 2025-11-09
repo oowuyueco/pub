@@ -1286,7 +1286,7 @@ if (typeof module !== "undefined" && module.exports) {
             dataFileStr += `
 if (typeof module !== "undefined" && module.exports) {
     exports.${dataName} = ${dataName}
-    exports.runDateTime = ${getDateTime()}
+    exports.writeDateTime = "${getDateTime()}"
 };
 `
             fs.writeFile(`${folder}${dataName}.js`, dataFileStr, 'utf8', (err) => {
