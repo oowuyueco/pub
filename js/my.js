@@ -12,19 +12,13 @@ function getQueryVariable(variable) {
 function checkOrTryHttp(dataName, site, fuc,) {
     var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement
     var JS1 = document.createElement("script")
-    if (site == "sinaF") {
+    if (dataType == "futures") {
         JS1.src = `./cn/新浪期货行情/${dataName}.js`
     }
-    if (site == "sina") {
-        JS1.src = `./cn/新浪行情/${dataName}.js`
-    }
-    if (site == "xueqiu") {
-        JS1.src = `./cn/雪球行情/${dataName}.js`
+    else {
+        JS1.src = `./cn/行情/${dataName}.js`
         if (dataName.includes("标普") || dataName.includes("纳指") || dataName.includes("道琼斯"))
-            JS1.src = `./us/雪球行情/${dataName}.js`
-    }
-    if (site == "ths") {
-        JS1.src = `./cn/同花顺行情/${dataName}.js`
+            JS1.src = `./us/行情/${dataName}.js`
     }
     JS1.onload = function () { fuc() }
     JS1.onerror = function (e) { console.log(e) }
@@ -424,16 +418,15 @@ Array.prototype.akData2Obj = function (period = "day") {
         if (data.日期 || data.开盘) {
             return {
                 "date": data.日期.substring(0, 10),
+                "timestamp": "",
                 "open": data.开盘,
                 "high": data.最高,
                 "low": data.最低,
                 "close": data.收盘,
+                "percent": data?.涨跌幅 ?? PtPPercent(dataList[index - 1], data),
                 "volume": data.成交量,
                 "hsl": data?.换手率,
-                "zgs": data.成交量 / data?.换手率,
-                "zf": data?.振幅,
-                "percent": data?.涨跌幅 ?? PtPPercent(dataList[index - 1], data),
-                "timestamp": "",
+                "zgs": data.成交量 / data?.换手率
             }
         }
 
