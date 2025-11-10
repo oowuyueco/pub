@@ -399,6 +399,25 @@ function xueqiuFormatDate(stamp, period = "month") {
     return t;
 }
 
+Array.prototype.fuTuData2Obj = function (period = "day") {
+    let dataList = this
+    dataList = dataList.map((data, index) => {
+        return {
+            "date": stampToDate(data.k * 1000),
+            "timestamp": data.k * 1000,
+            "open": +data.o,
+            "high": +data.h,
+            "low": +data.l,
+            "close": +data.c,
+            "percent": index > 0 ? (+data.cp / +dataList[index - 1].c) * 100 : 0,
+            "volume": +data.v,
+            "hsl": data?.换手率 ?? 0,
+            "zgs": data?.换手率 ? +data.v / data?.换手率 : 0
+        }
+    })
+    return dataList
+}
+
 Array.prototype.akData2Obj = function (period = "day") {
     let dataList = this
     dataList = dataList.map((data, index) => {
