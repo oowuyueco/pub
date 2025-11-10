@@ -95,14 +95,15 @@
     <script type="text/javascript" src="./cn/行情/上证.js"></script>
     <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/行情/恒生.js"></script>
-    <script type="text/javascript" src="./cn/行情/西部矿业.js"></script>
+
+    <!-- <script type="text/javascript" src="./cn/行情/西部矿业.js"></script>
     <script type="text/javascript" src="./cn/行情/洛阳钼业.js"></script>
     <script type="text/javascript" src="./cn/行情/山东黄金.js"></script>
     <script type="text/javascript" src="./cn/行情/赤峰黄金.js"></script>
     <script type="text/javascript" src="./cn/行情/中国石油.js"></script>
     <script type="text/javascript" src="./cn/行情/中国石化.js"></script>
     <script type="text/javascript" src="./cn/行情/中粮糖业.js"></script>
-    <script type="text/javascript" src="./cn/行情/广农糖业.js"></script>
+    <script type="text/javascript" src="./cn/行情/广农糖业.js"></script> -->
     <script>
         function sectorIndexYoY(ele, index, datasArr) {
 
@@ -149,7 +150,7 @@
 
 
     </script>
-    <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
+    <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
     <script>
         let 高位next1 = []
         let 高位next2 = []
@@ -1151,38 +1152,6 @@
                     }).filterAndAddStartEnd()
                 },
 
-                // {
-                //     name: "境外持仓",
-                //     type: "line",
-                //     xAxisIndex: 1,
-                //     yAxisIndex: 1,
-                //     showSymbol: false,
-                //     smooth: true,
-                //     lineStyle: {
-                //         width: 1,
-                //         color: "#FD4142",
-                //     },
-                //     data: 境外持仓股票.map((item, index) => {
-                //         item[1] = parseFloat(item[1]) / 1000
-                //         return item
-                //     }).filterAndAddStartEnd()
-                // },
-                // {
-                //     name: "境外持仓",
-                //     type: "line",
-                //     xAxisIndex: 1,
-                //     yAxisIndex: 1,
-                //     showSymbol: false,
-                //     smooth: true,
-                //     lineStyle: {
-                //         width: 1.2,
-                //         color: "#22aa62",
-                //     },
-                //     data: 境外持仓债券.map((item, index) => {
-                //         item[1] = parseFloat(item[1]) / 1000
-                //         return item
-                //     }).filterAndAddStartEnd()
-                // },
 
                 {
                     name: "境外持仓",
@@ -1195,42 +1164,7 @@
                         width: 1.2,
                         color: "#22aa62",
                     },
-                    // markLine: {
-                    //     symbol: ["none", "none"],
-                    //     data: [
-                    //         {
-                    //             lineStyle: {
-                    //                 width: 1,
-                    //                 type:"dotted",
-                    //                 color: "black",
-                    //             },
-                    //             label: {
-                    //                 formatter: "",
-                    //                 fontSize: "10",
-                    //                 color: "black",
-                    //                 position: "start",
-                    //             },
-                    //             yAxis: -1.2, // 标线值
-                    //             x: "0%", //固定起点的 x 像素位置
-                    //         },
 
-                    //          {
-                    //             lineStyle: {
-                    //                 width: 1,
-                    //                 type:"dotted",
-                    //                 color: "green",
-                    //             },
-                    //             label: {
-                    //                 formatter: "",
-                    //                 fontSize: "10",
-                    //                 color: "green",
-                    //                 position: "start",
-                    //             },
-                    //             yAxis: -6.3, // 标线值
-                    //             x: "0%", //固定起点的 x 像素位置
-                    //         }
-                    //     ],
-                    // },
                     data: 境外持仓股票.map((item, index) => {
                         item[1] = (parseFloat(item[1]) - parseFloat(境外持仓债券[index][1])) / 1000
                         //console.log(item)
@@ -1399,7 +1333,7 @@
                 },
 
 
-                 {
+                {
                     name: '沪深300高位三周量降',
                     type: 'scatter',
                     xAxisIndex: 2,
@@ -1824,7 +1758,7 @@
                 },
 
 
-                   {
+                {
                     name: '沪深300低位三周量降',
                     type: 'scatter',
                     xAxisIndex: 5,
@@ -2118,136 +2052,140 @@
                     data: 沪深300.ohlc2oclh().filterAndAddStartEnd()
                 },
 
-                {
-                    name: '中国石油',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        //color: "black"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 中国石油.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                },
-                {
-                    name: '中国石化',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        //color: "black"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 中国石化.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                    //洛阳钼业.data.item.xueqiuData2Obj().ohlc2oclh().filterAndAddStartEnd()
-                },
-                {
-                    name: '中粮糖业',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        //color: "black"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 中粮糖业.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                },
-                {
-                    name: '广农糖业',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        //color: "black"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 广农糖业.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                },
+                /*
+                                {
+                                    name: '中国石油',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        //color: "black"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 中国石油.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                },
+                                {
+                                    name: '中国石化',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        //color: "black"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 中国石化.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                    //洛阳钼业.data.item.xueqiuData2Obj().ohlc2oclh().filterAndAddStartEnd()
+                                },
+                                {
+                                    name: '中粮糖业',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        //color: "black"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 中粮糖业.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                },
+                                {
+                                    name: '广农糖业',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        //color: "black"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 广农糖业.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                },
+                
+                                {
+                                    name: '西部矿业',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        color: "green"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 西部矿业.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                },
+                                {
+                                    name: '洛阳钼业',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        //color: "black"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 洛阳钼业.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                    //洛阳钼业.data.item.xueqiuData2Obj().ohlc2oclh().filterAndAddStartEnd()
+                                },
+                                {
+                                    name: '山东黄金',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                        color: "#db7093"
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 山东黄金.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                },
+                                {
+                                    name: '赤峰黄金',
+                                    type: 'line',
+                                    lineStyle: {
+                                        width: 1.5,
+                                    },
+                                    xAxisIndex: 8,
+                                    yAxisIndex: 8,
+                                    showSymbol: false,
+                                    silent: true,
+                                    zlevel: 2,
+                                    data: 赤峰黄金.data.item.xueqiuData2Obj().map((item) => {
+                                        return [item.date, item.close]
+                                    }).filterAndAddStartEnd()
+                                },
+                
+                */
 
-                {
-                    name: '西部矿业',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        color: "green"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 西部矿业.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                },
-                {
-                    name: '洛阳钼业',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        //color: "black"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 洛阳钼业.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                    //洛阳钼业.data.item.xueqiuData2Obj().ohlc2oclh().filterAndAddStartEnd()
-                },
-                {
-                    name: '山东黄金',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                        color: "#db7093"
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 山东黄金.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                },
-                {
-                    name: '赤峰黄金',
-                    type: 'line',
-                    lineStyle: {
-                        width: 1.5,
-                    },
-                    xAxisIndex: 8,
-                    yAxisIndex: 8,
-                    showSymbol: false,
-                    silent: true,
-                    zlevel: 2,
-                    data: 赤峰黄金.data.item.xueqiuData2Obj().map((item) => {
-                        return [item.date, item.close]
-                    }).filterAndAddStartEnd()
-                },
 
                 {
                     name: '原油连续',
