@@ -103180,5 +103180,5 @@ var 标普500 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.标普500 = 标普500
     exports.dataSource = "富途"
-    exports.writeDateTime = "2025-11-10 18:04:06"
+    exports.writeDateTime = "2025-11-10 19:42:31"
 };

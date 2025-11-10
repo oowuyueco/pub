@@ -32704,5 +32704,5 @@ var 沪深300ETF = [
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300ETF = 沪深300ETF
     exports.dataSource = "新浪"
-    exports.writeDateTime = "2025-11-10 18:03:48"
+    exports.writeDateTime = "2025-11-10 19:42:13"
 };

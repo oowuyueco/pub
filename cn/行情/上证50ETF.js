@@ -50354,5 +50354,5 @@ var 上证50ETF = [
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50ETF = 上证50ETF
     exports.dataSource = "新浪"
-    exports.writeDateTime = "2025-11-10 18:03:49"
+    exports.writeDateTime = "2025-11-10 19:42:15"
 };

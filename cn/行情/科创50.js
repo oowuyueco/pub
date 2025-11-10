@@ -14184,5 +14184,5 @@ var 科创50 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.科创50 = 科创50
     exports.dataSource = "新浪"
-    exports.writeDateTime = "2025-11-10 18:03:47"
+    exports.writeDateTime = "2025-11-10 19:42:12"
 };
