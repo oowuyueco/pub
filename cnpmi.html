@@ -9,7 +9,7 @@
 <body style="height: 100%;width: 100%; margin: 0">
     <div id="container" style="height: 100%; width: 100%;"></div>
 
-    <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
+    <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
     <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
 
@@ -571,7 +571,7 @@
 
         lastAsset默认.assetLog.unshift([策略startDate, 100000, `start`])
         lastAsset默认.assetLog.push([stockLastDate, lastAsset默认.allAsset(stockLastDate), `stockLastDate`])
-        console.log(lastAsset默认.allAsset(stockLastDate), (JSON.stringify({ money: lastAsset默认.money.toFixed(2), stocks: lastAsset默认.stocks })))
+        console.log(lastAsset默认.allAsset(stockLastDate), JSON.stringify({ money: lastAsset默认.money.toFixed(2), stocks: lastAsset默认.stocks }), stockLastDate)
         let assetLogChart默认 = lastAsset默认.assetLog.addStartEnd().map(ele => {
             if (ele[2]?.includes("buy"))
                 return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'green', borderWidth: 11 } } //symbolSize: 5.5

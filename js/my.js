@@ -1279,13 +1279,14 @@ if (typeof module !== "undefined" && module.exports) {
         return promise
     }
 
-    function writeDataToFile(dataName, dayDatas, folder = "./data/") {
+    function writeDataToFile(dataName, dayDatas, folder = "./data/", dataSource = "") {
         let promise = new Promise((resolve, reject) => {
 
             let dataFileStr = `var ${dataName} = ` + JSON.stringify(dayDatas, null, 2) + ";\r\n"
             dataFileStr += `
 if (typeof module !== "undefined" && module.exports) {
     exports.${dataName} = ${dataName}
+    exports.dataSource = "${dataSource}"
     exports.writeDateTime = "${getDateTime()}"
 };
 `

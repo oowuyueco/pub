@@ -360,10 +360,10 @@
 
     </script>
 
-    <script type="text/javascript" src="./cn/雪球行情/沪深300.js"></script>
-    <script type="text/javascript" src="./cn/雪球行情/上证.js"></script>
-    <script type="text/javascript" src="./cn/雪球行情/指数策略.js"></script>
-    <script type="text/javascript" src="./cn/雪球行情/期权策略.js"></script>
+    <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
+    <script type="text/javascript" src="./cn/行情/上证.js"></script>
+    <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
+    <script type="text/javascript" src="./cn/行情/期权策略.js"></script>
     <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script>
@@ -1199,8 +1199,8 @@
 
     </script>
 
-    <script type="text/javascript" src="./cn/雪球行情/上证50ETF.js"></script>
-    <script type="text/javascript" src="./cn/雪球行情/沪深300ETF.js"></script>
+    <script type="text/javascript" src="./cn/行情/上证50ETF.js"></script>
+    <script type="text/javascript" src="./cn/行情/沪深300ETF.js"></script>
     <script>
         function isNumber(value) {
             return typeof value === 'number' && !isNaN(value);
@@ -1619,7 +1619,7 @@
         async function readExcel(excelFileName) {
             const urllocal = "http://127.0.0.1:5500/tempData/期权excel/" + excelFileName;
             const urlremote = "https://oowuyue.github.io/eco/期权excel/" + excelFileName;
-            const file = await (await fetch(urlremote)).arrayBuffer();
+            const file = await (await fetch(urllocal)).arrayBuffer();
             const fileContent = XLSX.read(file);
 
             const sheetName = fileContent.SheetNames[0]; // 获取第一张 sheet 的名字
