@@ -103174,11 +103174,23 @@ var 标普500 = [
     "volume": 3579139418,
     "hsl": 0,
     "zgs": 0
+  },
+  {
+    "date": "2025-11-10",
+    "timestamp": 1762750800000,
+    "open": 6785.36,
+    "high": 6841.32,
+    "low": 6770.56,
+    "close": 6832.43,
+    "percent": 1.5400963024610628,
+    "volume": 3170843848,
+    "hsl": 0,
+    "zgs": 0
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.标普500 = 标普500
     exports.dataSource = "富途"
-    exports.writeDateTime = "2025-11-10 19:42:31"
+    exports.writeDateTime = "2025-11-11 17:39:13"
 };

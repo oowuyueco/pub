@@ -5578,11 +5578,21 @@ var 碳酸锂连续 = [
     "volume": 986569,
     "hold": 534483,
     "settle": 85360
+  },
+  {
+    "date": "2025-11-11",
+    "open": 87700,
+    "high": 88100,
+    "low": 85740,
+    "close": 86540,
+    "volume": 902490,
+    "hold": 526493,
+    "settle": 86760
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.碳酸锂连续 = 碳酸锂连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-10 19:44:56"
+    exports.writeDateTime = "2025-11-11 17:41:44"
 };

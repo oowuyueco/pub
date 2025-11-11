@@ -103138,11 +103138,23 @@ var 纳指 = [
     "volume": 8820365256,
     "hsl": 0,
     "zgs": 0
+  },
+  {
+    "date": "2025-11-10",
+    "timestamp": 1762750800000,
+    "open": 23354.8529,
+    "high": 23569.6153,
+    "low": 23290.054,
+    "close": 23527.1742,
+    "percent": 2.271885274807199,
+    "volume": 8335869241,
+    "hsl": 0,
+    "zgs": 0
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.纳指 = 纳指
     exports.dataSource = "富途"
-    exports.writeDateTime = "2025-11-10 19:42:44"
+    exports.writeDateTime = "2025-11-11 17:39:28"
 };

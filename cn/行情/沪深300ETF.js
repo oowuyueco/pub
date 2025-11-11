@@ -32698,11 +32698,21 @@ var 沪深300ETF = [
     "volume": 448348844,
     "timestamp": "",
     "percent": 0.25
+  },
+  {
+    "date": "2025-11-11",
+    "open": 4.814,
+    "high": 4.824,
+    "low": 4.757,
+    "close": 4.763,
+    "volume": 565193563,
+    "timestamp": "",
+    "percent": -0.92
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300ETF = 沪深300ETF
     exports.dataSource = "新浪"
-    exports.writeDateTime = "2025-11-10 19:42:13"
+    exports.writeDateTime = "2025-11-11 17:38:56"
 };
