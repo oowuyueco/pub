@@ -110,7 +110,7 @@
       }
       return false
     }
-    function CCI死叉(periodList, N = 2) {
+    function CCI死叉(periodList, N = 2, tweaks = 0) {
       if (periodList.length < 3) return false
       for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
@@ -139,6 +139,38 @@
         }
       }
 
+      return false
+    }
+
+
+    function ocHighest(period) {
+      return period.open > period.close ? period.open : period.close
+    }
+    function preN矩形穿ups(periodList, N = 4, tweaks = 10) {
+      if (periodList.length < 6) return false
+      let pre3Period = periodList[periodList.length - 4]
+      let pre2Period = periodList[periodList.length - 3]
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+
+      //2018-01-31 shagnzheng
+      for (index = -1; index >= (0 - N); index--) {
+        if (ocHighest(periodList.at(index)) + tweaks >= periodList.at(index).ups)
+          return true
+      }
+
+      return false
+    }
+
+    function preN十字星(periodList, N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (
+          +Math.abs(curtPercent(currentPeriod)) < 0.9 &&   //1   //当期涨跌幅 阳线阴线 短矩形   '0.57,8.88'  0.35,11.96
+          +Math.abs(curtAmp(currentPeriod)) < 13          //23 //矩形占比小
+        )
+        if (res) return true
+      }
       return false
     }
 
@@ -282,7 +314,8 @@
           curDay.bias.bias3 >= 0
       }
       function checkMonth高位() {
-        return curMonth.K >= 64 && curMonth.D >= 60 &&
+        return (preN矩形穿ups(沪深300技术.currentMonthList) || preN十字星(沪深300技术.currentMonthList)) &&
+          curMonth.K >= 64 && curMonth.D >= 60 &&
           curMonth.bar > 0 && curMonth.diff > 0 &&
           curMonth.bias.bias3 > 0 &&
           (
@@ -325,19 +358,19 @@
             curMonth?.is9转up != 9
           )
 
-          &&
-          !(
-            volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
-            volMaPre(20, 沪深300技术.currentMonthList, -1) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
-            volMaPre(10, 沪深300技术.currentMonthList, -2) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
-            volMaPre(20, 沪深300技术.currentMonthList, -2) < volMaPre(20, 沪深300技术.currentMonthList, -1) &&  //上证50&edate=2017-07-04&&backday=2   ?????
-           
-            pre1Month.K < curMonth.K &&
-            pre1Month.D < curMonth.D &&
-            macdAllUp(沪深300技术.currentMonthList) &&
-            !(pre2Month.volume > pre1Month.volume && pre1Month.volume > curMonth.volume) && //vol5
-            curMonth?.is9转up != 9
-          )
+          // &&
+          // !(
+          //   volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+          //   volMaPre(20, 沪深300技术.currentMonthList, -1) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+          //   volMaPre(10, 沪深300技术.currentMonthList, -2) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+          //   volMaPre(20, 沪深300技术.currentMonthList, -2) < volMaPre(20, 沪深300技术.currentMonthList, -1) &&  //上证50&edate=2017-07-04&&backday=2   ?????
+
+          //   pre1Month.K < curMonth.K &&
+          //   pre1Month.D < curMonth.D &&
+          //   macdAllUp(沪深300技术.currentMonthList) &&
+          //   !(pre2Month.volume > pre1Month.volume && pre1Month.volume > curMonth.volume) && //vol5
+          //   curMonth?.is9转up != 9
+          // )
 
           &&
           !(
@@ -374,7 +407,7 @@
         checkDay高位() &&
         checkMonth高位()
       ) {
-        三死叉.push([curDay.date, curDay.percent, "type0", 沪深300技术.currentMonthList.at(-1).K, 沪深300技术.currentMonthList.at(-1).D])
+        三死叉.push([curDay.date, curDay.percent, "type0",])
       }
 
       if (
@@ -385,7 +418,7 @@
         checkDay高位() &&
         checkMonth高位()
       ) {
-        三死叉.push([curDay.date, curDay.percent, "type1", 沪深300技术.currentMonthList.at(-1).K, 沪深300技术.currentMonthList.at(-1).D])
+        三死叉.push([curDay.date, curDay.percent, "type1",])
       }
 
       continue
