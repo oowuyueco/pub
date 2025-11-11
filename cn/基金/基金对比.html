@@ -14,6 +14,8 @@
   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
   <script type="text/javascript" src="fund217022.js"></script>
   <script type="text/javascript" src="../行情/沪深300.js"></script>
+  <script type="text/javascript" src="../行情/上证.js"></script>
+  <script type="text/javascript" src="../行情/上证50.js"></script>
 
   <script type="text/javascript" src="../../js/my.js"></script>
   <script type="text/javascript" src="../../js/indicatorCalculation.js"></script>
@@ -78,8 +80,6 @@
       }
       return nameCode
     }
-
-
     function volMaPre(N = 5, periodList, endIndex) {
       if (periodList.length < N + 1) return 0
       let sum = 0
@@ -142,9 +142,6 @@
       return false
     }
 
-
-
-
     function 绿空绿红(periodList, N = 1) {
       for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
@@ -173,17 +170,7 @@
       }
       return false
     }
-    function MACD金叉(periodList, N = 2) {
-      for (let index = 1; index <= N; index++) {
-        let pre2Period = periodList[periodList.length - (index + 2)]
-        let pre1Period = periodList[periodList.length - (index + 1)]
-        let currentPeriod = periodList[periodList.length - index]
-        let res = pre1Period.bar < 0 && currentPeriod.bar > 0
-        if (res) return true
-      }
-      return false
-    }
-    function MACD金叉2(periodList, N = 2) {
+    function MACDpre金叉(periodList, N = 2) {
       for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
         let pre1Period = periodList[periodList.length - (index + 1)]
@@ -197,12 +184,22 @@
       }
       return false
     }
-    function BIAS3金叉2(periodList, N = 2) {
+    function MACD金叉(periodList, N = 2) {
       for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
         let pre1Period = periodList[periodList.length - (index + 1)]
         let currentPeriod = periodList[periodList.length - index]
-        let res = pre1Period.bias.bias3 < pre1Period.bias.bias2 && currentPeriod.bias.bias3 >= currentPeriod.bias.bias2
+        let res = pre1Period.bar < 0 && currentPeriod.bar > 0
+        if (res) return true
+      }
+      return false
+    }
+    function BIAS金叉0(periodList, attr = "bias1", N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.bias[attr] < 0 && currentPeriod.bias[attr] >= 0
         if (res) return true
       }
       return false
@@ -230,125 +227,252 @@
       return false
 
     }
-
-    function checkMonth低位(periodList) {
-      if (periodList.length < 10) return false
-
-      function 连续三月下跌(currentMonthList) {
-        //包含自己前3个月
-        let cut = 0
-        for (let index = 1; index <= 3; index++) {
-          let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-          let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-          let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-          let currentMonth = currentMonthList[currentMonthList.length - (index)]
-          if (
-            curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 && curtPercent(pre2Month) < 0 &&
-            PtPPercent(pre1Month, currentMonth) < 0 &&
-            PtPPercent(pre2Month, pre1Month) < 0 &&
-            PtPPercent(pre3Month, pre2Month) < 0 &&
-
-            currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 &&
-            pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 &&
-
-            currentMonth.J < pre1Month.J &&
-            currentMonth.K < pre1Month.K
-          ) {
-            cut++
-          }
-        }
-        return cut
-      }
-
-      let pre2Period = periodList[periodList.length - 3]
+    function kdjAllUp(periodList) {
       let pre1Period = periodList[periodList.length - 2]
       let currentPeriod = periodList[periodList.length - 1]
-
-      if (
-        currentPeriod.dea < -50 && currentPeriod.diff < -50 &&
-        (连续三月下跌(periodList) > 0 || PtPPercent(pre2Period, pre1Period) <= -15)
-      ) return true
-
-
-      return false
+      return pre1Period.K < currentPeriod.K &&
+        pre1Period.D < currentPeriod.D &&
+        pre1Period.J < currentPeriod.J
+    }
+    function macdAllUp(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.bar < currentPeriod.bar &&
+        pre1Period.diff < currentPeriod.diff &&
+        pre1Period.dea < currentPeriod.dea
+    }
+    function biasAllUp(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.bias.bias1 < currentPeriod.bias.bias1 &&
+        pre1Period.bias.bias2 < currentPeriod.bias.bias2 &&
+        pre1Period.bias.bias3 < currentPeriod.bias.bias3
     }
 
     let 三死叉 = []
     let 三金叉 = []
 
     let 沪深300技术 = {};
-    沪深300技术.dayDatas = 沪深300;
+
+    let dataName = decodeURI(getQueryVariable("name"));
+    if (dataName == "沪深300") 沪深300技术.dayDatas = 沪深300;
+    if (dataName == "上证") 沪深300技术.dayDatas = 上证;
+    if (dataName == "上证50") 沪深300技术.dayDatas = 上证50;
+
     for (let index = 10; index < 沪深300技术.dayDatas.length; index++) {
       const 沪深300Item = 沪深300技术.dayDatas[index];
       沪深300技术 = calDayWeekMonthKline(沪深300技术, 沪深300Item.date);
-
       let pre2Day = 沪深300技术.currentDayList.at(-3);
       let pre1Day = 沪深300技术.currentDayList.at(-2);
       let curDay = 沪深300技术.currentDayList.at(-1);
 
-      if (
-        (
+      let pre3Month = 沪深300技术.currentMonthList.at(-4);
+      let pre2Month = 沪深300技术.currentMonthList.at(-3);
+      let pre1Month = 沪深300技术.currentMonthList.at(-2);
+      let curMonth = 沪深300技术.currentMonthList.at(-1);
+
+
+      /*----------------------------------------------------------------------------------*/
+
+      function checkDay高位() {
+        return curDay.percent <= 0.1 &&
+          (pre2Day.low > pre2Day.mas || curDay.close > curDay.mas) &&
+          curDay.J > 0 && (curDay.J > 20 || curDay.D > 60) && (pre1Day.J > curDay.J || pre1Day.D > curDay.D) &&
+          curDay.dea > 0 && curDay.diff > 0 &&
+          curDay.bias.bias3 >= 0
+      }
+      function checkMonth高位() {
+        return curMonth.K >= 64 && curMonth.D >= 60 &&
+          curMonth.bar > 0 && curMonth.diff > 0 &&
+          curMonth.bias.bias3 > 0 &&
           (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -3) < volMaPre(N = 10, 沪深300技术.currentDayList, -3) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) > volMaPre(N = 10, 沪深300技术.currentDayList, -2))
-          ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) < volMaPre(N = 10, 沪深300技术.currentDayList, -2) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -1) > volMaPre(N = 10, 沪深300技术.currentDayList, -1)
+            沪深300技术.currentMonthList.at(-2).D > 沪深300技术.currentMonthList.at(-1).D ||
+            沪深300技术.currentMonthList.at(-2).K > 沪深300技术.currentMonthList.at(-1).K ||
+            (
+              volMaPre(5, 沪深300技术.currentMonthList, -2) > volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+              沪深300技术.currentMonthList.at(-2).volume > 沪深300技术.currentMonthList.at(-1).volume
+            )
+          ) &&
+          !(
+            volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(5, 沪深300技术.currentMonthList, -2) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(10, 沪深300技术.currentMonthList, -2) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(20, 沪深300技术.currentMonthList, -2) < volMaPre(20, 沪深300技术.currentMonthList, -1) &&
+            curtPercent(沪深300技术.currentMonthList.at(-1)) > 0 &&
+            沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
           )
-        ) &&
-        KDJ金叉(沪深300技术.currentDayList) && pre1Day.J < curDay.J &&
-        MACD金叉2(沪深300技术.currentDayList) && pre1Day.bar < curDay.bar &&
-
-        curDay.close < curDay.mas &&
-        (curDay.J < 30 || curDay.D < 30) &&
-        curDay.dea < 0 && curDay.diff < 0 &&
-        curDay.bias.bias2 < 0 &&
-
-        沪深300技术.currentMonthList.at(-1).K < 23 && 沪深300技术.currentMonthList.at(-1).D < 25 &&
-        (
-          沪深300技术.currentMonthList.at(-3).J < 沪深300技术.currentMonthList.at(-2).J ||
-          沪深300技术.currentMonthList.at(-2).J < 沪深300技术.currentMonthList.at(-1).J ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentMonthList, -2) < volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-            沪深300技术.currentMonthList.at(-2).volume < 沪深300技术.currentMonthList.at(-1).volume
+          &&
+          !(
+            (
+              volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) ||
+              volMaPre(20, 沪深300技术.currentMonthList, -1) < volMaPre(10, 沪深300技术.currentMonthList, -1)
+            ) &&
+            kdjAllUp(沪深300技术.currentMonthList) &&
+            macdAllUp(沪深300技术.currentMonthList) &&
+            curMonth?.is9转up != 9
           )
-        ) &&
-        !(
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -1) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          沪深300技术.currentMonthList.at(-2).volume > 沪深300技术.currentMonthList.at(-1).volume &&
-          volMaPre(N = 5, 沪深300技术.currentMonthList, -2) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -2) > volMaPre(N = 10, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 20, 沪深300技术.currentMonthList, -2) > volMaPre(N = 20, 沪深300技术.currentMonthList, -1) &&
-          curtPercent(沪深300技术.currentMonthList.at(-1)) < 0 &&
-          沪深300技术.currentMonthList.at(-2).D > 沪深300技术.currentMonthList.at(-1).D &&
-          沪深300技术.currentMonthList.at(-1).D > 20
-        )
 
-      ) {
-        三金叉.push([curDay.date, curDay.percent, "type0"])
+          &&
+          !(
+            volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(20, 沪深300技术.currentMonthList, -1) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+
+            volMaPre(10, 沪深300技术.currentMonthList, -2) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(20, 沪深300技术.currentMonthList, -2) < volMaPre(20, 沪深300技术.currentMonthList, -1) &&
+            pre1Month.D < curMonth.D &&
+            macdAllUp(沪深300技术.currentMonthList) &&
+            !(pre2Month.volume > pre1Month.volume && pre1Month.volume > curMonth.volume) && //vol5
+            curMonth?.is9转up != 9
+          )
+
+          &&
+          !(
+            volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(20, 沪深300技术.currentMonthList, -1) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(10, 沪深300技术.currentMonthList, -2) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(20, 沪深300技术.currentMonthList, -2) < volMaPre(20, 沪深300技术.currentMonthList, -1) &&  //上证50&edate=2017-07-04&&backday=2   ?????
+           
+            pre1Month.K < curMonth.K &&
+            pre1Month.D < curMonth.D &&
+            macdAllUp(沪深300技术.currentMonthList) &&
+            !(pre2Month.volume > pre1Month.volume && pre1Month.volume > curMonth.volume) && //vol5
+            curMonth?.is9转up != 9
+          )
+
+          &&
+          !(
+            curtPercent(pre3Month) > 0 &&
+            curtPercent(pre2Month) > 0 &&
+            curtPercent(pre1Month) > 0 &&
+            curtPercent(curMonth) > 0 &&
+
+            volMaPre(10, 沪深300技术.currentMonthList, -1) < volMaPre(5, 沪深300技术.currentMonthList, -1) &&
+            volMaPre(20, 沪深300技术.currentMonthList, -1) < volMaPre(10, 沪深300技术.currentMonthList, -1) &&
+
+            pre3Month.volume < pre2Month.volume &&
+            pre2Month.volume < pre1Month.volume &&
+
+            macdAllUp(沪深300技术.currentMonthList)
+          )
+
+
+
+      }
+      function VOL5_10死叉(periodList, N = 2, tweaks = 0) {
+        for (let index = 1; index <= N; index++) {
+          let res = volMaPre(5, periodList, 0 - index - 1) > volMaPre(10, periodList, 0 - index - 1) &&
+            volMaPre(5, periodList, 0 - index) < volMaPre(10, periodList, 0 - index)
+          if (res) return true
+        }
+        return false
       }
 
+      if (
+        VOL5_10死叉(沪深300技术.currentDayList) && volMaPre(5, 沪深300技术.currentDayList, -2) >= volMaPre(5, 沪深300技术.currentDayList, -1) &&
+        (KDJ死叉(沪深300技术.currentDayList) || CCI死叉(沪深300技术.currentDayList)) &&
+        MACD死叉(沪深300技术.currentDayList) && pre1Day.bar > curDay.bar &&
+        checkDay高位() &&
+        checkMonth高位()
+      ) {
+        三死叉.push([curDay.date, curDay.percent, "type0", 沪深300技术.currentMonthList.at(-1).K, 沪深300技术.currentMonthList.at(-1).D])
+      }
 
       if (
-        (
+        VOL5_10死叉(沪深300技术.currentDayList) &&
+        VOL5_10死叉(沪深300技术.currentWeekList) &&
+        红空红绿(沪深300技术.currentDayList, 2) &&
+        红空红绿(沪深300技术.currentWeekList, 2) &&
+        checkDay高位() &&
+        checkMonth高位()
+      ) {
+        三死叉.push([curDay.date, curDay.percent, "type1", 沪深300技术.currentMonthList.at(-1).K, 沪深300技术.currentMonthList.at(-1).D])
+      }
+
+      continue
+
+
+      function VOL5_10金叉(periodList, N = 2, tweaks = 0) {
+        for (let index = 1; index <= N; index++) {
+          let res = volMaPre(5, periodList, 0 - index - 1) < volMaPre(10, periodList, 0 - index - 1) &&
+            volMaPre(5, periodList, 0 - index) > volMaPre(10, periodList, 0 - index)
+          if (res) return true
+        }
+        return false
+      }
+      function checkMonth低位(periodList) {
+
+        return periodList.at(-1).K < 23 && periodList.at(-1).D < 25 &&
           (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -3) < volMaPre(N = 10, 沪深300技术.currentDayList, -3) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) > volMaPre(N = 10, 沪深300技术.currentDayList, -2))
-          ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) < volMaPre(N = 10, 沪深300技术.currentDayList, -2) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -1) > volMaPre(N = 10, 沪深300技术.currentDayList, -1)
+            periodList.at(-3).J < periodList.at(-2).J ||
+            periodList.at(-2).J < periodList.at(-1).J ||
+            (
+              volMaPre(N = 5, periodList, -2) < volMaPre(N = 5, periodList, -1) &&
+              periodList.at(-2).volume < periodList.at(-1).volume
+            )
+          ) &&
+          !(
+            volMaPre(N = 10, periodList, -1) > volMaPre(N = 5, periodList, -1) &&
+            periodList.at(-2).volume > periodList.at(-1).volume &&
+            volMaPre(N = 5, periodList, -2) > volMaPre(N = 5, periodList, -1) &&
+            volMaPre(N = 10, periodList, -2) > volMaPre(N = 10, periodList, -1) &&
+            volMaPre(N = 20, periodList, -2) > volMaPre(N = 20, periodList, -1) &&
+            curtPercent(periodList.at(-1)) < 0 &&
+            periodList.at(-2).D > periodList.at(-1).D &&
+            periodList.at(-1).D > 20
           )
-        ) &&
-        KDJ金叉(沪深300技术.currentDayList, 4) && pre1Day.J < curDay.J &&
-        MACD金叉(沪深300技术.currentDayList) && pre1Day.bar < curDay.bar &&
+      }
+      function checkMonth低位2(periodList) {
+        if (periodList.length < 10) return false
+
+        function 连续三月下跌(currentMonthList) {
+          //包含自己前3个月
+          let cut = 0
+          for (let index = 1; index <= 3; index++) {
+            let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
+            let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
+            let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
+            let currentMonth = currentMonthList[currentMonthList.length - (index)]
+            if (
+              curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 && curtPercent(pre2Month) < 0 &&
+              PtPPercent(pre1Month, currentMonth) < 0 &&
+              PtPPercent(pre2Month, pre1Month) < 0 &&
+              PtPPercent(pre3Month, pre2Month) < 0 &&
+
+              currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 &&
+              pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 &&
+
+              currentMonth.J < pre1Month.J &&
+              currentMonth.K < pre1Month.K
+            ) {
+              cut++
+            }
+          }
+          return cut
+        }
+
+        let pre2Period = periodList[periodList.length - 3]
+        let pre1Period = periodList[periodList.length - 2]
+        let currentPeriod = periodList[periodList.length - 1]
+
+        if (
+          currentPeriod.dea < -50 && currentPeriod.diff < -50 &&
+          (连续三月下跌(periodList) > 0 || PtPPercent(pre2Period, pre1Period) <= -15)
+        ) return true
+
+
+        return false
+      }
+
+      if (
+        VOL5_10金叉(沪深300技术.currentDayList) &&
+        KDJ金叉(沪深300技术.currentDayList) && pre1Day.J < curDay.J &&
+        MACDpre金叉(沪深300技术.currentDayList) && pre1Day.bar < curDay.bar &&
+
+        (pre2Day.high < pre2Day.mas || curDay.close < curDay.mas) &&
         curDay.dea < 0 && curDay.diff < 0 &&
-        ///
-        curDay.close < curDay.mas &&
-        (pre1Day.D < 20 || curDay.D < 20) &&  
-        curDay.bias.bias3 < 0 &&
-        ///
+        (curDay.J < 20 || curDay.D < 30) &&
+        curDay.bias.bias2 < 0 &&
+
         checkMonth低位(沪深300技术.currentMonthList)
 
       ) {
@@ -356,179 +480,50 @@
       }
 
 
-
       if (
-        (
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -3) < volMaPre(N = 10, 沪深300技术.currentDayList, -3) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) > volMaPre(N = 10, 沪深300技术.currentDayList, -2))
-          ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) < volMaPre(N = 10, 沪深300技术.currentDayList, -2) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -1) > volMaPre(N = 10, 沪深300技术.currentDayList, -1)
-          )
-        ) &&
-        KDJ金叉(沪深300技术.currentDayList) && pre1Day.J < curDay.J &&
+        VOL5_10金叉(沪深300技术.currentDayList) &&
+        KDJ金叉(沪深300技术.currentDayList, 4) && pre1Day.J < curDay.J &&
         MACD金叉(沪深300技术.currentDayList) && pre1Day.bar < curDay.bar &&
+
+        (pre2Day.high < pre2Day.mas || curDay.close < curDay.mas) &&
         curDay.dea < 0 && curDay.diff < 0 &&
-        // ///
-        // curDay.close < curDay.mas &&
-        // (pre1Day.D < 20 || curDay.D < 20) &&  
-        // curDay.bias.bias3 < 0 &&
-        // ///
-        checkMonth低位(沪深300技术.currentMonthList) &&
-        !(
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -1) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          沪深300技术.currentMonthList.at(-2).volume > 沪深300技术.currentMonthList.at(-1).volume &&
-          volMaPre(N = 5, 沪深300技术.currentMonthList, -2) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -2) > volMaPre(N = 10, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 20, 沪深300技术.currentMonthList, -2) > volMaPre(N = 20, 沪深300技术.currentMonthList, -1) &&
-          curtPercent(沪深300技术.currentMonthList.at(-1)) < 0 &&
-          沪深300技术.currentMonthList.at(-2).D > 沪深300技术.currentMonthList.at(-1).D &&
-          沪深300技术.currentMonthList.at(-1).D > 20
-        )
+        (pre1Day.D < 20 || curDay.D < 20) &&
+        curDay.bias.bias3 < 0 &&
+
+        checkMonth低位2(沪深300技术.currentMonthList)
 
       ) {
-        三金叉.push([curDay.date, curDay.percent, "type0"])
+        三金叉.push([curDay.date, curDay.percent, "type1"])
       }
-
-
-
-      // if (
-      //   (
-      //     (
-      //       volMaPre(N = 5, 沪深300技术.currentDayList, -3) < volMaPre(N = 10, 沪深300技术.currentDayList, -3) &&
-      //       volMaPre(N = 5, 沪深300技术.currentDayList, -2) > volMaPre(N = 10, 沪深300技术.currentDayList, -2))
-      //     ||
-      //     (
-      //       volMaPre(N = 5, 沪深300技术.currentDayList, -2) < volMaPre(N = 10, 沪深300技术.currentDayList, -2) &&
-      //       volMaPre(N = 5, 沪深300技术.currentDayList, -1) > volMaPre(N = 10, 沪深300技术.currentDayList, -1)
-      //     )
-      //   ) &&
-      //   (
-      //     (
-      //       volMaPre(N = 5, 沪深300技术.currentWeekList, -3) < volMaPre(N = 10, 沪深300技术.currentWeekList, -3) &&
-      //       volMaPre(N = 5, 沪深300技术.currentWeekList, -2) > volMaPre(N = 10, 沪深300技术.currentWeekList, -2))
-      //     ||
-      //     (
-      //       volMaPre(N = 5, 沪深300技术.currentWeekList, -2) < volMaPre(N = 10, 沪深300技术.currentWeekList, -2) &&
-      //       volMaPre(N = 5, 沪深300技术.currentWeekList, -1) > volMaPre(N = 10, 沪深300技术.currentWeekList, -1)
-      //     )
-      //   ) &&
-      //   绿空绿红(沪深300技术.currentDayList, 2) //&&
-      //   // 绿空绿红(沪深300技术.currentWeekList, 2) &&
-
-      //   // curDay.close < curDay.mas &&
-      //   // (curDay.J < 30 || curDay.D < 30) &&
-      //   // curDay.dea < 0 && curDay.diff < 0 &&
-      //   // curDay.bias.bias3 < 0 &&
-      //   // !(
-      //   //   volMaPre(N = 10, 沪深300技术.currentMonthList, -1) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-      //   //   沪深300技术.currentMonthList.at(-2).volume > 沪深300技术.currentMonthList.at(-1).volume &&
-      //   //   volMaPre(N = 5, 沪深300技术.currentMonthList, -2) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-      //   //   volMaPre(N = 10, 沪深300技术.currentMonthList, -2) > volMaPre(N = 10, 沪深300技术.currentMonthList, -1) &&
-      //   //   volMaPre(N = 20, 沪深300技术.currentMonthList, -2) > volMaPre(N = 20, 沪深300技术.currentMonthList, -1) &&
-      //   //   curtPercent(沪深300技术.currentMonthList.at(-1)) < 0 &&
-      //   //   沪深300技术.currentMonthList.at(-2).D > 沪深300技术.currentMonthList.at(-1).D
-      //   // )
-
-      // ) {
-      //   三金叉.push([curDay.date, curDay.percent, "type1"])
-      // }
-
-
-
-
-      /*----------------------------------------------------------------------------------*/
-
-      if (
-        (
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -3) > volMaPre(N = 10, 沪深300技术.currentDayList, -3) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) < volMaPre(N = 10, 沪深300技术.currentDayList, -2))
-          ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) > volMaPre(N = 10, 沪深300技术.currentDayList, -2) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -1) < volMaPre(N = 10, 沪深300技术.currentDayList, -1)
-          )
-        ) && volMaPre(N = 5, 沪深300技术.currentDayList, -2) >= volMaPre(N = 5, 沪深300技术.currentDayList, -1) &&
-
-        (KDJ死叉(沪深300技术.currentDayList) || CCI死叉(沪深300技术.currentDayList)) && pre1Day.J > curDay.J &&
-
-        MACD死叉(沪深300技术.currentDayList) && pre1Day.bar > curDay.bar &&
-
-        curDay.close > curDay.mas &&
-        (curDay.J > 20 || curDay.D > 70) &&
-        curDay.dea > 0 && curDay.diff > 0 &&
-        curDay.bias.bias3 > 0 &&
-
-        沪深300技术.currentMonthList.at(-1).K > 65 && 沪深300技术.currentMonthList.at(-1).D > 55 &&
-        (
-          沪深300技术.currentMonthList.at(-2).D > 沪深300技术.currentMonthList.at(-1).D ||
-          沪深300技术.currentMonthList.at(-2).K > 沪深300技术.currentMonthList.at(-1).K ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentMonthList, -2) > volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-            沪深300技术.currentMonthList.at(-2).volume > 沪深300技术.currentMonthList.at(-1).volume
-          )
-        ) &&
-        !(
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -1) < volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          沪深300技术.currentMonthList.at(-2).volume < 沪深300技术.currentMonthList.at(-1).volume &&
-          volMaPre(N = 5, 沪深300技术.currentMonthList, -2) < volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -2) < volMaPre(N = 10, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 20, 沪深300技术.currentMonthList, -2) < volMaPre(N = 20, 沪深300技术.currentMonthList, -1) &&
-          curtPercent(沪深300技术.currentMonthList.at(-1)) > 0 &&
-          沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
-        )
-
-      ) {
-        三死叉.push([curDay.date, curDay.percent, "type0"])
-      }
-
 
 
 
       if (
+        VOL5_10金叉(沪深300技术.currentDayList) &&
+        KDJ金叉(沪深300技术.currentDayList) && pre1Day.J < curDay.J &&
         (
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -3) > volMaPre(N = 10, 沪深300技术.currentDayList, -3) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) < volMaPre(N = 10, 沪深300技术.currentDayList, -2))
-          ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentDayList, -2) > volMaPre(N = 10, 沪深300技术.currentDayList, -2) &&
-            volMaPre(N = 5, 沪深300技术.currentDayList, -1) < volMaPre(N = 10, 沪深300技术.currentDayList, -1)
-          )
+          MACDpre金叉(沪深300技术.currentDayList) ||
+          MACD金叉(沪深300技术.currentDayList)
         ) &&
-        (
-          (
-            volMaPre(N = 5, 沪深300技术.currentWeekList, -3) > volMaPre(N = 10, 沪深300技术.currentWeekList, -3) &&
-            volMaPre(N = 5, 沪深300技术.currentWeekList, -2) < volMaPre(N = 10, 沪深300技术.currentWeekList, -2))
-          ||
-          (
-            volMaPre(N = 5, 沪深300技术.currentWeekList, -2) > volMaPre(N = 10, 沪深300技术.currentWeekList, -2) &&
-            volMaPre(N = 5, 沪深300技术.currentWeekList, -1) < volMaPre(N = 10, 沪深300技术.currentWeekList, -1)
-          )
-        ) &&
-        红空红绿(沪深300技术.currentDayList, 2) &&
-        红空红绿(沪深300技术.currentWeekList, 2) &&
+        pre1Day.bar < curDay.bar &&
+        (pre2Day.high < pre2Day.mas || curDay.close < curDay.mas) &&
 
-        curDay.close > curDay.mas &&
-        (curDay.J > 20 || curDay.D > 70) &&
-        curDay.dea > 0 && curDay.diff > 0 &&
-        curDay.bias.bias3 > 0 &&
-        !(
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -1) < volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          沪深300技术.currentMonthList.at(-2).volume < 沪深300技术.currentMonthList.at(-1).volume &&
-          volMaPre(N = 5, 沪深300技术.currentMonthList, -2) < volMaPre(N = 5, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 10, 沪深300技术.currentMonthList, -2) < volMaPre(N = 10, 沪深300技术.currentMonthList, -1) &&
-          volMaPre(N = 20, 沪深300技术.currentMonthList, -2) < volMaPre(N = 20, 沪深300技术.currentMonthList, -1) &&
-          curtPercent(沪深300技术.currentMonthList.at(-1)) > 0 &&
-          沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
-        )
+        (
+          VOL5_10金叉(沪深300技术.currentMonthList, 1) ||
+          MACD金叉(沪深300技术.currentMonthList, 1) ||
+
+          BIAS金叉0(沪深300技术.currentMonthList, "bias1", 1) ||
+          BIAS金叉0(沪深300技术.currentMonthList, "bias2", 1)
+        ) &&
+        (pre1Month < curMonth.J || pre1Month.bar < curMonth.bar) &&
+        curMonth.bias.bias3 < 0
 
       ) {
-        三死叉.push([curDay.date, curDay.percent, "type1"])
+        三金叉.push([curDay.date, curDay.percent, "type2"])
       }
+
+
+
     }
     console.log(三金叉, 三死叉)
   </script>
@@ -642,7 +637,7 @@
           itemStyle: {
             normal: {
               opacity: 1,
-              color: "red"
+              color: "green"
             }
           },
           symbolSize: function (val) {
@@ -670,6 +665,25 @@
           zlevel: 5,
           data: 三金叉.filter(ele => ele[2] == "type1")
         },
+        { //期权策略
+          name: '三金叉2',
+          type: 'scatter',
+          // xAxisIndex: 6,
+          // yAxisIndex: 12,
+          //symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+          itemStyle: {
+            normal: {
+              opacity: 1,
+              color: "blue"
+            }
+          },
+          symbolSize: function (val) {
+            return 5
+          },
+          zlevel: 5,
+          data: 三金叉.filter(ele => ele[2] == "type2")
+        },
+
 
 
 
@@ -687,7 +701,7 @@
             }
           },
           symbolSize: function (val) {
-            return 5
+            return 7
           },
           zlevel: 5,
           data: 三死叉.filter(ele => ele[2] == "type0")
@@ -702,11 +716,11 @@
           itemStyle: {
             normal: {
               opacity: 1,
-              color: "black"
+              color: "orange"
             }
           },
           symbolSize: function (val) {
-            return 5
+            return 7
           },
           zlevel: 5,
           data: 三死叉.filter(ele => ele[2] == "type1")
