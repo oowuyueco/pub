@@ -23,6 +23,9 @@
     <script type="text/javascript" src="./us/us白糖.js "></script>
     <script type="text/javascript" src="./us/铜金比Day.js"></script>
 
+    <script type="text/javascript" src="./cn/沪深300同比,上证同比.js"></script>
+    <script type="text/javascript" src="./cn/基金/fund217022.js"></script>
+
     <script type="text/javascript">
 
         us原油 = us原油.data
@@ -1171,6 +1174,178 @@
                         return item
                     }).filterAndAddStartEnd()
                 },
+
+
+
+                ////
+
+                { //股同比
+                    name: "同比300",
+                    type: "line",
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1.3,
+                    },
+                    zlevel: 1,
+                    tooltip: {
+                        show: false,
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.45, //大 下
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.8, //小 上
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.5,
+                                color: "green",
+                            },
+                            label: {
+                                formatter: "-20低估",
+                                color: "green",
+                                fontSize: "10",
+                                position: "start",
+                            },
+                            yAxis: -20, // 标线值
+                            x: "6.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "red",
+                            },
+                            label: {
+                                formatter: "30高估",
+                                color: "red",
+                                fontSize: "10",
+                                position: "start",
+                            },
+                            yAxis: 30, // 标线值
+                            x: "6.5%",
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "gray",
+                                //type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "30高估",
+                                color: "red",
+                                fontSize: "0",
+                                position: "start",
+                            },
+                            yAxis: 0, // 标线值
+                        },
+                        ],
+                    },
+                    data: 沪深300同比.filter(item => {
+                        return parseFloat(item[0].substring(0, 4)) >= 2008
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: "基金对比",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+                        let tmp = []
+                        tmp[0] = ele.date
+                        tmp[1] = +ele.招商债券.toFixed(2)
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    type: 'line',
+                    showSymbol: false,
+                    // smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        //color: "#FD4142", //"#fd76c8"
+                    },
+                },
+                {
+                    name: "基金对比",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+                        let tmp = []
+                        tmp[0] = ele.date
+                        tmp[1] = +ele.沪深300.toFixed(2)
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    type: 'line',
+                    showSymbol: false,
+                    // smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        //color: "#FD4142", //"#fd76c8"
+                    },
+                },
+                {
+                    name: "基金对比",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+                        let tmp = []
+                        tmp[0] = ele.date
+                        tmp[1] = +ele.创业板.toFixed(2)
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    type: 'line',
+                    showSymbol: false,
+                    // smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        //color: "#FD4142", //"#fd76c8"
+                    },
+                },
+
+
+                {
+                    name: "基金对比",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+                        let tmp = []
+                        tmp[0] = ele.date
+                        tmp[1] = +ele.三年定期.toFixed(2)
+                        return tmp
+                    }).filterAndAddStartEnd(),
+                    type: 'line',
+                    showSymbol: false,
+                    // smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        //color: "#FD4142", //"#fd76c8"
+                    },
+                },
+                ////
+
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 {
                     name: '大宗高位KDJ',
@@ -2326,6 +2501,7 @@
                 params.selected.ppi = false
                 params.selected.油糖比 = false
                 params.selected.Assets周 = false
+                params.selected.同比300 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2336,6 +2512,7 @@
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
                 params.selected.Assets周 = false
+                params.selected.同比300 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2346,6 +2523,7 @@
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
                 params.selected.Assets周 = false
+                params.selected.同比300 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2356,10 +2534,25 @@
                 params.selected.油糖比 = false
                 params.selected.金融脉动增速us = false
                 params.selected.中美汇 = false
+                params.selected.同比300 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+            if (params.name === "同比300" && params.selected["同比300"] === true) {
+                option.yAxis[0].max = 50
+                option.yAxis[0].min = -25
+                params.selected.ppi = false
+                params.selected.油糖比 = false
+                params.selected.金融脉动增速us = false
+                params.selected.中美汇 = false
+                params.selected.Assets周 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
 
+            //  max: 50,      300
+            //  min: -25,    -20
+            ////////////////
 
             if (
                 (params.name === "信贷脉冲" && params.selected["信贷脉冲"] === true)
@@ -2371,6 +2564,7 @@
                 params.selected.pmi = false
                 params.selected.油糖比 = false
                 params.selected.境外持仓 = false
+                params.selected.基金对比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2381,6 +2575,7 @@
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
                 params.selected.境外持仓 = false
+                params.selected.基金对比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2391,6 +2586,7 @@
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
                 params.selected.境外持仓 = false
+                params.selected.基金对比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -2401,9 +2597,22 @@
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
                 params.selected.铜金比 = false
+                params.selected.基金对比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
+            if (params.name === "基金对比" && params.selected["基金对比"] === true) {
+                option.yAxis[1].max = 300    //60
+                option.yAxis[1].min = -20  //5
+                params.selected.pmi = false
+                params.selected.信贷脉冲 = false
+                params.selected.信贷脉冲_MA = false
+                params.selected.铜金比 = false
+                params.selected.境外持仓 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+
 
 
 
@@ -2497,6 +2706,16 @@
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "bdi"
+            })
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "同比300"
+            })
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "基金对比"
             })
 
 
