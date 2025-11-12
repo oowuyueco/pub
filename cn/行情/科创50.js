@@ -14188,11 +14188,21 @@ var 科创50 = [
     "volume": 1175212700,
     "timestamp": "",
     "percent": -1.42
+  },
+  {
+    "date": "2025-11-12",
+    "open": 1377.147,
+    "high": 1388.508,
+    "low": 1362.378,
+    "close": 1379.452,
+    "volume": 1272404100,
+    "timestamp": "",
+    "percent": -0.58
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.科创50 = 科创50
     exports.dataSource = "新浪"
-    exports.writeDateTime = "2025-11-11 17:38:54"
+    exports.writeDateTime = "2025-11-12 17:39:15"
 };

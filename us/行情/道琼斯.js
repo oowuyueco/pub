@@ -166090,11 +166090,23 @@ var 道琼斯 = [
     "volume": 490079068,
     "hsl": 0,
     "zgs": 0
+  },
+  {
+    "date": "2025-11-11",
+    "timestamp": 1762837200000,
+    "open": 47384.51,
+    "high": 47974.37,
+    "low": 47384.51,
+    "close": 47927.96,
+    "percent": 1.1808025691264452,
+    "volume": 454974906,
+    "hsl": 0,
+    "zgs": 0
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.道琼斯 = 道琼斯
     exports.dataSource = "富途"
-    exports.writeDateTime = "2025-11-11 17:39:41"
+    exports.writeDateTime = "2025-11-12 17:40:00"
 };

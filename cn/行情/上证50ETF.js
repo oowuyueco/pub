@@ -50358,11 +50358,21 @@ var 上证50ETF = [
     "volume": 511249302,
     "timestamp": "",
     "percent": -0.66
+  },
+  {
+    "date": "2025-11-12",
+    "open": 3.178,
+    "high": 3.206,
+    "low": 3.178,
+    "close": 3.197,
+    "volume": 553594448,
+    "timestamp": "",
+    "percent": 0.53
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50ETF = 上证50ETF
     exports.dataSource = "新浪"
-    exports.writeDateTime = "2025-11-11 17:38:57"
+    exports.writeDateTime = "2025-11-12 17:39:18"
 };
