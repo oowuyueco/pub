@@ -286,7 +286,12 @@ function globalMonth高位Filter(trigDate, triggerLogObj指数, nameCodes) {
             curtPercent(curMonth) > 0 &&
             pre1Month.D < curMonth.D &&
             pre1Month.K < curMonth.K &&
-            curMonth.mas < curMonth.ma10
+            curMonth.mas < curMonth.ma10 &&
+            (
+                volMaPre(10, currentMonthList, -2) <= volMaPre(10, currentMonthList, -1) ||
+                pre1Month.bar < curMonth.bar ||
+                pre1Month.bias.bias3 < curMonth.bias.bias3
+            )
         )
     }
 
