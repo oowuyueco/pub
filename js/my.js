@@ -1323,16 +1323,16 @@ if (typeof module !== "undefined" && module.exports) {
                     return
                 }
                 if (forceNew) {
-                    if (devTestEnv) {//本机 当天的即可
+                    if (devTestEnv) {//本机测试环境
                         let stat = fs.statSync(`${folder}${dataName}.js`)
                         //let modifyDate = stat.mtime.toISOString().substring(0, 10)
                         let modifyDate = stampToDate(parseInt(stat.mtimeMs)).substring(0, 10)
                         if (currentDayYMD !== modifyDate) {
-                            console.log(dataName, "文件数据不是当天的")
-                            resolve(false)
-                            return
+                            console.log(dataName, "本机测试环境:注意文件数据不是当天的")
+                            // resolve(false)
+                            // return
                         } else {
-                            console.log("本机当天的即可")
+                            console.log("本机测试环境:本机当天的即可")
                         }
                     } else {//githubAction 强制更新
                         resolve(false)
