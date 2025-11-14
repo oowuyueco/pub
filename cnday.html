@@ -405,8 +405,8 @@
         let symbolUpArrow = "path://M12.0002 3.58569L19.4144 10.9999L18.0002 12.4141L13.0002 7.41412V19.9999H11.0002V7.41412L6.00015 12.4141L4.58594 10.9999L12.0002 3.58569Z"
         let symbolDownArrow = 'path://M12.0002 21.4142L17.4144 16L16.0002 14.5858L13.0002 17.5858V3H11.0002V17.5858L8.00015 14.5858L6.58594 16L12.0002 21.4142Z'
 
-        let backgroundColorA = '#f8fcf7' // '#fbfbfe'
-        let backgroundColorB = '#f8fcf7' // '#f4f4fb'
+        let backgroundColorA = '#f4f4fb' // '#f4f4fb' 
+        let backgroundColorB = '#fbfbfe' // '#fbfbfe'
         let backgroundColorC = '#f8fcf7' // '#e6e6fa'
 
         let splitLineColor = "#d8d8d8";
@@ -494,74 +494,76 @@
                     top: "20%",
                     height: '20%',
                 },
+
+
+                ////////////////////////////////////////////////////
+                //高位1
                 {
                     left: 60,
                     right: 80,
                     top: "40%",
-                    height: '10%',
+                    height: '15%',
                     backgroundColor: backgroundColorA,
                     show: true
                 },
-
-
-
+                //高位2
                 {
                     left: 60,
                     right: 80,
-                    top: "50%",
+                    top: "55%",
                     height: '10%',
                     backgroundColor: backgroundColorB,
                     show: true
+
                 },
 
 
-                //bottom
+
+                //ths
                 {
                     left: 60,
                     right: 80,
-                    top: "60%",
-                    height: '15%',
-                    backgroundColor: backgroundColorC,
-                    show: true
+                    top: "65%",
+                    height: '10%',
+
                 },
-
-
+                //低位1
                 {
                     left: 60,
                     right: 80,
                     top: "75%",
                     height: '10%',
+
                 },
+                //低位2
                 {
                     left: 60,
                     right: 80,
                     top: "85%",
-                    height: '10%',
-                },
+                    height: '12%',
 
+                },
 
                 //kline
                 {
                     left: 60,
                     right: 80,
-                    top: "60%",
-                    height: '35%',
-                    backgroundColor: backgroundColorC,
+                    top: "65%",
+                    height: '32%',
+                    backgroundColor: backgroundColorA,
                     show: true
+
                 },
 
-
-                //个股
+                //非经济数据背景
                 {
                     left: 60,
                     right: 80,
                     top: "40%",
-                    height: '55%',
-                    backgroundColor: backgroundColorC,
-                    show: true
+                    height: '57%',
+                    // backgroundColor: backgroundColorC,
+                    // show: true
                 },
-
-
 
             ],
             xAxis: [
@@ -1444,7 +1446,68 @@
                 },
 
 
+                ////////////////////////////////////////////////////////////////////////////////////////////
+                {
+                    name: '沪深300高位低量',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 13.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300高位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证高位低量',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 10.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
 
+                {
+                    name: '上证50高位低量',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50高位低量.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
 
                 {
                     name: '沪深300高位KDJ',
@@ -1489,8 +1552,8 @@
                 {
                     name: '上证50高位KDJ',
                     type: 'scatter',
-                    xAxisIndex: 2,
-                    yAxisIndex: 2,
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1502,7 +1565,7 @@
                         return 7
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.上证高位KDJ.map((item) => {
+                    data: triggerLogObj指数.上证50高位KDJ.map((item) => {
                         return [item.trigDate, item.percent]
                     }).filterAndAddStartEnd()
                 },
@@ -1551,8 +1614,8 @@
                 {
                     name: '上证50高位三周量降',
                     type: 'scatter',
-                    xAxisIndex: 2,
-                    yAxisIndex: 2,
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1573,11 +1636,11 @@
 
 
                 {
-                    name: '周月高位九转',
+                    name: '沪深300高位VKM多叉',
                     type: 'scatter',
-                    xAxisIndex: 3,
-                    yAxisIndex: 3,
-                    symbol: "circle",
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
                     itemStyle: {
                         normal: {
                             opacity: 1,
@@ -1585,20 +1648,19 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 8.5
+                        return 13.5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.周月高位九转.map((item) => {
-                        return [item.trigDate, item.trueCount]
+                    data: triggerLogObj指数.沪深300高位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
                     }).filterAndAddStartEnd()
                 },
-
                 {
-                    name: '日月高位九转',
+                    name: '上证高位VKM多叉',
                     type: 'scatter',
-                    xAxisIndex: 3,
-                    yAxisIndex: 3,
-                    symbol: "circle",
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
                     itemStyle: {
                         normal: {
                             opacity: 1,
@@ -1606,16 +1668,38 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 6.5
+                        return 10.5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.日月高位九转.map((item) => {
-                        return [item.trigDate, item.trueCount]
+                    data: triggerLogObj指数.上证高位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50高位VKM多叉',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 3,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#e9967a"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50高位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
                     }).filterAndAddStartEnd()
                 },
 
+
+
                 {
-                    name: '日周高位九转',
+                    name: '高位空但叉',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
@@ -1630,15 +1714,12 @@
                         return 3.9
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.日周高位九转.map((item) => {
-                        return [item.trigDate, item.trueCount]
+                    data: triggerLogObj指数.上证50高位空但叉.map((item) => {
+                        return [item.trigDate, item.percent, "上证50高位空但叉"]
                     }).filterAndAddStartEnd()
                 },
-
-
-
                 {
-                    name: '上证高位低量',
+                    name: '高位空但叉',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
@@ -1646,81 +1727,17 @@
                     itemStyle: {
                         normal: {
                             opacity: 1,
-                            color: "#990036"
+                            color: "#e9967a"
                         }
                     },
                     symbolSize: function (val) {
-                        return 5
+                        return 3.9
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.上证高位低量.map((item) => {
-                        return [item.trigDate, item.percent]
+                    data: triggerLogObj指数.上证高位空但叉.map((item) => {
+                        return [item.trigDate, item.percent, "上证高位空但叉"]
                     }).filterAndAddStartEnd()
                 },
-                {
-                    name: '沪深300高位低量',
-                    type: 'scatter',
-                    xAxisIndex: 3,
-                    yAxisIndex: 3,
-                    symbol: "circle",
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "#990036"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 5
-                    },
-                    zlevel: 3,
-                    data: triggerLogObj指数.上证高位低量.map((item) => {
-                        return [item.trigDate, item.percent]
-                    }).filterAndAddStartEnd()
-                },
-
-                {
-                    name: '月KM死叉主高位右侧',
-                    type: 'scatter',
-                    xAxisIndex: 3,
-                    yAxisIndex: 3,
-                    symbol: "circle",
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "#990036"
-
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 5
-                    },
-                    zlevel: 3,
-                    data: triggerLogObj指数.月KM死叉主高位右侧.map((item) => {
-                        return [item.trigDate, item.trueCount]
-                    }).filterAndAddStartEnd()
-                },
-                {
-                    name: '月KM死叉副高位右侧',
-                    type: 'scatter',
-                    xAxisIndex: 3,
-                    yAxisIndex: 3,
-                    symbol: "circle",
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "red"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 5
-                    },
-                    zlevel: 3,
-                    data: triggerLogObj指数.月KM死叉副高位右侧.map((item) => {
-                        return [item.trigDate, item.trueCount]
-                    }).filterAndAddStartEnd()
-                },
-
-
                 {
                     name: '高位空但叉',
                     type: 'scatter',
@@ -1744,7 +1761,47 @@
 
 
                 {
-                    name: '高位空但叉',
+                    name: '周月高位九转',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.周月高位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '日月高位九转',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 6.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.日月高位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '日周高位九转',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 3,
@@ -1759,30 +1816,51 @@
                         return 3.9
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.上证高位空但叉.map((item) => {
-                        return [item.trigDate, item.percent, "上证高位空但叉"]
+                    data: triggerLogObj指数.日周高位九转.map((item) => {
+                        return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
 
 
                 {
-                    name: '高位空但叉',
+                    name: '月KM死叉主高位右侧',
                     type: 'scatter',
-                    xAxisIndex: 3,
-                    yAxisIndex: 3,
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
                     symbol: "circle",
                     itemStyle: {
                         normal: {
                             opacity: 1,
-                            color: "#e9967a"
+                            color: "#990036"
+
                         }
                     },
                     symbolSize: function (val) {
-                        return 3.9
+                        return 5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.上证50高位空但叉.map((item) => {
-                        return [item.trigDate, item.percent, "上证50高位空但叉"]
+                    data: triggerLogObj指数.月KM死叉主高位右侧.map((item) => {
+                        return [item.trigDate, item.trueCount]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '月KM死叉副高位右侧',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.月KM死叉副高位右侧.map((item) => {
+                        return [item.trigDate, item.trueCount]
                     }).filterAndAddStartEnd()
                 },
 
@@ -1874,8 +1952,8 @@
                 {
                     name: '沪深300低位KDJ',
                     type: 'scatter',
-                    xAxisIndex: 5,
-                    yAxisIndex: 5,
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1894,8 +1972,8 @@
                 {
                     name: '上证低位KDJ',
                     type: 'scatter',
-                    xAxisIndex: 5,
-                    yAxisIndex: 5,
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1936,8 +2014,8 @@
                 {
                     name: '沪深300低位三周量降',
                     type: 'scatter',
-                    xAxisIndex: 5,
-                    yAxisIndex: 5,
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -1956,8 +2034,8 @@
                 {
                     name: '上证低位三周量降',
                     type: 'scatter',
-                    xAxisIndex: 5,
-                    yAxisIndex: 5,
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
                     symbol: "pin",
                     itemStyle: {
                         normal: {
@@ -2041,8 +2119,8 @@
                 {
                     name: '日周低位九转',
                     type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 6,
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
                     symbol: "circle",
                     itemStyle: {
                         normal: {
@@ -2061,8 +2139,8 @@
                 {
                     name: '日周低位九KDJ',
                     type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 6,
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
                     symbol: "circle",
                     itemStyle: {
                         normal: {
@@ -2140,31 +2218,77 @@
                     }).filterAndAddStartEnd()
                 },
 
+
+
                 {
-                    name: '低位空但叉',
+                    name: '沪深300低位VKM多叉',
                     type: 'scatter',
                     xAxisIndex: 6,
                     yAxisIndex: 6,
-                    symbol: "circle",
+                    symbol: "pin",
                     itemStyle: {
                         normal: {
                             opacity: 1,
-                            color: colorB
+                            color: colorA
                         }
                     },
                     symbolSize: function (val) {
-                        return 5
+                        return 12.5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.上证低位空但叉.map((item) => {
-                        return [item.trigDate, item.percent, "上证低位空但叉"]
+                    data: triggerLogObj指数.沪深300低位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
                     }).filterAndAddStartEnd()
                 },
                 {
-                    name: '低位空但叉',
+                    name: '上证低位VKM多叉',
                     type: 'scatter',
                     xAxisIndex: 6,
                     yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 12.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证低位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50低位VKM多叉',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 12.5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50低位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+
+                {
+                    name: '低位空但叉',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
                     symbol: "circle",
                     itemStyle: {
                         normal: {
@@ -2183,8 +2307,8 @@
                 {
                     name: '低位空但叉',
                     type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 6,
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
                     symbol: "circle",
                     itemStyle: {
                         normal: {
@@ -2196,7 +2320,27 @@
                         return 5
                     },
                     zlevel: 3,
-                    data: triggerLogObj指数.沪深300低位空但叉.map((item) => {
+                    data: triggerLogObj指数.上证低位空但叉.map((item) => {
+                        return [item.trigDate, item.percent, "上证低位空但叉"]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '低位空但叉',
+                    type: 'scatter',
+                    xAxisIndex: 5,
+                    yAxisIndex: 5,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorB
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50低位空但叉.map((item) => {
                         return [item.trigDate, item.percent, "上证50低位空但叉"]
                     }).filterAndAddStartEnd()
                 },
