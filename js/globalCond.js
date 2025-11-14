@@ -21,6 +21,8 @@ const {
 
 function volMaPre(N = 5, periodList, endIndex) {
     if (periodList.length < N + 1) return 0
+    if (!periodList.at(0 - N - 4)?.volume) return 0
+    //console.log(periodList.at(-1), periodList.at(0 - N - 1)?.volume)
     let sum = 0
     for (var i = 0; i < N; i++) {
         let currentPeriod = periodList.at(endIndex - i)
@@ -28,6 +30,11 @@ function volMaPre(N = 5, periodList, endIndex) {
     }
     return sum / N
 }
+
+function ma5_ma10(currentPeriodList, index) {
+    return volMaPre(5, currentPeriodList, index) - volMaPre(10, currentPeriodList, index)
+}
+
 
 function KDJ死叉(periodList, N = 2, tweaks = 0) {
     for (let index = 1; index <= N; index++) {
@@ -80,7 +87,36 @@ function 红空红绿(periodList, N = 1, tweaks = 0) {
 
     return false
 }
+function pre4矩形穿ups(periodList) {
+    if (periodList.length < 6) return false
+    let pre3Period = periodList[periodList.length - 4]
+    let pre2Period = periodList[periodList.length - 3]
+    let pre1Period = periodList[periodList.length - 2]
+    let currentPeriod = periodList[periodList.length - 1]
 
+    for (index = -1; index >= -4; index--) {
+        if (ocHighest(periodList.at(index)) >= periodList.at(index).ups)
+            return true
+    }
+
+    return false
+}
+
+
+function pre4矩形穿lows(periodList) {
+    if (periodList.length < 6) return false
+    let pre3Period = periodList[periodList.length - 4]
+    let pre2Period = periodList[periodList.length - 3]
+    let pre1Period = periodList[periodList.length - 2]
+    let currentPeriod = periodList[periodList.length - 1]
+
+    for (index = -1; index >= -4; index--) {
+        if (ocLowest(periodList.at(index)) <= periodList.at(index).lows)
+            return true
+    }
+
+    return false
+}
 function preNHighestAttr(periodList, N = 7, attr = "J") {
     let highest = -10000
     for (let index = periodList.length - 1; index >= periodList.length - N; index--) {
@@ -91,6 +127,9 @@ function preNHighestAttr(periodList, N = 7, attr = "J") {
 }
 function ocHighest(period) {
     return period.open > period.close ? period.open : period.close
+}
+function ocLowest(period) {
+    return period.open > period.close ? period.close : period.open
 }
 function preN矩形穿ups(periodList, N = 4, tweaks = 10) {
     if (periodList.length < 6) return false
@@ -272,7 +311,7 @@ function mw宽松cal9转(periodList, N = 5) {
 }
 
 
-/////////////////////////////////////////////////////////////////
+/*-----------------------------------------------------------------------*/
 
 
 function globalMonth高位Filter(trigDate, triggerLogObj指数, nameCodes) {
@@ -316,18 +355,78 @@ function globalMonth高位Filter(trigDate, triggerLogObj指数, nameCodes) {
     return [false, ""]
 }
 
-//////////////
+/*-----------------------------------------------------------------------*/
 
 function globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes) {
     return [false, ""]
 }
-function globalTest低位FilterB(trigDate, triggerLogObj指数, nameCodes) {
-    return [false, ""]
+
+/*-----------------------------------------------------------------------*/
+
+function globalCheck缩量(trigDate, triggerLogObj指数, nameCodes) {
+
+    function check缩量(quantName) {
+        let nameCode
+        if (quantName.includes("上证")) nameCode = nameCodes[0]
+        if (quantName.includes("沪深300")) nameCode = nameCodes[1]
+        if (quantName.includes("上证50")) nameCode = nameCodes[2]
+        if (quantName.includes("恒生")) nameCode = nameCodes[3]
+        if (!nameCode) nameCode = nameCodes[1]
+
+        let currentDayList = nameCode.currentDayList
+        let currentWeekList = nameCode.currentWeekList
+        let currentMonthList = nameCode.currentMonthList
+
+        if (+trigDate.substring(8, 10) < 25) {
+            if (volMaPre(5, currentMonthList, -3) >= volMaPre(5, currentMonthList, -2))
+                return [true, ""]
+
+        } else {
+            if (volMaPre(5, currentMonthList, -2) >= volMaPre(5, currentMonthList, -1))
+                return [true, ""]
+        }
+
+        if (ma5_ma10(currentMonthList, -2) >= ma5_ma10(currentMonthList, -1))
+            return [true, ""]
+
+        if (
+            volMaPre(20, currentMonthList, -1) >= volMaPre(10, currentMonthList, -1) &&
+            volMaPre(10, currentMonthList, -1) >= volMaPre(5, currentMonthList, -1) &&
+            volMaPre(5, currentMonthList, -2) >= volMaPre(5, currentMonthList, -1) &&
+            volMaPre(10, currentMonthList, -2) >= volMaPre(10, currentMonthList, -1)
+            // 2022-07-07 
+        ) return [true, ""]
+
+        if (
+            (
+                volMaPre(20, currentDayList, -2) >= volMaPre(20, currentDayList, -1) ||
+                volMaPre(10, currentDayList, -2) >= volMaPre(10, currentDayList, -1) ||
+                pre4矩形穿ups(currentDayList) || pre4矩形穿lows(currentDayList)
+            ) &&
+            currentWeekList.at(-3)?.volume > currentWeekList.at(-2)?.volume &&
+            currentWeekList.at(-2)?.volume > currentWeekList.at(-1)?.volume &&
+            (pre4矩形穿ups(currentWeekList) || pre4矩形穿lows(currentWeekList))
+            //2019-04-19 2020-03-27  2010-10-29  2025-10-28
+        ) return [true, ""]
+
+
+        return [false, ""]
+    }
+
+    let has缩量 = false
+    for (let index = 0; index < triggerLogObj指数.按日期排序[trigDate].length; index++) {
+        let quantName = triggerLogObj指数.按日期排序[trigDate][index];
+        if (typeof quantName === "object") continue
+
+        let [quantName缩量, reson] = check缩量(quantName)
+        has缩量 = has缩量 || quantName缩量
+    }
+
+    return [has缩量, ""]
 }
 
+/*-----------------------------------------------------------------------*/
 
-
-/////////////////////////////////////////////////////////////////
 function globalFilter(trigDate, triggerLogObj指数, nameCodes) {
     let quantType = triggerLogObj指数.按日期排序[trigDate][0].includes("高位") ? "高位" : "低位"
     let is过滤掉 = false
@@ -348,18 +447,16 @@ function globalFilter(trigDate, triggerLogObj指数, nameCodes) {
         [isFilter, filterReson] = globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes)
         if (isFilter) { is过滤掉 = true; 过滤原因 += filterReson }
 
-        [isFilter, filterReson] = globalTest低位FilterB(trigDate, triggerLogObj指数, nameCodes)
-        if (isFilter) { is过滤掉 = true; 过滤原因 += filterReson }
-
 
         if (is过滤掉) 过滤原因 = "低位过滤:" + filterReson
     }
 
+    let [isCheckOk, noCheckReson] = globalCheck缩量(trigDate, triggerLogObj指数, nameCodes)
+    if (!isCheckOk) { is过滤掉 = true; 过滤原因 = 过滤原因 + ":全部未缩量" }
+
+
     return [is过滤掉, 过滤原因]
 }
-
-
-
 
 ///////////////////////////////////
 
