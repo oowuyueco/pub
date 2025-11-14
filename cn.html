@@ -1319,8 +1319,19 @@
                         trigArr[trigArrIndex][1].length >= 3
                     )
                 if (cond1) return true
+
+                let cond2 = true &&
+                    trigArr[trigArrIndex][3] == "高★" &&
+                    (trigArr[trigArrIndex][1] + "").includes("VKM多叉")
+                if (cond2) return true
             }
             function allow低位(curKInfo, trigArr, trigArrIndex) {
+
+                //2024-09-23
+                let cond_2 = true &&
+                    trigArr[trigArrIndex][3] == "低★" &&
+                    (trigArr[trigArrIndex][1] + "").includes("VKM多叉")
+                if (cond_2) return true
 
                 let cond_1 = true &&
                     trigArr[trigArrIndex][3] == "低★" &&
@@ -1896,7 +1907,7 @@
                 }
             }
             if (ths反向()) {
-                console.log("ths反向") 
+                console.log("ths反向")
                 return curDay.date; //+ "ths反向" 
             }
 
