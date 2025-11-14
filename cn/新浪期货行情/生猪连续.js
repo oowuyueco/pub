@@ -11738,11 +11738,21 @@ var 生猪连续 = [
     "volume": 76639,
     "hold": 134785,
     "settle": 11760
+  },
+  {
+    "date": "2025-11-14",
+    "open": 11860,
+    "high": 11885,
+    "low": 11730,
+    "close": 11775,
+    "volume": 61758,
+    "hold": 130675,
+    "settle": 11790
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.生猪连续 = 生猪连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-13 17:40:25"
+    exports.writeDateTime = "2025-11-14 17:40:20"
 };

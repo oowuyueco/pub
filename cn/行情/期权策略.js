@@ -1997,7 +1997,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2022-11-03=>2025-11-13": {
+    "2022-11-03=>2025-11-14": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -5433,4 +5433,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2025-11-13"
+var runLastKlineDate = "2025-11-14"
