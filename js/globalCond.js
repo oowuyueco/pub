@@ -377,6 +377,17 @@ function globalCheck缩量(trigDate, triggerLogObj指数, nameCodes) {
         let currentWeekList = nameCode.currentWeekList
         let currentMonthList = nameCode.currentMonthList
 
+
+        if (+trigDate.substring(8, 10) > 25) {
+            if (
+                (currentMonthList.at(-1).volume / currentMonthList.at(-2).volume) < 0.86 &&
+                volMaPre(10, currentMonthList, -1) >= volMaPre(5, currentMonthList, -1)
+            ) {
+                return [true, ""]
+            }
+        }
+
+
         if (+trigDate.substring(8, 10) < 25) {
             if (volMaPre(5, currentMonthList, -3) >= volMaPre(5, currentMonthList, -2))
                 return [true, ""]
