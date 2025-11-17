@@ -133,6 +133,7 @@
           .calBoll().cal9转(kline交易日, "week").calKdj().calMacd().maN(10, 'close')
         nameCode.currentWeekList = calculationBias(nameCode.currentWeekList)
         nameCode.currentWeekList = calculationCci(nameCode.currentWeekList)
+        nameCode.currentWeekList = addPSYToDataOptimized(nameCode.currentWeekList, 12, 6);
 
         let monthDayStart = 0 //month全部
         nameCode.currentMonthList = dayToPeriod(nameCode.dayDatas.slice(monthDayStart, currentDayIndex + 1), "month")
@@ -144,6 +145,8 @@
       }
       return nameCode
     }
+
+    
     function volMaPre(N = 5, periodList, endIndex) {
       if (periodList.length < N + 1) return 0
       let sum = 0
@@ -154,6 +157,14 @@
       return sum / N
     }
 
+    function VOL5_10死叉(periodList, N = 2, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let res = volMaPre(5, periodList, 0 - index - 1) > volMaPre(10, periodList, 0 - index - 1) &&
+          volMaPre(5, periodList, 0 - index) < volMaPre(10, periodList, 0 - index)
+        if (res) return true
+      }
+      return false
+    }
     function KDJ死叉(periodList, N = 2, tweaks = 0) {
       for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
@@ -206,14 +217,12 @@
       return false
     }
 
-
     function ocLowest(period) {
       return period.open > period.close ? period.close : period.open
     }
     function ocHighest(period) {
       return period.open > period.close ? period.open : period.close
     }
-
     function preN矩形穿ups(periodList, N = 4, tweaks = 10) {
       if (periodList.length < 6) return false
       let pre3Period = periodList[periodList.length - 4]
@@ -229,7 +238,6 @@
 
       return false
     }
-
     function preN矩形穿lows(periodList, N = 4, tweaks = 10) {
       if (periodList.length < 6) return false
       let pre3Period = periodList[periodList.length - 4]
@@ -244,7 +252,6 @@
 
       return false
     }
-
     function preN十字星(periodList, N = 2) {
       if (!periodList || periodList.length < 3) return false
       for (let index = 1; index <= N; index++) {
@@ -258,6 +265,14 @@
       return false
     }
 
+    function VOL5_10金叉(periodList, N = 2, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let res = volMaPre(5, periodList, 0 - index - 1) < volMaPre(10, periodList, 0 - index - 1) &&
+          volMaPre(5, periodList, 0 - index) > volMaPre(10, periodList, 0 - index)
+        if (res) return true
+      }
+      return false
+    }
     function 绿空绿红(periodList, N = 1) {
       for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
@@ -372,7 +387,6 @@
         pre1Period.bias.bias2 < currentPeriod.bias.bias2 &&
         pre1Period.bias.bias3 < currentPeriod.bias.bias3
     }
-
     function preNHighestAttr(periodList, N = 7, attr = "J") {
       let highest = -10000
       for (let index = periodList.length - 1; index >= periodList.length - N; index--) {
@@ -382,9 +396,6 @@
       return highest
     }
 
-    let 十字位 = []
-    let 十字高位 = []
-    let 十字低位 = []
 
     let 指数数据 = {};
     let dataName = decodeURI(getQueryVariable("name"));
@@ -395,6 +406,9 @@
     if (dataName == "科创50") 指数数据.dayDatas = 科创50;
     if (dataName == "恒生") 指数数据.dayDatas = 恒生;
 
+
+    let 十字低位 = []
+    let 十字高位 = []
     for (let index = 100; index < 指数数据.dayDatas.length; index++) {
       const 指数Item = 指数数据.dayDatas[index];
       指数数据 = calDayWeekMonthKline(指数数据, 指数Item.date);
@@ -414,93 +428,7 @@
 
       /*----------------------------------------------------------------------------------*/
 
-      function checkDay高位() {
-        return curDay.percent <= 0.1 &&
-          (pre2Day.low > pre2Day.mas || curDay.close > curDay.mas) &&
-          curDay.J > 0 && (curDay.J > 20 || curDay.D > 60) && (pre1Day.J > curDay.J || pre1Day.D > curDay.D) &&
-          curDay.dea > 0 && curDay.diff > 0 &&
-          curDay.bias.bias3 >= 0
-      }
-      function checkMonth高位() {
-        return (preN矩形穿ups(指数数据.currentMonthList) || preN十字星(指数数据.currentMonthList)) &&
-          curMonth.K >= 64 && curMonth.D >= 60 &&
-          curMonth.bar > 0 && curMonth.diff > 0 &&
-          curMonth.bias.bias3 > 0 &&
-          (
-            指数数据.currentMonthList.at(-2).D > 指数数据.currentMonthList.at(-1).D ||
-            指数数据.currentMonthList.at(-2).K > 指数数据.currentMonthList.at(-1).K ||
-            (
-              volMaPre(5, 指数数据.currentMonthList, -2) > volMaPre(5, 指数数据.currentMonthList, -1) &&
-              指数数据.currentMonthList.at(-2).volume > 指数数据.currentMonthList.at(-1).volume
-            )
-          )
-          &&
-          !(
-            volMaPre(10, 指数数据.currentMonthList, -1) < volMaPre(5, 指数数据.currentMonthList, -1) &&
-            volMaPre(5, 指数数据.currentMonthList, -2) < volMaPre(5, 指数数据.currentMonthList, -1) &&
-            volMaPre(10, 指数数据.currentMonthList, -2) < volMaPre(10, 指数数据.currentMonthList, -1) &&
-            volMaPre(20, 指数数据.currentMonthList, -2) < volMaPre(20, 指数数据.currentMonthList, -1) &&
-            curtPercent(指数数据.currentMonthList.at(-1)) > 0 &&
-            指数数据.currentMonthList.at(-2).D < 指数数据.currentMonthList.at(-1).D
-          )
-          &&
-          !(
-            (
-              volMaPre(10, 指数数据.currentMonthList, -1) < volMaPre(5, 指数数据.currentMonthList, -1) ||
-              volMaPre(20, 指数数据.currentMonthList, -1) < volMaPre(10, 指数数据.currentMonthList, -1)
-            ) &&
-            kdjAllUp(指数数据.currentMonthList) &&
-            macdAllUp(指数数据.currentMonthList) &&
-            curMonth?.is9转up != 9
-          )
-
-          &&
-          !(
-            volMaPre(10, 指数数据.currentMonthList, -1) < volMaPre(5, 指数数据.currentMonthList, -1) &&
-            volMaPre(20, 指数数据.currentMonthList, -1) < volMaPre(10, 指数数据.currentMonthList, -1) &&
-
-            volMaPre(10, 指数数据.currentMonthList, -2) < volMaPre(10, 指数数据.currentMonthList, -1) &&
-            volMaPre(20, 指数数据.currentMonthList, -2) < volMaPre(20, 指数数据.currentMonthList, -1) &&
-            pre1Month.D < curMonth.D &&
-            macdAllUp(指数数据.currentMonthList) &&
-            !(pre2Month.volume > pre1Month.volume && pre1Month.volume > curMonth.volume) && //vol5
-            curMonth?.is9转up != 9
-          )
-
-          &&
-          !(
-            curtPercent(pre3Month) > 0 &&
-            curtPercent(pre2Month) > 0 &&
-            curtPercent(pre1Month) > 0 &&
-            curtPercent(curMonth) > 0 &&
-
-            volMaPre(10, 指数数据.currentMonthList, -1) < volMaPre(5, 指数数据.currentMonthList, -1) &&
-            volMaPre(20, 指数数据.currentMonthList, -1) < volMaPre(10, 指数数据.currentMonthList, -1) &&
-            pre3Month.volume < pre2Month.volume &&
-            pre2Month.volume < pre1Month.volume &&
-
-            macdAllUp(指数数据.currentMonthList)
-          )
-          &&
-          !(
-            bollAllUp(指数数据.currentWeekList) &&
-            bollAllUp(指数数据.currentMonthList) &&
-            curMonth.ma10 > curMonth.mas &&
-            pre1Month.D < curMonth.D
-          )
-      }
-      function VOL5_10死叉(periodList, N = 2, tweaks = 0) {
-        for (let index = 1; index <= N; index++) {
-          let res = volMaPre(5, periodList, 0 - index - 1) > volMaPre(10, periodList, 0 - index - 1) &&
-            volMaPre(5, periodList, 0 - index) < volMaPre(10, periodList, 0 - index)
-          if (res) return true
-        }
-        return false
-      }
-
       if (curDay.date.includes("2022-09-30") || curDay.date.includes("2021-05-31")) {
-        //console.log(pre1Month, curMonth)
-
         //2019-01-02   2019-01-03    JD20   b1>b2>b3
         //2022-10-28   2022-10-31    JD20   b1>b2>b3
         //2024-02-02   2024-02-05    JD20   b1>b2>b3
@@ -531,7 +459,7 @@
           绿空绿红(指数数据.currentWeekList) ||
           curtPercent(curWeek) < -5 ||
           curWeek.open < curWeek.lows
-        ) &&
+        ) && curWeek.psyma < 60 &&
         preN矩形穿lows(指数数据.currentMonthList, 3) &&
         (
           preN十字星(指数数据.currentMonthList, 3) ||
@@ -539,95 +467,55 @@
           ((curtPercent(pre1Week) < -5 || curtPercent(curWeek) < -5) && curtPercent(curMonth) < -6.5) ||
           curMonth.open < curMonth.lows
         ) &&
-        curMonth.diff < 0 && curMonth.bar < 0 &&
-        (curMonth.dea < 0 || curMonth.bias.bias1 < 0) &&
-        curMonth.psy < curMonth.psyma && curMonth.psyma < 60
-        && !(curtPercent(curDay) > 0 && curtPercent(curWeek) > 0 && curtPercent(curMonth) > 0)
+        curMonth.diff < 0 && curMonth.bar < 0 && curMonth.bias.bias1 < 0
+        && curMonth.psy < curMonth.psyma && curMonth.psyma < 60
 
+        && !(ocHighest(curDay) > curDay.ma10 && curtPercent(curDay) < 0) //2011-10-11   
+        && !(KDJ死叉(指数数据.currentDayList) && curDay.D > 23) //2011-10-03  2011-10-04 2022-03-15
+        && !(curtPercent(curDay) > 0 && curtPercent(curWeek) > 0 && curtPercent(curMonth) > 0)
       ) {
-        console.log(curDay.date,)   //2020-03-12 2022-03-15  ???
-        十字位.push([curDay.date, -50, "type0",])
+        十字低位.push([curDay.date, -50, "type0",])
       }
 
       /*----------------------------------------------------------------------------------*/
 
-      function VOL5_10金叉(periodList, N = 2, tweaks = 0) {
-        for (let index = 1; index <= N; index++) {
-          let res = volMaPre(5, periodList, 0 - index - 1) < volMaPre(10, periodList, 0 - index - 1) &&
-            volMaPre(5, periodList, 0 - index) > volMaPre(10, periodList, 0 - index)
-          if (res) return true
-        }
-        return false
+      function checkDay高位() {
+        return (
+          (curDay.J > 80 || curDay.D > 80) &&
+          curDay.bias.bias1 < curDay.bias.bias2 &&
+          curDay.bias.bias2 < curDay.bias.bias3 &&
+          0 < curDay.bias.bias2
+        )
       }
-      function checkMonth低位(periodList) {
 
-        return periodList.at(-1).K < 23 && periodList.at(-1).D < 25 &&
-          curMonth.diff < 0 && curMonth.bar < 0 &&
-          (
-            periodList.at(-3).J < periodList.at(-2).J ||
-            periodList.at(-2).J < periodList.at(-1).J ||
-            (
-              volMaPre(N = 5, periodList, -2) < volMaPre(N = 5, periodList, -1) &&
-              periodList.at(-2).volume < periodList.at(-1).volume
-            )
-          ) &&
-          !(
-            volMaPre(N = 10, periodList, -1) > volMaPre(N = 5, periodList, -1) &&
-            periodList.at(-2).volume > periodList.at(-1).volume &&
-            volMaPre(N = 5, periodList, -2) > volMaPre(N = 5, periodList, -1) &&
-            volMaPre(N = 10, periodList, -2) > volMaPre(N = 10, periodList, -1) &&
-            volMaPre(N = 20, periodList, -2) > volMaPre(N = 20, periodList, -1) &&
-            curtPercent(periodList.at(-1)) < 0 &&
-            periodList.at(-2).D > periodList.at(-1).D &&
-            periodList.at(-1).D > 20
-          )
-      }
-      function checkMonth低位2(periodList) {
-        if (periodList.length < 10) return false
+      if (
+        preN矩形穿ups(指数数据.currentDayList, 7) &&
+        preN十字星(指数数据.currentDayList, 5) &&
+        curDay.diff > 0 && curDay.dea > 0 && curDay.bar > 0 && curDay.bias.bias1 > 0 &&
+        checkDay高位() &&
 
-        function 连续三月下跌(currentMonthList) {
-          //包含自己前3个月
-          let cut = 0
-          for (let index = 1; index <= 3; index++) {
-            let pre3Month = currentMonthList[currentMonthList.length - (index + 3)]
-            let pre2Month = currentMonthList[currentMonthList.length - (index + 2)]
-            let pre1Month = currentMonthList[currentMonthList.length - (index + 1)]
-            let currentMonth = currentMonthList[currentMonthList.length - (index)]
-            if (
-              curtPercent(currentMonth) < 0 && curtPercent(pre1Month) < 0 && curtPercent(pre2Month) < 0 &&
-              PtPPercent(pre1Month, currentMonth) < 0 &&
-              PtPPercent(pre2Month, pre1Month) < 0 &&
-              PtPPercent(pre3Month, pre2Month) < 0 &&
+        VOL5_10死叉(指数数据.currentWeekList)
+        && pre1Week.psy > pre1Week.psyma && curWeek.psy < curWeek.psyma
+        && curWeek.diff > 0 && curWeek.bar > 0 && curWeek.bias.bias1 > 0
+        && curWeek.psyma > 50 && curWeek.D > 65
 
-              currentMonth.close < currentMonth.ma5 && currentMonth.ma5 < pre1Month.ma5 &&
-              pre1Month.close < pre1Month.ma5 && pre1Month.ma5 < pre2Month.ma5 &&
+        && curMonth.bar > 0 && curMonth.bias.bias1 > 0
+        && curMonth.psy > curMonth.psyma && curMonth.psyma > 40
 
-              currentMonth.J < pre1Month.J &&
-              currentMonth.K < pre1Month.K
-            ) {
-              cut++
-            }
-          }
-          return cut
-        }
+        && !(
+          curtPercent(pre3Month) > 0 && curtPercent(pre2Month) > 0 && curtPercent(pre1Month) > 0 &&
+          pre3Month.volume < pre2Month.volume && pre2Month.volume < pre1Month.volume &&
+          pre1Month.diff < curMonth.diff
+        )
 
-        let pre2Period = periodList[periodList.length - 3]
-        let pre1Period = periodList[periodList.length - 2]
-        let currentPeriod = periodList[periodList.length - 1]
-
-        if (
-          currentPeriod.dea < -50 && currentPeriod.diff < -50 &&
-          (连续三月下跌(periodList) > 0 || PtPPercent(pre2Period, pre1Period) <= -15)
-        ) return true
-
-
-        return false
+      ) {
+        十字高位.push([curDay.date, 330])
       }
 
     }
 
 
-    console.log(十字位)
+    console.log(十字高位, 十字低位)
   </script>
 
   <script type="text/javascript">
@@ -697,8 +585,6 @@
       },
       series: [
 
-
-
         { //指数沪深300D
           name: "沪深300",
           type: "line",
@@ -731,7 +617,7 @@
 
 
         { //期权策略
-          name: '十字位',
+          name: '十字高位',
           type: 'scatter',
           // xAxisIndex: 6,
           // yAxisIndex: 12,
@@ -746,7 +632,27 @@
             return 5
           },
           zlevel: 5,
-          data: 十字位
+          data: 十字高位
+        },
+
+
+        { //期权策略
+          name: '十字低位',
+          type: 'scatter',
+          // xAxisIndex: 6,
+          // yAxisIndex: 12,
+          //symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+          itemStyle: {
+            normal: {
+              opacity: 1,
+              color: "green"
+            }
+          },
+          symbolSize: function (val) {
+            return 5
+          },
+          zlevel: 5,
+          data: 十字低位
         },
 
 

@@ -218,37 +218,100 @@ function calculationRsi(data) {
 //手动
 function calculationWvad(data) {
   //WVAD = (CLOSE - OPEN) / (HIGH - LOW) * VOL
-  let startIndex = data.length  < 130 ? 0 : data.length - 100
+  let startIndex = data.length < 130 ? 0 : data.length - 100
   for (let i = startIndex; i < data.length; i++) {
-      data[i].wvad = {}
+    data[i].wvad = {}
 
-      if(data[i].high - data[i].low==0)
-         data[i].wvad.tmpC = 0
-      else
-        data[i].wvad.tmpC = (data[i].close - data[i].open) / (data[i].high - data[i].low) * data[i].volume
-      
-      if (i > startIndex + 30) {
-          let N = 24
-          let sumN = 0
-          for (let n = 0; n < N; n++) {
-              sumN = sumN + data[i - n].wvad.tmpC
-          }
-          data[i].wvad.wvad = sumN
+    if (data[i].high - data[i].low == 0)
+      data[i].wvad.tmpC = 0
+    else
+      data[i].wvad.tmpC = (data[i].close - data[i].open) / (data[i].high - data[i].low) * data[i].volume
+
+    if (i > startIndex + 30) {
+      let N = 24
+      let sumN = 0
+      for (let n = 0; n < N; n++) {
+        sumN = sumN + data[i - n].wvad.tmpC
       }
+      data[i].wvad.wvad = sumN
+    }
 
-      if ( i > startIndex + 36) {
-          let N = 6
-          let sumN = 0
-          for (let n = 0; n < N; n++) {
-              sumN = sumN + data[i - n].wvad.wvad
-          }
-          data[i].wvad.wvadMa6= sumN/N
-
+    if (i > startIndex + 36) {
+      let N = 6
+      let sumN = 0
+      for (let n = 0; n < N; n++) {
+        sumN = sumN + data[i - n].wvad.wvad
       }
+      data[i].wvad.wvadMa6 = sumN / N
+
+    }
 
 
   }
   return data
+}
+
+
+function calculationPsy(data, period = 12, maPeriod = 6) {
+  if (data.length < period) {
+    //console.warn(`数据长度不足，至少需要${period}个交易日数据`);
+    return data;
+  }
+
+  // 用于滑动窗口计算
+  let upDaysCount = 0;
+  let psySum = 0;
+  const psyWindow = [];
+
+  for (let i = 0; i < data.length; i++) {
+    // 初始化属性
+    data[i].psy = null;
+    data[i].psyma = null;
+
+    // 跳过第一天（没有前一日数据）
+    if (i === 0) continue;
+
+    // 判断当前日是否上涨
+    const isUp = data[i].close > data[i - 1].close;
+
+    // 如果是上涨日，计数增加
+    if (isUp) {
+      upDaysCount++;
+    }
+
+    // 当达到计算PSY的最小天数时
+    if (i >= period - 1) {
+      // 计算PSY
+      const psyValue = (upDaysCount / period) * 100;
+      data[i].psy = parseFloat(psyValue.toFixed(2));
+
+      // 将PSY值添加到窗口用于计算移动平均
+      psyWindow.push(data[i].psy);
+      psySum += data[i].psy;
+
+      // 如果窗口大小超过移动平均周期，移除最旧的值
+      if (psyWindow.length > maPeriod) {
+        const oldestPsy = psyWindow.shift();
+        psySum -= oldestPsy;
+      }
+
+      // 计算PSYMA
+      if (psyWindow.length === maPeriod) {
+        data[i].psyma = parseFloat((psySum / maPeriod).toFixed(2));
+      }
+
+      // 准备滑动窗口：移除最旧的一天（如果已经不在当前PSY计算窗口内）
+      // 检查i-period+1天（即将移出窗口的那天）是否上涨
+      if (i >= period) {
+        const dayToRemove = i - period + 1;
+        if (dayToRemove > 0 && data[dayToRemove].close > data[dayToRemove - 1].close) {
+          upDaysCount--;
+        }
+      }
+    }
+  }
+
+  return data;
 }
 
 //my.js里的指标 https://github.com/kimboqi/stock-indicators
@@ -258,4 +321,5 @@ if (typeof module !== "undefined" && module.exports) {
   exports.calculationCci = calculationCci
   exports.calculationRsi = calculationRsi
   exports.calculationWvad = calculationWvad
+  exports.calculationPsy = calculationPsy
 }
