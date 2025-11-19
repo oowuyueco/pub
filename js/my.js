@@ -1227,243 +1227,767 @@ function calMedianProf(filterArr, calIndex = 4) {
     }
 }
 
-//nodejs 导出
-if (typeof module !== "undefined" && module.exports) {
-    const fs = require('fs');
-    const os = require('os');
-    const nodemailer = require("nodemailer");
+//股指到期日
+function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
 
-
-    const globalConfigStartDate组1 = "2024-01-01"
-    const globalConfigStartDate组2 = "2024-01-01"
-    const globalConfigOnlySendOnTrigBuySell = true ////单个策略 false每天发送,true只有触发买卖才发送邮件
-    const devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
-
-    function isSendMail(trigDate, sendMailDate = "五天之内") { //发送邮件周期！！！！！
-        if (sendMailDate == "五天之内") {
-            return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 5 * 86400000
+    let logProfileN = {}
+    let trigDateDayIndex = dayDatas.findIndex(ele => { return ele.date == trigDate })
+    if (trigDateDayIndex == -1) {
+        let Nlist = [-1, -2, -3, -4, -5, 1, 2]
+        for (let index = 0; index < Nlist.length; index++) {// "2018-12-31"
+            let preNexDay = getPreNexDate(trigDate, Nlist[index])
+            trigDateDayIndex = dayDatas.findIndex(ele => { return ele.date == preNexDay })
+            if (trigDateDayIndex != -1) break
         }
-        if (sendMailDate == "三天之内") {
-            return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 3 * 86400000
+    }
+    if (trigDateDayIndex == -1) return logProfileN
+    let trigDateDayData = dayDatas[trigDateDayIndex]
+
+    /**
+     * 计算给定日期之后的最近 N 个中金所股指期权交割日。
+     * 交割日规则：合约到期月份的第三个星期五。
+     * @param {string} startDateStr - 起始日期 (格式: 'YYYY-MM-DD')
+     * @param {number} count - 需要计算的交割日数量，默认为 3
+     * @returns {string[]} - 包含未来 N 个交割日的字符串数组 (格式: 'YYYY-MM-DD')
+     */
+    function getNextCffexExpirationDates(startDateStr, count = 3) {
+        // 1. 正确解析输入的 'YYYY-MM-DD' 字符串为本地日期
+        const parts = startDateStr.split('-');
+        const inputYear = parseInt(parts[0], 10);
+        const inputMonth = parseInt(parts[1], 10) - 1; // 月份需要 -1
+        const inputDay = parseInt(parts[2], 10);
+        let inputDate = new Date(inputYear, inputMonth, inputDay);
+
+        // 2. 存储结果的数组 (存储格式化的字符串)
+        const expirations = [];
+
+        // 3. 从输入日期的月份开始循环
+        let year = inputDate.getFullYear();
+        let month = inputDate.getMonth(); // JavaScript 月份是 0-11
+
+        // 4. 循环直到找到所需数量的交割日
+        while (expirations.length < count) {
+            // 计算当前年月的第三个星期五
+            const thirdFriday = calculateThirdFriday(year, month);
+
+            // 5. 判断这个日期是否在起始日期之后 (比较本地时间)
+            if (thirdFriday > inputDate) {
+                // 6. 格式化为 'YYYY-MM-DD' (本地时间) 并添加到结果
+                const formattedDate = formatDateLocal(thirdFriday);
+                expirations.push(formattedDate);
+            }
+
+            // 7. 将当前日期推进到下一个月，继续循环
+            month++;
+            if (month > 11) {
+                month = 0;
+                year++;
+            }
         }
 
-        if (sendMailDate == "curWeek-email") {
-            return getDateInWeekDay(trigDate, 7) == getDateInWeekDay(currentDayYMD, 7)
+        return expirations;
+    }
+
+    /**
+     * 辅助函数：计算指定年月的第三个星期五
+     * @param {number} year - 年份
+     * @param {number} month - 月份 (0-11)
+     * @returns {Date} - 该月第三个星期五的日期对象 (本地时间)
+     */
+    function calculateThirdFriday(year, month) {
+        // 确定当月1号是星期几 (0=周日, 1=周一, ..., 6=周六)
+        const firstDayOfWeek = new Date(year, month, 1).getDay();
+
+        // 计算第一个星期五是几号: (目标星期几 - 起始星期几 + 7) % 7 + 1
+        // 目标是星期五(5)，起始是 firstDayOfWeek(0-6)
+        const dayOfMonthOfFirstFriday = (5 - firstDayOfWeek + 7) % 7 + 1;
+
+        // 第三个星期五是第一个星期五加上14天
+        const thirdFridayDate = dayOfMonthOfFirstFriday + 14;
+
+        // 创建并返回日期对象 (使用本地时间构造函数)
+        return new Date(year, month, thirdFridayDate);
+    }
+
+    /**
+     * 辅助函数：将 Date 对象格式化为 'YYYY-MM-DD' 格式的本地日期字符串
+     * @param {Date} date - 日期对象
+     * @returns {string} - 格式化后的字符串
+     */
+    function formatDateLocal(date) {
+        const d = new Date(date);
+        // getFullYear, getMonth, getDate 都是基于本地时间的
+        let month = '' + (d.getMonth() + 1);
+        let day = '' + d.getDate();
+        const year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
+
+
+    const nextThreeExpirations = getNextCffexExpirationDates(trigDateDayData.date, 3);
+
+
+    let nextFirstDelivery周五Date = nextThreeExpirations[0]
+    let nextFirstDelivery周五KlineAfterDay = Infinity
+    let nextFirstDelivery周五KlineIndex = dayDatas.findIndex(ele => { return ele.date == nextFirstDelivery周五Date })
+    if (nextFirstDelivery周五KlineIndex > 0)
+        nextFirstDelivery周五KlineAfterDay = nextFirstDelivery周五KlineIndex - trigDateDayIndex
+    else {
+        let nextNdate = nextFirstDelivery周五Date
+        while (true) {
+            if (dayDatas.at(-1).date <= nextNdate) break
+            nextNdate = getPreNexDate(nextNdate, 1)
+            let nextNdateIndex = dayDatas.findIndex(ele => { return ele.date == nextNdate })
+            if (nextNdateIndex > 0) {
+                nextFirstDelivery周五KlineAfterDay = nextNdateIndex - trigDateDayIndex
+                break
+            }
         }
-        if (sendMailDate == "curYM-email") return trigDate.substring(0, 7) == currentDayYM
-        if (sendMailDate == "curY-email") return trigDate.substring(0, 4) == currentDayYM.substring(0, 4)
+    }
+
+    let nextSecondDelivery周五Date = nextThreeExpirations[1]
+    let nextSecondDelivery周五KlineAfterDay = Infinity
+    let nextSecondDelivery周五KlineIndex = dayDatas.findIndex(ele => { return ele.date == nextSecondDelivery周五Date })
+    if (nextSecondDelivery周五KlineIndex > 0)
+        nextSecondDelivery周五KlineAfterDay = nextSecondDelivery周五KlineIndex - trigDateDayIndex
+    else {
+        let nextNdate = nextSecondDelivery周五Date
+        while (true) {
+            if (dayDatas.at(-1).date <= nextNdate) break
+            nextNdate = getPreNexDate(nextNdate, 1)
+            let nextNdateIndex = dayDatas.findIndex(ele => { return ele.date == nextNdate })
+            if (nextNdateIndex > 0) {
+                nextSecondDelivery周五KlineAfterDay = nextNdateIndex - trigDateDayIndex
+                break
+            }
+        }
+    }
+
+
+    let nextThirdDelivery周五Date = nextThreeExpirations[2]
+    let nextThirdDelivery周五KlineAfterDay = Infinity
+    let nextThirdDelivery周五KlineIndex = dayDatas.findIndex(ele => { return ele.date == nextThirdDelivery周五Date })
+    if (nextThirdDelivery周五KlineIndex > 0)
+        nextThirdDelivery周五KlineAfterDay = nextThirdDelivery周五KlineIndex - trigDateDayIndex
+    else {
+        let nextNdate = nextThirdDelivery周五Date
+        while (true) {
+            if (dayDatas.at(-1).date <= nextNdate) break
+            nextNdate = getPreNexDate(nextNdate, 1)
+            let nextNdateIndex = dayDatas.findIndex(ele => { return ele.date == nextNdate })
+            if (nextNdateIndex > 0) {
+                nextThirdDelivery周五KlineAfterDay = nextNdateIndex - trigDateDayIndex
+                break
+            }
+        }
+    }
+
+
+    after交易日DayArr = [
+        `${nextFirstDelivery周五KlineAfterDay}-nextFirstDelivery周五-${nextFirstDelivery周五Date}`,
+        `${nextSecondDelivery周五KlineAfterDay}-nextSecondDelivery周五-${nextSecondDelivery周五Date}`,
+        `${nextThirdDelivery周五KlineAfterDay}-nextThirdDelivery周五-${nextThirdDelivery周五Date}`
+    ]
+
+    console.log(trigDate, after交易日DayArr)
+
+    for (let index = 0; index < after交易日DayArr.length; index++) {
+        let afterDayKeyStr
+        let after交易日Day
+        if (typeof after交易日DayArr[index] === "number") {
+            afterDayKeyStr = "after" + after交易日DayArr[index]
+            after交易日Day = after交易日DayArr[index]
+        } else {
+            afterDayKeyStr = after交易日DayArr[index].split("-")[1]
+            after交易日Day = +after交易日DayArr[index].split("-")[0] //Infinity 还未交易到那天
+        }
+
+        if (trigDateDayIndex + after交易日Day <= dayDatas.length - 1) {
+            let tmpHighPoint = 0
+            let tmpHigh = 0
+            let tmpHighDate = ""
+
+            let tmpLowPoint = 0
+            let tmpLow = 0
+            let tmpLowDate = ""
+
+            let tmpClosePoint = 0
+            let tmpClose = 0
+            let tmpCloseDate = ""
+
+            for (let after = 1; after <= after交易日Day; after++) {
+                let pointChange = dayDatas[trigDateDayIndex + after].close - currentDayData.close
+                let profile = pointChange / currentDayData.close
+                if (profile > tmpHigh) {
+                    tmpHighPoint = pointChange
+                    tmpHigh = profile
+                    tmpHighDate = `${after}->${dayDatas[trigDateDayIndex + after].date}`
+                }
+                if (profile < tmpLow) {
+                    tmpLowPoint = pointChange
+                    tmpLow = profile
+                    tmpLowDate = `${after}->${dayDatas[trigDateDayIndex + after].date}`
+                }
+                if (after == after交易日Day) {
+                    tmpClosePoint = pointChange
+                    tmpClose = profile
+                    tmpCloseDate = `${after}->${dayDatas[trigDateDayIndex + after].date}`
+                }
+            }
+
+            logProfileN[afterDayKeyStr] = {
+                close: [tmpCloseDate, +(tmpClosePoint).toFixed(2), +(tmpClose * 100).toFixed(2)].toString(),
+                high: [tmpHighDate, +(tmpHighPoint).toFixed(2), +(tmpHigh * 100).toFixed(2)].toString(),
+                low: [tmpLowDate, +(tmpLowPoint).toFixed(2), +(tmpLow * 100).toFixed(2)].toString()
+            }
+
+
+        }
+        else {
+
+            let lastDay = dayDatas.length - 1 - trigDateDayIndex
+
+            let tmpHighPoint = 0
+            let tmpHigh = 0
+            let tmpHighDate = ""
+
+            let tmpLowPoint = 0
+            let tmpLow = 0
+            let tmpLowDate = ""
+
+            let tmpClosePoint = 0
+            let tmpClose = 0
+            let tmpCloseDate = ""
+
+            for (let after = 1; after <= lastDay; after++) {
+                let pointChange = dayDatas[trigDateDayIndex + after].close - currentDayData.close
+                let profile = (dayDatas[trigDateDayIndex + after].close - currentDayData.close) / currentDayData.close
+                if (profile > tmpHigh) {
+                    tmpHighPoint = pointChange
+                    tmpHigh = profile
+                    tmpHighDate = `${after}->${dayDatas[trigDateDayIndex + after].date}`
+                }
+                if (profile < tmpLow) {
+                    tmpLowPoint = pointChange
+                    tmpLow = profile
+                    tmpLowDate = `${after}->${dayDatas[trigDateDayIndex + after].date}`
+                }
+                if (after == lastDay) {
+                    tmpClosePoint = pointChange
+                    tmpClose = profile
+                    tmpCloseDate = `${after}->${dayDatas[trigDateDayIndex + after].date}`
+                }
+            }
+
+            logProfileN["after"] = {
+                close: [tmpCloseDate, +(tmpClosePoint).toFixed(2), +(tmpClose * 100).toFixed(2)].toString(),
+                high: [tmpHighDate, +(tmpHighPoint).toFixed(2), +(tmpHigh * 100).toFixed(2)].toString(),
+                low: [tmpLowDate, +(tmpLowPoint).toFixed(2), +(tmpLow * 100).toFixed(2)].toString(),
+            }
+            if (!logProfileN?.nextFirstDelivery周五)
+                logProfileN["after"]["nextFirstDelivery周五"] = nextFirstDelivery周五Date
+            if (!logProfileN?.nextSecondDelivery周五)
+                logProfileN["after"]["nextSecondDelivery周五"] = nextSecondDelivery周五Date
+            if (!logProfileN?.nextThirdDelivery周五)
+                logProfileN["after"]["nextThirdDelivery周五"] = nextThirdDelivery周五Date
+            break
+        }
+    }
+
+    if (trigDate != trigDateDayData.date) logProfileN.kDate = trigDateDayData.date //基金触发日不一定是交易日 
+    return logProfileN
+}
+
+//etf到期日
+function afterDayProfileW3(trigDate, after交易日DayArr, dayDatas) {
+    let logProfileN = {}
+    let currentDayIndex = dayDatas.findIndex(ele => { return ele.date == trigDate })
+    if (currentDayIndex == -1) {
+        let Nlist = [-1, -2, -3, -4, -5, 1, 2]
+        for (let index = 0; index < Nlist.length; index++) {// "2018-12-31"
+            let preNexDay = getPreNexDate(trigDate, Nlist[index])
+            currentDayIndex = dayDatas.findIndex(ele => { return ele.date == preNexDay })
+            if (currentDayIndex != -1) break
+        }
+    }
+    if (currentDayIndex == -1) return logProfileN
+    let currentDayData = dayDatas[currentDayIndex]
+
+    function fourthWednesdayOfMonth(dateStr) {
+        const today = new Date(dateStr)
+        const dayCountOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate()//月总天数
+        const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1) //月1号
+        let firstDayWeekOfMonth = firstDayOfMonth.getDay()
+        if (firstDayWeekOfMonth == 0) firstDayWeekOfMonth = 7 //月1号是周几
+
+
+        let plusDay
+        if (firstDayWeekOfMonth <= 3)
+            plusDay = 3 - firstDayWeekOfMonth
+        else
+            plusDay = 10 - firstDayWeekOfMonth  //月第一个周三 距离 1号 差多少天
+
+
+        const dayOfFirstWedOfMonth = 1 + plusDay //月第一个周三 是几号
+        const dayOfFourWedOfMonth = dayOfFirstWedOfMonth + 3 * 7 //月第四个周三 是几号 理论上实际可能超出本月天数
+
+
+        if (dayCountOfMonth < dayOfFourWedOfMonth) return null
+        else return stampToDate(new Date(today.getFullYear(), today.getMonth(), dayOfFourWedOfMonth).getTime())
+    }
+    function getNextMonth(date) {
+        var arr = date.split('-');
+        var year = arr[0]; //获取当前日期的年份
+        var month = arr[1]; //获取当前日期的月份
+        var day = arr[2]; //获取当前日期的日
+        var days = new Date(year, month, 0);
+        days = days.getDate(); //获取当前日期中的月的天数
+        var year2 = year;
+        var month2 = parseInt(month) + 1;
+        if (month2 == 13) {
+            year2 = parseInt(year2) + 1;
+            month2 = 1;
+        }
+        var day2 = day;
+        var days2 = new Date(year2, month2, 0);
+        days2 = days2.getDate();
+        if (day2 > days2) {
+            day2 = days2;
+        }
+        if (month2 < 10) {
+            month2 = '0' + month2;
+        }
+
+
+        var t2 = year2 + '-' + month2 + '-' + day2;
+        return t2;
+    }
+
+    let fuck = {
+        当月第四个周三: fourthWednesdayOfMonth(trigDate),
+        后一个月第四个周三: fourthWednesdayOfMonth(getNextMonth(trigDate)),
+        后两个月第四个周三: fourthWednesdayOfMonth(getNextMonth(getNextMonth(trigDate))),
+        后三个月第四个周三: fourthWednesdayOfMonth(getNextMonth(getNextMonth(getNextMonth(trigDate)))),
+        后四个月第四个周三: fourthWednesdayOfMonth(getNextMonth(getNextMonth(getNextMonth(getNextMonth(trigDate)))))
+    }
+
+    let nextFirstDelivery周三Date
+    let nextSecondDelivery周三Date
+    let nextThirdDelivery周三Date
+    let fuckKeys = Object.keys(fuck)
+
+
+    function checkTrigDate(trigDate, 后N月第四个周三Date, dayDatas) {
+        let trigDate之后 = dateToStamp(trigDate) < dateToStamp(后N月第四个周三Date)
+
+        let KlineLast之前 = dateToStamp(后N月第四个周三Date) < dateToStamp(dayDatas[dayDatas.length - 1].date)
+
+        let in交易日Index = dayDatas.findIndex(ele => { return ele.date == 后N月第四个周三Date })
+
+        if (trigDate之后 && KlineLast之前 && in交易日Index > 0) return 后N月第四个周三Date
+
+        if (trigDate之后 && !KlineLast之前) return 后N月第四个周三Date
+
         return false
     }
 
-    async function mySendMail(subject, msgHtml = "", toMails = "851616860@qq.com") {
-        if (devTestEnv) {
-            return { response: `mailDevTest ${subject}` }
+    for (let index = 0; index < fuckKeys.length; index++) {
+        let 后N月第四个周三key = fuckKeys[index];
+        let 后N月第四个周三Date = fuck[后N月第四个周三key]
+        if (!nextFirstDelivery周三Date) {
+            let 后1月第四个周三Date = checkTrigDate(trigDate, 后N月第四个周三Date, dayDatas) //return false index
+            if (后1月第四个周三Date) nextFirstDelivery周三Date = 后1月第四个周三Date
+            continue
         }
-
-        let promise = new Promise(async (resolve, reject) => {
-            try {
-                const transporter = nodemailer.createTransport({
-                    pool: true,
-                    host: "smtp.163.com",
-                    port: 465,
-                    secure: true, // Use `true` for port 465, `false` for all other ports
-                    secureConnection: true,
-                    auth: {
-                        user: "oowuyue@163.com",
-                        pass: "AEUORGVIOHTDGDGZ",  //qq8516 的：swvwmndqaedjbfii 
-                    },
-                });
-                transporter.sendMail({
-                    from: '"oowuyue" <oowuyue@163.com>', // sender address
-                    to: toMails,//851616860@qq.com //1002579008@qq.com
-                    subject: subject, // Subject line
-                    text: "", // plain text body
-                    html: msgHtml == "" ? subject : msgHtml, // html body
-                }, (err, info) => {
-                    if (err) reject(err)
-                    else resolve(info)
-                });
-
-            } catch (error) {
-                reject(error)
-            }
-        });
-        return promise
+        if (nextFirstDelivery周三Date && !nextSecondDelivery周三Date) {
+            let 后2月第四个周三Date = checkTrigDate(trigDate, 后N月第四个周三Date, dayDatas) //return false index
+            if (后2月第四个周三Date) nextSecondDelivery周三Date = 后2月第四个周三Date
+            continue
+        }
+        if (nextFirstDelivery周三Date && nextSecondDelivery周三Date && !nextThirdDelivery周三Date) {
+            let 后3月第四个周三Date = checkTrigDate(trigDate, 后N月第四个周三Date, dayDatas) //return false index
+            if (后3月第四个周三Date) nextThirdDelivery周三Date = 后3月第四个周三Date
+        }
     }
 
-    function writeDataToFile(dataName, dayDatas, folder = "./data/", dataSource = "") {
-        let promise = new Promise((resolve, reject) => {
+    let nextFirstDelivery周三KlineAfterDay = Infinity
+    let nextSecondDelivery周三KlineAfterDay = Infinity
+    let nextThirdDelivery周三KlineAfterDay = Infinity
 
-            let dataFileStr = `var ${dataName} = ` + JSON.stringify(dayDatas, null, 2) + ";\r\n"
-            dataFileStr += `
+    let nextFirstDelivery周三KlineIndex = dayDatas.findIndex(ele => { return ele.date == nextFirstDelivery周三Date })
+    let nextSecondDelivery周三KlineIndex = dayDatas.findIndex(ele => { return ele.date == nextSecondDelivery周三Date })
+    let nextThirdDelivery周三KlineIndex = dayDatas.findIndex(ele => { return ele.date == nextThirdDelivery周三Date })
+
+    if (nextFirstDelivery周三KlineIndex > 0)
+        nextFirstDelivery周三KlineAfterDay = nextFirstDelivery周三KlineIndex - currentDayIndex
+
+    if (nextSecondDelivery周三KlineIndex > 0)
+        nextSecondDelivery周三KlineAfterDay = nextSecondDelivery周三KlineIndex - currentDayIndex
+
+    if (nextThirdDelivery周三KlineIndex > 0)
+        nextThirdDelivery周三KlineAfterDay = nextThirdDelivery周三KlineIndex - currentDayIndex
+
+    if (after交易日DayArr.length == 0)
+        after交易日DayArr = [
+            `${nextFirstDelivery周三KlineAfterDay}-nextFirstDelivery周三-${nextFirstDelivery周三Date}`,
+            `${nextSecondDelivery周三KlineAfterDay}-nextSecondDelivery周三-${nextSecondDelivery周三Date}`,
+            `${nextThirdDelivery周三KlineAfterDay}-nextThirdDelivery周三-${nextThirdDelivery周三Date}`
+        ]
+
+    for (let index = 0; index < after交易日DayArr.length; index++) {
+        let afterDayKeyStr
+        let after交易日Day
+        if (typeof after交易日DayArr[index] === "number") {
+            afterDayKeyStr = "after" + after交易日DayArr[index]
+            after交易日Day = after交易日DayArr[index]
+        } else {
+            afterDayKeyStr = after交易日DayArr[index].split("-")[1]
+            after交易日Day = +after交易日DayArr[index].split("-")[0] //Infinity 还未交易到那天
+        }
+
+        if (currentDayIndex + after交易日Day <= dayDatas.length - 1) {
+            let tmpHighPoint = 0
+            let tmpHigh = 0
+            let tmpHighDate = ""
+
+            let tmpLowPoint = 0
+            let tmpLow = 0
+            let tmpLowDate = ""
+
+            let tmpClosePoint = 0
+            let tmpClose = 0
+            let tmpCloseDate = ""
+
+            for (let after = 1; after <= after交易日Day; after++) {
+                let pointChange = dayDatas[currentDayIndex + after].close - currentDayData.close
+                let profile = pointChange / currentDayData.close
+                if (profile > tmpHigh) {
+                    tmpHighPoint = pointChange
+                    tmpHigh = profile
+                    tmpHighDate = `${after}->${dayDatas[currentDayIndex + after].date}`
+                }
+                if (profile < tmpLow) {
+                    tmpLowPoint = pointChange
+                    tmpLow = profile
+                    tmpLowDate = `${after}->${dayDatas[currentDayIndex + after].date}`
+                }
+                if (after == after交易日Day) {
+                    tmpClosePoint = pointChange
+                    tmpClose = profile
+                    tmpCloseDate = `${after}->${dayDatas[currentDayIndex + after].date}`
+                }
+            }
+
+            logProfileN[afterDayKeyStr] = {
+                close: [tmpCloseDate, +(tmpClosePoint).toFixed(2), +(tmpClose * 100).toFixed(2)].toString(),
+                high: [tmpHighDate, +(tmpHighPoint).toFixed(2), +(tmpHigh * 100).toFixed(2)].toString(),
+                low: [tmpLowDate, +(tmpLowPoint).toFixed(2), +(tmpLow * 100).toFixed(2)].toString()
+            }
+
+
+        }
+        else {
+
+            let lastDay = dayDatas.length - 1 - currentDayIndex
+
+            let tmpHighPoint = 0
+            let tmpHigh = 0
+            let tmpHighDate = ""
+
+            let tmpLowPoint = 0
+            let tmpLow = 0
+            let tmpLowDate = ""
+
+            let tmpClosePoint = 0
+            let tmpClose = 0
+            let tmpCloseDate = ""
+
+            for (let after = 1; after <= lastDay; after++) {
+                let pointChange = dayDatas[currentDayIndex + after].close - currentDayData.close
+                let profile = (dayDatas[currentDayIndex + after].close - currentDayData.close) / currentDayData.close
+                if (profile > tmpHigh) {
+                    tmpHighPoint = pointChange
+                    tmpHigh = profile
+                    tmpHighDate = `${after}->${dayDatas[currentDayIndex + after].date}`
+                }
+                if (profile < tmpLow) {
+                    tmpLowPoint = pointChange
+                    tmpLow = profile
+                    tmpLowDate = `${after}->${dayDatas[currentDayIndex + after].date}`
+                }
+                if (after == lastDay) {
+                    tmpClosePoint = pointChange
+                    tmpClose = profile
+                    tmpCloseDate = `${after}->${dayDatas[currentDayIndex + after].date}`
+                }
+            }
+
+            logProfileN["after"] = {
+                close: [tmpCloseDate, +(tmpClosePoint).toFixed(2), +(tmpClose * 100).toFixed(2)].toString(),
+                high: [tmpHighDate, +(tmpHighPoint).toFixed(2), +(tmpHigh * 100).toFixed(2)].toString(),
+                low: [tmpLowDate, +(tmpLowPoint).toFixed(2), +(tmpLow * 100).toFixed(2)].toString(),
+            }
+            if (!logProfileN?.nextFirstDelivery周三)
+                logProfileN["after"]["nextFirstDelivery周三"] = nextFirstDelivery周三Date
+            if (!logProfileN?.nextSecondDelivery周三)
+                logProfileN["after"]["nextSecondDelivery周三"] = nextSecondDelivery周三Date
+            if (!logProfileN?.nextThirdDelivery周三)
+                logProfileN["after"]["nextThirdDelivery周三"] = nextThirdDelivery周三Date
+            break
+        }
+    }
+
+    if (trigDate != currentDayData.date) logProfileN.kDate = currentDayData.date //基金触发日不一定是交易日 
+    return logProfileN
+}
+const 期权到期日 = "etf周三"   // "股指周五"  "etf周三"
+function afterDayProfile(trigDate, after交易日DayArr, dayDatas) {
+    if (期权到期日 == "股指周五") return afterDayProfileW5(trigDate, after交易日DayArr, dayDatas)
+    if (期权到期日 == "etf周三") return afterDayProfileW3(trigDate, after交易日DayArr, dayDatas)
+}
+
+//nodejs 导出
+if (typeof module !== "undefined" && module.exports) {
+    var fs = require('fs');
+    var os = require('os');
+    var nodemailer = require("nodemailer");
+}
+
+const globalConfigStartDate组1 = "2024-01-01"
+const globalConfigStartDate组2 = "2024-01-01"
+const globalConfigOnlySendOnTrigBuySell = true ////单个策略 false每天发送,true只有触发买卖才发送邮件
+const devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
+
+function isSendMail(trigDate, sendMailDate = "五天之内") { //发送邮件周期！！！！！
+    if (sendMailDate == "五天之内") {
+        return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 5 * 86400000
+    }
+    if (sendMailDate == "三天之内") {
+        return dateToStamp(trigDate) >= dateToStamp(currentDayYMD) - 3 * 86400000
+    }
+
+    if (sendMailDate == "curWeek-email") {
+        return getDateInWeekDay(trigDate, 7) == getDateInWeekDay(currentDayYMD, 7)
+    }
+    if (sendMailDate == "curYM-email") return trigDate.substring(0, 7) == currentDayYM
+    if (sendMailDate == "curY-email") return trigDate.substring(0, 4) == currentDayYM.substring(0, 4)
+    return false
+}
+
+async function mySendMail(subject, msgHtml = "", toMails = "851616860@qq.com") {
+    if (devTestEnv) {
+        return { response: `mailDevTest ${subject}` }
+    }
+
+    let promise = new Promise(async (resolve, reject) => {
+        try {
+            const transporter = nodemailer.createTransport({
+                pool: true,
+                host: "smtp.163.com",
+                port: 465,
+                secure: true, // Use `true` for port 465, `false` for all other ports
+                secureConnection: true,
+                auth: {
+                    user: "oowuyue@163.com",
+                    pass: "AEUORGVIOHTDGDGZ",  //qq8516 的：swvwmndqaedjbfii 
+                },
+            });
+            transporter.sendMail({
+                from: '"oowuyue" <oowuyue@163.com>', // sender address
+                to: toMails,//851616860@qq.com //1002579008@qq.com
+                subject: subject, // Subject line
+                text: "", // plain text body
+                html: msgHtml == "" ? subject : msgHtml, // html body
+            }, (err, info) => {
+                if (err) reject(err)
+                else resolve(info)
+            });
+
+        } catch (error) {
+            reject(error)
+        }
+    });
+    return promise
+}
+
+function writeDataToFile(dataName, dayDatas, folder = "./data/", dataSource = "") {
+    let promise = new Promise((resolve, reject) => {
+
+        let dataFileStr = `var ${dataName} = ` + JSON.stringify(dayDatas, null, 2) + ";\r\n"
+        dataFileStr += `
 if (typeof module !== "undefined" && module.exports) {
     exports.${dataName} = ${dataName}
     exports.dataSource = "${dataSource}"
     exports.writeDateTime = "${getDateTime()}"
 };
 `
-            fs.writeFile(`${folder}${dataName}.js`, dataFileStr, 'utf8', (err) => {
-                if (err) {
-                    console.log(`${dataName}写入失败${err}`)
-                    resolve(false)
-                    return
-                }
-                console.log(`${dataName}写入成功`)
-                resolve(true)
-            })
+        fs.writeFile(`${folder}${dataName}.js`, dataFileStr, 'utf8', (err) => {
+            if (err) {
+                console.log(`${dataName}写入失败${err}`)
+                resolve(false)
+                return
+            }
+            console.log(`${dataName}写入成功`)
+            resolve(true)
         })
-        return promise
-    }
-    function getDataFromFile(dataName, folder = "./data/", forceNew = true, format = "json") {
-        let promise = new Promise((resolve, reject) => {
-            fs.readFile(`${folder}${dataName}.js`, 'utf8', (err, data) => {
-                if (err) {
-                    console.log(dataName, "文件不存在")
-                    resolve(false)
-                    return
-                }
-                if (forceNew) {
-                    if (devTestEnv) {//本机测试环境
-                        let stat = fs.statSync(`${folder}${dataName}.js`)
-                        //let modifyDate = stat.mtime.toISOString().substring(0, 10)
-                        let modifyDate = stampToDate(parseInt(stat.mtimeMs)).substring(0, 10)
-                        if (currentDayYMD !== modifyDate) {
-                            console.log(dataName, "本机测试环境:注意文件数据不是当天的")
-                            // resolve(false)
-                            // return
-                        } else {
-                            console.log("本机测试环境:本机当天的即可")
-                        }
-                    } else {//githubAction 强制更新
-                        resolve(false)
-                        return
-                    }
-                }
-
-                try {
-                    console.log(`${dataName} getDataFromFile`)
-                    if (format == "json") {
-                        if (data.indexOf("=") >= 0)
-                            data = data.substring(data.indexOf("=") + 1, data.lastIndexOf("]") + 1)
-                        resolve(JSON.parse(data))//返回json
+    })
+    return promise
+}
+function getDataFromFile(dataName, folder = "./data/", forceNew = true, format = "json") {
+    let promise = new Promise((resolve, reject) => {
+        fs.readFile(`${folder}${dataName}.js`, 'utf8', (err, data) => {
+            if (err) {
+                console.log(dataName, "文件不存在")
+                resolve(false)
+                return
+            }
+            if (forceNew) {
+                if (devTestEnv) {//本机测试环境
+                    let stat = fs.statSync(`${folder}${dataName}.js`)
+                    //let modifyDate = stat.mtime.toISOString().substring(0, 10)
+                    let modifyDate = stampToDate(parseInt(stat.mtimeMs)).substring(0, 10)
+                    if (currentDayYMD !== modifyDate) {
+                        console.log(dataName, "本机测试环境:注意文件数据不是当天的")
+                        // resolve(false)
+                        // return
                     } else {
-                        resolve(data)//返回str
+                        console.log("本机测试环境:本机当天的即可")
                     }
-                } catch (error) {
+                } else {//githubAction 强制更新
                     resolve(false)
-                }
-
-            })
-        })
-        return promise
-    }
-
-    function isFileExit(filePaht) {
-        let promise = new Promise((resolve, reject) => {
-            fs.access(filePaht, fs.constants.F_OK, (err) => {
-                if (err) resolve(false)
-                else resolve(true)
-            })
-        })
-        return promise
-    }
-
-    async function check股票IsOk(股票Info, browser) {
-
-        //["002812", "恩捷股份"]
-        let 股票代码 = 股票Info[0]
-        let 股票名称 = 股票Info[1]
-        let result = [股票代码, 股票名称, "正常"]
-
-        try {
-            let startCode = 股票代码.substring(0, 1)
-            let 雪球股票代码
-            if (startCode == "6") 雪球股票代码 = "SH" + 股票代码
-            if (startCode == "0" || startCode == "3") 雪球股票代码 = "SZ" + 股票代码
-            if (startCode == "4" || startCode == "8") 雪球股票代码 = "BJ" + 股票代码
-
-            let page = await browser.newPage()
-            await page.goto('https://xueqiu.com/S/' + 雪球股票代码, { waitUntil: 'networkidle0' })
-
-            await page.waitForSelector('div.modal.modal__login a.close')
-            await page.$eval('div.modal.modal__login a.close', el => el.click())
-
-            await wait(500)
-            if (await page.$('div.modal.modal__login.modal__login__jianlian a.close.close_jianlian')) {
-                await page.$eval('div.modal.modal__login.modal__login__jianlian a.close.close_jianlian', el => el.click())
-            }
-
-            await page.waitForSelector('div.stock-timeline-tabs a:nth-child(5)')
-            await page.$eval('div.stock-timeline-tabs a:nth-child(5)', el => el.click())
-
-            await wait(1000)
-            await page.waitForSelector('div.status-list div.timeline__item__main div.content.content--description div')
-            let 公告列表P1 = await page.$$eval('div.status-list article.timeline__item', divItems => {
-                //Array.from(document.querySelectorAll(selector)) puppter自动转换了
-                let 公告列表 = divItems.map(ele => { return ele.querySelector("div.content.content--description div").innerText + ele.querySelector("a.date-and-source").innerText })
-                公告列表 = 公告列表.map((item) => { return item.replace("网页链接", "").replace("· 来自公告", "") })
-                return 公告列表
-
-            });
-
-            await page.$eval('div.pagination a.pagination__next', el => el.click())
-            await wait(1500)
-            await page.waitForSelector('div.status-list div.timeline__item__main div.content.content--description div')
-            let 公告列表P2 = await page.$$eval('div.status-list article.timeline__item', divItems => {
-                let 公告列表 = divItems.map(ele => { return ele.querySelector("div.content.content--description div").innerText + ele.querySelector("a.date-and-source").innerText })
-                公告列表 = 公告列表.map((item) => { return item.replace("网页链接", "").replace("· 来自公告", "") })
-                return 公告列表
-
-            });
-
-            await page.$eval('div.pagination a.pagination__next', el => el.click())
-            await wait(1500)
-            await page.waitForSelector('div.status-list div.timeline__item__main div.content.content--description div')
-            let 公告列表P3 = await page.$$eval('div.status-list article.timeline__item', divItems => {
-                let 公告列表 = divItems.map(ele => { return ele.querySelector("div.content.content--description div").innerText + ele.querySelector("a.date-and-source").innerText })
-                公告列表 = 公告列表.map((item) => { return item.replace("网页链接", "").replace("· 来自公告", "") })
-                return 公告列表
-            });
-            公告列表 = [...公告列表P1, ...公告列表P2, ...公告列表P3]
-
-            for (let index = 0; index < 公告列表.length; index++) {
-                let val = 公告列表[index];
-                if (
-                    val.includes("ST")
-                    || val.includes("st")
-                    || val.includes("退市")
-                    || val.includes("异常波动")
-                    || val.includes("风险提示")
-                    || val.includes("风险警示")
-                    || val.includes("警示函")
-                    || val.includes("关注函")
-                    || val.includes("司法")
-                    || val.includes("冻结")
-                    || val.includes("违规")
-                    || val.includes("诉讼")
-                    || val.includes("立案")
-                ) {
-                    result = [股票代码, 股票名称, "危险公告!", val]
-                    break
+                    return
                 }
             }
-            console.log("check股票IsOk_result:", result)
-            return result
 
-        } catch (error) {
-            result = [股票代码, 股票名称, "检测失效!"]
-            console.log("check股票IsOk_error:", error)
-            return result
+            try {
+                console.log(`${dataName} getDataFromFile`)
+                if (format == "json") {
+                    if (data.indexOf("=") >= 0)
+                        data = data.substring(data.indexOf("=") + 1, data.lastIndexOf("]") + 1)
+                    resolve(JSON.parse(data))//返回json
+                } else {
+                    resolve(data)//返回str
+                }
+            } catch (error) {
+                resolve(false)
+            }
+
+        })
+    })
+    return promise
+}
+
+function isFileExit(filePaht) {
+    let promise = new Promise((resolve, reject) => {
+        fs.access(filePaht, fs.constants.F_OK, (err) => {
+            if (err) resolve(false)
+            else resolve(true)
+        })
+    })
+    return promise
+}
+
+async function check股票IsOk(股票Info, browser) {
+
+    //["002812", "恩捷股份"]
+    let 股票代码 = 股票Info[0]
+    let 股票名称 = 股票Info[1]
+    let result = [股票代码, 股票名称, "正常"]
+
+    try {
+        let startCode = 股票代码.substring(0, 1)
+        let 雪球股票代码
+        if (startCode == "6") 雪球股票代码 = "SH" + 股票代码
+        if (startCode == "0" || startCode == "3") 雪球股票代码 = "SZ" + 股票代码
+        if (startCode == "4" || startCode == "8") 雪球股票代码 = "BJ" + 股票代码
+
+        let page = await browser.newPage()
+        await page.goto('https://xueqiu.com/S/' + 雪球股票代码, { waitUntil: 'networkidle0' })
+
+        await page.waitForSelector('div.modal.modal__login a.close')
+        await page.$eval('div.modal.modal__login a.close', el => el.click())
+
+        await wait(500)
+        if (await page.$('div.modal.modal__login.modal__login__jianlian a.close.close_jianlian')) {
+            await page.$eval('div.modal.modal__login.modal__login__jianlian a.close.close_jianlian', el => el.click())
         }
+
+        await page.waitForSelector('div.stock-timeline-tabs a:nth-child(5)')
+        await page.$eval('div.stock-timeline-tabs a:nth-child(5)', el => el.click())
+
+        await wait(1000)
+        await page.waitForSelector('div.status-list div.timeline__item__main div.content.content--description div')
+        let 公告列表P1 = await page.$$eval('div.status-list article.timeline__item', divItems => {
+            //Array.from(document.querySelectorAll(selector)) puppter自动转换了
+            let 公告列表 = divItems.map(ele => { return ele.querySelector("div.content.content--description div").innerText + ele.querySelector("a.date-and-source").innerText })
+            公告列表 = 公告列表.map((item) => { return item.replace("网页链接", "").replace("· 来自公告", "") })
+            return 公告列表
+
+        });
+
+        await page.$eval('div.pagination a.pagination__next', el => el.click())
+        await wait(1500)
+        await page.waitForSelector('div.status-list div.timeline__item__main div.content.content--description div')
+        let 公告列表P2 = await page.$$eval('div.status-list article.timeline__item', divItems => {
+            let 公告列表 = divItems.map(ele => { return ele.querySelector("div.content.content--description div").innerText + ele.querySelector("a.date-and-source").innerText })
+            公告列表 = 公告列表.map((item) => { return item.replace("网页链接", "").replace("· 来自公告", "") })
+            return 公告列表
+
+        });
+
+        await page.$eval('div.pagination a.pagination__next', el => el.click())
+        await wait(1500)
+        await page.waitForSelector('div.status-list div.timeline__item__main div.content.content--description div')
+        let 公告列表P3 = await page.$$eval('div.status-list article.timeline__item', divItems => {
+            let 公告列表 = divItems.map(ele => { return ele.querySelector("div.content.content--description div").innerText + ele.querySelector("a.date-and-source").innerText })
+            公告列表 = 公告列表.map((item) => { return item.replace("网页链接", "").replace("· 来自公告", "") })
+            return 公告列表
+        });
+        公告列表 = [...公告列表P1, ...公告列表P2, ...公告列表P3]
+
+        for (let index = 0; index < 公告列表.length; index++) {
+            let val = 公告列表[index];
+            if (
+                val.includes("ST")
+                || val.includes("st")
+                || val.includes("退市")
+                || val.includes("异常波动")
+                || val.includes("风险提示")
+                || val.includes("风险警示")
+                || val.includes("警示函")
+                || val.includes("关注函")
+                || val.includes("司法")
+                || val.includes("冻结")
+                || val.includes("违规")
+                || val.includes("诉讼")
+                || val.includes("立案")
+            ) {
+                result = [股票代码, 股票名称, "危险公告!", val]
+                break
+            }
+        }
+        console.log("check股票IsOk_result:", result)
+        return result
+
+    } catch (error) {
+        result = [股票代码, 股票名称, "检测失效!"]
+        console.log("check股票IsOk_error:", error)
+        return result
     }
+}
 
-    function getRandom登陆名(登陆名StrStr) {
-        let 登陆名Arr = 登陆名StrStr.split(":")
-        return 登陆名Arr[Math.floor(Math.random() * 登陆名Arr.length)]
-    }
+function getRandom登陆名(登陆名StrStr) {
+    let 登陆名Arr = 登陆名StrStr.split(":")
+    return 登陆名Arr[Math.floor(Math.random() * 登陆名Arr.length)]
+}
 
 
-    //exports.sendMailDate = sendMailDate
+if (typeof module !== "undefined" && module.exports) {
+
     exports.globalConfigStartDate组1 = globalConfigStartDate组1
     exports.globalConfigStartDate组2 = globalConfigStartDate组2
     exports.globalConfigOnlySendOnTrigBuySell = globalConfigOnlySendOnTrigBuySell
@@ -1507,4 +2031,5 @@ if (typeof module !== "undefined" && module.exports) {
 
     exports.myCYQCalculator = myCYQCalculator
     exports.getDWMbenfPart = getDWMbenfPart
+    exports.afterDayProfile = afterDayProfile
 } 
