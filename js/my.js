@@ -1420,8 +1420,8 @@ function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
             let tmpCloseDate = ""
 
             for (let after = 1; after <= after交易日Day; after++) {
-                let pointChange = dayDatas[trigDateDayIndex + after].close - currentDayData.close
-                let profile = pointChange / currentDayData.close
+                let pointChange = dayDatas[trigDateDayIndex + after].close - trigDateDayData.close
+                let profile = pointChange / trigDateDayData.close
                 if (profile > tmpHigh) {
                     tmpHighPoint = pointChange
                     tmpHigh = profile
@@ -1464,8 +1464,8 @@ function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
             let tmpCloseDate = ""
 
             for (let after = 1; after <= lastDay; after++) {
-                let pointChange = dayDatas[trigDateDayIndex + after].close - currentDayData.close
-                let profile = (dayDatas[trigDateDayIndex + after].close - currentDayData.close) / currentDayData.close
+                let pointChange = dayDatas[trigDateDayIndex + after].close - trigDateDayData.close
+                let profile = pointChange / trigDateDayData.close
                 if (profile > tmpHigh) {
                     tmpHighPoint = pointChange
                     tmpHigh = profile
@@ -1744,10 +1744,10 @@ function afterDayProfileW3(trigDate, after交易日DayArr, dayDatas) {
     if (trigDate != currentDayData.date) logProfileN.kDate = currentDayData.date //基金触发日不一定是交易日 
     return logProfileN
 }
-const 期权到期日 = "etf周三"   // "股指周五"  "etf周三"
+const 期权到期日类型 = "ETF周三"   // "股指周五"  "ETF周三"
 function afterDayProfile(trigDate, after交易日DayArr, dayDatas) {
-    if (期权到期日 == "股指周五") return afterDayProfileW5(trigDate, after交易日DayArr, dayDatas)
-    if (期权到期日 == "etf周三") return afterDayProfileW3(trigDate, after交易日DayArr, dayDatas)
+    if (期权到期日类型 == "股指周五") return afterDayProfileW5(trigDate, after交易日DayArr, dayDatas)
+    if (期权到期日类型 == "ETF周三") return afterDayProfileW3(trigDate, after交易日DayArr, dayDatas)
 }
 
 //nodejs 导出
@@ -1755,12 +1755,13 @@ if (typeof module !== "undefined" && module.exports) {
     var fs = require('fs');
     var os = require('os');
     var nodemailer = require("nodemailer");
+    const devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
 }
 
 const globalConfigStartDate组1 = "2024-01-01"
 const globalConfigStartDate组2 = "2024-01-01"
 const globalConfigOnlySendOnTrigBuySell = true ////单个策略 false每天发送,true只有触发买卖才发送邮件
-const devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
+
 
 function isSendMail(trigDate, sendMailDate = "五天之内") { //发送邮件周期！！！！！
     if (sendMailDate == "五天之内") {

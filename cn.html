@@ -360,6 +360,8 @@
 
     </script>
 
+    <script type="text/javascript" src="./cn/行情/上证50ETF.js"></script>
+    <script type="text/javascript" src="./cn/行情/沪深300ETF.js"></script>
     <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/行情/上证.js"></script>
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
@@ -401,9 +403,28 @@
         }
         const min期权days = 20
 
+        if (期权到期日类型 == "股指周五"){
+            var nextFirstDeliveryKey = "nextFirstDelivery周五"
+            var nextSecondDeliveryKey = "nextSecondDelivery周五"
+            var nextThirdDeliveryKey = "nextThirdDelivery周五"
+
+            var 期权标的资产 = 沪深300
+            var 期权标的资产Name = "沪深300"
+        }
+
+        if (期权到期日类型 == "ETF周三"){
+            var nextFirstDeliveryKey = "nextFirstDelivery周三"
+            var nextSecondDeliveryKey = "nextSecondDelivery周三"
+            var nextThirdDeliveryKey = "nextThirdDelivery周三"
+
+            var 期权标的资产 = 沪深300ETF
+            var 期权标的资产Name = "沪深300ETF"
+        }
+
+        
         //指数策略
         let 标星冲突不显示 = true
-        function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10) { // nextSecondDelivery周三 nextThirdDelivery周三
+        function 统计指数策略(高低位 = "低位", 汇总N = 5, 过滤M = 10) { 
 
             let trigDateArr = Object.entries(triggerLogObj指数.按日期排序)
                 .filter((ele, index) => { return ele[1][0].includes(高低位) })
@@ -444,14 +465,14 @@
                 let trig策略s = ele[1]
                 let profileN = ele[2]
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                let nextN期权到期 = nextSecondDeliveryKey
+                let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                 for (var i = 0; i < nextArr.length; i++) {
-                    let nextNDelivery周三 = nextArr[i]
-                    if (profileN[nextNDelivery周三]) {
-                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                    let nextNDelivery到期 = nextArr[i]
+                    if (profileN[nextNDelivery到期]) {
+                        let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                         if (closeDay > min期权days) {
-                            nextN期权周三 = nextNDelivery周三
+                            nextN期权到期 = nextNDelivery到期
                             break
                         }
                     }
@@ -459,14 +480,14 @@
 
                 let 期权日key
                 let N = 2
-                if (nextN期权周三 == "nextFirstDelivery周三") N = 1
-                if (nextN期权周三 == "nextThirdDelivery周三") N = 3
+                if (nextN期权到期 == nextFirstDeliveryKey) N = 1
+                if (nextN期权到期 == nextThirdDeliveryKey) N = 3
 
-                if (profileN[nextN期权周三]) {
-                    期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                if (profileN[nextN期权到期]) {
+                    期权日key = `后${N}到期` + profileN[nextN期权到期].close.split("->")[1].split(",")[0]
                 }
                 else if (profileN.after) {
-                    期权日key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
+                    期权日key = N == 1 ? `后${N}到期` + profileN.after[nextFirstDeliveryKey] : `后${N}到期` + profileN.after[nextSecondDeliveryKey]
                 }
                 if (!期权日key) return
 
@@ -478,18 +499,18 @@
                     trig期权日Obj[期权日key] = [ele]
                 }
             })
-            for (let [nextN期权周三key, trigDateArr] of Object.entries(trig期权日Obj)) {
+            for (let [nextN期权到期key, trigDateArr] of Object.entries(trig期权日Obj)) {
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                if (nextN期权周三key.includes("后3周三")) nextN期权周三 = "nextThirdDelivery周三"
+                let nextN期权到期 = nextSecondDeliveryKey
+                if (nextN期权到期key.includes("后3到期")) nextN期权到期 = nextThirdDeliveryKey
 
                 let closeHighest = -1000000, closeHighest百分比 = -1000000
                 let closeLowes = 1000000, closeLowes百分比 = 1000000
                 let type = trigDateArr[0][1][0].includes("高位") ? "高位" : "低位"
                 for (let trigDate of trigDateArr) {
                     let profileN = trigDate[2]
-                    let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
-                    let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                    let closePoint = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                    let closePercent = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
                     if (closePoint > closeHighest) {
                         closeHighest = closePoint
                         closeHighest百分比 = closePercent
@@ -501,7 +522,7 @@
                     if (profileN?.标星) type = profileN?.标星.replace("位", "")
                 }
 
-                let trig期权日Info = [nextN期权周三key, trigDateArr, type]
+                let trig期权日Info = [nextN期权到期key, trigDateArr, type]
                 trig期权日Info.maxRatio = closeHighest百分比
                 trig期权日Info.minRatio = closeLowes百分比
                 trig期权日Arr.push(trig期权日Info)
@@ -538,21 +559,21 @@
             function toKline(profileN) {
                 let key
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                let nextN期权到期 = nextSecondDeliveryKey
+                let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                 for (var i = 0; i < nextArr.length; i++) {
-                    let nextNDelivery周三 = nextArr[i]
-                    if (profileN[nextNDelivery周三]) {
-                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                    let nextNDelivery到期 = nextArr[i]
+                    if (profileN[nextNDelivery到期]) {
+                        let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                         if (closeDay > min期权days) {
-                            nextN期权周三 = nextNDelivery周三
+                            nextN期权到期 = nextNDelivery到期
                             break
                         }
                     }
                 }
 
-                if (profileN?.nextSecondDelivery周三 && nextN期权周三 == "nextSecondDelivery周三") key = "nextSecondDelivery周三"
-                else if (profileN?.nextThirdDelivery周三 && nextN期权周三 == "nextThirdDelivery周三") key = "nextThirdDelivery周三"
+                if (Object.hasOwn(profileN, nextSecondDeliveryKey) && nextN期权到期 == nextSecondDeliveryKey) key = nextSecondDeliveryKey
+                else if (Object.hasOwn(profileN, nextThirdDeliveryKey) && nextN期权到期 == nextThirdDeliveryKey) key = nextThirdDeliveryKey
                 else key = "after"
 
                 if (!profileN[key]) return []
@@ -582,8 +603,8 @@
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
                 //.sort((a, b) => a[8] - b[8])
                 .map((ele, index) => {
-                    if (ele[7] == "nextSecondDelivery周三") ele[7] = "后2周三"
-                    if (ele[7] == "nextThirdDelivery周三") ele[7] = "后3周三"
+                    if (ele[7] == nextSecondDeliveryKey) ele[7] = "后2到期"
+                    if (ele[7] == nextThirdDeliveryKey) ele[7] = "后3到期"
                     return ele
                 })
 
@@ -598,7 +619,7 @@
 
 
         //基金策略
-        function 统计基金策略(高低位 = "低位", 汇总N = 5, 过滤M = 10) { // nextSecondDelivery周三 nextThirdDelivery周三
+        function 统计基金策略(高低位 = "低位", 汇总N = 5, 过滤M = 10) { 
 
             let trigDateArr = Object.entries(triggerLogObj基金)
                 .filter((ele, index) => { return ele[1][0].includes(高低位) })
@@ -636,14 +657,14 @@
                 let trig策略s = ele[1]
                 let profileN = ele[2]
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                let nextN期权到期 = nextSecondDeliveryKey
+                let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                 for (var i = 0; i < nextArr.length; i++) {
-                    let nextNDelivery周三 = nextArr[i]
-                    if (profileN[nextNDelivery周三]) {
-                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                    let nextNDelivery到期 = nextArr[i]
+                    if (profileN[nextNDelivery到期]) {
+                        let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                         if (closeDay > min期权days) {
-                            nextN期权周三 = nextNDelivery周三
+                            nextN期权到期 = nextNDelivery到期
                             break
                         }
                     }
@@ -651,14 +672,14 @@
 
                 let 期权日key
                 let N = 2
-                if (nextN期权周三 == "nextFirstDelivery周三") N = 1
-                if (nextN期权周三 == "nextThirdDelivery周三") N = 3
+                if (nextN期权到期 == nextFirstDeliveryKey) N = 1
+                if (nextN期权到期 == nextThirdDeliveryKey) N = 3
 
-                if (profileN[nextN期权周三]) {
-                    期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                if (profileN[nextN期权到期]) {
+                    期权日key = `后${N}到期` + profileN[nextN期权到期].close.split("->")[1].split(",")[0]
                 }
                 else if (profileN.after) {
-                    期权日key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
+                    期权日key = N == 1 ? `后${N}到期` + profileN.after[nextFirstDeliveryKey] : `后${N}到期` + profileN.after[nextSecondDeliveryKey]
                 }
                 if (!期权日key) return
 
@@ -670,18 +691,18 @@
                     trig期权日Obj[期权日key] = [ele]
                 }
             })
-            for (let [nextN期权周三key, trigDateArr] of Object.entries(trig期权日Obj)) {
+            for (let [nextN期权到期key, trigDateArr] of Object.entries(trig期权日Obj)) {
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                if (nextN期权周三key.includes("后3周三")) nextN期权周三 = "nextThirdDelivery周三"
+                let nextN期权到期 = nextSecondDeliveryKey
+                if (nextN期权到期key.includes("后3到期")) nextN期权到期 = nextThirdDeliveryKey
 
                 let closeHighest = -1000000, closeHighest百分比 = -1000000
                 let closeLowes = 1000000, closeLowes百分比 = 1000000
                 let type = trigDateArr[0][1][0].includes("高位") ? "高位" : "低位"
                 for (let trigDate of trigDateArr) {
                     let profileN = trigDate[2]
-                    let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
-                    let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                    let closePoint = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                    let closePercent = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
                     if (closePoint > closeHighest) {
                         closeHighest = closePoint
                         closeHighest百分比 = closePercent
@@ -693,7 +714,7 @@
                     if (profileN?.标星) type = profileN?.标星.replace("位", "")
                 }
 
-                let trig期权日Info = [nextN期权周三key, trigDateArr, type]
+                let trig期权日Info = [nextN期权到期key, trigDateArr, type]
                 trig期权日Info.maxRatio = closeHighest百分比
                 trig期权日Info.minRatio = closeLowes百分比
                 trig期权日Arr.push(trig期权日Info)
@@ -731,21 +752,21 @@
             function toKline(profileN) {
                 let key
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                let nextN期权到期 = nextSecondDeliveryKey
+                let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                 for (var i = 0; i < nextArr.length; i++) {
-                    let nextNDelivery周三 = nextArr[i]
-                    if (profileN[nextNDelivery周三]) {
-                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                    let nextNDelivery到期 = nextArr[i]
+                    if (profileN[nextNDelivery到期]) {
+                        let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                         if (closeDay > min期权days) {
-                            nextN期权周三 = nextNDelivery周三
+                            nextN期权到期 = nextNDelivery到期
                             break
                         }
                     }
                 }
 
-                if (profileN?.nextSecondDelivery周三 && nextN期权周三 == "nextSecondDelivery周三") key = "nextSecondDelivery周三"
-                else if (profileN?.nextThirdDelivery周三 && nextN期权周三 == "nextThirdDelivery周三") key = "nextThirdDelivery周三"
+                if (Object.hasOwn(profileN, nextSecondDeliveryKey) && nextN期权到期 == nextSecondDeliveryKey) key = nextSecondDeliveryKey
+                else if (Object.hasOwn(profileN, nextThirdDeliveryKey) && nextN期权到期 == nextThirdDeliveryKey) key = nextThirdDeliveryKey
                 else key = "after"
 
                 if (!profileN[key]) return []
@@ -776,8 +797,8 @@
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
                 //.sort((a, b) => a[9] - b[9])
                 .map((ele, index) => {
-                    if (ele[7] == "nextSecondDelivery周三") ele[7] = "后2周三"
-                    if (ele[7] == "nextThirdDelivery周三") ele[7] = "后3周三"
+                    if (ele[7] == nextSecondDeliveryKey) ele[7] = "后2到期"
+                    if (ele[7] == nextThirdDeliveryKey) ele[7] = "后3到期"
                     return ele
                 })
 
@@ -836,14 +857,14 @@
                     let trig策略s = ele[1]
                     let profileN = ele[2]
 
-                    let nextN期权周三 = "nextSecondDelivery周三"
-                    let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                    let nextN期权到期 = nextSecondDeliveryKey
+                    let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                     for (var i = 0; i < nextArr.length; i++) {
-                        let nextNDelivery周三 = nextArr[i]
-                        if (profileN[nextNDelivery周三]) {
-                            let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                        let nextNDelivery到期 = nextArr[i]
+                        if (profileN[nextNDelivery到期]) {
+                            let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                             if (closeDay > min期权days) {
-                                nextN期权周三 = nextNDelivery周三
+                                nextN期权到期 = nextNDelivery到期
                                 break
                             }
                         }
@@ -851,13 +872,13 @@
 
                     let 期权日key
                     let N = 2
-                    if (nextN期权周三 == "nextSecondDelivery周三") N = 2
-                    if (nextN期权周三 == "nextThirdDelivery周三") N = 3
-                    if (profileN[nextN期权周三]) {
-                        期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                    if (nextN期权到期 == nextSecondDeliveryKey) N = 2
+                    if (nextN期权到期 == nextThirdDeliveryKey) N = 3
+                    if (profileN[nextN期权到期]) {
+                        期权日key = `后${N}到期` + profileN[nextN期权到期].close.split("->")[1].split(",")[0]
                     }
                     else if (profileN.after) {
-                        期权日key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
+                        期权日key = N == 1 ? `后${N}到期` + profileN.after[nextFirstDeliveryKey] : `后${N}到期` + profileN.after[nextSecondDeliveryKey]
                     }
                     if (!期权日key) return
 
@@ -868,18 +889,18 @@
                         trig期权日Obj[期权日key] = [ele]
                     }
                 })
-                for (let [nextN期权周三key, trigDateArr] of Object.entries(trig期权日Obj)) {
+                for (let [nextN期权到期key, trigDateArr] of Object.entries(trig期权日Obj)) {
 
-                    let nextN期权周三 = "nextSecondDelivery周三"
-                    if (nextN期权周三key.includes("后3周三")) nextN期权周三 = "nextThirdDelivery周三"
+                    let nextN期权到期 = nextSecondDeliveryKey
+                    if (nextN期权到期key.includes("后3到期")) nextN期权到期 = nextThirdDeliveryKey
 
                     let closeHighest = -1000000, closeHighest百分比 = -1000000
                     let closeLowes = 1000000, closeLowes百分比 = 1000000
                     let type = 区间类型.includes("上升") ? " ↑ " : " ↓ "
                     for (let trigDate of trigDateArr) {
                         let profileN = trigDate[2]
-                        let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
-                        let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                        let closePoint = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                        let closePercent = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
                         if (closePoint > closeHighest) {
                             closeHighest = closePoint
                             closeHighest百分比 = closePercent
@@ -891,7 +912,7 @@
                         //if (profileN?.标星) type = profileN?.标星.replace("位", "")
                     }
 
-                    let trig期权日Info = [nextN期权周三key, trigDateArr, type] //
+                    let trig期权日Info = [nextN期权到期key, trigDateArr, type] //
                     trig期权日Info.maxRatio = closeHighest百分比
                     trig期权日Info.minRatio = closeLowes百分比
                     trig期权日Arr.push(trig期权日Info)
@@ -941,21 +962,21 @@
             function toKline(profileN) {
                 let key
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                let nextN期权到期 = nextSecondDeliveryKey
+                let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                 for (var i = 0; i < nextArr.length; i++) {
-                    let nextNDelivery周三 = nextArr[i]
-                    if (profileN[nextNDelivery周三]) {
-                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                    let nextNDelivery到期 = nextArr[i]
+                    if (profileN[nextNDelivery到期]) {
+                        let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                         if (closeDay > min期权days) {
-                            nextN期权周三 = nextNDelivery周三
+                            nextN期权到期 = nextNDelivery到期
                             break
                         }
                     }
                 }
 
-                if (profileN?.nextSecondDelivery周三 && nextN期权周三 == "nextSecondDelivery周三") key = "nextSecondDelivery周三"
-                else if (profileN?.nextThirdDelivery周三 && nextN期权周三 == "nextThirdDelivery周三") key = "nextThirdDelivery周三"
+                if (Object.hasOwn(profileN, nextSecondDeliveryKey) && nextN期权到期 == nextSecondDeliveryKey) key = nextSecondDeliveryKey
+                else if (Object.hasOwn(profileN, nextThirdDeliveryKey) && nextN期权到期 == nextThirdDeliveryKey) key = nextThirdDeliveryKey
                 else key = "after"
 
                 return [
@@ -986,8 +1007,8 @@
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
                 //.sort((a, b) => a[8] - b[8])
                 .map((ele, index) => {
-                    if (ele[7] == "nextSecondDelivery周三") ele[7] = "后2周三"
-                    if (ele[7] == "nextThirdDelivery周三") ele[7] = "后3周三"
+                    if (ele[7] == nextSecondDeliveryKey) ele[7] = "后2到期"
+                    if (ele[7] == nextThirdDeliveryKey) ele[7] = "后3到期"
                     return ele
                 })
 
@@ -1002,7 +1023,7 @@
 
 
         //全部策略合并后统计
-        function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) { // nextSecondDelivery周三 nextThirdDelivery周三
+        function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) { 
 
             let trigDateArr指数 = Object.entries(triggerLogObj指数.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
             if (标星冲突不显示) trigDateArr指数 = trigDateArr指数.filter((ele, index) => { return !ele[1].at(-1)?.冲突 }) ///标星冲突不显示
@@ -1101,14 +1122,14 @@
                 let profileN = ele[2]
                 let 位箭 = ele[3]
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                let nextArr = ["nextSecondDelivery周三", "nextThirdDelivery周三"]
+                let nextN期权到期 = nextSecondDeliveryKey
+                let nextArr = [nextSecondDeliveryKey, nextThirdDeliveryKey]
                 for (var i = 0; i < nextArr.length; i++) {
-                    let nextNDelivery周三 = nextArr[i]
-                    if (profileN[nextNDelivery周三]) {
-                        let closeDay = +profileN[nextNDelivery周三].close.split("->")[0]
+                    let nextNDelivery到期 = nextArr[i]
+                    if (profileN[nextNDelivery到期]) {
+                        let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                         if (closeDay > min期权days) {
-                            nextN期权周三 = nextNDelivery周三
+                            nextN期权到期 = nextNDelivery到期
                             break
                         }
                     }
@@ -1116,14 +1137,14 @@
 
                 let 期权日key
                 let N = 2
-                if (nextN期权周三 == "nextFirstDelivery周三") N = 1
-                if (nextN期权周三 == "nextThirdDelivery周三") N = 3
+                if (nextN期权到期 == nextFirstDeliveryKey) N = 1
+                if (nextN期权到期 == nextThirdDeliveryKey) N = 3
 
-                if (profileN[nextN期权周三]) {
-                    期权日key = `后${N}周三` + profileN[nextN期权周三].close.split("->")[1].split(",")[0]
+                if (profileN[nextN期权到期]) {
+                    期权日key = `后${N}到期` + profileN[nextN期权到期].close.split("->")[1].split(",")[0]
                 }
                 else if (profileN.after) {
-                    期权日key = N == 1 ? `后${N}周三` + profileN.after.nextFirstDelivery周三 : `后${N}周三` + profileN.after.nextSecondDelivery周三
+                    期权日key = N == 1 ? `后${N}到期` + profileN.after[nextFirstDeliveryKey] : `后${N}到期` + profileN.after[nextSecondDeliveryKey]
                 }
                 if (!期权日key) return
 
@@ -1139,18 +1160,18 @@
                 }
             })
 
-            for (let [nextN期权周三key, trigDateArr] of Object.entries(trig期权日Obj)) {
+            for (let [nextN期权到期key, trigDateArr] of Object.entries(trig期权日Obj)) {
 
-                let nextN期权周三 = "nextSecondDelivery周三"
-                if (nextN期权周三key.includes("后3周三")) nextN期权周三 = "nextThirdDelivery周三"
+                let nextN期权到期 = nextSecondDeliveryKey
+                if (nextN期权到期key.includes("后3到期")) nextN期权到期 = nextThirdDeliveryKey
 
                 let closeHighest = -1000000, closeHighest百分比 = -1000000
                 let closeLowes = 1000000, closeLowes百分比 = 1000000
                 let type = [...new Set(trigDateArr.map(item => item[3]))]
                 for (let trigDate of trigDateArr) {
                     let profileN = trigDate[2]
-                    let closePoint = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
-                    let closePercent = typeof profileN[nextN期权周三] !== "undefined" ? +profileN[nextN期权周三].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
+                    let closePoint = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[1] : +profileN.after.close.split(",")[1]//close 点位变化
+                    let closePercent = typeof profileN[nextN期权到期] !== "undefined" ? +profileN[nextN期权到期].close.split(",")[2] : +profileN.after.close.split(",")[2]//baifenbi 点位变化
                     if (closePoint > closeHighest) {
                         closeHighest = closePoint
                         closeHighest百分比 = closePercent
@@ -1161,7 +1182,7 @@
                     }
                 }
 
-                let trig期权日Info = [nextN期权周三key, trigDateArr, type + ""]
+                let trig期权日Info = [nextN期权到期key, trigDateArr, type + ""]
                 trig期权日Info.maxRatio = closeHighest百分比
                 trig期权日Info.minRatio = closeLowes百分比
                 trig期权日Arr.push(trig期权日Info)
@@ -1192,15 +1213,10 @@
         console.log(changeLog1(全部策略ByDay), 全部策略By期权日)
         console.groupEnd()
         console.log("    ")
-
-
-        // console.log("2022-04-27", trigDateArr,trig期权日Obj) //2022-04-27 ? 反向
-        // return
-
     </script>
 
-    <script type="text/javascript" src="./cn/行情/上证50ETF.js"></script>
-    <script type="text/javascript" src="./cn/行情/沪深300ETF.js"></script>
+
+   
     <script>
         function isNumber(value) {
             return typeof value === 'number' && !isNaN(value);
@@ -1217,7 +1233,7 @@
             const result = parseInt(firstDigit + zeros, 10);
             return num < 0 ? -result : result;
         }
-        function getEtfByDate(etfList, date) {
+        function get标的资产ByDate(etfList, date) {
             let curKInfoIndex = etfList.findIndex(e => e.date == date)
             if (curKInfoIndex <= -1) {
                 let Nlist = [-1, -2, -3, -4, -5, 1, 2]
@@ -1228,7 +1244,7 @@
                 }
             }
             if (curKInfoIndex <= -1) {
-                console.log("无法找到对应ETF数据日期", date)
+                console.log("无法找到对应数据日期", date)
                 return null
             }
             etfList[curKInfoIndex].index = curKInfoIndex
@@ -1365,7 +1381,7 @@
             }
 
             for (let idx = element[1].length - 1; idx >= 0; idx--) {
-                let curKInfo = getEtfByDate(沪深300ETF, element[1][idx][0])
+                let curKInfo = get标的资产ByDate(期权标的资产, element[1][idx][0])
                 if (idx == element[1].length - 1) {
                     let oldfuhao = element[1][idx].pop()
                     element[1][idx].push(oldfuhao + "-&")
@@ -1392,20 +1408,19 @@
         }
 
         //抽取22-4-27  22-3-23
-        let etfType = "沪深300ETF"
         let 期权策略建议 = []
         for (let index = 0; index < allBy期权日.length; index++) {
             const element = allBy期权日[index]
             let endDate = element[0].substring(5)
 
             if (+endDate.substring(0, 4) < 2015) continue
-            if (+endDate.substring(0, 4) < 2020) etfType = "上证50ETF"
+            if (endDate < "2020-02-21" ) { 期权标的资产 = 上证50ETF; 期权标的资产Name="上证50ETF"; }
 
             for (let atId = -1; atId >= (0 - element[1].length); atId--) {
                 const eleArr = element[1]
                 if (atId !== -1 && !eleArr.at(atId).at(-1).includes("-&")) continue
                 let startDate = eleArr.at(atId)[0]
-                let startClose = etfType == "沪深300ETF" ? getEtfByDate(沪深300ETF, startDate).close : getEtfByDate(上证50ETF, startDate).close
+                let startClose = get标的资产ByDate(期权标的资产, startDate).close 
                 startClose = +startClose.toFixed(3)
 
                 let 星位箭 = eleArr.at(atId)[3]
@@ -1416,7 +1431,7 @@
                     excpEndClose = +(startClose * 0.97).toFixed(3)
                 }
 
-                let pushArr = [startDate, endDate, 星位箭, `${startClose} ${direType}${etfType} ${excpEndClose}`]
+                let pushArr = [startDate, endDate, 星位箭, `${startClose} ${direType}${期权标的资产Name} ${excpEndClose}`]
                 pushArr.tAr = eleArr.at(atId)[1] + ""
                 期权策略建议.push(pushArr)
             }
