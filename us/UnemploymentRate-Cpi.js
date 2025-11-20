@@ -2337,7 +2337,7 @@ var UnemploymentRate = [
     ],
     [
         "2025-09-28",
-        null
+        4.4
     ]
 ]
 var Cpi = [
