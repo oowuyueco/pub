@@ -636,6 +636,10 @@ var triggerLogObj大宗={
         ],
         "2025-11-20": [
             "低位低量_乙二醇连续"
+        ],
+        "2025-11-21": [
+            "低位低量_PP连续",
+            "低位低量_乙二醇连续"
         ]
     },
     "高位KDJ": [
@@ -1104,14 +1108,14 @@ var triggerLogObj大宗={
                     7.39,
                     1.63
                 ],
-                "day23LowUp": [
+                "day24LowUp": [
                     "6,2025-10-28",
                     -5.9,
                     "18,2025-11-13",
                     7.39,
-                    2.62
+                    -0.53
                 ],
-                "lastDay": 23
+                "lastDay": 24
             }
         }
     ],
@@ -1951,14 +1955,14 @@ var triggerLogObj大宗={
                     10.53,
                     3.63
                 ],
-                "day29LowUp": [
+                "day30LowUp": [
                     "12,2025-10-28",
                     -0.3,
                     "24,2025-11-13",
                     13.79,
-                    8.73
+                    5.4
                 ],
-                "lastDay": 29
+                "lastDay": 30
             }
         }
     ],
@@ -7113,14 +7117,14 @@ var triggerLogObj大宗={
                     17,
                     8.12
                 ],
-                "day96LowUp": [
+                "day97LowUp": [
                     "",
                     0,
                     "18,2025-07-25",
                     17,
-                    3.34
+                    3.83
                 ],
-                "lastDay": 96
+                "lastDay": 97
             },
             "test": false
         },
@@ -9474,7 +9478,14 @@ var triggerLogObj大宗={
                     1.44,
                     -3.74
                 ],
-                "lastDay": 20
+                "day21LowUp": [
+                    "21,2025-11-21",
+                    -4.4,
+                    "4,2025-10-29",
+                    1.44,
+                    -4.4
+                ],
+                "lastDay": 21
             }
         },
         {
@@ -9485,14 +9496,14 @@ var triggerLogObj大宗={
             "trigcalType": "日周九转",
             "test": "",
             "logProfileN": {
-                "day5LowUp": [
+                "day6LowUp": [
                     "",
                     0,
                     "5,2025-11-20",
                     2.45,
-                    2.45
+                    1.09
                 ],
-                "lastDay": 5
+                "lastDay": 6
             }
         }
     ],
@@ -12477,14 +12488,14 @@ var triggerLogObj大宗={
                     0,
                     -5.32
                 ],
-                "day13LowUp": [
-                    "12,2025-11-19",
-                    -6.07,
+                "day14LowUp": [
+                    "14,2025-11-21",
+                    -6.49,
                     "",
                     0,
-                    -5.93
+                    -6.49
                 ],
-                "lastDay": 13
+                "lastDay": 14
             }
         },
         {
@@ -12503,14 +12514,14 @@ var triggerLogObj大宗={
                     1.23,
                     -4.02
                 ],
-                "day12LowUp": [
-                    "11,2025-11-19",
-                    -4.82,
+                "day13LowUp": [
+                    "13,2025-11-21",
+                    -5.25,
                     "1,2025-11-05",
                     1.23,
-                    -4.68
+                    -5.25
                 ],
-                "lastDay": 12
+                "lastDay": 13
             }
         },
         {
@@ -12529,14 +12540,14 @@ var triggerLogObj大宗={
                     0,
                     -5.98
                 ],
-                "day11LowUp": [
-                    "10,2025-11-19",
-                    -5.98,
+                "day12LowUp": [
+                    "12,2025-11-21",
+                    -6.4,
                     "",
                     0,
-                    -5.84
+                    -6.4
                 ],
-                "lastDay": 11
+                "lastDay": 12
             }
         },
         {
@@ -12555,6 +12566,32 @@ var triggerLogObj大宗={
                     0,
                     -5.13
                 ],
+                "day11LowUp": [
+                    "11,2025-11-21",
+                    -5.69,
+                    "",
+                    0,
+                    -5.69
+                ],
+                "lastDay": 11
+            }
+        },
+        {
+            "dataName": "甲醇连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-11-07",
+            "trigAtIndex": 2634,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day10LowUp": [
+                    "10,2025-11-21",
+                    -5.11,
+                    "",
+                    0,
+                    -5.11
+                ],
                 "lastDay": 10
             }
         },
@@ -12567,33 +12604,14 @@ var triggerLogObj大宗={
             "trigcalType": "",
             "test": "",
             "logProfileN": {
-                "day9LowUp": [
-                    "8,2025-11-19",
-                    -4.69,
+                "day10LowUp": [
+                    "10,2025-11-21",
+                    -5.11,
                     "",
                     0,
-                    -4.55
+                    -5.11
                 ],
-                "lastDay": 9
-            }
-        },
-        {
-            "dataName": "甲醇连续",
-            "quantName": "低位低量",
-            "trigDate": "2025-11-07",
-            "trigAtIndex": 2634,
-            "dataType": "工业",
-            "trigcalType": "",
-            "test": "",
-            "logProfileN": {
-                "day9LowUp": [
-                    "8,2025-11-19",
-                    -4.69,
-                    "",
-                    0,
-                    -4.55
-                ],
-                "lastDay": 9
+                "lastDay": 10
             }
         },
         {
@@ -12601,6 +12619,44 @@ var triggerLogObj大宗={
             "quantName": "低位低量",
             "trigDate": "2025-11-20",
             "trigAtIndex": 1683,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day1LowUp": [
+                    "1,2025-11-21",
+                    -0.37,
+                    "",
+                    0,
+                    -0.37
+                ],
+                "lastDay": 1
+            }
+        },
+        {
+            "dataName": "PP连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-11-21",
+            "trigAtIndex": 2852,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
+        },
+        {
+            "dataName": "乙二醇连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-11-21",
+            "trigAtIndex": 1684,
             "dataType": "工业",
             "trigcalType": "",
             "test": "",
@@ -14139,4 +14195,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2025-11-20"
+var runLastKlineDate = "2025-11-21"
