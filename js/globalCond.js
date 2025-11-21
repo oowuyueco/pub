@@ -35,6 +35,16 @@ function ma5_ma10(currentPeriodList, index) {
     return volMaPre(5, currentPeriodList, index) - volMaPre(10, currentPeriodList, index)
 }
 
+function VOL死叉(currentPeriodList, N = 3, ma1 = 5, ma2 = 10) {
+    if (currentPeriodList.length < 3) return false
+    for (let index = 1; index <= N; index++) {
+        if (
+            volMaPre(ma1, currentPeriodList, 0 - (index + 1)) > volMaPre(ma2, currentPeriodList, 0 - (index + 1)) &&
+            volMaPre(ma1, currentPeriodList, 0 - index) <= volMaPre(ma2, currentPeriodList, 0 - index)
+        ) return true
+    }
+    return false
+}
 
 function KDJ死叉(periodList, N = 2, tweaks = 0) {
     for (let index = 1; index <= N; index++) {

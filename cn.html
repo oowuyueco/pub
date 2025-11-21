@@ -1005,7 +1005,7 @@
             result["all"] = allArr
                 //.filter((ele, index) => { return ele.at(-1).includes("_one") })
                 .sort((a, b) => dateToStamp(b[0]) - dateToStamp(a[0]))
-                //.sort((a, b) => a[8] - b[8])
+                .sort((a, b) => b[6] - a[6])
                 .map((ele, index) => {
                     if (ele[7] == nextSecondDeliveryKey) ele[7] = "后2到期"
                     if (ele[7] == nextThirdDeliveryKey) ele[7] = "后3到期"
@@ -2383,16 +2383,16 @@
             let 购期权 = asset.期权.filter((ele, index) => {
                 return ele[3].includes("购");
             });
-            购期权.sort((a, b) => a.at(-3) - b.at(-3));
+            购期权.sort((a, b) => b.at(-3) - a.at(-3));
             console.log(购期权);
 
             let 沽期权 = asset.期权.filter((ele, index) => {
                 return ele[3].includes("沽");
             });
-            沽期权.sort((a, b) => a.at(-3) - b.at(-3));
+            沽期权.sort((a, b) => b.at(-3) - a.at(-3));
             console.log(沽期权);
 
-            asset.期权.sort((a, b) => a.at(-3) - b.at(-3));
+            asset.期权.sort((a, b) => b.at(-3) - a.at(-3));
             console.log(asset.期权);
 
 

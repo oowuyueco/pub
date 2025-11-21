@@ -500,30 +500,6 @@ var triggerLogObj期权 = {
           }
         }
       ],
-      "2013-03-01": [
-        {
-          "trigDate": "2013-03-01",
-          "quantName": "上证50低位_金叉低连空但",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "10->2013-03-15,-128.96,-4.83",
-            "high": ",0,0",
-            "low": "8->2013-03-13,-141.35,-5.3"
-          },
-          "nextSecondDelivery周五": {
-            "close": "33->2013-04-19,-135.01,-5.06",
-            "high": ",0,0",
-            "low": "29->2013-04-15,-232.02,-8.69"
-          },
-          "nextThirdDelivery周五": {
-            "close": "50->2013-05-17,-76.79,-2.88",
-            "high": ",0,0",
-            "low": "29->2013-04-15,-232.02,-8.69"
-          }
-        }
-      ],
       "2013-04-10": [
         {
           "trigDate": "2013-04-10",
@@ -1286,54 +1262,6 @@ var triggerLogObj期权 = {
             "low": "46->2018-02-09,-175.17,-4.36"
           }
         }
-      ],
-      "2017-12-19": [
-        {
-          "trigDate": "2017-12-19",
-          "quantName": "沪深300低位_ma5金叉10绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "22->2018-01-19,250.07,6.2",
-            "high": "22->2018-01-19,250.07,6.2",
-            "low": "6->2017-12-27,-44.12,-1.09"
-          },
-          "nextSecondDelivery周五": {
-            "close": "41->2018-02-22,17.4,0.43",
-            "high": "25->2018-01-24,354.56,8.79",
-            "low": "37->2018-02-09,-194.68,-4.82"
-          },
-          "nextThirdDelivery周五": {
-            "close": "57->2018-03-16,21.09,0.52",
-            "high": "25->2018-01-24,354.56,8.79",
-            "low": "37->2018-02-09,-194.68,-4.82"
-          }
-        }
-      ],
-      "2018-01-03": [
-        {
-          "trigDate": "2018-01-03",
-          "quantName": "上证50低位_ma10UpMas低连空但",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "12->2018-01-19,174,4.23",
-            "high": "12->2018-01-19,174,4.23",
-            "low": ",0,0"
-          },
-          "nextSecondDelivery周五": {
-            "close": "31->2018-02-22,-58.66,-1.43",
-            "high": "15->2018-01-24,278.49,6.77",
-            "low": "27->2018-02-09,-270.74,-6.59"
-          },
-          "nextThirdDelivery周五": {
-            "close": "47->2018-03-16,-54.97,-1.34",
-            "high": "15->2018-01-24,278.49,6.77",
-            "low": "27->2018-02-09,-270.74,-6.59"
-          }
-        }
       ]
     },
     "2018-12-28=>2021-02-18": {
@@ -2027,30 +1955,6 @@ var triggerLogObj期权 = {
           }
         }
       ],
-      "2023-12-27": [
-        {
-          "trigDate": "2023-12-27",
-          "quantName": "沪深300低位_MVol金叉",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "16->2024-01-19,-66.58,-2",
-            "high": "2->2023-12-29,94.75,2.84",
-            "low": "14->2024-01-17,-107.28,-3.22"
-          },
-          "nextSecondDelivery周五": {
-            "close": "31->2024-02-19,67.45,2.02",
-            "high": "2->2023-12-29,94.75,2.84",
-            "low": "26->2024-02-02,-156.73,-4.7"
-          },
-          "nextThirdDelivery周五": {
-            "close": "50->2024-03-15,233.63,7",
-            "high": "47->2024-03-12,261.13,7.83",
-            "low": "26->2024-02-02,-156.73,-4.7"
-          }
-        }
-      ],
       "2024-01-18": [
         {
           "trigDate": "2024-01-18",
@@ -2072,54 +1976,6 @@ var triggerLogObj期权 = {
             "close": "35->2024-03-15,295.26,9.02",
             "high": "32->2024-03-12,322.76,9.86",
             "low": "11->2024-02-02,-95.1,-2.9"
-          }
-        }
-      ],
-      "2024-04-15": [
-        {
-          "trigDate": "2024-04-15",
-          "quantName": "上证50低位_金叉低连空但",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "4->2024-04-19,-7.42,-0.21",
-            "high": "3->2024-04-18,20.72,0.58",
-            "low": "1->2024-04-16,-37.97,-1.07"
-          },
-          "nextSecondDelivery周五": {
-            "close": "21->2024-05-17,128.89,3.63",
-            "high": "21->2024-05-17,128.89,3.63",
-            "low": "6->2024-04-23,-42.86,-1.21"
-          },
-          "nextThirdDelivery周五": {
-            "close": "45->2024-06-21,-53.46,-1.51",
-            "high": "22->2024-05-20,141.88,4",
-            "low": "45->2024-06-21,-53.46,-1.51"
-          }
-        }
-      ],
-      "2024-04-16": [
-        {
-          "trigDate": "2024-04-16",
-          "quantName": "上证50低位_金叉低连空但",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "3->2024-04-19,30.55,0.87",
-            "high": "2->2024-04-18,58.69,1.67",
-            "low": ",0,0"
-          },
-          "nextSecondDelivery周五": {
-            "close": "20->2024-05-17,166.86,4.75",
-            "high": "20->2024-05-17,166.86,4.75",
-            "low": "5->2024-04-23,-4.89,-0.14"
-          },
-          "nextThirdDelivery周五": {
-            "close": "44->2024-06-21,-15.49,-0.44",
-            "high": "21->2024-05-20,179.85,5.12",
-            "low": "44->2024-06-21,-15.49,-0.44"
           }
         }
       ],
@@ -2273,54 +2129,6 @@ var triggerLogObj期权 = {
           }
         }
       ],
-      "2025-05-06": [
-        {
-          "trigDate": "2025-05-06",
-          "quantName": "沪深300低位_ma5金叉10绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "8->2025-05-16,80.55,2.11",
-            "high": "6->2025-05-14,134.67,3.54",
-            "low": ",0,0"
-          },
-          "nextSecondDelivery周五": {
-            "close": "32->2025-06-20,38.1,1",
-            "high": "6->2025-05-14,134.67,3.54",
-            "low": ",0,0"
-          },
-          "nextThirdDelivery周五": {
-            "close": "52->2025-07-18,250.01,6.56",
-            "high": "52->2025-07-18,250.01,6.56",
-            "low": ",0,0"
-          }
-        }
-      ],
-      "2025-05-07": [
-        {
-          "trigDate": "2025-05-07",
-          "quantName": "沪深300低位_ma5金叉10绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "7->2025-05-16,57.46,1.5",
-            "high": "5->2025-05-14,111.58,2.91",
-            "low": ",0,0"
-          },
-          "nextSecondDelivery周五": {
-            "close": "31->2025-06-20,15.01,0.39",
-            "high": "5->2025-05-14,111.58,2.91",
-            "low": ",0,0"
-          },
-          "nextThirdDelivery周五": {
-            "close": "51->2025-07-18,226.92,5.92",
-            "high": "51->2025-07-18,226.92,5.92",
-            "low": ",0,0"
-          }
-        }
-      ],
       "2025-05-29": [
         {
           "trigDate": "2025-05-29",
@@ -2390,30 +2198,6 @@ var triggerLogObj期权 = {
             "close": "63->2025-09-19,597.89,15.31",
             "high": "61->2025-09-17,646.99,16.57",
             "low": ",0,0"
-          }
-        }
-      ],
-      "2025-07-14": [
-        {
-          "trigDate": "2025-07-14",
-          "quantName": "科创50低位_ma5金叉10绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "4->2025-07-18,40.88,1.02",
-            "high": "4->2025-07-18,40.88,1.02",
-            "low": "2->2025-07-16,-10.47,-0.26"
-          },
-          "nextSecondDelivery周五": {
-            "close": "24->2025-08-15,184.68,4.6",
-            "high": "24->2025-08-15,184.68,4.6",
-            "low": "2->2025-07-16,-10.47,-0.26"
-          },
-          "nextThirdDelivery周五": {
-            "close": "49->2025-09-19,484.25,12.05",
-            "high": "47->2025-09-17,533.35,13.28",
-            "low": "2->2025-07-16,-10.47,-0.26"
           }
         }
       ],
@@ -2541,7 +2325,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2551,7 +2335,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2561,7 +2345,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2008-01-15",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2585,12 +2369,12 @@ var triggerLogObj期权 = {
       "2008-01-16": [
         {
           "trigDate": "2008-01-16",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2008-01-16",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2799,7 +2583,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2843,7 +2627,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-07-30",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2906,7 +2690,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2921,7 +2705,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2955,7 +2739,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2965,12 +2749,12 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-06",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -2994,12 +2778,12 @@ var triggerLogObj期权 = {
       "2009-08-07": [
         {
           "trigDate": "2009-08-07",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2009-08-07",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3028,7 +2812,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2009-11-13",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3207,7 +2991,7 @@ var triggerLogObj期权 = {
       "2009-12-11": [
         {
           "trigDate": "2009-12-11",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3393,35 +3177,6 @@ var triggerLogObj期权 = {
           }
         }
       ],
-      "2010-03-04": [
-        {
-          "trigDate": "2010-03-04",
-          "quantName": "上证高位_KDJ死叉",
-          "logInfo": ""
-        },
-        {
-          "trigDate": "2010-03-04",
-          "quantName": "沪深300高位_KDJ死叉",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "11->2010-03-19,43.3,1.33",
-            "high": "3->2010-03-09,55.29,1.7",
-            "low": "7->2010-03-15,-67.39,-2.07"
-          },
-          "nextSecondDelivery周五": {
-            "close": "30->2010-04-16,105.76,3.25",
-            "high": "21->2010-04-02,156.77,4.82",
-            "low": "7->2010-03-15,-67.39,-2.07"
-          },
-          "nextThirdDelivery周五": {
-            "close": "54->2010-05-21,-481.78,-14.82",
-            "high": "21->2010-04-02,156.77,4.82",
-            "low": "50->2010-05-17,-535.86,-16.49"
-          }
-        }
-      ],
       "2010-04-07": [
         {
           "trigDate": "2010-04-07",
@@ -3430,7 +3185,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2010-04-07",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3454,7 +3209,7 @@ var triggerLogObj期权 = {
       "2010-04-08": [
         {
           "trigDate": "2010-04-08",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3488,7 +3243,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2010-04-09",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3512,7 +3267,7 @@ var triggerLogObj期权 = {
       "2010-04-12": [
         {
           "trigDate": "2010-04-12",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3676,7 +3431,7 @@ var triggerLogObj期权 = {
       "2010-10-22": [
         {
           "trigDate": "2010-10-22",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3686,7 +3441,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2010-10-22",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3696,7 +3451,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2010-10-22",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3855,7 +3610,7 @@ var triggerLogObj期权 = {
       "2010-12-20": [
         {
           "trigDate": "2010-12-20",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -3966,7 +3721,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2011-04-19",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4005,7 +3760,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2011-07-11",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4055,12 +3810,12 @@ var triggerLogObj期权 = {
       "2015-06-16": [
         {
           "trigDate": "2015-06-16",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2015-06-16",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4084,12 +3839,12 @@ var triggerLogObj期权 = {
       "2015-06-17": [
         {
           "trigDate": "2015-06-17",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2015-06-17",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4195,7 +3950,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2015-12-09",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4219,7 +3974,7 @@ var triggerLogObj期权 = {
       "2015-12-10": [
         {
           "trigDate": "2015-12-10",
-          "quantName": "上证50高位_KMVol死叉_",
+          "quantName": "上证50高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4491,7 +4246,7 @@ var triggerLogObj期权 = {
       "2018-03-16": [
         {
           "trigDate": "2018-03-16",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4520,7 +4275,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2018-03-19",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4544,7 +4299,7 @@ var triggerLogObj期权 = {
       "2018-06-08": [
         {
           "trigDate": "2018-06-08",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4573,7 +4328,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2018-06-11",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4749,7 +4504,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2021-06-02",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4778,7 +4533,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2021-06-03",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4812,7 +4567,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2021-06-04",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -4869,54 +4624,6 @@ var triggerLogObj期权 = {
             "close": "46->2021-09-17,-295.52,-5.74",
             "high": "5->2021-07-22,0.29,0.01",
             "low": "8->2021-07-27,-400.15,-7.77"
-          }
-        }
-      ],
-      "2021-11-25": [
-        {
-          "trigDate": "2021-11-25",
-          "quantName": "沪深300高位_KDJ死叉",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "16->2021-12-17,58.32,1.19",
-            "high": "12->2021-12-13,187.36,3.83",
-            "low": "3->2021-11-30,-64.41,-1.32"
-          },
-          "nextSecondDelivery周五": {
-            "close": "40->2022-01-21,-117.13,-2.39",
-            "high": "12->2021-12-13,187.36,3.83",
-            "low": "35->2022-01-14,-169.71,-3.47"
-          },
-          "nextThirdDelivery周五": {
-            "close": "55->2022-02-18,-245.2,-5.01",
-            "high": "12->2021-12-13,187.36,3.83",
-            "low": "51->2022-02-14,-344.75,-7.04"
-          }
-        }
-      ],
-      "2021-11-29": [
-        {
-          "trigDate": "2021-11-29",
-          "quantName": "上证50高位_红但down死叉",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "14->2021-12-17,103.34,2.13",
-            "high": "10->2021-12-13,232.38,4.79",
-            "low": "1->2021-11-30,-19.39,-0.4"
-          },
-          "nextSecondDelivery周五": {
-            "close": "38->2022-01-21,-72.11,-1.49",
-            "high": "10->2021-12-13,232.38,4.79",
-            "low": "33->2022-01-14,-124.69,-2.57"
-          },
-          "nextThirdDelivery周五": {
-            "close": "53->2022-02-18,-200.18,-4.13",
-            "high": "10->2021-12-13,232.38,4.79",
-            "low": "49->2022-02-14,-299.73,-6.18"
           }
         }
       ],
@@ -5010,7 +4717,7 @@ var triggerLogObj期权 = {
         },
         {
           "trigDate": "2021-12-16",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -5255,12 +4962,12 @@ var triggerLogObj期权 = {
       "2022-07-06": [
         {
           "trigDate": "2022-07-06",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-06",
-          "quantName": "沪深300高位_KMVol死叉_",
+          "quantName": "沪深300高位_KMVol死叉",
           "logInfo": ""
         },
         {
@@ -5410,7 +5117,7 @@ var triggerLogObj期权 = {
       "2022-09-15": [
         {
           "trigDate": "2022-09-15",
-          "quantName": "上证高位_KMVol死叉_",
+          "quantName": "上证高位_KMVol死叉",
           "logInfo": ""
         },
         {
