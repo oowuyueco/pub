@@ -639,6 +639,8 @@ var triggerLogObj大宗={
         ],
         "2025-11-21": [
             "低位低量_PP连续",
+            "低位低量_乙二醇连续",
+            "低位低量_PP连续",
             "低位低量_乙二醇连续"
         ]
     },
@@ -12631,6 +12633,44 @@ var triggerLogObj大宗={
                     -0.37
                 ],
                 "lastDay": 1
+            }
+        },
+        {
+            "dataName": "PP连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-11-21",
+            "trigAtIndex": 2852,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
+        },
+        {
+            "dataName": "乙二醇连续",
+            "quantName": "低位低量",
+            "trigDate": "2025-11-21",
+            "trigAtIndex": 1684,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         },
         {

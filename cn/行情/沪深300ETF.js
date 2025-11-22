@@ -39352,5 +39352,5 @@ var 沪深300ETF = [
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300ETF = 沪深300ETF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-11-21 17:37:57"
+    exports.writeDateTime = "2025-11-22 17:33:42"
 };
