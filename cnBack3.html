@@ -1561,9 +1561,9 @@
                 //     keepFlags[i] = true;
                 // }
 
-                if (countMap[secondElement].length < 2 && arr[i][2].includes("★")) {
+                if (countMap[secondElement].length < N && arr[i][2].includes("★")) {
                     countMap[secondElement].push(arr[i][2]);
-                    keepFlags[i] = true;//第二次只要标星 最多两次
+                    keepFlags[i] = true;//第1次后只要标星 最多N次
                 }
             }
 
@@ -1600,7 +1600,7 @@
             })
             .filter(e => e !== null)
 
-        期权买卖List = filterArrayBySecondElement(期权买卖List, 2)
+        期权买卖List = filterArrayBySecondElement(期权买卖List, 3)
 
         console.groupCollapsed("期权策略建议    期权买卖List")
         console.log(期权策略建议, 期权买卖List)
@@ -3553,7 +3553,7 @@
                 },
 
 
-                
+
                 {
                     name: '基金策略',
                     type: 'scatter',
