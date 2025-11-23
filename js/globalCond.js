@@ -161,7 +161,7 @@ function preN十字星(periodList, N = 2) {
         let currentPeriod = periodList[periodList.length - index]
         let res = (
             +Math.abs(curtPercent(currentPeriod)) < 0.9 &&   //1   //当期涨跌幅 阳线阴线 短矩形   '0.57,8.88'  0.35,11.96
-            +Math.abs(curtAmp(currentPeriod)) < 13          //23 //矩形占比小
+            +Math.abs(curtAmp(currentPeriod)) < 23          //23 //矩形占比小
         )
         if (res) return true
     }
@@ -426,8 +426,13 @@ function globalCheck缩量(trigDate, triggerLogObj指数, nameCodes) {
             ) &&
             currentWeekList.at(-3)?.volume > currentWeekList.at(-2)?.volume &&
             currentWeekList.at(-2)?.volume > currentWeekList.at(-1)?.volume &&
-            (pre4矩形穿ups(currentWeekList) || pre4矩形穿lows(currentWeekList))
-            //2019-04-19 2020-03-27  2010-10-29  2025-10-28
+            (
+                pre4矩形穿ups(currentWeekList) ||
+                pre4矩形穿lows(currentWeekList) ||
+                (preN十字星(currentWeekList) && 红空红绿(currentWeekList)) || // 2025-10-28
+                (preN十字星(currentWeekList) && 绿空绿红(currentWeekList))
+            )
+            //2019-04-19 2020-03-27  2010-10-29
         ) return [true, ""]
 
 
