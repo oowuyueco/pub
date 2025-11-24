@@ -29468,11 +29468,21 @@ var 沥青连续 = [
     "volume": 219241,
     "hold": 166038,
     "settle": 3035
+  },
+  {
+    "date": "2025-11-24",
+    "open": 3012,
+    "high": 3062,
+    "low": 2991,
+    "close": 3060,
+    "volume": 225825,
+    "hold": 161041,
+    "settle": 3032
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沥青连续 = 沥青连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-22 17:36:15"
+    exports.writeDateTime = "2025-11-24 17:44:52"
 };
