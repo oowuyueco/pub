@@ -1464,8 +1464,6 @@
 
         let 手动买卖 = [
             ['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', '2025-10-29开盘价', null, 0.0888, null, null, 30532,],
-            ["2018-10-29", "2018-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2018-10-31沽3300:0张', '2018-10-30开盘价', '2018-10-31开盘价', 0, 0, 0, 0, 0],
-            //["2025-10-29", "2025-10-31", "高位", "3.557 沽沪深300ETF手动 3.252", '2025-10-31沽3300:0张', '2025-10-30开盘价', null, 0, null, null, 0],
         ]
 
         ////模拟xlsx  1脚本写入买入时间价格；  2脚本写入买入cash 脚本完成买入交易； 3脚本写入卖出时间价格； 4脚本写入卖出cash 脚本完成卖出交易
@@ -1545,24 +1543,20 @@
 
             // 从后往前遍历数组（从最后一个元素到第一个元素）
             for (let i = arr.length - 1; i >= 0; i--) {
-                const secondElement = arr[i][1];
+                const endDate = arr[i][1];
+                const direct = arr[i][2].unif高低位()
+                const endDateDirect = endDate + direct
                 // 初始化计数（如果未遇到过该值）
-                if (!countMap.hasOwnProperty(secondElement)) {
-                    countMap[secondElement] = [];
+                if (!countMap.hasOwnProperty(endDateDirect)) {
+                    countMap[endDateDirect] = [];
                 }
                 // 增加遇到次数
-                if (countMap[secondElement].length == 0) {
-                    countMap[secondElement].push(arr[i][2]);
+                if (countMap[endDateDirect].length == 0) {
+                    countMap[endDateDirect].push(arr[i][2]);
                     keepFlags[i] = true;//第一次肯定要
                 }
-
-                // if (countMap[secondElement].length < 2 && (arr[i][2].includes("高") || arr[i][2].includes("低"))) {
-                //     countMap[secondElement].push(arr[i][2]);
-                //     keepFlags[i] = true;
-                // }
-
-                if (countMap[secondElement].length < N && arr[i][2].includes("★")) {
-                    countMap[secondElement].push(arr[i][2]);
+                else if (countMap[endDateDirect].length < N && arr[i][2].includes("★")) {
+                    countMap[endDateDirect].push(arr[i][2]);
                     keepFlags[i] = true;//第1次后只要标星 最多N次
                 }
             }
@@ -1580,7 +1574,7 @@
         let 期权startDate = decodeURI(getQueryVariable("optStartDate"));
         let 期权endDate = decodeURI(getQueryVariable("optEndDate"));
         if (期权startDate == "false") 期权startDate = "2025-10-29" //默认设置开始日期同时减小计算量
-        if (期权endDate == "false") 期权endDate = currentDayYMD //默认结束
+        if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
 
         let 期权买卖List = 期权策略建议
             .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
@@ -1595,6 +1589,10 @@
 
                 let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
                 if (s2) { s2.tAr = ele.tAr; return s2 }//手动
+                else {
+                    s2 = 手动买卖.find((e) => ele[0] + ele[1].substring(0, 7) + ele[2].unif高低位() == e[0] + e[1].substring(0, 7) + e[2].unif高低位());
+                    if (s2) { s2.tAr = ele.tAr; return s2 }//手动
+                }
 
                 return ele //未决
             })
@@ -1655,7 +1653,7 @@
         let 单次最小投资 = 3000;
         let 单次最大投资 = 30000;
         let 单张费用 = 期权到期日类型 == "股指周五" ? 15 : 5
-        let 期权倍数 = 期权到期日类型 == "股指周五" ? 10 : 10000
+        let 期权倍数 = 期权到期日类型 == "股指周五" ? 100 : 10000
 
         function cloneAsset(asset, hastAr = true) {
             if (hastAr) return structuredClone(asset)
@@ -1805,11 +1803,14 @@
             return null; // 如果没有找到有效日期，返回null
         }
         function check沽提前卖出(curDate, asset期权, trigBuy) {
-            let res = ""
 
             let 沪深300技术 = {};
             沪深300技术.dayDatas = 沪深300;
             沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+
+            let pre1Week = 沪深300技术.currentWeekList.at(-2);
+            let curWeek = 沪深300技术.currentWeekList.at(-1);
+
             let pre3Day = 沪深300技术.currentDayList.at(-4);
             let pre2Day = 沪深300技术.currentDayList.at(-3);
             let pre1Day = 沪深300技术.currentDayList.at(-2);
@@ -1963,6 +1964,7 @@
                 return false
             }
 
+            let res = ""
 
             function ths反向() {
                 // return false //暂时关闭同花顺反向指标
@@ -1975,7 +1977,42 @@
                     if (ti[3] == curDate && asset期权[0] <= ti[3] && ti[3] < asset期权[1]) return true;
                 }
             }
-            if (ths反向()) res += "P1"
+            if (ths反向()) res += "P0"
+
+            function 区间反向() {
+                // return false //todo!!!!
+                // let pmiValue
+                // if (cn_pmi_平均.at(-1)[0].substring(0, 7) == curDate.substring(0, 7)) pmiValue = cn_pmi_平均.at(-1)
+                // else pmiValue = cn_pmi_平均.find(e => e[0].substring(0, 7) == getPreMonth(curDate).substring(0, 7))
+                // pmiValue[1] <= -9.5
+                let curDate日期区间 = getCurDate区间类型(curDate)
+                if (
+                    curDate日期区间 == "上升日期区间" &&
+                    (
+                        (curDay.close < curDay.lows && curWeek.close < curWeek.mas && curWeek.J < 20 && pre1Week.close > pre1Week.mas) ||
+                        (ocHighest(curDay) < curDay.lows && curDay.J < 0 && curWeek.low < curWeek.mas && curtPercent(curWeek) < 0 && curWeek.J < 0 && curWeek.bar < 0) //2025-11-24
+                    ) &&
+                    !(
+                        KDJ死叉(沪深300技术.currentDayList) &&
+                        MACD死叉(沪深300技术.currentDayList)
+                    ) &&
+                    !(
+                        KDJ死叉(沪深300技术.currentDayList) &&
+                        MACD死叉(沪深300技术.currentDayList)
+                    )
+                ) return true
+            }
+            if (区间反向()) res += "P1"
+
+
+            if (
+                绿绿(沪深300技术.currentDayList) &&
+                ocLowest(curDay) < curDay.lows &&
+                (
+                    (curDay.bias.bias3 < -8 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
+                    (pre1Day.bias.bias3 - curDay.bias.bias3 > 4)
+                )
+            ) res += 'P2'   //` ${curDay.date}绿绿` //2022-03-18 极低
 
 
             if (
@@ -1986,36 +2023,32 @@
                 pre1Day.mas < curDay.mas &&
                 沪深300技术.currentWeekList.at(-2).D < 沪深300技术.currentWeekList.at(-1).D &&
                 沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
-            ) res += 'P2'   //` ${curDay.date}波动率太贵绿` //2024-11-15
+            ) res += 'P3'   //` ${curDay.date}波动率太贵绿` //2024-11-15 低位太贵
 
-            if (
-                绿绿(沪深300技术.currentDayList) &&
-                ocLowest(curDay) < curDay.lows &&
-                (
-                    (curDay.bias.bias3 < -8 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
-                    (pre1Day.bias.bias3 - curDay.bias.bias3 > 4)
-                )
-            ) res += 'P3'   //` ${curDay.date}绿绿` //2022-03-18
 
             if (
                 绿空绿红(沪深300技术.currentDayList) &&
                 (pre1Day.high < pre1Day.lows || curDay.high < curDay.lows) &&
                 curDay.bias.bias3 < -3 &&
                 curDay.J < 10 && pre1Day.J < curDay.J
-            ) res += 'P4'   //` ${curDay.date}绿空绿红` //2021-08-20
-
+            ) res += 'P4'   //` ${curDay.date}绿空绿红` //2021-08-20  低位可能转向
 
             if (
                 绿空绿(沪深300技术.currentDayList) &&
                 33 > curDay.D && curDay.D > curDay.J &&
+                curDay.bias.bias3 < -3 &&
                 0 > curDay.bias.bias1 && curDay.bias.bias1 > curDay.bias.bias2 && curDay.bias.bias2 > curDay.bias.bias3 &&
                 !(
                     KDJ死叉(沪深300技术.currentDayList) &&
                     MACD死叉(沪深300技术.currentDayList)
                 ) &&
-                2 < countWeekdays(curDay.date, asset期权[1]) &&
-                countWeekdays(curDay.date, asset期权[1]) < 9
-            ) res += 'P5'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18
+                !(
+                    KDJ死叉(沪深300技术.currentWeekList, 2) &&
+                    MACD死叉(沪深300技术.currentWeekList, 1)
+                ) &&
+                1 < countWeekdays(curDay.date, asset期权[1]) &&
+                countWeekdays(curDay.date, asset期权[1]) < 7
+            ) res += 'P5'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
 
             return res;
         }
@@ -2101,7 +2134,7 @@
                     let sellPrice;
                     let profile;
 
-                    if (asset期权[1] == curDate || excelFileData.at(-1).交易时间 == curDate) {//2022-03-23
+                    if (asset期权[1] == curDate || excelFileData.at(-1).交易时间 == curDate) {//最后一天开盘
                         let endDateIndex = excelFileData.findIndex((e) => e.交易时间 == endDate);
                         if (endDateIndex > -1 && endDateIndex != excelFileData.length - 1) {
                             sellDate = excelFileData[endDateIndex].交易时间;
@@ -2144,9 +2177,12 @@
                             sellPrice = buyPrice * (1 + profile)
                         }
 
-                        asset期权[sellDateIndex] = `提前${need提前卖出}:${sellDate}${sellPtype}`;
-                        asset期权[sellPriceIndex] = sellPrice;
-                        asset期权[profileIndex] = profile;
+                        if (profile > 0) {//虽然提示提前卖出但若亏损则坚持到最后试一下
+                            asset期权[sellDateIndex] = `提前${need提前卖出}:${sellDate}${sellPtype}`;
+                            asset期权[sellPriceIndex] = sellPrice;
+                            asset期权[profileIndex] = profile;
+                        }
+
                     }
 
                 }
@@ -2165,6 +2201,7 @@
 
                     let need提前卖出 = check提前卖出(curDate, asset期权, trigBuy)
                     if (need提前卖出) {
+                        //虽然提示提前卖出但若亏损则坚持到最后试一下
                         let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}提前${need提前卖出}手动开盘卖出`
                         if (curDate == currentDayYMD) pageSendMail(msg + ` <br>\r\n ${asset期权}`)
                         console.log(msg, currentDayYMD)
@@ -2481,7 +2518,7 @@
                 height: '23%', // 23 or 43  
                 show: true,
             },
-            { //股同比
+            { //隐藏
                 left: 60,
                 right: 80,
                 top: "58%",
@@ -2547,7 +2584,7 @@
                 height: '15%', // 23 or 43  
                 show: true,
             },
-            { //股同比
+            { //隐藏
                 left: 60,
                 right: 80,
                 top: "50%",
@@ -2720,7 +2757,7 @@
                         show: false
                     }
                 },
-                { //股同比
+                { //隐藏
                     gridIndex: 4,
                     type: 'time',
                     splitNumber: 20,
@@ -2753,12 +2790,13 @@
                     axisPointer: {
                         show: true, // 抓数据圆圈
                         label: {
-                            show: false, //黑框日期
+                            show: true, //黑框日期  显示指数日期
                         },
                     },
                     axisLabel: {
                         show: false
                     }
+
                 },
 
                 { //PMI
@@ -2904,22 +2942,16 @@
                     },
                     position: "left",
                 },
-                { //股同比 
+                { //隐藏 
                     gridIndex: 4,
                     type: 'value',
                     splitLine: {
                         show: false
                     },
-                    axisLabel: {
-                        formatter: (value, index) => {
-                            if ([-10, 10].includes(value)) return value
-                            else return ""
-                        }
-                    },
-                    interval: 5,
-                    max: 50,
-                    min: -25,
-                    position: "right",
+                    // interval: 5,
+                    // max: 50,
+                    // min: -25,
+                    // position: "right",
                 },
                 {
                     gridIndex: 4,
@@ -3460,7 +3492,56 @@
                 },
 
 
+
+
+                {//期权策略
+                    name: '期权策略',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
+                    symbol: "pin",// /symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 1,
+                    data: 期权策略建议.filter((item) => {
+                        return (item[2].includes("高") || item[2].includes("↓")) && item.tAr.includes("_")
+                    }).map((item) => {
+                        return [item[0], 19]
+                    }).addStartEnd()
+                },
                 {
+                    name: '期权策略',
+                    type: 'scatter',
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
+                    symbol: "pin",//'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 1,
+                    data: 期权策略建议.filter((item) => {
+                        return (item[2].includes("低") || item[2].includes("↑")) && item.tAr.includes("_")
+                    }).map((item) => {
+                        return [item[0], 19]
+                    }).addStartEnd()
+                },
+
+
+
+                {//大盘策略
                     name: '大盘策略',
                     type: 'scatter',
                     xAxisIndex: 3,
@@ -3473,7 +3554,7 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 8
+                        return 7
                     },
                     zlevel: 3,
                     data: 指数策略高位ByDay.filter((item) => {
@@ -3482,7 +3563,6 @@
                         return [item[0], item[1].length, item[1]]
                     }).addStartEnd()
                 },
-
                 {
                     name: '大盘策略',
                     type: 'scatter',
@@ -3496,16 +3576,15 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 8
+                        return 6
                     },
-                    zlevel: 3,
+                    zlevel: 2,
                     data: 指数策略高位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
                         return [item[0], item[1].length, item[1]]
                     }).addStartEnd()
                 },
-
                 {
                     name: '大盘策略',
                     type: 'scatter',
@@ -3519,7 +3598,7 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 8
+                        return 7
                     },
                     zlevel: 3,
                     data: 指数策略低位ByDay.filter((item) => {
@@ -3528,7 +3607,6 @@
                         return [item[0], item[1].length, item[1]]
                     }).addStartEnd()
                 },
-
                 {
                     name: '大盘策略',
                     type: 'scatter',
@@ -3542,9 +3620,9 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 8
+                        return 6
                     },
-                    zlevel: 3,
+                    zlevel: 2,
                     data: 指数策略低位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
@@ -3554,7 +3632,67 @@
 
 
 
-                {
+
+                {//指数沪深300D
+                    name: "沪深300",
+                    type: "line",
+                    lineStyle: {
+                        width: 0,
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "#a3d4ff" // 87c5cf  a3d4ff
+                            },
+                        },
+                        emphasis: {
+                            areaStyle: {
+                                color: "#a3d4ff",
+                            },
+                        },
+                    },
+                    showSymbol: false,
+                    zlevel: 0,
+                    xAxisIndex: 5,
+                    yAxisIndex: 10,
+                    data: 沪深300.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.close ? item.close : ""
+                        return tmp
+                    }).addStartEnd(),
+                },
+                {//指数上证D
+                    name: "上证",
+                    type: "line",
+                    lineStyle: {
+                        width: 0,
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "#a3d4ff"//87c5cf  a3d4ff   57aacb
+                            },
+                        },
+                        emphasis: {
+                            areaStyle: {
+                                color: "#a3d4ff",
+                            },
+                        },
+                    },
+                    showSymbol: false,
+                    zlevel: 0,
+                    xAxisIndex: 5,
+                    yAxisIndex: 10,
+                    data: 上证.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.close ? item.close : ""
+                        return tmp
+                    }).addStartEnd(),
+                },
+
+                {//基金策略
                     name: '基金策略',
                     type: 'scatter',
                     xAxisIndex: 6,
@@ -3569,15 +3707,14 @@
                     symbolSize: function (val) {
                         return 6
                     },
-                    zlevel: 3,
+                    zlevel: 1,
                     data: 基金策略低位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
                         return [item[0], 43.5]
                     }).addStartEnd()
                 },
-
-                { //策略
+                {
                     name: '基金策略',
                     type: 'scatter',
                     xAxisIndex: 6,
@@ -3592,7 +3729,7 @@
                     symbolSize: function (val) {
                         return 8
                     },
-                    zlevel: 3,
+                    zlevel: 1,
                     data: 基金策略低位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
@@ -3602,19 +3739,16 @@
 
 
 
-                { //股同比
+
+                {//股同比
                     name: "300同比",
                     type: "line",
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
                         width: 1.3,
-                    },
-                    zlevel: 1,
-                    tooltip: {
-                        show: false,
                     },
                     itemStyle: {
                         normal: {
@@ -3693,113 +3827,7 @@
                     }).addStartEnd()
                 },
 
-                { //指数沪深300D
-                    name: "沪深300",
-                    type: "line",
-                    lineStyle: {
-                        width: 0,
-                    },
-                    itemStyle: {
-                        normal: {
-                            areaStyle: {
-                                color: "#a3d4ff" // 87c5cf  a3d4ff
-                            },
-                        },
-                        emphasis: {
-                            areaStyle: {
-                                color: "#a3d4ff",
-                            },
-                        },
-                    },
-                    showSymbol: false,
-                    zlevel: 0,
-                    xAxisIndex: 5,
-                    yAxisIndex: 10,
-                    data: 沪深300.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.close ? item.close : ""
-                        return tmp
-                    }).addStartEnd(),
-                },
-                { //指数上证D
-                    name: "上证",
-                    type: "line",
-                    lineStyle: {
-                        width: 0,
-                    },
-                    itemStyle: {
-                        normal: {
-                            areaStyle: {
-                                color: "#a3d4ff"//87c5cf  a3d4ff   57aacb
-                            },
-                        },
-                        emphasis: {
-                            areaStyle: {
-                                color: "#a3d4ff",
-                            },
-                        },
-                    },
-                    showSymbol: false,
-                    zlevel: 0,
-                    xAxisIndex: 5,
-                    yAxisIndex: 10,
-                    data: 上证.map((item) => {
-                        let tmp = []
-                        tmp[0] = item.date
-                        tmp[1] = item.close ? item.close : ""
-                        return tmp
-                    }).addStartEnd(),
-                },
-
-
-                { //期权策略
-                    name: '期权策略',
-                    type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 12,
-                    //symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "black"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 3
-                    },
-                    zlevel: 3,
-                    data: 期权策略建议.filter((item) => {
-                        return item[2].includes("低") || item[2].includes("↑")
-                    }).map((item) => {
-                        return [item[0], -22.5]
-                    }).addStartEnd()
-                },
-                { //期权策略
-                    name: '期权策略',
-                    type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 12,
-                    // /symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "red"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 3
-                    },
-                    zlevel: 3,
-                    data: 期权策略建议.filter((item) => {
-                        return item[2].includes("高") || item[2].includes("↓")
-                    }).map((item) => {
-                        return [item[0], -20]
-                    }).addStartEnd()
-                },
-
-
-                { //pmi
+                {//pmi
                     name: 'pmi',
                     type: 'line',
                     xAxisIndex: 6,
@@ -3811,7 +3839,7 @@
                         color: "#ff61ca", //"black" //
 
                     },
-                    zlevel: 1,
+
                     markLine: {
                         symbol: ["none", "none"],
                         data: [
@@ -3929,7 +3957,7 @@
                             }
                         ]
                     },
-                    zlevel: 1,
+
                     data: MM制造业指标.map((item) => {
                         item[1] = item[1] * 10
                         return item
@@ -3939,7 +3967,7 @@
 
 
 
-                {
+                {//信贷
                     name: "信贷脉冲_宏择MA3",
                     type: "line",
                     xAxisIndex: 7,
@@ -3954,8 +3982,7 @@
                     },
                     data: 信贷脉冲_宏择.addStartEnd(),
                 },
-
-                { //信贷
+                {
                     name: '信贷脉冲',
                     type: 'line',
                     xAxisIndex: 7,
@@ -4035,7 +4062,7 @@
                     data: 信贷脉冲_MA.addStartEnd()
                 },
 
-                { //M1_2 
+                {//M1_2 
                     name: "M1_M2",
                     type: "line",
                     xAxisIndex: 7,
