@@ -48248,11 +48248,31 @@ var 白糖连续 = [
     "volume": 179690,
     "hold": 416701,
     "settle": 5365
+  },
+  {
+    "date": "2025-11-24",
+    "open": 5354,
+    "high": 5387,
+    "low": 5336,
+    "close": 5370,
+    "volume": 175985,
+    "hold": 417739,
+    "settle": 5359
+  },
+  {
+    "date": "2025-11-25",
+    "open": 5380,
+    "high": 5404,
+    "low": 5373,
+    "close": 5387,
+    "volume": 135377,
+    "hold": 406329,
+    "settle": 5385
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.白糖连续 = 白糖连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-22 17:35:19"
+    exports.writeDateTime = "2025-11-25 17:43:16"
 };

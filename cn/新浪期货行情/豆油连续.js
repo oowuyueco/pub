@@ -48268,11 +48268,31 @@ var 豆油连续 = [
     "volume": 320656,
     "hold": 420191,
     "settle": 8206
+  },
+  {
+    "date": "2025-11-24",
+    "open": 8180,
+    "high": 8204,
+    "low": 8140,
+    "close": 8168,
+    "volume": 200500,
+    "hold": 413151,
+    "settle": 8174
+  },
+  {
+    "date": "2025-11-25",
+    "open": 8152,
+    "high": 8194,
+    "low": 8130,
+    "close": 8144,
+    "volume": 193598,
+    "hold": 400254,
+    "settle": 8160
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.豆油连续 = 豆油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-22 17:35:03"
+    exports.writeDateTime = "2025-11-25 17:42:59"
 };

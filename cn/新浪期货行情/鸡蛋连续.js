@@ -29278,11 +29278,31 @@ var 鸡蛋连续 = [
     "volume": 304221,
     "hold": 217887,
     "settle": 3200
+  },
+  {
+    "date": "2025-11-24",
+    "open": 3185,
+    "high": 3232,
+    "low": 3181,
+    "close": 3210,
+    "volume": 255048,
+    "hold": 212297,
+    "settle": 3211
+  },
+  {
+    "date": "2025-11-25",
+    "open": 3220,
+    "high": 3242,
+    "low": 3193,
+    "close": 3202,
+    "volume": 248526,
+    "hold": 208030,
+    "settle": 3218
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.鸡蛋连续 = 鸡蛋连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-22 17:34:45"
+    exports.writeDateTime = "2025-11-25 17:42:43"
 };

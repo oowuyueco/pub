@@ -35638,11 +35638,31 @@ var 沪铅连续 = [
     "volume": 40133,
     "hold": 55106,
     "settle": 17200
+  },
+  {
+    "date": "2025-11-24",
+    "open": 17195,
+    "high": 17230,
+    "low": 17115,
+    "close": 17135,
+    "volume": 38420,
+    "hold": 52888,
+    "settle": 17165
+  },
+  {
+    "date": "2025-11-25",
+    "open": 17115,
+    "high": 17130,
+    "low": 17010,
+    "close": 17045,
+    "volume": 40496,
+    "hold": 52466,
+    "settle": 17065
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪铅连续 = 沪铅连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-22 17:35:47"
+    exports.writeDateTime = "2025-11-25 17:43:42"
 };

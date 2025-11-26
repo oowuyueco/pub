@@ -40018,11 +40018,31 @@ var PVC连续 = [
     "volume": 894335,
     "hold": 1374454,
     "settle": 4475
+  },
+  {
+    "date": "2025-11-24",
+    "open": 4466,
+    "high": 4524,
+    "low": 4445,
+    "close": 4496,
+    "volume": 777071,
+    "hold": 1303822,
+    "settle": 4484
+  },
+  {
+    "date": "2025-11-25",
+    "open": 4496,
+    "high": 4525,
+    "low": 4490,
+    "close": 4491,
+    "volume": 600685,
+    "hold": 1261508,
+    "settle": 4508
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.PVC连续 = PVC连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-22 17:35:00"
+    exports.writeDateTime = "2025-11-25 17:42:56"
 };

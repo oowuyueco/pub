@@ -115786,11 +115786,35 @@ var 恒生 = [
     "volume": 285702283008,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-11-24",
+    "timestamp": 1763913600000,
+    "open": 25452.87,
+    "high": 25770.45,
+    "low": 25369.29,
+    "close": 25716.5,
+    "percent": 1.97,
+    "volume": 302641831242,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-11-25",
+    "timestamp": 1764000000000,
+    "open": 25948.9,
+    "high": 26069.22,
+    "low": 25740.54,
+    "close": 25894.55,
+    "percent": 0.69,
+    "volume": 231148531529,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.恒生 = 恒生
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-11-22 17:33:31"
+    exports.writeDateTime = "2025-11-25 17:41:18"
 };
