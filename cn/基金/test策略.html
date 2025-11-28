@@ -579,7 +579,9 @@
 
         急涨.push([
           curDay.date,
-          curMonth.D
+          curDay.close > curDay.ups,
+          (curtPercent(curDay)>0 &&  curWeek.roc.maRoc>12 &&  curWeek.psyma>67)
+          
         ])
       }
     }

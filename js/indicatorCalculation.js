@@ -71,6 +71,30 @@ function calculationCci(dataList, params = [20]) {
     return cci
   })
 }
+function calculationRoc(dataList, params = [12, 6]) {
+  const result = []
+  let rocSum = 0
+  return dataList.map((kLineData, i) => {
+    const roc = {}
+    if (i >= params[0] - 1) {
+      const close = kLineData.close
+      const agoClose = (dataList[i - params[0]] || dataList[i - (params[0] - 1)]).close
+      if (agoClose !== 0) {
+        roc.roc = (close - agoClose) / agoClose * 100
+      } else {
+        roc.roc = 0
+      }
+      rocSum += roc.roc
+      if (i >= params[0] - 1 + params[1] - 1) {
+        roc.maRoc = rocSum / params[1]
+        rocSum -= result[i - (params[1] - 1)].roc
+      }
+    }
+    result.push(roc)
+    kLineData.roc = roc
+    return kLineData
+  })
+}
 
 //https://github.com/ljhwh586/klineweb
 function calculationBias(data) {
@@ -218,7 +242,8 @@ function calculationRsi(data) {
 //手动
 function calculationWvad(data) {
   //WVAD = (CLOSE - OPEN) / (HIGH - LOW) * VOL
-  let startIndex = data.length < 130 ? 0 : data.length - 100
+  //周 月线适用
+  let startIndex = 0//data.length < 130 ? 0 : data.length - 100
   for (let i = startIndex; i < data.length; i++) {
     data[i].wvad = {}
 
@@ -250,8 +275,6 @@ function calculationWvad(data) {
   }
   return data
 }
-
-
 function calculationPsy(data, period = 12, maPeriod = 6) {
   if (data.length < period) {
     //console.warn(`数据长度不足，至少需要${period}个交易日数据`);
@@ -322,4 +345,5 @@ if (typeof module !== "undefined" && module.exports) {
   exports.calculationRsi = calculationRsi
   exports.calculationWvad = calculationWvad
   exports.calculationPsy = calculationPsy
+  exports.calculationRoc = calculationRoc
 }

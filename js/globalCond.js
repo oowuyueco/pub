@@ -111,7 +111,13 @@ function pre4矩形穿ups(periodList) {
 
     return false
 }
-
+function kdjAllDown(periodList) {
+    let pre1Period = periodList[periodList.length - 2]
+    let currentPeriod = periodList[periodList.length - 1]
+    return pre1Period.K > currentPeriod.K &&
+        pre1Period.D > currentPeriod.D &&
+        pre1Period.J > currentPeriod.J
+}
 
 function pre4矩形穿lows(periodList) {
     if (periodList.length < 6) return false
@@ -253,6 +259,46 @@ function CCI金叉(periodList, N = 2) {
 
 }
 
+function PSY金叉(periodList, N = 2) {
+    if (periodList.length < 3) return false
+    for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.psyma > pre1Period.psy && currentPeriod.psyma <= currentPeriod.psy
+
+        if (res) return true
+    }
+    return false
+
+}
+function ROC金叉(periodList, N = 2) {
+    if (periodList.length < 3) return false
+    for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.roc.maRoc > pre1Period.roc.roc && currentPeriod.roc.maRoc <= currentPeriod.roc.roc
+
+        if (res) return true
+    }
+    return false
+
+}
+function WVAD金叉(periodList, N = 2) {
+    if (periodList.length < 3) return false
+    for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.wvad.wvadMa6 > pre1Period.wvad.wvad && currentPeriod.wvad.wvadMa6 <= currentPeriod.wvad.wvad
+
+        if (res) return true
+    }
+    return false
+
+}
+
 function bollAllUp(periodList) {
     let pre1Period = periodList[periodList.length - 2]
     let currentPeriod = periodList[periodList.length - 1]
@@ -368,6 +414,85 @@ function globalMonth高位Filter(trigDate, triggerLogObj指数, nameCodes) {
 /*-----------------------------------------------------------------------*/
 
 function globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes) {
+
+    let filterCount = 0
+    for (let index = 0; index < triggerLogObj指数.按日期排序[trigDate].length; index++) {
+        let quantName = triggerLogObj指数.按日期排序[trigDate][index];
+        let nameCode
+        if (quantName.includes("上证")) nameCode = nameCodes[0]
+        if (quantName.includes("沪深300")) nameCode = nameCodes[1]
+        if (quantName.includes("上证50")) nameCode = nameCodes[2]
+        if (quantName.includes("恒生")) nameCode = nameCodes[3]
+        if (!nameCode) nameCode = nameCodes[1]
+
+        var currentDayList = nameCode.currentDayList
+        var pre1Day = currentDayList.at(-2);
+        var curDay = currentDayList.at(-1);
+
+
+        var currentWeekList = nameCode.currentWeekList
+        var pre3Week = currentWeekList.at(-4);
+        var pre2Week = currentWeekList.at(-3);
+        var pre1Week = currentWeekList.at(-2);
+        var curWeek = currentWeekList.at(-1);
+
+        var currentMonthList = nameCode.currentMonthList
+        var pre3Month = currentMonthList.at(-4);
+        var pre2Month = currentMonthList.at(-3);
+        var pre1Month = currentMonthList.at(-2);
+        var curMonth = currentMonthList.at(-1);
+
+        let monthPRWArr = [
+            curMonth.psyma > curMonth.psy,
+            curMonth.roc.maRoc > curMonth.roc.roc,
+            curMonth.wvad.wvadMa6 > curMonth.wvad.wvad
+        ]
+        let monthPRWLowCount = 0
+        for (let i = 0; i < monthPRWArr.length; i++) {
+            if (monthPRWArr[i]) monthPRWLowCount = monthPRWLowCount + 1
+        }
+
+
+        if (
+            curMonth?.wvad?.wvadMa6 && curMonth?.psyma &&
+            (
+                quantName.includes("空但叉") || quantName.includes("日周") ||
+                quantName.includes("KdjMacd双死叉副") || quantName.includes("KDJ")
+            )
+            &&
+            !(
+                51 >= curDay.psyma && 0.2 >= curDay.roc.maRoc &&
+                (monthPRWLowCount >= 2 || (WVAD金叉(currentMonthList) && (PSY金叉(currentMonthList) || ROC金叉(currentMonthList)))) &&
+                (50 >= curMonth.psy || 50 >= curMonth.psyma || 0 >= curMonth.roc.roc || 0 >= curMonth.roc.maRoc) &&
+                !(
+                    curWeek.wvad.wvadMa6 < curWeek.wvad.wvad &&
+                    pre1Week.wvad.wvadMa6 > curWeek.wvad.wvadMa6 &&
+                    curWeek.psyma < curWeek.psy &&
+                    curWeek.roc.maRoc < curWeek.roc.roc
+                )
+            )
+        ) {
+            filterCount = filterCount + 1
+        }
+
+
+        if (
+            quantName.includes("空但叉") &&
+            kdjAllDown(currentWeekList) && curWeek.D >= 50 &&
+            pre1Week.bar > curWeek.bar && curWeek.bar >= 0 &&
+            curDay.bias.bias1 > 0
+        ) {
+            filterCount = filterCount + 1
+        }
+    }
+
+    if (filterCount > Math.floor(triggerLogObj指数.按日期排序[trigDate].length / 2))
+        return [true, `低位过滤数量${filterCount}`]
+
+
+
+
+
     return [false, ""]
 }
 
