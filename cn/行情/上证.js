@@ -102346,11 +102346,35 @@ var 上证 = [
     "volume": 47872761100,
     "hsl": 1.05,
     "zgs": 45593105809.52381
+  },
+  {
+    "date": "2025-11-26",
+    "timestamp": 1764086400000,
+    "open": 3867.43,
+    "high": 3879.92,
+    "low": 3861.18,
+    "close": 3864.18,
+    "percent": -0.15,
+    "volume": 45758975500,
+    "hsl": 1.01,
+    "zgs": 45305916336.63366
+  },
+  {
+    "date": "2025-11-27",
+    "timestamp": 1764172800000,
+    "open": 3867.2,
+    "high": 3895.59,
+    "low": 3864.13,
+    "close": 3875.26,
+    "percent": 0.29,
+    "volume": 44402194700,
+    "hsl": 0.97,
+    "zgs": 45775458453.608246
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.上证 = 上证
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-11-25 17:41:15"
+    exports.writeDateTime = "2025-11-27 17:39:53"
 };

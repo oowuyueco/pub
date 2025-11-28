@@ -13728,11 +13728,31 @@ var 液化气连续 = [
     "volume": 75749,
     "hold": 84429,
     "settle": 4231
+  },
+  {
+    "date": "2025-11-26",
+    "open": 4200,
+    "high": 4308,
+    "low": 4197,
+    "close": 4288,
+    "volume": 103803,
+    "hold": 78039,
+    "settle": 4259
+  },
+  {
+    "date": "2025-11-27",
+    "open": 4288,
+    "high": 4293,
+    "low": 4245,
+    "close": 4259,
+    "volume": 51188,
+    "hold": 73912,
+    "settle": 4269
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.液化气连续 = 液化气连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-25 17:43:25"
+    exports.writeDateTime = "2025-11-27 17:42:01"
 };

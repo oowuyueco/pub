@@ -122890,11 +122890,35 @@ var 道琼斯 = [
     "volume": 748694771,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-11-25",
+    "timestamp": 1764046800000,
+    "open": 46482.36,
+    "high": 47182.9,
+    "low": 46341.35,
+    "close": 47112.45,
+    "percent": 1.43,
+    "volume": 659614361,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2025-11-26",
+    "timestamp": 1764133200000,
+    "open": 47196.15,
+    "high": 47571.4,
+    "low": 47196.15,
+    "close": 47427.12,
+    "percent": 0.67,
+    "volume": 458137084,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.道琼斯 = 道琼斯
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-11-25 17:42:02"
+    exports.writeDateTime = "2025-11-27 17:40:44"
 };

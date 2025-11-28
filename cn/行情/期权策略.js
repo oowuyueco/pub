@@ -1925,7 +1925,7 @@ var triggerLogObj期权 = {
         }
       ]
     },
-    "2022-11-03=>2025-11-25": {
+    "2022-11-03=>2025-11-27": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -2315,6 +2315,50 @@ var triggerLogObj期权 = {
       "2025-11-25": [
         {
           "trigDate": "2025-11-25",
+          "quantName": "科创50低位_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": "2->2025-11-27,25,0.56",
+            "high": "1->2025-11-26,27.23,0.61",
+            "low": ",0,0",
+            "nextFirstDelivery周五": "2025-12-19",
+            "nextSecondDelivery周五": "2026-01-16",
+            "nextThirdDelivery周五": "2026-02-20"
+          }
+        }
+      ],
+      "2025-11-26": [
+        {
+          "trigDate": "2025-11-26",
+          "quantName": "沪深300低位_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "trigDate": "2025-11-26",
+          "quantName": "科创50低位_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": "1->2025-11-27,-2.23,-0.05",
+            "high": ",0,0",
+            "low": "1->2025-11-27,-2.23,-0.05",
+            "nextFirstDelivery周五": "2025-12-19",
+            "nextSecondDelivery周五": "2026-01-16",
+            "nextThirdDelivery周五": "2026-02-20"
+          }
+        }
+      ],
+      "2025-11-27": [
+        {
+          "trigDate": "2025-11-27",
+          "quantName": "沪深300低位_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "trigDate": "2025-11-27",
           "quantName": "科创50低位_金叉低连空但",
           "logInfo": ""
         },
@@ -5157,4 +5201,4 @@ var triggerLogObj期权 = {
     }
   }
 }
-var runLastKlineDate = "2025-11-25"
+var runLastKlineDate = "2025-11-27"
