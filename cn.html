@@ -1566,7 +1566,7 @@
 
         let 期权startDate = decodeURI(getQueryVariable("optStartDate"));
         let 期权endDate = decodeURI(getQueryVariable("optEndDate"));
-        if (期权startDate == "false") 期权startDate = "2025-10-29" //默认设置开始日期同时减小计算量
+        if (期权startDate == "false") 期权startDate = "2020-01-01" //默认设置开始日期同时减小计算量
         if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
 
         let 期权买卖List = 期权策略建议
@@ -2276,6 +2276,7 @@
 
             await 模拟交易();
 
+            console.log("")
             console.log(`模拟真实${单次最小投资}到${单次最大投资}: `, "总入金:", +总入金.toFixed(2), "总buyCash:", +总buyCash.toFixed(2), "总sellCash:", +总sellCash.toFixed(2), "asset现金:", +asset.现金.toFixed(2), "总入金收益率:", +(((asset.现金 - 总入金) / 总入金) * 100).toFixed(4) + "%", "总buyCash收益率:", +(((asset.现金 - 总buyCash) / 总buyCash) * 100).toFixed(4) + "%");
 
             let test总buyCash = 0;
