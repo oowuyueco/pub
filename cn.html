@@ -1604,7 +1604,11 @@
             return "           " + target;
         };
         let randomProfileArr = [];
-        function gerRandomProfile(mean = 0, stdDev = 0.3) {
+        function gerRandomProfile(priceProfile, mean = 0, stdDev = 0.3) {
+            if (priceProfile > 1) return 1
+            if (priceProfile < 0) return -1
+            return priceProfile
+
             let result;
             do {
                 // Box-Muller变换生成标准正态分布
@@ -2193,6 +2197,13 @@
                     let priceProfile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
                     asset期权[profileIndex] = +priceProfile.toFixed(2);
 
+                    if (模拟盈亏) {
+                        priceProfile = gerRandomProfile(priceProfile)
+                        sellPrice = buyPrice * (1 + priceProfile)
+                        asset期权[sellPriceIndex] = +sellPrice.toFixed(2);
+                        asset期权[profileIndex] = +priceProfile.toFixed(2);
+                    }
+
                     let sellCash = (asset期权[buyCashIndex] - 张数 * 单张费用) * (1 + priceProfile);
                     sellCash = sellCash - 张数 * 单张费用;
 
@@ -2340,7 +2351,7 @@
             console.log(沽期权);
 
             asset.期权.sort((a, b) => b[profileIndex] - a[profileIndex]);
-            console.log(asset.期权,profileArr);
+            console.log(asset.期权, profileArr);
 
         })();
 
