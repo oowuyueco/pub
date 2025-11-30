@@ -1749,12 +1749,68 @@ function afterDayProfile(trigDate, after交易日DayArr, dayDatas) {
     if (期权到期日类型 == "ETF周三") return afterDayProfileW3(trigDate, after交易日DayArr, dayDatas)
 }
 
+
+function getWindowsType() {
+    const ua = navigator.userAgent;
+
+    // 1. 严格检查 Windows NT 内核
+    if (!/Windows NT \d+\.\d+/i.test(ua)) {
+        return "";
+    }
+
+    // 2. 精准排除非桌面/服务器设备（仅保留必要条件）
+    if (
+        /Windows Phone|Windows Mobile|IEMobile/i.test(ua) || // 移动设备
+        /Windows CE|WinCE|Windows IoT/i.test(ua)            // 嵌入式系统
+    ) {
+        return "";
+    }
+
+    // 3. 核心检测：清理干扰词
+    const osPartMatch = ua.match(/\(([^)]+)\)/);
+    if (osPartMatch) {
+        const osPart = osPartMatch[1]
+            .replace(/Edition\s*/gi, '')
+            .replace(/Build \d+/g, '');
+
+        // 3.1 服务器检测（安全精准版）
+        if (
+            // 标准服务器格式（2003-2029）
+            /\b(?:Server|Datacenter)\s+(?:200[3-9]|201[0-9]|202[0-9])\b/i.test(osPart) ||
+
+            // 无年份Server（排除所有桌面SKU关键词）
+            /\bServer\b/i.test(osPart) &&
+            !/\b(?:Home|Pro|Professional|Enterprise|Education|Core|Desktop|IoT)\b/i.test(osPart)
+        ) {
+            return 'Windows Server';
+        }
+    }
+
+    // 4. 备用检测（仅匹配明确服务器标识）
+    if (
+        // 完整Windows Server标识
+        /\bWindows\s+Server\s*(?:200[3-9]|201[0-9]|202[0-9])?\b/i.test(ua) ||
+
+        // 旧版服务器特征（2003/2008）
+        /Windows NT [56]\.\d+.*[;,]\s*(?:Server|Datacenter)\b/i.test(ua) ||
+
+        // 服务包特征
+        /Service Pack \d+.*;\s*Server\b/i.test(ua)
+    ) {
+        return 'Windows Server';
+    }
+
+    return 'Windows Desktop';
+}
+
 //nodejs 导出
 if (typeof module !== "undefined" && module.exports) {
     var fs = require('fs');
     var os = require('os');
     var nodemailer = require("nodemailer");
     var devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
+} else {
+    var devTestEnv = getWindowsType().includes("Desktop") ? true : false
 }
 
 const globalConfigStartDate组1 = "2024-01-01"
