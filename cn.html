@@ -1648,24 +1648,27 @@
 
             return `${year}-${month}-${day}`;
         }
-        const liveServer = "http://127.0.0.1:5500"
+
+        let liveServerUrl = "http://oowuyue.github.io/notebook/"
+        if (devTestEnv) liveServerUrl = "http://127.0.0.1:5500/tempData/"
         let liveServerOk = true
         async function readExcel(excelFileName) {
-
-            let dir = excelFileName.includes("IO") ? "指数期权excel" : "ETF期权excel"
-            const urllocal = `http://127.0.0.1:5500/tempData/${dir}/${excelFileName}`
-            const file = await (await fetch(urllocal)).arrayBuffer();
-            const fileContent = XLSX.read(file);
-
-            const sheetName = fileContent.SheetNames[0]; // 获取第一张 sheet 的名字
-            const sheet = fileContent.Sheets[sheetName]; // 获取第一张 sheet 的数据
-            const jsonData = XLSX.utils.sheet_to_json(sheet); // 将数据转换为 JSON 格式
-
-            jsonData.pop();
-            return jsonData.map((ele, index) => {
-                ele.交易时间 = excelSerialToDate(ele.交易时间);
-                return ele;
-            });
+            try {
+                let dir = excelFileName.includes("IO") ? "指数期权excel" : "ETF期权excel"
+                const fileUrl = `${liveServerUrl}${dir}/${excelFileName}`
+                const file = await (await fetch(fileUrl)).arrayBuffer();
+                const fileContent = XLSX.read(file);
+                const sheetName = fileContent.SheetNames[0]; // 获取第一张 sheet 的名字
+                const sheet = fileContent.Sheets[sheetName]; // 获取第一张 sheet 的数据
+                const jsonData = XLSX.utils.sheet_to_json(sheet); // 将数据转换为 JSON 格式
+                jsonData.pop();
+                return jsonData.map((ele, index) => {
+                    ele.交易时间 = excelSerialToDate(ele.交易时间);
+                    return ele;
+                });
+            } catch (error) {
+                return false
+            }
         }
 
         let asset = {
@@ -2173,8 +2176,10 @@
 
                     if (arrayHasIndex(asset期权, sellPriceIndex)) { continue; }
                     if (arrayHasIndex(asset期权, sellCashIndex)) { continue; }
+                    if (!liveServerOk) { continue; }
                     let excelFileName = asset期权[4].includes(".xlsx") ? asset期权[4] : asset期权[4].split(":")[0] + ".xlsx";
                     let excelFileData = await readExcel(excelFileName);
+                    if (!excelFileData) { console.error(`模拟卖出${excelFileName}文件缺失`); continue }
                     let excelSellDateIndex = excelFileData.findIndex((e) => e.交易时间 == extractDate(asset期权[sellDateIndex]));
                     if (excelSellDateIndex == -1) excelSellDateIndex = excelFileData.length - 1;
                     let sellDate = excelFileData[excelSellDateIndex].交易时间;
@@ -2255,6 +2260,7 @@
                     if (curBuy[3].includes("模拟") && !arrayHasIndex(curBuy, sellPriceIndex) && liveServerOk) {
                         let excelFileName = curBuy[4].includes(".xlsx") ? curBuy[4] : curBuy[4].split(":")[0] + ".xlsx";
                         let excelFileData = await readExcel(excelFileName);
+                        if (!excelFileData) { console.error(`模拟买入${excelFileName}文件缺失`); continue }
                         let excelBuyDateIndex = excelFileData.findIndex((e) => e.交易时间 == curBuy[buyDateIndex]);
                         if (excelBuyDateIndex == -1) excelBuyDateIndex = 0;
                         let buyDate = excelFileData[excelBuyDateIndex].交易时间;
@@ -2290,7 +2296,7 @@
         (async () => {
             if (期权买卖List.length == 0) return
             console.groupCollapsed("模拟真实");
-            if (liveServerOk) await fetch(liveServer).catch(err => { liveServerOk = false })
+            if (liveServerOk) await fetch(liveServerUrl).catch(err => { liveServerOk = false })
 
 
             await 模拟交易();
