@@ -7217,7 +7217,7 @@ var 招商债券_沪深300_创业板_三年定期 = [
         "三年定期": 52.9782
     }
 ];
-var runDate = "2025-12-01";
+var runDate = "2025-12-02";
 if (typeof module !== "undefined" && module.exports) {
     exports.招商债券_沪深300_创业板_三年定期 = 招商债券_沪深300_创业板_三年定期
 }
