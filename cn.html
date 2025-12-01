@@ -1406,19 +1406,20 @@
         }
 
         //抽取22-4-27  22-3-23
-        let 期权策略建议 = []
+        let 期权策略建议ByDay = []
         for (let index = allBy期权日.length - 1; index >= 0; index--) {
             const element = allBy期权日[index]
             let endDate = element[0].substring(5)
 
             if (+endDate.substring(0, 4) < 2015) continue
-            if (endDate < "2020-02-21") { 期权标的资产 = 上证50ETF; 期权标的资产Name = "上证50ETF"; }
+            if (endDate < "2020-02-21") { cur期权标的资产 = 上证50ETF; cur期权标的资产Name = "上证50ETF"; }
+            else { cur期权标的资产 = 期权标的资产; cur期权标的资产Name = 期权标的资产Name; }
 
             for (let atId = -1; atId >= (0 - element[1].length); atId--) {
                 const eleArr = element[1]
                 if (atId !== -1 && !eleArr.at(atId).at(-1).includes("-&")) continue
                 let startDate = eleArr.at(atId)[0]
-                let startClose = get标的资产ByDate(期权标的资产, startDate).close
+                let startClose = get标的资产ByDate(cur期权标的资产, startDate).close
                 startClose = +startClose.toFixed(3)
 
                 let 星位箭 = eleArr.at(atId)[3]
@@ -1429,21 +1430,16 @@
                     excpEndClose = +(startClose * 0.97).toFixed(3)
                 }
 
-                let pushArr = [startDate, endDate, 星位箭, `${startClose} ${direType}${期权标的资产Name} ${excpEndClose}`]
+                let pushArr = [startDate, endDate, 星位箭, `${startClose} ${direType}${cur期权标的资产Name} ${excpEndClose}`]
                 pushArr.tAr = eleArr.at(atId)[1] + ""
-                期权策略建议.unshift(pushArr)
+                期权策略建议ByDay.unshift(pushArr)
             }
         }
 
-        期权策略建议 = Array.from(new Map(
-            期权策略建议.map(item => [`${item[0]}-${item[1]}`, item])
+        期权策略建议ByDay = Array.from(new Map(
+            期权策略建议ByDay.map(item => [`${item[0]}-${item[1]}`, item])
         ).values())
 
-
-        console.groupCollapsed("allBy期权日     期权策略建议")
-        console.log(allBy期权日, 期权策略建议)
-        console.groupEnd()
-        console.log("    ")
     </script>
 
     <script type="text/javascript" src="./js/xlsx.full.min.js"></script>
@@ -1520,6 +1516,12 @@
             ["2020-10-09", "2020-11-20", " ↑ ", "4681.14 购沪深300模拟 4821.574", "IO2011-C-4800.xlsx"],
             ["2020-05-28", "2020-07-17", " ↑ ", "3856.63 购沪深300模拟 3972.329", "IO2007-C-3900.xlsx"],
             ["2020-03-23", "2020-05-15", " ↑ ", "3530.31 购沪深300模拟 3636.219", "IO2005-C-3600.xlsx"],
+
+            //ETF分红派息导致不准确,不利于沽空,有利于购,这里只是模拟下。 ETF结束日期是第四个周三稍晚于指数的。 
+            ["2019-11-25", "2019-12-25", " ↑ ", "2.726 购上证50ETF模拟 2.808", "2019-12-25购2800.xlsx"],
+            ["2019-05-27", "2019-07-24", " ↑ ", "2.471 购上证50ETF模拟 2.545", "2019-07-24购2500.xlsx"],
+            ["2019-04-19", "2019-06-26", "高位", "2.753 沽上证50ETF模拟 2.67", "2019-06-26沽2700.xlsx"],
+            ["2019-04-08", "2019-05-22", "高位", "2.68 沽上证50ETF模拟 2.6", "2019-05-22沽2600.xlsx"],
         ];
         //模拟买卖 = [] 
 
@@ -1569,7 +1571,7 @@
         if (期权startDate == "false") 期权startDate = "2020-01-01" //默认设置开始日期同时减小计算量
         if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
 
-        let 期权买卖List = 期权策略建议
+        let 期权买卖List = structuredClone(期权策略建议ByDay)
             .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
             .map((ele, index) => {
                 let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
@@ -1577,6 +1579,10 @@
                 else {
                     s1 = 模拟买卖.find((e) => ele[1] + ele[2].unif高低位() == e[1] + e[2].unif高低位());
                     if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
+                    else if (ele[3].includes("ETF")) {
+                        s1 = 模拟买卖.find((e) => ele[0] + ele[1].substring(0, 7) + ele[2].unif高低位() == e[0] + e[1].substring(0, 7) + e[2].unif高低位());
+                        if (s1) { ele[1] = s1[1]; ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟ETF
+                    }
                 }
 
                 let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
@@ -1586,15 +1592,17 @@
                     if (s2) { s2.tAr = ele.tAr; return s2 }//手动
                 }
 
+                if (ele[0] < "2020-01-01" && ele[3].includes("ETF")) return null
                 return ele //未决
             })
             .filter(e => e !== null)
 
         期权买卖List = filterArrayBySecondElement(期权买卖List, 3)
 
-        console.groupCollapsed("期权策略建议    期权买卖List")
-        console.log(期权策略建议, 期权买卖List)
+        console.groupCollapsed("allBy期权日  期权策略建议ByDay  期权买卖List")
+        console.log(allBy期权日, 期权策略建议ByDay, 期权买卖List)
         console.groupEnd()
+        console.log("    ")
 
     </script>
 
@@ -2231,8 +2239,9 @@
                     asset.现金 = +asset.现金.toFixed(2);
                     curAllSellCount++;
                 }
-                if (isNumber(curAllSellCash) && curAllSellCash >= 0) {
+                if (isNumber(curAllSellCash)) {
                     if (curAllSell入金 > 0) {
+                        curAllSell入金 = +curAllSell入金.toFixed(2)
                         console.log(curDateHasConsole ? "补足卖手续费入金".leftAppend() + curAllNeed入金Count : `${curDate} 补足卖手续费入金${curAllNeed入金Count}`, curAllSell入金, "=>", cloneAsset(asset));
                         curDateHasConsole = true;
                     }
@@ -3421,7 +3430,7 @@
                         return 5
                     },
                     zlevel: 1,
-                    data: 期权策略建议.filter((item) => {
+                    data: 期权策略建议ByDay.filter((item) => {
                         return (item[2].includes("高") || item[2].includes("↓")) && item.tAr.includes("_")
                     }).map((item) => {
                         return [item[0], 19]
@@ -3443,7 +3452,7 @@
                         return 5
                     },
                     zlevel: 1,
-                    data: 期权策略建议.filter((item) => {
+                    data: 期权策略建议ByDay.filter((item) => {
                         return (item[2].includes("低") || item[2].includes("↑")) && item.tAr.includes("_")
                     }).map((item) => {
                         return [item[0], 19]
