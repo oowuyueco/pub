@@ -102382,11 +102382,23 @@ var 上证 = [
     "volume": 44993197300,
     "hsl": 0.99,
     "zgs": 45447674040.40404
+  },
+  {
+    "date": "2025-12-01",
+    "timestamp": 1764518400000,
+    "open": 3894.21,
+    "high": 3914.46,
+    "low": 3890.95,
+    "close": 3914.01,
+    "percent": 0.65,
+    "volume": 53755413300,
+    "hsl": 1.18,
+    "zgs": 45555435000
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.上证 = 上证
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-11-29 17:34:38"
+    exports.writeDateTime = "2025-12-01 17:45:32"
 };

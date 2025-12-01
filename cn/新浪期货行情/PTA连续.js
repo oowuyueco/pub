@@ -46038,11 +46038,21 @@ var PTA连续 = [
     "volume": 733084,
     "hold": 863939,
     "settle": 4672
+  },
+  {
+    "date": "2025-12-01",
+    "open": 4688,
+    "high": 4772,
+    "low": 4688,
+    "close": 4762,
+    "volume": 802799,
+    "hold": 929482,
+    "settle": 4736
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.PTA连续 = PTA连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-11-29 17:36:46"
+    exports.writeDateTime = "2025-12-01 17:47:56"
 };
