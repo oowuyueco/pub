@@ -1323,8 +1323,12 @@
                     )
                 if (cond0) return true
 
-
                 let cond1 = true &&
+                    trigArr[trigArrIndex][3] == "高★" &&
+                    (trigArr[trigArrIndex][1] + "").includes("VKM多叉")
+                if (cond1) return true
+
+                let cond2 = true &&
                     upAllPre(curKInfo) &&
                     curtPercent(curKInfo) > 0 &&
                     curKInfo.percent > 0 &&
@@ -1332,12 +1336,18 @@
                         curKInfo.index - kInfoArr.at(-1).index > 5 ||
                         trigArr[trigArrIndex][1].length >= 3
                     )
-                if (cond1) return true
-
-                let cond2 = true &&
-                    trigArr[trigArrIndex][3] == "高★" &&
-                    (trigArr[trigArrIndex][1] + "").includes("VKM多叉")
                 if (cond2) return true
+
+                let cond3 = true &&
+                    upAllPre(curKInfo) &&
+                    (curtPercent(curKInfo) > 0 || curKInfo.percent > 0) &&
+                    (
+                        curKInfo.index - kInfoArr.at(-1).index > 7 ||
+                        trigArr[trigArrIndex][1].length >= 4
+                    )
+                if (cond3) return true
+
+
             }
             function allow低位(curKInfo, trigArr, trigArrIndex) {
 
@@ -1376,14 +1386,23 @@
                         trigArr[trigArrIndex][1].length >= 3
                     )
                 if (cond1) return true
+
+                let cond2 = true &&
+                    lowAllPre(curKInfo) &&
+                    (curtPercent(curKInfo) < 0 || curKInfo.percent < 0) &&
+                    (
+                        curKInfo.index - kInfoArr.at(-1).index > 7 ||
+                        trigArr[trigArrIndex][1].length >= 4
+                    )//2022-10-31
+                if (cond2) return true
             }
 
             for (let idx = element[1].length - 1; idx >= 0; idx--) {
                 let curKInfo = get标的资产ByDate(期权标的资产, element[1][idx][0])
+                kInfoArr.unshift(curKInfo)
                 if (idx == element[1].length - 1) {
                     let oldfuhao = element[1][idx].pop()
-                    element[1][idx].push(oldfuhao + "-&")
-                    kInfoArr.unshift(curKInfo)//firstKInfo
+                    element[1][idx].push(oldfuhao + "-&") //first
                     continue
                 } else {
                     if (element[2].includes("↓") || element[2].includes("高")) {
@@ -1399,7 +1418,6 @@
                             count++
                         }
                     }
-                    kInfoArr.unshift(curKInfo)
                 }
             }
             element.count = count
@@ -1550,9 +1568,13 @@
                     countMap[endDateDirect].push(arr[i][2]);
                     keepFlags[i] = true;//第一次肯定要
                 }
+                else if (countMap[endDateDirect].length == 1 && (arr[i][2].includes("位") || arr[i][2].includes("★"))) {
+                    countMap[endDateDirect].push(arr[i][2]);
+                    keepFlags[i] = true;//第2次后只要 位 和 ★
+                }
                 else if (countMap[endDateDirect].length < N && arr[i][2].includes("★")) {
                     countMap[endDateDirect].push(arr[i][2]);
-                    keepFlags[i] = true;//第1次后只要标星 最多N次
+                    keepFlags[i] = true;//第3到N次后只要★ 最多N次
                 }
             }
 
@@ -1573,6 +1595,7 @@
 
         let 期权买卖List = structuredClone(期权策略建议ByDay)
             .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
+            //.filter(ele => !ele[0].includes("2024-09"))
             .map((ele, index) => {
                 let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
                 if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
@@ -1597,7 +1620,7 @@
             })
             .filter(e => e !== null)
 
-        期权买卖List = filterArrayBySecondElement(期权买卖List, 3)
+        期权买卖List = filterArrayBySecondElement(期权买卖List, 5)
 
         console.groupCollapsed("allBy期权日  期权策略建议ByDay  期权买卖List")
         console.log(allBy期权日, 期权策略建议ByDay, 期权买卖List)
