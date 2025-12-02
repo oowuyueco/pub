@@ -2360,7 +2360,7 @@
             console.log("总费用", 总费用, "need入金统计", need入金统计);
 
             const endJs = performance.now();
-            if (!devTestEnv) pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒` + "  asset现金:" + +asset.现金.toFixed(2));
+            pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 ${devTestEnv}` + "  asset现金:" + +asset.现金.toFixed(2));
             console.groupEnd();
 
             let profileArr = []
