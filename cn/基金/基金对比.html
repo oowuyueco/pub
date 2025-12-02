@@ -1,0 +1,170 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-simple
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script type="text/javascript" src="fund217022.js"></script>
+  <script type="text/javascript" src="../行情/沪深300.js"></script>
+  <script type="text/javascript" src="../行情/上证.js"></script>
+  <script type="text/javascript" src="../行情/上证50.js"></script>
+  <script type="text/javascript" src="../行情/科创50.js"></script>
+  <script type="text/javascript" src="../行情/恒生.js"></script>
+
+  <script type="text/javascript" src="../../js/my.js"></script>
+  <script type="text/javascript" src="../../js/indicatorCalculation.js"></script>
+  <script>
+
+  </script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+      legend: {
+        inactiveColor: '#9a9393',
+        left: "0.5%",
+        top: "-0.5%"
+      },
+      tooltip: {
+        trigger: "axis",
+        show: true,
+        position: ["1%", "10%"],
+        order: "seriesDesc",
+        // formatter: function (params, ticket, callback) {
+        //   return null;
+        // },
+        axisPointer: {
+          type: "cross",
+          show: true,
+          crossStyle: {
+            width: 0.6,
+            color: "black", // 鼠标十字横轴
+          },
+        },
+      },
+      axisPointer: {
+        type: "cross",
+        show: true,
+        link: [{
+          xAxisIndex: "all",
+        },],
+        lineStyle: {
+          color: "black", // 鼠标十字竖轴
+          lineStyle: {
+            width: 0.6,
+            color: "black", // 鼠标十字竖轴
+          },
+        },
+      },
+      dataZoom: [
+        {
+          show: true,
+          realtime: true,
+          start: 0,
+          end: 100,
+          xAxisIndex: [0],
+          bottom: 15,
+        },
+      ],
+      xAxis: {
+        type: "time",
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        /////////
+        {
+          name: "招商债券",
+          data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = +ele.招商债券.toFixed(2)
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+        {
+          name: "沪深300",
+          data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = +ele.沪深300.toFixed(2)
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+        {
+          name: "创业板",
+          data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = +ele.创业板.toFixed(2)
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+        {
+          name: "三年定期",
+          data: 招商债券_沪深300_创业板_三年定期.map((ele, index) => {
+            let tmp = []
+            tmp[0] = ele.date
+            tmp[1] = +ele.三年定期.toFixed(2)
+            return tmp
+          }),
+          type: 'line',
+          showSymbol: false,
+          // smooth: true,
+          lineStyle: {
+            width: 1,
+            //color: "#FD4142", //"#fd76c8"
+          },
+        },
+
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+
+  </script>
+</body>
+
+</html>

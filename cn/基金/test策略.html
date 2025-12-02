@@ -24,92 +24,7 @@
   <script type="text/javascript" src="../../js/indicatorCalculation.js"></script>
   <script>
 
-
-    function calculationPsy(data, period = 12, maPeriod = 6) {
-      if (data.length < period) {
-        //console.warn(`数据长度不足，至少需要${period}个交易日数据`);
-        return data;
-      }
-
-      // 用于滑动窗口计算
-      let upDaysCount = 0;
-      let psySum = 0;
-      const psyWindow = [];
-
-      for (let i = 0; i < data.length; i++) {
-        // 初始化属性
-        data[i].psy = null;
-        data[i].psyma = null;
-
-        // 跳过第一天（没有前一日数据）
-        if (i === 0) continue;
-
-        // 判断当前日是否上涨
-        const isUp = data[i].close > data[i - 1].close;
-
-        // 如果是上涨日，计数增加
-        if (isUp) {
-          upDaysCount++;
-        }
-
-        // 当达到计算PSY的最小天数时
-        if (i >= period - 1) {
-          // 计算PSY
-          const psyValue = (upDaysCount / period) * 100;
-          data[i].psy = parseFloat(psyValue.toFixed(2));
-
-          // 将PSY值添加到窗口用于计算移动平均
-          psyWindow.push(data[i].psy);
-          psySum += data[i].psy;
-
-          // 如果窗口大小超过移动平均周期，移除最旧的值
-          if (psyWindow.length > maPeriod) {
-            const oldestPsy = psyWindow.shift();
-            psySum -= oldestPsy;
-          }
-
-          // 计算PSYMA
-          if (psyWindow.length === maPeriod) {
-            data[i].psyma = parseFloat((psySum / maPeriod).toFixed(2));
-          }
-
-          // 准备滑动窗口：移除最旧的一天（如果已经不在当前PSY计算窗口内）
-          // 检查i-period+1天（即将移出窗口的那天）是否上涨
-          if (i >= period) {
-            const dayToRemove = i - period + 1;
-            if (dayToRemove > 0 && data[dayToRemove].close > data[dayToRemove - 1].close) {
-              upDaysCount--;
-            }
-          }
-        }
-      }
-
-      return data;
-    }
-    function calculationRoc(dataList, params = [12, 6]) {
-      const result = []
-      let rocSum = 0
-      return dataList.map((kLineData, i) => {
-        const roc = {}
-        if (i >= params[0] - 1) {
-          const close = kLineData.close
-          const agoClose = (dataList[i - params[0]] || dataList[i - (params[0] - 1)]).close
-          if (agoClose !== 0) {
-            roc.roc = (close - agoClose) / agoClose * 100
-          } else {
-            roc.roc = 0
-          }
-          rocSum += roc.roc
-          if (i >= params[0] - 1 + params[1] - 1) {
-            roc.maRoc = rocSum / params[1]
-            rocSum -= result[i - (params[1] - 1)].roc
-          }
-        }
-        result.push(roc)
-        kLineData.roc = roc
-        return kLineData
-      })
-    }
+    //从后往前N 包含当前的前N个
     Array.prototype.cal9转 = function (kline交易日, priod, N = 5) {
       var candleList = this
       if (candleList.length < 20) return candleList
@@ -142,47 +57,44 @@
 
       return candleList
     }
+    function calDayWeekMonthKline(nameCodes, kline交易日) {
 
-    function calDayWeekMonthKline(nameCode, kline交易日) {
-      nameCode.currentDayList = []
-      nameCode.currentWeekList = []
-      nameCode.currentMonthList = []
-      let currentDayIndex = nameCode.dayDatas.findIndex(ele => { return ele.date == kline交易日 });
-      if (currentDayIndex > 70) {
-        let dayStart = (currentDayIndex + 1) - 100 > 0 ? (currentDayIndex + 1) - 100 : 0 //day计算最近100天
-        nameCode.currentDayList = nameCode.dayDatas.slice(dayStart, currentDayIndex + 1)
-          .calBoll().cal9转(kline交易日, "day").calKdj().calMacd().maN(10, "close")
-        nameCode.currentDayList = calculationBias(nameCode.currentDayList)
-        nameCode.currentDayList = calculationCci(nameCode.currentDayList)
+      for (let i = 0; i < nameCodes.length; i++) {
+        nameCodes[i].currentDayList = []
+        nameCodes[i].currentWeekList = []
+        nameCodes[i].currentMonthList = []
+        let currentDayIndex = nameCodes[i].dayDatas.findIndex(ele => { return ele.date == kline交易日 });
+        if (currentDayIndex > 70) {
+          let dayStart = (currentDayIndex + 1) - 200 > 0 ? (currentDayIndex + 1) - 200 : 0 //day计算最近200天
+          nameCodes[i].currentDayList = nameCodes[i].dayDatas.slice(dayStart, currentDayIndex + 1)
+            .calBoll().cal9转(kline交易日, "day").calKdj().calMacd().maN(10, "close")
+          nameCodes[i].currentDayList = calculationBias(nameCodes[i].currentDayList)
+          nameCodes[i].currentDayList = calculationCci(nameCodes[i].currentDayList)
+          nameCodes[i].currentDayList = calculationPsy(nameCodes[i].currentDayList)
+          nameCodes[i].currentDayList = calculationRoc(nameCodes[i].currentDayList)
 
-        nameCode.currentDayList = calculationPsy(nameCode.currentDayList, 12, 6);
-        nameCode.currentDayList = calculationRoc(nameCode.currentDayList);
+          let weekDayStart = (currentDayIndex + 1) - 1000 > 0 ? (currentDayIndex + 1) - 1000 : 0 //week最近200周
+          nameCodes[i].currentWeekList = dayToPeriod(nameCodes[i].dayDatas.slice(weekDayStart, currentDayIndex + 1), "week")
+            .calBoll().cal9转(kline交易日, "week").calKdj().calMacd().maN(10, 'close')
+          nameCodes[i].currentWeekList = calculationBias(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationCci(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationPsy(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationRoc(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationWvad(nameCodes[i].currentWeekList)
 
-
-        let weekDayStart = (currentDayIndex + 1) - 500 > 0 ? (currentDayIndex + 1) - 500 : 0 //week最近100周500天
-        nameCode.currentWeekList = dayToPeriod(nameCode.dayDatas.slice(weekDayStart, currentDayIndex + 1), "week")
-          .calBoll().cal9转(kline交易日, "week").calKdj().calMacd().maN(10, 'close')
-        nameCode.currentWeekList = calculationBias(nameCode.currentWeekList)
-        nameCode.currentWeekList = calculationCci(nameCode.currentWeekList)
-
-        nameCode.currentWeekList = calculationPsy(nameCode.currentWeekList, 12, 6);
-        nameCode.currentWeekList = calculationRoc(nameCode.currentWeekList);
-        nameCode.currentWeekList = calculationWvad(nameCode.currentWeekList);
-
-
-
-        let monthDayStart = 0 //month全部
-        nameCode.currentMonthList = dayToPeriod(nameCode.dayDatas.slice(monthDayStart, currentDayIndex + 1), "month")
-          .calBoll().cal9转(kline交易日, "month").calKdj().calMacd()
-          .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
-        nameCode.currentMonthList = calculationBias(nameCode.currentMonthList)
-        nameCode.currentMonthList = calculationCci(nameCode.currentMonthList)
-
-        nameCode.currentMonthList = calculationPsy(nameCode.currentMonthList, 12, 6);
-        nameCode.currentMonthList = calculationRoc(nameCode.currentMonthList);
-        nameCode.currentMonthList = calculationWvad(nameCode.currentMonthList);
+          let monthDayStart = 0 //month全部
+          nameCodes[i].currentMonthList = dayToPeriod(nameCodes[i].dayDatas.slice(monthDayStart, currentDayIndex + 1), "month")
+            .calBoll().cal9转(kline交易日, "month").calKdj().calMacd()
+            .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
+          nameCodes[i].currentMonthList = calculationBias(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationCci(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationPsy(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationRoc(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationWvad(nameCodes[i].currentMonthList)
+        }
       }
-      return nameCode
+
+      return nameCodes
     }
 
 
@@ -262,7 +174,9 @@
         pre1Period.D > currentPeriod.D &&
         pre1Period.J > currentPeriod.J
     }
-
+    function ocLowest(period) {
+      return period.open > period.close ? period.close : period.open
+    }
     function ocHighest(period) {
       return period.open > period.close ? period.open : period.close
     }
@@ -290,6 +204,20 @@
         )
         if (res) return true
       }
+      return false
+    }
+    function preN矩形穿lows(periodList, N = 4, tweaks = 10) {
+      if (periodList.length < 6) return false
+      let pre3Period = periodList[periodList.length - 4]
+      let pre2Period = periodList[periodList.length - 3]
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+
+      for (index = -1; index >= (0 - N); index--) {
+        if (ocLowest(periodList.at(index)) <= periodList.at(index).lows)
+          return true
+      }
+
       return false
     }
 
@@ -471,11 +399,11 @@
       });
       return curDate日期区间
     }
-    let 急跌 = []
-    let 急涨 = []
+
+    let 上升 = []
     for (let index = 71; index < 指数数据.dayDatas.length; index++) {
       const 指数Item = 指数数据.dayDatas[index];
-      指数数据 = calDayWeekMonthKline(指数数据, 指数Item.date);
+      指数数据 = calDayWeekMonthKline([指数数据], 指数Item.date)[0]
 
       let pre2Day = 指数数据.currentDayList.at(-3);
       let pre1Day = 指数数据.currentDayList.at(-2);
@@ -490,100 +418,35 @@
       let pre1Month = 指数数据.currentMonthList.at(-2);
       let curMonth = 指数数据.currentMonthList.at(-1);
 
-      // if (
-      //   curDay.close < curDay.lows &&
-      //   curWeek.close < curWeek.mas &&
-      //   getCurDate区间类型(curDay.date) == "上升日期区间"
-      // ) {
-      //   fuckyou.push([
-      //     curDay.date,
-      //     curWeek.D*10
-      //   ])
-      // }
-
-
-      // if (
-      //   curWeek.high < curWeek.lows &&
-      //   curWeek.bias.bias3 < -3.5 &&
-      //   //(curtPercent(curWeek) > 0 || curtPercent(curDay) > 0) &&
-      //   getCurDate区间类型(curDay.date) == "上升日期区间"
-      // ) {
-      //   fuckyou.push([
-      //     curDay.date,
-      //     curWeek.bias.bias3 * 10,
-
-      //     (curWeek.bias.bias1 > pre1Week.bias.bias1 || curWeek.bias.bias3 > pre1Week.bias.bias3)
-      //   ])
-      // }
-
-
-      if (
-        (curDay.close < curDay.lows || pre1Day.close < pre1Day.lows || pre2Day.close < pre2Day.lows) &&
-        curWeek.high < curWeek.lows + 1 &&
-        (
-          curDay.bias.bias3 < -8 || pre1Day.bias.bias3 < -8 || pre2Day.bias.bias3 < -8 ||
-          pre1Day.bias.bias3 - curDay.bias.bias3 > 4 || pre2Day.bias.bias3 - pre1Day.bias.bias3 > 4
-        ) &&
-        curDay.D <= 21 && curDay.psy < curDay.psyma && curWeek.psy < curWeek.psyma
-        && (curtPercent(curDay) < 0 || curtPercent(curWeek) < 0)
-        && !(kdjAllDown(指数数据.currentWeekList) && MACD死叉(指数数据.currentWeekList, 3) && curWeek.D > 20)
-        && !(
-          curMonth.psyma > 60 && curMonth.psyma > curMonth.psy && curMonth.psy > 50 &&
-          pre1Month.psyma >= curMonth.psyma &&
-          pre1Month.psy >= curMonth.psy
-        )
-
+      if (true
+        && curDay.close < curDay.lows
+        && curWeek.close < curWeek.mas
+        && pre1Month.dea < curMonth.dea
+        //&& 绿空绿红(指数数据.currentDayList, 3)
+        && preN矩形穿lows(指数数据.currentWeekList, 3)
+        //&& getCurDate区间类型(curDay.date) == "上升日期区间"
       ) {
-        急跌.push([
+        上升.push([
           curDay.date,
-          curDay.percent * 10
+          curWeek.D * 10,
+          "type1"
         ])
       }
 
 
-
       if (
-        curWeek.open > curWeek.ups &&
-        curtPercent(curWeek) < 0 &&
-        PtPPercent(指数数据.currentWeekList.at(-5), 指数数据.currentWeekList.at(-1)) > 3 &&
-        pre1Week.bias.bias3 - pre2Week.bias.bias3 > 3 &&
-        PtPPercent(指数数据.currentDayList.at(-5), 指数数据.currentDayList.at(-1)) > 2.5 &&
-        curMonth.D > 30 && (curMonth.bar > 0 || curMonth.diff > 0) &&
-        (
-          curWeek.low > curWeek.ups ||
-          !(pre1Week.psy < curWeek.psy && pre1Week.psyma < curWeek.psyma) ||
-          !(pre1Week.roc.roc < curWeek.roc.roc && pre1Week.roc.maRoc < curWeek.roc.maRoc)
-
-        )
-        && !(
-          pre1Week.wvad.wvadMa6 < curWeek.wvad.wvadMa6 &&
-          pre1Week.wvad.wvad < curWeek.wvad.wvad &&
-          volMaPre(5, 指数数据.currentWeekList, -1) > volMaPre(10, 指数数据.currentWeekList, -1)
-        )
-        && !(
-          pre1Month.wvad.wvadMa6 < curMonth.wvad.wvadMa6 &&
-          (
-            pre1Month.wvad.wvad < curMonth.wvad.wvad ||
-            volMaPre(5, 指数数据.currentMonthList, -1) > volMaPre(10, 指数数据.currentMonthList, -1)
-          )
-        )
-        && !(
-          指数数据.currentMonthList.at(-2).D < 指数数据.currentMonthList.at(-1).D &&
-          指数数据.currentMonthList.at(-2).K < 指数数据.currentMonthList.at(-1).K &&
-          macdAllUp(指数数据.currentMonthList) &&
-          biasAllUp(指数数据.currentMonthList) &&
-          !preN矩形穿ups(指数数据.currentMonthList, 3)
-        )
-
+        curWeek.high < curWeek.lows &&
+        curWeek.bias.bias3 < -3.5 &&
+        //(curtPercent(curWeek) > 0 || curtPercent(curDay) > 0) &&
+        getCurDate区间类型(curDay.date) == "上升日期区间"
       ) {
-
-        急涨.push([
+        上升.push([
           curDay.date,
-          curDay.close > curDay.ups,
-          (curtPercent(curDay)>0 &&  curWeek.roc.maRoc>12 &&  curWeek.psyma>67)
-          
+          curWeek.bias.bias3 * 10,
+          "type2"
         ])
       }
+
     }
 
     console.log(急跌, 急涨)
@@ -831,23 +694,24 @@
 
 
         {
-          name: '急涨',
+          name: '上升1',
           type: 'scatter',
           xAxisIndex: 0,
           yAxisIndex: 0,
           itemStyle: {
             normal: {
               opacity: 1,
-              color: "red"
+              color: "black"
             }
           },
+          zlevel: 2,
           symbolSize: function (val) {
             return 5
           },
-          data: 急涨
+          data: 上升.filter((ele, index) => { return ele.at(-1) == "type1" })
         },
         {
-          name: '急跌',
+          name: '上升2',
           type: 'scatter',
           xAxisIndex: 0,
           yAxisIndex: 0,
@@ -858,53 +722,18 @@
               color: "green"
             }
           },
+          zlevel: 2,
           symbolSize: function (val) {
             return 5
           },
-          data: 急跌
+          data: 上升.filter((ele, index) => { return ele.at(-1) == "type2" })
         },
 
-
-        // {
-        //   name: '指数数据maRoc',
-        //   type: 'line',
-        //   xAxisIndex: 1,
-        //   yAxisIndex: 1,
-        //   zlevel: 5,
-        //   showSymbol: false,
-        //   smooth: true,
-        //   lineStyle: {
-        //     width: 1.2,
-        //     color: "black" //"#ff5c5c",
-        //   },
-        //   data: 指数数据.currentWeekList.map((ele, index) => {
-        //     return [ele.date, ele?.roc.maRoc ? ele?.roc.maRoc : null]
-        //   }).concat(["2005-01-04", null])
-        // },
-
-        // {
-        //   name: '指数数据roc',
-        //   type: 'line',
-        //   color: "orange",
-        //   showSymbol: false,
-        //   smooth: true,
-        //   lineStyle: {
-        //     width: 1.2,
-        //     color: "orange" //"#ff5c5c",
-        //   },
-        //   xAxisIndex: 1,
-        //   yAxisIndex: 1,
-        //   data: 指数数据.currentWeekList.map((ele, index) => {
-        //     return [ele.date, ele?.roc.roc ? ele?.roc.roc : null]
-        //   }).concat(["2005-01-04", null])
-        // },
-
-
         {
-          name: 'm指数数据wvad',
+          name: 'macd',
           type: 'line',
-          xAxisIndex: 2,
-          yAxisIndex: 2,
+          xAxisIndex: 1,
+          yAxisIndex: 1,
           zlevel: 5,
           showSymbol: false,
           smooth: true,
@@ -913,12 +742,12 @@
             color: "black" //"#ff5c5c",
           },
           data: 指数数据.currentMonthList.map((ele, index) => {
-            return [ele.date, ele?.wvad?.wvad ? ele?.wvad.wvad : null]
+            return [ele.date, ele?.bar ? ele?.bar : null]
           }).concat(["2005-01-04", null])
         },
 
         {
-          name: 'm指数数据wvadMa6',
+          name: 'wvadMa6',
           type: 'line',
           color: "orange",
           showSymbol: false,
@@ -930,41 +759,6 @@
           xAxisIndex: 2,
           yAxisIndex: 2,
           data: 指数数据.currentMonthList.map((ele, index) => {
-            return [ele.date, ele?.wvad?.wvadMa6 ? ele?.wvad.wvadMa6 : null]
-          }).concat(["2005-01-04", null])
-        },
-
-
-        {
-          name: '指数数据wvad',
-          type: 'line',
-          xAxisIndex: 2,
-          yAxisIndex: 2,
-          zlevel: 5,
-          showSymbol: false,
-          smooth: true,
-          lineStyle: {
-            width: 1.2,
-            color: "black" //"#ff5c5c",
-          },
-          data: 指数数据.currentWeekList.map((ele, index) => {
-            return [ele.date, ele?.wvad?.wvad ? ele?.wvad.wvad : null]
-          }).concat(["2005-01-04", null])
-        },
-
-        {
-          name: '指数数据wvadMa6',
-          type: 'line',
-          color: "orange",
-          showSymbol: false,
-          smooth: true,
-          lineStyle: {
-            width: 1.2,
-            color: "orange" //"#ff5c5c",
-          },
-          xAxisIndex: 2,
-          yAxisIndex: 2,
-          data: 指数数据.currentWeekList.map((ele, index) => {
             return [ele.date, ele?.wvad.wvadMa6 ? ele?.wvad.wvadMa6 : null]
           }).concat(["2005-01-04", null])
         },
