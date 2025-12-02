@@ -1376,6 +1376,10 @@ var 官方制造业PMI = [
     [
         "2025-10-28",
         49
+    ],
+    [
+        "2025-11-28",
+        49.2
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {

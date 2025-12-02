@@ -1238,6 +1238,10 @@ var 滚动市盈率恒指 = [
     [
         "2025-10-28",
         13.17
+    ],
+    [
+        "2025-11-28",
+        13.15
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
