@@ -1223,6 +1223,7 @@
             return Array.isArray(arr) && index >= 0 && index < arr.length && !(arr[index] == null);
         }
         function roundToHighestPlace(num) {
+            //123 => 100 将任意数字转换为最高位保留，其他位变为0的函数。
             if (num === 0) return 0;
             num = parseInt(num)
             const numStr = Math.abs(num).toString();
@@ -1541,7 +1542,7 @@
             ["2019-04-19", "2019-06-26", "高位", "2.753 沽上证50ETF模拟 2.67", "2019-06-26沽2700.xlsx"],
             ["2019-04-08", "2019-05-22", "高位", "2.68 沽上证50ETF模拟 2.6", "2019-05-22沽2600.xlsx"],
         ];
-        //模拟买卖 = [] 
+        //模拟买卖 = []
 
         String.prototype.unif高低位 = function (search, replacement) {
             var target = this;
@@ -1730,13 +1731,15 @@
         const 指数倍数 = 100
 
         const startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0]);
+
+        const optionContractIndex = 4;
+        const profileIndex = 5;
         const buyDateIndex = 6;
         const buyPriceIndex = 7;
         const buyCashIndex = 8;
         const sellDateIndex = 9;
         const sellPriceIndex = 10;
         const sellCashIndex = 11;
-        const profileIndex = 5;
 
         function need入金groupByYear(input) {
             const result = {};
@@ -1759,9 +1762,18 @@
             }
             return result;
         }
-        function getBuyCashAnd入金(curBuy) {
+        function getBuyCashAnd入金(curBuy, 预估type = "") {
             let 单张费用 = curBuy[3].includes("ETF") ? etf费用 : 指数费用
             let 期权倍数 = curBuy[3].includes("ETF") ? etf倍数 : 指数倍数
+
+            if (预估type == "预估ETF") {
+                单张费用 = etf费用
+                期权倍数 = etf倍数
+            }
+            if (预估type == "预估指数") {
+                单张费用 = 指数费用
+                期权倍数 = 指数倍数
+            }
 
             let buyCash = 0;
             let curBuy入金 = 0;
@@ -1773,9 +1785,9 @@
 
             let buyCount;
             if (curBuy.length >= buyPriceIndex) {
-                let optionStartPrice = curBuy[buyPriceIndex] * 期权倍数; //1张  3674  curBuy[7]期权价格
-                buyCount = Math.ceil(buyCash / optionStartPrice);
-                buyCash = buyCount * optionStartPrice + buyCount * 单张费用;
+                let optionStartPrice = curBuy[buyPriceIndex] * 期权倍数;
+                buyCount = Math.ceil(buyCash / optionStartPrice); //向上取整
+                buyCash = buyCount * optionStartPrice + buyCount * 单张费用;//包含手续费
                 总费用 = 总费用 + buyCount * 单张费用
             }
 
@@ -2144,10 +2156,11 @@
                 let curTrigBuy = 期权买卖List.find((e) => e[0] == curDate && !arrayHasIndex(e, buyDateIndex));
                 if (curTrigBuy) {
                     if (!curTrigBuy[3].includes("手动") && !curTrigBuy[3].includes("模拟")) {
-                        let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}开盘买入[${getKeyId(curTrigBuy)}]`
+                        let [buyCash, curbuy入金, buyCount] = getBuyCashAnd入金(curTrigBuy, "预估ETF");
+                        let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
                         console.log(msg);
                         curDateHasConsole = true;
-                        if (currentDayYMD == curDate) pageSendMail(msg)
+                        if (isSendMail(curDate)) pageSendMail(msg)
                     }
                     if (curTrigBuy[3].includes("手动")) { };
                     if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(curDate, 1);
@@ -2159,12 +2172,13 @@
                     if (!arrayHasIndex(asset期权, buyDateIndex)) continue;
                     if (arrayHasIndex(asset期权, sellDateIndex)) continue;
 
+                    let curNextOne交易日 = preNext交易日(curDate, 1)
                     let sellDateStr
                     let need提前卖出 = check提前卖出(curDate, asset期权, curTrigBuy);
                     if (need提前卖出)
-                        sellDateStr = `提前${need提前卖出}:${preNext交易日(curDate, 1)}`;
-                    else if (preNext交易日(curDate, 1) == preNext交易日(asset期权[1], 默认卖出到期类型))
-                        sellDateStr = `${preNext交易日(curDate, 1)}`;
+                        sellDateStr = `提前${need提前卖出}:${curNextOne交易日}`;
+                    else if (curNextOne交易日 == preNext交易日(asset期权[1], 默认卖出到期类型))
+                        sellDateStr = `${curNextOne交易日}`;
 
                     if (!sellDateStr) continue
 
@@ -2172,7 +2186,7 @@
                         let msg = `${curDate} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
                         console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
                         curDateHasConsole = true;
-                        if (currentDayYMD == curDate) pageSendMail(msg)
+                        if (isSendMail(curDate)) pageSendMail(msg)
                     };
                     if (asset期权[3].includes("模拟")) asset期权[sellDateIndex] = sellDateStr;
                 }
@@ -2191,7 +2205,7 @@
                     let 张数 = extr张数(asset期权[4]);
 
                     if (asset期权[3].includes("手动")) {
-                        //手动费用
+                        let sellDate = extractDate(asset期权[sellDateIndex]);
                         let sellPrice = asset期权[sellPriceIndex];
                         let sellCash = asset期权[sellCashIndex];
                         if (sellCash < 0 && asset.现金 + sellCash < 0) {
@@ -2221,11 +2235,13 @@
                     let 卖出开or收 = asset期权[sellDateIndex].includes("提前") ? "开盘价" : 默认卖出开or收;
                     let sellPrice = excelFileData[excelSellDateIndex][卖出开or收];
 
+                    let buyPrice = asset期权[buyPriceIndex];
+                    let priceProfile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
+                    if (priceProfile <= 0 && asset期权[sellDateIndex].includes("提前")) { asset期权[sellDateIndex] = null; continue; }
+
                     if (!asset期权[sellDateIndex].includes(sellDate)) asset期权[sellDateIndex] = sellDate;
                     asset期权[sellDateIndex] += 卖出开or收.substring(0, 1)
                     asset期权[sellPriceIndex] = +sellPrice.toFixed(2);
-                    let buyPrice = asset期权[buyPriceIndex];
-                    let priceProfile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
                     asset期权[profileIndex] = +priceProfile.toFixed(2);
 
                     if (模拟盈亏) {
@@ -2360,7 +2376,7 @@
             console.log("总费用", 总费用, "need入金统计", need入金统计);
 
             const endJs = performance.now();
-            if(!devTestEnv) pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 ${devTestEnv}` + "  asset现金:" + +asset.现金.toFixed(2));
+            if (!devTestEnv) pageSendMail("cn-option-模拟交易完成测试：" + getDateTime() + `代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 ${devTestEnv}` + "  asset现金:" + +asset.现金.toFixed(2));
             console.groupEnd();
 
             let profileArr = []
