@@ -1706,4 +1706,4 @@ if (typeof module !== "undefined" && module.exports) {
     exports.信贷脉冲 = 信贷脉冲
     exports.房价同比 = 房价同比
 }
-var cn抓取日期 = "2025-12-02 23:51:53"
+var cn抓取日期 = "2025-12-03 23:50:05"
