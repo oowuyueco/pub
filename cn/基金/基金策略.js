@@ -545,4 +545,4 @@ var triggerLogObj基金 = {
         }
     ]
 };
-var runDateTime基金策略 = "2025-12-06 03:21:12";
+var runDateTime基金策略 = "2025-12-06 20:15:56";
