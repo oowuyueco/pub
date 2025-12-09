@@ -5578,11 +5578,21 @@ var 航运连续 = [
     "volume": 19294,
     "hold": 31466,
     "settle": 1601
+  },
+  {
+    "date": "2025-12-09",
+    "open": 1600,
+    "high": 1628.8,
+    "low": 1590.3,
+    "close": 1619.8,
+    "volume": 19042,
+    "hold": 30713,
+    "settle": 1610.3
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.航运连续 = 航运连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-08 17:48:02"
+    exports.writeDateTime = "2025-12-09 17:44:05"
 };

@@ -35748,11 +35748,21 @@ var 沪铅连续 = [
     "volume": 38061,
     "hold": 43107,
     "settle": 17325
+  },
+  {
+    "date": "2025-12-09",
+    "open": 17310,
+    "high": 17345,
+    "low": 17145,
+    "close": 17170,
+    "volume": 35748,
+    "hold": 40620,
+    "settle": 17235
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪铅连续 = 沪铅连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-08 17:47:46"
+    exports.writeDateTime = "2025-12-09 17:43:46"
 };
