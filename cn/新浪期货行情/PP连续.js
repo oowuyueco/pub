@@ -28648,11 +28648,21 @@ var PP连续 = [
     "volume": 245848,
     "hold": 411158,
     "settle": 6233
+  },
+  {
+    "date": "2025-12-10",
+    "open": 6209,
+    "high": 6220,
+    "low": 6161,
+    "close": 6162,
+    "volume": 272617,
+    "hold": 380203,
+    "settle": 6193
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.PP连续 = PP连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-09 17:42:28"
+    exports.writeDateTime = "2025-12-10 17:43:17"
 };

@@ -31528,11 +31528,21 @@ var 玻璃连续 = [
     "volume": 1222542,
     "hold": 1125061,
     "settle": 985
+  },
+  {
+    "date": "2025-12-10",
+    "open": 982,
+    "high": 984,
+    "low": 958,
+    "close": 964,
+    "volume": 1310890,
+    "hold": 1069993,
+    "settle": 970
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.玻璃连续 = 玻璃连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-09 17:43:33"
+    exports.writeDateTime = "2025-12-10 17:44:11"
 };
