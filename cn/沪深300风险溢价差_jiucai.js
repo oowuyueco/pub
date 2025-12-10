@@ -16266,6 +16266,10 @@ var 沪深300风险溢价差_jiucai = [
     [
         "2025-12-09",
         5.28
+    ],
+    [
+        "2025-12-10",
+        5.31
     ]
 ]
 if (typeof module !== "undefined" && module.exports) { exports.沪深300风险溢价差_jiucai = 沪深300风险溢价差_jiucai
