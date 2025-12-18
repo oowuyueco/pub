@@ -50988,11 +50988,21 @@ var 沪铜连续 = [
     "volume": 149583,
     "hold": 223974,
     "settle": 92390
+  },
+  {
+    "date": "2025-12-18",
+    "open": 92830,
+    "high": 93500,
+    "low": 92110,
+    "close": 92600,
+    "volume": 160058,
+    "hold": 231253,
+    "settle": 92750
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪铜连续 = 沪铜连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-17 17:46:02"
+    exports.writeDateTime = "2025-12-18 17:45:51"
 };
