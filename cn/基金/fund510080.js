@@ -11599,7 +11599,7 @@ var 长盛全债_沪深300_上证_债A股8 = [
         "债A股8": null
     }
 ];
-var runDate = "2025-12-18";
+var runDate = "2025-12-19";
 if (typeof module !== "undefined" && module.exports) {
     exports.长盛全债_沪深300_上证_债A股8 = 长盛全债_沪深300_上证_债A股8
 }
