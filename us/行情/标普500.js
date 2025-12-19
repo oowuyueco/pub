@@ -166330,11 +166330,23 @@ var 标普500 = [
     "volume": 3443631007,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2025-12-18",
+    "timestamp": 1766034000000,
+    "open": 6778.06,
+    "high": 6816.13,
+    "low": 6758.5,
+    "close": 6774.76,
+    "percent": 0.79,
+    "volume": 3311865878,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.标普500 = 标普500
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-12-18 17:45:43"
+    exports.writeDateTime = "2025-12-19 17:42:01"
 };
