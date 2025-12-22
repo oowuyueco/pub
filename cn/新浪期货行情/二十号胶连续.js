@@ -15428,11 +15428,21 @@ var 二十号胶连续 = [
     "volume": 52046,
     "hold": 56602,
     "settle": 12395
+  },
+  {
+    "date": "2025-12-22",
+    "open": 12375,
+    "high": 12430,
+    "low": 12275,
+    "close": 12355,
+    "volume": 53738,
+    "hold": 54992,
+    "settle": 12350
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.二十号胶连续 = 二十号胶连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-20 17:36:56"
+    exports.writeDateTime = "2025-12-22 17:46:44"
 };

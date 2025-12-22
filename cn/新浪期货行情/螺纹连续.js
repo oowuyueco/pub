@@ -40648,11 +40648,21 @@ var 螺纹连续 = [
     "volume": 686113,
     "hold": 1568866,
     "settle": 3114
+  },
+  {
+    "date": "2025-12-22",
+    "open": 3119,
+    "high": 3138,
+    "low": 3104,
+    "close": 3126,
+    "volume": 842412,
+    "hold": 1591974,
+    "settle": 3122
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.螺纹连续 = 螺纹连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-20 17:37:05"
+    exports.writeDateTime = "2025-12-22 17:46:54"
 };
