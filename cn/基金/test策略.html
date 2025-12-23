@@ -421,14 +421,27 @@
       if (true
         && curDay.close < curDay.lows
         && curWeek.close < curWeek.mas
-        && pre1Month.dea < curMonth.dea
-        //&& 绿空绿红(指数数据.currentDayList, 3)
-        && preN矩形穿lows(指数数据.currentWeekList, 3)
-        //&& getCurDate区间类型(curDay.date) == "上升日期区间"
+        && (绿空绿红(指数数据.currentDayList, 3) || 绿空绿红(指数数据.currentWeekList, 3))
+        && (curDay.bias.bias1 > curDay.bias.bias3 || curDay.bias.bias2 > curDay.bias.bias3)
+        && (
+          pre1Week.mas < curWeek.mas ||
+          pre1Week.K < curWeek.K || pre1Week.D < curWeek.D ||
+          pre1Week.dea < curWeek.dea || pre1Week.diff < curWeek.diff || pre1Week.bar < curWeek.bar ||
+          pre1Week.bias.bias1 < curWeek.bias.bias1 || pre1Week.bias.bias2 < curWeek.bias.bias2 || pre1Week.bias.bias3 < curWeek.bias.bias3
+        )
+        && (
+          pre1Month.mas < curMonth.mas ||
+          pre1Month.K < curMonth.K || pre1Month.D < curMonth.D ||
+          pre1Month.dea < curMonth.dea || pre1Month.diff < curMonth.diff || pre1Month.bar < curMonth.bar ||
+          pre1Month.bias.bias1 < curMonth.bias.bias1 || pre1Month.bias.bias2 < curMonth.bias.bias2 || pre1Month.bias.bias3 < curMonth.bias.bias3
+        )
+        && getCurDate区间类型(curDay.date) == "上升日期区间" //shangsheng qujiang de 
       ) {
         上升.push([
           curDay.date,
-          curWeek.D * 10,
+          curWeek.dea,
+          curWeek.diff,
+          curWeek.bar,
           "type1"
         ])
       }
@@ -440,16 +453,17 @@
         //(curtPercent(curWeek) > 0 || curtPercent(curDay) > 0) &&
         getCurDate区间类型(curDay.date) == "上升日期区间"
       ) {
-        上升.push([
-          curDay.date,
-          curWeek.bias.bias3 * 10,
-          "type2"
-        ])
+        // 上升.push([
+        //   curDay.date,
+        //   curWeek.J,
+        //   curWeek.D,
+        //   "type2"
+        // ])
       }
 
     }
 
-    console.log(急跌, 急涨)
+    console.log(上升)
   </script>
 
   <script type="text/javascript">

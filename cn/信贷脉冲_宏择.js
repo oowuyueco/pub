@@ -1042,6 +1042,10 @@ var 信贷脉冲_宏择 = [
     [
         "2025-10-28",
         24.05
+    ],
+    [
+        "2025-11-28",
+        23.8
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
