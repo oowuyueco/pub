@@ -51008,11 +51008,21 @@ var 橡胶连续 = [
     "volume": 221211,
     "hold": 146529,
     "settle": 15280
+  },
+  {
+    "date": "2025-12-24",
+    "open": 15310,
+    "high": 15720,
+    "low": 15275,
+    "close": 15650,
+    "volume": 342513,
+    "hold": 167630,
+    "settle": 15435
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.橡胶连续 = 橡胶连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-23 17:43:30"
+    exports.writeDateTime = "2025-12-24 17:42:00"
 };
