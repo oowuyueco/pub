@@ -15478,11 +15478,21 @@ var 尿素连续 = [
     "volume": 107781,
     "hold": 196387,
     "settle": 1736
+  },
+  {
+    "date": "2025-12-26",
+    "open": 1737,
+    "high": 1742,
+    "low": 1728,
+    "close": 1735,
+    "volume": 103225,
+    "hold": 193654,
+    "settle": 1735
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.尿素连续 = 尿素连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-25 17:42:43"
+    exports.writeDateTime = "2025-12-26 17:42:31"
 };

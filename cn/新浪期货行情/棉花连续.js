@@ -51058,11 +51058,21 @@ var 棉花连续 = [
     "volume": 297416,
     "hold": 835075,
     "settle": 14215
+  },
+  {
+    "date": "2025-12-26",
+    "open": 14250,
+    "high": 14700,
+    "low": 14245,
+    "close": 14535,
+    "volume": 699582,
+    "hold": 903849,
+    "settle": 14495
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.棉花连续 = 棉花连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-25 17:41:53"
+    exports.writeDateTime = "2025-12-26 17:41:41"
 };
