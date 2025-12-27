@@ -653,6 +653,7 @@ var triggerLogObj大宗={
             "低位低量_塑料连续"
         ],
         "2025-12-26": [
+            "高位低量_白银连续",
             "高位低量_白银连续"
         ]
     },
@@ -14540,6 +14541,24 @@ var triggerLogObj大宗={
                     4.32,
                     -38.34
                 ]
+            }
+        },
+        {
+            "dataName": "白银连续",
+            "quantName": "高位低量",
+            "trigDate": "2025-12-26",
+            "trigAtIndex": 3319,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
             }
         },
         {
