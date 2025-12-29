@@ -44198,11 +44198,21 @@ var 棕榈油连续 = [
     "volume": 374136,
     "hold": 422604,
     "settle": 8564
+  },
+  {
+    "date": "2025-12-29",
+    "open": 8602,
+    "high": 8618,
+    "low": 8508,
+    "close": 8512,
+    "volume": 358766,
+    "hold": 396047,
+    "settle": 8554
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.棕榈油连续 = 棕榈油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-27 17:38:43"
+    exports.writeDateTime = "2025-12-29 17:49:08"
 };
