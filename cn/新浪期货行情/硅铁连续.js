@@ -27388,11 +27388,21 @@ var 硅铁连续 = [
     "volume": 232982,
     "hold": 230640,
     "settle": 5736
+  },
+  {
+    "date": "2025-12-31",
+    "open": 5730,
+    "high": 5748,
+    "low": 5656,
+    "close": 5672,
+    "volume": 225315,
+    "hold": 218692,
+    "settle": 5702
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.硅铁连续 = 硅铁连续
     exports.dataSource = ""
-    exports.writeDateTime = "2025-12-30 17:44:27"
+    exports.writeDateTime = "2025-12-31 17:44:27"
 };

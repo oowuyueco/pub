@@ -61198,11 +61198,23 @@ var 沪深300 = [
     "volume": 18037497400,
     "hsl": 0.55,
     "zgs": 32795449818.181816
+  },
+  {
+    "date": "2025-12-31",
+    "timestamp": 1767110400000,
+    "open": 4656.48,
+    "high": 4667.05,
+    "low": 4622.1,
+    "close": 4629.94,
+    "percent": -0.46,
+    "volume": 17076022400,
+    "hsl": 0.52,
+    "zgs": 32838504615.384613
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300 = 沪深300
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2025-12-30 17:43:00"
+    exports.writeDateTime = "2025-12-31 17:43:00"
 };
