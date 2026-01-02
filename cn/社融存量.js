@@ -470,6 +470,10 @@ var 社融存量 = [
     [
         "2025-10-28",
         8.5
+    ],
+    [
+        "2025-11-28",
+        8.5
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
