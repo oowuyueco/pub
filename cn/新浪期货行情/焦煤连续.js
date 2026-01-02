@@ -31024,5 +31024,5 @@ var 焦煤连续 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.焦煤连续 = 焦煤连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-01 17:44:11"
+    exports.writeDateTime = "2026-01-02 17:44:20"
 };
