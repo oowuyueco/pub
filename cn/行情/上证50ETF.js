@@ -60868,5 +60868,5 @@ var 上证50ETF = [
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50ETF = 上证50ETF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-01-02 17:42:36"
+    exports.writeDateTime = "2026-01-03 17:37:59"
 };
