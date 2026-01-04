@@ -1472,7 +1472,8 @@
 
 
         let 手动买卖 = [
-            ['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', null, '2025-10-29', 0.0888, 30532,],
+            ["2025-11-25", "2026-01-16", " ↑ ", '4490.4 购沪深300手动 4625.112', 'io2601购4600:53张', null, '2025-11-26', 57.4, 3042],
+            ['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', 1.91, '2025-10-29', 0.0888, 30532, '提前P1:2025-11-25开', 0.1701, 58485],
         ]
 
         let 模拟买卖 = [
@@ -1596,7 +1597,7 @@
 
         let 期权买卖List = structuredClone(期权策略建议ByDay)
             .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-            //.filter(ele => !ele[0].includes("2024-09"))
+            .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
             .map((ele, index) => {
                 let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
                 if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
@@ -2196,6 +2197,7 @@
                 let curAllSellCash;
                 let curAllSellCount = 0;
                 let curAllNeed入金Count = 0;
+                let 模拟or手动 = "模拟"
                 for (let index = asset.期权.length - 1; index >= 0; index--) {
                     let asset期权 = asset.期权[index];
                     if (curDate !== extractDate(asset期权[sellDateIndex])) { continue; }
@@ -2208,6 +2210,8 @@
                         let sellDate = extractDate(asset期权[sellDateIndex]);
                         let sellPrice = asset期权[sellPriceIndex];
                         let sellCash = asset期权[sellCashIndex];
+
+                        let curSell入金;
                         if (sellCash < 0 && asset.现金 + sellCash < 0) {
                             curSell入金 = 0 - (asset.现金 + sellCash);
                             总入金 = 总入金 + curSell入金;
@@ -2220,6 +2224,13 @@
 
                         curAllSellCash = sellCash + (curAllSellCash ?? 0);
                         curAllSellCount++;
+
+                        asset期权[4] = asset期权[4] + ":" + get持仓日数(asset期权) + "日" + (curSell入金 > 0 ? ":入金卖" : ""); //
+
+                        asset.现金 = asset.现金 + sellCash;
+                        asset.现金 = +asset.现金.toFixed(2);
+
+                        模拟or手动 = "手动"
                         continue
                     }
 
@@ -2285,7 +2296,7 @@
                         curDateHasConsole = true;
                     }
                     curAllSellCash = +curAllSellCash.toFixed(2)
-                    console.log(curDateHasConsole ? "模拟卖出".leftAppend() + curAllSellCount : `${curDate} 模拟卖出` + curAllSellCount, curAllSellCash, "=>", cloneAsset(asset));
+                    console.log(curDateHasConsole ? `${模拟or手动}卖出`.leftAppend() + curAllSellCount : `${curDate} ${模拟or手动}卖出` + curAllSellCount, curAllSellCash, "=>", cloneAsset(asset));
                     curDateHasConsole = true;
                 }
 

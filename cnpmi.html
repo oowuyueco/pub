@@ -319,6 +319,7 @@
         function findPCNMonthLast(array, pmiItemDate, PCN = 0) {
             let PCNmonth = getPCNmonth(pmiItemDate, PCN)
             let found = array.findLast((element) => PCNmonth == element[0].substring(0, 7));
+            if (!found) return [false, false]
             return found
         }
 
@@ -422,7 +423,7 @@
             var yield_TenNaDeb = 十年期国债收益率_jiucai.map((ele, index) => {
                 let newArr = []
                 newArr[0] = ele[0]
-                newArr[1] = 1 / (ele[1] / 100);
+                newArr[1] = +(1 / (ele[1] / 100)).toFixed(4)
                 return newArr;
             })//day
             var yield_300PeMiddle = 沪深300PE中位数_lixinger //week
@@ -432,17 +433,22 @@
             let pre
             let buyCount = 0
             let sellCount = 0
-            let buybili = [0.3, 0.85, 1]  //3 ,6, 2
-            let sellbili = [0.3, 0.85, 1]
+            let buybili = [0.3, 0.9, 1] //30 ,63, 7
+            let sellbili = [0.3, 0.9, 1]
 
             for (var i = 2; i < pmiData.length; i++) {
                 if (pmiData[i][0] < 策略startDate) continue
 
-                let hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]//week
-                let hs300PeMiddelNext = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)?.at(1)   ///////
+                let hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
+                if (hs300PeMiddel === false) continue
+                let hs300PeMiddelNext = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)?.at(1)
                 if (!hs300PeMiddelNext) hs300PeMiddelNext = hs300PeMiddel
-                let tenYearPe = +findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1].toFixed(4)
+                let tenYearPe = findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
+                if (tenYearPe === false) continue
                 let guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
+                if (guzhaicha === false) continue
+
+
 
 
                 function buyCond() {
@@ -569,7 +575,7 @@
                 return [...acc, ...currentArray];
             }, []);
 
-        lastAsset默认.assetLog.unshift([策略startDate, 100000, `start`])
+        lastAsset默认.assetLog.unshift([getPCNmonth(lastAsset默认.assetLog[0][0], -1) + "-01", 100000, `start`])
         lastAsset默认.assetLog.push([stockLastDate, lastAsset默认.allAsset(stockLastDate), `stockLastDate`])
         console.log(lastAsset默认.allAsset(stockLastDate), JSON.stringify({ money: lastAsset默认.money.toFixed(2), stocks: lastAsset默认.stocks }), stockLastDate)
         let assetLogChart默认 = lastAsset默认.assetLog.addStartEnd().map(ele => {
@@ -631,7 +637,7 @@
                 return [...acc, ...currentArray];
             }, []);
 
-        lastAsset备用.assetLog.unshift([策略startDate, 100000, `start`])
+        lastAsset备用.assetLog.unshift([getPCNmonth(lastAsset备用.assetLog[0][0], -1) + "-01", 100000, `start`])
         lastAsset备用.assetLog.push([stockLastDate, lastAsset备用.allAsset(stockLastDate), `stockLastDate`])
         console.log(lastAsset备用.allAsset(stockLastDate), (JSON.stringify({ money: lastAsset备用.money.toFixed(2), stocks: lastAsset备用.stocks })))
         let assetLogChart备用 = lastAsset备用.assetLog.addStartEnd().map(ele => {
