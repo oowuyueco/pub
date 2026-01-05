@@ -5548,11 +5548,21 @@ var 烧碱连续 = [
     "volume": 288204,
     "hold": 145563,
     "settle": 2250
+  },
+  {
+    "date": "2026-01-05",
+    "open": 2210,
+    "high": 2213,
+    "low": 2151,
+    "close": 2164,
+    "volume": 313841,
+    "hold": 175556,
+    "settle": 2170
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.烧碱连续 = 烧碱连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-03 17:40:10"
+    exports.writeDateTime = "2026-01-05 17:52:20"
 };
