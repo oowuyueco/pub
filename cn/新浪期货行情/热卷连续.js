@@ -28798,11 +28798,21 @@ var 热卷连续 = [
     "volume": 326133,
     "hold": 1448345,
     "settle": 3304
+  },
+  {
+    "date": "2026-01-16",
+    "open": 3309,
+    "high": 3344,
+    "low": 3308,
+    "close": 3315,
+    "volume": 629257,
+    "hold": 1514654,
+    "settle": 3324
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.热卷连续 = 热卷连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-15 17:46:29"
+    exports.writeDateTime = "2026-01-16 17:45:22"
 };
