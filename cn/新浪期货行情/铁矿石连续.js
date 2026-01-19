@@ -29798,11 +29798,21 @@ var 铁矿石连续 = [
     "volume": 256282,
     "hold": 648862,
     "settle": 815
+  },
+  {
+    "date": "2026-01-19",
+    "open": 810,
+    "high": 811.5,
+    "low": 788.5,
+    "close": 794,
+    "volume": 396301,
+    "hold": 616341,
+    "settle": 797.5
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.铁矿石连续 = 铁矿石连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-17 17:39:09"
+    exports.writeDateTime = "2026-01-19 17:54:57"
 };
