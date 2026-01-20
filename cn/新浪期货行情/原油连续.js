@@ -18978,11 +18978,21 @@ var 原油连续 = [
     "volume": 77853,
     "hold": 40770,
     "settle": 442.6
+  },
+  {
+    "date": "2026-01-20",
+    "open": 437.5,
+    "high": 440.8,
+    "low": 436.3,
+    "close": 437,
+    "volume": 51993,
+    "hold": 40047,
+    "settle": 438.5
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.原油连续 = 原油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-19 17:55:06"
+    exports.writeDateTime = "2026-01-20 17:52:18"
 };
