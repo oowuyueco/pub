@@ -13578,11 +13578,31 @@ var 低硫燃料油连续 = [
     "volume": 102991,
     "hold": 115480,
     "settle": 3098
+  },
+  {
+    "date": "2026-01-26",
+    "open": 3152,
+    "high": 3222,
+    "low": 3130,
+    "close": 3206,
+    "volume": 164697,
+    "hold": 122217,
+    "settle": 3176
+  },
+  {
+    "date": "2026-01-27",
+    "open": 3184,
+    "high": 3185,
+    "low": 3134,
+    "close": 3165,
+    "volume": 113721,
+    "hold": 108620,
+    "settle": 3159
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.低硫燃料油连续 = 低硫燃料油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-24 17:39:46"
+    exports.writeDateTime = "2026-01-27 17:52:26"
 };
