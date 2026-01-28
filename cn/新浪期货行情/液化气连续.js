@@ -14158,11 +14158,21 @@ var 液化气连续 = [
     "volume": 113713,
     "hold": 95673,
     "settle": 4286
+  },
+  {
+    "date": "2026-01-28",
+    "open": 4262,
+    "high": 4306,
+    "low": 4235,
+    "close": 4286,
+    "volume": 77168,
+    "hold": 92829,
+    "settle": 4269
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.液化气连续 = 液化气连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-27 17:52:44"
+    exports.writeDateTime = "2026-01-28 17:52:56"
 };
