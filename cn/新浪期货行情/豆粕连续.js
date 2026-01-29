@@ -51298,11 +51298,21 @@ var 豆粕连续 = [
     "volume": 793254,
     "hold": 2184028,
     "settle": 2777
+  },
+  {
+    "date": "2026-01-29",
+    "open": 2784,
+    "high": 2809,
+    "low": 2784,
+    "close": 2802,
+    "volume": 934382,
+    "hold": 2193188,
+    "settle": 2798
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.豆粕连续 = 豆粕连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-01-28 17:52:04"
+    exports.writeDateTime = "2026-01-29 18:02:27"
 };
