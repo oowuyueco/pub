@@ -1,0 +1,792 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-simple
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script type="text/javascript" src="fund217022.js"></script>
+  <script type="text/javascript" src="../行情/沪深300.js"></script>
+  <script type="text/javascript" src="../行情/上证.js"></script>
+  <script type="text/javascript" src="../行情/上证50.js"></script>
+  <script type="text/javascript" src="../行情/科创50.js"></script>
+  <script type="text/javascript" src="../行情/恒生.js"></script>
+  <script type="text/javascript" src="../行情/期权策略.js"></script>
+
+  <script type="text/javascript" src="../../js/my.js"></script>
+  <script type="text/javascript" src="../../js/indicatorCalculation.js"></script>
+  <script>
+
+    //从后往前N 包含当前的前N个
+    Array.prototype.cal9转 = function (kline交易日, priod, N = 5) {
+      var candleList = this
+      if (candleList.length < 20) return candleList
+
+      for (let endIndex = candleList.length - 1; candleList.length - N <= endIndex; endIndex--) {
+
+        if (endIndex == candleList.length - 1) {
+          if (priod == "week" && new Date(kline交易日).getDay() < 3) continue
+          if (priod == "month" && +kline交易日.substring(8, 10) < 18) continue
+        }
+
+        let is9转up = true
+        let is9转down = true
+        for (var i = 0; i <= 8; i++) {
+          is9转down = is9转down && (candleList[endIndex - i - 4].close > candleList[endIndex - i].close)
+          is9转up = is9转up && (candleList[endIndex - i - 4].close < candleList[endIndex - i].close)
+        }
+
+        if (is9转up) {
+          for (var i = 0; i <= 8; i++)
+            candleList[endIndex - i]["is9转up"] = 9 - i
+          //break
+        }
+        if (is9转down) {
+          for (var i = 0; i <= 8; i++)
+            candleList[endIndex - i]["is9转down"] = 9 - i
+          //break
+        }
+      }
+
+      return candleList
+    }
+    function calDayWeekMonthKline(nameCodes, kline交易日) {
+
+      for (let i = 0; i < nameCodes.length; i++) {
+        nameCodes[i].currentDayList = []
+        nameCodes[i].currentWeekList = []
+        nameCodes[i].currentMonthList = []
+        let currentDayIndex = nameCodes[i].dayDatas.findIndex(ele => { return ele.date == kline交易日 });
+        if (currentDayIndex > 70) {
+          let dayStart = (currentDayIndex + 1) - 200 > 0 ? (currentDayIndex + 1) - 200 : 0 //day计算最近200天
+          nameCodes[i].currentDayList = nameCodes[i].dayDatas.slice(dayStart, currentDayIndex + 1)
+            .calBoll().cal9转(kline交易日, "day").calKdj().calMacd().maN(10, "close")
+          nameCodes[i].currentDayList = calculationBias(nameCodes[i].currentDayList)
+          nameCodes[i].currentDayList = calculationCci(nameCodes[i].currentDayList)
+          nameCodes[i].currentDayList = calculationPsy(nameCodes[i].currentDayList)
+          nameCodes[i].currentDayList = calculationRoc(nameCodes[i].currentDayList)
+
+          let weekDayStart = (currentDayIndex + 1) - 1000 > 0 ? (currentDayIndex + 1) - 1000 : 0 //week最近200周
+          nameCodes[i].currentWeekList = dayToPeriod(nameCodes[i].dayDatas.slice(weekDayStart, currentDayIndex + 1), "week")
+            .calBoll().cal9转(kline交易日, "week").calKdj().calMacd().maN(10, 'close')
+          nameCodes[i].currentWeekList = calculationBias(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationCci(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationPsy(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationRoc(nameCodes[i].currentWeekList)
+          nameCodes[i].currentWeekList = calculationWvad(nameCodes[i].currentWeekList)
+
+          let monthDayStart = 0 //month全部
+          nameCodes[i].currentMonthList = dayToPeriod(nameCodes[i].dayDatas.slice(monthDayStart, currentDayIndex + 1), "month")
+            .calBoll().cal9转(kline交易日, "month").calKdj().calMacd()
+            .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
+          nameCodes[i].currentMonthList = calculationBias(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationCci(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationPsy(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationRoc(nameCodes[i].currentMonthList)
+          nameCodes[i].currentMonthList = calculationWvad(nameCodes[i].currentMonthList)
+        }
+      }
+
+      return nameCodes
+    }
+
+
+    function volMaPre(N = 5, periodList, endIndex) {
+      if (periodList.length < N + 1) return 0
+      let sum = 0
+      for (var i = 0; i < N; i++) {
+        let currentPeriod = periodList.at(endIndex - i)
+        sum += currentPeriod.volume
+      }
+      return sum / N
+    }
+    function KDJ死叉(periodList, N = 2, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (pre1Period.K > pre1Period.D) && (currentPeriod.K <= currentPeriod.D + tweaks)
+        if (res) return true
+      }
+      return false
+    }
+    function MACD死叉(periodList, N = 2, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.bar > 0 && currentPeriod.bar <= 0 + tweaks
+        if (res) return true
+      }
+      return false
+    }
+    function CCI死叉(periodList, N = 2, tweaks = 0) {
+      if (periodList.length < 3) return false
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (pre1Period.cci.cci > 100 && currentPeriod.cci.cci < 100) ||
+          (pre1Period.cci.cci > 0 && currentPeriod.cci.cci <= 0)
+        if (res) return true
+      }
+      return false
+
+    }
+    function 红空红绿(periodList, N = 1, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        if (
+          true
+          && curtPercent(pre2Period) >= 0
+          && pre2Period.close <= pre1Period.open + tweaks && pre2Period.close <= pre1Period.close
+          && curtPercent(pre1Period) >= 0
+          && curtPercent(currentPeriod) < 0
+        ) {
+          return true
+        }
+      }
+
+      return false
+    }
+    function VOL5_10死叉(periodList, N = 2, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let res = volMaPre(5, periodList, 0 - index - 1) > volMaPre(10, periodList, 0 - index - 1) &&
+          volMaPre(5, periodList, 0 - index) < volMaPre(10, periodList, 0 - index)
+        if (res) return true
+      }
+      return false
+    }
+
+    function kdjAllDown(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.K > currentPeriod.K &&
+        pre1Period.D > currentPeriod.D &&
+        pre1Period.J > currentPeriod.J
+    }
+    function ocLowest(period) {
+      return period.open > period.close ? period.close : period.open
+    }
+    function ocHighest(period) {
+      return period.open > period.close ? period.open : period.close
+    }
+    function preN矩形穿ups(periodList, N = 4, tweaks = 10) {
+      if (periodList.length < 6) return false
+      let pre3Period = periodList[periodList.length - 4]
+      let pre2Period = periodList[periodList.length - 3]
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+
+      //2018-01-31 shagnzheng
+      for (index = -1; index >= (0 - N); index--) {
+        if (ocHighest(periodList.at(index)) + tweaks >= periodList.at(index).ups)
+          return true
+      }
+
+      return false
+    }
+    function preN十字星(periodList, N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (
+          +Math.abs(curtPercent(currentPeriod)) < 0.9 &&   //1   //当期涨跌幅 阳线阴线 短矩形   '0.57,8.88'  0.35,11.96
+          +Math.abs(curtAmp(currentPeriod)) < 13          //23 //矩形占比小
+        )
+        if (res) return true
+      }
+      return false
+    }
+    function preN矩形穿lows(periodList, N = 4, tweaks = 10) {
+      if (periodList.length < 6) return false
+      let pre3Period = periodList[periodList.length - 4]
+      let pre2Period = periodList[periodList.length - 3]
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+
+      for (index = -1; index >= (0 - N); index--) {
+        if (ocLowest(periodList.at(index)) <= periodList.at(index).lows)
+          return true
+      }
+
+      return false
+    }
+
+    function 绿空绿红(periodList, N = 1) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        if (
+          true
+          && curtPercent(pre2Period) < 0
+          && pre2Period.close >= pre1Period.open
+          && curtPercent(pre1Period) < 0
+          && curtPercent(currentPeriod) > 0
+        ) {
+          return true
+        }
+      }
+
+      return false
+    }
+    function KDJ金叉(periodList, N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (pre1Period.K < pre1Period.D) && (currentPeriod.K >= currentPeriod.D)
+        if (res) return true
+      }
+      return false
+    }
+    function MACDpre金叉(periodList, N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (
+          (pre1Period.bar < pre1Period.dea && currentPeriod.bar >= currentPeriod.dea)
+          ||
+          (pre1Period.bar < pre1Period.diff && currentPeriod.bar >= currentPeriod.diff)
+        )
+        if (res) return true
+      }
+      return false
+    }
+    function MACD金叉(periodList, N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.bar < 0 && currentPeriod.bar > 0
+        if (res) return true
+      }
+      return false
+    }
+    function BIAS金叉0(periodList, attr = "bias1", N = 2) {
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = pre1Period.bias[attr] < 0 && currentPeriod.bias[attr] >= 0
+        if (res) return true
+      }
+      return false
+    }
+    function BIAS低位(periodList) {
+
+      let pre2Period = periodList[periodList.length - 3]
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+
+      return currentPeriod.bias.bias1 >= currentPeriod.bias.bias2 &&
+        currentPeriod.bias.bias2 > currentPeriod.bias.bias3
+
+    }
+    function CCI金叉(periodList, N = 2) {
+      if (periodList.length < 3) return false
+      for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (pre1Period.cci.cci < -100 && currentPeriod.cci.cci >= -100) ||
+          (pre1Period.cci.cci < 0 && currentPeriod.cci.cci >= 0)
+        if (res) return true
+      }
+      return false
+
+    }
+    function VOL5_10金叉(periodList, N = 2, tweaks = 0) {
+      for (let index = 1; index <= N; index++) {
+        let res = volMaPre(5, periodList, 0 - index - 1) < volMaPre(10, periodList, 0 - index - 1) &&
+          volMaPre(5, periodList, 0 - index) > volMaPre(10, periodList, 0 - index)
+        if (res) return true
+      }
+      return false
+    }
+
+
+    function bollAllUp(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.ups < currentPeriod.ups &&
+        pre1Period.mas < currentPeriod.mas &&
+        pre1Period.lows < currentPeriod.lows
+    }
+    function kdjAllUp(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.K < currentPeriod.K &&
+        pre1Period.D < currentPeriod.D &&
+        pre1Period.J < currentPeriod.J
+    }
+    function macdAllUp(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.bar < currentPeriod.bar &&
+        pre1Period.diff < currentPeriod.diff &&
+        pre1Period.dea < currentPeriod.dea
+    }
+    function biasAllUp(periodList) {
+      let pre1Period = periodList[periodList.length - 2]
+      let currentPeriod = periodList[periodList.length - 1]
+      return pre1Period.bias.bias1 < currentPeriod.bias.bias1 &&
+        pre1Period.bias.bias2 < currentPeriod.bias.bias2 &&
+        pre1Period.bias.bias3 < currentPeriod.bias.bias3
+    }
+
+    function preNHighestAttr(periodList, N = 7, attr = "J") {
+      let highest = -10000
+      for (let index = periodList.length - 1; index >= periodList.length - N; index--) {
+        let currentJVal = periodList[index][attr]
+        if (currentJVal >= highest) highest = currentJVal
+      }
+      return highest
+    }
+    function preNLowestAttr(periodList, N = 7, attr = "J") {
+      let lowest = 10000
+      for (let index = periodList.length - 1; index >= periodList.length - N; index--) {
+        let currentJVal = periodList[index][attr]
+        if (currentJVal < lowest) lowest = currentJVal
+      }
+      return lowest
+    }
+
+    let 指数数据 = {};
+    let dataName = decodeURI(getQueryVariable("name"));
+    console.log(dataName)
+    if (dataName == "沪深300" || dataName == "false") 指数数据.dayDatas = 沪深300;
+    if (dataName == "上证") 指数数据.dayDatas = 上证;
+    if (dataName == "上证50") 指数数据.dayDatas = 上证50;
+    if (dataName == "科创50") 指数数据.dayDatas = 科创50;
+    if (dataName == "恒生") 指数数据.dayDatas = 恒生;
+
+    let 指数数据endDate = decodeURI(getQueryVariable("endDate"));
+    if (指数数据endDate == "false") 指数数据endDate = 指数数据.dayDatas.at(-1).date //默认结束
+    指数数据.dayDatas = 指数数据.dayDatas.filter(item => {
+      return item.date <= 指数数据endDate
+    })
+
+    function getCurDate区间类型(curDate) {
+      let curDate日期区间 = ""
+      Object.keys(triggerLogObj期权.上升日期区间).forEach(key => {
+        let dateRange = key.split("=>");
+        let startDate = dateRange[0];
+        let endDate = dateRange[1];
+        if (startDate <= curDate && curDate <= endDate) {
+          curDate日期区间 = "上升日期区间"
+          return
+        }
+      });
+      Object.keys(triggerLogObj期权.下降日期区间).forEach(key => {
+        let dateRange = key.split("=>");
+        let startDate = dateRange[0];
+        let endDate = dateRange[1];
+        if (startDate <= curDate && curDate <= endDate) {
+          curDate日期区间 = "下降日期区间"
+          return false;
+        }
+      });
+      return curDate日期区间
+    }
+
+    let 上升 = []
+    for (let index = 71; index < 指数数据.dayDatas.length; index++) {
+      const 指数Item = 指数数据.dayDatas[index];
+      指数数据 = calDayWeekMonthKline([指数数据], 指数Item.date)[0]
+
+      let pre2Day = 指数数据.currentDayList.at(-3);
+      let pre1Day = 指数数据.currentDayList.at(-2);
+      let curDay = 指数数据.currentDayList.at(-1);
+
+      let pre2Week = 指数数据.currentWeekList.at(-3);
+      let pre1Week = 指数数据.currentWeekList.at(-2);
+      let curWeek = 指数数据.currentWeekList.at(-1);
+
+      let pre3Month = 指数数据.currentMonthList.at(-4);
+      let pre2Month = 指数数据.currentMonthList.at(-3);
+      let pre1Month = 指数数据.currentMonthList.at(-2);
+      let curMonth = 指数数据.currentMonthList.at(-1);
+
+      if (true
+        && curDay.close < curDay.lows
+        && curWeek.close < curWeek.mas
+        && (绿空绿红(指数数据.currentDayList, 3) || 绿空绿红(指数数据.currentWeekList, 3))
+        && (curDay.bias.bias1 > curDay.bias.bias3 || curDay.bias.bias2 > curDay.bias.bias3)
+        && (
+          pre1Week.mas < curWeek.mas ||
+          pre1Week.K < curWeek.K || pre1Week.D < curWeek.D ||
+          pre1Week.dea < curWeek.dea || pre1Week.diff < curWeek.diff || pre1Week.bar < curWeek.bar ||
+          pre1Week.bias.bias1 < curWeek.bias.bias1 || pre1Week.bias.bias2 < curWeek.bias.bias2 || pre1Week.bias.bias3 < curWeek.bias.bias3
+        )
+        && (
+          pre1Month.mas < curMonth.mas ||
+          pre1Month.K < curMonth.K || pre1Month.D < curMonth.D ||
+          pre1Month.dea < curMonth.dea || pre1Month.diff < curMonth.diff || pre1Month.bar < curMonth.bar ||
+          pre1Month.bias.bias1 < curMonth.bias.bias1 || pre1Month.bias.bias2 < curMonth.bias.bias2 || pre1Month.bias.bias3 < curMonth.bias.bias3
+        )
+        && getCurDate区间类型(curDay.date) == "上升日期区间" //shangsheng qujiang de 
+      ) {
+        上升.push([
+          curDay.date,
+          curWeek.dea,
+          curWeek.diff,
+          curWeek.bar,
+          "type1"
+        ])
+      }
+
+
+      if (
+        curWeek.high < curWeek.lows &&
+        curWeek.bias.bias3 < -3.5 &&
+        //(curtPercent(curWeek) > 0 || curtPercent(curDay) > 0) &&
+        getCurDate区间类型(curDay.date) == "上升日期区间"
+      ) {
+        // 上升.push([
+        //   curDay.date,
+        //   curWeek.J,
+        //   curWeek.D,
+        //   "type2"
+        // ])
+      }
+
+    }
+
+    console.log(上升)
+  </script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+
+    let gridbackgroundColor = "#f7f9fa"
+    let splitLineColor = "#d8d8d8"
+    var app = {};
+    var option;
+
+    option = {
+      legend: {
+        inactiveColor: '#9a9393',
+        left: "0.5%",
+        top: "-0.5%"
+      },
+      tooltip: {
+        trigger: "axis",
+        show: true,
+        position: ["1%", "10%"],
+        order: "seriesDesc",
+        // formatter: function (params, ticket, callback) {
+        //   return null;
+        // },
+        axisPointer: {
+          type: "cross",
+          show: true,
+          crossStyle: {
+            width: 0.6,
+            color: "black", // 鼠标十字横轴
+          },
+        },
+      },
+      axisPointer: {
+        type: "cross",
+        show: true,
+        link: [{
+          xAxisIndex: "all",
+        },],
+        lineStyle: {
+          color: "black", // 鼠标十字竖轴
+          lineStyle: {
+            width: 0.6,
+            color: "black", // 鼠标十字竖轴
+          },
+        },
+      },
+
+
+      dataZoom: [
+        {
+          show: true,
+          realtime: true,
+          start: 0,
+          end: 100,
+          xAxisIndex: [0, 1, 2],
+          bottom: 15,
+        },
+      ],
+
+      grid: [
+        { //指数
+          left: 60,
+          right: 80,
+          top: "0%",
+          height: '50%', // 23 or 43  
+          show: true,
+        },
+
+
+        {
+          left: 60,
+          right: 80,
+          top: "50%",
+          height: '23%',
+          show: true,
+        },
+
+        {
+          left: 60,
+          right: 80,
+          top: "73%",
+          height: '23%',
+          show: true,
+        },
+      ],
+      xAxis: [
+        { //指数  
+          gridIndex: 0,
+          type: 'time',
+          splitNumber: 20,
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: [splitLineColor]
+            }
+          },
+          axisPointer: {
+            show: true, // 抓数据圆圈
+            label: {
+              show: true, //黑框日期  显示指数日期
+            },
+          },
+          axisLabel: {
+            show: false
+          }
+
+        },
+
+        {
+          gridIndex: 1,
+          type: "time",
+          splitNumber: 20,
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: [splitLineColor]
+            }
+          },
+          axisPointer: {
+            show: true,
+            label: {
+              show: false,
+            },
+          },
+          axisLabel: {
+            show: false
+          }
+        },
+
+        {
+          gridIndex: 2,
+          type: "time",
+          splitNumber: 20,
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: [splitLineColor]
+            }
+          },
+          axisPointer: {
+            show: true,
+            label: {
+              show: false,
+            },
+          },
+          axisLabel: {
+            show: false
+          }
+        },
+      ],
+
+
+      yAxis: [
+        { //指数
+          gridIndex: 0,
+          type: 'value',
+          splitLine: {
+            show: false
+          },
+          // axisLabel: {
+          //   formatter: (value, index) => {
+          //     if (value > 700) return value / 1000 + "K"
+          //     else return value
+          //   }
+          // },
+          // position: "left",
+          // min: 700
+        },
+
+
+        {
+          gridIndex: 1,
+          type: 'value',
+          splitLine: {
+            show: false
+          },
+          // axisLabel: {
+          //   formatter: (value, index) => {
+          //     if ([-10, 10].includes(value)) return value
+          //     else return ""
+          //   }
+          // },
+          // interval: 5,
+          // max: 50,
+          // min: -25,
+          // position: "right",
+        },
+
+
+        {
+          gridIndex: 2,
+          type: 'value',
+          splitLine: {
+            show: false
+          },
+          // axisLabel: {
+          //   formatter: (value, index) => {
+          //     if (value >= 40) return ""
+          //     else return value
+          //   }
+          // },
+          // position: "right",
+          // max: 40,
+          // min: 20,
+        },
+      ],
+      series: [
+
+        { //指数沪深300D
+          name: "指数数据.dayDatas",
+          type: "line",
+          lineStyle: {
+            width: 0,
+          },
+          xAxisIndex: 0,
+          yAxisIndex: 0,
+          itemStyle: {
+            normal: {
+              areaStyle: {
+                color: "#a3d4ff" // 87c5cf  a3d4ff
+              },
+            },
+            emphasis: {
+              areaStyle: {
+                color: "#a3d4ff",
+              },
+            },
+          },
+          showSymbol: false,
+          data: 指数数据.dayDatas.map((item) => {
+            let tmp = []
+            tmp[0] = item.date
+            tmp[1] = item.close ? +(item.close).toFixed(2) : ""
+            return tmp
+          })//.addStartEnd(),
+        },
+
+
+        {
+          name: '上升1',
+          type: 'scatter',
+          xAxisIndex: 0,
+          yAxisIndex: 0,
+          itemStyle: {
+            normal: {
+              opacity: 1,
+              color: "black"
+            }
+          },
+          zlevel: 2,
+          symbolSize: function (val) {
+            return 5
+          },
+          data: 上升.filter((ele, index) => { return ele.at(-1) == "type1" })
+        },
+        {
+          name: '上升2',
+          type: 'scatter',
+          xAxisIndex: 0,
+          yAxisIndex: 0,
+          //symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+          itemStyle: {
+            normal: {
+              opacity: 1,
+              color: "green"
+            }
+          },
+          zlevel: 2,
+          symbolSize: function (val) {
+            return 5
+          },
+          data: 上升.filter((ele, index) => { return ele.at(-1) == "type2" })
+        },
+
+        {
+          name: 'macd',
+          type: 'line',
+          xAxisIndex: 1,
+          yAxisIndex: 1,
+          zlevel: 5,
+          showSymbol: false,
+          smooth: true,
+          lineStyle: {
+            width: 1.2,
+            color: "black" //"#ff5c5c",
+          },
+          data: 指数数据.currentMonthList.map((ele, index) => {
+            return [ele.date, ele?.bar ? ele?.bar : null]
+          }).concat(["2005-01-04", null])
+        },
+
+        {
+          name: 'wvadMa6',
+          type: 'line',
+          color: "orange",
+          showSymbol: false,
+          smooth: true,
+          lineStyle: {
+            width: 1.2,
+            color: "orange" //"#ff5c5c",
+          },
+          xAxisIndex: 2,
+          yAxisIndex: 2,
+          data: 指数数据.currentMonthList.map((ele, index) => {
+            return [ele.date, ele?.wvad.wvadMa6 ? ele?.wvad.wvadMa6 : null]
+          }).concat(["2005-01-04", null])
+        },
+
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+
+  </script>
+</body>
+
+</html>

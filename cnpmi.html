@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:image/x-icon;base64,">
+</head>
+
+<body style="height: 100%;width: 100%; margin: 0">
+    <div id="container" style="height: 100%; width: 100%;"></div>
+
+    <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
+    <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
+    <script type="text/javascript" src="./cn/CPI,PPI,CPI_PPI.js"></script>
+
+    <!---month "2025-05-28",  "2025-06-28",  "2025-07-09",-->
+    <script type="text/javascript" src="./cn/沪深300PE中位数,全A股PE中位数,十年期国债利率倒数.js"></script>
+    <script type="text/javascript" src="./cn/股债差300平均,滚动市盈率300.js"></script>
+
+    <!---day week-->
+    <script type="text/javascript" src="./cn/沪深300风险溢价差_jiucai.js"></script>
+    <script type="text/javascript" src="./cn/十年期国债收益率_jiucai.js"></script>
+    <script type="text/javascript" src="./cn/沪深300PE中位数_lixinger.js"></script>
+
+
+    <script type="text/javascript" src="./js/my.js"></script>
+    <script type="text/javascript" src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        let needBack = false
+        try {
+            (function () {
+                emailjs.init({
+                    publicKey: "_WXPtJfJWg8b19aaf",//emailjs 10025***** sog****** 
+                })
+            })();
+        }
+        catch (error) {
+            console.log("emailjs load error")
+            needBack = true
+        }
+
+        function pageSendMailBack(msg) {
+            //备用
+            fetch("https://formspree.io/f/mkgvzrak", {
+                "headers": {
+                    "accept": "application/json",
+                    "content-type": "multipart/form-data; boundary=----WebKitFormBoundary7BiiMuHUYFddmElg",
+                    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-platform": "\"Windows\""
+                },
+                "referrer": "",
+                "body": `------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\noowuyue@163.com\r\n------WebKitFormBoundary7BiiMuHUYFddmElg\r\nContent-Disposition: form-data; name=\"message\"\r\n\r\n${msg}\r\n------WebKitFormBoundary7BiiMuHUYFddmElg--\r\n`,
+                "method": "POST",
+                "mode": "cors",
+                "credentials": "omit"
+            }).then(response => {
+                if (response.ok) {
+                    console.log("备用ok")
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            let errorStr = data["errors"].map(error => error["message"]).join(", ")
+                            console.log("备用" + errorStr)
+                        } else {
+                            let errorStr = "备用 Oops! There was a problem submitting your form"
+                            console.log(errorStr)
+                        }
+                    })
+                }
+            }).catch(error => {
+                let errorStr = "备用 Oops! There was a problem submitting your form"
+                console.log(errorStr)
+            });;
+        }
+
+        function pageSendMail(msg) {
+            if (needBack) {
+                pageSendMailBack(msg)
+                return
+            }
+
+            const templateParams = {
+                message: msg,
+            };
+            emailjs.send("service_76sgm8l", "template_fdryx48", templateParams).then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                },
+                (error) => {
+                    console.log("emailjs send error")
+                    pageSendMailBack(msg)
+                },
+            );
+        }
+
+        //pageSendMail("fukyou")
+        //currentDayYM = "2020-03" //test
+    </script>
+
+
+    <script type="text/javascript" src="./us/Rate周-Assets周.js"></script>
+    <script>
+        //从2019-12-18开始"2019-12-18"在Assets周index=1120 减小计算量
+        let asset周StartIndex = 1120
+        Assets周 = Assets周.slice(asset周StartIndex)
+        let Assets周环比 = Assets周.map((current, index) => {
+            if (index == 0) return [current[0], null, current[1]]
+            if (!current[1]) return [current[0], null, current[1]]
+
+            let pre = Assets周[index - 1]
+            let 环比 = +((current[1] - pre[1]) / pre[1] * 100).toFixed(2)
+            return [current[0], 环比, current[1]]
+        })
+
+        for (let index = 0; index < Assets周环比.length; index++) {
+            const element = Assets周环比[index];
+            if (element[1] > 5 && currentDayYM == element[0].substring(0, 7))
+                pageSendMail("fed asset up!!!")
+        }
+        //console.log(Assets周环比)
+
+    </script>
+
+    <script type="text/javascript">
+        var dom = document.getElementById('container');
+        var myChart = echarts.init(dom, "red", {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+        var app = {};
+        var option;
+
+        ////仅为了对齐时间
+        Array.prototype.addStartEnd = function () {
+            let arr = this
+            let startYear = 2000
+            if (arr.length > 0 && Date.parse(arr[0][0]) < Date.parse(`${startYear}-01-01`))
+                arr = arr.filter(item => {
+                    return parseFloat(item[0].substring(0, 4)) >= startYear
+                })
+
+
+            arr = [
+                [`${startYear}-01-01`, ""]
+            ].concat(arr)
+
+            let last300Day = 沪深300[沪深300.length - 1].date
+            if (+last300Day.substring(5, 7) <= 7)
+                var chartLastDay = last300Day.substring(0, 4) + "-12-28"
+            else
+                var chartLastDay = +last300Day.substring(0, 4) + 1 + "-12-28"
+
+            arr.push([chartLastDay, ""])
+
+            return arr
+        }
+        let currentDay = new Date()
+        currentDay = currentDay.getFullYear() + "-" + (currentDay.getMonth() + 1) + "-" + currentDay.getDate()
+        let justForAlignmentTime = []
+        for (var i = 0; i < CPI.length; i++) { justForAlignmentTime[i] = Array.from(CPI[i]) }
+        justForAlignmentTime = justForAlignmentTime.addStartEnd([], [
+            [currentDay, " "]
+        ]).map(item => {
+            item[1] = ""
+            return item
+        })
+        ////仅为了对齐时间
+
+
+        /////数据转换eco3/bond10_middlePe.js 
+        let use默认数据 = decodeURI(getQueryVariable("default")) == "true" ? true : false
+
+
+        let HS300 = 沪深300.map(ele => {
+            return [ele.date, ele.close]
+        })
+        function findSameTime(array, time) {
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                if (element[0] == time) return parseFloat(element[1])
+            }
+            return null
+        }
+        cn_pmi = 官方制造业PMI.map(item => {
+            item[1] = parseFloat(((item[1] - 50) * 10).toFixed(2))
+            return item
+        })
+        cn_pmi_cx = 财新制造业PMI.map(item => {
+            item[1] = parseFloat(((item[1] - 50) * 10).toFixed(2))
+            return item
+        })
+        let cn_pmi_avg = cn_pmi.map((item, index) => {
+            let newArr = []
+            newArr[0] = getPCNmonth(item[0], 1) + "-01"  //item[0] ！！！！！！！！！！！！！！！！
+            let avg
+            let cx = findSameTime(cn_pmi_cx, item[0])
+            if (cx) avg = (item[1] * 0.5 + cx * 0.5).toFixed(2)
+            else avg = item[1].toFixed(2)
+            newArr[1] = parseFloat(avg)
+            return newArr
+        })
+
+
+        //pmi buy sell
+        let 策略startDate = decodeURI(getQueryVariable("startDate"));
+        if (策略startDate == "false") 策略startDate = "2008-09-01" ////为了方便选择非月底和1号pmi公布日期   减小计算量
+        function asset() {
+            this.money = 100000
+            this.stocks = {}
+            this.buySellLog = []
+            this.assetLog = []
+            console.log((JSON.stringify(this)))
+            return this
+        }
+        asset.prototype.buy = function (condArr, stockName, stockArr, biliArr, count, buyCond) {
+
+            let bili = biliArr[count]
+            let buyPrice = stockArr[1]
+            let buyAmount = Math.floor((this.money * bili) / buyPrice)
+            let cost = buyAmount * buyPrice
+            this.money = this.money - cost
+
+            if (!this.stocks[stockName])
+                this.stocks[stockName] = { allCost: cost, allIncome: 0, currentPrice: buyPrice, currentAmount: buyAmount }
+            else {
+                this.stocks[stockName].allCost += cost
+                this.stocks[stockName].currentPrice = buyPrice
+                this.stocks[stockName].currentAmount += buyAmount
+            }
+            this.stocks[stockName].allCost = parseFloat(this.stocks[stockName].allCost.toFixed(2))
+
+            let buyLog = `[${condArr.join("  ")}] [${stockArr}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
+            this.buySellLog.push(buyLog)
+            console.log(`    ${buyLog}`)
+            if (currentDayYM == condArr[0].substring(0, 7)) pageSendMail(buyLog)
+
+            this.assetLog.push([condArr, this.allAsset(), `buy_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
+            console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
+        }
+        asset.prototype.sell = function (condArr, stockName, stockArr, biliArr, count, sellCond) {
+
+            let bili = biliArr[count]
+            let currentAmount = this.stocks[stockName].currentAmount
+            let sellAmount = Math.floor(currentAmount * bili)
+            let sellPrice = stockArr[1]
+            let income = sellAmount * sellPrice
+            this.money = this.money + income
+
+            this.stocks[stockName].allIncome += income
+            this.stocks[stockName].currentPrice = sellPrice
+            this.stocks[stockName].currentAmount -= sellAmount
+
+            this.stocks[stockName].allIncome = parseFloat(this.stocks[stockName].allIncome.toFixed(2))
+
+            let sellLog = `[${condArr.join("  ")}] [${stockArr}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
+            this.buySellLog.push(sellLog)
+            console.log(`    ${sellLog}`)
+            if (currentDayYM == condArr[0].substring(0, 7)) pageSendMail(sellLog)
+
+            this.assetLog.push([condArr, this.allAsset(), `sell_${count + 1}`, `${stockArr}`, JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks })])
+            console.log(this.allAsset(), JSON.stringify({ money: this.money.toFixed(2), stocks: this.stocks }))
+        }
+        asset.prototype.allAsset = function (stockDate = null) {
+            let res = 0
+            Object.keys(this.stocks).forEach(key => {
+                if (stockDate) {//指定日期  默认买卖后的
+                    let stockDataIndex = HS300.findIndex(ele => ele[0] == stockDate)
+                    if (stockDataIndex > -1) this.stocks[key].currentPrice = HS300[stockDataIndex][1]
+                }
+                res += this.stocks[key].currentAmount * this.stocks[key].currentPrice
+            })
+            return parseFloat((this.money + res).toFixed(2))
+        }
+
+
+        //backTest
+        function preNlowesVal(periodList, endIndex = null, N = 4) {
+            let lowestVal = 1000
+            endIndex = endIndex ? endIndex : periodList.length - 1
+            for (let index = 0; index < N; index++) {
+                let currentPeriod = periodList[endIndex - index]
+                if (+currentPeriod[1] < lowestVal) lowestVal = +currentPeriod[1]
+            }
+            return lowestVal
+        }
+        function getPCNmonth(date, PCN) {
+            let year = date.substring(0, 4)
+            let PCNMonth = parseFloat(date.substring(5, 7)) + PCN
+            if (PCNMonth > 12 && PCN > 0) {
+                year = parseFloat(year) + 1
+                PCNMonth = 1
+            }
+
+            if (PCNMonth < 1 && PCN < 0) {
+                year = parseFloat(year) - 1
+                PCNMonth = 12
+            }
+
+            if (PCNMonth < 10) PCNMonth = "0" + PCNMonth
+            let newdate = "" + year + "-" + PCNMonth
+
+            return newdate
+        }
+        function findPCNMonthFirst(array, pmiItemDate, PCN = 0) {
+
+            let PCNmonth = getPCNmonth(pmiItemDate, PCN)
+
+            for (let index = 0; index < array.length; index++) {
+                let arrayItem = array[index];
+                if (PCNmonth == arrayItem[0].substring(0, 7)) {
+                    return [arrayItem[0], parseFloat(arrayItem[1]), index]
+                }
+            }
+            return null
+        }
+        function findPCNMonthLast(array, pmiItemDate, PCN = 0) {
+            let PCNmonth = getPCNmonth(pmiItemDate, PCN)
+            let found = array.findLast((element) => PCNmonth == element[0].substring(0, 7));
+            if (!found) return [false, false]
+            return found
+        }
+
+        let stockLastDate = HS300.at(-1)[0]
+
+        function backTest默认数据策略(pmiData = cn_pmi_avg) {
+            var yield_TenNaDeb = 十年期国债利率倒数
+            var yield_300PeMiddle = 沪深300PE中位数
+            var yield_ten300Cha = 股债差300平均
+
+            let myasset = new asset()
+            let pre
+            let buyCount = 0
+            let sellCount = 0
+            let buybili = [0.3, 0.9, 1]  //30 ,63, 7
+            let sellbili = [0.3, 0.9, 1]
+
+            for (var i = 2; i < pmiData.length; i++) {
+                if (pmiData[i][0] < 策略startDate) continue
+
+                var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
+                var hs300PeMiddelNext = hs300PeMiddel
+                var tenYearPe = +findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
+                var guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
+
+                function buyCond() {
+                    if (
+                        false
+                        || (pmiData[i][1] <= 3.5 && hs300PeMiddel < 17.5 && guzhaicha >= 6)   //估值极冷
+                        || (pmiData[i][1] <= 3.5 && hs300PeMiddel < 19 && guzhaicha >= 6.8)
+
+                        || ((pmiData[i - 2][1] <= -30 || pmiData[i - 1][1] <= -30) && pmiData[i - 1][1] < pmiData[i][1] && pmiData[i][1] < 12 && hs300PeMiddel < 19) //pmi低位  估值不热
+
+                        || (pmiData[i][1] <= 2 && hs300PeMiddel <= 16 && guzhaicha >= 3.5)
+                        || (pmiData[i][1] <= 2 && hs300PeMiddel <= 20 && guzhaicha >= 6.8)
+
+                        || (pmiData[i][1] <= -3 && hs300PeMiddel <= 19 && guzhaicha >= 5)
+                        || (pmiData[i][1] <= -9 && hs300PeMiddel <= 23 && guzhaicha >= 5.5)
+
+                    ) return [
+                        (pmiData[i][1] <= 3.5 && hs300PeMiddel < 17.5 && guzhaicha >= 6)   //估值极冷
+                        , (pmiData[i][1] <= 3.5 && hs300PeMiddel < 19 && guzhaicha >= 6.8)
+
+                        , ((pmiData[i - 2][1] <= -30 || pmiData[i - 1][1] <= -30) && pmiData[i - 1][1] < pmiData[i][1] && pmiData[i][1] < 12 && hs300PeMiddel < 19) //pmi低位  估值不热
+
+                        , (pmiData[i][1] <= 2 && hs300PeMiddel <= 16 && guzhaicha >= 3.5)
+                        , (pmiData[i][1] <= 2 && hs300PeMiddel <= 20 && guzhaicha >= 6.8)
+
+                        , (pmiData[i][1] <= -3 && hs300PeMiddel <= 19 && guzhaicha >= 5)
+                        , (pmiData[i][1] <= -9 && hs300PeMiddel <= 23 && guzhaicha >= 5.5)
+                    ]//true  return arr for log 
+
+                    return false
+                }
+                if (buyCond()) {
+                    sellCount = 0
+                    if (pre == "buy3") continue
+                    let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
+                    myasset.buy([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, buybili, buyCount, buyCond())
+                    pre = "buy" + (++buyCount)
+                }
+
+                //========================================================================================
+                function sellCond() {
+                    if (
+                        false
+                        || (hs300PeMiddel - tenYearPe > 10 && guzhaicha < 3)
+                        || (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
+
+                        || (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
+                        || (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
+                        || (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
+                        || (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+
+                    ) return [
+                        (hs300PeMiddel - tenYearPe > 10 && guzhaicha < 3)
+                        , (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
+
+                        , (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
+                        , (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
+                        , (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
+                        , (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+                    ]
+
+                    return false
+                }
+                if (sellCond()) {
+                    buyCount = 0
+                    if (Object.keys(myasset.stocks).length === 0) continue
+                    if (pre == "sell3") continue
+                    let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
+                    myasset.sell([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, sellbili, sellCount, sellCond())
+                    pre = "sell" + (++sellCount)
+                }
+            }
+
+            return myasset
+        }
+
+        function backTest备用数据策略(pmiData = cn_pmi_avg) {
+            var yield_TenNaDeb = 十年期国债收益率_jiucai.map((ele, index) => {
+                let newArr = []
+                newArr[0] = ele[0]
+                newArr[1] = +(1 / (ele[1] / 100)).toFixed(4)
+                return newArr;
+            })//day
+            var yield_300PeMiddle = 沪深300PE中位数_lixinger //week
+            var yield_ten300Cha = 沪深300风险溢价差_jiucai //day
+
+            let myasset = new asset()
+            let pre
+            let buyCount = 0
+            let sellCount = 0
+            let buybili = [0.3, 0.9, 1] //30 ,63, 7
+            let sellbili = [0.3, 0.9, 1]
+
+            for (var i = 2; i < pmiData.length; i++) {
+                if (pmiData[i][0] < 策略startDate) continue
+
+                let hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
+                if (hs300PeMiddel === false) continue
+                let hs300PeMiddelNext = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], 0)?.at(1)
+                if (!hs300PeMiddelNext) hs300PeMiddelNext = hs300PeMiddel
+                let tenYearPe = findPCNMonthLast(yield_TenNaDeb, pmiData[i][0], -1)[1]
+                if (tenYearPe === false) continue
+                let guzhaicha = findPCNMonthLast(yield_ten300Cha, pmiData[i][0], -1)[1]
+                if (guzhaicha === false) continue
+
+
+
+
+                function buyCond() {
+                    if (
+                        false
+                        || (pmiData[i][1] <= 3.5 && hs300PeMiddel <= 17.5 && guzhaicha >= 6)
+                        || (pmiData[i][1] <= 3.5 && hs300PeMiddel <= 20.5 && guzhaicha >= 7)   //估值极冷 ['2013-08-01', 3] 20.0366 26.847079037800686 7.31
+
+                        || ((pmiData[i - 2][1] <= -30 || pmiData[i - 1][1] <= -30) && pmiData[i - 1][1] < pmiData[i][1] && pmiData[i][1] < 12 && hs300PeMiddel < 21) //pmi低位  估值不热 ['2020-04-01', 10.5] 20.4021 23.6676 38.46745653177412 6.48
+
+                        || (pmiData[i][1] <= 2 && hs300PeMiddel <= 17 && guzhaicha >= 3.5) //['2008-12-01', -112] 16.2269 31.59757330637007 4.37
+                        || (pmiData[i][1] <= 2 && hs300PeMiddel <= 22 && guzhaicha >= 6.5) //['2024-01-01', -1] 20.0095 19.0052 39.100684261974585 6.65 ['2013-07-01', 1] 21.0938 28.474614880833737 7.54
+
+                        || (pmiData[i][1] <= -3 && hs300PeMiddel <= 22 && guzhaicha >= 6.3) //['2012-09-01', -8] 20.6785 29.403981299067897 6.79
+                        || (pmiData[i][1] <= -9 && hs300PeMiddel <= 26 && guzhaicha >= 5.7) //['2020-03-01', -120] 22.2333 20.4021 36.72959670902814 5.77   ['2016-02-01', -11] 25.8059 25.6514 35.23359875977732 6.26  25.6514 26.4404 35.137034434293746 6.42
+
+                    ) return [
+                        (pmiData[i][1] <= 3.5 && hs300PeMiddel <= 17.5 && guzhaicha >= 6)
+                        , (pmiData[i][1] <= 3.5 && hs300PeMiddel <= 20.5 && guzhaicha >= 7)   //估值极冷 ['2013-08-01', 3] 20.0366 26.847079037800686 7.31
+
+                        , ((pmiData[i - 2][1] <= -30 || pmiData[i - 1][1] <= -30) && pmiData[i - 1][1] < pmiData[i][1] && pmiData[i][1] < 12 && hs300PeMiddel < 21) //pmi低位  估值不热 ['2020-04-01', 10.5] 20.4021 23.6676 38.46745653177412 6.48
+
+                        , (pmiData[i][1] <= 2 && hs300PeMiddel <= 17 && guzhaicha >= 3.5) //['2008-12-01', -112] 16.2269 31.59757330637007 4.37
+                        , (pmiData[i][1] <= 2 && hs300PeMiddel <= 22 && guzhaicha >= 6.5) //['2024-01-01', -1] 20.0095 19.0052 39.100684261974585 6.65 ['2013-07-01', 1] 21.0938 28.474614880833737 7.54
+
+                        , (pmiData[i][1] <= -3 && hs300PeMiddel <= 22 && guzhaicha >= 6.3) //['2012-09-01', -8] 20.6785 29.403981299067897 6.79
+                        , (pmiData[i][1] <= -9 && hs300PeMiddel <= 26 && guzhaicha >= 5.7) //['2020-03-01', -120] 22.2333 20.4021 36.72959670902814 5.77   ['2016-02-01', -11] 25.8059 25.6514 35.23359875977732 6.26  25.6514 26.4404 35.137034434293746 6.42
+                    ]
+
+                    return false
+                }
+                if (buyCond()) {
+                    sellCount = 0
+                    if (pre == "buy3") continue
+                    let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
+                    myasset.buy([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, buybili, buyCount, buyCond())
+                    pre = "buy" + (++buyCount)
+                }
+
+                //========================================================================================
+
+                function sellCond() {
+                    if (
+                        false
+                        || (hs300PeMiddel - tenYearPe > 10 && guzhaicha < 3)
+                        || (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
+
+                        || (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
+                        || (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
+                        || (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
+                        || (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+
+                    ) return [
+                        (hs300PeMiddel - tenYearPe > 10 && guzhaicha < 3)
+                        , (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
+
+                        , (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
+                        , (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
+                        , (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
+                        , (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+                    ]
+
+                    return false
+                }
+                if (sellCond()) {
+                    buyCount = 0
+                    if (Object.keys(myasset.stocks).length === 0) continue
+                    if (pre == "sell3") continue
+                    let hs300 = findPCNMonthFirst(HS300, pmiData[i][0], 0)
+                    myasset.sell([...pmiData[i], guzhaicha, tenYearPe, hs300PeMiddel, hs300PeMiddelNext], "HS300", hs300, sellbili, sellCount, sellCond())
+                    pre = "sell" + (++sellCount)
+                }
+            }
+
+            return myasset
+        }
+
+        //buyCond  函数里hs300PeMiddel 和 guzhaicha 参数不一致
+        //sellCond 函数里完全一样   hs300PeMiddelNext数据不一样
+        console.groupCollapsed("默认");
+        var lastAsset默认 = backTest默认数据策略()
+        lastAsset默认.assetLog = lastAsset默认.assetLog
+            .map((ele, index) => {
+
+                ele[0] = ele[3].split(",")[0]
+
+                let start = ele[3].split(",")[2]
+                let end
+                if (index == lastAsset默认.assetLog.length - 1) end = HS300.length - 1
+                else end = lastAsset默认.assetLog[index + 1][3].split(",")[2] - 1
+                ele[3] += `,${start}-${end}`
+
+                return ele
+            })
+            .map((ele, index) => {
+                let assetState = JSON.parse(ele[4])
+
+                let start = +ele[3].split(",")[3].split("-")[0]
+                let end = +ele[3].split(",")[3].split("-")[1]
+                let hs300arr = HS300.slice(start, end + 1)
+
+                let newEleArr = hs300arr.map((item300, index) => {
+                    if (index == 0) return ele
+                    else {
+
+                        assetState.stocks.HS300.currentPrice = +item300[1]
+                        let allAsset = (+assetState.money) + (+assetState.stocks.HS300.currentAmount) * (+assetState.stocks.HS300.currentPrice)
+
+                        allAsset = +allAsset.toFixed(2)
+                        return [
+                            item300[0],
+                            allAsset,
+                            `pos_${assetState.stocks.HS300.currentAmount}`,
+                            " ",
+                            JSON.stringify(assetState)
+                        ]
+                    }
+
+                })
+
+                return newEleArr
+            })
+            .reduce((acc, currentArray) => {
+                return [...acc, ...currentArray];
+            }, []);
+
+        lastAsset默认.assetLog.unshift([getPCNmonth(lastAsset默认.assetLog[0][0], -1) + "-01", 100000, `start`])
+        lastAsset默认.assetLog.push([stockLastDate, lastAsset默认.allAsset(stockLastDate), `stockLastDate`])
+        console.log(lastAsset默认.allAsset(stockLastDate), JSON.stringify({ money: lastAsset默认.money.toFixed(2), stocks: lastAsset默认.stocks }), stockLastDate)
+        let assetLogChart默认 = lastAsset默认.assetLog.addStartEnd().map(ele => {
+            if (ele[2]?.includes("buy"))
+                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'green', borderWidth: 11 } } //symbolSize: 5.5
+            if (ele[2]?.includes("sell"))
+                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'red' } }
+            if (ele[2] && ele[2] == "stockLastDate")
+                return { value: [ele[0], ele[1]], symbol: 'arrow', symbolSize: 5, itemStyle: { color: 'white' } }
+
+            return { value: [ele[0], ele[1]], symbol: 'none', symbolSize: 0 }
+        })
+        console.groupEnd();
+
+        console.groupCollapsed("备用");
+        var lastAsset备用 = backTest备用数据策略()
+        lastAsset备用.assetLog = lastAsset备用.assetLog
+            .map((ele, index) => {
+
+                ele[0] = ele[3].split(",")[0]
+
+                let start = ele[3].split(",")[2]
+                let end
+                if (index == lastAsset备用.assetLog.length - 1) end = HS300.length - 1
+                else end = lastAsset备用.assetLog[index + 1][3].split(",")[2] - 1
+                ele[3] += `,${start}-${end}`
+
+                return ele
+            })
+            .map((ele, index) => {
+                let assetState = JSON.parse(ele[4])
+
+                let start = +ele[3].split(",")[3].split("-")[0]
+                let end = +ele[3].split(",")[3].split("-")[1]
+                let hs300arr = HS300.slice(start, end + 1)
+
+                let newEleArr = hs300arr.map((item300, index) => {
+                    if (index == 0) return ele
+                    else {
+
+                        assetState.stocks.HS300.currentPrice = +item300[1]
+                        let allAsset = (+assetState.money) + (+assetState.stocks.HS300.currentAmount) * (+assetState.stocks.HS300.currentPrice)
+
+                        allAsset = +allAsset.toFixed(2)
+                        return [
+                            item300[0],
+                            allAsset,
+                            `pos_${assetState.stocks.HS300.currentAmount}`,
+                            " ",
+                            JSON.stringify(assetState)
+                        ]
+                    }
+
+                })
+
+                return newEleArr
+            })
+            .reduce((acc, currentArray) => {
+                return [...acc, ...currentArray];
+            }, []);
+
+        lastAsset备用.assetLog.unshift([getPCNmonth(lastAsset备用.assetLog[0][0], -1) + "-01", 100000, `start`])
+        lastAsset备用.assetLog.push([stockLastDate, lastAsset备用.allAsset(stockLastDate), `stockLastDate`])
+        console.log(lastAsset备用.allAsset(stockLastDate), (JSON.stringify({ money: lastAsset备用.money.toFixed(2), stocks: lastAsset备用.stocks })))
+        let assetLogChart备用 = lastAsset备用.assetLog.addStartEnd().map(ele => {
+            if (ele[2]?.includes("buy"))
+                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'green', borderWidth: 11 } } //symbolSize: 5.5
+            if (ele[2]?.includes("sell"))
+                return { value: [ele[0], ele[1]], symbol: 'emptyCircle', itemStyle: { color: 'red' } }
+            if (ele[2] && ele[2] == "stockLastDate")
+                return { value: [ele[0], ele[1]], symbol: 'arrow', symbolSize: 5, itemStyle: { color: 'white' } }
+
+            return { value: [ele[0], ele[1]], symbol: 'none', symbolSize: 0 }
+        })
+        console.groupEnd();
+
+        option = {
+            title: {},
+            tooltip: {
+                trigger: 'axis', //item
+                show: true,
+                position: ['5%', '30%'],
+                order: 'seriesDesc',
+                axisPointer: {
+                    type: 'cross', //line none
+                    show: false,
+
+                }
+            },
+            legend: {
+                //type: "scroll",
+                left: 60,
+                width: "65%",
+                inactiveColor: 'white',
+                selector: ['all', 'inverse']
+            },
+            axisPointer: {
+                link: [
+                    {
+                        xAxisIndex: 'all'
+                    }
+                ],
+                lineStyle: {
+                    color: "red"
+                }
+            },
+            dataZoom: [{
+                show: true,
+                realtime: true,
+                start: 0,
+                end: 100,
+                xAxisIndex: [0, 1, 2],
+                bottom: -10
+            },
+            {
+                type: 'inside',
+                realtime: true,
+                start: 0,
+                end: 100,
+                xAxisIndex: [0, 1, 2],
+            }
+            ],
+
+            grid: [
+                {
+                    left: 60,
+                    right: 80,
+                    top: "0%",
+                    height: '30%',
+                    show: true,
+                    backgroundColor: '#c1c4c3',
+                },
+                {
+                    left: 60,
+                    right: 80,
+                    top: "30.5%",
+                    height: '21%',
+                    show: true,
+                    backgroundColor: '#c1c4c3',
+                },
+
+
+                {
+                    left: 60,
+                    right: 80,
+                    top: "52%",
+                    height: '45%',
+                    show: true,
+                    backgroundColor: '#c1c4c3',
+                },
+
+            ],
+
+            xAxis: [
+
+                {
+                    gridIndex: 0,
+                    type: "time",
+                    splitNumber: 30,
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            show: false,
+                        },
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: ['#aaa']
+                        }
+                    },
+
+                },
+
+                {
+                    gridIndex: 1,
+                    type: "time",
+                    axisPointer: {
+                        show: true, //抓数据十字线焦点圆圈
+                        label: {
+                            show: false // 显示十字线竖线的时间
+                        }
+                    },
+                    axisLabel: {
+                        show: false // 显示图形底部时间
+                    },
+
+                    splitNumber: 30,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: ['#aaa']
+                        }
+                    },
+
+
+                },
+
+
+                {
+                    gridIndex: 2,
+                    type: "time",
+                    axisPointer: {
+                        show: true, //抓数据十字线焦点圆圈
+                        label: {
+                            show: true // 显示十字线竖线的时间
+                        }
+                    },
+                    axisLabel: {
+                        show: true // 显示图形底部时间
+                    },
+
+                    splitNumber: 30,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: ['#aaa']
+                        }
+                    },
+
+                },
+            ],
+
+            yAxis: [
+                {
+                    gridIndex: 0,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    min: -25,
+                    max: 50
+                },
+                {
+                    gridIndex: 0,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    position: "right",
+                    // max: 3000000,
+                    // min: 100000
+                },
+
+                {
+                    gridIndex: 1,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+
+                    inverse: true,
+                    min: -3,
+                    max: 8.5
+                },
+                {
+                    gridIndex: 1,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    position: "right",
+                },
+
+
+                {
+                    gridIndex: 2,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    min: 12,
+                    max: 70
+
+                },
+                {
+                    gridIndex: 2,
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    },
+                    position: "right",
+                },
+
+            ],
+
+            series: [
+
+                { //pmi
+                    name: 'pmi',
+                    type: 'line',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.7,
+                        color: "#ff61ca", //"black" //
+
+                    },
+                    zlevel: 1,
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "上穿10,15",
+                                    color: "#ff535c",
+                                    fontSize: 8,
+                                    position: "insideStartTop",
+                                },
+                                yAxis: 15, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "#ff535c",
+                                    fontSize: 8,
+                                    position: "insideStartTop",
+                                },
+                                yAxis: 10, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "",
+                                    color: "#0081B6",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: -7, // 标线值
+                            },
+
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "gray",
+                                },
+                                label: {
+                                    formatter: "下穿-7,-10",
+                                    color: "#0081B6",
+                                    fontSize: 8,
+                                    position: "insideStartBottom",
+                                },
+                                yAxis: -10, // 标线值
+                            }
+                        ],
+                    },
+                    data: cn_pmi_avg.map((ele, index) => {
+                        ///ele[1] = (ele[1]-50)/10
+                        return ele
+                    }).addStartEnd(),
+                },
+
+
+
+                { //股债
+                    name: "沪深300风险溢价差_默认",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 2,
+                    data: 股债差300平均.addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 1,
+                    },
+                    zlevel: 1,
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.4,
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.8,
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.2,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "6低估",
+                                fontSize: "10",
+                                color: "green",
+                                position: "start",
+                            },
+                            yAxis: 6, // 标线值
+                            x: "6.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.2,
+                                color: "red",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "3高估",
+                                fontSize: "10",
+                                color: "red",
+                                position: "start",
+                            },
+                            yAxis: 3, // 标线值
+                            x: "6.5%",
+                        },
+
+                            // {
+                            //     lineStyle: {
+                            //         width: 0,
+                            //         color: "#ff000000",
+                            //         type: "solid" // 实线，不写默认虚线
+                            //     },
+
+                            //     yAxis: 0, // 标线值
+
+                            // },
+                        ],
+                    },
+                },
+
+                { //股债
+                    name: "沪深300风险溢价差_备用",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 2,
+                    data: 沪深300风险溢价差_jiucai.addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 1.2,
+                        type: "dotted",
+
+                    },
+                    zlevel: 1,
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: "linear",
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0.4,
+                                    color: "red",
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: "orange",
+                                },
+
+                                {
+                                    offset: 0.8,
+                                    color: "green",
+                                },
+                                ],
+                                globalCoord: true,
+                            },
+                        },
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0.2,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "6低估",
+                                fontSize: "10",
+                                color: "green",
+                                position: "start",
+                            },
+                            yAxis: 6, // 标线值
+                            x: "6.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.2,
+                                color: "red",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                formatter: "3高估",
+                                fontSize: "10",
+                                color: "red",
+                                position: "start",
+                            },
+                            yAxis: 3, // 标线值
+                            x: "6.5%",
+                        },
+
+                            // {
+                            //     lineStyle: {
+                            //         width: 0,
+                            //         color: "#ff000000",
+                            //         type: "solid" // 实线，不写默认虚线
+                            //     },
+
+                            //     yAxis: 0, // 标线值
+
+                            // },
+                        ],
+                    },
+                },
+
+
+
+
+
+                // {
+                //     name: 'Assets周环比',
+                //     type: 'bar',
+                //     xAxisIndex: 0,
+                //     yAxisIndex: 0,
+                //     showSymbol: false,
+                //     smooth: true,
+
+                //     data: Assets周环比.addStartEnd(),
+                // },
+                // {
+                //     name: "Assets周",
+                //     type: "line",
+                //     xAxisIndex: 0,
+                //     yAxisIndex: 1,
+                //     showSymbol: false,
+                //     smooth: true,
+                //     lineStyle: {
+                //         width: 0.9,
+                //     },
+                //     data: Assets周.map((item, index) => {
+                //         item[1] = parseFloat(item[1]) * 100000
+                //         return item
+                //     }).addStartEnd()
+                // },
+
+
+                {
+                    name: 'assetLog默认',
+                    type: 'line',
+                    xAxisIndex: 0,
+                    yAxisIndex: 1,
+                    showSymbol: true,
+                    smooth: false,
+                    lineStyle: {
+                        width: 0.7,
+                        color: "black"
+                    },
+                    itemStyle: {
+                        with: 12
+                    },
+                    data: assetLogChart默认 //.addStartEnd()    
+                },
+
+                {
+                    name: 'assetLog备用',
+                    type: 'line',
+                    xAxisIndex: 0,
+                    yAxisIndex: 1,
+                    showSymbol: true,
+                    smooth: false,
+                    lineStyle: {
+                        width: 0.7,
+                        color: "black"
+                    },
+                    itemStyle: {
+                        with: 12
+                    },
+                    data: assetLogChart备用 //.addStartEnd()   
+                },
+
+
+
+                {
+                    name: 'HS300',
+                    type: 'line',
+                    xAxisIndex: 2,
+                    yAxisIndex: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 0,
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "#fdc375"
+                            },
+                        },
+                        emphasis: {
+                            areaStyle: {
+                                color: "#fdc375"
+                            },
+                        }
+                    },
+                    data: HS300.addStartEnd()
+                },
+
+                {
+                    name: '300中位PE-默认', //300剔除后中位
+                    type: 'line',
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    data: 沪深300PE中位数.addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 1.5,
+                        color: "#a45db2"
+                    },
+
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [{
+                            lineStyle: {
+                                width: 0,
+                                color: "#ff535c",
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "30PE高估",
+                                fontSize: "10",
+                                color: "#ff535c",
+                            },
+                            yAxis: 3.5,
+                            x: "7.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.3,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "20PE低估",
+                                fontSize: "10",
+                                color: "green",
+                            },
+                            yAxis: 20,
+                            x: "7.5%", //固定起点的 x 像素位置
+                        },
+                        {
+                            lineStyle: {
+                                width: 0.5,
+                                color: "green",
+                                type: "solid" // 实线，不写默认虚线
+                            },
+                            label: {
+                                position: "start",
+                                formatter: "18PE低估",
+                                fontSize: "10",
+                                color: "green",
+                            },
+                            yAxis: 18,
+                            x: "7.5%", //固定起点的 x 像素位置
+                        },
+                        ],
+                    },
+                },
+                {
+                    name: '300中位PE-备用', //300剔除后中位
+                    type: 'line',
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    data: 沪深300PE中位数_lixinger.addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        type: "dotted",
+                        width: 1.2,
+                        color: "#a45db2"
+                    },
+                },
+
+
+                {
+                    name: '十年收益率倒数-默认',
+                    type: 'line',
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    data: 十年期国债利率倒数.addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 1.5,
+                        color: "#338129"
+                    },
+                },
+
+                {
+                    name: '十年收益率倒数-备用',
+                    type: 'line',
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    data: 十年期国债收益率_jiucai.map((ele, index) => {
+                        let newArr = []
+                        newArr[0] = ele[0]
+                        newArr[1] = +(1 / (ele[1] / 100)).toFixed(4);
+                        return newArr;
+                    }).addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        type: "dotted",
+                        width: 1.2,
+                        color: "#338129"
+                    },
+                },
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "pmi"
+            })
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "pmi_cx"
+            })
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "pmi_avg"
+            })
+
+        }
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+
+</html>

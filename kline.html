@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #FFFFFF;height: 100%">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="KLineChart example" />
+    <title>KLineChart + js</title>
+    <script type="text/javascript" src="./js/klinecharts.min.js"></script>
+    <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
+    <script type="text/javascript" src="./js/my.js"></script>
+
+    <script type="text/javascript" src="../../tempData/test策略.js"></script>
+
+    <script>
+
+        let jsLoadCount = 0
+        function checkOrTryHttpNew(dataName, dataType, fuc) {
+            var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement
+
+            var JS1 = document.createElement("script")
+            if (dataType == "futures") {
+                JS1.src = `./cn/新浪期货行情/${dataName}.js`
+            }
+            else {
+                JS1.src = `./cn/行情/${dataName}.js`
+                if (dataName.includes("标普") || dataName.includes("纳指") || dataName.includes("道琼斯"))
+                    JS1.src = `./us/行情/${dataName}.js`
+            }
+
+            var JS2 = document.createElement("script")
+            JS2.src = `../../tempData/test策略.js`
+
+            JS1.onload = JS2.onload = function () {
+                jsLoadCount++
+                if (jsLoadCount == 2 && fuc) {
+                    window.trigDateArr = typeof test策略 !== "undefined" && typeof test策略[dataName] !== "undefined" ? test策略[dataName] : []
+                    window.unionAll = typeof test策略 !== "undefined" && typeof test策略?.unionAll ? test策略?.unionAll : []
+                    //console.log(window.unionAll)
+                    fuc()
+                }
+            }
+            JS1.onerror = JS2.onerror = function (e) { console.error(e) }
+
+
+            head.insertBefore(JS1, head.firstChild);
+            head.insertBefore(JS2, head.firstChild);
+        }
+
+        //从后往前N 包含当前的前N个  cnindex
+        Array.prototype.cal9转 = function (当前交易日期, priod, N = 5) {
+            var candleList = this
+            if (candleList.length < 20) return candleList
+
+            for (let endIndex = candleList.length - 1; candleList.length - N <= endIndex; endIndex--) {
+
+                if (endIndex == candleList.length - 1) {
+                    if (priod == "week" && new Date(当前交易日期).getDay() < 3) continue
+                    if (priod == "month" && +当前交易日期.substring(8, 10) < 18) continue
+                }
+
+                let is9转up = true
+                let is9转down = true
+                for (var i = 0; i <= 8; i++) {
+                    is9转down = is9转down && (candleList[endIndex - i - 4].close > candleList[endIndex - i].close)
+                    is9转up = is9转up && (candleList[endIndex - i - 4].close < candleList[endIndex - i].close)
+                }
+
+                if (is9转up) {
+                    for (var i = 0; i <= 8; i++)
+                        candleList[endIndex - i]["is9转up"] = 9 - i
+                    //break
+                }
+                if (is9转down) {
+                    for (var i = 0; i <= 8; i++)
+                        candleList[endIndex - i]["is9转down"] = 9 - i
+                    //break
+                }
+            }
+
+            return candleList
+        }
+
+    </script>
+</head>
+
+<body style="margin: 0;height: 100%">
+    <div id="chartDay" style="height:80%"></div>
+    <div id="chartWeek" style="height:80%"></div>
+    <div id="chartMonth" style="height:80%"></div>
+
+    <!-- <div id="chartDay" style="height:20%"></div>
+    <div id="chartWeek" style="height:40%"></div>
+    <div id="chartMonth" style="height:40%"></div> -->
+
+    <script>
+        var chartDay = klinecharts.init('chartDay')
+        var chartWeek = klinecharts.init('chartWeek')
+        var chartMonth = klinecharts.init('chartMonth')
+
+        var dataType = decodeURI(getQueryVariable("dataType"))
+        var dataName = decodeURI(getQueryVariable("name"))
+        var edate = getQueryVariable("edate") //总回测数据 70开始  endate结束
+        var backday = getQueryVariable("backday") //回测开始点 结束往前天数
+        var noChart = getQueryVariable("noChart")  // ?dataType=xueqiu&name=沪深300&edate=2018-10-19&&backday=2
+
+        //等效for循环for1
+        var currentDayIndex
+        var endIndex
+        var conditon1 = []
+        var conditon12 = []
+        var logNameDateCondAtter = []
+
+        checkOrTryHttpNew(dataName, dataType, () => {
+            //统一数据
+            let dayDatas = window[dataName]
+            if (!dayDatas[0]?.timestamp)
+                dayDatas = dayDatas.map(function (data) {
+                    data.timestamp = new Date(data.date).getTime()
+                    return data
+                })
+
+
+            let weekDatas = dayToPeriod(dayDatas, "week")
+
+            klinecharts.registerIndicator({
+                name: 'newMa',
+                shortName: 'newMa',
+                calcParams: [10],
+                figures: [
+                    { key: 'newMa10', title: 'newMa10: ', type: 'line' },
+                    //{ key: 'newMa20', title: 'newMa20: ', type: 'line' },
+                ],
+
+                styles: {
+                    lines: [{
+                        // 'solid' | 'dashed'
+                        style: 'dashed',
+                        smooth: false,
+                        size: 1,
+                        dashedValue: [2, 2],
+                        color: 'blue'
+                    },]
+                },
+
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map(kLineData => {
+                        return {
+                            newMa10: kLineData.ma10,
+                            //newMa20: kLineData.ma20 
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'newBOLL',
+                shortName: 'newBOLL',
+                calcParams: [],
+                figures: [
+                    { key: 'ups', title: 'ups: ', type: 'line' },
+                    { key: 'mas', title: 'mas: ', type: 'line' },
+                    { key: 'lows', title: 'lows: ', type: 'line' },
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        return {
+                            "ups": kLineData.ups,
+                            "mas": kLineData.mas,
+                            "lows": kLineData.lows
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'newKDJ',
+                shortName: 'newKDJ',
+                calcParams: [],
+                figures: [
+                    { key: 'K', title: 'K: ', type: 'line' },
+                    { key: 'D', title: 'D: ', type: 'line' },
+                    { key: 'J', title: 'J: ', type: 'line' },
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        return {
+                            "K": kLineData.K,
+                            "D": kLineData.D,
+                            "J": kLineData.J
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'newMACD',
+                shortName: 'newMACD',
+                calcParams: [],
+                figures: [
+                    { key: 'diff', title: 'diff: ', type: 'line' },
+                    { key: 'dea', title: 'dea: ', type: 'line' },
+                    { key: 'bar', title: 'bar: ', type: 'line' },
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        return {
+                            "diff": kLineData.diff,
+                            "dea": kLineData.dea,
+                            "bar": kLineData.bar
+                        }
+                    })
+                },
+            })
+            klinecharts.registerIndicator({
+                name: 'newBias',
+                shortName: 'newBias',
+                calcParams: [],
+                figures: [
+                    { key: 'bias1', title: 'bias6：', type: 'line' },
+                    { key: 'bias2', title: 'bias12：', type: 'line' },
+                    { key: 'bias3', title: 'bias24：', type: 'line' },
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        return {
+                            "bias1": kLineData.bias.bias1,
+                            "bias2": kLineData.bias.bias2,
+                            "bias3": kLineData.bias.bias3,
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'new9转back',
+                shortName: 'new9转',
+                calcParams: [],
+                figures: [
+                    { key: 'is9转up', title: 'is9转up', type: 'bar' },
+                    { key: 'is9转down', title: 'is9转down', type: 'bar' },
+
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        return {
+                            "is9转up": kLineData.is9转up,
+                            "is9转down": kLineData.is9转down,
+
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'new9转',
+                figures: [
+                    { key: 'drawY' }
+                ],
+                calc: (kLineDataList) => {
+                    return kLineDataList.map(
+                        kLineData => ({
+                            drawUps: kLineData.ups,
+                            drawLows: kLineData.lows,
+                            is9转up: kLineData.is9转up,
+                            is9转down: kLineData.is9转down,
+                            text: kLineData.is9转up ?? kLineData.is9转down //fruits[Math.floor(Math.random() * 17)]
+                        }))
+                },
+                draw: ({
+                    ctx,
+                    barSpace,
+                    visibleRange,
+                    indicator,
+                    xAxis,
+                    yAxis
+                }) => {
+                    const fruits = [
+                        '🍏', '🍎', '🍐', '🍊', '🍋', '🍌',
+                        '🍉', '🍇', '🍓', '🍈', '🍒', '🍑',
+                        '🍍', '🥥', '🥝', '🥭', '🥑', '🍏'
+                    ]
+                    const { from, to } = visibleRange
+                    ctx.font = barSpace.gapBar * 1.5 + 'px' + ' Helvetica Neue'
+                    ctx.textAlign = 'center'
+                    const result = indicator.result
+                    for (let i = from; i < to; i++) {
+                        const data = result[i]
+                        const x = xAxis.convertToPixel(i)
+                        let drawText = ""
+                        if (data.is9转up || data.is9转down)
+                            drawText = data.is9转up ?? data.is9转down  //fruits[Math.floor(Math.random() * 17)] //data.is9转down
+                        ctx.fillStyle = data.is9转up ? "red" : "green"
+                        let y = data.is9转up ? yAxis.convertToPixel(data.drawLows) + 15 : yAxis.convertToPixel(data.drawUps) - 15
+                        ctx.fillText(drawText, x, y)
+                    }
+                    return false
+                }
+            })
+
+            klinecharts.registerIndicator({
+                name: 'newTest1',
+                shortName: 'newTest1',
+                calcParams: [],
+                figures: [
+                    { key: 'count', title: 'count: ', type: 'bar' },
+                ],
+                styles: {},
+                calc: (kLineDataList, { calcParams, figures }) => {
+                    return kLineDataList.map((kLineData, i) => {
+                        let count = null
+                        let findele = window.unionAll.find(ele => ele[0] == kLineData.date)
+                        if (findele && (findele[2].split(',').includes(window.dataName) || findele[1] > 112)) count = findele[1]
+                        return {
+                            "count": count
+                        }
+                    })
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'newTest2',
+                figures: [
+                    { key: 'drawY' }
+                ],
+                calc: (kLineDataList) => {
+                    return kLineDataList.map(
+                        (kLineData) => ({
+                            drawUps: kLineData.ups,
+                            drawLows: kLineData.lows,
+                            date: kLineData.date,
+                            trig: window.test策略["unionAll"].find((value, index) => {
+                                return value[0] == kLineData.date
+                            })
+                        }))
+                },
+                draw: ({
+                    ctx,
+                    barSpace,
+                    visibleRange,
+                    indicator,
+                    xAxis,
+                    yAxis
+                }) => {
+                    const fruits = [
+                        '🍏', '🍎', '🍐', '🍊', '🍋', '🍌',
+                        '🍉', '🍇', '🍓', '🍈', '🍒', '🍑',
+                        '🍍', '🥥', '🥝', '🥭', '🥑', '🍏'
+                    ]
+                    const { from, to } = visibleRange
+                    ctx.font = barSpace.gapBar * 3.5 + 'px' + ' Helvetica Neue'
+                    ctx.textAlign = 'center'
+                    const result = indicator.result
+                    for (let i = from; i < to; i++) {
+                        const data = result[i]
+
+                        const x = xAxis.convertToPixel(i)
+                        let drawText = ""
+                        if (data.trig)
+                            drawText = "👆K"//fruits[1]  // data.is9转up ?? data.is9转down  //fruits[Math.floor(Math.random() * 17)] //data.is9转down
+                        ctx.fillStyle = data.trig ? "black" : "green"
+                        let y = yAxis.convertToPixel(data.drawLows) + 15// : yAxis.convertToPixel(data.drawUps) - 15
+                        ctx.fillText(drawText, x, y)
+                    }
+                    return false
+                }
+            })
+
+            let normalStyle = {
+                grid: {
+                    show: true,
+                    horizontal: {
+                        show: true,
+                        size: 0.35,
+                        color: 'black',
+                        style: 'dashed',
+                        // dashedValue: [0.5, 0.5]
+                    },
+                    vertical: {
+                        show: true,
+                        size: 0.35,
+                        color: '#EDEDED',
+                        style: 'dashed',
+                        dashedValue: [2, 2]
+                    }
+                },
+                candle: {
+                    // 蜡烛图类型 'candle_solid'|'candle_stroke'|'candle_up_stroke'|'candle_down_stroke'|'ohlc'|'area'
+                    type: 'candle_up_stroke',
+                    // 蜡烛柱
+                    bar: {
+                        upColor: '#f50000',
+                        downColor: '#009b3e',
+                        noChangeColor: '#888888',
+
+                        upBorderColor: '#f50000',
+                        downBorderColor: '#009b3e',
+                        noChangeBorderColor: '#888888',
+
+                        upWickColor: '#f50000',
+                        downWickColor: '#009b3e',
+                        noChangeWickColor: '#888888'
+                    },
+                    priceMark: {
+                        last: {
+                            show: false //关闭最新价线
+                        }
+                    }
+                },
+
+
+            }
+            chartDay.setStyles(normalStyle)
+            chartWeek.setStyles(normalStyle)
+            chartMonth.setStyles(normalStyle)
+            klinecharts.registerOverlay({
+                name: 'circle',
+                needDefaultPointFigure: true,
+                needDefaultXAxisFigure: true,
+                needDefaultYAxisFigure: true,
+                totalStep: 3,
+                createPointFigures: ({ coordinates }) => {
+                    if (coordinates.length === 2) {
+                        const xDis = Math.abs(coordinates[0].x - coordinates[1].x)
+                        const yDis = Math.abs(coordinates[0].y - coordinates[1].y)
+                        const radius = Math.sqrt(xDis * xDis + yDis * yDis)
+                        return {
+                            key: 'circle',
+                            type: 'circle',
+                            attrs: {
+                                ...coordinates[0],
+                                r: radius
+                            },
+                            styles: {
+                                style: 'stroke_fill'
+                            }
+                        }
+                    }
+                    return []
+                }
+            })
+
+            chartDay.createIndicator('VOL')
+            //let dayNewTest1 = chartDay.createIndicator('newTest1')
+            let dayNewKdj = chartDay.createIndicator('newKDJ')
+            let dayNewMacd = chartDay.createIndicator('newMACD')
+            let dayNewBias = chartDay.createIndicator('newBias')
+            //let dayBias = chartDay.createIndicator('BIAS')
+            //let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
+            //let chartDayMa = chartDay.createIndicator({ name: "MA", calcParams: [3,20], }, true, { id: 'candle_pane' })
+            let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            //let dayNew9转 = chartDay.createIndicator({ name: "trigDate" }, true, { id: 'candle_pane' }) //('new9转back')
+
+            chartWeek.createIndicator('VOL')
+            let weekNewKdj = chartWeek.createIndicator('newKDJ')
+            let weekNewMacd = chartWeek.createIndicator('newMACD')
+            let weekNewBias = chartWeek.createIndicator('newBias')
+            let weekNewMa10 = chartWeek.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            let weekNewBOLL = chartWeek.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let weekNew9转 = chartWeek.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+            //let weekNewTest2 = chartWeek.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
+
+
+            chartMonth.createIndicator('VOL')
+            let monthNewKdj = chartMonth.createIndicator('newKDJ')
+            let monthNewMacd = chartMonth.createIndicator('newMACD')
+            let monthNewBias = chartMonth.createIndicator('newBias')
+            let monthNewMa10 = chartMonth.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            let monthNewBOLL = chartMonth.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
+            let monthNew9转 = chartMonth.createIndicator({ name: "new9转" }, true, { id: 'candle_pane' }) //('new9转back')
+
+            endIndex = dayDatas.length
+            if (edate) {
+                endIndex = dayDatas.findIndex(ele => ele.date == edate)
+                if (endIndex == -1) endIndex = dayDatas.length
+            }
+            currentDayIndex = 70
+            if (backday) {
+                currentDayIndex = endIndex - backday
+            }
+            forSetInterval(currentDayIndex, endIndex, dayDatas)
+
+
+            //----------------------------------------
+
+            document.addEventListener("keydown", (event) => {
+                if (event.keyCode === 88) {
+                    chartDay.createOverlay("circle") //x键
+                    return
+                }
+
+                if (event.keyCode === 37) endIndex-- //左右上键
+                if (event.keyCode === 39) endIndex++
+                if (event.keyCode === 38) endIndex = dayDatas.length - 1 < endIndex + 100 ? dayDatas.length - 1 : endIndex + 100
+                forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐chartDay
+            })
+
+            chartDay.subscribeAction(
+                'onCandleBarClick',
+                (onData) => {
+                    endIndex = onData.dataIndex
+                    forSetInterval(endIndex, endIndex, dayDatas, true)
+                    // chartDay.scrollToDataIndex(endIndex)
+                    // forSetInterval(endIndex, endIndex, dayDatas, false)
+                }
+            )
+            chartWeek.subscribeAction(
+                'onCandleBarClick',
+                (onData) => {
+                    endIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.dataIndex]?.date)
+                    forSetInterval(endIndex, endIndex, dayDatas, true) //重置对齐chartDay
+                    // chartWeek.scrollToDataIndex(onData.dataIndex)
+                    // forSetInterval(endIndex, endIndex, dayDatas, true, false)
+                }
+            )
+
+            let mouseLeftDown = false
+            let downDrag = false
+            let dragChart = ""
+            document.addEventListener('mousedown', () => { mouseLeftDown = true; downDrag = false })
+            document.addEventListener('mousemove', () => { if (mouseLeftDown) downDrag = true })
+            chartDay.subscribeAction(
+                'onVisibleRangeChange',
+                (onData) => {
+                    if (mouseLeftDown && downDrag) {
+                        endIndex = onData.to - 1
+                        dragChart = "day"
+                    }
+                }
+            )
+            chartWeek.subscribeAction(
+                'onVisibleRangeChange',
+                (onData) => {
+                    if (mouseLeftDown && downDrag) {
+                        let newEndIndex = dayDatas.findIndex(ele => ele.date == weekDatas[onData.to - 1]?.date)
+                        endIndex = endIndex < newEndIndex ? endIndex : newEndIndex
+                        dragChart = "week"
+                    }
+                }
+            )
+            document.addEventListener('mouseup', () => {
+                if (mouseLeftDown && downDrag && dragChart == "day") {
+                    forSetInterval(endIndex, endIndex, dayDatas, true)
+                }
+
+                if (mouseLeftDown && downDrag && dragChart == "week") {
+                    forSetInterval(endIndex, endIndex, dayDatas, true, true)
+                }
+
+                dragChart = ""
+                downDrag = false
+                mouseLeftDown = false
+            })
+
+        });
+
+
+        function forSetInterval(currentDayIndex, endIndex, dayDatas, applyDay = true, applyWeek = true) {
+            let timer = setInterval(function () {
+                if (timer && currentDayIndex > endIndex) { //for2
+                    clearInterval(timer)
+                    return
+                }
+
+                let currentDayList = dayDatas.slice(0, currentDayIndex + 1).calKdj().calBoll().maN(10, "close").cal9转().calMacd()
+                currentDayList = calculationBias(currentDayList)
+
+                let currentWeekList = dayToPeriod(currentDayList, "week").calKdj().cal9转().calBoll().calMacd().maN(10, 'close')
+                currentWeekList = calculationBias(currentWeekList)
+
+                let currentMonthList = dayToPeriod(currentDayList, "month").calKdj().cal9转().calBoll().calMacd()
+                    .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
+                currentMonthList = calculationBias(currentMonthList)
+
+                if (noChart) {
+                } else {
+                    //applyDay重置对齐
+                    if (applyDay) chartDay.applyNewData(currentDayList)
+                    if (applyWeek) chartWeek.applyNewData(currentWeekList)
+                    chartMonth.applyNewData(currentMonthList)
+                }
+                currentDayIndex++ //for3
+            }, 1)
+        }
+
+    </script>
+</body>
+
+</html>
