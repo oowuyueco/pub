@@ -17716,5 +17716,5 @@ var 科创50 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.科创50 = 科创50
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-01-30 17:57:42"
+    exports.writeDateTime = "2026-01-31 17:47:31"
 };
