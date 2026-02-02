@@ -16434,6 +16434,10 @@ var 沪深300风险溢价差_jiucai = [
     [
         "2026-01-30",
         5.24
+    ],
+    [
+        "2026-02-02",
+        5.37
     ]
 ]
 if (typeof module !== "undefined" && module.exports) { exports.沪深300风险溢价差_jiucai = 沪深300风险溢价差_jiucai
