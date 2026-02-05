@@ -1138,6 +1138,23 @@
                     data: 信贷脉冲_MA.filterAndAddStartEnd()
                 },
 
+                {
+                    name: "Assets周1",
+                    type: "line",
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.9,
+                    },
+                    data: Assets周.map((item, index) => {
+                        // let tmp = []
+                        // tmp[0] = item.date
+                        // tmp[1] = item?.CYQ[0] ? item?.CYQ[0] : ""
+                        return item
+                    }).filterAndAddStartEnd()
+                },
 
                 {
                     name: "Assets周",
@@ -2706,18 +2723,33 @@
                 option.yAxis[1].max = 40
                 option.yAxis[1].min = 20
                 params.selected.pmi = false
-                params.selected.油糖比 = false
+                params.selected.铜金比 = false
+                params.selected.Assets周1 = false
                 params.selected.境外持仓 = false
                 params.selected.基金对比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
+
+            if (params.name === "Assets周1" && params.selected["Assets周1"] === true) {
+                option.yAxis[1].max = 12
+                option.yAxis[1].min = 0.5
+                params.selected.铜金比 = false
+                params.selected.信贷脉冲 = false
+                params.selected.信贷脉冲_MA = false
+                params.selected.境外持仓 = false
+                params.selected.基金对比 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+
             if (params.name === "pmi" && params.selected["pmi"] === true) {
                 option.yAxis[1].max = 250
                 option.yAxis[1].min = -155
                 params.selected.铜金比 = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
+                params.selected.Assets周1 = false
                 params.selected.境外持仓 = false
                 params.selected.基金对比 = false
                 option.legend.selected = params.selected
@@ -2729,6 +2761,7 @@
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
+                params.selected.Assets周1 = false
                 params.selected.境外持仓 = false
                 params.selected.基金对比 = false
                 option.legend.selected = params.selected
@@ -2740,6 +2773,7 @@
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
+                params.selected.Assets周1 = false
                 params.selected.铜金比 = false
                 params.selected.基金对比 = false
                 option.legend.selected = params.selected
@@ -2751,6 +2785,7 @@
                 params.selected.pmi = false
                 params.selected.信贷脉冲 = false
                 params.selected.信贷脉冲_MA = false
+                params.selected.Assets周1 = false
                 params.selected.铜金比 = false
                 params.selected.境外持仓 = false
                 option.legend.selected = params.selected
@@ -2769,10 +2804,10 @@
                         !serie.name.includes("大宗") && !serie.name.includes("next")
                         && (serie.name.includes("位") || serie.name.includes("策略"))
                     )
-                        myChart.dispatchAction({
-                            type: 'legendToggleSelect',
-                            name: serie.name
-                        });
+                    myChart.dispatchAction({
+                        type: 'legendToggleSelect',
+                        name: serie.name
+                    });
                 }
             }
 
@@ -2837,6 +2872,10 @@
                 name: "pmi"
             })
 
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "Assets周1"
+            })
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "Assets周"
