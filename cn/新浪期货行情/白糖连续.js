@@ -48768,11 +48768,21 @@ var 白糖连续 = [
     "volume": 241487,
     "hold": 443522,
     "settle": 5222
+  },
+  {
+    "date": "2026-02-06",
+    "open": 5215,
+    "high": 5250,
+    "low": 5210,
+    "close": 5228,
+    "volume": 258125,
+    "hold": 446908,
+    "settle": 5231
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.白糖连续 = 白糖连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-02-05 18:07:07"
+    exports.writeDateTime = "2026-02-06 18:05:16"
 };
