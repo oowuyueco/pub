@@ -401,6 +401,7 @@
 
             return candleList
         }
+
         const min期权days = 20
 
         if (期权到期日类型 == "股指周五") {
@@ -1787,7 +1788,8 @@
             let buyCount;
             if (curBuy.length >= buyPriceIndex) {
                 let optionStartPrice = curBuy[buyPriceIndex] * 期权倍数;
-                buyCount = Math.ceil(buyCash / optionStartPrice); //向上取整
+                buyCount = +(buyCash / optionStartPrice).toFixed(2); //精确张数 允许小数测试
+                if (buyCount > 1) buyCount = Math.ceil(buyCash / optionStartPrice); //向xia取整
                 buyCash = buyCount * optionStartPrice + buyCount * 单张费用;//包含手续费
                 总费用 = 总费用 + buyCount * 单张费用
             }
@@ -1831,18 +1833,16 @@
             return 期权arr[0] + "," + 期权arr[1] + "," + 期权arr[2];
         }
         function extr张数(str) {
-            // 使用正则表达式匹配下划线和"张"之间的数字
-            const regex = /:(\d+)张/g;
-            const matches = [];
-            let match;
+            // 1. 以"张"分割，取其前部分（确保"张"存在）
+            const prefix = str.split('张')[0];
+            if (!prefix) return NaN;
 
-            // 循环获取所有匹配结果
-            while ((match = regex.exec(str)) !== null) {
-                // 将匹配到的数字字符串转换为整数并存入数组
-                matches.push(parseInt(match[1], 10));
-            }
+            // 2. 从分割结果末尾匹配连续的数字/小数点（自动跳过末尾空格等非数字字符）
+            const match = prefix.match(/[\d.]+$/);
+            let res = match ? +match[0] : NaN;
+            //console.log("extr张数:", str, "=>", res);
+            return res;
 
-            return +matches[0];
         }
         function extractDate(str) {
             if (!str) return null;

@@ -162,6 +162,26 @@
         let 标星冲突不显示 = true
 
 
+        if (期权到期日类型 == "股指周五") {
+            var nextFirstDeliveryKey = "nextFirstDelivery周五"
+            var nextSecondDeliveryKey = "nextSecondDelivery周五"
+            var nextThirdDeliveryKey = "nextThirdDelivery周五"
+
+            var 期权标的资产 = 沪深300
+            var 期权标的资产Name = "沪深300"
+        }
+
+        if (期权到期日类型 == "ETF周三") {
+            var nextFirstDeliveryKey = "nextFirstDelivery周三"
+            var nextSecondDeliveryKey = "nextSecondDelivery周三"
+            var nextThirdDeliveryKey = "nextThirdDelivery周三"
+
+            var 期权标的资产 = 沪深300ETF
+            var 期权标的资产Name = "沪深300ETF"
+        }
+
+        console.log("期权到期日类型", 期权到期日类型)
+
         let trigDateArr = Object.keys(triggerLogObj指数.按日期排序)
 
 
@@ -201,37 +221,37 @@
             let next1kline = [
                 date,
                 0,//open
-                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
-                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
-                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+                profileN.hasOwnProperty(nextFirstDeliveryKey) ? +profileN[nextFirstDeliveryKey].high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                profileN.hasOwnProperty(nextFirstDeliveryKey) ? +profileN[nextFirstDeliveryKey].low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                profileN.hasOwnProperty(nextFirstDeliveryKey) ? +profileN[nextFirstDeliveryKey].close.split(",")[2] : +profileN.after.close.split(",")[2],//close
 
-                profileN.nextSecondDelivery周三 ? "nextSecondDelivery周三" : `after${profileN.after.close.split("->")[0]}`,
-                profileN?.nextFirstDelivery周三 ? +profileN.nextFirstDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+                profileN.hasOwnProperty(nextFirstDeliveryKey) ? nextSecondDeliveryKey : `after${profileN.after.close.split("->")[0]}`,
+                profileN.hasOwnProperty(nextFirstDeliveryKey) ? +profileN[nextFirstDeliveryKey].close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
 
             ]
 
             let next2kline = [
                 date,
                 0,//open
-                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.high.split(",")[2] : +profileN.after.high.split(",")[2],//up
-                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.low.split(",")[2] : +profileN.after.low.split(",")[2],//low
-                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[2] : +profileN.after.close.split(",")[2],//close
+                profileN.hasOwnProperty(nextSecondDeliveryKey) ? +profileN[nextSecondDeliveryKey].high.split(",")[2] : +profileN.after.high.split(",")[2],//up
+                profileN.hasOwnProperty(nextSecondDeliveryKey) ? +profileN[nextSecondDeliveryKey].low.split(",")[2] : +profileN.after.low.split(",")[2],//low
+                profileN.hasOwnProperty(nextSecondDeliveryKey) ? +profileN[nextSecondDeliveryKey].close.split(",")[2] : +profileN.after.close.split(",")[2],//close
 
-                profileN.nextSecondDelivery周三 ? "nextSecondDelivery周三" : `after${profileN.after.close.split("->")[0]}`,
-                profileN.nextSecondDelivery周三 ? +profileN.nextSecondDelivery周三.close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
+                profileN.hasOwnProperty(nextSecondDeliveryKey) ? nextSecondDeliveryKey : `after${profileN.after.close.split("->")[0]}`,
+                profileN.hasOwnProperty(nextSecondDeliveryKey) ? +profileN[nextSecondDeliveryKey].close.split(",")[1] : +profileN.after.close.split(",")[1],//close 点位变化
 
             ]
 
-            if (trig策略s[0].includes("高位") && (profileN.hasOwnProperty("nextFirstDelivery周三") || profileN.hasOwnProperty("after")) && +date.substring(0, 4) > 2008)
+            if (trig策略s[0].includes("高位") && (profileN.hasOwnProperty(nextFirstDeliveryKey) || profileN.hasOwnProperty("after")) && +date.substring(0, 4) > 2008)
                 高位next1.push(next1kline)
 
-            if (trig策略s[0].includes("高位") && (profileN.hasOwnProperty("nextSecondDelivery周三") || profileN.hasOwnProperty("after")) && +date.substring(0, 4) > 2008)
+            if (trig策略s[0].includes("高位") && (profileN.hasOwnProperty(nextSecondDeliveryKey) || profileN.hasOwnProperty("after")) && +date.substring(0, 4) > 2008)
                 高位next2.push(next2kline)
 
-            if (trig策略s[0].includes("低位") && (profileN.hasOwnProperty("nextFirstDelivery周三") || profileN.hasOwnProperty("after")))
+            if (trig策略s[0].includes("低位") && (profileN.hasOwnProperty(nextFirstDeliveryKey) || profileN.hasOwnProperty("after")))
                 低位next1.push(next1kline)
 
-            if (trig策略s[0].includes("低位") && (profileN.hasOwnProperty("nextSecondDelivery周三") || profileN.hasOwnProperty("after")))
+            if (trig策略s[0].includes("低位") && (profileN.hasOwnProperty(nextSecondDeliveryKey) || profileN.hasOwnProperty("after")))
                 低位next2.push(next2kline)
         }
 
@@ -2804,10 +2824,10 @@
                         !serie.name.includes("大宗") && !serie.name.includes("next")
                         && (serie.name.includes("位") || serie.name.includes("策略"))
                     )
-                    myChart.dispatchAction({
-                        type: 'legendToggleSelect',
-                        name: serie.name
-                    });
+                        myChart.dispatchAction({
+                            type: 'legendToggleSelect',
+                            name: serie.name
+                        });
                 }
             }
 
