@@ -27458,11 +27458,21 @@ var 锰硅连续 = [
     "volume": 118851,
     "hold": 354221,
     "settle": 5862
+  },
+  {
+    "date": "2026-02-05",
+    "open": 5850,
+    "high": 5908,
+    "low": 5846,
+    "close": 5884,
+    "volume": 161205,
+    "hold": 350906,
+    "settle": 5884
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.锰硅连续 = 锰硅连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-02-04 18:06:00"
+    exports.writeDateTime = "2026-02-05 18:07:02"
 };
