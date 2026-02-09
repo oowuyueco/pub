@@ -29808,11 +29808,21 @@ var 鸡蛋连续 = [
     "volume": 164058,
     "hold": 149120,
     "settle": 2908
+  },
+  {
+    "date": "2026-02-09",
+    "open": 3152,
+    "high": 3168,
+    "low": 3137,
+    "close": 3149,
+    "volume": 87080,
+    "hold": 183162,
+    "settle": 3152
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.鸡蛋连续 = 鸡蛋连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-02-07 17:50:44"
+    exports.writeDateTime = "2026-02-09 18:33:23"
 };
