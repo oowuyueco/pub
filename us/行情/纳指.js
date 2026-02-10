@@ -75250,11 +75250,23 @@ var 纳指 = [
     "volume": 9266510662,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-02-09",
+    "timestamp": 1770613200000,
+    "open": 22952.242,
+    "high": 23314.67,
+    "low": 22878.369,
+    "close": 23238.67,
+    "percent": 0.901,
+    "volume": 8360665247,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.纳指 = 纳指
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-02-09 18:32:44"
+    exports.writeDateTime = "2026-02-10 18:15:18"
 };
