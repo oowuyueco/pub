@@ -210,6 +210,7 @@
         function asset() {
             this.money = 100000
             this.stocks = {}
+            this.buySellDatePriceInfo = []
             this.buySellLog = []
             this.assetLog = []
             console.log((JSON.stringify(this)))
@@ -231,6 +232,8 @@
                 this.stocks[stockName].currentAmount += buyAmount
             }
             this.stocks[stockName].allCost = parseFloat(this.stocks[stockName].allCost.toFixed(2))
+
+            this.buySellDatePriceInfo.push([...stockArr, "buy", afterDayProfile(stockArr[0], [], 沪深300)])
 
             let buyLog = `[${condArr.join("  ")}] [${stockArr}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
             this.buySellLog.push(buyLog)
@@ -254,6 +257,8 @@
             this.stocks[stockName].currentAmount -= sellAmount
 
             this.stocks[stockName].allIncome = parseFloat(this.stocks[stockName].allIncome.toFixed(2))
+
+            this.buySellDatePriceInfo.push([...stockArr, "sell", afterDayProfile(stockArr[0], [], 沪深300)])//date price index ""
 
             let sellLog = `[${condArr.join("  ")}] [${stockArr}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
             this.buySellLog.push(sellLog)
@@ -588,6 +593,7 @@
 
             return { value: [ele[0], ele[1]], symbol: 'none', symbolSize: 0 }
         })
+        console.log(lastAsset默认.buySellDatePriceInfo)
         console.groupEnd();
 
         console.groupCollapsed("备用");
@@ -650,6 +656,7 @@
 
             return { value: [ele[0], ele[1]], symbol: 'none', symbolSize: 0 }
         })
+        console.log(lastAsset备用.buySellDatePriceInfo)
         console.groupEnd();
 
         option = {

@@ -82,6 +82,7 @@
     <script type="text/javascript" src="./cn/股债差300平均,滚动市盈率300.js"></script>
     <script type="text/javascript" src="./cn/滚动市盈率恒指.js"></script>
     <script type="text/javascript" src="./cn/沪深300PE中位数,全A股PE中位数,十年期国债利率倒数.js"></script>
+    <script type="text/javascript" src="./cn/沪深300PE中位数_lixinger.js"></script>
     <script type="text/javascript" src="./cn/沪深300同比,上证同比.js"></script>
     <script type="text/javascript" src="./cn/财新制造业PMI,官方制造业PMI.js"></script>
     <script type="text/javascript" src="./cn/商品房销售.js"></script>
@@ -3396,6 +3397,23 @@
                     },
                 },
                 {
+                    name: "中位PE", //紫色 沪深300PE中位数_lixinger
+                    type: "line",
+                    xAxisIndex: 2,
+                    yAxisIndex: 4,
+                    data: 沪深300PE中位数_lixinger.map(ele => {
+                        return [ele[0], (1 / parseFloat(ele[1]) * 100).toFixed(2)]
+                    }).addStartEnd(),
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: {
+                        type: "dotted",
+                        width: 1,
+                        color: "#b749fd",
+                    },
+                    zlevel: 1,
+                },
+                {
                     name: "中位PE", //橘色 全a剔除后中位
                     type: "line",
                     xAxisIndex: 2,
@@ -3601,6 +3619,51 @@
                 },
 
 
+                {//基金策略
+                    name: '基金策略',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
+                    symbol: 'pin',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 6
+                    },
+                    zlevel: 1,
+                    data: 基金策略低位ByDay.filter((item) => {
+                        return !item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], 43.5]
+                    }).addStartEnd()
+                },
+                {
+                    name: '基金策略',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
+                    symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 1,
+                    data: 基金策略低位ByDay.filter((item) => {
+                        return item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], 40.5]
+                    }).addStartEnd()
+                },
+
 
 
                 {//指数沪深300D
@@ -3661,53 +3724,6 @@
                         return tmp
                     }).addStartEnd(),
                 },
-
-                {//基金策略
-                    name: '基金策略',
-                    type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 12,
-                    symbol: 'pin',
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "green"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 6
-                    },
-                    zlevel: 1,
-                    data: 基金策略低位ByDay.filter((item) => {
-                        return !item[3].includes("★")
-                    }).map((item) => {
-                        return [item[0], 43.5]
-                    }).addStartEnd()
-                },
-                {
-                    name: '基金策略',
-                    type: 'scatter',
-                    xAxisIndex: 6,
-                    yAxisIndex: 12,
-                    symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "green"
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 8
-                    },
-                    zlevel: 1,
-                    data: 基金策略低位ByDay.filter((item) => {
-                        return item[3].includes("★")
-                    }).map((item) => {
-                        return [item[0], 40.5]
-                    }).addStartEnd()
-                },
-
-
 
 
                 {//股同比
@@ -4062,7 +4078,7 @@
                     data: M1_M2_MA.addStartEnd(),
                 },
 
-                {
+                {//us-cn-M
                     name: '金融脉动增速us',
                     type: 'line',
                     xAxisIndex: 7,

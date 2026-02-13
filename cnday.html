@@ -307,11 +307,13 @@
                 (ele?.trigcalType && ele?.trigcalType != "") ? ele.trigcalType : ele.quantName,
                 item[afterKey] ? N : item.lastDay
 
-                //, ele.fuckTrig1[2], ele.test //测试用
+                , ele?.test //测试用
+                //, ele.fuckTrig1[2], 
             ]
         }
 
         function fliterNday大宗(oldArr) {
+            return oldArr
             let arrNew = []
             function noSameOrNday(ele) {
                 return arrNew.find(eleNew => {
@@ -337,9 +339,11 @@
         let 大宗低位KDJ = triggerLogObj大宗.低位KDJ.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
         let 大宗低位九转 = triggerLogObj大宗.低位九转.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
         let 大宗低位低量 = triggerLogObj大宗.低位低量.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 低位黄金VKM多叉 = triggerLogObj大宗.低位黄金VKM多叉.map((ele) => toKline(ele)).sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+
 
         let 大宗高位 = [...大宗高位KDJ, ...大宗高位九转, ...大宗高位低量].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
-        let 大宗低位 = [...大宗低位KDJ, ...大宗低位九转, ...大宗低位低量].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
+        let 大宗低位 = [...大宗低位KDJ, ...大宗低位九转, ...大宗低位低量, ...低位黄金VKM多叉].sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
         let filter大宗高位 = fliterNday大宗(大宗高位)
         let filter大宗低位 = fliterNday大宗(大宗低位)
@@ -1439,6 +1443,15 @@
                     yAxisIndex: 0,
                     zlevel: 3,
                     data: 大宗低位低量.ohlc2oclh().filterAndAddStartEnd(),
+                    barWidth: 2,
+                },
+                {
+                    name: '黄金低位多叉',
+                    type: 'candlestick',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    zlevel: 3,
+                    data: 低位黄金VKM多叉.ohlc2oclh().filterAndAddStartEnd(),
                     barWidth: 2,
                 },
 
