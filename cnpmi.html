@@ -233,7 +233,7 @@
             }
             this.stocks[stockName].allCost = parseFloat(this.stocks[stockName].allCost.toFixed(2))
 
-            this.buySellDatePriceInfo.push([...stockArr, "buy", afterDayProfile(stockArr[0], [], 沪深300)])
+            this.buySellDatePriceInfo.push([...stockArr, "buy", afterDayProfile(stockArr[0], [], 沪深300), condArr, count ])
 
             let buyLog = `[${condArr.join("  ")}] [${stockArr}], Buy ${bili} ${stockName}:  ${cost}=>${buyPrice}*${buyAmount}  ${buyCond}`
             this.buySellLog.push(buyLog)
@@ -258,7 +258,7 @@
 
             this.stocks[stockName].allIncome = parseFloat(this.stocks[stockName].allIncome.toFixed(2))
 
-            this.buySellDatePriceInfo.push([...stockArr, "sell", afterDayProfile(stockArr[0], [], 沪深300)])//date price index ""
+            this.buySellDatePriceInfo.push([...stockArr, "sell", afterDayProfile(stockArr[0], [], 沪深300), condArr, count ])//date price index ""
 
             let sellLog = `[${condArr.join("  ")}] [${stockArr}], Sell ${bili} ${stockName}: ${income}<=${sellPrice}*${sellAmount}  ${sellCond}`
             this.buySellLog.push(sellLog)
