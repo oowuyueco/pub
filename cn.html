@@ -366,7 +366,7 @@
     <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/行情/上证.js"></script>
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
-    <script type="text/javascript" src="./cn/行情/期权策略.js"></script>
+    <script type="text/javascript" src="./cn/行情/区间策略.js"></script>
     <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script>
@@ -813,8 +813,8 @@
         console.log(changeLog1(基金策略低位ByDay), 基金策略低位By期权日)
         console.groupEnd()
 
-        //期权策略
-        function 统计区间期权策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10) {
+        //区间策略
+        function 统计区间策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10) {
             let 区间ByDay = {}
             let 区间By期权日 = {}
             for (let [日期区间, 区间trigDateArr] of Object.entries(triggerLogObj区间[区间类型])) {
@@ -942,12 +942,12 @@
                 区间By期权日: 区间By期权日,
             }
         }
-        let 上升区间期权策略 = 统计区间期权策略("上升日期区间")
-        let 下降区间期权策略 = 统计区间期权策略("下降日期区间")
-        let 上升区间ByDay = 上升区间期权策略.区间ByDay
-        let 上升区间By期权日 = 上升区间期权策略.区间By期权日
-        let 下降区间ByDay = 下降区间期权策略.区间ByDay
-        let 下降区间By期权日 = 下降区间期权策略.区间By期权日
+        let 上升区间策略 = 统计区间策略("上升日期区间")
+        let 下降区间策略 = 统计区间策略("下降日期区间")
+        let 上升区间ByDay = 上升区间策略.区间ByDay
+        let 上升区间By期权日 = 上升区间策略.区间By期权日
+        let 下降区间ByDay = 下降区间策略.区间ByDay
+        let 下降区间By期权日 = 下降区间策略.区间By期权日
 
         上升区间By期权日.all = []
         for (const [区间Date, trigDateArr] of Object.entries(上升区间By期权日)) {
@@ -1016,10 +1016,10 @@
 
             return result
         }
-        console.groupCollapsed("期权策略上区ByDay   期权策略上区By期权日")
+        console.groupCollapsed("区间策略上区ByDay   区间策略上区By期权日")
         console.log(changeLog2(上升区间ByDay), 上升区间By期权日)
         console.groupEnd()
-        console.groupCollapsed("期权策略下区ByDay   期权策略下区By期权日")
+        console.groupCollapsed("区间策略下区ByDay   区间策略下区By期权日")
         console.log(changeLog2(下降区间ByDay), 下降区间By期权日)
         console.groupEnd()
 
@@ -1427,7 +1427,7 @@
         }
 
         //抽取22-4-27  22-3-23
-        let 期权策略建议ByDay = []
+        let 区间策略建议ByDay = []
         for (let index = allBy期权日.length - 1; index >= 0; index--) {
             const element = allBy期权日[index]
             let endDate = element[0].substring(5)
@@ -1453,12 +1453,12 @@
 
                 let pushArr = [startDate, endDate, 星位箭, `${startClose} ${direType}${cur期权标的资产Name} ${excpEndClose}`]
                 pushArr.tAr = eleArr.at(atId)[1] + ""
-                期权策略建议ByDay.unshift(pushArr)
+                区间策略建议ByDay.unshift(pushArr)
             }
         }
 
-        期权策略建议ByDay = Array.from(new Map(
-            期权策略建议ByDay.map(item => [`${item[0]}-${item[1]}`, item])
+        区间策略建议ByDay = Array.from(new Map(
+            区间策略建议ByDay.map(item => [`${item[0]}-${item[1]}`, item])
         ).values())
 
     </script>
@@ -1597,7 +1597,7 @@
         if (期权startDate == "false") 期权startDate = "2020-01-01" //默认设置开始日期同时减小计算量
         if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
 
-        let 期权买卖List = structuredClone(期权策略建议ByDay)
+        let 期权买卖List = structuredClone(区间策略建议ByDay)
             .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
             .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
             .map((ele, index) => {
@@ -1626,8 +1626,8 @@
 
         期权买卖List = filterArrayBySecondElement(期权买卖List, 5)
 
-        console.groupCollapsed("allBy期权日  期权策略建议ByDay  期权买卖List")
-        console.log(allBy期权日, 期权策略建议ByDay, 期权买卖List)
+        console.groupCollapsed("allBy期权日  区间策略建议ByDay  期权买卖List")
+        console.log(allBy期权日, 区间策略建议ByDay, 期权买卖List)
         console.groupEnd()
         console.log("    ")
 
@@ -3482,8 +3482,8 @@
 
 
 
-                {//期权策略
-                    name: '期权策略',
+                {//区间策略
+                    name: '区间策略',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 6,
@@ -3498,14 +3498,14 @@
                         return 5
                     },
                     zlevel: 1,
-                    data: 期权策略建议ByDay.filter((item) => {
+                    data: 区间策略建议ByDay.filter((item) => {
                         return (item[2].includes("高") || item[2].includes("↓")) && item.tAr.includes("_")
                     }).map((item) => {
                         return [item[0], 19]
                     }).addStartEnd()
                 },
                 {
-                    name: '期权策略',
+                    name: '区间策略',
                     type: 'scatter',
                     xAxisIndex: 3,
                     yAxisIndex: 6,
@@ -3520,7 +3520,7 @@
                         return 5
                     },
                     zlevel: 1,
-                    data: 期权策略建议ByDay.filter((item) => {
+                    data: 区间策略建议ByDay.filter((item) => {
                         return (item[2].includes("低") || item[2].includes("↑")) && item.tAr.includes("_")
                     }).map((item) => {
                         return [item[0], 19]
@@ -4156,7 +4156,7 @@
 
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
-                name: "期权策略"
+                name: "区间策略"
             });
 
             myChart.dispatchAction({
