@@ -1,4 +1,4 @@
-var triggerLogObj期权 = {
+var triggerLogObj区间 = {
   "上升日期区间": {
     "2008-12-04=>2009-07-27": {
       "2008-12-04": [

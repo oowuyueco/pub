@@ -379,7 +379,7 @@
 
     function getCurDate区间类型(curDate) {
       let curDate日期区间 = ""
-      Object.keys(triggerLogObj期权.上升日期区间).forEach(key => {
+      Object.keys(triggerLogObj区间.上升日期区间).forEach(key => {
         let dateRange = key.split("=>");
         let startDate = dateRange[0];
         let endDate = dateRange[1];
@@ -388,7 +388,7 @@
           return
         }
       });
-      Object.keys(triggerLogObj期权.下降日期区间).forEach(key => {
+      Object.keys(triggerLogObj区间.下降日期区间).forEach(key => {
         let dateRange = key.split("=>");
         let startDate = dateRange[0];
         let endDate = dateRange[1];

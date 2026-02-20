@@ -607,7 +607,7 @@
         function 统计区间区间策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10) {
             let 区间ByDay = {}
             let 区间By期权日 = {}
-            for (let [日期区间, 区间trigDateArr] of Object.entries(triggerLogObj期权[区间类型])) {
+            for (let [日期区间, 区间trigDateArr] of Object.entries(triggerLogObj区间[区间类型])) {
 
                 let trigDateArr = Object.entries(区间trigDateArr)
                     .map((ele, index, preArr) => {
@@ -825,7 +825,7 @@
             let trigDateArrPmi股债 = Object.entries(triggerLogObjPmi股债).filter((ele, index) => { return ele[1][0].includes(高低位) })
 
             let trigDateArr期权 = []
-            Object.entries(triggerLogObj期权.上升日期区间).forEach(([日期区间, 区间trigDateArr]) => {
+            Object.entries(triggerLogObj区间.上升日期区间).forEach(([日期区间, 区间trigDateArr]) => {
                 Object.entries(区间trigDateArr).forEach(([trigDate, trigNameObjArr]) => {
                     let newArrNames = trigNameObjArr.map((ele, index) => {
                         if (index != trigNameObjArr.length - 1) return ele.quantName
@@ -834,7 +834,7 @@
                     trigDateArr期权.push([trigDate, newArrNames])
                 })
             })
-            Object.entries(triggerLogObj期权.下降日期区间).forEach(([日期区间, 区间trigDateArr]) => {
+            Object.entries(triggerLogObj区间.下降日期区间).forEach(([日期区间, 区间trigDateArr]) => {
                 Object.entries(区间trigDateArr).forEach(([trigDate, trigNameObjArr]) => {
                     let newArrNames = trigNameObjArr.map((ele, index) => {
                         if (index != trigNameObjArr.length - 1) return ele.quantName
@@ -1582,7 +1582,7 @@
         }
         function getCurDate区间类型(curDate) {
             let curDate日期区间 = ""
-            Object.keys(triggerLogObj期权.上升日期区间).forEach(key => {
+            Object.keys(triggerLogObj区间.上升日期区间).forEach(key => {
                 let dateRange = key.split("=>");
                 let startDate = dateRange[0];
                 let endDate = dateRange[1];
@@ -1591,7 +1591,7 @@
                     return
                 }
             });
-            Object.keys(triggerLogObj期权.下降日期区间).forEach(key => {
+            Object.keys(triggerLogObj区间.下降日期区间).forEach(key => {
                 let dateRange = key.split("=>");
                 let startDate = dateRange[0];
                 let endDate = dateRange[1];
@@ -2696,7 +2696,20 @@
                     axisLabel: {
                         show: false
                     },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            precision: 0,
+                            formatter: (params) => {
+                                if (params?.value > 0) return params.value.toFixed(0)
+                                else return undefined
+                            },
+                            color: "black",
+                            backgroundColor: 'rgba(128, 128, 128, 0)'
+                        }
+                    },
                     offset: -90,
+                    interval: 1,
                     max: 20,
                     min: -17.5,
                     position: "left",
