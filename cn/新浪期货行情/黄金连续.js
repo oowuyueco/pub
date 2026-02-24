@@ -44118,11 +44118,21 @@ var 黄金连续 = [
     "volume": 303568,
     "hold": 153140,
     "settle": 1111.36
+  },
+  {
+    "date": "2026-02-24",
+    "open": 1160,
+    "high": 1162.32,
+    "low": 1142,
+    "close": 1150.5,
+    "volume": 126903,
+    "hold": 157411,
+    "settle": 1151.54
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.黄金连续 = 黄金连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-02-23 18:15:22"
+    exports.writeDateTime = "2026-02-24 18:12:52"
 };
