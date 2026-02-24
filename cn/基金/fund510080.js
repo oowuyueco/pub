@@ -11683,7 +11683,7 @@ var 长盛全债_沪深300_上证_债A股8 = [
         "债A股8": null
     }
 ];
-var runDate = "2026-02-24";
+var runDate = "2026-02-25";
 if (typeof module !== "undefined" && module.exports) {
     exports.长盛全债_沪深300_上证_债A股8 = 长盛全债_沪深300_上证_债A股8
 }
