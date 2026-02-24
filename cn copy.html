@@ -1093,20 +1093,32 @@
             }
             function allow高位(curKInfo, trigArr, trigArrIndex) {
                 //空 十字 
-                let cond0 = true &&
+
+                let cond_3 = true &&
                     trigArr[trigArrIndex][3] == "高★" &&
-                    curtPercent(curKInfo) >= 0 &&
-                    curKInfo.percent >= 0 &&
+                    (upAllPre(curKInfo) || curtPercent(curKInfo) >= 0 || curKInfo.percent >= 0) &&
+                    trigArr[trigArrIndex][1].length >= 10
+                if (cond_3) return true
+
+                let cond_2 = true &&
+                    trigArr[trigArrIndex][3] == "高★" &&
+                    curtPercent(curKInfo) > 0 &&
+                    curKInfo.percent > 0 &&
                     (
-                        curKInfo.index - kInfoArr.at(-1).index > 5 ||
+                        upAllPre(curKInfo) ||
                         trigArr[trigArrIndex][1].length >= 3
                     )
-                if (cond0) return true
+                if (cond_2) return true
 
-                let cond1 = true &&
+                let cond_1 = true &&
+                    trigArr[trigArrIndex][3] == "高★" &&
+                    (trigArr[trigArrIndex][1] + "").includes("Pmi股债")
+                if (cond_1) return true
+
+                let cond0 = true &&
                     trigArr[trigArrIndex][3] == "高★" &&
                     (trigArr[trigArrIndex][1] + "").includes("VKM多叉")
-                if (cond1) return true
+                if (cond0) return true
 
                 let cond2 = true &&
                     upAllPre(curKInfo) &&
@@ -1131,7 +1143,11 @@
             }
             function allow低位(curKInfo, trigArr, trigArrIndex) {
 
-                //2024-09-23
+                let cond_3 = true &&
+                    trigArr[trigArrIndex][3] == "低★" &&
+                    (trigArr[trigArrIndex][1] + "").includes("Pmi股债")
+                if (cond_3) return true
+
                 let cond_2 = true &&
                     trigArr[trigArrIndex][3] == "低★" &&
                     (trigArr[trigArrIndex][1] + "").includes("VKM多叉")
@@ -1145,6 +1161,13 @@
                         trigArr[trigArrIndex][1].length >= 3
                     )
                 if (cond_1) return true
+
+
+                let cond_0 = true &&
+                    trigArr[trigArrIndex][3] == "低★" &&
+                    (lowAllPre(curKInfo) || curtPercent(curKInfo) <= 0 || curKInfo.percent <= 0) &&
+                    trigArr[trigArrIndex][1].length >= 10
+                if (cond_0) return true
 
                 let cond0 = true &&
                     trigArr[trigArrIndex][3] == "低★" &&
@@ -1276,6 +1299,8 @@
             ["2023-04-11", "2023-05-19", "高位", "4100.15 沽沪深300模拟 3977.145", "IO2305-P-4000.xlsx"],
             ["2023-01-30", "2023-03-17", "高位", "4201.35 沽沪深300模拟 4075.31", "IO2303-P-4100.xlsx"],
             ["2022-12-27", "2023-02-17", " ↑ ", "3887.85 购沪深300模拟 4004.486", "IO2302-C-4000.xlsx"],
+
+            ['2022-12-01', '2023-01-20', '低★', '3894.77 购沪深300模拟 4011.613', "IO2301-C-4000.xlsx"],
             ["2022-10-28", "2022-12-16", "低位", "3541.33 购沪深300模拟 3647.57", "IO2212-C-3600.xlsx"],
             ["2022-08-22", "2022-10-21", " ↓ ", "4181.4 沽沪深300模拟 4055.958", "IO2210-P-4100.xlsx"],
             ["2022-08-15", "2022-09-16", " ↓ ", "4185.68 沽沪深300模拟 4060.11", "IO2209-P-4100.xlsx"],
@@ -1364,7 +1389,7 @@
         //4期权买卖List
         let 期权买卖List = structuredClone(期权建议ByDay)
             .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-            .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
+            //.filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
             .map((ele, index) => {
                 let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
                 if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
