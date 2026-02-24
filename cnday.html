@@ -154,6 +154,8 @@
 
     </script>
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
+    <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
+    <script type="text/javascript" src="./cn/CnPmi股债策略.js"></script>
     <script>
         let 高位next1 = []
         let 高位next2 = []
@@ -1746,6 +1748,30 @@
                     }).filterAndAddStartEnd()
                 },
 
+                {
+                    name: '高位pmi股债策略',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 13
+                    },
+                    zlevel: 3,
+                    data: Object.entries(triggerLogObjPmi股债).map((item) => {
+                        return [item[0], -11, item[1][0]]
+                    }).filter((ele, index) => {
+                        return ele[2].includes("高位")
+                    }).filterAndAddStartEnd()
+                },
+
+
 
 
                 {
@@ -2335,6 +2361,55 @@
 
 
                 {
+                    name: '基金策略',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: Object.entries(triggerLogObj基金).map((item) => {
+                        return [item[0], 2, "基金策略"]
+                    }).filterAndAddStartEnd()
+                },
+
+
+                {
+                    name: '低位pmi股债策略',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: Object.entries(triggerLogObjPmi股债).map((item) => {
+                        return [item[0], 1, item[1][0]]
+                    }).filter((ele, index) => {
+                        return ele[2].includes("低位")
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+
+
+                {
                     name: '低位空但叉',
                     type: 'scatter',
                     xAxisIndex: 5,
@@ -2860,6 +2935,11 @@
                         name: serie.name
                     });
             }
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "黄金低位多叉"
+            })
 
             let 铜金油糖 = [
                 { name: "沪铜连续", code: "CU0", type: "工业" },

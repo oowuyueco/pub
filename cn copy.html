@@ -1106,6 +1106,7 @@
                     curKInfo.percent > 0 &&
                     (
                         upAllPre(curKInfo) ||
+                        curKInfo.index - kInfoArr.at(-1).index > 5 ||
                         trigArr[trigArrIndex][1].length >= 3
                     )
                 if (cond_2) return true
@@ -1174,6 +1175,7 @@
                     curtPercent(curKInfo) <= 0 &&
                     curKInfo.percent <= 0 &&
                     (
+                        lowAllPre(curKInfo) ||
                         curKInfo.index - kInfoArr.at(-1).index > 5 ||
                         trigArr[trigArrIndex][1].length >= 3
                     )
