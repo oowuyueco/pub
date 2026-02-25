@@ -1925,7 +1925,7 @@ var triggerLogObj区间 = {
         }
       ]
     },
-    "2022-11-03=>2026-02-24": {
+    "2022-11-03=>2026-02-25": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -5251,4 +5251,4 @@ var triggerLogObj区间 = {
     }
   }
 }
-var runLastKlineDate = "2026-02-24"
+var runLastKlineDate = "2026-02-25"
