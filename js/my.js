@@ -176,6 +176,9 @@ function unifyMonthDate(site, date) {
     if (site == "fredDown") {//2019-09-01
         resultDate = date.substring(0, 7) + "-28"
     }
+    if (site == "tradingeco") {//2019-09-01
+        resultDate = date.substring(0, 7) + "-28"
+    }
 
     if (resultDate.substring(0, 7) == currentDayYM) return preDayYMD //当月返回昨日或今日或不处理
     return resultDate
