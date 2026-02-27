@@ -27058,11 +27058,21 @@ var 甲醇连续 = [
     "volume": 889873,
     "hold": 891322,
     "settle": 2232
+  },
+  {
+    "date": "2026-02-27",
+    "open": 2191,
+    "high": 2204,
+    "low": 2177,
+    "close": 2179,
+    "volume": 869536,
+    "hold": 977269,
+    "settle": 2189
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.甲醇连续 = 甲醇连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-02-26 18:12:02"
+    exports.writeDateTime = "2026-02-27 18:04:00"
 };

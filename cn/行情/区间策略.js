@@ -1925,7 +1925,7 @@ var triggerLogObj区间 = {
         }
       ]
     },
-    "2022-11-03=>2026-02-26": {
+    "2022-11-03=>2026-02-27": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -2420,6 +2420,23 @@ var triggerLogObj区间 = {
             "close": "54->2026-02-24,180.88,4",
             "high": "25->2026-01-06,264.03,5.83",
             "low": "12->2025-12-16,-29.11,-0.64"
+          }
+        }
+      ],
+      "2026-02-27": [
+        {
+          "trigDate": "2026-02-27",
+          "quantName": "上证低位_ma10UpMas低连空但",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": ",0,0",
+            "high": ",0,0",
+            "low": ",0,0",
+            "nextFirstDelivery周五": "2026-03-20",
+            "nextSecondDelivery周五": "2026-04-17",
+            "nextThirdDelivery周五": "2026-05-15"
           }
         }
       ]
@@ -5251,4 +5268,4 @@ var triggerLogObj区间 = {
     }
   }
 }
-var runLastKlineDate = "2026-02-26"
+var runLastKlineDate = "2026-02-27"
