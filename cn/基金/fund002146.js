@@ -4491,10 +4491,10 @@ var 长安鑫益_沪深300_债B股15 = [
         "date": "2026-02-27",
         "长安鑫益": 51.62,
         "沪深300": 59.7897,
-        "债B股15": null
+        "债B股15": 18.1694
     }
 ];
-var runDate = "2026-02-27";
+var runDate = "2026-02-28";
 if (typeof module !== "undefined" && module.exports) {
     exports.长安鑫益_沪深300_债B股15 = 长安鑫益_沪深300_债B股15
 }
