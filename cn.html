@@ -23,7 +23,7 @@
             needBack = true
         }
 
-        function pageSendMailBack(msg) {
+        function pageSendMailBack(msg,onfinal) {
             //备用
             fetch("https://formspree.io/f/mkgvzrak", {
                 "headers": {
@@ -54,10 +54,10 @@
             }).catch(error => {
                 let errorStr = "备用 Oops! There was a problem submitting your form"
                 console.log(errorStr)
-            });
+            }).finally(onfinal);
         }
 
-        function pageSendMail(msg) {
+        function pageSendMail(msg,onfinal=()=>{}) {
 
             if (devTestEnv) {
                 console.log("测试环境，邮件内容：", msg)
@@ -65,7 +65,7 @@
             }
 
             if (needBack) {
-                pageSendMailBack(msg)
+                pageSendMailBack(msg,onfinal)
                 return
             }
 
@@ -75,7 +75,7 @@
             emailjs.send("service_76sgm8l", "template_e6c63fe", templateParams).then(
                 (response) => { console.log('emailjs SUCCESS!', response.status, response.text) },
                 (error) => { console.log("emailjs send error"); pageSendMailBack(msg); },
-            );
+            ).finally(onfinal);
         }
 
         //pageSendMail("fukyou")
@@ -2192,12 +2192,11 @@
             console.log("总费用", 总费用, "need入金统计", need入金统计);
 
             const endJs = performance.now();
-            window.optionRunEnd = true
             window.asset = asset
             pageSendMail(`
                 ${currentDayYMD}当日期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒, asset现金:${+asset.现金.toFixed(2)}。 \r\n 
                 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} `
-            );
+            ,() => {window.optionRunEnd = true});
             console.groupEnd();
 
             let profileArr = []
