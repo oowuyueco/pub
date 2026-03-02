@@ -1925,7 +1925,7 @@ var triggerLogObj区间 = {
         }
       ]
     },
-    "2022-11-03=>2026-02-27": {
+    "2022-11-03=>2026-03-02": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -2431,8 +2431,8 @@ var triggerLogObj区间 = {
         },
         {
           "after": {
-            "close": ",0,0",
-            "high": ",0,0",
+            "close": "1->2026-03-02,18.02,0.38",
+            "high": "1->2026-03-02,18.02,0.38",
             "low": ",0,0",
             "nextFirstDelivery周五": "2026-03-20",
             "nextSecondDelivery周五": "2026-04-17",
@@ -5268,4 +5268,4 @@ var triggerLogObj区间 = {
     }
   }
 }
-var runLastKlineDate = "2026-02-27"
+var runLastKlineDate = "2026-03-02"
