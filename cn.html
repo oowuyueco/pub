@@ -23,7 +23,7 @@
             needBack = true
         }
 
-        function pageSendMailBack(msg,onfinal) {
+        function pageSendMailBack(msg, onfinal) {
             //备用
             fetch("https://formspree.io/f/mkgvzrak", {
                 "headers": {
@@ -57,7 +57,7 @@
             }).finally(onfinal);
         }
 
-        function pageSendMail(msg,onfinal=()=>{}) {
+        function pageSendMail(msg, onfinal = () => { }) {
 
             if (devTestEnv) {
                 console.log("测试环境，邮件内容：", msg)
@@ -65,7 +65,7 @@
             }
 
             if (needBack) {
-                pageSendMailBack(msg,onfinal)
+                pageSendMailBack(msg, onfinal)
                 return
             }
 
@@ -2196,7 +2196,7 @@
             pageSendMail(`
                 ${currentDayYMD}当日期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒, asset现金:${+asset.现金.toFixed(2)}。 \r\n 
                 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} `
-            ,() => {window.optionRunEnd = true});
+                , () => { window.optionRunEnd = true });
             console.groupEnd();
 
             let profileArr = []
