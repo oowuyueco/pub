@@ -660,6 +660,36 @@
         console.log(lastAsset备用.buySellDatePriceInfo)
         console.groupEnd();
 
+
+        // var 合并buySellDatePriceInfo = []
+        // for (let index = 0; index < lastAsset默认.buySellDatePriceInfo.length; index++) {
+        //     let cur默认 = lastAsset默认.buySellDatePriceInfo[index];
+        //     let findSameDate备用 = lastAsset备用.buySellDatePriceInfo.find(ele => ele[0] == cur默认[0])
+        //     if (!findSameDate备用) {
+        //         cur默认[1] = "默认"
+        //     } else {
+        //         cur默认[1] = "默认,备用"
+        //         findSameDate备用[1] = "默认,备用"
+        //     }
+        //     合并buySellDatePriceInfo.push(cur默认)
+        // }
+        // for (let index = 0; index < lastAsset备用.buySellDatePriceInfo.length; index++) {
+        //     let cur备用 = lastAsset备用.buySellDatePriceInfo[index];
+        //     if (cur备用[1] != "默认,备用") {
+        //         cur备用[1] = "备用"
+        //         合并buySellDatePriceInfo.push(cur备用)
+        //     }
+        // }
+        // 合并buySellDatePriceInfo.sort((a, b) => {
+        //     let dateA = new Date(a[0]);
+        //     let dateB = new Date(b[0]);
+        //     return dateA - dateB;
+        // })
+        // console.log(合并buySellDatePriceInfo);
+
+        setTimeout(() => { window.pmiGZrunEnd = true; }, 1000)
+
+
         option = {
             title: {},
             tooltip: {
