@@ -759,6 +759,9 @@ var triggerLogObj美股指数 = {
     ],
     "2025-04-25": [
       "日周低位九转"
+    ],
+    "2026-03-02": [
+      "日周月高位九转"
     ]
   },
   "日周月高位九转": [
@@ -791,6 +794,11 @@ var triggerLogObj美股指数 = {
       "trigDate": "2021-10-01",
       "quantName": "日周月高位九转",
       "trueCount": 5
+    },
+    {
+      "trigDate": "2026-03-02",
+      "quantName": "日周月高位九转",
+      "trueCount": 3
     }
   ],
   "标普500低位KDJ": [
@@ -2286,4 +2294,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-02-27"
+var runLastKlineDate = "2026-03-02"
