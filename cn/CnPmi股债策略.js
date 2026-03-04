@@ -1303,4 +1303,4 @@ var triggerLogObjPmi股债 = {
     }
   ]
 }
-var runLasteDate = "2026-03-03"
+var runLasteDate = "2026-03-04"
