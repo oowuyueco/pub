@@ -123694,11 +123694,23 @@ var 道琼斯 = [
     "volume": 511380236,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-03-05",
+    "timestamp": 1772686800000,
+    "open": 48526.73,
+    "high": 48526.73,
+    "low": 47577.11,
+    "close": 47954.74,
+    "percent": -1.61,
+    "volume": 625113747,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.道琼斯 = 道琼斯
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-03-05 16:28:13"
+    exports.writeDateTime = "2026-03-06 16:24:24"
 };
