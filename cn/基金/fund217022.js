@@ -7343,7 +7343,7 @@ var 招商债券_沪深300_创业板_三年定期 = [
         "三年定期": 54.07690000000001
     }
 ];
-var runDate = "2026-03-06";
+var runDate = "2026-03-07";
 if (typeof module !== "undefined" && module.exports) {
     exports.招商债券_沪深300_创业板_三年定期 = 招商债券_沪深300_创业板_三年定期
 }
