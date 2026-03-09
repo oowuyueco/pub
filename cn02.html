@@ -59,6 +59,7 @@
 
         function pageSendMail(msg, onfinal = () => { }) {
 
+            msg = "昨收" + msg
             if (devTestEnv) {
                 console.log("测试环境，邮件内容：", msg)
                 return
@@ -319,7 +320,7 @@
     <script type="text/javascript" src="./cn/行情/区间策略.js"></script>
     <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
     <script type="text/javascript" src="./cn/pmi股债策略.js"></script>
-    <script type="text/javascript" src="./cnThs/今收/同花顺策略.js"></script>
+    <script type="text/javascript" src="./cnThs/昨收/同花顺策略.js"></script>
     <script type="text/javascript" src="./cn/新浪期货行情/大宗策略.js"></script>
     <script>
         Array.prototype.cal9转 = function (kline交易日, priod, N = 5) {
@@ -1450,8 +1451,8 @@
     </script>
 
     <script type="text/javascript" src="./js/xlsx.full.min.js"></script>
-    <script type="text/javascript" src="./cnThs/今收/同花顺策略组1_信号统计.js"></script>
-    <script type="text/javascript" src="./cnThs/今收/同花顺策略组2_大小市值信号统计.js"></script>
+    <script type="text/javascript" src="./cnThs/昨收/同花顺策略组1_信号统计.js"></script>
+    <script type="text/javascript" src="./cnThs/昨收/同花顺策略组2_大小市值信号统计.js"></script>
     <script>
         if (typeof 技术指标统计 === "undefined") var 技术指标统计 = []
         if (typeof 小市值低估 === "undefined") var 小市值低估 = []
