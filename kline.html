@@ -10,8 +10,6 @@
     <script type="text/javascript" src="./js/indicatorCalculation.js"></script>
     <script type="text/javascript" src="./js/my.js"></script>
 
-    <script type="text/javascript" src="../../tempData/test策略.js"></script>
-
     <script>
 
         let jsLoadCount = 0
@@ -28,23 +26,28 @@
                     JS1.src = `./us/行情/${dataName}.js`
             }
 
-            var JS2 = document.createElement("script")
-            JS2.src = `../../tempData/test策略.js`
-
-            JS1.onload = JS2.onload = function () {
+            JS1.onload = function () {
                 jsLoadCount++
-                if (jsLoadCount == 2 && fuc) {
-                    window.trigDateArr = typeof test策略 !== "undefined" && typeof test策略[dataName] !== "undefined" ? test策略[dataName] : []
-                    window.unionAll = typeof test策略 !== "undefined" && typeof test策略?.unionAll ? test策略?.unionAll : []
-                    //console.log(window.unionAll)
-                    fuc()
+                var JS2 = document.createElement("script")
+                JS2.src = `../../tempData/test策略.js`
+                JS2.onload = function () {
+                    jsLoadCount++
+                    if (jsLoadCount == 2) {
+                        //test策略 = test策略.filter(ele => ele[2] > 1)
+                        //window.trigDateArr = test策略
+                        //window.trigDateArr = typeof test策略 !== "undefined" && typeof test策略[dataName] !== "undefined" ? test策略[dataName] : []
+                        //window.unionAll = typeof test策略 !== "undefined" && typeof test策略?.unionAll ? test策略?.unionAll : []
+                        //console.log(window.unionAll)
+                        setTimeout(() => fuc(), 100)
+                    }
                 }
+                JS2.onerror = function (e) { console.error(e) }
+                head.insertBefore(JS2, head.firstChild);
+
             }
-            JS1.onerror = JS2.onerror = function (e) { console.error(e) }
-
-
+            JS1.onerror = function (e) { console.error(e) }
             head.insertBefore(JS1, head.firstChild);
-            head.insertBefore(JS2, head.firstChild);
+
         }
 
         //从后往前N 包含当前的前N个  cnindex
@@ -85,7 +88,7 @@
 </head>
 
 <body style="margin: 0;height: 100%">
-    <div id="chartDay" style="height:80%"></div>
+    <div id="chartDay" style="height:100%"></div>
     <div id="chartWeek" style="height:80%"></div>
     <div id="chartMonth" style="height:80%"></div>
 
@@ -328,8 +331,8 @@
                             drawUps: kLineData.ups,
                             drawLows: kLineData.lows,
                             date: kLineData.date,
-                            trig: window.test策略["unionAll"].find((value, index) => {
-                                return value[0] == kLineData.date
+                            trig: Object.entries(triggerLogObj同花顺).find(ele => {
+                                return ele[0] == kLineData.date && !ele[1][0].includes(":")
                             })
                         }))
                 },
@@ -347,7 +350,8 @@
                         '🍍', '🥥', '🥝', '🥭', '🥑', '🍏'
                     ]
                     const { from, to } = visibleRange
-                    ctx.font = barSpace.gapBar * 3.5 + 'px' + ' Helvetica Neue'
+                    //ctx.font = barSpace.gapBar * 3.5 + 'px' + ' Helvetica Neue'
+                    ctx.font = '15px' + ' Helvetica Neue'
                     ctx.textAlign = 'center'
                     const result = indicator.result
                     for (let i = from; i < to; i++) {
@@ -355,11 +359,79 @@
 
                         const x = xAxis.convertToPixel(i)
                         let drawText = ""
-                        if (data.trig)
-                            drawText = "👆K"//fruits[1]  // data.is9转up ?? data.is9转down  //fruits[Math.floor(Math.random() * 17)] //data.is9转down
-                        ctx.fillStyle = data.trig ? "black" : "green"
-                        let y = yAxis.convertToPixel(data.drawLows) + 15// : yAxis.convertToPixel(data.drawUps) - 15
-                        ctx.fillText(drawText, x, y)
+                        if (data.trig) {
+                            drawText = "↑"
+                            ctx.fillStyle = "#FFFFFF00"
+
+                            if (!data.trig[1][0].includes(":") && !data.trig[1][0].includes("⭐")) ctx.fillStyle = "black"
+                            if (!data.trig[1][0].includes(":") && data.trig[1][0].includes("⭐")) {
+                                ctx.fillStyle = "black"
+                                drawText = "⭐"
+                            }
+
+                            let y = yAxis.convertToPixel(data.drawLows) + 15
+                            ctx.fillText(drawText, x, y)
+                        }
+
+                    }
+                    return false
+                }
+            })
+            klinecharts.registerIndicator({
+                name: 'newTest3',
+                figures: [
+                    { key: 'drawY' }
+                ],
+                calc: (kLineDataList) => {
+                    return kLineDataList.map(
+                        (kLineData) => ({
+                            drawUps: kLineData.ups,
+                            drawLows: kLineData.lows,
+                            date: kLineData.date,
+                            trig: Object.entries(triggerLogObj同花顺).find(ele => {
+                                return ele[0] == kLineData.date && ele[1][0].includes(":")
+                            })
+
+                        }))
+                },
+                draw: ({
+                    ctx,
+                    barSpace,
+                    visibleRange,
+                    indicator,
+                    xAxis,
+                    yAxis
+                }) => {
+                    const fruits = [
+                        '🍏', '🍎', '🍐', '🍊', '🍋', '🍌',
+                        '🍉', '🍇', '🍓', '🍈', '🍒', '🍑',
+                        '🍍', '🥥', '🥝', '🥭', '🥑', '🍏'
+                    ]
+                    const { from, to } = visibleRange
+                    //ctx.font = barSpace.gapBar * 3.5 + 'px' + ' Helvetica Neue'
+                    ctx.font = '15px' + ' Helvetica Neue'
+                    ctx.textAlign = 'center'
+                    const result = indicator.result
+                    for (let i = from; i < to; i++) {
+                        const data = result[i]
+
+                        const x = xAxis.convertToPixel(i)
+                        let drawText = ""
+                        if (data.trig) {
+                            drawText = "↑"
+                            ctx.fillStyle = "#FFFFFF00"
+
+                            if (data.trig[1][0].includes(":") && !data.trig[1][0].includes("⭐") && data.trig[1].at(-1)?.needDele) ctx.fillStyle = "pink"
+                            if (data.trig[1][0].includes(":") && !data.trig[1][0].includes("⭐") && !data.trig[1].at(-1)?.needDele) ctx.fillStyle = "red"
+                            if (data.trig[1][0].includes(":") && data.trig[1][0].includes("⭐")) {
+                                ctx.fillStyle = "red"
+                                drawText = "⭐"
+                            }
+
+                            let y = yAxis.convertToPixel(data.drawLows) + 15
+                            ctx.fillText(drawText, x, y)
+                        }
+
                     }
                     return false
                 }
@@ -445,9 +517,10 @@
             let dayNewMacd = chartDay.createIndicator('newMACD')
             let dayNewBias = chartDay.createIndicator('newBias')
             //let dayBias = chartDay.createIndicator('BIAS')
-            //let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
+            let dayNewTest2 = chartDay.createIndicator({ name: "newTest2" }, true, { id: 'candle_pane' })
+            let dayNewTest3 = chartDay.createIndicator({ name: "newTest3" }, true, { id: 'candle_pane' })
             //let chartDayMa = chartDay.createIndicator({ name: "MA", calcParams: [3,20], }, true, { id: 'candle_pane' })
-            let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
+            //let chartDayNewMa3 = chartDay.createIndicator({ name: "newMa" }, true, { id: 'candle_pane' })
             let dayNewBOLL = chartDay.createIndicator({ name: "newBOLL" }, true, { id: 'candle_pane' })
             //let dayNew9转 = chartDay.createIndicator({ name: "trigDate" }, true, { id: 'candle_pane' }) //('new9转back')
 
@@ -519,15 +592,15 @@
             let dragChart = ""
             document.addEventListener('mousedown', () => { mouseLeftDown = true; downDrag = false })
             document.addEventListener('mousemove', () => { if (mouseLeftDown) downDrag = true })
-            chartDay.subscribeAction(
-                'onVisibleRangeChange',
-                (onData) => {
-                    if (mouseLeftDown && downDrag) {
-                        endIndex = onData.to - 1
-                        dragChart = "day"
-                    }
-                }
-            )
+            // chartDay.subscribeAction(
+            //     'onVisibleRangeChange',
+            //     (onData) => {
+            //         if (mouseLeftDown && downDrag) {
+            //             endIndex = onData.to - 1
+            //             dragChart = "day"
+            //         }
+            //     }
+            // )
             chartWeek.subscribeAction(
                 'onVisibleRangeChange',
                 (onData) => {
