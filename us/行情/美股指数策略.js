@@ -762,6 +762,9 @@ var triggerLogObj美股指数 = {
     ],
     "2026-03-02": [
       "日周月高位九转"
+    ],
+    "2026-03-09": [
+      "日周月高位九转"
     ]
   },
   "日周月高位九转": [
@@ -797,6 +800,11 @@ var triggerLogObj美股指数 = {
     },
     {
       "trigDate": "2026-03-02",
+      "quantName": "日周月高位九转",
+      "trueCount": 3
+    },
+    {
+      "trigDate": "2026-03-09",
       "quantName": "日周月高位九转",
       "trueCount": 3
     }
@@ -2294,4 +2302,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-03-06"
+var runLastKlineDate = "2026-03-09"
