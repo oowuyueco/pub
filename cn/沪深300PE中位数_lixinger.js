@@ -4674,6 +4674,10 @@ var 沪深300PE中位数_lixinger = [
     [
         "2026-03-08",
         23.3542
+    ],
+    [
+        "2026-03-09",
+        23.3422
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
