@@ -31968,11 +31968,21 @@ var 菜粕连续 = [
     "volume": 1001478,
     "hold": 652140,
     "settle": 2448
+  },
+  {
+    "date": "2026-03-12",
+    "open": 2500,
+    "high": 2516,
+    "low": 2464,
+    "close": 2492,
+    "volume": 811092,
+    "hold": 606359,
+    "settle": 2490
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.菜粕连续 = 菜粕连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-03-12 12:25:50"
+    exports.writeDateTime = "2026-03-12 20:04:55"
 };
