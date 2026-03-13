@@ -1960,6 +1960,6 @@ var 组1技术指标统计 = [
             if (typeof module !== "undefined" && module.exports) {
                 exports.组1技术指标统计 = 组1技术指标统计
                 exports.组1当日Plus历史明细 = 组1当日Plus历史明细
-                exports.组1runLastTime = "2026-03-13 03:04:27"
+                exports.组1runLastTime = "2026-03-14 02:55:09"
             }
             
