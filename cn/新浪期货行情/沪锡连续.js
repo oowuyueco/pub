@@ -26638,11 +26638,21 @@ var 沪锡连续 = [
     "volume": 215161,
     "hold": 33096,
     "settle": 390250
+  },
+  {
+    "date": "2026-03-13",
+    "open": 393810,
+    "high": 394930,
+    "low": 374030,
+    "close": 374110,
+    "volume": 227740,
+    "hold": 35382,
+    "settle": 385630
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪锡连续 = 沪锡连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-03-13 03:05:55"
+    exports.writeDateTime = "2026-03-13 20:04:26"
 };
