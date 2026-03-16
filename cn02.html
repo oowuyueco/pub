@@ -2153,7 +2153,7 @@
                         console.log(curDateHasConsole ? "手动买入 ".leftAppend() : `${curDate} 手动买入 `, buyCash, "=>", cloneAsset(asset));
                         curDateHasConsole = true;
                     }
-                    if (curBuy[3].includes("模拟") && !arrayHasIndex(curBuy, sellPriceIndex) && liveServerOk) {
+                    if (curBuy[3].includes("模拟") && !arrayHasIndex(curBuy, buyPriceIndex) && liveServerOk) {
                         let excelFileName = curBuy[4].includes(".xlsx") ? curBuy[4] : curBuy[4].split(":")[0] + ".xlsx";
                         let excelFileData = await readExcel(excelFileName);
                         if (!excelFileData) { console.error(`模拟买入${excelFileName}文件缺失`); continue }

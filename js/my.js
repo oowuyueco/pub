@@ -1147,8 +1147,8 @@ function curtPercent(periodItem) {
 function PtPPercent(prePeriodItem, currentPeriodItem) {
 
     if (!prePeriodItem) return 0
-    if (prePeriodItem.收盘) prePeriodItem.close = prePeriodItem.收盘
-    if (currentPeriodItem.收盘) currentPeriodItem.close = currentPeriodItem.收盘
+    if (prePeriodItem?.收盘) prePeriodItem.close = prePeriodItem.收盘
+    if (currentPeriodItem?.收盘) currentPeriodItem.close = currentPeriodItem.收盘
 
     return parseFloat(((currentPeriodItem.close - prePeriodItem.close) / prePeriodItem.close * 100).toFixed(2))
 }
