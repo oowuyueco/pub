@@ -11708,10 +11708,11 @@ var 长盛全债_沪深300_上证_债A股8 = [
         "长盛全债": 419.8352,
         "沪深300": 352.1299,
         "上证": 217.2342,
-        "债A股8": null
+        "债A股8": 159.1321
     }
 ];
 var runDate = "2026-03-17";
-if (typeof module !== "undefined" && module.exports) {
-    exports.长盛全债_沪深300_上证_债A股8 = 长盛全债_沪深300_上证_债A股8
-}
+        if (typeof module !== "undefined" && module.exports) {
+            exports.长盛全债_沪深300_上证_债A股8 = 长盛全债_沪深300_上证_债A股8
+        }
+        
