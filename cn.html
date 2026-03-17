@@ -2688,6 +2688,29 @@
                     }).addStartEnd()
                 },
 
+                {
+                    name: '基金策略',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 8,
+                    symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "red"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 1,
+                    data: 基金策略高位ByDay.filter((item) => {
+                        return item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], -4]
+                    }).addStartEnd()
+                },
+
 
 
                 {//股同比
