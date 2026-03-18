@@ -116,6 +116,7 @@
 
         checkOrTryHttpNew(dataName, dataType, () => {
             //统一数据
+            window.dataName = dataName
             let dayDatas = window[dataName]
             if (!dayDatas[0]?.timestamp)
                 dayDatas = dayDatas.map(function (data) {
