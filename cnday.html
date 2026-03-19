@@ -369,6 +369,7 @@
         // )
     </script>
 
+    <script type="text/javascript" src="./cnThs/今收/同花顺策略.js"></script>
     <script type="text/javascript" src="./cnThs/今收/同花顺策略组1_信号统计.js"></script>
     <script type="text/javascript" src="./cnThs/今收/同花顺策略组2_大小市值信号统计.js"></script>
     <script type="text/javascript">
@@ -1748,6 +1749,30 @@
                     }).filterAndAddStartEnd()
                 },
 
+
+                {
+                    name: '基金策略高位',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "circle",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 5
+                    },
+                    zlevel: 3,
+                    data: Object.entries(triggerLogObj基金).filter((ele, index) => {
+                        return ele[1][0].includes("高位")
+                    }).map((item) => {
+                        return [item[0], 2, "基金策略高位"]
+                    }).filterAndAddStartEnd()
+                },
+
                 {
                     name: '高位pmi股债策略',
                     type: 'scatter',
@@ -1941,8 +1966,10 @@
                 },
 
                 ///////////////////////////////////////////////////
+
+
                 {
-                    name: '同花顺策略总数',
+                    name: '同花顺策略',
                     type: 'scatter',
                     xAxisIndex: 4,
                     yAxisIndex: 4,
@@ -1950,60 +1977,16 @@
                     itemStyle: {
                         normal: {
                             opacity: 1,
-                            color: colorA //00bfff
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 12.5
-                    },
-                    zlevel: 3,
-                    data: 技术指标统计.filter(ele => {
-                        return ele[1] >= 3 || ele[2].length >= 2
-                    }).filterAndAddStartEnd()
-
-                },
-                {
-                    name: '同花顺策略个数',
-                    type: 'scatter',
-                    xAxisIndex: 4,
-                    yAxisIndex: 4,
-                    symbol: symbolDownArrow,
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: colorB //"#ff69b4" ed31cd
-                        }
-                    },
-                    symbolSize: function (val) {
-                        return 9.5
-                    },
-                    zlevel: 5,
-                    data: 技术指标统计.filter(ele => {
-                        return ele[1] >= 3 || ele[2].length >= 2
-                    }).map(ele => {
-                        return [ele[0], ele[2].length]
-                    }).filterAndAddStartEnd()
-
-                },
-
-
-                {
-                    name: '大市值策略',
-                    type: 'scatter',
-                    xAxisIndex: 4,
-                    yAxisIndex: 4,
-                    symbol: symbolDownArrow,
-                    itemStyle: {
-                        normal: {
-                            opacity: 1,
-                            color: "blue"
+                            color: "black"
                         }
                     },
                     symbolSize: function (val) {
                         return 10.5
                     },
                     zlevel: 6,
-                    data: 大市值趋势.filterAndAddStartEnd()
+                    data: Object.entries(triggerLogObj同花顺).map((item) => {
+                        return [item[0], item[1].length - 1, item[1] + ""]
+                    }).filterAndAddStartEnd()
                 },
                 {
                     name: '小市值策略',
@@ -2014,7 +1997,7 @@
                     itemStyle: {
                         normal: {
                             opacity: 2,
-                            color: "black"
+                            color: colorA
                         }
                     },
                     symbolSize: function (val) {
@@ -2358,10 +2341,8 @@
                 },
 
 
-
-
                 {
-                    name: '基金策略',
+                    name: '基金策略低位',
                     type: 'scatter',
                     xAxisIndex: 6,
                     yAxisIndex: 6,
@@ -2376,9 +2357,12 @@
                         return 5
                     },
                     zlevel: 3,
-                    data: Object.entries(triggerLogObj基金).map((item) => {
-                        return [item[0], 2, "基金策略"]
-                    }).filterAndAddStartEnd()
+                    data: Object.entries(triggerLogObj基金).filter((ele, index) => {
+                        return ele[1][0].includes("低位")
+                    })
+                        .map((item) => {
+                            return [item[0], 2, "基金策略低位"]
+                        }).filterAndAddStartEnd()
                 },
 
 
