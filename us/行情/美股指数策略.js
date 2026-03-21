@@ -2302,4 +2302,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-03-19"
+var runLastKlineDate = "2026-03-20"
