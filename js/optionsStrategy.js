@@ -353,6 +353,7 @@ function 统计策略(triggerLogObj, 高低位 = "低位", 汇总N = 5, 过滤M 
         let nextN期权到期, N;
         let overMin期权days = (profileN, nextNDelivery到期) => {
             if (!profileN?.[nextFirstDeliveryKey]) return false
+            if (!profileN?.[nextNDelivery到期]) return false
             let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
             if (closeDay > min期权days) return true
             return false
@@ -594,6 +595,7 @@ function 统计区间区间策略(区间类型 = "上升日期区间", 汇总N =
             let nextN期权到期, N;
             let overMin期权days = (profileN, nextNDelivery到期) => {
                 if (!profileN?.[nextFirstDeliveryKey]) return false
+                if (!profileN?.[nextNDelivery到期]) return false
                 let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
                 if (closeDay > min期权days) return true
                 return false
@@ -845,6 +847,7 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
         let nextN期权到期, N;
         let overMin期权days = (profileN, nextNDelivery到期) => {
             if (!profileN?.[nextFirstDeliveryKey]) return false
+            if (!profileN?.[nextNDelivery到期]) return false
             let closeDay = +profileN[nextNDelivery到期].close.split("->")[0]
             if (closeDay > min期权days) return true
             return false
