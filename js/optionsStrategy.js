@@ -1809,18 +1809,36 @@ function check提前卖出(curDate, asset期权, trigBuy) {
         if (profileN3?.nextThirdDelivery周三?.close.split("->")[1].split(",")[0] == curDate)
             res += "3Etf周三"
     }
-    /////
+    ///
 
+    let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
+    if (
+        asset期权[2].unif高低位() == "低位" &&
+        美股策略byDay.find(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+    ) res += "美股反向A"  //加上美股指数策略反向
+    if (
+        asset期权[2].unif高低位() == "高位" &&
+        美股策略byDay.find(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+    ) res += "美股反向A"
 
     if (
-        trigBuy
-        && (
-            ((trigBuy[2].includes("高") || trigBuy[2].includes("↓")) && (asset期权[2].includes("低") || asset期权[2].includes("↑"))) ||
-            ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
-        ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
-    ) {
-        res += "A" //反向
-    }
+        asset期权[2].unif高低位() == "低位" &&
+        全部策略ByDay.find(ele => ele[3].unif高低位() == "高位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+    ) res += "A"
+    if (
+        asset期权[2].unif高低位() == "高位" &&
+        全部策略ByDay.find(ele => ele[3].unif高低位() == "低位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+    ) res += "A"
+
+    // if (
+    //     trigBuy
+    //     && (
+    //         ((trigBuy[2].includes("高") || trigBuy[2].includes("↓")) && (asset期权[2].includes("低") || asset期权[2].includes("↑"))) ||
+    //         ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
+    //     ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
+    // ) {
+    //     res += "A" //反向
+    // }
 
     if (asset期权[3].includes("沽")) {
         res += check沽提前卖出(curDate, asset期权, trigBuy)

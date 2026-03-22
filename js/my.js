@@ -2004,6 +2004,7 @@ if (typeof module !== "undefined" && module.exports) {
     exports.globalConfigStartDate组2 = globalConfigStartDate组2
     exports.globalConfigOnlySendOnTrigBuySell = globalConfigOnlySendOnTrigBuySell
     exports.devTestEnv = devTestEnv
+    exports.期权到期日类型 = 期权到期日类型
 
     exports.currentDayYMD = currentDayYMD
 
