@@ -966,6 +966,7 @@ let 手动买卖 = [
     ['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', 1.91, '2025-10-29', 0.0888, 30532, '提前P1:2025-11-25开', 0.1701, 58485],
 ]
 let 模拟买卖 = [
+    ['2026-02-27', '2026-04-17', ' ↑ ', '4710.65 购沪深300模拟 4851.97', "IO2604-C-4800.xlsx"],
     ["2025-08-19", "2025-10-17", " ↑ ", "4223.37 购沪深300模拟 4350.071", "IO2510-C-4350.xlsx"],
     ["2025-08-11", "2025-09-19", " ↑ ", "4122.51 购沪深300模拟 4246.185", "IO2509-C-4200.xlsx"],
     ["2025-06-23", "2025-08-15", " ↑ ", "3857.9 购沪深300模拟 3973.637", "IO2508-C-3950.xlsx"],
@@ -1292,7 +1293,7 @@ function 附加xls过滤时间(期权建议ByDay) {
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-        .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
+        //.filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
         .map((ele, index) => {
             let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
             if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
@@ -1641,7 +1642,7 @@ function preNext交易日(curDate, preNext = -1) {
         return resDate;
     }
 }
-function check沽提前卖出(curDate, asset期权, trigBuy) {
+function check沽提前卖出(curDate, asset期权, trigBuy = null) {
 
     let 沪深300技术 = {};
     沪深300技术.dayDatas = 沪深300;
@@ -1788,7 +1789,7 @@ function check沽提前卖出(curDate, asset期权, trigBuy) {
 
     return res;
 }
-function check提前卖出(curDate, asset期权, trigBuy) {
+function check提前卖出(curDate, asset期权, trigBuy = null) {
     let res = ""
 
     /////
@@ -1813,13 +1814,13 @@ function check提前卖出(curDate, asset期权, trigBuy) {
 
     let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
     if (
-        asset期权[2].unif高低位() == "低位" &&
+        asset期权[2].includes("↑") &&
         美股策略byDay.find(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "美股反向A"  //加上美股指数策略反向
+    ) res += "美反箭"  //加上美股指数策略反向
     if (
-        asset期权[2].unif高低位() == "高位" &&
+        asset期权[2].includes("↓") &&
         美股策略byDay.find(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "美股反向A"
+    ) res += "美反箭"
 
     if (
         asset期权[2].unif高低位() == "低位" &&
@@ -1841,7 +1842,7 @@ function check提前卖出(curDate, asset期权, trigBuy) {
     // }
 
     if (asset期权[3].includes("沽")) {
-        res += check沽提前卖出(curDate, asset期权, trigBuy)
+        res += check沽提前卖出(curDate, asset期权)
     }
 
     if (res != "") return res
@@ -1888,46 +1889,8 @@ async function 模拟交易(期权买卖List) {
 
     for (let i = startOldestIndex; i < 沪深300.length; i++) {
         let curDate = 沪深300[i].date;
+        //if (curDate == "2026-03-02") debugger
         let curDateHasConsole = false;
-
-        //当日收盘触发下日买入,写入下个交易日买入日期.
-        let curTrigBuy = 期权买卖List.find((e) => e[0] == curDate && !arrayHasIndex(e, buyDateIndex));
-        if (curTrigBuy) {
-            if (!curTrigBuy[3].includes("手动") && !curTrigBuy[3].includes("模拟")) {
-                let [buyCash, curbuy入金, buyCount] = getBuyCashAnd入金(curTrigBuy, "预估ETF");
-                let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
-                console.log(msg);
-                curDateHasConsole = true;
-                if (isSendMail(curDate)) pageSendMail(msg)
-            }
-            if (curTrigBuy[3].includes("手动")) { };
-            if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(curDate, 1);
-        }
-
-        //当日收盘触发下日卖出,写入下个交易日卖出日期.
-        for (let index = asset.期权.length - 1; index >= 0; index--) {
-            let asset期权 = asset.期权[index];
-            if (!arrayHasIndex(asset期权, buyDateIndex)) continue;
-            if (arrayHasIndex(asset期权, sellDateIndex)) continue;
-
-            let curNextOne交易日 = preNext交易日(curDate, 1)
-            let sellDateStr
-            let need提前卖出 = check提前卖出(curDate, asset期权, curTrigBuy);
-            if (need提前卖出)
-                sellDateStr = `提前${need提前卖出}:${curNextOne交易日}`;
-            else if (curNextOne交易日 == preNext交易日(asset期权[1], 默认卖出到期类型))
-                sellDateStr = `${curNextOne交易日}`;
-
-            if (!sellDateStr) continue
-
-            if (asset期权[3].includes("手动")) {
-                let msg = `${curDate} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
-                console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
-                curDateHasConsole = true;
-                if (isSendMail(curDate)) pageSendMail(msg)
-            };
-            if (asset期权[3].includes("模拟")) asset期权[sellDateIndex] = sellDateStr;
-        }
 
         //当日卖出
         let curAllSell入金;
@@ -2037,6 +2000,20 @@ async function 模拟交易(期权买卖List) {
             curDateHasConsole = true;
         }
 
+        //当日收盘触发下日买入,写入下个交易日买入日期.
+        let curTrigBuy = 期权买卖List.find((e) => e[0] == curDate && !arrayHasIndex(e, buyDateIndex));
+        if (curTrigBuy) {
+            if (!curTrigBuy[3].includes("手动") && !curTrigBuy[3].includes("模拟")) {
+                let [buyCash, curbuy入金, buyCount] = getBuyCashAnd入金(curTrigBuy, "预估ETF");
+                let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
+                console.log(msg);
+                curDateHasConsole = true;
+                if (isSendMail(curDate)) pageSendMail(msg)
+            }
+            if (curTrigBuy[3].includes("手动")) { };
+            if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(curDate, 1);
+        }
+
         //当日买入
         let curBuy = 期权买卖List.find((e) => e[buyDateIndex] == curDate);
         if (curBuy) {
@@ -2097,6 +2074,33 @@ async function 模拟交易(期权买卖List) {
                 curDateHasConsole = true;
             }
         }
+
+
+        //当日收盘触发下日卖出,写入下个交易日卖出日期.
+        for (let index = asset.期权.length - 1; index >= 0; index--) {
+            let asset期权 = asset.期权[index];
+            if (!arrayHasIndex(asset期权, buyDateIndex)) continue;
+            if (arrayHasIndex(asset期权, sellDateIndex)) continue;
+
+            let curNextOne交易日 = preNext交易日(curDate, 1)
+            let sellDateStr
+            let need提前卖出 = check提前卖出(curDate, asset期权);
+            if (need提前卖出)
+                sellDateStr = `提前${need提前卖出}:${curNextOne交易日}`;
+            else if (curNextOne交易日 == preNext交易日(asset期权[1], 默认卖出到期类型))
+                sellDateStr = `${curNextOne交易日}`;
+
+            if (!sellDateStr) continue
+
+            if (asset期权[3].includes("手动")) {
+                let msg = `${curDate} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
+                console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
+                curDateHasConsole = true;
+                if (isSendMail(curDate)) pageSendMail(msg)
+            };
+            if (asset期权[3].includes("模拟")) asset期权[sellDateIndex] = sellDateStr;
+        }
+
     }
 };
 
