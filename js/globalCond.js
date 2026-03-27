@@ -416,6 +416,7 @@ function globalMonth高位Filter(trigDate, triggerLogObj指数, nameCodes) {
 function globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes) {
 
     let filterCount = 0
+    let filterReson = ""
     for (let index = 0; index < triggerLogObj指数.按日期排序[trigDate].length; index++) {
         let quantName = triggerLogObj指数.按日期排序[trigDate][index];
         let nameCode
@@ -455,7 +456,7 @@ function globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes) {
 
         if (
             curMonth?.wvad?.wvadMa6 && curMonth?.psyma &&
-            (
+            (                                               //`日周低位九转`
                 quantName.includes("空但叉") || quantName.includes("日周") ||
                 quantName.includes("KdjMacd双死叉副") || quantName.includes("KDJ")
             )
@@ -473,6 +474,7 @@ function globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes) {
             )
         ) {
             filterCount = filterCount + 1
+            filterReson += "r1"
         }
 
 
@@ -483,11 +485,12 @@ function globalTest低位Filter(trigDate, triggerLogObj指数, nameCodes) {
             curDay.bias.bias1 > 0
         ) {
             filterCount = filterCount + 1
+            filterReson += "r2"
         }
     }
 
     if (filterCount > Math.floor(triggerLogObj指数.按日期排序[trigDate].length / 2))
-        return [true, `低位过滤数量${filterCount}`]
+        return [true, `低位过滤数量${filterReson}`]
 
 
 

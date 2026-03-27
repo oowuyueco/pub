@@ -475,9 +475,9 @@
 
             legend: {
                 left: 55,
-                top: 0,
+                top: -13,
                 width: 50,
-                height: "90%",
+                height: "96%",
                 backgroundColor: "gray",
                 selector: ['all', 'inverse'],
                 orient: "vertical"
@@ -1125,7 +1125,7 @@
                     data: 信贷脉冲.filterAndAddStartEnd()
                 },
                 {
-                    name: '信贷脉冲_MA',
+                    name: '信贷脉冲',
                     type: 'line',
                     xAxisIndex: 1,
                     yAxisIndex: 1,
@@ -1449,7 +1449,7 @@
                     barWidth: 2,
                 },
                 {
-                    name: '黄金低位多叉',
+                    name: '黄金大宗低位多叉',
                     type: 'candlestick',
                     xAxisIndex: 0,
                     yAxisIndex: 0,
@@ -1745,6 +1745,130 @@
                     },
                     zlevel: 3,
                     data: triggerLogObj指数.上证50高位VKM多叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
+                {
+                    name: '高位急涨',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位急涨.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '高位急涨',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300高位急涨.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '高位急涨',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50高位急涨.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '上证高位月9周日死叉',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证高位月9Up周日死叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '沪深300高位月9周日死叉',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300高位月9Up周日死叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50高位月9周日死叉',
+                    type: 'scatter',
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "#990036"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50高位月9Up周日死叉.map((item) => {
                         return [item.trigDate, item.percent]
                     }).filterAndAddStartEnd()
                 },
@@ -2341,6 +2465,131 @@
                 },
 
 
+
+                {
+                    name: '低位急跌',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证低位急跌.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '低位急跌',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300低位急跌.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '低位急跌',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50低位急跌.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '上证低位月9周日金叉',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证低位月9Down周日金叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '沪深300低位月9周日金叉',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.沪深300低位月9Down周日金叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+                {
+                    name: '上证50低位月9周日金叉',
+                    type: 'scatter',
+                    xAxisIndex: 6,
+                    yAxisIndex: 6,
+                    symbol: "pin",
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: colorA
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 7
+                    },
+                    zlevel: 3,
+                    data: triggerLogObj指数.上证50低位月9Down周日金叉.map((item) => {
+                        return [item.trigDate, item.percent]
+                    }).filterAndAddStartEnd()
+                },
+
+
+
                 {
                     name: '基金策略低位',
                     type: 'scatter',
@@ -2920,10 +3169,6 @@
                     });
             }
 
-            myChart.dispatchAction({
-                type: 'legendToggleSelect',
-                name: "黄金低位多叉"
-            })
 
             let 铜金油糖 = [
                 { name: "沪铜连续", code: "CU0", type: "工业" },
