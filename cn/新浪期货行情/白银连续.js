@@ -33788,11 +33788,21 @@ var 白银连续 = [
     "volume": 881875,
     "hold": 241055,
     "settle": 18021
+  },
+  {
+    "date": "2026-04-01",
+    "open": 18300,
+    "high": 19160,
+    "low": 18209,
+    "close": 18918,
+    "volume": 928197,
+    "hold": 248865,
+    "settle": 18666
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.白银连续 = 白银连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-03-31 20:43:53"
+    exports.writeDateTime = "2026-04-01 20:46:21"
 };
