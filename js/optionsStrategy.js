@@ -1787,6 +1787,9 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
         countWeekdays(curDay.date, asset期权[1]) < 7
     ) res += 'P5'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
 
+
+    //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
+
     return res;
 }
 function check提前卖出(curDate, asset期权, trigBuy = null) {

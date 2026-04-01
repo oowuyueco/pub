@@ -314,6 +314,7 @@
     <script type="text/javascript" src="./cn/行情/沪深300ETF.js"></script>
     <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/行情/上证.js"></script>
+    <script type="text/javascript" src="./cn/行情/恒生.js"></script>
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
     <script type="text/javascript" src="./cn/行情/区间策略.js"></script>
     <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
@@ -628,6 +629,14 @@
                         show: true, // 抓数据圆圈
                         label: {
                             show: true, //黑框日期  显示指数日期
+                            color: "black",
+                            padding: [
+                                -8,  // 上
+                                5, // 右
+                                5,  // 下
+                                5, // 左
+                            ],
+                            backgroundColor: 'transparent'
                         },
                     },
                     axisLabel: {
@@ -918,7 +927,8 @@
                         formatter: (value, index) => {
                             if (value >= 40) return ""
                             else return value
-                        }
+                        },
+                        color: 'orange'
                     },
                     position: "right",
                     max: 40,
@@ -1464,6 +1474,36 @@
                         return tmp
                     }).addStartEnd(),
                 },
+                {//指数恒生D
+                    name: "恒生",
+                    type: "line",
+                    lineStyle: {
+                        width: 0,
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "#a3d4ff"//87c5cf  a3d4ff   57aacb
+                            },
+                        },
+                        emphasis: {
+                            areaStyle: {
+                                color: "#a3d4ff",
+                            },
+                        },
+                    },
+                    showSymbol: false,
+                    zlevel: 0,
+                    xAxisIndex: 3,
+                    yAxisIndex: 6,
+                    data: 恒生.map((item) => {
+                        let tmp = []
+                        tmp[0] = item.date
+                        tmp[1] = item.close ? item.close : ""
+                        return tmp
+                    }).addStartEnd(),
+                },
+
 
 
                 {//策略
@@ -2215,13 +2255,32 @@
                     //smooth: true,
                     lineStyle: {
                         width: 1,
-                        color: "#565048",
+                        //type: 'dotted',
+                        color: "black"
                     },
                     data: 金融脉动增速.map((item) => {
                         item[1] = Number(item[1]) * -10
                         return item
                     }).addStartEnd()
                 },
+
+                {//us-cn-M  外流宽松  回流收紧
+                    name: '美元指',
+                    type: 'line',
+                    xAxisIndex: 7,
+                    yAxisIndex: 15,
+                    showSymbol: false,
+                    //smooth: true,
+                    lineStyle: {
+                        width: 0.9,
+                        color: "gray",
+                    },
+                    data: 美元指数Day.map((item) => {
+                        item[1] = -(Number(item[1]) - 100)
+                        return item
+                    }).chartDataMaN(5).addStartEnd()
+                },
+
                 {
                     name: "中美汇",
                     type: "line",
@@ -2230,10 +2289,10 @@
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 0.8,
+                        width: 0.9,
                         color: "gray"
                     },
-                    data: 中美汇率Day同比.addStartEnd()
+                    data: 中美汇率Day同比.chartDataMaN(5).addStartEnd()
                 },
 
             ]
@@ -2272,7 +2331,7 @@
 
         setTimeout(() => {
             [
-                "ppi基数", "上证", "区间策略", "大盘策略", "同花顺策略", "基金策略", "pmi股债策略",
+                "ppi基数", "上证", "恒生", "区间策略", "大盘策略", "同花顺策略", "基金策略", "pmi股债策略",
                 "汽车与出口", "房地产", "中位PE", "恒指美债差", "美债", "MM制造业",
                 "M1_M2", "M1_M2_MA", "信贷脉冲_MA4", "中美汇", "美元指", "金融脉动增速us",
                 "300同比"
