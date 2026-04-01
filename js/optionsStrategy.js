@@ -962,11 +962,17 @@ String.prototype.unif高低位 = function () {
 };
 
 let 手动买卖 = [
-    ["2025-11-25", "2026-01-16", " ↑ ", '4490.4 购沪深300手动 4625.112', 'io2601购4600:53张', 2.3, '2025-11-26', 57.4, 3837, '2026-01-16开', 182, 8851],
-    ['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', 1.91, '2025-10-29', 0.0888, 30532, '提前P1:2025-11-25开', 0.1701, 58485],
+    //["2025-11-25", "2026-01-16", " ↑ ", '4490.4 购沪深300手动 4625.112', 'io2601购4600:53张', 2.3, '2025-11-26', 57.4, 3837, '2026-01-16开', 182, 8851],
+    //['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', 1.91, '2025-10-29', 0.0888, 30532, '提前P1:2025-11-25开', 0.1701, 58485],
 ]
 let 模拟买卖 = [
-    ['2026-02-27', '2026-04-17', ' ↑ ', '4710.65 购沪深300模拟 4851.97', "IO2604-C-4800.xlsx"],
+
+    ['2026-02-27', '2026-04-17', '高位', '4710.65 沽沪深300模拟 4569.33', "IO2604-P-4600.xlsx"],  //沪深300高位月9Up周日死叉
+    //['2026-02-27', '2026-04-17', ' ↑ ', '4710.65 购沪深300模拟 4851.97', "IO2604-C-4800.xlsx"],  //上证低位_ma10UpMas低连空但 后来添加过滤上升日期区间过滤掉
+
+    ['2025-11-25', '2026-01-16', ' ↑ ', '4490.4 购沪深300模拟 4625.112', "IO2601-C-4600.xlsx"],
+    ['2025-10-28', '2025-12-19', '高位', '4691.97 沽沪深300模拟 4551.211', "IO2512-P-4600.xlsx"],
+
     ["2025-08-19", "2025-10-17", " ↑ ", "4223.37 购沪深300模拟 4350.071", "IO2510-C-4350.xlsx"],
     ["2025-08-11", "2025-09-19", " ↑ ", "4122.51 购沪深300模拟 4246.185", "IO2509-C-4200.xlsx"],
     ["2025-06-23", "2025-08-15", " ↑ ", "3857.9 购沪深300模拟 3973.637", "IO2508-C-3950.xlsx"],
@@ -1648,6 +1654,9 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
     沪深300技术.dayDatas = 沪深300;
     沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
 
+    let pre1Month = 沪深300技术.currentMonthList.at(-2);
+    let curMonth = 沪深300技术.currentMonthList.at(-1);
+
     let pre1Week = 沪深300技术.currentWeekList.at(-2);
     let curWeek = 沪深300技术.currentWeekList.at(-1);
 
@@ -1717,29 +1726,30 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
 
     let res = ""
     function 区间反向() {
-        // return false //todo!!!!
+
         // let pmiValue
         // if (cn_pmi_平均.at(-1)[0].substring(0, 7) == curDate.substring(0, 7)) pmiValue = cn_pmi_平均.at(-1)
         // else pmiValue = cn_pmi_平均.find(e => e[0].substring(0, 7) == getPreMonth(curDate).substring(0, 7))
         // pmiValue[1] <= -9.5
+
         let curDate日期区间 = getCurDate区间类型(curDate)
         if (
             curDate日期区间 == "上升日期区间" &&
             (
-                (curDay.close < curDay.lows && curWeek.close < curWeek.mas && curWeek.J < 20 && pre1Week.close > pre1Week.mas) ||
+                (curDay.close < curDay.lows && curDay.D < 41 && curWeek.close < curWeek.mas && curWeek.J < 20 && pre1Week.close > pre1Week.mas) ||
                 (ocHighest(curDay) < curDay.lows && curDay.J < 0 && curWeek.low < curWeek.mas && curtPercent(curWeek) < 0 && curWeek.J < 0 && curWeek.bar < 0) //2025-11-24
             ) &&
+            !(KDJ死叉(沪深300技术.currentDayList) && MACD死叉attr(沪深300技术.currentDayList)) &&
+            !(KDJ死叉(沪深300技术.currentDayList) && MACD死叉attr(沪深300技术.currentDayList)) &&
             !(
-                KDJ死叉(沪深300技术.currentDayList) &&
-                MACD死叉attr(沪深300技术.currentDayList)
-            ) &&
-            !(
-                KDJ死叉(沪深300技术.currentDayList) &&
-                MACD死叉attr(沪深300技术.currentDayList)
+                (沪深300技术.currentMonthList.at(-1)?.is9转up == 9 || pre1Month.K > curMonth.K) &&
+                (KDJ死叉(沪深300技术.currentMonthList) || BIAS死叉attr(沪深300技术.currentMonthList)) &&
+                curWeek.close > curWeek.lows
             )
         ) return true
     }
-    if (区间反向()) res += "P1"
+    if (区间反向()) res += "P0"
+
 
 
     if (
@@ -1749,7 +1759,20 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
             (curDay.bias.bias3 < -8 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 > 4)
         )
-    ) res += 'P2'   //` ${curDay.date}绿绿` //2022-03-18 极低
+    ) res += 'P1'   //` ${curDay.date}绿绿` //2022-03-15 极低
+
+
+    if (
+        curtPercent(pre2Day) < 0 && curtPercent(pre1Day) < 0 && curtPercent(curDay) < 0 &&
+        pre1Day.low > curDay.high &&
+        ocHighest(curDay) < curDay.lows &&
+        curDay.J < -5 && curDay.D < 41 &&
+        (
+            (curDay.bias.bias3 < -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
+            (pre1Day.bias.bias3 - curDay.bias.bias3 > 3) ||
+            curDay.cci.cci < -250
+        )
+    ) res += 'P2'   //2026-03-23 极低  //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
 
 
     if (
@@ -1788,14 +1811,12 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
     ) res += 'P5'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
 
 
-    //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
-
     return res;
 }
 function check提前卖出(curDate, asset期权, trigBuy = null) {
     let res = ""
 
-    /////
+    /////////////暂时只能买etf期权
     let profileN3 = afterDayProfileW3(asset期权[0], [], 沪深300)
     if (
         profileN3?.nextSecondDelivery周三 &&
@@ -1813,13 +1834,14 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         if (profileN3?.nextThirdDelivery周三?.close.split("->")[1].split(",")[0] == curDate)
             res += "3Etf周三"
     }
-    ///
 
+
+    /////////////反向
     let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
     if (
         asset期权[2].includes("↑") &&
         美股策略byDay.find(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "美反箭"  //加上美股指数策略反向
+    ) res += "美反箭"
     if (
         asset期权[2].includes("↓") &&
         美股策略byDay.find(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
