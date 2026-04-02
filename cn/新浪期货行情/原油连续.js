@@ -19454,5 +19454,5 @@ var 原油连续 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.原油连续 = 原油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-02 20:42:44"
+    exports.writeDateTime = "2026-04-02 22:34:12"
 };
