@@ -20548,11 +20548,21 @@ var 棉纱连续 = [
     "volume": 5978,
     "hold": 7170,
     "settle": 21590
+  },
+  {
+    "date": "2026-04-03",
+    "open": 21590,
+    "high": 21725,
+    "low": 21565,
+    "close": 21705,
+    "volume": 5268,
+    "hold": 7352,
+    "settle": 21650
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.棉纱连续 = 棉纱连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-02 22:33:35"
+    exports.writeDateTime = "2026-04-03 20:32:32"
 };
