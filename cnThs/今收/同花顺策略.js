@@ -309,5 +309,5 @@ var triggerLogObj同花顺 = {
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-04-04 20:11:15"
+        exports.同花顺策略runLastTime = "2026-04-06 20:46:19"
     }
