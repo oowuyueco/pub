@@ -167200,5 +167200,5 @@ var 标普500 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.标普500 = 标普500
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-04-04 16:28:14"
+    exports.writeDateTime = "2026-04-06 17:00:11"
 };
