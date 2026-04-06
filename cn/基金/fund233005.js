@@ -8526,7 +8526,7 @@ var 大摩中债_中债综合_上证50_恒生 = [
         "恒生": 14.8315
     }
 ];
-var runDate = "2026-04-04";
+var runDate = "2026-04-06";
 if (typeof module !== "undefined" && module.exports) {
     exports.大摩中债_中债综合_上证50_恒生 = 大摩中债_中债综合_上证50_恒生
 }
