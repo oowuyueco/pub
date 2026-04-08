@@ -16788,11 +16788,21 @@ var 红枣连续 = [
     "volume": 92383,
     "hold": 71887,
     "settle": 8470
+  },
+  {
+    "date": "2026-04-08",
+    "open": 8810,
+    "high": 8850,
+    "low": 8760,
+    "close": 8800,
+    "volume": 46522,
+    "hold": 80230,
+    "settle": 8805
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.红枣连续 = 红枣连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-07 20:49:26"
+    exports.writeDateTime = "2026-04-08 20:48:27"
 };
