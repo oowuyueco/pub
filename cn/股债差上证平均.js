@@ -1164,8 +1164,8 @@ var 股债差上证平均 = [
         3.41
     ],
     [
-        "2026-04-02",
-        3.42
+        "2026-04-08",
+        3.36
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
