@@ -49158,11 +49158,21 @@ var 豆油连续 = [
     "volume": 441419,
     "hold": 549956,
     "settle": 8554
+  },
+  {
+    "date": "2026-04-09",
+    "open": 8460,
+    "high": 8514,
+    "low": 8420,
+    "close": 8496,
+    "volume": 213517,
+    "hold": 555300,
+    "settle": 8472
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.豆油连续 = 豆油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-08 20:47:44"
+    exports.writeDateTime = "2026-04-09 20:52:32"
 };
