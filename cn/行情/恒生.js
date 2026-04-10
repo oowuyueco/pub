@@ -116866,11 +116866,23 @@ var 恒生 = [
     "volume": 244977182471,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-04-10",
+    "timestamp": 1775750400000,
+    "open": 25891.88,
+    "high": 26073.97,
+    "low": 25843.65,
+    "close": 25893.54,
+    "percent": 0.55,
+    "volume": 246316510217,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.恒生 = 恒生
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-04-09 16:57:56"
+    exports.writeDateTime = "2026-04-10 16:58:28"
 };
