@@ -15808,11 +15808,21 @@ var 苯乙烯连续 = [
     "volume": 536855,
     "hold": 171888,
     "settle": 10091
+  },
+  {
+    "date": "2026-04-10",
+    "open": 10224,
+    "high": 10270,
+    "low": 9801,
+    "close": 9943,
+    "volume": 492398,
+    "hold": 167587,
+    "settle": 10021
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.苯乙烯连续 = 苯乙烯连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-09 20:53:33"
+    exports.writeDateTime = "2026-04-10 20:40:31"
 };
