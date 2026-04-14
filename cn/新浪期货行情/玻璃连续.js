@@ -32318,11 +32318,31 @@ var 玻璃连续 = [
     "volume": 666466,
     "hold": 952141,
     "settle": 965
+  },
+  {
+    "date": "2026-04-13",
+    "open": 965,
+    "high": 977,
+    "low": 954,
+    "close": 957,
+    "volume": 567740,
+    "hold": 901888,
+    "settle": 964
+  },
+  {
+    "date": "2026-04-14",
+    "open": 957,
+    "high": 971,
+    "low": 957,
+    "close": 963,
+    "volume": 494260,
+    "hold": 828506,
+    "settle": 966
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.玻璃连续 = 玻璃连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-11 20:05:48"
+    exports.writeDateTime = "2026-04-14 20:51:26"
 };

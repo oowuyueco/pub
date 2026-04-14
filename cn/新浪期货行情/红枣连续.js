@@ -16818,11 +16818,31 @@ var 红枣连续 = [
     "volume": 58428,
     "hold": 86785,
     "settle": 8925
+  },
+  {
+    "date": "2026-04-13",
+    "open": 8900,
+    "high": 8930,
+    "low": 8810,
+    "close": 8885,
+    "volume": 62808,
+    "hold": 92105,
+    "settle": 8865
+  },
+  {
+    "date": "2026-04-14",
+    "open": 8865,
+    "high": 8910,
+    "low": 8820,
+    "close": 8835,
+    "volume": 55543,
+    "hold": 99525,
+    "settle": 8855
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.红枣连续 = 红枣连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-11 20:05:56"
+    exports.writeDateTime = "2026-04-14 20:51:35"
 };
