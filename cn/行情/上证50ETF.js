@@ -61642,11 +61642,23 @@ var 上证50ETF = [
     "volume": 422466502,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-04-15",
+    "timestamp": 1776182400000,
+    "open": 3.008,
+    "high": 3.027,
+    "low": 3.005,
+    "close": 3.008,
+    "percent": 0.37,
+    "volume": 395736369,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50ETF = 上证50ETF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-04-14 17:08:22"
+    exports.writeDateTime = "2026-04-15 17:08:57"
 };
