@@ -95,7 +95,14 @@ function preNHighestAttr(periodList, N = 7, attr = "J") {
 }
 
 
-
+function preN矩形穿ups(periodList, N = 4, tweaks = 0) {
+    if (periodList.length < 6) return false
+    for (index = -1; index >= (0 - N); index--) {
+        if (ocHighest(periodList.at(index)) + tweaks >= periodList.at(index).ups)
+            return true
+    }
+    return false
+}
 function KDJ金叉(periodList, N = 3) {
     for (let index = 1; index <= N; index++) {
         let pre2Period = periodList[periodList.length - (index + 2)]
@@ -133,6 +140,11 @@ function bollAllUp(periodList) {
         pre1Period.mas < currentPeriod.mas &&
         pre1Period.lows < currentPeriod.lows
 }
+function volAllUp(periodList) {
+    return volMa(5, periodList, -2) < volMa(5, periodList, -1) &&
+        volMa(10, periodList, -2) < volMa(10, periodList, -1) &&
+        volMa(20, periodList, -2) < volMa(20, periodList, -1)
+}
 function kdjAllUp(periodList) {
     let pre1Period = periodList[periodList.length - 2]
     let currentPeriod = periodList[periodList.length - 1]
@@ -154,8 +166,6 @@ function biasAllUp(periodList) {
         pre1Period.bias.bias2 < currentPeriod.bias.bias2 &&
         pre1Period.bias.bias3 < currentPeriod.bias.bias3
 }
-
-
 
 
 function volMa死叉(currentPeriodList, maN = 5, maM = 10, N = 3) {
@@ -228,11 +238,32 @@ function biasAllDown(periodList) {
 
 
 function ocHighest(period) {
-    return period.open > period.close ? period.open : period.close
+    if (period?.open) return period.open > period.close ? period.open : period.close
+    if (period?.开盘价) return period.开盘价 > period.收盘价 ? period.开盘价 : period.收盘价
 }
 function ocLowest(period) {
     return period.open < period.close ? period.open : period.close
 }
+
+function 红空红绿(periodList, N = 1, tweaks = 0) {
+    for (let index = 1; index <= N; index++) {
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        if (
+            true
+            && curtPercent(pre2Period) >= 0
+            && pre2Period.close <= pre1Period.open + tweaks && pre2Period.close <= pre1Period.close
+            && curtPercent(pre1Period) >= 0
+            && curtPercent(currentPeriod) < 0
+        ) {
+            return true
+        }
+    }
+
+    return false
+}
+
 function 绿绿(periodList, N = 1) {
     for (let index = 1; index <= N; index++) {
         let pre1Period = periodList[periodList.length - (index + 1)]
@@ -1299,7 +1330,7 @@ function 附加xls过滤时间(期权建议ByDay) {
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-        //.filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
+        .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
         .map((ele, index) => {
             let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
             if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
@@ -1512,10 +1543,44 @@ async function readExcel(excelFileName) {
     }
 }
 
+let asset = {
+    现金: 0,
+    期权: [],
+};
 
-function need入金groupByYear(input) {
+let 总入金 = 0;
+let 总buyCash = 0;
+let 总sellCash = 0;
+let 总费用 = 0;
+let need入金 = {};
+let preStartDate;
+let preEndDate;
+
+const 模拟盈亏 = false
+const 默认卖出到期类型 = -2 //默认0最后一天 -N提前N 卖出
+const 默认卖出开or收 = "开盘价" //默认开收卖出
+
+const 单次抽取百分比 = 0.05;
+const 单次最小投资 = 3000;
+const 单次最大投资 = 50000;
+const 总持仓限制 = 0.2;
+const etf费用 = 5
+const etf倍数 = 10000
+const 指数费用 = 15
+const 指数倍数 = 100
+
+const optionContractIndex = 4;
+const profileIndex = 5;
+const buyDateIndex = 6;
+const buyPriceIndex = 7;
+const buyCashIndex = 8;
+const sellDateIndex = 9;
+const sellPriceIndex = 10;
+const sellCashIndex = 11;
+
+function need入金groupByYear(need入金) {
     const result = {};
-    for (const [key, value] of Object.entries(input)) {
+    for (const [key, value] of Object.entries(need入金)) {
         // 提取键中的起始年份（第一个日期的前4个字符）
         const startDate = key.split(' ')[0];
         const year = startDate.substring(0, 4);
@@ -1534,6 +1599,28 @@ function need入金groupByYear(input) {
     }
     return result;
 }
+function groupListByYear(asset期权list) {
+    let yearToList = {}
+    for (let index = 0; index < asset期权list.length; index++) {
+        const element = asset期权list[index];
+        const startYear = element[0].substring(0, 4)
+        if (!yearToList?.[startYear]) yearToList[startYear] = []
+        yearToList?.[startYear].push(element)
+    }
+    return yearToList
+}
+function getAsset持仓量额() {
+    let 期权持仓量 = 0
+    let 期权持仓额 = 0
+    for (let index = 0; index < asset.期权.length - 1; index++) {
+        const ele期权 = asset.期权[index];
+        if (!ele期权[profileIndex]) {
+            期权持仓量++
+            期权持仓额 = 期权持仓额 + ele期权[buyCashIndex]
+        }
+    }
+    return [期权持仓量, 期权持仓额]
+}
 function getBuyCashAnd入金(curBuy, 预估type = "") {
     let 单张费用 = curBuy[3].includes("ETF") ? etf费用 : 指数费用
     let 期权倍数 = curBuy[3].includes("ETF") ? etf倍数 : 指数倍数
@@ -1549,11 +1636,15 @@ function getBuyCashAnd入金(curBuy, 预估type = "") {
 
     let buyCash = 0;
     let curBuy入金 = 0;
-    let 百分比 = 0.1;
 
-    if (asset.现金 * 百分比 > 单次最大投资) buyCash = 单次最大投资;
-    else if (asset.现金 * 百分比 >= 单次最小投资 && asset.现金 * 百分比 <= 单次最大投资) buyCash = roundToHighestPlace(asset.现金 * 百分比);
+    if (asset.现金 * 单次抽取百分比 > 单次最大投资) buyCash = 单次最大投资;
+    else if (asset.现金 * 单次抽取百分比 >= 单次最小投资 && asset.现金 * 单次抽取百分比 <= 单次最大投资) buyCash = roundToHighestPlace(asset.现金 * 单次抽取百分比);
     else buyCash = 单次最小投资;
+
+    let [期权持仓量, 期权持仓额] = getAsset持仓量额()
+    if (期权持仓额 / (期权持仓额 + asset.现金) > 总持仓限制) { //限制总持仓
+        buyCash = 单次最小投资;
+    }
 
     let buyCount;
     if (curBuy.length >= buyPriceIndex) {
@@ -1648,11 +1739,65 @@ function preNext交易日(curDate, preNext = -1) {
         return resDate;
     }
 }
-function check沽提前卖出(curDate, asset期权, trigBuy = null) {
+function countWeekdays(startDateStr, endDateStr) {
+    /**
+    * 计算两个日期之间（包含两端）非周六、周日的天数
+    * @param {string} startDateStr - 开始日期，格式 'YYYY-MM-DD'
+    * @param {string} endDateStr - 结束日期，格式 'YYYY-MM-DD'
+    * @returns {number} 工作日天数（周一至周五）
+    */
+    // 安全解析日期字符串为 UTC 日期对象
+    const parseUTCDate = (str) => {
+        const [year, month, day] = str.split('-').map(Number);
+        const date = new Date(Date.UTC(year, month - 1, day));
+        if (isNaN(date.getTime())) {
+            throw new Error(`无效日期: ${str}`);
+        }
+        return date;
+    };
 
-    let 沪深300技术 = {};
-    沪深300技术.dayDatas = 沪深300;
-    沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+    try {
+        const start = parseUTCDate(startDateStr);
+        const end = parseUTCDate(endDateStr);
+
+        // 处理开始日期晚于结束日期的情况
+        if (start > end) return 0;
+
+        // 计算总天数（包含两端）
+        const totalDays = Math.floor((end - start) / (24 * 60 * 60 * 1000)) + 1;
+
+        // 获取开始日期的星期（UTC时间，0=周日，6=周六）
+        const startDay = start.getUTCDay();
+
+        // 计算完整周数和剩余天数
+        const fullWeeks = Math.floor(totalDays / 7);
+        const remainingDays = totalDays % 7;
+
+        // 计算完整周贡献的周末天数
+        let weekendDays = fullWeeks * 2;
+
+        // 计算剩余天数中的周末天数
+        for (let i = 0; i < remainingDays; i++) {
+            const currentDay = (startDay + i) % 7;
+            if (currentDay === 0 || currentDay === 6) { // 周日或周六
+                weekendDays++;
+            }
+        }
+
+        // 工作日 = 总天数 - 周末天数
+        return totalDays - weekendDays;
+    } catch (error) {
+        console.error('日期处理错误:', error.message);
+        return 0; // 发生错误时返回0
+    }
+}
+function extractFirstNumber(str) {
+    // 使用正则表达式匹配第一个数字（包括小数）
+    const match = str.match(/^-?\d+(?:\.\d+)?/);
+    return match ? parseFloat(match[0]) : null;
+}
+
+function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = null) {
 
     let pre1Month = 沪深300技术.currentMonthList.at(-2);
     let curMonth = 沪深300技术.currentMonthList.at(-1);
@@ -1665,64 +1810,6 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
     let pre1Day = 沪深300技术.currentDayList.at(-2);
     let curDay = 沪深300技术.currentDayList.at(-1);
 
-
-    function countWeekdays(startDateStr, endDateStr) {
-        /**
-        * 计算两个日期之间（包含两端）非周六、周日的天数
-        * @param {string} startDateStr - 开始日期，格式 'YYYY-MM-DD'
-        * @param {string} endDateStr - 结束日期，格式 'YYYY-MM-DD'
-        * @returns {number} 工作日天数（周一至周五）
-        */
-        // 安全解析日期字符串为 UTC 日期对象
-        const parseUTCDate = (str) => {
-            const [year, month, day] = str.split('-').map(Number);
-            const date = new Date(Date.UTC(year, month - 1, day));
-            if (isNaN(date.getTime())) {
-                throw new Error(`无效日期: ${str}`);
-            }
-            return date;
-        };
-
-        try {
-            const start = parseUTCDate(startDateStr);
-            const end = parseUTCDate(endDateStr);
-
-            // 处理开始日期晚于结束日期的情况
-            if (start > end) return 0;
-
-            // 计算总天数（包含两端）
-            const totalDays = Math.floor((end - start) / (24 * 60 * 60 * 1000)) + 1;
-
-            // 获取开始日期的星期（UTC时间，0=周日，6=周六）
-            const startDay = start.getUTCDay();
-
-            // 计算完整周数和剩余天数
-            const fullWeeks = Math.floor(totalDays / 7);
-            const remainingDays = totalDays % 7;
-
-            // 计算完整周贡献的周末天数
-            let weekendDays = fullWeeks * 2;
-
-            // 计算剩余天数中的周末天数
-            for (let i = 0; i < remainingDays; i++) {
-                const currentDay = (startDay + i) % 7;
-                if (currentDay === 0 || currentDay === 6) { // 周日或周六
-                    weekendDays++;
-                }
-            }
-
-            // 工作日 = 总天数 - 周末天数
-            return totalDays - weekendDays;
-        } catch (error) {
-            console.error('日期处理错误:', error.message);
-            return 0; // 发生错误时返回0
-        }
-    }
-    function extractFirstNumber(str) {
-        // 使用正则表达式匹配第一个数字（包括小数）
-        const match = str.match(/^-?\d+(?:\.\d+)?/);
-        return match ? parseFloat(match[0]) : null;
-    }
 
     let res = ""
     function 区间反向() {
@@ -1749,7 +1836,6 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
         ) return true
     }
     if (区间反向()) res += "P0"
-
 
 
     if (
@@ -1813,30 +1899,197 @@ function check沽提前卖出(curDate, asset期权, trigBuy = null) {
 
     return res;
 }
+
+function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = null) {
+
+    let pre1Month = 沪深300技术.currentMonthList.at(-2);
+    let curMonth = 沪深300技术.currentMonthList.at(-1);
+
+    let pre3Week = 沪深300技术.currentWeekList.at(-4);
+    let pre2Week = 沪深300技术.currentWeekList.at(-3);
+    let pre1Week = 沪深300技术.currentWeekList.at(-2);
+    let curWeek = 沪深300技术.currentWeekList.at(-1);
+
+    let pre3Day = 沪深300技术.currentDayList.at(-4);
+    let pre2Day = 沪深300技术.currentDayList.at(-3);
+    let pre1Day = 沪深300技术.currentDayList.at(-2);
+    let curDay = 沪深300技术.currentDayList.at(-1);
+
+    let res = ""
+
+    if (
+        !(
+            countWeekdays(curDay.date, asset期权[1]) >= 20 &&
+            (bollAllUp(沪深300技术.currentDayList) || volAllUp(沪深300技术.currentDayList)) &&
+            pre1Day.dea < curDay.dea &&
+            !preN矩形穿ups(沪深300技术.currentDayList) &&
+
+            pre1Week.D < curWeek.D &&
+            pre1Week.dea < curWeek.dea &&
+            pre1Week.diff < curWeek.diff &&
+            pre1Week.bar < curWeek.bar &&
+            curWeek.dea < curWeek.bar &&
+
+            pre3Week.volume < pre2Week.volume && pre2Week.volume < pre1Week.volume &&
+            volMa(5, 沪深300技术.currentWeekList, -4) < volMa(5, 沪深300技术.currentWeekList, -3) &&
+            volMa(5, 沪深300技术.currentWeekList, -3) < volMa(5, 沪深300技术.currentWeekList, -2) &&
+            volMa(10, 沪深300技术.currentWeekList, -4) < volMa(10, 沪深300技术.currentWeekList, -3) &&
+            volMa(10, 沪深300技术.currentWeekList, -3) < volMa(10, 沪深300技术.currentWeekList, -2) &&
+            volMa(20, 沪深300技术.currentWeekList, -4) < volMa(20, 沪深300技术.currentWeekList, -3) &&
+            volMa(20, 沪深300技术.currentWeekList, -3) < volMa(20, 沪深300技术.currentWeekList, -2) &&
+
+            bollAllUp(沪深300技术.currentMonthList) &&
+            kdjAllUp(沪深300技术.currentMonthList) &&
+            macdAllUp(沪深300技术.currentMonthList)
+        ) &&
+
+        pre1Day.volume > curDay.volume &&
+        curDay.bias.bias3 > curDay.bias.bias2 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias2 > 0 &&
+        (pre1Day.J > curDay.J || pre1Day.K > curDay.K) &&
+
+        红空红绿(沪深300技术.currentWeekList) &&
+        pre1Week.close > pre1Week.ups && ocHighest(curWeek) > curWeek.ups &&
+        curWeek.bias.bias3 > curWeek.bias.bias2 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0 &&
+        (pre1Week.J > curWeek.J || pre1Week.K > curWeek.K) &&
+        (
+            lastN九转(沪深300技术.currentWeekList, "is9转up", N = 3) ||
+            (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
+            curWeek.low >= curWeek.ups ||
+            KDJ死叉(沪深300技术.currentWeekList) ||
+            MACD死叉attr(沪深300技术.currentWeekList)
+        )
+    ) {
+        res = "C0"
+    }
+
+    if (
+        curDay.J > 100 && pre1Day.J > curDay.J &&
+        红空红绿(沪深300技术.currentDayList) && curDay.ups < curDay.low &&
+        红空红绿(沪深300技术.currentWeekList) && curWeek.ups < curWeek.low
+    ) res = "C1"
+
+
+    if (
+        !(
+            countWeekdays(curDay.date, asset期权[1]) >= 20 &&
+            (bollAllUp(沪深300技术.currentDayList) || volAllUp(沪深300技术.currentDayList)) &&
+            pre1Day.dea < curDay.dea &&
+            !preN矩形穿ups(沪深300技术.currentDayList) &&
+
+            pre1Week.D < curWeek.D &&
+            pre1Week.dea < curWeek.dea &&
+            pre1Week.diff < curWeek.diff &&
+            pre1Week.bar < curWeek.bar &&
+            curWeek.dea < curWeek.bar &&
+
+            pre3Week.volume < pre2Week.volume && pre2Week.volume < pre1Week.volume &&
+            volMa(5, 沪深300技术.currentWeekList, -4) < volMa(5, 沪深300技术.currentWeekList, -3) &&
+            volMa(5, 沪深300技术.currentWeekList, -3) < volMa(5, 沪深300技术.currentWeekList, -2) &&
+            volMa(10, 沪深300技术.currentWeekList, -4) < volMa(10, 沪深300技术.currentWeekList, -3) &&
+            volMa(10, 沪深300技术.currentWeekList, -3) < volMa(10, 沪深300技术.currentWeekList, -2) &&
+            volMa(20, 沪深300技术.currentWeekList, -4) < volMa(20, 沪深300技术.currentWeekList, -3) &&
+            volMa(20, 沪深300技术.currentWeekList, -3) < volMa(20, 沪深300技术.currentWeekList, -2) &&
+
+            bollAllUp(沪深300技术.currentMonthList) &&
+            kdjAllUp(沪深300技术.currentMonthList) &&
+            macdAllUp(沪深300技术.currentMonthList)
+        ) &&
+        !(
+            pre1Day.dea < curDay.dea &&
+            pre1Day.diff < curDay.diff &&
+            pre1Day.bar < curDay.bar &&
+            curDay.dea < curDay.bar
+        ) &&
+
+        curtPercent(pre2Week) >= 0 && curtPercent(pre1Week) >= 0 && curtPercent(curWeek) >= 0 &&
+        lastN九转(沪深300技术.currentWeekList, "is9转up", N = 3) &&
+        (
+            (
+                volMa(5, 沪深300技术.currentWeekList, -3) > volMa(5, 沪深300技术.currentWeekList, -2) &&
+                volMa(5, 沪深300技术.currentWeekList, -2) > volMa(5, 沪深300技术.currentWeekList, -1)
+            ) ||
+            volMa死叉(沪深300技术.currentWeekList) || volMa死叉(沪深300技术.currentWeekList, 5, 20)
+        ) &&
+        (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume)
+
+    ) res = "C2"
+
+
+
+    if (
+        (
+            curtPercent(pre1Day) < 0 ||
+            PtPPercent(pre2Day, pre1Day) < 0 ||
+            pre2Day.J > pre1Day.J
+        ) &&
+        (
+            pre2Day.high > pre2Day.ups ||
+            pre1Day.high > pre1Day.ups
+        ) &&
+
+        curtPercent(curDay) > 0 &&
+        PtPPercent(pre1Day, curDay) > 0 &&
+        curDay.close > curDay.ups &&
+        ocLowest(curDay) > ocHighest(pre1Day) &&
+
+        (pre1Day.J > curDay.J || pre1Day.D > curDay.D) &&
+        (pre1Day.J > 100 || curDay.J > 100) &&
+        curDay.bias.bias3 > curDay.bias.bias2 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias1 > 0 &&
+
+        curWeek.close > curWeek.ups &&
+        curWeek.J > 100 &&
+        curWeek.bias.bias3 > curWeek.bias.bias2 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0 &&
+
+        1 < countWeekdays(curDay.date, asset期权[1]) &&
+        countWeekdays(curDay.date, asset期权[1]) < 11
+
+    ) res += 'fuck'   //'2020-10-09', '2020-11-20', ' ↑ '  低位快到期
+
+
+    return res;
+}
+
 function check提前卖出(curDate, asset期权, trigBuy = null) {
     let res = ""
 
     /////////////暂时只能买etf期权
-    let profileN3 = afterDayProfileW3(asset期权[0], [], 沪深300)
+    // let profileN3 = afterDayProfileW3(asset期权[0], [], 沪深300)
+    // if (
+    //     profileN3?.nextSecondDelivery周三 &&
+    //     +profileN3?.nextSecondDelivery周三?.close.split("->")[0] > 20
+    // ) {
+    //     asset期权.N周三 = profileN3?.nextSecondDelivery周三?.close.split("->")[1].split(",")[0]
+    //     if (profileN3?.nextSecondDelivery周三?.close.split("->")[1].split(",")[0] == curDate)
+    //         res += "2Etf周三"
+    // }
+    // else if (
+    //     profileN3?.nextThirdDelivery周三 &&
+    //     +profileN3?.nextThirdDelivery周三?.close.split("->")[0] > 20
+    // ) {
+    //     asset期权.N周三 = profileN3?.nextThirdDelivery周三?.close.split("->")[1].split(",")[0]
+    //     if (profileN3?.nextThirdDelivery周三?.close.split("->")[1].split(",")[0] == curDate)
+    //         res += "3Etf周三"
+    // }
+
+    ///////////反向
+    // if (
+    //     trigBuy
+    //     && (
+    //         ((trigBuy[2].includes("高") || trigBuy[2].includes("↓")) && (asset期权[2].includes("低") || asset期权[2].includes("↑"))) ||
+    //         ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
+    //     ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
+    // ) {
+    //     res += "A" //反向
+    // }
     if (
-        profileN3?.nextSecondDelivery周三 &&
-        +profileN3?.nextSecondDelivery周三?.close.split("->")[0] > 20
-    ) {
-        asset期权.N周三 = profileN3?.nextSecondDelivery周三?.close.split("->")[1].split(",")[0]
-        if (profileN3?.nextSecondDelivery周三?.close.split("->")[1].split(",")[0] == curDate)
-            res += "2Etf周三"
-    }
-    else if (
-        profileN3?.nextThirdDelivery周三 &&
-        +profileN3?.nextThirdDelivery周三?.close.split("->")[0] > 20
-    ) {
-        asset期权.N周三 = profileN3?.nextThirdDelivery周三?.close.split("->")[1].split(",")[0]
-        if (profileN3?.nextThirdDelivery周三?.close.split("->")[1].split(",")[0] == curDate)
-            res += "3Etf周三"
-    }
+        asset期权[2].unif高低位() == "低位" &&
+        全部策略ByDay.find(ele => ele[3].unif高低位() == "高位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+    ) res += "反向"
+    if (
+        asset期权[2].unif高低位() == "高位" &&
+        全部策略ByDay.find(ele => ele[3].unif高低位() == "低位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+    ) res += "反向"
 
-
-    /////////////反向
     let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
     if (
         asset期权[2].includes("↑") &&
@@ -1847,66 +2100,20 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         美股策略byDay.find(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
     ) res += "美反箭"
 
-    if (
-        asset期权[2].unif高低位() == "低位" &&
-        全部策略ByDay.find(ele => ele[3].unif高低位() == "高位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "A"
-    if (
-        asset期权[2].unif高低位() == "高位" &&
-        全部策略ByDay.find(ele => ele[3].unif高低位() == "低位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "A"
 
-    // if (
-    //     trigBuy
-    //     && (
-    //         ((trigBuy[2].includes("高") || trigBuy[2].includes("↓")) && (asset期权[2].includes("低") || asset期权[2].includes("↑"))) ||
-    //         ((trigBuy[2].includes("低") || trigBuy[2].includes("↑")) && (asset期权[2].includes("高") || asset期权[2].includes("↓")))
-    //     ) && dateToStamp(trigBuy[0]) < dateToStamp(asset期权[1])
-    // ) {
-    //     res += "A" //反向
-    // }
 
-    if (asset期权[3].includes("沽")) {
-        res += check沽提前卖出(curDate, asset期权)
-    }
+    let 沪深300技术 = {};
+    沪深300技术.dayDatas = 沪深300;
+    沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+    if (asset期权[3].includes("沽")) res += check沽提前卖出(沪深300技术, curDate, asset期权)
+    if (asset期权[3].includes("购")) res += check购提前卖出(沪深300技术, curDate, asset期权)
+
+
 
     if (res != "") return res
     return false
 }
 
-
-let asset = {
-    现金: 0,
-    期权: [],
-};
-
-let 总入金 = 0;
-let 总buyCash = 0;
-let 总sellCash = 0;
-let 总费用 = 0;
-let need入金 = {};
-let preStartDate;
-let preEndDate;
-
-const 模拟盈亏 = false
-const 默认卖出到期类型 = 0 //默认0最后一天 -N提前N 卖出
-const 默认卖出开or收 = "开盘价" //默认开收卖出
-
-const 单次最小投资 = 3000;
-const 单次最大投资 = 30000;
-const etf费用 = 5
-const etf倍数 = 10000
-const 指数费用 = 15
-const 指数倍数 = 100
-
-const optionContractIndex = 4;
-const profileIndex = 5;
-const buyDateIndex = 6;
-const buyPriceIndex = 7;
-const buyCashIndex = 8;
-const sellDateIndex = 9;
-const sellPriceIndex = 10;
-const sellCashIndex = 11;
 
 async function 模拟交易(期权买卖List) {
 
@@ -1973,7 +2180,26 @@ async function 模拟交易(期权买卖List) {
 
             let buyPrice = asset期权[buyPriceIndex];
             let priceProfile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
-            if (priceProfile <= 0 && asset期权[sellDateIndex].includes("提前")) { asset期权[sellDateIndex] = null; continue; }
+
+            //收益率为负 继续拖
+            if (priceProfile <= 0 && excelFileData.at(-1).交易时间 != curDate) {
+                asset期权[sellDateIndex] = null;
+                continue;
+            }
+
+            //最后三天  如果开盘价 < ocHighest(上一天) 或 ocHighest(买入日) 继续拖
+            let excelBuyDateIndex = excelFileData.findIndex((e) => e.交易时间 == extractDate(asset期权[buyDateIndex]));
+            if (
+                !asset期权[sellDateIndex].includes("提前") &&
+                默认卖出到期类型 != 0 && excelFileData.at(-1).交易时间 != curDate &&
+                (
+                    ocHighest(excelFileData[excelBuyDateIndex]) > excelFileData[excelSellDateIndex].开盘价 ||
+                    ocHighest(excelFileData[excelSellDateIndex - 1]) > excelFileData[excelSellDateIndex].开盘价
+                )
+            ) {
+                asset期权[sellDateIndex] = null;
+                continue;
+            }
 
             if (!asset期权[sellDateIndex].includes(sellDate)) asset期权[sellDateIndex] = sellDate;
             asset期权[sellDateIndex] += 卖出开or收.substring(0, 1)
@@ -2112,8 +2338,14 @@ async function 模拟交易(期权买卖List) {
             let need提前卖出 = check提前卖出(curDate, asset期权);
             if (need提前卖出)
                 sellDateStr = `提前${need提前卖出}:${curNextOne交易日}`;
-            else if (curNextOne交易日 == preNext交易日(asset期权[1], 默认卖出到期类型))
-                sellDateStr = `${curNextOne交易日}`;
+            else {
+                for (let preDay = 默认卖出到期类型; preDay <= 0; preDay++) {
+                    if (curNextOne交易日 == preNext交易日(asset期权[1], preDay)) {
+                        sellDateStr = `${curNextOne交易日}`;
+                        break
+                    }
+                }
+            }
 
             if (!sellDateStr) continue
 
@@ -2128,7 +2360,6 @@ async function 模拟交易(期权买卖List) {
 
     }
 };
-
 
 
 (async () => {
@@ -2154,6 +2385,13 @@ async function 模拟交易(期权买卖List) {
     if (need入金统计[currentDayYMD.substring(0, 4)]?.sum > 31000) pageSendMail(currentDayYMD.substring(0, 4) + "年入金已超30000")
     console.log("总费用", 总费用, "need入金统计", need入金统计);
 
+    let 持仓buyYear = groupListByYear(asset.期权)
+    console.log("持仓buyYear", 持仓buyYear);
+
+    let profile平均数 = calAvgProf(asset.期权, 5)
+    let profile中位数 = calMedianProf(asset.期权, 5)
+    console.log("收益中位数", profile中位数, "收益平均数", profile平均数);
+
     const endJs = performance.now();
     window.asset = asset
     pageSendMail(`
@@ -2161,7 +2399,7 @@ async function 模拟交易(期权买卖List) {
             ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} 
             `
         , () => { window.optionRunEnd = true });
-    console.groupEnd();
+
 
     let profileArr = []
     asset.期权 = asset.期权.map(ele => {
@@ -2184,6 +2422,8 @@ async function 模拟交易(期权买卖List) {
 
     asset.期权.sort((a, b) => b[profileIndex] - a[profileIndex]);
     console.log(asset.期权)//, profileArr);
+
+    console.groupEnd();
 
 
 })();
