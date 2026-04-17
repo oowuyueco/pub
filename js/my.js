@@ -1185,6 +1185,10 @@ if (!Array.prototype.toSpliced) {
         return copy;
     };
 }
+function isNumber(value) {
+    return typeof value === 'number' && !isNaN(value);
+}
+
 //平均
 function calAvgProf(filterArr, calIndex = 4) {
     let sum = 0

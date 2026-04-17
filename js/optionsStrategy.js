@@ -791,14 +791,14 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
 
     let trigDateArrPmi股债 = Object.entries(triggerLogObjPmi股债).filter((ele, index) => { return ele[1][0].includes(高低位) })
 
-    let trigDateArr期权 = []
+    let trigDateArr区间 = []
     Object.entries(triggerLogObj区间.上升日期区间).forEach(([日期区间, 区间trigDateArr]) => {
         Object.entries(区间trigDateArr).forEach(([trigDate, trigNameObjArr]) => {
             let newArrNames = trigNameObjArr.map((ele, index) => {
                 if (index != trigNameObjArr.length - 1) return ele.quantName
                 else return ele
             })
-            trigDateArr期权.push([trigDate, newArrNames])
+            trigDateArr区间.push([trigDate, newArrNames])
         })
     })
     Object.entries(triggerLogObj区间.下降日期区间).forEach(([日期区间, 区间trigDateArr]) => {
@@ -807,11 +807,11 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
                 if (index != trigNameObjArr.length - 1) return ele.quantName
                 else return ele
             })
-            trigDateArr期权.push([trigDate, newArrNames])
+            trigDateArr区间.push([trigDate, newArrNames])
         })
     })
 
-    let trigDateArr = [...trigDateArr指数, ...trigDateArr基金, ...trigDateArr同花顺, ...trigDateArr期权, ...trigDateArrPmi股债] //  [...trigDateArrPmi股债] //
+    let trigDateArr = [...trigDateArr区间, ...trigDateArr指数, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债] //  [...trigDateArrPmi股债] //
     trigDateArr.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
     const dateMap = new Map();
@@ -953,9 +953,6 @@ let 全部策略By期权日 = 全部策略.trig期权日Arr
 
 
 
-function isNumber(value) {
-    return typeof value === 'number' && !isNaN(value);
-}
 function arrayHasIndex(arr, index) {
     return Array.isArray(arr) && index >= 0 && index < arr.length && !(arr[index] == null);
 }
@@ -1476,34 +1473,55 @@ String.prototype.leftAppend = function () {
     return "           " + target;
 };
 let randomProfileArr = [];
-function gerRandomProfile(priceProfile, mean = 0, stdDev = 0.3) {
-    if (priceProfile > 1) return 1
-    if (priceProfile < 0) return -1
-    return priceProfile
 
-    let result;
+/**
+ * 生成服从截断正态分布的随机数，范围严格限制在 [-m, n]
+ * @param {number} m - 负向边界绝对值（需 > 0）
+ * @param {number} n - 正向边界（需 > 0）
+ * @param {number} [sigmaRatio=6] - 控制分布宽度的比例参数（默认6，表示 ±3σ 覆盖整个区间）
+ * @returns {number}
+ */
+function randomNormalInRange(m, n, sigmaRatio = 6) {
+    if (m < 0) m = -m
+    if (m <= 0 || n <= 0) throw new Error("m 和 n 必须为正数");
+
+    const lower = -m;
+    const upper = n;
+    if (lower >= upper) throw new Error("范围无效：-m 必须小于 n");
+
+    // 均值设在区间中心
+    const mu = (lower + upper) / 2;
+    // 标准差由区间宽度决定，默认 sigmaRatio=6 意味着 99.7% 的数据自然落在区间内
+    const sigma = (upper - lower) / sigmaRatio;
+
+    let x;
+    let attempts = 0;
+    const MAX_ATTEMPTS = 1000; // 安全保护，防止极端参数下的理论死循环
+
     do {
-        // Box-Muller变换生成标准正态分布
-        const u1 = Math.random();
-        const u2 = Math.random();
+        // Box-Muller 变换：生成标准正态分布 N(0,1)
+        const u1 = 1 - Math.random(); // 映射为 (0, 1]，避免 Math.log(0)
+        const u2 = Math.random();     // [0, 1)
+        const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
 
-        // 避免除零错误
-        if (u1 === 0) continue;
+        // 缩放并平移到目标分布 N(mu, sigma^2)
+        x = mu + sigma * z;
+        attempts++;
+    } while ((x < lower || x > upper) && attempts < MAX_ATTEMPTS);
 
-        // 生成标准正态分布随机数
-        const z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
-
-        // 应用均值和标准差
-        result = mean + z0 * stdDev;
-
-        // 循环直到值落在[-1, 1]区间内
-    } while (result < -1 || result > 1);
-    randomProfileArr.push(result);
-    return result;
-
-
-    return +(Math.random() * 2 - 1).toFixed(4) //[-1,1) 随机 -1到2-1之间
+    return x;
 }
+function gerRandomProfile(priceProfile, mean = 0, stdDev = 0.3) {
+
+    // if (priceProfile > 2) return 2
+    // if (priceProfile < 0) return priceProfile
+    // return priceProfile
+
+    //return +(Math.random() * 2 - 1).toFixed(4) //[-1,1) 随机 -1到2-1之间
+
+    return randomNormalInRange(-1, 1)
+}
+
 function cloneAsset(asset, hastAr = true) {
     if (hastAr) return structuredClone(asset)
     else return JSON.parse(JSON.stringify(asset))
@@ -2045,7 +2063,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         1 < countWeekdays(curDay.date, asset期权[1]) &&
         countWeekdays(curDay.date, asset期权[1]) < 11
 
-    ) res += 'fuck'   //'2020-10-09', '2020-11-20', ' ↑ '  低位快到期
+    ) res += 'C3'   //'2020-10-09', '2020-11-20', ' ↑ ' 快到期
 
 
     return res;
