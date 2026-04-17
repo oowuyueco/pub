@@ -1191,7 +1191,7 @@ function calAvgProf(filterArr, calIndex = 4) {
     let avg = 0
     for (let index = 0; index < filterArr.length; index++) {
         const element = filterArr[index];
-        sum = sum + element[calIndex]
+        if (isNumber(element[calIndex])) sum = sum + element[calIndex]
     }
     avg = sum / filterArr.length
 
