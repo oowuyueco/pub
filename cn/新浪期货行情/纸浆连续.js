@@ -17888,11 +17888,21 @@ var 纸浆连续 = [
     "volume": 169353,
     "hold": 207509,
     "settle": 5028
+  },
+  {
+    "date": "2026-04-17",
+    "open": 5046,
+    "high": 5092,
+    "low": 5038,
+    "close": 5092,
+    "volume": 166505,
+    "hold": 213291,
+    "settle": 5068
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.纸浆连续 = 纸浆连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-16 20:55:29"
+    exports.writeDateTime = "2026-04-17 20:46:58"
 };
