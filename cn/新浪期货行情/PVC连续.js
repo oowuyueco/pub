@@ -40988,11 +40988,21 @@ var PVC连续 = [
     "volume": 1475017,
     "hold": 815044,
     "settle": 5118
+  },
+  {
+    "date": "2026-04-21",
+    "open": 5134,
+    "high": 5165,
+    "low": 5091,
+    "close": 5134,
+    "volume": 1209539,
+    "hold": 868734,
+    "settle": 5126
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.PVC连续 = PVC连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-20 20:55:19"
+    exports.writeDateTime = "2026-04-21 20:50:28"
 };
