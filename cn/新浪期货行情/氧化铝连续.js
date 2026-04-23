@@ -6878,11 +6878,21 @@ var 氧化铝连续 = [
     "volume": 252363,
     "hold": 283485,
     "settle": 2826
+  },
+  {
+    "date": "2026-04-23",
+    "open": 2847,
+    "high": 2865,
+    "low": 2818,
+    "close": 2822,
+    "volume": 297730,
+    "hold": 286166,
+    "settle": 2843
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.氧化铝连续 = 氧化铝连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-04-22 20:51:18"
+    exports.writeDateTime = "2026-04-23 20:50:42"
 };
