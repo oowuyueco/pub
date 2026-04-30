@@ -1349,7 +1349,7 @@ function 附加xls过滤时间(期权建议ByDay) {
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-        //.filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
+        .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
         .map((ele, index) => {
             let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
             if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
