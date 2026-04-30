@@ -316,6 +316,7 @@
     <script type="text/javascript" src="./cn/行情/上证.js"></script>
     <script type="text/javascript" src="./cn/行情/恒生.js"></script>
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
+    <script type="text/javascript" src="./cn/行情/券商策略.js"></script>
     <script type="text/javascript" src="./cn/行情/区间策略.js"></script>
     <script type="text/javascript" src="./cn/基金/基金策略.js"></script>
     <script type="text/javascript" src="./cn/pmi股债策略.js"></script>
@@ -630,8 +631,9 @@
                         label: {
                             show: true, //黑框日期  显示指数日期
                             color: "black",
+                            fontSize: 9.5,
                             padding: [
-                                -8,  // 上
+                                -3,  // 上
                                 5, // 右
                                 5,  // 下
                                 5, // 左
@@ -1660,6 +1662,51 @@
 
 
 
+                {// var triggerLogObj券商 
+                    name: '券商策略',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 8,
+                    symbol: 'pin',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 6
+                    },
+                    zlevel: 1,
+                    data: 券商策略低位ByDay.filter((item) => {
+                        return !item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], -1]
+                    }).addStartEnd()
+                },
+                {
+                    name: '券商策略',
+                    type: 'scatter',
+                    xAxisIndex: 4,
+                    yAxisIndex: 8,
+                    symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 1,
+                            color: "black"
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return 8
+                    },
+                    zlevel: 1,
+                    data: 券商策略低位ByDay.filter((item) => {
+                        return item[3].includes("★")
+                    }).map((item) => {
+                        return [item[0], -1]
+                    }).addStartEnd()
+                },
+
 
                 {//triggerLogObj同花顺
                     name: '同花顺策略',
@@ -1680,7 +1727,7 @@
                     data: 同花顺策略低位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -1]
+                        return [item[0], -3]
                     }).addStartEnd()
                 },
                 {
@@ -1702,7 +1749,7 @@
                     data: 同花顺策略低位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -1.5]
+                        return [item[0], -3]
                     }).addStartEnd()
                 },
 
@@ -1726,7 +1773,7 @@
                     data: 基金策略低位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -3.5]
+                        return [item[0], -5]
                     }).addStartEnd()
                 },
                 {
@@ -1748,7 +1795,7 @@
                     data: 基金策略低位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -4]
+                        return [item[0], -5]
                     }).addStartEnd()
                 },
 
@@ -1771,7 +1818,7 @@
                     data: 基金策略高位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -4]
+                        return [item[0], -5]
                     }).addStartEnd()
                 },
 
@@ -2331,7 +2378,7 @@
 
         setTimeout(() => {
             [
-                "ppi基数", "上证", "恒生", "区间策略", "大盘策略", "同花顺策略", "基金策略", "pmi股债策略",
+                "ppi基数", "上证", "恒生", "区间策略", "大盘策略", "券商策略", "同花顺策略", "基金策略", "pmi股债策略",
                 "汽车与出口", "房地产", "中位PE", "恒指美债差", "美债", "MM制造业",
                 "M1_M2", "M1_M2_MA", "信贷脉冲_MA4", "中美汇", "美元指", "金融脉动增速us",
                 "300同比"

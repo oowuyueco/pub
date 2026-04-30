@@ -342,13 +342,13 @@ const 期权标的资产Name = 期权到期日类型 == "股指周五" ? "沪深
 
 
 const 标星冲突不显示 = true
-function 统计策略(triggerLogObj, 高低位 = "低位", 汇总N = 5, 过滤M = 10) {
+function 统计策略(triggerLogObj, 策略名 = "", 高低位 = "低位", 汇总N = 5, 过滤M = 10) {
 
     let trigDateArr = Object.entries(triggerLogObj)
         .filter((ele, index) => { return ele[1][0].includes(高低位) })
 
     if (标星冲突不显示)
-        trigDateArr = trigDateArr.filter((ele, index) => { return !ele[1].at(-1)?.冲突 }) ///标星冲突不显示
+        trigDateArr = trigDateArr.filter((ele, index) => { return !ele[1].at(-1)?.冲突 })
 
     trigDateArr = trigDateArr.map((ele, index, preArr) => {
         let newArr = []
@@ -515,8 +515,8 @@ function changeShowLog(策略ByDay) {
 }
 
 //pmi股债策略
-let pmi股债策略高位 = 统计策略(triggerLogObjPmi股债, "高位")
-let pmi股债策略低位 = 统计策略(triggerLogObjPmi股债, "低位")
+let pmi股债策略高位 = 统计策略(triggerLogObjPmi股债, "pmi股债策略", "高位")
+let pmi股债策略低位 = 统计策略(triggerLogObjPmi股债, "pmi股债策略", "低位")
 
 let pmi股债策略高位ByDay = pmi股债策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
 let pmi股债策略低位ByDay = pmi股债策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
@@ -531,8 +531,8 @@ console.log(pmi股债策略低位ByDay, changeShowLog(pmi股债策略低位ByDay
 console.groupEnd()
 
 //基金策略
-let 基金策略高位 = 统计策略(triggerLogObj基金, "高位")
-let 基金策略低位 = 统计策略(triggerLogObj基金, "低位")
+let 基金策略高位 = 统计策略(triggerLogObj基金, "基金策略", "高位")
+let 基金策略低位 = 统计策略(triggerLogObj基金, "基金策略", "低位")
 
 let 基金策略高位ByDay = 基金策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
 let 基金策略低位ByDay = 基金策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
@@ -548,8 +548,8 @@ console.groupEnd()
 
 
 //同花顺策略
-let 同花顺策略高位 = 统计策略(triggerLogObj同花顺, "高位")
-let 同花顺策略低位 = 统计策略(triggerLogObj同花顺, "低位")
+let 同花顺策略高位 = 统计策略(triggerLogObj同花顺, "同花顺策略", "高位")
+let 同花顺策略低位 = 统计策略(triggerLogObj同花顺, "同花顺策略", "低位")
 
 let 同花顺策略高位ByDay = 同花顺策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
 let 同花顺策略低位ByDay = 同花顺策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
@@ -564,8 +564,8 @@ console.log(同花顺策略低位ByDay, changeShowLog(同花顺策略低位ByDay
 console.groupEnd()
 
 //指数策略
-let 指数策略高位 = 统计策略(triggerLogObj指数.按日期排序, "高位")
-let 指数策略低位 = 统计策略(triggerLogObj指数.按日期排序, "低位")
+let 指数策略高位 = 统计策略(triggerLogObj指数.按日期排序, "指数策略", "高位")
+let 指数策略低位 = 统计策略(triggerLogObj指数.按日期排序, "指数策略", "低位")
 let 指数策略高位ByDay = 指数策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
 let 指数策略低位ByDay = 指数策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
 let 指数策略高位By期权日 = 指数策略高位.trig期权日Arr
@@ -576,6 +576,22 @@ console.log(指数策略高位ByDay, changeShowLog(指数策略高位ByDay), 指
 console.groupEnd()
 console.groupCollapsed("指数策略低位ByDay   指数策略低位By期权日")
 console.log(指数策略低位ByDay, changeShowLog(指数策略低位ByDay), 指数策略低位By期权日)
+console.groupEnd()
+
+
+//券商策略
+let 券商策略高位 = 统计策略(triggerLogObj券商.按日期排序, "券商策略", "高位")
+let 券商策略低位 = 统计策略(triggerLogObj券商.按日期排序, "券商策略", "低位")
+let 券商策略高位ByDay = 券商策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+let 券商策略低位ByDay = 券商策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+let 券商策略高位By期权日 = 券商策略高位.trig期权日Arr
+let 券商策略低位By期权日 = 券商策略低位.trig期权日Arr
+
+console.groupCollapsed("券商策略高位ByDay   券商策略高位By期权日")
+console.log(券商策略高位ByDay, changeShowLog(券商策略高位ByDay), 券商策略高位By期权日)
+console.groupEnd()
+console.groupCollapsed("券商策略低位ByDay   券商策略低位By期权日")
+console.log(券商策略低位ByDay, changeShowLog(券商策略低位ByDay), 券商策略低位By期权日)
 console.groupEnd()
 
 
@@ -782,8 +798,12 @@ console.groupEnd()
 
 //全部策略合并后统计
 function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
+
     let trigDateArr指数 = Object.entries(triggerLogObj指数.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
-    if (标星冲突不显示) trigDateArr指数 = trigDateArr指数.filter((ele, index) => { return !ele[1].at(-1)?.冲突 }) ///标星冲突不显示
+    if (标星冲突不显示) trigDateArr指数 = trigDateArr指数.filter((ele, index) => { return !ele[1].at(-1)?.冲突 })
+
+    let trigDateArr券商 = Object.entries(triggerLogObj券商.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
+    if (标星冲突不显示) trigDateArr券商 = trigDateArr券商.filter((ele, index) => { return !ele[1].at(-1)?.冲突 })
 
     let trigDateArr基金 = Object.entries(triggerLogObj基金).filter((ele, index) => { return ele[1][0].includes(高低位) })
 
@@ -811,7 +831,7 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
         })
     })
 
-    let trigDateArr = [...trigDateArr区间, ...trigDateArr指数, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债] //  [...trigDateArrPmi股债] //
+    let trigDateArr = [...trigDateArr区间, ...trigDateArr指数, , ...trigDateArr券商, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债] //  [...trigDateArrPmi股债] //
     trigDateArr.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
     const dateMap = new Map();
@@ -1329,7 +1349,7 @@ function 附加xls过滤时间(期权建议ByDay) {
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-        .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
+        //.filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
         .map((ele, index) => {
             let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
             if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟

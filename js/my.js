@@ -1889,6 +1889,7 @@ function getDataFromFile(dataName, folder = "./data/", forceNew = true, format =
                     resolve(data)//返回str
                 }
             } catch (error) {
+                console.log(error)
                 resolve(false)
             }
 
