@@ -51894,5 +51894,5 @@ var 豆粕连续 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.豆粕连续 = 豆粕连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-02 20:39:24"
+    exports.writeDateTime = "2026-05-04 21:14:48"
 };
