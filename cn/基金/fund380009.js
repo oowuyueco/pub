@@ -7952,7 +7952,7 @@ var 中银中债_中债综全_上证50_上证_创业 = [
         "创业": 346.7831
     }
 ];
-var runDate = "2026-05-04";
+var runDate = "2026-05-05";
         if (typeof module !== "undefined" && module.exports) {
             exports.中银中债_中债综全_上证50_上证_创业 = 中银中债_中债综全_上证50_上证_创业
         }
