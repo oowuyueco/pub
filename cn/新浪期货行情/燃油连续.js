@@ -51608,11 +51608,21 @@ var 燃油连续 = [
     "volume": 378293,
     "hold": 157666,
     "settle": 4462
+  },
+  {
+    "date": "2026-05-06",
+    "open": 4369,
+    "high": 4546,
+    "low": 4360,
+    "close": 4493,
+    "volume": 171421,
+    "hold": 164789,
+    "settle": 4461
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.燃油连续 = 燃油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-05 21:00:28"
+    exports.writeDateTime = "2026-05-06 21:23:19"
 };
