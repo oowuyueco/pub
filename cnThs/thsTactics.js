@@ -134,19 +134,19 @@ var 策略集合 = {
             stats: "策略回测"
         },
 
-        {
-            name: "绿空红",
-            query: `昨日涨跌幅小于0.3大于-10.5，昨日阴线，当日涨跌幅小于-1大于-5，当日阳线，放量，最近5日涨跌幅小于-7大于-21，pe<=120，pb>0， roe大于0，股息大于0，cci大于-260，
-                    最近3日收盘获利小于4.5%的天数>0，最近2日主力资金流入大于-200万，BIAS买入信号，kdjd值小于35，排除st，上市天数>100，换手率从大到小排列
-            `,
-            daysForSaleStrategy: "25",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 30,
-            fallIncome: 5,
-            lowerIncome: 12,
-            stats: "策略回测"
-        },
+        // {
+        //     name: "绿空红",
+        //     query: `昨日涨跌幅小于0.3大于-10.5，昨日阴线，当日涨跌幅小于-1大于-5，当日阳线，放量，最近5日涨跌幅小于-7大于-21，pe<=120，pb>0， roe大于0，股息大于0，cci大于-260，
+        //             最近3日收盘获利小于4.5%的天数>0，最近2日主力资金流入大于-200万，BIAS买入信号，kdjd值小于35，排除st，上市天数>100，换手率从大到小排列
+        //     `,
+        //     daysForSaleStrategy: "25",
+        //     stockHoldCount: 1,
+        //     dayBuyStockNum: 1,
+        //     upperIncome: 30,
+        //     fallIncome: 5,
+        //     lowerIncome: 12,
+        //     stats: "策略回测"
+        // },
         {
             name: "绿空红menv",
             query: `昨日涨跌幅小于0.3大于-10.5，昨日阴线，当日涨跌幅小于-1大于-5，当日阳线，放量，最近5日涨跌幅小于-7大于-21，pe<=120，pb>0， roe大于0，股息大于0，cci大于-260，
@@ -175,20 +175,20 @@ var 策略集合 = {
             lowerIncome: 13.5,
             stats: "策略回测"
         },
-        {
-            name: "均线集中度menv",
-            query: `市值大于20亿小于350亿；5均线大于10均线；筹码集中度90小于10%；最近10日放量；最近20日换手率小于45；振幅小于10；涨跌幅大于-3.5小于5；排除st；排除*st；上市天数>100；0<pe<70；pb>0；roe从大到小排列  
-            `,
-            daysForSaleStrategy: "60",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 20,
-            fallIncome: 7,
-            lowerIncome: 12,
-            buyPosition: 0,
-            menv: "kdj1",
-            stats: "策略回测"
-        },
+        // {
+        //     name: "均线集中度menv",
+        //     query: `市值大于20亿小于350亿；5均线大于10均线；筹码集中度90小于10%；最近10日放量；最近20日换手率小于45；振幅小于10；涨跌幅大于-3.5小于5；排除st；排除*st；上市天数>100；0<pe<70；pb>0；roe从大到小排列  
+        //     `,
+        //     daysForSaleStrategy: "60",
+        //     stockHoldCount: 1,
+        //     dayBuyStockNum: 1,
+        //     upperIncome: 20,
+        //     fallIncome: 7,
+        //     lowerIncome: 12,
+        //     buyPosition: 0,
+        //     menv: "kdj1",
+        //     stats: "策略回测"
+        // },
     ],
     同花顺策略组2B: [
         {
