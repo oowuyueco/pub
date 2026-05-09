@@ -3445,7 +3445,7 @@ var 工银美债_上证50 = [
         "上证50": 29.0607
     }
 ];
-var runDate = "2026-05-08";
+var runDate = "2026-05-09";
         if (typeof module !== "undefined" && module.exports) {
             exports.工银美债_上证50 = 工银美债_上证50
         }
