@@ -36538,11 +36538,21 @@ var 焦炭连续 = [
     "volume": 13612,
     "hold": 33468,
     "settle": 1845
+  },
+  {
+    "date": "2026-05-11",
+    "open": 1833,
+    "high": 1879,
+    "low": 1830.5,
+    "close": 1868,
+    "volume": 16936,
+    "hold": 33780,
+    "settle": 1854.5
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.焦炭连续 = 焦炭连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-09 20:45:06"
+    exports.writeDateTime = "2026-05-11 22:14:31"
 };
