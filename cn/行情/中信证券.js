@@ -66778,11 +66778,23 @@ var 中信证券 = [
     "volume": 130062480,
     "hsl": 1.07,
     "zgs": 121553719.62616822
+  },
+  {
+    "date": "2026-05-11",
+    "timestamp": 1778428800000,
+    "open": 26.83,
+    "high": 27.48,
+    "low": 26.75,
+    "close": 27.33,
+    "percent": 1.41,
+    "volume": 196141091,
+    "hsl": 1.61,
+    "zgs": 121826764.59627329
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.中信证券 = 中信证券
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-05-09 17:06:01"
+    exports.writeDateTime = "2026-05-11 18:52:08"
 };
