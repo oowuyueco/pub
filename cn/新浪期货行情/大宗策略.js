@@ -1127,14 +1127,14 @@ var triggerLogObj大宗={
                     6.17,
                     -2.35
                 ],
-                "day46LowUp": [
+                "day47LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    2.65
+                    1.99
                 ],
-                "lastDay": 46
+                "lastDay": 47
             }
         }
     ],
@@ -2099,14 +2099,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day62LowUp": [
+                "day63LowUp": [
                     "31,2026-03-23",
                     -50.11,
                     "",
                     0,
-                    -35.49
+                    -32.73
                 ],
-                "lastDay": 62
+                "lastDay": 63
             }
         },
         {
@@ -7567,14 +7567,13 @@ var triggerLogObj大宗={
                     30.38,
                     30.38
                 ],
-                "day99LowUp": [
+                "day100LowUp": [
                     "11,2025-12-22",
                     -2.67,
                     "78,2026-04-07",
                     56.91,
-                    38.14
-                ],
-                "lastDay": 99
+                    40.15
+                ]
             },
             "test": ""
         },
@@ -14199,14 +14198,14 @@ var triggerLogObj大宗={
                     52.61,
                     40.5
                 ],
-                "day88LowUp": [
+                "day89LowUp": [
                     "",
                     0,
                     "57,2026-03-23",
                     52.61,
-                    31.04
+                    32.29
                 ],
-                "lastDay": 88
+                "lastDay": 89
             }
         },
         {
@@ -15344,4 +15343,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-05-11"
+var runLastKlineDate = "2026-05-12"
