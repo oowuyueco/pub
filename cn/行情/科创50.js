@@ -18466,11 +18466,23 @@ var 科创50 = [
     "volume": 1777324700,
     "hsl": 2.58,
     "zgs": 688885542.6356589
+  },
+  {
+    "date": "2026-05-14",
+    "timestamp": 1778688000000,
+    "open": 1792.34,
+    "high": 1800.61,
+    "low": 1723.7,
+    "close": 1725.09,
+    "percent": -2.55,
+    "volume": 2107102300,
+    "hsl": 3.06,
+    "zgs": 688595522.875817
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.科创50 = 科创50
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-05-13 18:11:35"
+    exports.writeDateTime = "2026-05-14 18:03:44"
 };
