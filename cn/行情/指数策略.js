@@ -3887,6 +3887,11 @@ var triggerLogObj指数 = {
           "close": "34->2026-04-17,18.02,0.38",
           "high": "33->2026-04-16,25.96,0.55",
           "low": "16->2026-03-23,-292.65,-6.21"
+        },
+        "nextThirdDelivery周五": {
+          "close": "51->2026-05-15,148.94,3.16",
+          "high": "49->2026-05-13,287.69,6.11",
+          "low": "16->2026-03-23,-292.65,-6.21"
         }
       }
     ]
@@ -6285,7 +6290,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-05-14"
+var runLastKlineDate = "2026-05-15"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
