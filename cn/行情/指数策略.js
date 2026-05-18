@@ -3894,6 +3894,19 @@ var triggerLogObj指数 = {
           "low": "16->2026-03-23,-292.65,-6.21"
         }
       }
+    ],
+    "2026-05-18": [
+      "沪深300高位VKM多叉",
+      {
+        "after": {
+          "close": ",0,0",
+          "high": ",0,0",
+          "low": ",0,0",
+          "nextFirstDelivery周五": "2026-06-19",
+          "nextSecondDelivery周五": "2026-07-17",
+          "nextThirdDelivery周五": "2026-08-21"
+        }
+      }
     ]
   },
   "上证低位空但叉": [
@@ -5421,6 +5434,12 @@ var triggerLogObj指数 = {
       "quantName": "沪深300高位VKM多叉",
       "percent": -0.68,
       "详情": "type1"
+    },
+    {
+      "trigDate": "2026-05-18",
+      "quantName": "沪深300高位VKM多叉",
+      "percent": -0.54,
+      "详情": "type0"
     }
   ],
   "沪深300低位低量": [
@@ -6290,7 +6309,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-05-15"
+var runLastKlineDate = "2026-05-18"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
