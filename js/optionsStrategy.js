@@ -2438,8 +2438,10 @@ async function 模拟交易(期权买卖List) {
 
     const endJs = performance.now();
     window.asset = asset
+
+    //, asset现金:${+asset.现金.toFixed(2)} 
     pageSendMail(`
-            ${currentDayYMD}当日期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒, asset现金:${+asset.现金.toFixed(2)}。 \r\n 
+            ${currentDayYMD}当日期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 。 \r\n 
             ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} 
             `
         , () => { window.optionRunEnd = true });
