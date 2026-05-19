@@ -13568,11 +13568,21 @@ var 短纤连续 = [
     "volume": 156840,
     "hold": 183964,
     "settle": 8110
+  },
+  {
+    "date": "2026-05-19",
+    "open": 8056,
+    "high": 8066,
+    "low": 7950,
+    "close": 8032,
+    "volume": 161290,
+    "hold": 178342,
+    "settle": 8010
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.短纤连续 = 短纤连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-18 22:48:49"
+    exports.writeDateTime = "2026-05-19 22:21:46"
 };
