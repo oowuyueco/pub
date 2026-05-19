@@ -1010,8 +1010,10 @@ String.prototype.unif高低位 = function () {
 };
 
 let 手动买卖 = [
-    //["2025-11-25", "2026-01-16", " ↑ ", '4490.4 购沪深300手动 4625.112', 'io2601购4600:53张', 2.3, '2025-11-26', 57.4, 3837, '2026-01-16开', 182, 8851],
-    //['2025-10-28', '2025-12-24', '高位', '4.802 沽沪深300ETF手动 4.658', '2025-12-24沽4700:34张', 1.91, '2025-10-29', 0.0888, 30532, '提前P1:2025-11-25开', 0.1701, 58485],
+    // ['2026-05-18', '2026-07-17', '高位', '4833.52 沽沪深300 4688.514', tAr: '沪深300高位VKM多叉', yes1: 1] start
+    ['2026-05-18', '2026-06-24', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-06-24沽4776:5张', null, '2026-05-19', 0.0795, 4078.350],
+
+
 ]
 let 模拟买卖 = [
 
@@ -1345,7 +1347,7 @@ function 第一次按方向后N到期日分类查找标记yes1(全部策略By期
 function 附加xls过滤时间(期权建议ByDay) {
     let 期权startDate = decodeURI(getQueryVariable("optStartDate"));
     let 期权endDate = decodeURI(getQueryVariable("optEndDate"));
-    if (期权startDate == "false") 期权startDate = "2020-01-01" //默认设置开始日期同时减小计算量
+    if (期权startDate == "false") 期权startDate = "2026-05-18" //默认设置开始日期同时减小计算量
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
@@ -1365,7 +1367,7 @@ function 附加xls过滤时间(期权建议ByDay) {
             let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
             if (s2) { s2.tAr = ele.tAr; return s2 }//手动
             else {
-                s2 = 手动买卖.find((e) => ele[0] + ele[1].substring(0, 7) + ele[2].unif高低位() == e[0] + e[1].substring(0, 7) + e[2].unif高低位());
+                s2 = 手动买卖.find((e) => ele[0] + ele[1].substring(0, 0) + ele[2].unif高低位() == e[0] + e[1].substring(0, 0) + e[2].unif高低位());
                 if (s2) { s2.tAr = ele.tAr; return s2 }//手动
             }
 
@@ -2156,6 +2158,8 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
 
 
 async function 模拟交易(期权买卖List) {
+
+    if (沪深300.at(-1).date !== currentDayYMD) 沪深300.push({ "date": `${currentDayYMD}` })//for本地
 
     const startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0]);
 
