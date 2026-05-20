@@ -3206,23 +3206,6 @@ var triggerLogObj区间 = {
             "nextThirdDelivery周五": "2026-06-19"
           }
         }
-      ],
-      "2026-05-19": [
-        {
-          "trigDate": "2026-05-19",
-          "quantName": "上证50低位_WdownMa40",
-          "logInfo": ""
-        },
-        {
-          "after": {
-            "close": ",0,0",
-            "high": ",0,0",
-            "low": ",0,0",
-            "nextFirstDelivery周五": "2026-06-19",
-            "nextSecondDelivery周五": "2026-07-17",
-            "nextThirdDelivery周五": "2026-08-21"
-          }
-        }
       ]
     }
   },
