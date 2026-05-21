@@ -46008,11 +46008,21 @@ var 菜油连续 = [
     "volume": 294767,
     "hold": 264344,
     "settle": 9810
+  },
+  {
+    "date": "2026-05-21",
+    "open": 9839,
+    "high": 9843,
+    "low": 9714,
+    "close": 9726,
+    "volume": 227020,
+    "hold": 249512,
+    "settle": 9786
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.菜油连续 = 菜油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-20 22:20:58"
+    exports.writeDateTime = "2026-05-21 22:29:40"
 };
