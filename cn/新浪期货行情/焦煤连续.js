@@ -31908,11 +31908,21 @@ var 焦煤连续 = [
     "volume": 517126,
     "hold": 507024,
     "settle": 1207
+  },
+  {
+    "date": "2026-05-22",
+    "open": 1190,
+    "high": 1193.5,
+    "low": 1160.5,
+    "close": 1162.5,
+    "volume": 604217,
+    "hold": 540068,
+    "settle": 1173
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.焦煤连续 = 焦煤连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-21 22:30:34"
+    exports.writeDateTime = "2026-05-22 22:07:13"
 };
