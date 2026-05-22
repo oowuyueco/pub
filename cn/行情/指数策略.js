@@ -3899,7 +3899,7 @@ var triggerLogObj指数 = {
       "沪深300高位VKM多叉",
       {
         "after": {
-          "close": "3->2026-05-21,-50.42,-1.04",
+          "close": "4->2026-05-22,11.58,0.24",
           "high": "1->2026-05-19,19.36,0.4",
           "low": "3->2026-05-21,-50.42,-1.04",
           "nextFirstDelivery周五": "2026-06-19",
@@ -6309,7 +6309,7 @@ var triggerLogObj指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-05-21"
+var runLastKlineDate = "2026-05-22"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj指数 = triggerLogObj指数
     exports.runLastKlineDate = runLastKlineDate
