@@ -28168,5 +28168,5 @@ var 券商ETF华宝 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.券商ETF华宝 = 券商ETF华宝
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-05-22 18:40:43"
+    exports.writeDateTime = "2026-05-23 17:31:19"
 };
