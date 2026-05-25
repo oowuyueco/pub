@@ -1303,4 +1303,4 @@ var triggerLogObjPmi股债 = {
     }
   ]
 }
-var pmi股债策略runLastTime = "2026-05-23 20:44:54"
+var pmi股债策略runLastTime = "2026-05-25 22:23:43"
