@@ -1365,10 +1365,10 @@ function 附加xls过滤时间(期权建议ByDay) {
             }
 
             let s2 = 手动买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
-            if (s2) { s2.tAr = ele.tAr; return s2 }//手动
+            if (s2) { s2.tAr = ele.tAr; s2.yes1 = ele.yes1; return s2 }//手动
             else {
                 s2 = 手动买卖.find((e) => ele[0] + ele[1].substring(0, 0) + ele[2].unif高低位() == e[0] + e[1].substring(0, 0) + e[2].unif高低位());
-                if (s2) { s2.tAr = ele.tAr; return s2 }//手动
+                if (s2) { s2.tAr = ele.tAr; s2.yes1 = ele.yes1; return s2 }//手动
             }
 
             if (ele[0] < "2020-01-01" && ele[3].includes("ETF")) return null
