@@ -18028,11 +18028,41 @@ var 乙二醇连续 = [
     "volume": 464351,
     "hold": 326545,
     "settle": 4586
+  },
+  {
+    "date": "2026-05-25",
+    "open": 4515,
+    "high": 4575,
+    "low": 4356,
+    "close": 4454,
+    "volume": 540830,
+    "hold": 322390,
+    "settle": 4482
+  },
+  {
+    "date": "2026-05-26",
+    "open": 4465,
+    "high": 4510,
+    "low": 4428,
+    "close": 4451,
+    "volume": 341480,
+    "hold": 319252,
+    "settle": 4473
+  },
+  {
+    "date": "2026-05-27",
+    "open": 4488,
+    "high": 4495,
+    "low": 4383,
+    "close": 4411,
+    "volume": 293698,
+    "hold": 321751,
+    "settle": 4438
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.乙二醇连续 = 乙二醇连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:47:33"
+    exports.writeDateTime = "2026-05-27 22:47:54"
 };

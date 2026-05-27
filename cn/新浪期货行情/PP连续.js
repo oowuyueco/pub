@@ -29708,11 +29708,41 @@ var PP连续 = [
     "volume": 762201,
     "hold": 584584,
     "settle": 8813
+  },
+  {
+    "date": "2026-05-25",
+    "open": 8740,
+    "high": 8867,
+    "low": 8472,
+    "close": 8577,
+    "volume": 958398,
+    "hold": 559750,
+    "settle": 8671
+  },
+  {
+    "date": "2026-05-26",
+    "open": 8568,
+    "high": 8577,
+    "low": 8446,
+    "close": 8476,
+    "volume": 577617,
+    "hold": 543377,
+    "settle": 8514
+  },
+  {
+    "date": "2026-05-27",
+    "open": 8488,
+    "high": 8628,
+    "low": 8398,
+    "close": 8446,
+    "volume": 683729,
+    "hold": 531272,
+    "settle": 8503
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.PP连续 = PP连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:46:06"
+    exports.writeDateTime = "2026-05-27 22:46:19"
 };

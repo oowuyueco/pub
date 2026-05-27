@@ -7068,11 +7068,41 @@ var 氧化铝连续 = [
     "volume": 257180,
     "hold": 411515,
     "settle": 2710
+  },
+  {
+    "date": "2026-05-25",
+    "open": 2713,
+    "high": 2747,
+    "low": 2685,
+    "close": 2746,
+    "volume": 350635,
+    "hold": 407351,
+    "settle": 2717
+  },
+  {
+    "date": "2026-05-26",
+    "open": 2748,
+    "high": 2865,
+    "low": 2731,
+    "close": 2853,
+    "volume": 898550,
+    "hold": 357170,
+    "settle": 2826
+  },
+  {
+    "date": "2026-05-27",
+    "open": 2855,
+    "high": 2898,
+    "low": 2835,
+    "close": 2854,
+    "volume": 630366,
+    "hold": 342127,
+    "settle": 2862
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.氧化铝连续 = 氧化铝连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:47:48"
+    exports.writeDateTime = "2026-05-27 22:48:09"
 };

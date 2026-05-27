@@ -30458,11 +30458,41 @@ var 鸡蛋连续 = [
     "volume": 213651,
     "hold": 237899,
     "settle": 4481
+  },
+  {
+    "date": "2026-05-25",
+    "open": 4468,
+    "high": 4485,
+    "low": 4407,
+    "close": 4426,
+    "volume": 218185,
+    "hold": 233547,
+    "settle": 4448
+  },
+  {
+    "date": "2026-05-26",
+    "open": 4440,
+    "high": 4540,
+    "low": 4425,
+    "close": 4538,
+    "volume": 262456,
+    "hold": 266790,
+    "settle": 4490
+  },
+  {
+    "date": "2026-05-27",
+    "open": 4559,
+    "high": 4687,
+    "low": 4559,
+    "close": 4658,
+    "volume": 397319,
+    "hold": 279741,
+    "settle": 4636
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.鸡蛋连续 = 鸡蛋连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:46:25"
+    exports.writeDateTime = "2026-05-27 22:46:43"
 };

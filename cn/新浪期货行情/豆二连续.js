@@ -44038,11 +44038,41 @@ var 豆二连续 = [
     "volume": 155519,
     "hold": 172235,
     "settle": 3590
+  },
+  {
+    "date": "2026-05-25",
+    "open": 3579,
+    "high": 3590,
+    "low": 3535,
+    "close": 3540,
+    "volume": 189256,
+    "hold": 172399,
+    "settle": 3563
+  },
+  {
+    "date": "2026-05-26",
+    "open": 3548,
+    "high": 3568,
+    "low": 3535,
+    "close": 3551,
+    "volume": 165155,
+    "hold": 167722,
+    "settle": 3554
+  },
+  {
+    "date": "2026-05-27",
+    "open": 3556,
+    "high": 3568,
+    "low": 3546,
+    "close": 3554,
+    "volume": 139694,
+    "hold": 166320,
+    "settle": 3558
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.豆二连续 = 豆二连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:46:46"
+    exports.writeDateTime = "2026-05-27 22:47:09"
 };

@@ -36818,11 +36818,41 @@ var 沪铅连续 = [
     "volume": 60547,
     "hold": 69271,
     "settle": 16725
+  },
+  {
+    "date": "2026-05-25",
+    "open": 16735,
+    "high": 16820,
+    "low": 16705,
+    "close": 16755,
+    "volume": 62345,
+    "hold": 63627,
+    "settle": 16755
+  },
+  {
+    "date": "2026-05-26",
+    "open": 16755,
+    "high": 16780,
+    "low": 16650,
+    "close": 16755,
+    "volume": 63624,
+    "hold": 62394,
+    "settle": 16710
+  },
+  {
+    "date": "2026-05-27",
+    "open": 16740,
+    "high": 16810,
+    "low": 16705,
+    "close": 16730,
+    "volume": 56002,
+    "hold": 57574,
+    "settle": 16750
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪铅连续 = 沪铅连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:47:28"
+    exports.writeDateTime = "2026-05-27 22:47:50"
 };

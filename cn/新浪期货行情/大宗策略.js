@@ -1127,14 +1127,14 @@ var triggerLogObj大宗={
                     6.17,
                     -2.35
                 ],
-                "day55LowUp": [
+                "day58LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    2.13
+                    3.93
                 ],
-                "lastDay": 55
+                "lastDay": 58
             }
         }
     ],
@@ -2099,14 +2099,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day71LowUp": [
+                "day74LowUp": [
                     "31,2026-03-23",
                     -50.11,
                     "",
                     0,
-                    -39.53
+                    -40.92
                 ],
-                "lastDay": 71
+                "lastDay": 74
             }
         },
         {
@@ -14198,14 +14198,13 @@ var triggerLogObj大宗={
                     52.61,
                     40.5
                 ],
-                "day97LowUp": [
+                "day100LowUp": [
                     "",
                     0,
                     "57,2026-03-23",
                     52.61,
-                    27.04
-                ],
-                "lastDay": 97
+                    24.01
+                ]
             }
         },
         {
@@ -15343,4 +15342,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-05-22"
+var runLastKlineDate = "2026-05-27"

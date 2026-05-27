@@ -46028,11 +46028,41 @@ var 菜油连续 = [
     "volume": 199188,
     "hold": 237651,
     "settle": 9687
+  },
+  {
+    "date": "2026-05-25",
+    "open": 9621,
+    "high": 9690,
+    "low": 9594,
+    "close": 9625,
+    "volume": 181451,
+    "hold": 233689,
+    "settle": 9645
+  },
+  {
+    "date": "2026-05-26",
+    "open": 9650,
+    "high": 9676,
+    "low": 9603,
+    "close": 9626,
+    "volume": 157778,
+    "hold": 236340,
+    "settle": 9634
+  },
+  {
+    "date": "2026-05-27",
+    "open": 9642,
+    "high": 9730,
+    "low": 9622,
+    "close": 9672,
+    "volume": 184041,
+    "hold": 239256,
+    "settle": 9670
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.菜油连续 = 菜油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:46:23"
+    exports.writeDateTime = "2026-05-27 22:46:40"
 };

@@ -36638,11 +36638,41 @@ var 焦炭连续 = [
     "volume": 12837,
     "hold": 34008,
     "settle": 1740
+  },
+  {
+    "date": "2026-05-25",
+    "open": 1731,
+    "high": 1879,
+    "low": 1719,
+    "close": 1879,
+    "volume": 11024,
+    "hold": 31502,
+    "settle": 1809
+  },
+  {
+    "date": "2026-05-26",
+    "open": 1971.5,
+    "high": 1979,
+    "low": 1821,
+    "close": 1851.5,
+    "volume": 54790,
+    "hold": 29011,
+    "settle": 1898
+  },
+  {
+    "date": "2026-05-27",
+    "open": 1858,
+    "high": 1880,
+    "low": 1842,
+    "close": 1877.5,
+    "volume": 18559,
+    "hold": 28349,
+    "settle": 1862
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.焦炭连续 = 焦炭连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:46:56"
+    exports.writeDateTime = "2026-05-27 22:47:17"
 };

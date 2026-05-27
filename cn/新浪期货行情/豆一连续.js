@@ -51988,11 +51988,41 @@ var 豆一连续 = [
     "volume": 226545,
     "hold": 287506,
     "settle": 4753
+  },
+  {
+    "date": "2026-05-25",
+    "open": 4780,
+    "high": 4901,
+    "low": 4770,
+    "close": 4835,
+    "volume": 581134,
+    "hold": 291650,
+    "settle": 4849
+  },
+  {
+    "date": "2026-05-26",
+    "open": 4826,
+    "high": 4850,
+    "low": 4775,
+    "close": 4835,
+    "volume": 323809,
+    "hold": 289438,
+    "settle": 4818
+  },
+  {
+    "date": "2026-05-27",
+    "open": 4835,
+    "high": 4874,
+    "low": 4829,
+    "close": 4868,
+    "volume": 259810,
+    "hold": 289314,
+    "settle": 4850
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.豆一连续 = 豆一连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:47:26"
+    exports.writeDateTime = "2026-05-27 22:47:47"
 };

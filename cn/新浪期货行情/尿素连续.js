@@ -16418,11 +16418,41 @@ var 尿素连续 = [
     "volume": 175746,
     "hold": 326637,
     "settle": 1826
+  },
+  {
+    "date": "2026-05-25",
+    "open": 1860,
+    "high": 1862,
+    "low": 1839,
+    "close": 1847,
+    "volume": 264472,
+    "hold": 326346,
+    "settle": 1848
+  },
+  {
+    "date": "2026-05-26",
+    "open": 1855,
+    "high": 1881,
+    "low": 1848,
+    "close": 1853,
+    "volume": 406797,
+    "hold": 321010,
+    "settle": 1863
+  },
+  {
+    "date": "2026-05-27",
+    "open": 1898,
+    "high": 1905,
+    "low": 1870,
+    "close": 1877,
+    "volume": 364827,
+    "hold": 316267,
+    "settle": 1885
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.尿素连续 = 尿素连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:47:42"
+    exports.writeDateTime = "2026-05-27 22:48:02"
 };

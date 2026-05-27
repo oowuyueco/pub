@@ -30598,11 +30598,41 @@ var 铁矿石连续 = [
     "volume": 201957,
     "hold": 624273,
     "settle": 792.5
+  },
+  {
+    "date": "2026-05-25",
+    "open": 790.5,
+    "high": 805,
+    "low": 790,
+    "close": 793,
+    "volume": 295875,
+    "hold": 629480,
+    "settle": 796.5
+  },
+  {
+    "date": "2026-05-26",
+    "open": 794.5,
+    "high": 795,
+    "low": 778.5,
+    "close": 781,
+    "volume": 347543,
+    "hold": 594109,
+    "settle": 784
+  },
+  {
+    "date": "2026-05-27",
+    "open": 781,
+    "high": 785,
+    "low": 777,
+    "close": 781.5,
+    "volume": 180200,
+    "hold": 595145,
+    "settle": 781
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.铁矿石连续 = 铁矿石连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-23 20:47:36"
+    exports.writeDateTime = "2026-05-27 22:47:56"
 };
