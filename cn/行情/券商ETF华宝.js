@@ -28174,11 +28174,35 @@ var 券商ETF华宝 = [
     "volume": 1992528243,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-05-26",
+    "timestamp": 1779724800000,
+    "open": 0.498,
+    "high": 0.51,
+    "low": 0.496,
+    "close": 0.504,
+    "percent": 1,
+    "volume": 2543749730,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2026-05-27",
+    "timestamp": 1779811200000,
+    "open": 0.502,
+    "high": 0.51,
+    "low": 0.495,
+    "close": 0.499,
+    "percent": -0.99,
+    "volume": 2298060853,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.券商ETF华宝 = 券商ETF华宝
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-05-25 19:41:26"
+    exports.writeDateTime = "2026-05-27 19:27:07"
 };
