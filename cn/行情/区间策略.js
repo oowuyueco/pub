@@ -57,11 +57,6 @@ var triggerLogObj区间 = {
       "2009-01-06": [
         {
           "trigDate": "2009-01-06",
-          "quantName": "沪深300低位_周downMas绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "trigDate": "2009-01-06",
           "quantName": "上证50低位_金叉低连空但",
           "logInfo": ""
         },
@@ -2884,12 +2879,12 @@ var triggerLogObj区间 = {
             "low": ",0,0"
           },
           "nextSecondDelivery周五": {
-            "close": "35->2026-05-15,441.6,10",
+            "close": "35->2026-05-15,441.59,10",
             "high": "33->2026-05-13,580.34,13.14",
             "low": ",0,0"
           },
           "after": {
-            "close": "43->2026-05-27,490.17,11.09",
+            "close": "44->2026-05-28,431.56,9.77",
             "high": "33->2026-05-13,580.34,13.14",
             "low": ",0,0",
             "nextThirdDelivery周五": "2026-06-19"
@@ -2919,27 +2914,10 @@ var triggerLogObj区间 = {
             "low": "1->2026-04-07,-0.17,0"
           },
           "after": {
-            "close": "34->2026-05-27,467.38,10.52",
+            "close": "35->2026-05-28,408.77,9.2",
             "high": "24->2026-05-13,557.55,12.56",
             "low": "1->2026-04-07,-0.17,0",
             "nextThirdDelivery周五": "2026-06-19"
-          }
-        }
-      ],
-      "2026-05-27": [
-        {
-          "trigDate": "2026-05-27",
-          "quantName": "上证50低位_周downMas绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "after": {
-            "close": ",0,0",
-            "high": ",0,0",
-            "low": ",0,0",
-            "nextFirstDelivery周五": "2026-06-19",
-            "nextSecondDelivery周五": "2026-07-17",
-            "nextThirdDelivery周五": "2026-08-21"
           }
         }
       ]
@@ -3194,7 +3172,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3204,7 +3182,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2009-07-29",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3267,7 +3245,7 @@ var triggerLogObj区间 = {
       "2009-08-04": [
         {
           "trigDate": "2009-08-04",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3291,7 +3269,7 @@ var triggerLogObj区间 = {
       "2009-08-05": [
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3301,7 +3279,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3316,7 +3294,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2009-08-05",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3524,12 +3502,12 @@ var triggerLogObj区间 = {
       "2009-11-24": [
         {
           "trigDate": "2009-11-24",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-24",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3558,7 +3536,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3568,12 +3546,12 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
           "trigDate": "2009-11-25",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3621,12 +3599,12 @@ var triggerLogObj区间 = {
       "2010-01-04": [
         {
           "trigDate": "2010-01-04",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-04",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3674,12 +3652,12 @@ var triggerLogObj区间 = {
       "2010-01-06": [
         {
           "trigDate": "2010-01-06",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
           "trigDate": "2010-01-06",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3708,7 +3686,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2010-01-07",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3718,7 +3696,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2010-01-07",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3747,7 +3725,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2010-01-08",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3757,7 +3735,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2010-01-08",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -3915,35 +3893,6 @@ var triggerLogObj区间 = {
             "close": "61->2010-07-16,-740.2,-22.05",
             "high": ",0,0",
             "low": "52->2010-07-05,-843.68,-25.14"
-          }
-        }
-      ],
-      "2010-10-18": [
-        {
-          "trigDate": "2010-10-18",
-          "quantName": "上证高位_周downMas绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "trigDate": "2010-10-18",
-          "quantName": "沪深300高位_周downMas绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "24->2010-11-19,-127.31,-3.85",
-            "high": "15->2010-11-08,242.41,7.33",
-            "low": "22->2010-11-17,-202.25,-6.12"
-          },
-          "nextSecondDelivery周五": {
-            "close": "44->2010-12-17,-80.5,-2.43",
-            "high": "15->2010-11-08,242.41,7.33",
-            "low": "22->2010-11-17,-202.25,-6.12"
-          },
-          "nextThirdDelivery周五": {
-            "close": "68->2011-01-21,-322.7,-9.76",
-            "high": "15->2010-11-08,242.41,7.33",
-            "low": "67->2011-01-20,-361.45,-10.93"
           }
         }
       ],
@@ -4160,30 +4109,6 @@ var triggerLogObj区间 = {
           }
         }
       ],
-      "2010-10-29": [
-        {
-          "trigDate": "2010-10-29",
-          "quantName": "沪深300高位_周downMas绿空绿红",
-          "logInfo": ""
-        },
-        {
-          "nextFirstDelivery周五": {
-            "close": "15->2010-11-19,-201.14,-5.95",
-            "high": "6->2010-11-08,168.58,4.99",
-            "low": "13->2010-11-17,-276.08,-8.17"
-          },
-          "nextSecondDelivery周五": {
-            "close": "35->2010-12-17,-154.32,-4.57",
-            "high": "6->2010-11-08,168.58,4.99",
-            "low": "13->2010-11-17,-276.08,-8.17"
-          },
-          "nextThirdDelivery周五": {
-            "close": "59->2011-01-21,-396.53,-11.73",
-            "high": "6->2010-11-08,168.58,4.99",
-            "low": "58->2011-01-20,-435.27,-12.88"
-          }
-        }
-      ],
       "2010-11-11": [
         {
           "trigDate": "2010-11-11",
@@ -4264,7 +4189,7 @@ var triggerLogObj区间 = {
       "2011-04-11": [
         {
           "trigDate": "2011-04-11",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -4298,7 +4223,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2011-04-12",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -4770,7 +4695,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2018-02-28",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5274,7 +5199,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2021-06-03",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5308,7 +5233,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2021-06-04",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5342,7 +5267,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2021-07-15",
-          "quantName": "科创50高位_周downMas绿空绿红",
+          "quantName": "科创50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5390,7 +5315,7 @@ var triggerLogObj区间 = {
       "2021-12-14": [
         {
           "trigDate": "2021-12-14",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5414,7 +5339,7 @@ var triggerLogObj区间 = {
       "2021-12-15": [
         {
           "trigDate": "2021-12-15",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5756,12 +5681,12 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2022-07-06",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-06",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5790,7 +5715,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2022-07-07",
-          "quantName": "上证高位_周downMas绿空绿红",
+          "quantName": "上证高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5800,7 +5725,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2022-07-07",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
@@ -5824,12 +5749,12 @@ var triggerLogObj区间 = {
       "2022-07-08": [
         {
           "trigDate": "2022-07-08",
-          "quantName": "沪深300高位_周downMas绿空绿红",
+          "quantName": "沪深300高位_周红空红绿",
           "logInfo": ""
         },
         {
           "trigDate": "2022-07-08",
-          "quantName": "上证50高位_周downMas绿空绿红",
+          "quantName": "上证50高位_周红空红绿",
           "logInfo": ""
         },
         {
