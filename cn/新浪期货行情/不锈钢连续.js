@@ -16128,11 +16128,21 @@ var 不锈钢连续 = [
     "volume": 292531,
     "hold": 115561,
     "settle": 14950
+  },
+  {
+    "date": "2026-05-28",
+    "open": 14895,
+    "high": 15060,
+    "low": 14815,
+    "close": 14895,
+    "volume": 177888,
+    "hold": 109433,
+    "settle": 14935
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.不锈钢连续 = 不锈钢连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-27 22:46:27"
+    exports.writeDateTime = "2026-05-28 22:57:54"
 };
