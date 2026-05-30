@@ -766,4 +766,4 @@ var triggerLogObj基金 = {
         }
     ]
 };
-var 基金策略runLastTime = "2026-05-29 22:26:56";
+var 基金策略runLastTime = "2026-05-30 20:50:21";
