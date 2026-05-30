@@ -699,6 +699,9 @@ var triggerLogObj大宗={
         ],
         "2026-05-28": [
             "高位低量_航运连续"
+        ],
+        "2026-05-29": [
+            "高位低量_航运连续"
         ]
     },
     "高位KDJ": [
@@ -1130,14 +1133,14 @@ var triggerLogObj大宗={
                     6.17,
                     -2.35
                 ],
-                "day59LowUp": [
+                "day60LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    2.78
+                    0.79
                 ],
-                "lastDay": 59
+                "lastDay": 60
             }
         }
     ],
@@ -2102,14 +2105,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day75LowUp": [
+                "day76LowUp": [
                     "31,2026-03-23",
                     -50.11,
                     "",
                     0,
-                    -42.41
+                    -40.57
                 ],
-                "lastDay": 75
+                "lastDay": 76
             }
         },
         {
@@ -3447,6 +3450,24 @@ var triggerLogObj大宗={
             "quantName": "高位低量",
             "trigDate": "2026-05-28",
             "trigAtIndex": 668,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day1LowUp": [
+                    "",
+                    0,
+                    "1,2026-05-29",
+                    0.56,
+                    0.56
+                ],
+                "lastDay": 1
+            }
+        },
+        {
+            "dataName": "航运连续",
+            "quantName": "高位低量",
+            "trigDate": "2026-05-29",
+            "trigAtIndex": 669,
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
@@ -15363,4 +15384,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-05-28"
+var runLastKlineDate = "2026-05-29"

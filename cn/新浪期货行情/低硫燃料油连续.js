@@ -14368,11 +14368,21 @@ var 低硫燃料油连续 = [
     "volume": 37689,
     "hold": 46507,
     "settle": 4672
+  },
+  {
+    "date": "2026-05-29",
+    "open": 4665,
+    "high": 4733,
+    "low": 4568,
+    "close": 4600,
+    "volume": 50028,
+    "hold": 44745,
+    "settle": 4644
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.低硫燃料油连续 = 低硫燃料油连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-28 22:58:31"
+    exports.writeDateTime = "2026-05-30 21:19:54"
 };
