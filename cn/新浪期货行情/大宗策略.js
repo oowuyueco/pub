@@ -702,6 +702,9 @@ var triggerLogObj大宗={
         ],
         "2026-05-29": [
             "高位低量_航运连续"
+        ],
+        "2026-06-01": [
+            "高位低量_航运连续"
         ]
     },
     "高位KDJ": [
@@ -1140,7 +1143,14 @@ var triggerLogObj大宗={
                     7.15,
                     0.79
                 ],
-                "lastDay": 60
+                "day61LowUp": [
+                    "19,2026-03-27",
+                    -2.8,
+                    "36,2026-04-22",
+                    7.15,
+                    0.56
+                ],
+                "lastDay": 61
             }
         }
     ],
@@ -2105,14 +2115,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day76LowUp": [
+                "day77LowUp": [
                     "31,2026-03-23",
                     -50.11,
                     "",
                     0,
-                    -40.57
+                    -41.23
                 ],
-                "lastDay": 76
+                "lastDay": 77
             }
         },
         {
@@ -3453,14 +3463,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day1LowUp": [
+                "day2LowUp": [
                     "",
                     0,
-                    "1,2026-05-29",
-                    0.56,
-                    0.56
+                    "2,2026-06-01",
+                    28.7,
+                    28.7
                 ],
-                "lastDay": 1
+                "lastDay": 2
             }
         },
         {
@@ -3468,6 +3478,24 @@ var triggerLogObj大宗={
             "quantName": "高位低量",
             "trigDate": "2026-05-29",
             "trigAtIndex": 669,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day1LowUp": [
+                    "",
+                    0,
+                    "1,2026-06-01",
+                    27.98,
+                    27.98
+                ],
+                "lastDay": 1
+            }
+        },
+        {
+            "dataName": "航运连续",
+            "quantName": "高位低量",
+            "trigDate": "2026-06-01",
+            "trigAtIndex": 670,
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
@@ -15384,4 +15412,4 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-05-29"
+var runLastKlineDate = "2026-06-01"

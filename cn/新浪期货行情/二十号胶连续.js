@@ -16458,11 +16458,21 @@ var 二十号胶连续 = [
     "volume": 98598,
     "hold": 46669,
     "settle": 15280
+  },
+  {
+    "date": "2026-06-01",
+    "open": 15370,
+    "high": 15795,
+    "low": 15335,
+    "close": 15730,
+    "volume": 70324,
+    "hold": 57357,
+    "settle": 15545
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.二十号胶连续 = 二十号胶连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-05-30 21:19:04"
+    exports.writeDateTime = "2026-06-02 01:06:51"
 };
