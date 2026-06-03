@@ -426,7 +426,7 @@
         }
 
         function backTest备用数据策略(pmiData = cn_pmi_avg) {
-            var yield_TenNaDeb = 十年期国债收益率_jiucai.map((ele, index) => {
+            var yield_TenNaDeb = 十年期国债收益率_jiucai.slice(1).map((ele, index) => {
                 let newArr = []
                 newArr[0] = ele[0]
                 newArr[1] = +(1 / (ele[1] / 100)).toFixed(4)
@@ -1342,7 +1342,7 @@
                     type: 'line',
                     xAxisIndex: 2,
                     yAxisIndex: 4,
-                    data: 十年期国债收益率_jiucai.map((ele, index) => {
+                    data: 十年期国债收益率_jiucai.slice(1).map((ele, index) => {
                         let newArr = []
                         newArr[0] = ele[0]
                         newArr[1] = +(1 / (ele[1] / 100)).toFixed(4);
