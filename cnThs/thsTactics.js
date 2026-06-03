@@ -217,30 +217,30 @@ var 策略集合 = {
             stats: "策略回测"
         },
 
-        {
-            name: "月周macd1",
-            query: `最近3天月线周期macd金叉；周线周期macd底背离； 最近10日周kdj金叉且j值小于79，  最近10日日kdj金叉且d值小于39 ，0<pe<=120；pb>0;  排除st；roe从大到小
-            `,
-            daysForSaleStrategy: "35",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 13,
-            fallIncome: 1.3,
-            lowerIncome: 12,
-            stats: "策略回测"
-        },
-        {
-            name: "月周macd2",
-            query: `最近3天月线周期macd金叉；周线周期macd底背离； 周kdjj值小于75大于5，周kdj上移，最近10日日kdj金叉且d值小于39， 0<pe<=120；pb>0;  排除st；roe从大到小
-            `,
-            daysForSaleStrategy: "35",
-            stockHoldCount: 1,
-            dayBuyStockNum: 1,
-            upperIncome: 13,
-            fallIncome: 1.3,
-            lowerIncome: 12,
-            stats: "策略回测"
-        },
+        // {
+        //     name: "月周macd1",
+        //     query: `最近3天月线周期macd金叉；周线周期macd底背离； 最近10日周kdj金叉且j值小于79，  最近10日日kdj金叉且d值小于39 ，0<pe<=120；pb>0;  排除st；roe从大到小
+        //     `,
+        //     daysForSaleStrategy: "35",
+        //     stockHoldCount: 1,
+        //     dayBuyStockNum: 1,
+        //     upperIncome: 13,
+        //     fallIncome: 1.3,
+        //     lowerIncome: 12,
+        //     stats: "策略回测"
+        // },
+        // {
+        //     name: "月周macd2",
+        //     query: `最近3天月线周期macd金叉；周线周期macd底背离； 周kdjj值小于75大于5，周kdj上移，最近10日日kdj金叉且d值小于39， 0<pe<=120；pb>0;  排除st；roe从大到小
+        //     `,
+        //     daysForSaleStrategy: "35",
+        //     stockHoldCount: 1,
+        //     dayBuyStockNum: 1,
+        //     upperIncome: 13,
+        //     fallIncome: 1.3,
+        //     lowerIncome: 12,
+        //     stats: "策略回测"
+        // },
 
         {
             name: "近五日跌停",
