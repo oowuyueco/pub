@@ -62392,17 +62392,17 @@ var 沪深300 = [
     "timestamp": 1780502400000,
     "open": 4897.32,
     "high": 4938.78,
-    "low": 4891.98,
-    "close": 4909.41,
-    "percent": -0.6,
-    "volume": 18134261500,
-    "hsl": 0.55,
-    "zgs": 32971384545.454544
+    "low": 4889.75,
+    "close": 4904.75,
+    "percent": -0.69,
+    "volume": 26480891000,
+    "hsl": 0.8,
+    "zgs": 33101113750
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300 = 沪深300
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-04 13:14:06"
+    exports.writeDateTime = "2026-06-04 18:40:54"
 };
