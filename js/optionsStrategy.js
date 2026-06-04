@@ -1347,7 +1347,7 @@ function 第一次按方向后N到期日分类查找标记yes1(全部策略By期
 function 附加xls过滤时间(期权建议ByDay) {
     let 期权startDate = decodeURI(getQueryVariable("optStartDate"));
     let 期权endDate = decodeURI(getQueryVariable("optEndDate"));
-    if (期权startDate == "false") 期权startDate = "2026-05-18" //默认设置开始日期同时减小计算量
+    if (期权startDate == "false") 期权startDate = "2020-01-01" //默认设置开始日期同时减小计算量
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
