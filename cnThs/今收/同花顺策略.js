@@ -263,10 +263,30 @@ var triggerLogObj同花顺 = {
                 "low": ",0,0"
             }
         }
+    ],
+    "2025-11-28": [
+        "组1统计ths低位收盘触发买入:1:1",
+        {
+            "nextFirstDelivery周五": {
+                "close": "15->2025-12-19,41.52,0.92",
+                "high": "6->2025-12-08,95.09,2.1",
+                "low": "12->2025-12-16,-29.11,-0.64"
+            },
+            "nextSecondDelivery周五": {
+                "close": "33->2026-01-16,205.21,4.53",
+                "high": "25->2026-01-06,264.03,5.83",
+                "low": "12->2025-12-16,-29.11,-0.64"
+            },
+            "nextThirdDelivery周五": {
+                "close": "54->2026-02-24,180.88,4",
+                "high": "25->2026-01-06,264.03,5.83",
+                "low": "12->2025-12-16,-29.11,-0.64"
+            }
+        }
     ]
 }  
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-06-04 00:03:47"
+        exports.同花顺策略runLastTime = "2026-06-04 21:39:52"
     }
