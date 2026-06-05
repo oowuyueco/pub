@@ -1992,7 +1992,7 @@ async function check股票IsOk(股票Info, browser) {
 
     } catch (error) {
         result = [股票代码, 股票名称, "检测失效!"]
-        console.log("check股票IsOk_error:", error)
+        console.log("check股票IsOk_error:", ("" + error).substring(0, 20))
         return result
     }
 }
