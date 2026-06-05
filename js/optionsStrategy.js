@@ -2441,9 +2441,10 @@ async function 模拟交易(期权买卖List) {
 
     //, asset现金:${+asset.现金.toFixed(2)} 
     pageSendMail(`
-            ${currentDayYMD}当日期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 。 \r\n 
-            cnHtml最新数据日期(cnFutures): ${window?.cnFutures策略runLastTime} 。 \r\n 
-            ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} 
+            最新策略运行日期(pmi股债): ${window?.pmi股债策略runLastTime}
+            ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
+            ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
+            当日${currentDayYMD}期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒, asset现金:${+asset.现金.toFixed(2)} 
             `
         , () => { window.optionRunEnd = true });
 
