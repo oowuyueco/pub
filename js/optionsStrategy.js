@@ -2164,8 +2164,8 @@ async function 模拟交易(期权买卖List) {
     const startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0]);
 
     for (let i = startOldestIndex; i < 沪深300.length; i++) {
-        let curDate = 沪深300[i].date;
-        //if (curDate == "2026-03-02") debugger
+        let cur沪深300Date = 沪深300[i].date;
+        //if (cur沪深300Date == "2026-03-02") debugger
         let curDateHasConsole = false;
 
         //当日卖出
@@ -2176,7 +2176,7 @@ async function 模拟交易(期权买卖List) {
         let 模拟or手动 = "模拟"
         for (let index = asset.期权.length - 1; index >= 0; index--) {
             let asset期权 = asset.期权[index];
-            if (curDate !== extractDate(asset期权[sellDateIndex])) { continue; }
+            if (cur沪深300Date !== extractDate(asset期权[sellDateIndex])) { continue; }
 
             let 单张费用 = asset期权[3].includes("ETF") ? etf费用 : 指数费用
             let 期权倍数 = asset期权[3].includes("ETF") ? etf倍数 : 指数倍数
@@ -2226,7 +2226,7 @@ async function 模拟交易(期权买卖List) {
             let priceProfile = +((sellPrice - buyPrice) / buyPrice).toFixed(2);
 
             //收益率为负 继续拖
-            if (priceProfile <= 0 && excelFileData.at(-1).交易时间 != curDate) {
+            if (priceProfile <= 0 && excelFileData.at(-1).交易时间 != cur沪深300Date) {
                 asset期权[sellDateIndex] = null;
                 continue;
             }
@@ -2235,7 +2235,7 @@ async function 模拟交易(期权买卖List) {
             let excelBuyDateIndex = excelFileData.findIndex((e) => e.交易时间 == extractDate(asset期权[buyDateIndex]));
             if (
                 !asset期权[sellDateIndex].includes("提前") &&
-                默认卖出到期类型 != 0 && excelFileData.at(-1).交易时间 != curDate &&
+                默认卖出到期类型 != 0 && excelFileData.at(-1).交易时间 != cur沪深300Date &&
                 (
                     ocHighest(excelFileData[excelBuyDateIndex]) > excelFileData[excelSellDateIndex].开盘价 ||
                     ocHighest(excelFileData[excelSellDateIndex - 1]) > excelFileData[excelSellDateIndex].开盘价
@@ -2287,30 +2287,30 @@ async function 模拟交易(期权买卖List) {
         if (isNumber(curAllSellCash)) {
             if (curAllSell入金 > 0) {
                 curAllSell入金 = +curAllSell入金.toFixed(2)
-                console.log(curDateHasConsole ? "补足卖手续费入金".leftAppend() + curAllNeed入金Count : `${curDate} 补足卖手续费入金${curAllNeed入金Count}`, curAllSell入金, "=>", cloneAsset(asset));
+                console.log(curDateHasConsole ? "补足卖手续费入金".leftAppend() + curAllNeed入金Count : `${cur沪深300Date} 补足卖手续费入金${curAllNeed入金Count}`, curAllSell入金, "=>", cloneAsset(asset));
                 curDateHasConsole = true;
             }
             curAllSellCash = +curAllSellCash.toFixed(2)
-            console.log(curDateHasConsole ? `${模拟or手动}卖出`.leftAppend() + curAllSellCount : `${curDate} ${模拟or手动}卖出` + curAllSellCount, curAllSellCash, "=>", cloneAsset(asset));
+            console.log(curDateHasConsole ? `${模拟or手动}卖出`.leftAppend() + curAllSellCount : `${cur沪深300Date} ${模拟or手动}卖出` + curAllSellCount, curAllSellCash, "=>", cloneAsset(asset));
             curDateHasConsole = true;
         }
 
         //当日收盘触发下日买入,写入下个交易日买入日期.
-        let curTrigBuy = 期权买卖List.find((e) => e[0] == curDate && !arrayHasIndex(e, buyDateIndex));
+        let curTrigBuy = 期权买卖List.find((e) => e[0] == cur沪深300Date && !arrayHasIndex(e, buyDateIndex));
         if (curTrigBuy) {
             if (!curTrigBuy[3].includes("手动") && !curTrigBuy[3].includes("模拟")) {
                 let [buyCash, curbuy入金, buyCount] = getBuyCashAnd入金(curTrigBuy, "预估ETF");
-                let msg = `${curDate} 触发收盘通知下个交易日${preNext交易日(curDate, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
+                let msg = `${cur沪深300Date} 触发收盘通知下个交易日${preNext交易日(cur沪深300Date, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
                 console.log(msg);
                 curDateHasConsole = true;
-                if (isSendMail(curDate)) pageSendMail(msg)
+                if (isSendMail(cur沪深300Date)) pageSendMail(msg)
             }
             if (curTrigBuy[3].includes("手动")) { };
-            if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(curDate, 1);
+            if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(cur沪深300Date, 1);
         }
 
         //当日买入
-        let curBuy = 期权买卖List.find((e) => e[buyDateIndex] == curDate);
+        let curBuy = 期权买卖List.find((e) => e[buyDateIndex] == cur沪深300Date);
         if (curBuy) {
             let 单张费用 = curBuy[3].includes("ETF") ? etf费用 : 指数费用
             let 期权倍数 = curBuy[3].includes("ETF") ? etf倍数 : 指数倍数
@@ -2322,7 +2322,7 @@ async function 模拟交易(期权买卖List) {
                     总入金 = 总入金 + curbuy入金;
                     asset.现金 = asset.现金 + curbuy入金;
                     need入金[curBuy[0] + " " + curBuy[1] + " buy"] = curbuy入金;
-                    console.log(curDateHasConsole ? "手动补足买入金".leftAppend() : `${curDate} 手动补足买入金 `, curbuy入金, "=>", cloneAsset(asset));
+                    console.log(curDateHasConsole ? "手动补足买入金".leftAppend() : `${cur沪深300Date} 手动补足买入金 `, curbuy入金, "=>", cloneAsset(asset));
                     curDateHasConsole = true;
                 }
                 let 张数 = extr张数(curBuy[4]);
@@ -2333,7 +2333,7 @@ async function 模拟交易(期权买卖List) {
                 asset.现金 = +asset.现金.toFixed(2);
                 asset.期权.unshift(curBuy);
 
-                console.log(curDateHasConsole ? "手动买入 ".leftAppend() : `${curDate} 手动买入 `, buyCash, "=>", cloneAsset(asset));
+                console.log(curDateHasConsole ? "手动买入 ".leftAppend() : `${cur沪深300Date} 手动买入 `, buyCash, "=>", cloneAsset(asset));
                 curDateHasConsole = true;
             }
             if (curBuy[3].includes("模拟") && !arrayHasIndex(curBuy, buyPriceIndex) && liveServerOk) {
@@ -2352,7 +2352,7 @@ async function 模拟交易(期权买卖List) {
                     总入金 = 总入金 + curbuy入金;
                     asset.现金 = asset.现金 + curbuy入金;
                     need入金[curBuy[0] + " " + curBuy[1] + " buy"] = curbuy入金;
-                    console.log(curDateHasConsole ? "补足买入金".leftAppend() : `${curDate} 补足买入金 `, curbuy入金, "=>", cloneAsset(asset));
+                    console.log(curDateHasConsole ? "补足买入金".leftAppend() : `${cur沪深300Date} 补足买入金 `, curbuy入金, "=>", cloneAsset(asset));
                     curDateHasConsole = true;
                 }
 
@@ -2365,7 +2365,7 @@ async function 模拟交易(期权买卖List) {
                 asset.现金 = +asset.现金.toFixed(2);
                 asset.期权.unshift(curBuy);
 
-                console.log(curDateHasConsole ? "模拟买入 ".leftAppend() : `${curDate} 模拟买入 `, buyCash, "=>", cloneAsset(asset));
+                console.log(curDateHasConsole ? "模拟买入 ".leftAppend() : `${cur沪深300Date} 模拟买入 `, buyCash, "=>", cloneAsset(asset));
                 curDateHasConsole = true;
             }
         }
@@ -2377,9 +2377,9 @@ async function 模拟交易(期权买卖List) {
             if (!arrayHasIndex(asset期权, buyDateIndex)) continue;
             if (arrayHasIndex(asset期权, sellDateIndex)) continue;
 
-            let curNextOne交易日 = preNext交易日(curDate, 1)
+            let curNextOne交易日 = preNext交易日(cur沪深300Date, 1)
             let sellDateStr
-            let need提前卖出 = check提前卖出(curDate, asset期权);
+            let need提前卖出 = check提前卖出(cur沪深300Date, asset期权);
             if (need提前卖出)
                 sellDateStr = `提前${need提前卖出}:${curNextOne交易日}`;
             else {
@@ -2394,10 +2394,10 @@ async function 模拟交易(期权买卖List) {
             if (!sellDateStr) continue
 
             if (asset期权[3].includes("手动")) {
-                let msg = `${curDate} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
+                let msg = `${cur沪深300Date} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
                 console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
                 curDateHasConsole = true;
-                if (isSendMail(curDate)) pageSendMail(msg)
+                if (isSendMail(cur沪深300Date)) pageSendMail(msg)
             };
             if (asset期权[3].includes("模拟")) asset期权[sellDateIndex] = sellDateStr;
         }
