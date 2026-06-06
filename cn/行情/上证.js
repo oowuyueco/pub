@@ -103864,5 +103864,5 @@ var 上证 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.上证 = 上证
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-05 22:03:00"
+    exports.writeDateTime = "2026-06-06 20:14:38"
 };

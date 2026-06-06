@@ -28612,5 +28612,5 @@ var 证券ETF国泰 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.证券ETF国泰 = 证券ETF国泰
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-05 22:03:23"
+    exports.writeDateTime = "2026-06-06 20:15:03"
 };
