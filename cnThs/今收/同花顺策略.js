@@ -283,10 +283,23 @@ var triggerLogObj同花顺 = {
                 "low": "12->2025-12-16,-29.11,-0.64"
             }
         }
+    ],
+    "2026-06-08": [
+        "月周日ths低位收盘通知已止损卖出",
+        {
+            "after": {
+                "close": ",0,0",
+                "high": ",0,0",
+                "low": ",0,0",
+                "nextFirstDelivery周五": "2026-06-19",
+                "nextSecondDelivery周五": "2026-07-17",
+                "nextThirdDelivery周五": "2026-08-21"
+            }
+        }
     ]
 }  
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-06-06 20:22:06"
+        exports.同花顺策略runLastTime = "2026-06-08 23:01:49"
     }
