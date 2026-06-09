@@ -100,7 +100,7 @@ var triggerLogObj同花顺 = {
         }
     ],
     "2024-01-31": [
-        "日信号ths低位收盘通知已止损卖出⭐",
+        "日信号ths低位收盘通知已止损卖出*",
         {
             "nextFirstDelivery周五": {
                 "close": "7->2024-02-19,188.46,5.86",
@@ -121,7 +121,7 @@ var triggerLogObj同花顺 = {
         }
     ],
     "2024-02-05": [
-        "小市值ths低位收盘通知已止损卖出⭐",
+        "小市值ths低位收盘通知已止损卖出*",
         {
             "nextFirstDelivery周五": {
                 "close": "4->2024-02-19,203.39,6.36",
@@ -203,7 +203,7 @@ var triggerLogObj同花顺 = {
         }
     ],
     "2024-09-18": [
-        "周日2ths低位收盘通知已止损卖出⭐",
+        "周日2ths低位收盘通知已止损卖出*",
         {
             "nextFirstDelivery周五": {
                 "close": "2->2024-09-20,30.04,0.95",
@@ -224,7 +224,7 @@ var triggerLogObj同花顺 = {
         }
     ],
     "2025-04-08": [
-        "近五日跌停ths低位收盘触发买入⭐",
+        "近五日跌停ths低位收盘触发买入*",
         {
             "nextFirstDelivery周五": {
                 "close": "8->2025-04-18,121.76,3.34",
@@ -283,23 +283,10 @@ var triggerLogObj同花顺 = {
                 "low": "12->2025-12-16,-29.11,-0.64"
             }
         }
-    ],
-    "2026-06-08": [
-        "月周日ths低位收盘通知已止损卖出",
-        {
-            "after": {
-                "close": ",0,0",
-                "high": ",0,0",
-                "low": ",0,0",
-                "nextFirstDelivery周五": "2026-06-19",
-                "nextSecondDelivery周五": "2026-07-17",
-                "nextThirdDelivery周五": "2026-08-21"
-            }
-        }
     ]
 }  
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-06-08 23:01:49"
+        exports.同花顺策略runLastTime = "2026-06-09 10:06:43"
     }
