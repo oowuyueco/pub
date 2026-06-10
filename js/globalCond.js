@@ -545,13 +545,7 @@ function globalCheck缩量(trigDate, triggerLogObj指数, nameCodes) {
             (currentMonthList.at(-2).volume / currentMonthList.at(-1).volume) < 0.6
         ) {
             //2018-01-25,30   上证50 check缩量
-            console.log(
-                quantName, trigDate,
-                (currentMonthList.at(-4).volume / currentMonthList.at(-3).volume),
-                (currentMonthList.at(-3).volume / currentMonthList.at(-2).volume),
-                (currentMonthList.at(-2).volume / currentMonthList.at(-1).volume)
-            )
-            return [true, "gooooooo"]
+            return [true, ""]
         }
 
         if (
