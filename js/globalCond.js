@@ -538,6 +538,22 @@ function globalCheck缩量(trigDate, triggerLogObj指数, nameCodes) {
         if (ma5_ma10(currentMonthList, -2) >= ma5_ma10(currentMonthList, -1))
             return [true, ""]
 
+
+        if (
+            (currentMonthList.at(-4).volume / currentMonthList.at(-3).volume) < 0.6 &&
+            (currentMonthList.at(-3).volume / currentMonthList.at(-2).volume) > 1.5 &&
+            (currentMonthList.at(-2).volume / currentMonthList.at(-1).volume) < 0.6
+        ) {
+            //2018-01-25,30   上证50 check缩量
+            console.log(
+                quantName, trigDate,
+                (currentMonthList.at(-4).volume / currentMonthList.at(-3).volume),
+                (currentMonthList.at(-3).volume / currentMonthList.at(-2).volume),
+                (currentMonthList.at(-2).volume / currentMonthList.at(-1).volume)
+            )
+            return [true, "gooooooo"]
+        }
+
         if (
             volMaPre(20, currentMonthList, -1) >= volMaPre(10, currentMonthList, -1) &&
             volMaPre(10, currentMonthList, -1) >= volMaPre(5, currentMonthList, -1) &&
@@ -592,7 +608,7 @@ function globalFilter(trigDate, triggerLogObj指数, nameCodes) {
         [isFilter, filterReson] = globalMonth高位Filter(trigDate, triggerLogObj指数, nameCodes)
         if (isFilter) { is过滤掉 = true; 过滤原因 += filterReson }
 
-        if (is过滤掉) 过滤原因 = "高位过滤:" + filterReson
+        if (is过滤掉) 过滤原因 = "高位过滤:" + 过滤原因
     }
 
     if (quantType == "低位") {
@@ -602,7 +618,7 @@ function globalFilter(trigDate, triggerLogObj指数, nameCodes) {
         if (isFilter) { is过滤掉 = true; 过滤原因 += filterReson }
 
 
-        if (is过滤掉) 过滤原因 = "低位过滤:" + filterReson
+        if (is过滤掉) 过滤原因 = "低位过滤:" + 过滤原因
     }
 
     let [isCheckOk, noCheckReson] = globalCheck缩量(trigDate, triggerLogObj指数, nameCodes)
