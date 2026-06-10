@@ -711,6 +711,9 @@ var triggerLogObj大宗={
         ],
         "2026-06-09": [
             "高位低量_航运连续"
+        ],
+        "2026-06-10": [
+            "高位低量_航运连续"
         ]
     },
     "高位KDJ": [
@@ -1149,14 +1152,14 @@ var triggerLogObj大宗={
                     7.15,
                     0.79
                 ],
-                "day67LowUp": [
+                "day68LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    -0.26
+                    1.17
                 ],
-                "lastDay": 67
+                "lastDay": 68
             }
         }
     ],
@@ -2121,14 +2124,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day83LowUp": [
+                "day84LowUp": [
                     "31,2026-03-23",
                     -50.11,
                     "",
                     0,
-                    -46.72
+                    -49.43
                 ],
-                "lastDay": 83
+                "lastDay": 84
             }
         },
         {
@@ -3469,14 +3472,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day8LowUp": [
+                "day9LowUp": [
                     "",
                     0,
                     "7,2026-06-08",
                     32.03,
-                    30.71
+                    31.11
                 ],
-                "lastDay": 8
+                "lastDay": 9
             }
         },
         {
@@ -3487,14 +3490,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day7LowUp": [
+                "day8LowUp": [
                     "",
                     0,
                     "6,2026-06-08",
                     31.3,
-                    29.99
+                    30.38
                 ],
-                "lastDay": 7
+                "lastDay": 8
             }
         },
         {
@@ -3505,14 +3508,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day6LowUp": [
+                "day7LowUp": [
                     "4,2026-06-05",
                     -6.17,
                     "5,2026-06-08",
                     2.59,
-                    1.56
+                    1.87
                 ],
-                "lastDay": 6
+                "lastDay": 7
             }
         },
         {
@@ -3523,14 +3526,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day5LowUp": [
+                "day6LowUp": [
                     "3,2026-06-05",
                     -0.23,
                     "4,2026-06-08",
                     9.08,
-                    7.99
+                    8.32
                 ],
-                "lastDay": 5
+                "lastDay": 6
             }
         },
         {
@@ -3538,6 +3541,24 @@ var triggerLogObj大宗={
             "quantName": "高位低量",
             "trigDate": "2026-06-09",
             "trigAtIndex": 676,
+            "dataType": "工业",
+            "trigcalType": "",
+            "logProfileN": {
+                "day1LowUp": [
+                    "",
+                    0,
+                    "1,2026-06-10",
+                    0.3,
+                    0.3
+                ],
+                "lastDay": 1
+            }
+        },
+        {
+            "dataName": "航运连续",
+            "quantName": "高位低量",
+            "trigDate": "2026-06-10",
+            "trigAtIndex": 677,
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
@@ -15454,5 +15475,5 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-06-09"
-var cnFutures策略runLastTime = "2026-06-09 21:50:15"
+var runLastKlineDate = "2026-06-10"
+var cnFutures策略runLastTime = "2026-06-10 22:31:37"
