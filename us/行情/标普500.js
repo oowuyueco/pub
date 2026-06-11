@@ -167752,10 +167752,22 @@ var 标普500 = [
     "timestamp": 1781064000000,
     "open": 7350.54,
     "high": 7396.56,
-    "low": 7328.42,
-    "close": 7386.04,
-    "percent": -0.01,
-    "volume": 614190648,
+    "low": 7265.93,
+    "close": 7266.99,
+    "percent": -1.62,
+    "volume": 3253456342,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2026-06-11",
+    "timestamp": 1781150400000,
+    "open": 7287.67,
+    "high": 7327.9,
+    "low": 7276.92,
+    "close": 7287.63,
+    "percent": 0.28,
+    "volume": 819954302,
     "hsl": 0,
     "zgs": null
   }
@@ -167764,5 +167776,5 @@ var 标普500 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.标普500 = 标普500
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-10 22:30:09"
+    exports.writeDateTime = "2026-06-11 22:53:34"
 };
