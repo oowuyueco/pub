@@ -1152,14 +1152,14 @@ var triggerLogObj大宗={
                     7.15,
                     0.79
                 ],
-                "day69LowUp": [
+                "day70LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    1.58
+                    1.28
                 ],
-                "lastDay": 69
+                "lastDay": 70
             }
         }
     ],
@@ -2124,14 +2124,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day85LowUp": [
+                "day86LowUp": [
                     "31,2026-03-23",
                     -50.11,
                     "",
                     0,
-                    -50.1
+                    -48.3
                 ],
-                "lastDay": 85
+                "lastDay": 86
             }
         },
         {
@@ -3479,7 +3479,14 @@ var triggerLogObj大宗={
                     32.03,
                     29.99
                 ],
-                "lastDay": 10
+                "day11LowUp": [
+                    "",
+                    0,
+                    "7,2026-06-08",
+                    32.03,
+                    29.74
+                ],
+                "lastDay": 11
             }
         },
         {
@@ -3490,14 +3497,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day9LowUp": [
+                "day10LowUp": [
                     "",
                     0,
                     "6,2026-06-08",
                     31.3,
-                    29.26
+                    29.02
                 ],
-                "lastDay": 9
+                "lastDay": 10
             }
         },
         {
@@ -3508,14 +3515,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day8LowUp": [
+                "day9LowUp": [
                     "4,2026-06-05",
                     -6.17,
                     "5,2026-06-08",
                     2.59,
-                    1
+                    0.81
                 ],
-                "lastDay": 8
+                "lastDay": 9
             }
         },
         {
@@ -3526,14 +3533,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day7LowUp": [
+                "day8LowUp": [
                     "3,2026-06-05",
                     -0.23,
                     "4,2026-06-08",
                     9.08,
-                    7.39
+                    7.19
                 ],
-                "lastDay": 7
+                "lastDay": 8
             }
         },
         {
@@ -3544,14 +3551,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day2LowUp": [
-                    "2,2026-06-11",
-                    -0.56,
+                "day3LowUp": [
+                    "3,2026-06-12",
+                    -0.74,
                     "1,2026-06-10",
                     0.3,
-                    -0.56
+                    -0.74
                 ],
-                "lastDay": 2
+                "lastDay": 3
             }
         },
         {
@@ -3562,14 +3569,14 @@ var triggerLogObj大宗={
             "dataType": "工业",
             "trigcalType": "",
             "logProfileN": {
-                "day1LowUp": [
-                    "1,2026-06-11",
-                    -0.86,
+                "day2LowUp": [
+                    "2,2026-06-12",
+                    -1.04,
                     "",
                     0,
-                    -0.86
+                    -1.04
                 ],
-                "lastDay": 1
+                "lastDay": 2
             }
         }
     ],
@@ -15475,5 +15482,5 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-06-11"
-var cnFutures策略runLastTime = "2026-06-11 23:31:13"
+var runLastKlineDate = "2026-06-12"
+var cnFutures策略runLastTime = "2026-06-12 22:17:01"
