@@ -288,6 +288,19 @@ var triggerLogObj同花顺 = {
         "大市值ths低位收盘通知已止损卖出",
         {
             "after": {
+                "close": "1->2026-06-12,54.91,1.16",
+                "high": "1->2026-06-12,54.91,1.16",
+                "low": ",0,0",
+                "nextFirstDelivery周五": "2026-06-19",
+                "nextSecondDelivery周五": "2026-07-17",
+                "nextThirdDelivery周五": "2026-08-21"
+            }
+        }
+    ],
+    "2026-06-12": [
+        "组1统计ths低位收盘触发买入:1:1",
+        {
+            "after": {
                 "close": ",0,0",
                 "high": ",0,0",
                 "low": ",0,0",
@@ -301,5 +314,5 @@ var triggerLogObj同花顺 = {
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-06-11 23:36:47"
+        exports.同花顺策略runLastTime = "2026-06-12 22:23:46"
     }
