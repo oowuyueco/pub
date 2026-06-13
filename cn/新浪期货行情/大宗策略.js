@@ -15483,4 +15483,4 @@ var triggerLogObj大宗={
     ]
 }
 var runLastKlineDate = "2026-06-12"
-var cnFutures策略runLastTime = "2026-06-12 22:17:01"
+var cnFutures策略runLastTime = "2026-06-13 20:59:42"
