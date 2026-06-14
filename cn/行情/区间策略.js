@@ -806,8 +806,13 @@ var triggerLogObj区间 = {
       "2014-10-27": [
         {
           "trigDate": "2014-10-27",
-          "quantName": "上证低位_WdMa40金叉80 ",
+          "quantName": "上证低位_周Ma40金叉80 ",
           "logInfo": ""
+        },
+        {
+          "trigDate": "2014-10-27",
+          "quantName": "上证50低位_日周急跌lows",
+          "logInfo": "type2"
         },
         {
           "nextFirstDelivery周五": {
@@ -935,6 +940,30 @@ var triggerLogObj区间 = {
             "close": "48->2015-01-16,1132.99,45.28",
             "high": "41->2015-01-07,1141.64,45.63",
             "low": ",0,0"
+          }
+        }
+      ],
+      "2015-02-02": [
+        {
+          "trigDate": "2015-02-02",
+          "quantName": "上证50低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "12->2015-02-25,124.77,3.72",
+            "high": "11->2015-02-17,168.36,5.02",
+            "low": "4->2015-02-06,-41.54,-1.24"
+          },
+          "nextSecondDelivery周五": {
+            "close": "29->2015-03-20,538.61,16.06",
+            "high": "29->2015-03-20,538.61,16.06",
+            "low": "4->2015-02-06,-41.54,-1.24"
+          },
+          "nextThirdDelivery周五": {
+            "close": "48->2015-04-17,1242.18,37.04",
+            "high": "48->2015-04-17,1242.18,37.04",
+            "low": "4->2015-02-06,-41.54,-1.24"
           }
         }
       ],
@@ -1136,8 +1165,13 @@ var triggerLogObj区间 = {
       "2017-05-09": [
         {
           "trigDate": "2017-05-09",
-          "quantName": "上证低位_WdownMa80",
+          "quantName": "上证低位_周downMa80",
           "logInfo": ""
+        },
+        {
+          "trigDate": "2017-05-09",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
         },
         {
           "nextFirstDelivery周五": {
@@ -1160,7 +1194,7 @@ var triggerLogObj区间 = {
       "2017-05-10": [
         {
           "trigDate": "2017-05-10",
-          "quantName": "上证低位_WdownMa80",
+          "quantName": "上证低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1184,7 +1218,7 @@ var triggerLogObj区间 = {
       "2017-05-11": [
         {
           "trigDate": "2017-05-11",
-          "quantName": "上证低位_WdownMa80",
+          "quantName": "上证低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1256,7 +1290,7 @@ var triggerLogObj区间 = {
       "2017-05-19": [
         {
           "trigDate": "2017-05-19",
-          "quantName": "上证低位_WdownMa80",
+          "quantName": "上证低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1383,7 +1417,7 @@ var triggerLogObj区间 = {
       "2019-01-02": [
         {
           "trigDate": "2019-01-02",
-          "quantName": "上证50低位_Wlows",
+          "quantName": "上证50低位_周lows",
           "logInfo": ""
         },
         {
@@ -1401,6 +1435,59 @@ var triggerLogObj区间 = {
             "close": "47->2019-03-15,775.47,26.11",
             "high": "40->2019-03-06,878.55,29.59",
             "low": "1->2019-01-03,-4.7,-0.16"
+          }
+        }
+      ],
+      "2019-05-06": [
+        {
+          "trigDate": "2019-05-06",
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2019-05-06",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "9->2019-05-17,-35.86,-0.97",
+            "high": "8->2019-05-16,59.34,1.61",
+            "low": "3->2019-05-09,-84.92,-2.3"
+          },
+          "nextSecondDelivery周五": {
+            "close": "33->2019-06-21,149.32,4.05",
+            "high": "33->2019-06-21,149.32,4.05",
+            "low": "23->2019-06-06,-119.94,-3.26"
+          },
+          "nextThirdDelivery周五": {
+            "close": "53->2019-07-19,123.34,3.35",
+            "high": "40->2019-07-02,252.55,6.85",
+            "low": "23->2019-06-06,-119.94,-3.26"
+          }
+        }
+      ],
+      "2019-05-09": [
+        {
+          "trigDate": "2019-05-09",
+          "quantName": "上证50低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "6->2019-05-17,49.06,1.36",
+            "high": "5->2019-05-16,144.26,4.01",
+            "low": ",0,0"
+          },
+          "nextSecondDelivery周五": {
+            "close": "30->2019-06-21,234.24,6.51",
+            "high": "30->2019-06-21,234.24,6.51",
+            "low": "20->2019-06-06,-35.02,-0.97"
+          },
+          "nextThirdDelivery周五": {
+            "close": "50->2019-07-19,208.26,5.79",
+            "high": "37->2019-07-02,337.47,9.37",
+            "low": "20->2019-06-06,-35.02,-0.97"
           }
         }
       ],
@@ -1478,6 +1565,30 @@ var triggerLogObj区间 = {
             "close": "54->2019-08-16,80.75,2.22",
             "high": "21->2019-07-02,307.38,8.47",
             "low": "4->2019-06-06,-65.11,-1.79"
+          }
+        }
+      ],
+      "2019-08-06": [
+        {
+          "trigDate": "2019-08-06",
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "8->2019-08-16,74.21,2.04",
+            "high": "8->2019-08-16,74.21,2.04",
+            "low": "1->2019-08-07,-14.9,-0.41"
+          },
+          "nextSecondDelivery周五": {
+            "close": "32->2019-09-20,299.32,8.23",
+            "high": "24->2019-09-09,336.62,9.26",
+            "low": "1->2019-08-07,-14.9,-0.41"
+          },
+          "nextThirdDelivery周五": {
+            "close": "47->2019-10-18,233.05,6.41",
+            "high": "24->2019-09-09,336.62,9.26",
+            "low": "1->2019-08-07,-14.9,-0.41"
           }
         }
       ],
@@ -1585,12 +1696,12 @@ var triggerLogObj区间 = {
       "2020-03-18": [
         {
           "trigDate": "2020-03-18",
-          "quantName": "沪深300低位_WdownMa40",
+          "quantName": "沪深300低位_周downMa40",
           "logInfo": ""
         },
         {
           "trigDate": "2020-03-18",
-          "quantName": "沪深300低位_WdownMa80",
+          "quantName": "沪深300低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1614,12 +1725,17 @@ var triggerLogObj区间 = {
       "2020-03-19": [
         {
           "trigDate": "2020-03-19",
-          "quantName": "沪深300低位_WdownMa40",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2020-03-19",
+          "quantName": "沪深300低位_周downMa40",
           "logInfo": ""
         },
         {
           "trigDate": "2020-03-19",
-          "quantName": "沪深300低位_WdownMa80",
+          "quantName": "沪深300低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1643,12 +1759,12 @@ var triggerLogObj区间 = {
       "2020-03-20": [
         {
           "trigDate": "2020-03-20",
-          "quantName": "沪深300低位_WdownMa40",
+          "quantName": "沪深300低位_周downMa40",
           "logInfo": ""
         },
         {
           "trigDate": "2020-03-20",
-          "quantName": "沪深300低位_WdownMa80",
+          "quantName": "沪深300低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1672,8 +1788,8 @@ var triggerLogObj区间 = {
       "2020-03-23": [
         {
           "trigDate": "2020-03-23",
-          "quantName": "沪深300低位_日周急跌空但",
-          "logInfo": ""
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type1"
         },
         {
           "nextFirstDelivery周五": {
@@ -1696,17 +1812,17 @@ var triggerLogObj区间 = {
       "2020-05-22": [
         {
           "trigDate": "2020-05-22",
-          "quantName": "上证低位_WdownMa40",
+          "quantName": "上证低位_周downMa40",
           "logInfo": ""
         },
         {
           "trigDate": "2020-05-22",
-          "quantName": "上证50低位_WdownMa40",
+          "quantName": "上证50低位_周downMa40",
           "logInfo": ""
         },
         {
           "trigDate": "2020-05-22",
-          "quantName": "上证50低位_WdownMa80",
+          "quantName": "上证50低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1730,12 +1846,12 @@ var triggerLogObj区间 = {
       "2020-05-26": [
         {
           "trigDate": "2020-05-26",
-          "quantName": "上证低位_WdownMa40",
+          "quantName": "上证低位_周downMa40",
           "logInfo": ""
         },
         {
           "trigDate": "2020-05-26",
-          "quantName": "上证低位_WdownMa80",
+          "quantName": "上证低位_周downMa80",
           "logInfo": ""
         },
         {
@@ -1759,7 +1875,7 @@ var triggerLogObj区间 = {
       "2020-05-27": [
         {
           "trigDate": "2020-05-27",
-          "quantName": "上证低位_WdownMa40",
+          "quantName": "上证低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2292,6 +2408,59 @@ var triggerLogObj区间 = {
           }
         }
       ],
+      "2025-01-03": [
+        {
+          "trigDate": "2025-01-03",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "10->2025-01-17,37.18,0.98",
+            "high": "7->2025-01-14,45.38,1.2",
+            "low": "6->2025-01-13,-52.65,-1.39"
+          },
+          "nextSecondDelivery周五": {
+            "close": "29->2025-02-21,203.28,5.38",
+            "high": "29->2025-02-21,203.28,5.38",
+            "low": "6->2025-01-13,-52.65,-1.39"
+          },
+          "nextThirdDelivery周五": {
+            "close": "49->2025-03-21,139.54,3.7",
+            "high": "47->2025-03-19,235.01,6.23",
+            "low": "6->2025-01-13,-52.65,-1.39"
+          }
+        }
+      ],
+      "2025-01-06": [
+        {
+          "trigDate": "2025-01-06",
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2025-01-06",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "9->2025-01-17,43.37,1.15",
+            "high": "6->2025-01-14,51.57,1.37",
+            "low": "5->2025-01-13,-46.46,-1.23"
+          },
+          "nextSecondDelivery周五": {
+            "close": "28->2025-02-21,209.47,5.56",
+            "high": "28->2025-02-21,209.47,5.56",
+            "low": "5->2025-01-13,-46.46,-1.23"
+          },
+          "nextThirdDelivery周五": {
+            "close": "48->2025-03-21,145.73,3.87",
+            "high": "46->2025-03-19,241.2,6.4",
+            "low": "5->2025-01-13,-46.46,-1.23"
+          }
+        }
+      ],
       "2025-01-13": [
         {
           "trigDate": "2025-01-13",
@@ -2397,8 +2566,18 @@ var triggerLogObj区间 = {
       "2025-04-07": [
         {
           "trigDate": "2025-04-07",
-          "quantName": "沪深300低位_日周急跌空但",
-          "logInfo": ""
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2025-04-07",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type1"
+        },
+        {
+          "trigDate": "2025-04-07",
+          "quantName": "科创50低位_日周急跌lows",
+          "logInfo": "type2"
         },
         {
           "nextFirstDelivery周五": {
@@ -2414,6 +2593,30 @@ var triggerLogObj区间 = {
           "nextThirdDelivery周五": {
             "close": "50->2025-06-20,257.2,7.17",
             "high": "24->2025-05-14,353.77,9.86",
+            "low": ",0,0"
+          }
+        }
+      ],
+      "2025-04-08": [
+        {
+          "trigDate": "2025-04-08",
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "8->2025-04-18,121.76,3.34",
+            "high": "6->2025-04-16,122.06,3.34",
+            "low": ",0,0"
+          },
+          "nextSecondDelivery周五": {
+            "close": "25->2025-05-16,238.33,6.53",
+            "high": "23->2025-05-14,292.45,8.01",
+            "low": ",0,0"
+          },
+          "nextThirdDelivery周五": {
+            "close": "49->2025-06-20,195.88,5.37",
+            "high": "23->2025-05-14,292.45,8.01",
             "low": ",0,0"
           }
         }
@@ -2445,7 +2648,7 @@ var triggerLogObj区间 = {
       "2025-04-10": [
         {
           "trigDate": "2025-04-10",
-          "quantName": "沪深300低位_WdownMa40",
+          "quantName": "沪深300低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2493,7 +2696,7 @@ var triggerLogObj区间 = {
       "2025-06-18": [
         {
           "trigDate": "2025-06-18",
-          "quantName": "科创50低位_WdownMa40",
+          "quantName": "科创50低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2517,7 +2720,7 @@ var triggerLogObj区间 = {
       "2025-06-19": [
         {
           "trigDate": "2025-06-19",
-          "quantName": "科创50低位_WdownMa40",
+          "quantName": "科创50低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2541,7 +2744,7 @@ var triggerLogObj区间 = {
       "2025-06-20": [
         {
           "trigDate": "2025-06-20",
-          "quantName": "科创50低位_WdownMa40",
+          "quantName": "科创50低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2570,7 +2773,7 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2025-06-23",
-          "quantName": "科创50低位_WdownMa40",
+          "quantName": "科创50低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2726,6 +2929,30 @@ var triggerLogObj区间 = {
           }
         }
       ],
+      "2025-11-24": [
+        {
+          "trigDate": "2025-11-24",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "nextFirstDelivery周五": {
+            "close": "19->2025-12-19,120.13,2.7",
+            "high": "10->2025-12-08,173.7,3.91",
+            "low": ",0,0"
+          },
+          "nextSecondDelivery周五": {
+            "close": "37->2026-01-16,283.82,6.38",
+            "high": "29->2026-01-06,342.64,7.7",
+            "low": ",0,0"
+          },
+          "nextThirdDelivery周五": {
+            "close": "58->2026-02-24,259.49,5.83",
+            "high": "29->2026-01-06,342.64,7.7",
+            "low": ",0,0"
+          }
+        }
+      ],
       "2025-11-25": [
         {
           "trigDate": "2025-11-25",
@@ -2840,7 +3067,22 @@ var triggerLogObj区间 = {
       "2026-03-23": [
         {
           "trigDate": "2026-03-23",
-          "quantName": "科创50低位_WdownMa40",
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2026-03-23",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2026-03-23",
+          "quantName": "上证50低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2026-03-23",
+          "quantName": "科创50低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2865,12 +3107,12 @@ var triggerLogObj区间 = {
       "2026-04-03": [
         {
           "trigDate": "2026-04-03",
-          "quantName": "沪深300低位_Wlows",
+          "quantName": "沪深300低位_周lows",
           "logInfo": ""
         },
         {
           "trigDate": "2026-04-03",
-          "quantName": "上证50低位_WdownMa40",
+          "quantName": "上证50低位_周downMa40",
           "logInfo": ""
         },
         {
@@ -2889,6 +3131,38 @@ var triggerLogObj区间 = {
             "high": "24->2026-05-13,557.55,12.56",
             "low": "1->2026-04-07,-0.17,0",
             "nextThirdDelivery周五": "2026-06-19"
+          }
+        }
+      ],
+      "2026-06-08": [
+        {
+          "trigDate": "2026-06-08",
+          "quantName": "上证低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2026-06-08",
+          "quantName": "上证低位_周downMa40",
+          "logInfo": ""
+        },
+        {
+          "trigDate": "2026-06-08",
+          "quantName": "沪深300低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "trigDate": "2026-06-08",
+          "quantName": "科创50低位_日周急跌lows",
+          "logInfo": "type2"
+        },
+        {
+          "after": {
+            "close": "4->2026-06-12,63.68,1.35",
+            "high": "1->2026-06-09,88.17,1.87",
+            "low": ",0,0",
+            "nextFirstDelivery周五": "2026-06-19",
+            "nextSecondDelivery周五": "2026-07-17",
+            "nextThirdDelivery周五": "2026-08-21"
           }
         }
       ]
