@@ -28666,11 +28666,23 @@ var 证券ETF国泰 = [
     "volume": 3416633001,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-06-15",
+    "timestamp": 1781452800000,
+    "open": 1.05,
+    "high": 1.099,
+    "low": 1.048,
+    "close": 1.072,
+    "percent": 2.58,
+    "volume": 4310304417,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.证券ETF国泰 = 证券ETF国泰
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-13 20:57:47"
+    exports.writeDateTime = "2026-06-16 00:24:05"
 };
