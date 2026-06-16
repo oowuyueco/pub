@@ -1757,21 +1757,23 @@ function afterDayProfile(trigDate, after交易日DayArr, dayDatas) {
 }
 
 
-function getWindowsType() {
-    let isgitaction = decodeURI(getQueryVariable("gitaction"));
-    if (isgitaction == "false") return "Desktop-Windows10";
-    else return "Server-WindowsServer";
-}
+var devTestEnv = false
 
 //nodejs 导出
 if (typeof module !== "undefined" && module.exports) {
     var fs = require('fs');
     var os = require('os');
     var nodemailer = require("nodemailer");
-    var devTestEnv = os.version().includes("Windows 10") ? true : false  //本机 ：gitaction  //Windows Server  Darwin Kernel Version
+    const args = require('minimist')(process.argv.slice(2))
+    let isgitaction = args.gitaction ?? "false";
+    if (isgitaction == "false" && os.version().includes("Windows 10")) devTestEnv = true
+
 } else {
-    var devTestEnv = getWindowsType().includes("Desktop") ? true : false
+    let isgitaction = decodeURI(getQueryVariable("gitaction"));
+    if (isgitaction == "false" && navigator.userAgent.includes("Windows NT 10.0")) devTestEnv = true
 }
+
+console.log(`devTestEnv: ${devTestEnv}`)
 
 const globalConfigStartDate组1 = "2024-01-01"
 const globalConfigStartDate组2 = "2024-01-01"
