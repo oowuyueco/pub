@@ -1564,7 +1564,7 @@ function excelSerialToDate(excelSerial) {
 
 
 let liveServerUrl = "https://oowuyue.github.io/notebook/"
-if (devTestEnv) liveServerUrl = `http://127.0.0.1:${location.port}/tempData/`
+if (devTestEnv) liveServerUrl = `http://127.0.0.1:${location.port ? location.port : 5500}/tempData/`
 let liveServerOk = true
 async function readExcel(excelFileName) {
     try {
