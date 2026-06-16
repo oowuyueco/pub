@@ -41,20 +41,20 @@ function calDayWeekMonthKline(nameCode, kline交易日) {
         nameCode.currentDayList = nameCode.dayDatas.slice(dayStart, currentDayIndex + 1)
             .calBoll().cal9转(kline交易日, "day").calKdj().calMacd().maN(10, "close")
         nameCode.currentDayList = calculationBias(nameCode.currentDayList)
-        nameCode.currentDayList = calculationCci(nameCode.currentDayList)
+        nameCode.currentDayList = calculationCci(nameCode.currentDayList, [14]) //正常默认应该是14  
 
         let weekDayStart = (currentDayIndex + 1) - 500 > 0 ? (currentDayIndex + 1) - 500 : 0 //week最近100周500天
         nameCode.currentWeekList = dayToPeriod(nameCode.dayDatas.slice(weekDayStart, currentDayIndex + 1), "week")
             .calBoll().cal9转(kline交易日, "week").calKdj().calMacd().maN(10, 'close')
         nameCode.currentWeekList = calculationBias(nameCode.currentWeekList)
-        nameCode.currentWeekList = calculationCci(nameCode.currentWeekList)
+        nameCode.currentWeekList = calculationCci(nameCode.currentWeekList, [14]) //正常默认应该是14  
 
         let monthDayStart = 0 //month全部
         nameCode.currentMonthList = dayToPeriod(nameCode.dayDatas.slice(monthDayStart, currentDayIndex + 1), "month")
             .calBoll().cal9转(kline交易日, "month").calKdj().calMacd()
             .maN(3, 'close').maN(5, 'close').maN(10, 'close').maN(80, 'close')
         nameCode.currentMonthList = calculationBias(nameCode.currentMonthList)
-        nameCode.currentMonthList = calculationCci(nameCode.currentMonthList)
+        nameCode.currentMonthList = calculationCci(nameCode.currentMonthList, [14]) //正常默认应该是14  
     }
     return nameCode
 }
@@ -93,8 +93,17 @@ function preNHighestAttr(periodList, N = 7, attr = "J") {
     }
     return highest
 }
-
-
+function preN十字星(periodList, N = 2) {
+    for (let index = 1; index <= N; index++) {
+        let currentPeriod = periodList[periodList.length - index]
+        let res = (
+            +Math.abs(curtPercent(currentPeriod)) < 0.9 &&   //1   //当期涨跌幅 阳线阴线 短矩形   '0.57,8.88'  0.35,11.96
+            +Math.abs(curtAmp(currentPeriod)) < 13          //23 //矩形占比小
+        )
+        if (res) return true
+    }
+    return false
+}
 function preN矩形穿ups(periodList, N = 4, tweaks = 0) {
     if (periodList.length < 6) return false
     for (index = -1; index >= (0 - N); index--) {
@@ -1011,7 +1020,7 @@ String.prototype.unif高低位 = function () {
 
 let 手动买卖 = [
     // ['2026-05-18', '2026-07-17', '高位', '4833.52 沽沪深300 4688.514', tAr: '沪深300高位VKM多叉', yes1: 1] start
-    ['2026-05-18', '2026-06-24', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-06-24沽4776:5张', null, '2026-05-19', 0.0795, 4078.350],
+    ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-06-24沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
 
 
 ]
@@ -1866,14 +1875,21 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             curDate日期区间 == "上升日期区间" &&
             (
                 (curDay.close < curDay.lows && curDay.D < 41 && curWeek.close < curWeek.mas && curWeek.J < 20 && pre1Week.close > pre1Week.mas) ||
-                (ocHighest(curDay) < curDay.lows && curDay.J < 0 && curWeek.low < curWeek.mas && curtPercent(curWeek) < 0 && curWeek.J < 0 && curWeek.bar < 0) //2025-11-24
-            ) &&
+                (ocHighest(curDay) < curDay.lows && curDay.J < 0 && curWeek.low < curWeek.mas && curtPercent(curWeek) < 0 && curWeek.J < 0 && curWeek.bar < 0)  //2025-11-24
+                || (
+                    pre1Day.low > curDay.high && ocHighest(curDay) < curDay.lows &&
+                    curDay.bar <= 0 && curDay.bias.bias3 < -3 && curDay.cci.cci < -200 &&
+                    (PtPPercent(沪深300技术.currentDayList.at(-20), curDay) < -6 || lastN九转(沪深300技术.currentDayList) || preN十字星(沪深300技术.currentDayList)) &&
+                    curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0  //2026-06-08 
+                )
+            )
+            &&
             !(KDJ死叉(沪深300技术.currentDayList) && MACD死叉attr(沪深300技术.currentDayList)) &&
             !(KDJ死叉(沪深300技术.currentDayList) && MACD死叉attr(沪深300技术.currentDayList)) &&
             !(
                 (沪深300技术.currentMonthList.at(-1)?.is9转up == 9 || pre1Month.K > curMonth.K) &&
                 (KDJ死叉(沪深300技术.currentMonthList) || BIAS死叉attr(沪深300技术.currentMonthList)) &&
-                curWeek.close > curWeek.lows
+                curWeek.close > curWeek.lows && curWeek.cci.cci > 0
             )
         ) return true
     }
@@ -1898,7 +1914,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         (
             (curDay.bias.bias3 < -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 > 3) ||
-            curDay.cci.cci < -250
+            curDay.cci.cci < -230
         )
     ) res += 'P2'   //2026-03-23 极低  //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
 
@@ -1994,7 +2010,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         curWeek.bias.bias3 > curWeek.bias.bias2 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0 &&
         (pre1Week.J > curWeek.J || pre1Week.K > curWeek.K) &&
         (
-            lastN九转(沪深300技术.currentWeekList, "is9转up", N = 3) ||
+            lastN九转(沪深300技术.currentWeekList, "is9转up") ||
             (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
             curWeek.low >= curWeek.ups ||
             KDJ死叉(沪深300技术.currentWeekList) ||
@@ -2044,7 +2060,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         ) &&
 
         curtPercent(pre2Week) >= 0 && curtPercent(pre1Week) >= 0 && curtPercent(curWeek) >= 0 &&
-        lastN九转(沪深300技术.currentWeekList, "is9转up", N = 3) &&
+        lastN九转(沪深300技术.currentWeekList, "is9转up") &&
         (
             (
                 volMa(5, 沪深300技术.currentWeekList, -3) > volMa(5, 沪深300技术.currentWeekList, -2) &&
