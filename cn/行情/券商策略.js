@@ -639,4 +639,4 @@
         }
     ]
 }
-var runLastKlineDate = "2026-06-12"
+var runLastKlineDate = "2026-06-15"
