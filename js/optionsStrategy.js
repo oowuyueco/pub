@@ -1614,7 +1614,7 @@ const 默认卖出开or收 = "开盘价" //默认开收卖出
 const 单次抽取百分比 = 0.05;
 const 单次最小投资 = 3000;
 const 单次最大投资 = 50000;
-const 总持仓限制 = 0.2;
+const 总持仓限制 = 0.15;
 const etf费用 = 5
 const etf倍数 = 10000
 const 指数费用 = 15
@@ -2151,11 +2151,11 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
     if (
         asset期权[2].includes("↑") &&
-        美股策略byDay.find(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+        美股策略byDay.filter(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1]).length > 2
     ) res += "美反箭"
     if (
         asset期权[2].includes("↓") &&
-        美股策略byDay.find(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
+        美股策略byDay.filter(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1]).length > 2
     ) res += "美反箭"
 
 
