@@ -16248,11 +16248,31 @@ var 苯乙烯连续 = [
     "volume": 524694,
     "hold": 286049,
     "settle": 8252
+  },
+  {
+    "date": "2026-06-16",
+    "open": 8180,
+    "high": 8180,
+    "low": 7885,
+    "close": 7928,
+    "volume": 377874,
+    "hold": 270536,
+    "settle": 8015
+  },
+  {
+    "date": "2026-06-17",
+    "open": 7800,
+    "high": 7925,
+    "low": 7740,
+    "close": 7798,
+    "volume": 295235,
+    "hold": 146451,
+    "settle": 7839
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.苯乙烯连续 = 苯乙烯连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-06-16 00:25:35"
+    exports.writeDateTime = "2026-06-17 22:02:56"
 };

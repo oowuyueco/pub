@@ -28458,11 +28458,31 @@ var 硅铁连续 = [
     "volume": 184195,
     "hold": 204174,
     "settle": 5786
+  },
+  {
+    "date": "2026-06-16",
+    "open": 5766,
+    "high": 5768,
+    "low": 5712,
+    "close": 5726,
+    "volume": 151788,
+    "hold": 219641,
+    "settle": 5734
+  },
+  {
+    "date": "2026-06-17",
+    "open": 5722,
+    "high": 5734,
+    "low": 5666,
+    "close": 5688,
+    "volume": 128890,
+    "hold": 230436,
+    "settle": 5696
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.硅铁连续 = 硅铁连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-06-16 00:24:49"
+    exports.writeDateTime = "2026-06-17 22:02:14"
 };
