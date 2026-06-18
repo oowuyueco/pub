@@ -1893,7 +1893,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             )
         ) return true
     }
-    if (区间反向()) res += "P0"
+    if (区间反向()) res += "P0."
 
 
     if (
@@ -1903,7 +1903,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             (curDay.bias.bias3 < -8 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 > 4)
         )
-    ) res += 'P1'   //` ${curDay.date}绿绿` //2022-03-15 极低
+    ) res += 'P1.'   //` ${curDay.date}绿绿` //2022-03-15 极低
 
 
     if (
@@ -1916,7 +1916,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             (pre1Day.bias.bias3 - curDay.bias.bias3 > 3) ||
             curDay.cci.cci < -230
         )
-    ) res += 'P2'   //2026-03-23 极低  //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
+    ) res += 'P2.'   //2026-03-23 极低  //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
 
 
     if (
@@ -1927,7 +1927,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         pre1Day.mas < curDay.mas &&
         沪深300技术.currentWeekList.at(-2).D < 沪深300技术.currentWeekList.at(-1).D &&
         沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
-    ) res += 'P3'   //` ${curDay.date}波动率太贵绿` //2024-11-15 低位太贵
+    ) res += 'P3.'   //` ${curDay.date}波动率太贵绿` //2024-11-15 低位太贵
 
 
     if (
@@ -1935,7 +1935,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         (pre1Day.high < pre1Day.lows || curDay.high < curDay.lows) &&
         curDay.bias.bias3 < -3 &&
         curDay.J < 10 && pre1Day.J < curDay.J
-    ) res += 'P4'   //` ${curDay.date}绿空绿红` //2021-08-20  低位可能转向
+    ) res += 'P4.'   //` ${curDay.date}绿空绿红` //2021-08-20  低位可能转向
 
     if (
         绿空绿(沪深300技术.currentDayList) &&
@@ -1952,7 +1952,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         ) &&
         1 < countWeekdays(curDay.date, asset期权[1]) &&
         countWeekdays(curDay.date, asset期权[1]) < 7
-    ) res += 'P5'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
+    ) res += 'P5.'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
 
 
     return res;
@@ -2017,14 +2017,14 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             MACD死叉attr(沪深300技术.currentWeekList)
         )
     ) {
-        res = "C0"
+        res = "C0."
     }
 
     if (
         curDay.J > 100 && pre1Day.J > curDay.J &&
         红空红绿(沪深300技术.currentDayList) && curDay.ups < curDay.low &&
         红空红绿(沪深300技术.currentWeekList) && curWeek.ups < curWeek.low
-    ) res = "C1"
+    ) res = "C1."
 
 
     if (
@@ -2070,7 +2070,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         ) &&
         (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume)
 
-    ) res = "C2"
+    ) res = "C2."
 
 
 
@@ -2101,7 +2101,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         1 < countWeekdays(curDay.date, asset期权[1]) &&
         countWeekdays(curDay.date, asset期权[1]) < 11
 
-    ) res += 'C3'   //'2020-10-09', '2020-11-20', ' ↑ ' 快到期
+    ) res += 'C3.'   //'2020-10-09', '2020-11-20', ' ↑ ' 快到期
 
 
     return res;
@@ -2142,33 +2142,64 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     if (
         asset期权[2].unif高低位() == "低位" &&
         全部策略ByDay.find(ele => ele[3].unif高低位() == "高位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "反向"
+    ) res += "策略反向."
     if (
         asset期权[2].unif高低位() == "高位" &&
         全部策略ByDay.find(ele => ele[3].unif高低位() == "低位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "反向"
+    ) res += "策略反向."
 
     let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
     if (
         asset期权[2].includes("↑") &&
         美股策略byDay.filter(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1]).length > 2
-    ) res += "美反箭"
+    ) res += "美反区间."
     if (
         asset期权[2].includes("↓") &&
         美股策略byDay.filter(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1]).length > 2
-    ) res += "美反箭"
+    ) res += "美反区间."
 
 
 
     let 沪深300技术 = {};
     沪深300技术.dayDatas = 沪深300;
     沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+
+
+    let curDate恐贪指数 = 恐贪指数.find(ele => ele.date == curDate)
+    let 深度贪婪count = 0
+    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo > 91) 深度贪婪count++
+    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei > 76) 深度贪婪count++
+    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu > 86) 深度贪婪count++
+
+    if (
+        asset期权[2].unif高低位() == "低位" &&
+        深度贪婪count == 3 &&
+        沪深300技术.currentDayList.at(-1).cci.cci > 200 &&
+        沪深300技术.currentWeekList.at(-1).cci.cci > 120
+    ) res += "深度贪婪."
+
+    let 深度恐惧count = 0
+    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
+    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 25) 深度恐惧count++
+    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 15) 深度恐惧count++
+
+    if (
+        asset期权[2].unif高低位() == "高位" &&
+        深度恐惧count >= 2 &&
+        沪深300技术.currentDayList.at(-1).bias.bias3 < -3 &&
+        沪深300技术.currentDayList.at(-1).cci.cci < -200 &&
+        沪深300技术.currentWeekList.at(-1).cci.cci < 0 &&
+        沪深300技术.currentWeekList.at(-1).J < 沪深300技术.currentWeekList.at(-1).D &&
+        沪深300技术.currentWeekList.at(-1).bar < 0 &&
+        沪深300技术.currentWeekList.at(-1).bias.bias2 < 0
+    ) res += "深度恐惧."
+
+
     if (asset期权[3].includes("沽")) res += check沽提前卖出(沪深300技术, curDate, asset期权)
     if (asset期权[3].includes("购")) res += check购提前卖出(沪深300技术, curDate, asset期权)
 
 
-
-    if (res != "") return res
+    if (res != "") return res.slice(0, -1); //删除最后的.
     return false
 }
 
@@ -2397,7 +2428,7 @@ async function 模拟交易(期权买卖List) {
             let sellDateStr
             let need提前卖出 = check提前卖出(cur沪深300Date, asset期权);
             if (need提前卖出)
-                sellDateStr = `提前${need提前卖出}:${curNextOne交易日}`;
+                sellDateStr = `提前:${need提前卖出}:${curNextOne交易日}`;
             else {
                 for (let preDay = 默认卖出到期类型; preDay <= 0; preDay++) {
                     if (curNextOne交易日 == preNext交易日(asset期权[1], preDay)) {

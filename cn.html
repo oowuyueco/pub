@@ -315,6 +315,7 @@
     <script type="text/javascript" src="./cn/行情/沪深300.js"></script>
     <script type="text/javascript" src="./cn/行情/上证.js"></script>
     <script type="text/javascript" src="./cn/行情/恒生.js"></script>
+    <script type="text/javascript" src="./cn/行情/恐贪指数.js"></script>
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
     <script type="text/javascript" src="./cn/行情/券商策略.js"></script>
     <script type="text/javascript" src="./cn/行情/区间策略.js"></script>
@@ -815,8 +816,20 @@
                     },
                     axisLabel: {
                         formatter: (value, index) => {
-                            if (value > 700) return value / 1000 + "K"
-                            else return value
+                            if (value > 3000) return value / 1000 + "K"
+                            else return ""
+                        }
+                    },
+                    axisPointer: {
+                        show: true,
+                        label: {
+                            precision: 0,
+                            formatter: (params) => {
+                                if (params?.value > 3000) return params.value.toFixed(0)
+                                else return undefined
+                            },
+                            color: "black",
+                            backgroundColor: 'rgba(128, 128, 128, 0)'
                         }
                     },
                     position: "left",
@@ -847,7 +860,7 @@
                                 if (params?.value > 0) return params.value.toFixed(0)
                                 else return undefined
                             },
-                            color: "black",
+                            color: "red",
                             backgroundColor: 'rgba(128, 128, 128, 0)'
                         }
                     },
@@ -2048,6 +2061,41 @@
                     }).addStartEnd()
                 },
 
+                {//股同比
+                    name: "恐贪指数",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 13,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.7,
+                        color: "red"
+                    },
+                    data: 恐贪指数.filter((ele, index) => {
+                        return ele?.jiucaishuo != ""
+                    }).map((ele, index) => {
+                        return [ele.date, ele.jiucaishuo]
+                    }).addStartEnd()
+                },
+                {//股同比
+                    name: "恐贪指数",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 13,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 0.7,
+                        color: "green"
+                    },
+                    data: 恐贪指数.filter((ele, index) => {
+                        return ele?.baifenwei != ""
+                    }).map((ele, index) => {
+                        return [ele.date, ele.baifenwei]
+                    }).addStartEnd()
+                },
+
 
                 {//pmi股债策略
                     name: 'pmi股债策略',
@@ -2381,7 +2429,7 @@
                 "ppi基数", "上证", "恒生", "区间策略", "大盘策略", "券商策略", "同花顺策略", "基金策略", "pmi股债策略",
                 "汽车与出口", "房地产", "中位PE", "恒指美债差", "美债", "MM制造业",
                 "M1_M2", "M1_M2_MA", "信贷脉冲_MA4", "中美汇", "美元指", "金融脉动增速us",
-                "300同比"
+                "300同比", "恐贪指数"
             ].forEach(hidename => {
                 myChart.dispatchAction({
                     type: 'legendToggleSelect',
