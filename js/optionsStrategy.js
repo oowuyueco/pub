@@ -2142,57 +2142,68 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     if (
         asset期权[2].unif高低位() == "低位" &&
         全部策略ByDay.find(ele => ele[3].unif高低位() == "高位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "策略反向."
+    ) res += "反向."
     if (
         asset期权[2].unif高低位() == "高位" &&
         全部策略ByDay.find(ele => ele[3].unif高低位() == "低位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
-    ) res += "策略反向."
+    ) res += "反向."
 
     let 美股策略byDay = Object.entries(triggerLogObj美股指数.按日期排序)
     if (
         asset期权[2].includes("↑") &&
         美股策略byDay.filter(ele => ele[1][0].includes("高位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1]).length > 2
-    ) res += "美反区间."
+    ) res += "区美反."
     if (
         asset期权[2].includes("↓") &&
         美股策略byDay.filter(ele => ele[1][0].includes("低位") && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1]).length > 2
-    ) res += "美反区间."
+    ) res += "区美反."
 
 
 
     let 沪深300技术 = {};
     沪深300技术.dayDatas = 沪深300;
     沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
-
+    let pre1Week = 沪深300技术.currentWeekList.at(-2);
+    let curWeek = 沪深300技术.currentWeekList.at(-1);
+    let pre2Day = 沪深300技术.currentDayList.at(-3);
+    let pre1Day = 沪深300技术.currentDayList.at(-2);
+    let curDay = 沪深300技术.currentDayList.at(-1);
 
     let curDate恐贪指数 = 恐贪指数.find(ele => ele.date == curDate)
     let 深度贪婪count = 0
     if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo > 91) 深度贪婪count++
     if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei > 76) 深度贪婪count++
     if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu > 86) 深度贪婪count++
-
     if (
         asset期权[2].unif高低位() == "低位" &&
         深度贪婪count == 3 &&
-        沪深300技术.currentDayList.at(-1).cci.cci > 200 &&
-        沪深300技术.currentWeekList.at(-1).cci.cci > 120
-    ) res += "深度贪婪."
+        (pre1Day.J > 100 || curDay.J > 100) && curDay.bar > 0 &&
+        curDay.bias.bias3 > curDay.bias.bias2 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias1 > 0 &&
+        curDay.cci.cci > 200 &&
+        curWeek.close > curWeek.ups && curWeek.J > 100 && curWeek.bar > 0 &&
+        curWeek.bias.bias3 > curWeek.bias.bias2 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0 &&
+        curWeek.cci.cci > 120 &&
+        (
+            红空红绿(沪深300技术.currentWeekList) || lastN九转(沪深300技术.currentWeekList, "is9转up") ||
+            volMa死叉(沪深300技术.currentWeekList) || KDJ死叉(沪深300技术.currentWeekList, 2, 3)
+        )
+    ) res += "深贪."
 
     let 深度恐惧count = 0
     if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
     if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 25) 深度恐惧count++
     if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 15) 深度恐惧count++
-
     if (
         asset期权[2].unif高低位() == "高位" &&
         深度恐惧count >= 2 &&
-        沪深300技术.currentDayList.at(-1).bias.bias3 < -3 &&
-        沪深300技术.currentDayList.at(-1).cci.cci < -200 &&
-        沪深300技术.currentWeekList.at(-1).cci.cci < 0 &&
-        沪深300技术.currentWeekList.at(-1).J < 沪深300技术.currentWeekList.at(-1).D &&
-        沪深300技术.currentWeekList.at(-1).bar < 0 &&
-        沪深300技术.currentWeekList.at(-1).bias.bias2 < 0
-    ) res += "深度恐惧."
+        ocLowest(curDay) < curDay.lows && curDay.bias.bias3 < -3 && curDay.cci.cci < -120 &&
+        (
+            (curDay.bias.bias3 <= -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
+            (pre1Day.bias.bias3 - curDay.bias.bias3 >= 3) ||
+            curDay.cci.cci <= -220
+        ) &&
+        curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0
+    ) res += "深恐."
 
 
     if (asset期权[3].includes("沽")) res += check沽提前卖出(沪深300技术, curDate, asset期权)
