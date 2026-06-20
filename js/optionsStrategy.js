@@ -1020,9 +1020,8 @@ String.prototype.unif高低位 = function () {
 
 let 手动买卖 = [
     // ['2026-05-18', '2026-07-17', '高位', '4833.52 沽沪深300 4688.514', tAr: '沪深300高位VKM多叉', yes1: 1] start
-    ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-06-24沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
-
-
+    // ['2026-06-08', '2026-07-17', '高位', '4.852 购沪深300ETF手动 4.876', '2026-07-17沽4776:6张', null, '2026-06-09', 0.0795, 3078.350],
+    ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-07-17沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
 ]
 let 模拟买卖 = [
 
@@ -2184,6 +2183,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         curWeek.bias.bias3 > curWeek.bias.bias2 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0 &&
         curWeek.cci.cci > 120 &&
         (
+            (lastN九转(沪深300技术.currentDayList, "is9转up") && curDay.ups < curDay.close) ||
             红空红绿(沪深300技术.currentWeekList) || lastN九转(沪深300技术.currentWeekList, "is9转up") ||
             volMa死叉(沪深300技术.currentWeekList) || KDJ死叉(沪深300技术.currentWeekList, 2, 3)
         )
@@ -2217,13 +2217,13 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
 
 async function 模拟交易(期权买卖List) {
 
-    if (沪深300.at(-1).date !== currentDayYMD) 沪深300.push({ "date": `${currentDayYMD}` })//for本地
+    let todayNearMailMsg = ""
 
+    if (沪深300.at(-1).date !== currentDayYMD) 沪深300.push({ "date": `${currentDayYMD}` })//for本地
     const startOldestIndex = 沪深300.findIndex(e => e.date == 期权买卖List.at(-1)[0]);
 
     for (let i = startOldestIndex; i < 沪深300.length; i++) {
         let cur沪深300Date = 沪深300[i].date;
-        //if (cur沪深300Date == "2026-03-02") debugger
         let curDateHasConsole = false;
 
         //当日卖出
@@ -2361,7 +2361,7 @@ async function 模拟交易(期权买卖List) {
                 let msg = `${cur沪深300Date} 触发收盘通知下个交易日${preNext交易日(cur沪深300Date, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
                 console.log(msg);
                 curDateHasConsole = true;
-                if (isSendMail(cur沪深300Date)) pageSendMail(msg)
+                if (isSendMail(cur沪深300Date, "五天之内")) todayNearMailMsg += msg//pageSendMail(msg)
             }
             if (curTrigBuy[3].includes("手动")) { };
             if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(cur沪深300Date, 1);
@@ -2439,7 +2439,7 @@ async function 模拟交易(期权买卖List) {
             let sellDateStr
             let need提前卖出 = check提前卖出(cur沪深300Date, asset期权);
             if (need提前卖出)
-                sellDateStr = `提前:${need提前卖出}:${curNextOne交易日}`;
+                sellDateStr = `${curNextOne交易日}(${need提前卖出}>提前)`;
             else {
                 for (let preDay = 默认卖出到期类型; preDay <= 0; preDay++) {
                     if (curNextOne交易日 == preNext交易日(asset期权[1], preDay)) {
@@ -2455,12 +2455,17 @@ async function 模拟交易(期权买卖List) {
                 let msg = `${cur沪深300Date} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
                 console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
                 curDateHasConsole = true;
-                if (isSendMail(cur沪深300Date)) pageSendMail(msg)
+                if (isSendMail(cur沪深300Date, "五天之内")) {
+                    if (!todayNearMailMsg.includes(`${cur沪深300Date} 触发收盘通知下个交易日${sellDateStr}卖出`)) todayNearMailMsg += msg//pageSendMail(msg)
+                    else todayNearMailMsg += msg.split("卖出")[1]
+                }
             };
             if (asset期权[3].includes("模拟")) asset期权[sellDateIndex] = sellDateStr;
         }
 
     }
+
+    return todayNearMailMsg
 };
 
 
@@ -2470,7 +2475,7 @@ async function 模拟交易(期权买卖List) {
     if (liveServerOk) await fetch(liveServerUrl).catch(err => { liveServerOk = false })
 
 
-    await 模拟交易(期权买卖List);
+    let todayNearMailMsg = await 模拟交易(期权买卖List);
 
     console.log("")
     console.log(`模拟真实${单次最小投资}到${单次最大投资}: `, "总入金:", +总入金.toFixed(2), "总buyCash:", +总buyCash.toFixed(2), "总sellCash:", +总sellCash.toFixed(2), "asset现金:", +asset.现金.toFixed(2), "总入金收益率:", +(((asset.现金 - 总入金) / 总入金) * 100).toFixed(4) + "%", "总buyCash收益率:", +(((asset.现金 - 总buyCash) / 总buyCash) * 100).toFixed(4) + "%");
@@ -2484,7 +2489,7 @@ async function 模拟交易(期权买卖List) {
     console.log("总buyCash", +test总buyCash.toFixed(2), "总sellCash", +test总sellCash.toFixed(2), "总sellCash-总sellCash+总入金", +(test总sellCash - test总buyCash + 总入金).toFixed(2));
 
     let need入金统计 = need入金groupByYear(need入金)
-    if (need入金统计[currentDayYMD.substring(0, 4)]?.sum > 31000) pageSendMail(currentDayYMD.substring(0, 4) + "年入金已超30000")
+    if (need入金统计[currentDayYMD.substring(0, 4)]?.sum > 31000) todayNearMailMsg = todayNearMailMsg + `。${currentDayYMD.substring(0, 4)}年入金已超30000 `//pageSendMail(currentDayYMD.substring(0, 4) + "年入金已超30000")
     console.log("总费用", 总费用, "need入金统计", need入金统计);
 
     let 持仓buyYear = groupListByYear(asset.期权)
@@ -2498,11 +2503,15 @@ async function 模拟交易(期权买卖List) {
     window.asset = asset
 
     //, asset现金:${+asset.现金.toFixed(2)} 
+    // ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
     pageSendMail(`
-            最新策略运行日期(pmi股债): ${window?.pmi股债策略runLastTime}
-            ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
-            ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
-            当日${currentDayYMD}期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒, asset现金:${+asset.现金.toFixed(2)} 
+最新策略运行日期(pmi股债): ${window?.pmi股债策略runLastTime}
+${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}全部策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()}
+
+当日${currentDayYMD}期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒,  
+当日及五天内收盘通知：${todayNearMailMsg}
+asset期权持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).join('\r\n              ')} , 
+asset现金:${+asset.现金.toFixed(2)} 
             `
         , () => { window.optionRunEnd = true });
 
