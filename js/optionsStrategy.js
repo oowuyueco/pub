@@ -2509,11 +2509,11 @@ async function 模拟交易(期权买卖List) {
 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}全部策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()}
 
 当日${currentDayYMD}期权交易：
-代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒,  
-当日及五天内收盘通知：${todayNearMailMsg}
-asset期权持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).map(ele=>getKeyId(ele))} , 
-asset现金:${+asset.现金.toFixed(2)} 
-            `
+代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 。 
+当日及五天内收盘通知：${todayNearMailMsg} 。
+asset持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).map(ele => `[${getKeyId(ele)}]`).join(`\r\n${"&nbsp;".repeat(16)}`)} 。
+asset现金:${+asset.现金.toFixed(2)} 。
+`
         , () => { window.optionRunEnd = true });
 
 
