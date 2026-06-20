@@ -2508,9 +2508,10 @@ async function 模拟交易(期权买卖List) {
 最新策略运行日期(pmi股债): ${window?.pmi股债策略runLastTime}
 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}全部策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()}
 
-当日${currentDayYMD}期权交易：代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒,  
+当日${currentDayYMD}期权交易：
+代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒,  
 当日及五天内收盘通知：${todayNearMailMsg}
-asset期权持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).join('\r\n              ')} , 
+asset期权持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).map(ele=>getKeyId(ele))} , 
 asset现金:${+asset.现金.toFixed(2)} 
             `
         , () => { window.optionRunEnd = true });
