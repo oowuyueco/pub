@@ -8032,7 +8032,7 @@ var 中银中债_中债综全_上证50_上证_创业 = [
         "创业": 416.67620000000005
     }
 ];
-var runDate = "2026-06-19";
+var runDate = "2026-06-20";
         if (typeof module !== "undefined" && module.exports) {
             exports.中银中债_中债综全_上证50_上证_创业 = 中银中债_中债综全_上证50_上证_创业
         }
