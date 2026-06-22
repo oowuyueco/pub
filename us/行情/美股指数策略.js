@@ -4622,12 +4622,16 @@ var triggerLogObj美股指数 = {
       "日周月高位九转",
       {
         "after": {
-          "close": "6->2026-06-18,233.59,3.21",
+          "close": "7->2026-06-22,210.59,2.9",
           "high": "3->2026-06-15,287.3,3.95",
           "low": ",0,0",
-          "nextFirstDelivery周五": "2026-06-19",
           "nextSecondDelivery周五": "2026-07-17",
           "nextThirdDelivery周五": "2026-08-21"
+        },
+        "nextFirstDelivery周五": {
+          "close": "7->2026-06-22,210.59,2.9",
+          "high": "3->2026-06-15,287.3,3.95",
+          "low": ",0,0"
         }
       }
     ]
@@ -6137,4 +6141,4 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-06-18"
+var runLastKlineDate = "2026-06-22"
