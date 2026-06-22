@@ -336,6 +336,46 @@ function 绿空绿红(periodList, N = 1) {
 
     return false
 }
+function 绿空绿绿(periodList, N = 1) {
+    for (let index = 1; index <= N; index++) {
+        let pre3Period = periodList[periodList.length - (index + 3)]
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        if (
+            true
+            && curtPercent(pre2Period) <= 0
+            && (pre2Period.close > pre1Period.open)
+            && curtPercent(pre1Period) <= 0
+            && curtPercent(currentPeriod) <= 0
+            //&& curtPercent(currentPeriod) >= 0
+        ) {
+            return true
+        }
+    }
+
+    return false
+}
+function 绿空绿绿红(periodList, N = 1) {
+    for (let index = 1; index <= N; index++) {
+        let pre3Period = periodList[periodList.length - (index + 3)]
+        let pre2Period = periodList[periodList.length - (index + 2)]
+        let pre1Period = periodList[periodList.length - (index + 1)]
+        let currentPeriod = periodList[periodList.length - index]
+        if (
+            true
+            && curtPercent(pre3Period) <= 0
+            && (pre3Period.close > pre2Period.open)
+            && curtPercent(pre2Period) <= 0
+            && curtPercent(pre1Period) <= 0
+            && curtPercent(currentPeriod) >= 0
+        ) {
+            return true
+        }
+    }
+
+    return false
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1902,8 +1942,22 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             (curDay.bias.bias3 < -8 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 > 4)
         )
-    ) res += 'P1.'   //` ${curDay.date}绿绿` //2022-03-15 极低
+    ) res += 'P1.'   //2022-03-15 2022-04-26 极低
 
+
+    if (
+        绿空绿绿(沪深300技术.currentDayList) &&
+        curDay.close < curDay.lows &&
+        curDay.cci.cci < -230 &&
+        pre2Day.cci.cci - pre1Day.cci.cci > pre1Day.cci.cci - curDay.cci.cci &&
+        curDay.J < -3 && curDay.bar < -20 &&
+        (
+            (curDay.bias.bias3 < -7 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
+            (pre1Day.bias.bias3 - curDay.bias.bias3 > 3)
+        )
+    ) {
+        res += 'P2.'   //2021-07-28 极低  
+    }
 
     if (
         curtPercent(pre2Day) < 0 && curtPercent(pre1Day) < 0 && curtPercent(curDay) < 0 &&
@@ -1915,18 +1969,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             (pre1Day.bias.bias3 - curDay.bias.bias3 > 3) ||
             curDay.cci.cci < -230
         )
-    ) res += 'P2.'   //2026-03-23 极低  //反向 prelow > curhight &&  pre绿  && cur绿 && curLows > curophighest && curD<50
-
-
-    if (
-        asset期权[buyPriceIndex] / extractFirstNumber(asset期权[3]) > 0.05 &&
-        curtPercent(curDay) < 0 &&
-        (curDay.J < 0 || 绿空绿(沪深300技术.currentDayList)) &&
-        (curDay.bias.bias1 < 0 || curDay.bias.bias2 < 0) &&
-        pre1Day.mas < curDay.mas &&
-        沪深300技术.currentWeekList.at(-2).D < 沪深300技术.currentWeekList.at(-1).D &&
-        沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
-    ) res += 'P3.'   //` ${curDay.date}波动率太贵绿` //2024-11-15 低位太贵
+    ) res += 'P3.'   //2026-03-23 极低  
 
 
     if (
@@ -1935,6 +1978,19 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         curDay.bias.bias3 < -3 &&
         curDay.J < 10 && pre1Day.J < curDay.J
     ) res += 'P4.'   //` ${curDay.date}绿空绿红` //2021-08-20  低位可能转向
+
+
+    if (
+        绿空绿绿红(沪深300技术.currentDayList) &&
+        pre1Day.close < pre1Day.lows && curDay.open < curDay.lows &&
+        (pre2Day.cci.cci < -230 || pre1Day.cci.cci < -230 || curDay.cci.cci < -200) && pre1Day.cci.cci <= curDay.cci.cci &&
+        curDay.J < -3 && curDay.bar < -20 &&
+        (curDay.bias.bias3 < -3 || curWeek.bias.bias3 < -3 || curWeek.cci.cci < -100)
+    ) {
+
+        res += 'P5.'   //2021-06-18  2023-04-26 低位可能转向  
+    }
+
 
     if (
         绿空绿(沪深300技术.currentDayList) &&
@@ -1951,7 +2007,18 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         ) &&
         1 < countWeekdays(curDay.date, asset期权[1]) &&
         countWeekdays(curDay.date, asset期权[1]) < 7
-    ) res += 'P5.'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
+    ) res += 'P6.'   //` ${curDay.date}绿空绿7` //2022-01-21  2022-02-18  低位快到期
+
+
+    if (
+        asset期权[buyPriceIndex] / extractFirstNumber(asset期权[3]) > 0.05 &&
+        curtPercent(curDay) < 0 &&
+        (curDay.J < 0 || 绿空绿(沪深300技术.currentDayList)) &&
+        (curDay.bias.bias1 < 0 || curDay.bias.bias2 < 0) &&
+        pre1Day.mas < curDay.mas &&
+        沪深300技术.currentWeekList.at(-2).D < 沪深300技术.currentWeekList.at(-1).D &&
+        沪深300技术.currentMonthList.at(-2).D < 沪深300技术.currentMonthList.at(-1).D
+    ) res += 'P7.'   //` ${curDay.date}波动率太贵绿` //2024-11-15 低位太贵
 
 
     return res;
@@ -2288,8 +2355,7 @@ async function 模拟交易(期权买卖List) {
                 asset期权[sellDateIndex] = null;
                 continue;
             }
-
-            //最后三天  如果开盘价 < ocHighest(上一天) 或 ocHighest(买入日) 继续拖
+            //最后三天  如果期权 开盘价 < ocHighest(上一天) 或 ocHighest(买入日) 继续拖
             let excelBuyDateIndex = excelFileData.findIndex((e) => e.交易时间 == extractDate(asset期权[buyDateIndex]));
             if (
                 !asset期权[sellDateIndex].includes("提前") &&
@@ -2438,10 +2504,13 @@ async function 模拟交易(期权买卖List) {
             let curNextOne交易日 = preNext交易日(cur沪深300Date, 1)
             let sellDateStr
             let need提前卖出 = check提前卖出(cur沪深300Date, asset期权);
-            if (need提前卖出)
+            if (need提前卖出 && curNextOne交易日 !== asset期权[1])
                 sellDateStr = `${curNextOne交易日}(${need提前卖出}>提前)`;
             else {
                 for (let preDay = 默认卖出到期类型; preDay <= 0; preDay++) {
+                    if ((asset期权.tAr === "月KM死叉副高位右侧" || asset期权.tAr === "高位Pmi股债") && preDay != 0) {
+                        continue  //单独的月KM死叉副高位右侧 高位Pmi股债 到最后一天
+                    }
                     if (curNextOne交易日 == preNext交易日(asset期权[1], preDay)) {
                         sellDateStr = `${curNextOne交易日}`;
                         break
@@ -2543,3 +2612,14 @@ asset现金:${+asset.现金.toFixed(2)} 。
 
 
 })();
+
+
+/*
+
+信号 && 无反向亏损持仓  =》买入
+
+提前信号 && 盈利                        =》卖出 
+倒数三天信号 && 盈利 && 期权开盘价上跳空  =》卖出 
+最后一天                                =》卖出 
+
+*/
