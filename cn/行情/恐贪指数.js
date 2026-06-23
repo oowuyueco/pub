@@ -31255,14 +31255,26 @@ var 恐贪指数 =  [
     },
     {
         "date": "2026-06-18",
+        "jiucaishuo": 73.79,
+        "baifenwei": 64.82,
+        "miumiu": 78.53
+    },
+    {
+        "date": "2026-06-22",
+        "jiucaishuo": 79.94,
+        "baifenwei": 74.44,
+        "miumiu": 88.5
+    },
+    {
+        "date": "2026-06-23",
         "jiucaishuo": "",
-        "baifenwei": 65.73,
+        "baifenwei": 59.75,
         "miumiu": ""
     }
 ]
 
      if (typeof module !== "undefined" && module.exports) {
           exports.恐贪指数 = 恐贪指数
-          exports.writeDateTime = "2026-06-18 12:50:45"
+          exports.writeDateTime = "2026-06-23 12:59:49"
       };
      
