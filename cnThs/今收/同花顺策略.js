@@ -317,40 +317,10 @@ var triggerLogObj同花顺 = {
                 "nextThirdDelivery周五": "2026-08-21"
             }
         }
-    ],
-    "2026-06-15": [
-        "组1统计ths低位收盘触发买入:1:1",
-        {
-            "nextFirstDelivery周五": {
-                "close": "4->2026-06-22,167.95,3.43",
-                "high": "4->2026-06-22,167.95,3.43",
-                "low": "1->2026-06-16,-7.48,-0.15"
-            },
-            "after": {
-                "close": "4->2026-06-22,167.95,3.43",
-                "high": "4->2026-06-22,167.95,3.43",
-                "low": "1->2026-06-16,-7.48,-0.15",
-                "nextSecondDelivery周五": "2026-07-17",
-                "nextThirdDelivery周五": "2026-08-21"
-            }
-        }
-    ],
-    "2026-06-22": [
-        "月周日ths低位收盘通知已止损卖出",
-        {
-            "after": {
-                "close": ",0,0",
-                "high": ",0,0",
-                "low": ",0,0",
-                "nextFirstDelivery周五": "2026-07-17",
-                "nextSecondDelivery周五": "2026-08-21",
-                "nextThirdDelivery周五": "2026-09-18"
-            }
-        }
     ]
 }  
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-06-23 08:12:59"
+        exports.同花顺策略runLastTime = "2026-06-23 10:55:12"
     }
