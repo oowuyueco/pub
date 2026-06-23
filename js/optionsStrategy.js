@@ -1064,7 +1064,7 @@ let 手动买卖 = [
     // ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-07-17沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
 ]
 let 模拟买卖 = [
-    ['2026-06-08', '2026-07-17', '低位', '4713.64 购沪深300模拟 4855.049', "IO2607-C-4800.xlsx"],
+    ['2026-06-08', '2026-07-17', ' ↑ ', '4713.64 购沪深300模拟 4855.049', "IO2607-C-4800.xlsx"],
     ['2026-06-04', '2026-07-17', '高位', '4904.75 沽沪深300模拟 4757.608', "IO2607-P-4800.xlsx"],//fuck 了
 
     ['2026-04-03', '2026-05-15', ' ↑ ', '4440.79 购沪深300模拟 4574.014', "IO2605-C-4550.xlsx"],
@@ -2255,6 +2255,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         && curWeek.cci.cci > 120
 
         && (
+            //沪深300行业方差
             (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
             (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
             (lastN九转(沪深300技术.currentDayList, "is9转up") && (curDay.ups < curDay.close || 红空红绿(沪深300技术.currentDayList))) ||
@@ -2273,6 +2274,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         深度恐惧count >= 2 &&
         ocLowest(curDay) < curDay.lows && curDay.bias.bias3 < -3 && curDay.cci.cci < -120 &&
         (
+            //沪深300行业方差
             (curDay.bias.bias3 <= -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 >= 3) ||
             curDay.cci.cci <= -210
