@@ -1060,10 +1060,12 @@ String.prototype.unif高低位 = function () {
 
 let 手动买卖 = [
     // ['2026-05-18', '2026-07-17', '高位', '4833.52 沽沪深300 4688.514', tAr: '沪深300高位VKM多叉', yes1: 1] start
-    // ['2026-06-08', '2026-07-17', '高位', '4.852 购沪深300ETF手动 4.876', '2026-07-17沽4776:6张', null, '2026-06-09', 0.0795, 3078.350],
-    ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-07-17沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
+    // ['2026-06-08', '2026-07-17', '低位', '4.852 购沪深300ETF手动 4.876', '2026-07-17沽4776:6张', null, '2026-06-09', 0.0795, 3078.350],
+    // ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-07-17沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
 ]
 let 模拟买卖 = [
+    ['2026-06-08', '2026-07-17', '低位', '4713.64 购沪深300模拟 4855.049', "IO2607-C-4800.xlsx"],
+    ['2026-06-04', '2026-07-17', '高位', '4904.75 沽沪深300模拟 4757.608', "IO2607-P-4800.xlsx"],//fuck 了
 
     ['2026-04-03', '2026-05-15', ' ↑ ', '4440.79 购沪深300模拟 4574.014', "IO2605-C-4550.xlsx"],
 
@@ -2229,6 +2231,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     let 沪深300技术 = {};
     沪深300技术.dayDatas = 沪深300;
     沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+    let pre2Week = 沪深300技术.currentWeekList.at(-3);
     let pre1Week = 沪深300技术.currentWeekList.at(-2);
     let curWeek = 沪深300技术.currentWeekList.at(-1);
     let pre2Day = 沪深300技术.currentDayList.at(-3);
@@ -2237,23 +2240,28 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
 
     let curDate恐贪指数 = 恐贪指数.find(ele => ele.date == curDate)
     let 深度贪婪count = 0
-    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo > 91) 深度贪婪count++
-    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei > 76) 深度贪婪count++
-    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu > 86) 深度贪婪count++
+    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo > 79) 深度贪婪count++
+    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei > 74) 深度贪婪count++
+    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu > 84) 深度贪婪count++
     if (
         asset期权[2].unif高低位() == "低位" &&
-        深度贪婪count == 3 &&
-        (pre1Day.J > 100 || curDay.J > 100) && curDay.bar > 0 &&
-        curDay.bias.bias3 > curDay.bias.bias2 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias1 > 0 &&
-        curDay.cci.cci > 200 &&
-        curWeek.close > curWeek.ups && curWeek.J > 100 && curWeek.bar > 0 &&
-        curWeek.bias.bias3 > curWeek.bias.bias2 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0 &&
-        curWeek.cci.cci > 120 &&
-        (
-            (lastN九转(沪深300技术.currentDayList, "is9转up") && curDay.ups < curDay.close) ||
+        深度贪婪count == 3
+        && (pre1Day.J > 100 || curDay.J > 100) && curDay.bar > 0
+        && curDay.bias.bias3 > curDay.bias.bias1 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias1 > 0
+        && curDay.cci.cci > 120
+
+        && (pre1Week.D > 70 || curWeek.D > 70) && curWeek.bar > 0
+        && curWeek.bias.bias3 > curWeek.bias.bias1 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0
+        && curWeek.cci.cci > 120
+
+        && (
+            (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
+            (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
+            (lastN九转(沪深300技术.currentDayList, "is9转up") && (curDay.ups < curDay.close || 红空红绿(沪深300技术.currentDayList))) ||
             红空红绿(沪深300技术.currentWeekList) || lastN九转(沪深300技术.currentWeekList, "is9转up") ||
             volMa死叉(沪深300技术.currentWeekList) || KDJ死叉(沪深300技术.currentWeekList, 2, 3)
         )
+        //026-06-22 触发收盘通知下个交易日2026-06-23(深贪>提前)卖出[2026-06-08,2026-07-17,低位]
     ) res += "深贪."
 
     let 深度恐惧count = 0
@@ -2267,7 +2275,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         (
             (curDay.bias.bias3 <= -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 >= 3) ||
-            curDay.cci.cci <= -220
+            curDay.cci.cci <= -210
         ) &&
         curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0
     ) res += "深恐."
