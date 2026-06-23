@@ -2427,7 +2427,7 @@ async function 模拟交易(期权买卖List) {
                 let msg = `${cur沪深300Date} 触发收盘通知下个交易日${preNext交易日(cur沪深300Date, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
                 console.log(msg);
                 curDateHasConsole = true;
-                if (isSendMail(cur沪深300Date, "五天之内")) todayNearMailMsg += msg//pageSendMail(msg)
+                if (isSendMail(cur沪深300Date, "五天之内")) todayNearMailMsg += (msg + "\r\n" + "&nbsp;".repeat(35))//pageSendMail(msg)
             }
             if (curTrigBuy[3].includes("手动")) { };
             if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(cur沪深300Date, 1);
@@ -2574,12 +2574,12 @@ async function 模拟交易(期权买卖List) {
     //, asset现金:${+asset.现金.toFixed(2)} 
     // ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
     pageSendMail(`
-最新策略运行日期(pmi股债): ${window?.pmi股债策略runLastTime}
+最新策略运行日期(pmi股债):${window?.pmi股债策略runLastTime}
 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}全部策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()}
 
 当日${currentDayYMD}期权交易：
 代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 。 
-当日及五天内收盘通知：${todayNearMailMsg} 。
+当日及五天内收盘通知:${todayNearMailMsg.trim()} 。
 asset持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).map(ele => `[${getKeyId(ele)}]`).join(`\r\n${"&nbsp;".repeat(16)}`)} 。
 asset现金:${+asset.现金.toFixed(2)} 。
 `
