@@ -1234,6 +1234,35 @@ function calMedianProf(filterArr, calIndex = 4) {
     }
 }
 
+
+/**
+ * 计算数字数组的方差,标准差
+ * @param {number[]} arr - 数字数组
+ * @param {boolean} [isSample=false] - 是否计算样本方差（默认 false，即总体方差）
+ * @returns {number} 方差值，如果数组为空或样本量不足则返回 NaN
+ */
+function variance(arr, isSample = false) {
+    // 检查输入是否为非空数组
+    if (!Array.isArray(arr) || arr.length === 0) return NaN;
+
+    // 1. 计算平均值
+    const mean = arr.reduce((sum, val) => sum + val, 0) / arr.length;
+
+    // 2. 计算每个值与平均值差的平方和
+    const sumSquaredDiffs = arr.reduce((sum, val) => {
+        const diff = val - mean;
+        return sum + diff * diff;
+    }, 0);
+
+    // 3. 确定除数（总体方差除以 n，样本方差除以 n-1）
+    const divisor = isSample ? arr.length - 1 : arr.length;
+    if (divisor <= 0) return NaN; // 样本方差至少需要两个数
+
+
+    return +(Math.sqrt(sumSquaredDiffs / divisor)).toFixed(2) //标准差
+    //return +(sumSquaredDiffs / divisor).toFixed(2); //方差
+}
+
 //股指到期日
 function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
 

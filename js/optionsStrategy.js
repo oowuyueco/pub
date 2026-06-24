@@ -1889,6 +1889,56 @@ function extractFirstNumber(str) {
     return match ? parseFloat(match[0]) : null;
 }
 
+function 沪深300行业割裂大标准差(trigDate) {
+
+    let preday = 60 //最近60日同比
+
+    let trigDate沪深300index = 沪深300.findIndex((item) => item.date == trigDate);
+    let 沪深300最近60日同比 = ((沪深300[trigDate沪深300index].close - 沪深300[trigDate沪深300index - preday].close) / 沪深300[trigDate沪深300index - preday].close) * 100;
+    沪深300最近60日同比 = +沪深300最近60日同比.toFixed(2);
+
+    let trigDate工业40LOFindex = 工业40LOF.findIndex((item) => item.date == trigDate);
+    let 工业40LOF最近60日同比;
+    if (trigDate工业40LOFindex >= 0) {
+        工业40LOF最近60日同比 = ((工业40LOF[trigDate工业40LOFindex].close - 工业40LOF[trigDate工业40LOFindex - preday].close) / 工业40LOF[trigDate工业40LOFindex - preday].close) * 100;
+        工业40LOF最近60日同比 = +工业40LOF最近60日同比.toFixed(2);
+    }
+
+    let trigDateTMTETF景顺index = TMTETF景顺.findIndex((item) => item.date == trigDate);
+    let TMTETF景顺最近60日同比;
+    if (trigDateTMTETF景顺index >= 0) {
+        TMTETF景顺最近60日同比 = ((TMTETF景顺[trigDateTMTETF景顺index].close - TMTETF景顺[trigDateTMTETF景顺index - preday].close) / TMTETF景顺[trigDateTMTETF景顺index - preday].close) * 100;
+        TMTETF景顺最近60日同比 = +TMTETF景顺最近60日同比.toFixed(2);
+    }
+
+    let trigDate消费ETF华夏index = 消费ETF华夏.findIndex((item) => item.date == trigDate);
+    let 消费ETF华夏最近60日同比;
+    if (trigDate消费ETF华夏index >= 0) {
+        消费ETF华夏最近60日同比 = ((消费ETF华夏[trigDate消费ETF华夏index].close - 消费ETF华夏[trigDate消费ETF华夏index - preday]?.close) / 消费ETF华夏[trigDate消费ETF华夏index - preday]?.close) * 100;
+        消费ETF华夏最近60日同比 = +消费ETF华夏最近60日同比.toFixed(2);
+    }
+
+    let trigDate金融地产ETF广发index = 金融地产ETF广发.findIndex((item) => item.date == trigDate);
+    let 金融地产ETF广发最近60日同比;
+    if (trigDate金融地产ETF广发index >= 0) {
+        金融地产ETF广发最近60日同比 = ((金融地产ETF广发[trigDate金融地产ETF广发index].close - 金融地产ETF广发[trigDate金融地产ETF广发index - preday]?.close) / 金融地产ETF广发[trigDate金融地产ETF广发index - preday]?.close) * 100;
+        金融地产ETF广发最近60日同比 = +金融地产ETF广发最近60日同比.toFixed(2);
+    }
+
+    let 同比涨跌幅Arr = [TMTETF景顺最近60日同比, 工业40LOF最近60日同比, 消费ETF华夏最近60日同比, 金融地产ETF广发最近60日同比].filter((ele, index) => isNumber(ele)).sort()
+    let sqrvariance = variance(同比涨跌幅Arr);
+
+    if (
+        sqrvariance > 15 &&
+        同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1) < 0
+    ) {
+        console.log("fuck", sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
+        return true
+    }
+
+    return false
+}
+
 function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = null) {
 
     let pre1Month = 沪深300技术.currentMonthList.at(-2);
@@ -2085,14 +2135,14 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             MACD死叉attr(沪深300技术.currentWeekList)
         )
     ) {
-        res = "C0."
+        res += "C0."
     }
 
     if (
         curDay.J > 100 && pre1Day.J > curDay.J &&
         红空红绿(沪深300技术.currentDayList) && curDay.ups < curDay.low &&
         红空红绿(沪深300技术.currentWeekList) && curWeek.ups < curWeek.low
-    ) res = "C1."
+    ) res += "C1."
 
 
     if (
@@ -2138,7 +2188,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         ) &&
         (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume)
 
-    ) res = "C2."
+    ) res += "C2."
 
 
 
@@ -2170,6 +2220,24 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
         countWeekdays(curDay.date, asset期权[1]) < 11
 
     ) res += 'C3.'   //'2020-10-09', '2020-11-20', ' ↑ ' 快到期
+
+
+
+    if (
+        curtPercent(pre1Day) > 0 && PtPPercent(pre2Day, pre1Day) > 0 &&
+        pre1Day.close < curDay.open &&
+        curtPercent(curDay) > 0 && PtPPercent(pre1Day, curDay) > 0 &&
+        curDay.close > curDay.ups &&
+        curDay.cci.cci > 120 &&
+
+        curWeek.close > curWeek.ups &&
+        curWeek.cci.cci > 120
+        && (
+            (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
+            (pre3Week.volume > pre2Week.volume && pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
+            沪深300行业割裂大标准差(curDate)
+        )
+    ) res += 'C4.'
 
 
     return res;
@@ -2231,6 +2299,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     let 沪深300技术 = {};
     沪深300技术.dayDatas = 沪深300;
     沪深300技术 = calDayWeekMonthKline(沪深300技术, curDate);
+    let pre3Week = 沪深300技术.currentWeekList.at(-4);
     let pre2Week = 沪深300技术.currentWeekList.at(-3);
     let pre1Week = 沪深300技术.currentWeekList.at(-2);
     let curWeek = 沪深300技术.currentWeekList.at(-1);
@@ -2249,21 +2318,17 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         && (pre1Day.J > 100 || curDay.J > 100) && curDay.bar > 0
         && curDay.bias.bias3 > curDay.bias.bias1 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias1 > 0
         && curDay.cci.cci > 120
-
         && (pre1Week.D > 70 || curWeek.D > 70) && curWeek.bar > 0
         && curWeek.bias.bias3 > curWeek.bias.bias1 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0
         && curWeek.cci.cci > 120
-
-        && (
-            //沪深300行业方差
-            (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
-            (pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
-            (lastN九转(沪深300技术.currentDayList, "is9转up") && (curDay.ups < curDay.close || 红空红绿(沪深300技术.currentDayList))) ||
-            红空红绿(沪深300技术.currentWeekList) || lastN九转(沪深300技术.currentWeekList, "is9转up") ||
-            volMa死叉(沪深300技术.currentWeekList) || KDJ死叉(沪深300技术.currentWeekList, 2, 3)
-        )
         //026-06-22 触发收盘通知下个交易日2026-06-23(深贪>提前)卖出[2026-06-08,2026-07-17,低位]
+        && (
+            (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
+            (pre3Week.volume > pre2Week.volume && pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
+            沪深300行业割裂大标准差(curDate)
+        )
     ) res += "深贪."
+
 
     let 深度恐惧count = 0
     if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
@@ -2274,10 +2339,10 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         深度恐惧count >= 2 &&
         ocLowest(curDay) < curDay.lows && curDay.bias.bias3 < -3 && curDay.cci.cci < -120 &&
         (
-            //沪深300行业方差
             (curDay.bias.bias3 <= -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
             (pre1Day.bias.bias3 - curDay.bias.bias3 >= 3) ||
-            curDay.cci.cci <= -210
+            curDay.cci.cci <= -210 ||
+            沪深300行业割裂大标准差(curDate)
         ) &&
         curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0
     ) res += "深恐."
