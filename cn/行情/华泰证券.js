@@ -47422,11 +47422,23 @@ var 华泰证券 = [
     "volume": 242678516,
     "hsl": 3.32,
     "zgs": 73095938.55421688
+  },
+  {
+    "date": "2026-06-24",
+    "timestamp": 1782230400000,
+    "open": 21.1,
+    "high": 21.54,
+    "low": 20.72,
+    "close": 20.86,
+    "percent": -1.79,
+    "volume": 141428670,
+    "hsl": 1.94,
+    "zgs": 72901376.2886598
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.华泰证券 = 华泰证券
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-23 20:18:44"
+    exports.writeDateTime = "2026-06-24 20:04:34"
 };
