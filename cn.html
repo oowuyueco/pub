@@ -73,7 +73,7 @@
                 message: msg,
             };
             emailjs.send("service_76sgm8l", "template_e6c63fe", templateParams).then(
-                (response) => { console.log('emailjs SUCCESS!', response.status, response.text) },
+                (response) => { console.log('emailjs response!', response.status, response.text); if (response.status != 200) pageSendMailBack(msg); },
                 (error) => { console.log("emailjs send error"); pageSendMailBack(msg); },
             ).finally(onfinal);
         }
