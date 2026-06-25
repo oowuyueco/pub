@@ -1055,14 +1055,14 @@ var triggerLogObj大宗={
                     7.15,
                     0.79
                 ],
-                "day77LowUp": [
+                "day78LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    1.69
+                    2.52
                 ],
-                "lastDay": 77
+                "lastDay": 78
             }
         },
         {
@@ -2064,14 +2064,14 @@ var triggerLogObj大宗={
                     0,
                     -36.9
                 ],
-                "day93LowUp": [
-                    "93,2026-06-24",
-                    -51.6,
+                "day94LowUp": [
+                    "94,2026-06-25",
+                    -55.29,
                     "",
                     0,
-                    -51.6
+                    -55.29
                 ],
-                "lastDay": 93
+                "lastDay": 94
             }
         },
         {
@@ -14775,5 +14775,5 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-06-24"
-var cnFutures策略runLastTime = "2026-06-25 09:51:40"
+var runLastKlineDate = "2026-06-25"
+var cnFutures策略runLastTime = "2026-06-25 20:01:30"
