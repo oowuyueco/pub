@@ -1189,6 +1189,11 @@ function isNumber(value) {
     return typeof value === 'number' && !isNaN(value);
 }
 
+function getRandomNum(min, max) {
+    const value = Math.random() * (max - min) + min;
+    return Math.floor(value * 100) / 100; // 保留两位小数（直接截断）
+}
+
 //平均
 function calAvgProf(filterArr, calIndex = 4) {
     let sum = 0
@@ -2041,8 +2046,9 @@ if (typeof module !== "undefined" && module.exports) {
     exports.globalConfigOnlySendOnTrigBuySell = globalConfigOnlySendOnTrigBuySell
     exports.devTestEnv = devTestEnv
     exports.期权到期日类型 = 期权到期日类型
-
     exports.currentDayYMD = currentDayYMD
+
+    exports.getRandomNum = getRandomNum
 
     exports.getPreNexDate = getPreNexDate
     exports.stampToDate = stampToDate
