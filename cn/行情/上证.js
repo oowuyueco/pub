@@ -104007,18 +104007,18 @@ var 上证 = [
     "date": "2026-06-25",
     "timestamp": 1782316800000,
     "open": 4103.48,
-    "high": 4117.91,
+    "high": 4133.1,
     "low": 4093.01,
-    "close": 4111.31,
-    "percent": 0.01,
-    "volume": 17015978700,
-    "hsl": 0.37,
-    "zgs": 45989131621.62162
+    "close": 4120.28,
+    "percent": 0.23,
+    "volume": 67045991700,
+    "hsl": 1.45,
+    "zgs": 46238614965.51724
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.上证 = 上证
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-25 09:49:54"
+    exports.writeDateTime = "2026-06-25 19:59:58"
 };
