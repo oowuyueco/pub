@@ -1891,52 +1891,71 @@ function extractFirstNumber(str) {
 
 function 沪深300行业割裂大标准差(trigDate) {
 
-    let preday = 60 //最近60日同比
-
-    let trigDate沪深300index = 沪深300.findIndex((item) => item.date == trigDate);
-    let 沪深300最近60日同比 = ((沪深300[trigDate沪深300index].close - 沪深300[trigDate沪深300index - preday].close) / 沪深300[trigDate沪深300index - preday].close) * 100;
-    沪深300最近60日同比 = +沪深300最近60日同比.toFixed(2);
-
-    let trigDate工业40LOFindex = 工业40LOF.findIndex((item) => item.date == trigDate);
-    let 工业40LOF最近60日同比;
-    if (trigDate工业40LOFindex >= 0) {
-        工业40LOF最近60日同比 = ((工业40LOF[trigDate工业40LOFindex].close - 工业40LOF[trigDate工业40LOFindex - preday].close) / 工业40LOF[trigDate工业40LOFindex - preday].close) * 100;
-        工业40LOF最近60日同比 = +工业40LOF最近60日同比.toFixed(2);
+    function getN同比(指数list, trigDate, preNday = 60) {
+        let trigDateIndex = 指数list.findIndex((item) => item.date == trigDate);
+        if (trigDateIndex < 0) trigDateIndex = 指数list.findIndex((item) => item.date.substring(0, 7) == trigDate.substring(0, 7));
+        let 最近60日同比;
+        if (trigDateIndex > preNday) {
+            最近60日同比 = ((指数list[trigDateIndex].close - 指数list[trigDateIndex - preNday].close) / 指数list[trigDateIndex - preNday].close) * 100;
+            最近60日同比 = +最近60日同比.toFixed(2);
+        }
+        return 最近60日同比
     }
 
-    let trigDateTMTETF景顺index = TMTETF景顺.findIndex((item) => item.date == trigDate);
-    let TMTETF景顺最近60日同比;
-    if (trigDateTMTETF景顺index >= 0) {
-        TMTETF景顺最近60日同比 = ((TMTETF景顺[trigDateTMTETF景顺index].close - TMTETF景顺[trigDateTMTETF景顺index - preday].close) / TMTETF景顺[trigDateTMTETF景顺index - preday].close) * 100;
-        TMTETF景顺最近60日同比 = +TMTETF景顺最近60日同比.toFixed(2);
-    }
+    let 沪深300最近60日同比 = getN同比(沪深300, trigDate)
 
-    let trigDate消费ETF华夏index = 消费ETF华夏.findIndex((item) => item.date == trigDate);
-    let 消费ETF华夏最近60日同比;
-    if (trigDate消费ETF华夏index >= 0) {
-        消费ETF华夏最近60日同比 = ((消费ETF华夏[trigDate消费ETF华夏index].close - 消费ETF华夏[trigDate消费ETF华夏index - preday]?.close) / 消费ETF华夏[trigDate消费ETF华夏index - preday]?.close) * 100;
-        消费ETF华夏最近60日同比 = +消费ETF华夏最近60日同比.toFixed(2);
-    }
+    let TMTETF景顺最近60日同比 = getN同比(工业40LOF, trigDate)
 
-    let trigDate金融地产ETF广发index = 金融地产ETF广发.findIndex((item) => item.date == trigDate);
-    let 金融地产ETF广发最近60日同比;
-    if (trigDate金融地产ETF广发index >= 0) {
-        金融地产ETF广发最近60日同比 = ((金融地产ETF广发[trigDate金融地产ETF广发index].close - 金融地产ETF广发[trigDate金融地产ETF广发index - preday]?.close) / 金融地产ETF广发[trigDate金融地产ETF广发index - preday]?.close) * 100;
-        金融地产ETF广发最近60日同比 = +金融地产ETF广发最近60日同比.toFixed(2);
-    }
+    let 工业40LOF最近60日同比 = getN同比(TMTETF景顺, trigDate)
+
+    let 消费ETF华夏最近60日同比 = getN同比(消费ETF华夏, trigDate)
+
+    let 金融地产ETF广发最近60日同比 = getN同比(金融地产ETF广发, trigDate)
 
     let 同比涨跌幅Arr = [TMTETF景顺最近60日同比, 工业40LOF最近60日同比, 消费ETF华夏最近60日同比, 金融地产ETF广发最近60日同比].filter((ele, index) => isNumber(ele)).sort()
     let sqrvariance = variance(同比涨跌幅Arr);
 
     if (
         sqrvariance > 15 &&
-        同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1) < 0
+        同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1) < -15
     ) {
-        console.log("fuck", sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
+        console.log("沪深300行业割裂大标准差", sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
         return true
     }
 
     return false
+}
+
+function get深度恐贪(curDate) {
+    let curDate恐贪指数Index = 恐贪指数.findIndex(ele => ele.date == curDate)
+    if (curDate恐贪指数Index < 0) curDate恐贪指数 = { "jiucaishuo": "", "baifenwei": "", "miumiu": "" }
+    else curDate恐贪指数 = 恐贪指数[curDate恐贪指数Index]
+
+    let preN5HigJC = -1000
+    for (let ii = 0; ii < 6; ii++) {
+        const ele = 恐贪指数[curDate恐贪指数Index - ii];
+        if (ele?.jiucaishuo > preN5HigJC) preN5HigJC = ele?.jiucaishuo
+    }
+
+    let 深度贪婪count = 0
+    if (curDate恐贪指数?.jiucaishuo > 79 || (curDate恐贪指数?.jiucaishuo > 71 && preN5HigJC > 79)) 深度贪婪count++
+    if (curDate恐贪指数?.baifenwei > 74) 深度贪婪count++
+    if (curDate恐贪指数?.miumiu > 84) 深度贪婪count++
+
+    let 深度恐惧count = 0
+    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
+    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 25) 深度恐惧count++
+    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 15) 深度恐惧count++
+
+
+    if (深度贪婪count == 3) return "深度贪婪"
+    if (深度贪婪count >= 2 && 深度恐惧count == 0 && (curDate恐贪指数?.baifenwei > 75 || curDate恐贪指数?.miumiu > 85)) return "深度贪婪"
+
+
+    if (深度恐惧count == 3) return "深度恐惧"
+    if (深度恐惧count >= 2 && 深度贪婪count == 0) return "深度恐惧"
+
+    return ""
 }
 
 function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = null) {
@@ -2246,6 +2265,7 @@ function check购提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
 function check提前卖出(curDate, asset期权, trigBuy = null) {
     let res = ""
 
+    //#region type2高位当周2
     /////////////暂时只能买etf期权
     // let profileN3 = afterDayProfileW3(asset期权[0], [], 沪深300)
     // if (
@@ -2275,6 +2295,8 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     // ) {
     //     res += "A" //反向
     // }
+    //#endregion 
+
     if (
         asset期权[2].unif高低位() == "低位" &&
         全部策略ByDay.find(ele => ele[3].unif高低位() == "高位" && curDate == ele[0] && asset期权[0] <= ele[0] && ele[0] < asset期权[1])
@@ -2307,36 +2329,26 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
     let pre1Day = 沪深300技术.currentDayList.at(-2);
     let curDay = 沪深300技术.currentDayList.at(-1);
 
-    let curDate恐贪指数 = 恐贪指数.find(ele => ele.date == curDate)
-    let 深度贪婪count = 0
-    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo > 79) 深度贪婪count++
-    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei > 74) 深度贪婪count++
-    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu > 84) 深度贪婪count++
     if (
         asset期权[2].unif高低位() == "低位" &&
-        深度贪婪count == 3
+        get深度恐贪(curDate) == "深度贪婪"
         && (pre1Day.J > 100 || curDay.J > 100) && curDay.bar > 0
         && curDay.bias.bias3 > curDay.bias.bias1 && curDay.bias.bias2 > curDay.bias.bias1 && curDay.bias.bias1 > 0
         && curDay.cci.cci > 120
         && (pre1Week.D > 70 || curWeek.D > 70) && curWeek.bar > 0
         && curWeek.bias.bias3 > curWeek.bias.bias1 && curWeek.bias.bias2 > curWeek.bias.bias1 && curWeek.bias.bias1 > 0
         && curWeek.cci.cci > 120
-        //026-06-22 触发收盘通知下个交易日2026-06-23(深贪>提前)卖出[2026-06-08,2026-07-17,低位]
         && (
             (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
             (pre3Week.volume > pre2Week.volume && pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
             沪深300行业割裂大标准差(curDate)
+            //2026-06-22 触发收盘通知下个交易日2026-06-23(深贪>提前)卖出[2026-06-08,2026-07-17,低位]
         )
     ) res += "深贪."
 
-
-    let 深度恐惧count = 0
-    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
-    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 25) 深度恐惧count++
-    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 15) 深度恐惧count++
     if (
         asset期权[2].unif高低位() == "高位" &&
-        深度恐惧count >= 2 &&
+        get深度恐贪(curDate) == "深度恐惧" &&
         ocLowest(curDay) < curDay.lows && curDay.bias.bias3 < -3 && curDay.cci.cci < -120 &&
         (
             (curDay.bias.bias3 <= -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
