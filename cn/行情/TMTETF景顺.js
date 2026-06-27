@@ -33616,5 +33616,5 @@ var TMTETF景顺 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.TMTETF景顺 = TMTETF景顺
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-06-26 20:03:01"
+    exports.writeDateTime = "2026-06-27 19:16:34"
 };
