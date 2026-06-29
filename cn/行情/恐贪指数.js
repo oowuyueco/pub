@@ -1,4 +1,4 @@
-var 恐贪指数 = [
+var 恐贪指数 =  [
     {
         "date": "2017-01-03",
         "jiucaishuo": "",
@@ -13798,11 +13798,18 @@ var 恐贪指数 = [
         "jiucaishuo": 32.13,
         "baifenwei": 40.39,
         "miumiu": 50.9
+    },
+    {
+        "date": "2026-06-29",
+        "jiucaishuo": 36.17,
+        "baifenwei": 46.22,
+        "miumiu": 53.3
     }
 ]
-var 恐贪writeDateTime = "2026-06-29 09:39:28"
+var 恐贪writeDateTime = "2026-06-29 22:24:06"
 
-if (typeof module !== "undefined" && module.exports) {
-    exports.恐贪指数 = 恐贪指数
-    exports.恐贪writeDateTime = 恐贪writeDateTime
-};
+     if (typeof module !== "undefined" && module.exports) {
+          exports.恐贪指数 = 恐贪指数
+          exports.恐贪writeDateTime = 恐贪writeDateTime
+      };
+     
