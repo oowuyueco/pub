@@ -23,6 +23,11 @@
     <script type="text/javascript" src="./cn/行情/指数策略.js"></script>
     <script type="text/javascript" src="./us/行情/美股指数策略.js"></script>
 
+
+    <script type="text/javascript" src="./us/us电子销售额,us电子存售量比.js"></script>
+    <script type="text/javascript" src="./us/us费城扩张,us纽约扩张,us达拉斯扩张.js"></script>
+    <script type="text/javascript" src="./us/us七巨头资本支出.js"></script>
+
     <script>
         纳指 = 纳指//.data.item.xueqiuData2Obj()
         标普500 = 标普500//.data.item.xueqiuData2Obj()
@@ -37,6 +42,25 @@
             else return [stampToDate(item原油[0]), ""]
         })
         // console.log("油糖比", 油糖比)
+
+
+        let us七巨头资本支出同比 = us七巨头资本支出.chartDataYoY("day").map((item, index, datasArr) => {
+            if (item[1] !== "") item[1] = item[1] //仅仅为了展示方便
+            return item
+        })
+        console.log("us七巨头资本支出同比", us七巨头资本支出同比)
+
+
+        let us制造扩张 = us纽约扩张.map((cur纽约, index) => {
+            let cur达拉斯 = us达拉斯扩张.find(ele => ele[0] == cur纽约[0])
+            if (cur达拉斯) {
+                if (+cur纽约[1] > 0 && +cur达拉斯[1] > 0) return [cur纽约[0], (+cur纽约[1] + +cur达拉斯[1]) / 2]
+                else return [cur纽约[0], Math.min(+cur纽约[1], +cur达拉斯[1])]
+                return [cur纽约[0], (+cur纽约[1] + +cur达拉斯[1]) / 2]
+            }
+            else return [cur纽约[0], +cur纽约[1]]
+        }).chartDataMaN(2)
+        console.log("us制造扩张", us制造扩张)
 
 
         铜金比Day = 铜金比Day.map(item => {
@@ -670,6 +694,20 @@
                     data: RealGdp季.filterAndAddStartEnd()
                 },
 
+                {
+                    name: '美七巨头资本支出同比',
+                    type: 'line',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "#00a476"  //"#00a476" //green
+
+                    },
+                    data: us七巨头资本支出同比.filterAndAddStartEnd()
+                },
 
                 {
                     name: "铜金比2",
@@ -792,6 +830,57 @@
                         return item
                     }).filterAndAddStartEnd()
                 },
+
+                {
+                    name: '美电子',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    //smooth: true,
+                    lineStyle: {
+                        width: 1.2,
+                        color: "black"
+                    },
+                    data: us电子存售量比.map((item) => {
+                        item[1] = Number(item[1]) * -1
+                        return item
+                    }).chartDataMaN(3).filterAndAddStartEnd()
+                },
+
+
+                {
+                    name: '美电子',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    //smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "green"
+                    },
+                    data: us电子销售额.map((item) => {
+                        item[1] = Number(item[1]) / 2
+                        return item
+                    }).filterAndAddStartEnd()
+                },
+
+                {
+                    name: '美制造扩张',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "red"  //"#00a476" //green
+
+                    },
+                    data: us制造扩张.filterAndAddStartEnd()
+                },
+
 
 
                 {
@@ -931,6 +1020,7 @@
                 option.yAxis[0].min = 1
                 params.selected.realGdp_摩擦失业率_cpiSubReaGdp = false
                 params.selected.油糖比 = false
+                params.selected.美七巨头资本支出同比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -940,6 +1030,7 @@
                 option.yAxis[0].min = 1
                 params.selected.realGdp_摩擦失业率_cpiSubReaGdp = false
                 params.selected.铜金比 = false
+                params.selected.美七巨头资本支出同比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -949,10 +1040,32 @@
                 option.yAxis[0].min = -5
                 params.selected.铜金比 = false
                 params.selected.油糖比 = false
+                params.selected.美七巨头资本支出同比 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
 
+
+            if (params.name === "美七巨头资本支出同比" && params.selected["美七巨头资本支出同比"] === true) {
+                option.yAxis[0].max = 150
+                option.yAxis[0].min = -30
+                params.selected.铜金比 = false
+                params.selected.油糖比 = false
+                params.selected.realGdp_摩擦失业率_cpiSubReaGdp = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
+
+            if (params.name === "美制造扩张" && params.selected["美制造扩张"] === true) {
+                option.yAxis[1].max = 60
+                option.yAxis[1].min = -30
+                params.selected.铜金比2 = false
+                params.selected.油糖比2 = false
+                params.selected.MM制造业指标 = false
+                params.selected.金融脉动增速 = false
+                option.legend.selected = params.selected
+                myChart.setOption(option)
+            }
 
             if (params.name === "铜金比2" && params.selected["铜金比2"] === true) {
                 option.yAxis[1].max = 6
@@ -960,6 +1073,7 @@
                 params.selected.油糖比2 = false
                 params.selected.MM制造业指标 = false
                 params.selected.金融脉动增速 = false
+                params.selected.美制造扩张 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -969,6 +1083,7 @@
                 params.selected.铜金比2 = false
                 params.selected.MM制造业指标 = false
                 params.selected.金融脉动增速 = false
+                params.selected.美制造扩张 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -977,6 +1092,7 @@
                 option.yAxis[1].min = -3.5
                 params.selected.铜金比 = false
                 params.selected.油糖比 = false
+                params.selected.美制造扩张 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -985,6 +1101,7 @@
                 option.yAxis[1].min = -3.5
                 params.selected.铜金比 = false
                 params.selected.油糖比 = false
+                params.selected.美制造扩张 = false
                 option.legend.selected = params.selected
                 myChart.setOption(option)
             }
@@ -1002,12 +1119,28 @@
             });
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
+                name: "美七巨头资本支出同比"
+            });
+
+
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
                 name: "油糖比2"
             });
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "铜金比2"
             });
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "美制造扩张"
+            });
+            myChart.dispatchAction({
+                type: 'legendToggleSelect',
+                name: "美电子"
+            });
+
+
             myChart.dispatchAction({
                 type: 'legendToggleSelect',
                 name: "纳指"
