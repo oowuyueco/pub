@@ -46858,11 +46858,21 @@ var 沪锌连续 = [
     "volume": 138593,
     "hold": 110067,
     "settle": 23885
+  },
+  {
+    "date": "2026-06-29",
+    "open": 24005,
+    "high": 24505,
+    "low": 23940,
+    "close": 24470,
+    "volume": 148764,
+    "hold": 102052,
+    "settle": 24260
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪锌连续 = 沪锌连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-06-27 19:17:10"
+    exports.writeDateTime = "2026-06-29 22:20:43"
 };
