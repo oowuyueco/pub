@@ -1448,6 +1448,10 @@ var 官方制造业PMI = [
     [
         "2026-05-28",
         50
+    ],
+    [
+        "2026-06-29",
+        50.3
     ]
 ]
 if (typeof module !== "undefined" && module.exports) {
