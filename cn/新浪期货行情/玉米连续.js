@@ -52218,11 +52218,21 @@ var 玉米连续 = [
     "volume": 552587,
     "hold": 984835,
     "settle": 2332
+  },
+  {
+    "date": "2026-07-01",
+    "open": 2328,
+    "high": 2335,
+    "low": 2317,
+    "close": 2333,
+    "volume": 553274,
+    "hold": 993172,
+    "settle": 2326
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.玉米连续 = 玉米连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-06-30 20:22:09"
+    exports.writeDateTime = "2026-07-01 20:43:32"
 };
