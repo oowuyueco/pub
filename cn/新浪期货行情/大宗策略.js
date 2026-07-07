@@ -14775,4 +14775,9 @@ var triggerLogObj大宗={
     ]
 }
 var runLastKlineDate = "2026-07-06"
-var cnFutures策略runLastTime = "2026-07-06 21:59:47"
+var cnFutures策略runLastTime = "2026-07-07 11:02:04"
+
+if (typeof module !== "undefined" && module.exports) {
+    exports.triggerLogObj大宗 = triggerLogObj大宗
+    exports.cnFutures策略runLastTime = cnFutures策略runLastTime
+}
