@@ -40841,16 +40841,16 @@ var 工业40LOF = [
     "open": 7118.72,
     "high": 7248.71,
     "low": 7104.92,
-    "close": 7183.29,
-    "percent": -0.04,
-    "volume": 2987445332,
-    "hsl": 2.32,
-    "zgs": 1287691953.448276
+    "close": 7140.25,
+    "percent": -0.64,
+    "volume": 3163002969,
+    "hsl": 2.45,
+    "zgs": 1291021620
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.工业40LOF = 工业40LOF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-07 11:00:15"
+    exports.writeDateTime = "2026-07-07 11:16:08"
 };

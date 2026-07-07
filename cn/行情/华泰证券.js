@@ -47539,14 +47539,14 @@ var 华泰证券 = [
     "low": 20.66,
     "close": 20.74,
     "percent": -2.67,
-    "volume": 43742718,
-    "hsl": 0.6,
-    "zgs": 72904530
+    "volume": 46982621,
+    "hsl": 0.64,
+    "zgs": 73410345.3125
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.华泰证券 = 华泰证券
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-07 11:00:34"
+    exports.writeDateTime = "2026-07-07 11:16:30"
 };
