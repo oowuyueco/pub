@@ -2087,4 +2087,14 @@ if (typeof module !== "undefined" && module.exports) {
     exports.myCYQCalculator = myCYQCalculator
     exports.getDWMbenfPart = getDWMbenfPart
     exports.afterDayProfile = afterDayProfile
+
+
+
+    exports.calMedianProf = calMedianProf
+    exports.calAvgProf = calAvgProf
+    exports.cal极值 = cal极值
+
+    exports.isNumber = isNumber
+    exports.isSendMail = isSendMail
+    exports.variance = variance
 } 
