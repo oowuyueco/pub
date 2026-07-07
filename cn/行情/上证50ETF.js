@@ -62308,10 +62308,10 @@ var 上证50ETF = [
     "timestamp": 1783353600000,
     "open": 3.025,
     "high": 3.044,
-    "low": 3.02,
-    "close": 3.025,
-    "percent": -0.69,
-    "volume": 238526439,
+    "low": 3,
+    "close": 3.012,
+    "percent": -1.12,
+    "volume": 456475539,
     "hsl": 0,
     "zgs": null
   }
@@ -62320,5 +62320,5 @@ var 上证50ETF = [
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50ETF = 上证50ETF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-07 11:16:19"
+    exports.writeDateTime = "2026-07-07 15:15:20"
 };
