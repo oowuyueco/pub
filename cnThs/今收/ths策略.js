@@ -293,7 +293,7 @@ var triggerLogObj同花顺 = {
                 "low": ",0,0"
             },
             "after": {
-                "close": "20->2026-07-07,78.62,1.67",
+                "close": "21->2026-07-08,41.89,0.89",
                 "high": "9->2026-06-22,346.02,7.34",
                 "low": ",0,0",
                 "nextSecondDelivery周五": "2026-07-17",
@@ -310,7 +310,7 @@ var triggerLogObj同花顺 = {
                 "low": ",0,0"
             },
             "after": {
-                "close": "17->2026-07-07,69.85,1.48",
+                "close": "18->2026-07-08,33.12,0.7",
                 "high": "6->2026-06-22,337.25,7.14",
                 "low": ",0,0",
                 "nextSecondDelivery周五": "2026-07-17",
@@ -322,5 +322,5 @@ var triggerLogObj同花顺 = {
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-07-07 22:26:46"
+        exports.同花顺策略runLastTime = "2026-07-08 20:02:06"
     }
