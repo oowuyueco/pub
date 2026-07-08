@@ -1949,7 +1949,7 @@ function get深度恐贪(curDate) {
 
 
     if (深度贪婪count == 3) return "深度贪婪"
-    if (深度贪婪count >= 2 && 深度恐惧count == 0 && (curDate恐贪指数?.baifenwei > 75 || curDate恐贪指数?.miumiu > 85)) return "深度贪婪"
+    if (深度贪婪count >= 2 && 深度恐惧count == 0 && (curDate恐贪指数?.jiucaishuo > 90 || curDate恐贪指数?.baifenwei > 75 || curDate恐贪指数?.miumiu > 85)) return "深度贪婪"
 
 
     if (深度恐惧count == 3) return "深度恐惧"
