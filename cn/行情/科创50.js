@@ -18934,11 +18934,35 @@ var 科创50 = [
     "volume": 1572058800,
     "hsl": 2.23,
     "zgs": 704959103.1390134
+  },
+  {
+    "date": "2026-07-09",
+    "timestamp": 1783526400000,
+    "open": 2047.24,
+    "high": 2188.98,
+    "low": 2023.54,
+    "close": 2185.83,
+    "percent": 8.41,
+    "volume": 1858060500,
+    "hsl": 2.65,
+    "zgs": 701154905.6603774
+  },
+  {
+    "date": "2026-07-10",
+    "timestamp": 1783612800000,
+    "open": 2190.18,
+    "high": 2233.54,
+    "low": 2064.98,
+    "close": 2064.98,
+    "percent": -5.53,
+    "volume": 2307342900,
+    "hsl": 3.29,
+    "zgs": 701320030.3951367
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.科创50 = 科创50
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-08 19:54:42"
+    exports.writeDateTime = "2026-07-10 20:33:24"
 };

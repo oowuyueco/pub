@@ -33706,11 +33706,35 @@ var TMTETF景顺 = [
     "volume": 11508400,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-07-09",
+    "timestamp": 1783526400000,
+    "open": 4.6,
+    "high": 4.873,
+    "low": 4.517,
+    "close": 4.866,
+    "percent": 7.09,
+    "volume": 13816900,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2026-07-10",
+    "timestamp": 1783612800000,
+    "open": 4.889,
+    "high": 4.986,
+    "low": 4.626,
+    "close": 4.633,
+    "percent": -4.79,
+    "volume": 10901100,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.TMTETF景顺 = TMTETF景顺
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-08 19:54:33"
+    exports.writeDateTime = "2026-07-10 20:33:15"
 };

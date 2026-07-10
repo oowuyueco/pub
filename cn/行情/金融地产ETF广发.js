@@ -32734,11 +32734,35 @@ var 金融地产ETF广发 = [
     "volume": 2926500,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-07-09",
+    "timestamp": 1783526400000,
+    "open": 1.177,
+    "high": 1.196,
+    "low": 1.152,
+    "close": 1.167,
+    "percent": 0.09,
+    "volume": 5644600,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2026-07-10",
+    "timestamp": 1783612800000,
+    "open": 1.159,
+    "high": 1.173,
+    "low": 1.157,
+    "close": 1.163,
+    "percent": -0.43,
+    "volume": 2082200,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.金融地产ETF广发 = 金融地产ETF广发
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-08 19:54:32"
+    exports.writeDateTime = "2026-07-10 20:33:14"
 };

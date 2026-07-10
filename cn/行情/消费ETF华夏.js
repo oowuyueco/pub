@@ -38398,11 +38398,35 @@ var 消费ETF华夏 = [
     "volume": 65729600,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-07-09",
+    "timestamp": 1783526400000,
+    "open": 0.76,
+    "high": 0.76,
+    "low": 0.746,
+    "close": 0.752,
+    "percent": -1.05,
+    "volume": 63659900,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2026-07-10",
+    "timestamp": 1783612800000,
+    "open": 0.749,
+    "high": 0.765,
+    "low": 0.741,
+    "close": 0.763,
+    "percent": 1.46,
+    "volume": 70661700,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.消费ETF华夏 = 消费ETF华夏
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-08 19:54:33"
+    exports.writeDateTime = "2026-07-10 20:33:14"
 };
