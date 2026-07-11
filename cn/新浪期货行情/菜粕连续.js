@@ -32768,11 +32768,31 @@ var 菜粕连续 = [
     "volume": 743715,
     "hold": 770425,
     "settle": 2315
+  },
+  {
+    "date": "2026-07-09",
+    "open": 2311,
+    "high": 2340,
+    "low": 2308,
+    "close": 2338,
+    "volume": 904700,
+    "hold": 777440,
+    "settle": 2329
+  },
+  {
+    "date": "2026-07-10",
+    "open": 2335,
+    "high": 2343,
+    "low": 2317,
+    "close": 2325,
+    "volume": 677098,
+    "hold": 744035,
+    "settle": 2328
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.菜粕连续 = 菜粕连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-08 19:55:39"
+    exports.writeDateTime = "2026-07-11 19:16:40"
 };

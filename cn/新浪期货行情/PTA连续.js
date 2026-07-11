@@ -47488,11 +47488,31 @@ var PTA连续 = [
     "volume": 987921,
     "hold": 1004700,
     "settle": 5614
+  },
+  {
+    "date": "2026-07-09",
+    "open": 5668,
+    "high": 5756,
+    "low": 5622,
+    "close": 5640,
+    "volume": 1109248,
+    "hold": 991562,
+    "settle": 5682
+  },
+  {
+    "date": "2026-07-10",
+    "open": 5670,
+    "high": 5676,
+    "low": 5546,
+    "close": 5560,
+    "volume": 933250,
+    "hold": 983798,
+    "settle": 5610
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.PTA连续 = PTA连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-08 19:56:04"
+    exports.writeDateTime = "2026-07-11 19:17:07"
 };

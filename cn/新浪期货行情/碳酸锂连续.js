@@ -7168,11 +7168,31 @@ var 碳酸锂连续 = [
     "volume": 199757,
     "hold": 412567,
     "settle": 161740
+  },
+  {
+    "date": "2026-07-09",
+    "open": 159600,
+    "high": 159940,
+    "low": 151020,
+    "close": 153020,
+    "volume": 282269,
+    "hold": 416044,
+    "settle": 154400
+  },
+  {
+    "date": "2026-07-10",
+    "open": 153000,
+    "high": 153920,
+    "low": 150260,
+    "close": 151600,
+    "volume": 184064,
+    "hold": 411866,
+    "settle": 152140
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.碳酸锂连续 = 碳酸锂连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-08 19:56:28"
+    exports.writeDateTime = "2026-07-11 19:17:34"
 };

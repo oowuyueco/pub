@@ -16418,11 +16418,31 @@ var 不锈钢连续 = [
     "volume": 191347,
     "hold": 80033,
     "settle": 14585
+  },
+  {
+    "date": "2026-07-09",
+    "open": 14450,
+    "high": 14525,
+    "low": 14235,
+    "close": 14390,
+    "volume": 203316,
+    "hold": 86040,
+    "settle": 14390
+  },
+  {
+    "date": "2026-07-10",
+    "open": 14395,
+    "high": 14415,
+    "low": 14255,
+    "close": 14290,
+    "volume": 131384,
+    "hold": 89399,
+    "settle": 14305
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.不锈钢连续 = 不锈钢连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-08 19:54:55"
+    exports.writeDateTime = "2026-07-11 19:15:50"
 };

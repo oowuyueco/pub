@@ -52308,11 +52308,31 @@ var 沪铜连续 = [
     "volume": 67529,
     "hold": 149665,
     "settle": 103000
+  },
+  {
+    "date": "2026-07-09",
+    "open": 101890,
+    "high": 103210,
+    "low": 101640,
+    "close": 103160,
+    "volume": 90906,
+    "hold": 153942,
+    "settle": 102300
+  },
+  {
+    "date": "2026-07-10",
+    "open": 103750,
+    "high": 104250,
+    "low": 103410,
+    "close": 103710,
+    "volume": 82888,
+    "hold": 149334,
+    "settle": 103810
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪铜连续 = 沪铜连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-08 19:54:38"
+    exports.writeDateTime = "2026-07-11 19:15:29"
 };
