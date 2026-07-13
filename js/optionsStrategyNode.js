@@ -47,7 +47,7 @@ var window = {};
 window.恐贪指数 = 恐贪指数;
 window.恐贪writeDateTime = 恐贪writeDateTime;
 window.location = {};
-window.location.port = "";
+window.location.port = devTestEnv ? "5507" : ""; //Object.assign(global, require("./my.js"))  5507 run-all.bat node;  5500 golive 浏览器；
 
 var getQueryVariable = function (attr) {
     console.log(args?.[attr]);
