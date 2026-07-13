@@ -1,30016 +1,32780 @@
 var 金融地产ETF广发 = [
   {
     "date": "2015-04-17",
+    "timestamp": 1429200000000,
     "open": 1.021,
     "high": 1.035,
     "low": 0.995,
     "close": 1.012,
-    "volume": 90142376,
-    "amount": 91455576,
-    "timestamp": "",
-    "percent": 0
+    "percent": -1.08,
+    "volume": 90142374,
+    "hsl": 15.57,
+    "zgs": 5789490.944123314
   },
   {
     "date": "2015-04-20",
+    "timestamp": 1429459200000,
     "open": 1.016,
     "high": 1.02,
     "low": 0.974,
     "close": 0.974,
+    "percent": -3.75,
     "volume": 33416374,
-    "amount": 33390116,
-    "timestamp": "",
-    "percent": -3.75
+    "hsl": 5.77,
+    "zgs": 5791399.3067590995
   },
   {
     "date": "2015-04-21",
+    "timestamp": 1429545600000,
     "open": 0.962,
     "high": 0.999,
     "low": 0.962,
     "close": 0.991,
+    "percent": 1.75,
     "volume": 20664396,
-    "amount": 20272614,
-    "timestamp": "",
-    "percent": 1.75
+    "hsl": 3.57,
+    "zgs": 5788346.218487395
   },
   {
     "date": "2015-04-22",
+    "timestamp": 1429632000000,
     "open": 0.992,
     "high": 1.019,
     "low": 0.992,
     "close": 1.018,
-    "volume": 48972544,
-    "amount": 49356584,
-    "timestamp": "",
-    "percent": 2.72
+    "percent": 2.72,
+    "volume": 48972542,
+    "hsl": 8.46,
+    "zgs": 5788716.548463357
   },
   {
     "date": "2015-04-23",
+    "timestamp": 1429718400000,
     "open": 1.017,
     "high": 1.032,
     "low": 1.012,
     "close": 1.025,
-    "volume": 46700368,
-    "amount": 47825712,
-    "timestamp": "",
-    "percent": 0.69
+    "percent": 0.69,
+    "volume": 46700367,
+    "hsl": 8.06,
+    "zgs": 5794090.198511166
   },
   {
     "date": "2015-04-24",
+    "timestamp": 1429804800000,
     "open": 1.013,
     "high": 1.013,
     "low": 0.991,
     "close": 0.998,
+    "percent": -2.63,
     "volume": 15967170,
-    "amount": 15985399,
-    "timestamp": "",
-    "percent": -2.63
+    "hsl": 2.76,
+    "zgs": 5785206.521739131
   },
   {
     "date": "2015-04-27",
+    "timestamp": 1430064000000,
     "open": 1,
     "high": 1.017,
     "low": 0.998,
     "close": 1.015,
-    "volume": 31104100,
-    "amount": 31395430,
-    "timestamp": "",
-    "percent": 1.7
+    "percent": 1.7,
+    "volume": 31104101,
+    "hsl": 5.37,
+    "zgs": 5792197.579143389
   },
   {
     "date": "2015-04-28",
+    "timestamp": 1430150400000,
     "open": 1.01,
     "high": 1.038,
     "low": 1,
     "close": 1.02,
-    "volume": 35250872,
-    "amount": 35932488,
-    "timestamp": "",
-    "percent": 0.49
+    "percent": 0.49,
+    "volume": 35250874,
+    "hsl": 6.09,
+    "zgs": 5788320.853858785
   },
   {
     "date": "2015-04-29",
+    "timestamp": 1430236800000,
     "open": 1.002,
     "high": 1.02,
     "low": 1.002,
     "close": 1.018,
+    "percent": -0.2,
     "volume": 11991385,
-    "amount": 12120784,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 2.07,
+    "zgs": 5792939.613526571
   },
   {
     "date": "2015-04-30",
+    "timestamp": 1430323200000,
     "open": 1.018,
     "high": 1.021,
     "low": 1.011,
     "close": 1.011,
+    "percent": -0.69,
     "volume": 14910535,
-    "amount": 15153931,
-    "timestamp": "",
-    "percent": -0.69
+    "hsl": 2.58,
+    "zgs": 5779277.131782945
   },
   {
     "date": "2015-05-04",
+    "timestamp": 1430668800000,
     "open": 1.006,
     "high": 1.011,
     "low": 0.996,
     "close": 1.006,
+    "percent": -0.49,
     "volume": 8548372,
-    "amount": 8585148,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 1.48,
+    "zgs": 5775927.027027027
   },
   {
     "date": "2015-05-05",
+    "timestamp": 1430755200000,
     "open": 1.006,
     "high": 1.009,
     "low": 0.965,
     "close": 0.97,
+    "percent": -3.58,
     "volume": 11796938,
-    "amount": 11694187,
-    "timestamp": "",
-    "percent": -3.58
+    "hsl": 2.04,
+    "zgs": 5782812.7450980395
   },
   {
     "date": "2015-05-06",
+    "timestamp": 1430841600000,
     "open": 0.971,
     "high": 1.006,
     "low": 0.966,
     "close": 0.968,
+    "percent": -0.21,
     "volume": 9687526,
-    "amount": 9599203,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 1.67,
+    "zgs": 5800913.77245509
   },
   {
     "date": "2015-05-07",
+    "timestamp": 1430928000000,
     "open": 0.971,
     "high": 0.98,
     "low": 0.967,
     "close": 0.969,
+    "percent": 0.1,
     "volume": 5255496,
-    "amount": 5112515,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0.91,
+    "zgs": 5775270.32967033
   },
   {
     "date": "2015-05-08",
+    "timestamp": 1431014400000,
     "open": 0.973,
     "high": 0.999,
     "low": 0.965,
     "close": 0.981,
+    "percent": 1.24,
     "volume": 4681346,
-    "amount": 4569338,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0.81,
+    "zgs": 5779439.50617284
   },
   {
     "date": "2015-05-11",
+    "timestamp": 1431273600000,
     "open": 0.99,
     "high": 0.996,
     "low": 0.972,
     "close": 0.993,
+    "percent": 1.22,
     "volume": 10960388,
-    "amount": 10805928,
-    "timestamp": "",
-    "percent": 1.22
+    "hsl": 1.89,
+    "zgs": 5799147.0899470905
   },
   {
     "date": "2015-05-12",
+    "timestamp": 1431360000000,
     "open": 0.993,
     "high": 1.009,
     "low": 0.983,
     "close": 0.998,
+    "percent": 0.5,
     "volume": 12732465,
-    "amount": 12712937,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 2.2,
+    "zgs": 5787484.090909091
   },
   {
     "date": "2015-05-13",
+    "timestamp": 1431446400000,
     "open": 0.994,
     "high": 1.004,
     "low": 0.985,
     "close": 0.991,
+    "percent": -0.7,
     "volume": 6906922,
-    "amount": 6857857,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 1.19,
+    "zgs": 5804136.134453782
   },
   {
     "date": "2015-05-14",
+    "timestamp": 1431532800000,
     "open": 0.988,
     "high": 1,
     "low": 0.988,
     "close": 0.989,
+    "percent": -0.2,
     "volume": 7573298,
-    "amount": 7522270,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 1.31,
+    "zgs": 5781143.511450381
   },
   {
     "date": "2015-05-15",
+    "timestamp": 1431619200000,
     "open": 0.98,
     "high": 0.992,
     "low": 0.968,
     "close": 0.974,
+    "percent": -1.52,
     "volume": 4132014,
-    "amount": 4025421,
-    "timestamp": "",
-    "percent": -1.52
+    "hsl": 0.71,
+    "zgs": 5819738.0281690145
   },
   {
     "date": "2015-05-18",
+    "timestamp": 1431878400000,
     "open": 0.97,
     "high": 0.976,
     "low": 0.948,
     "close": 0.959,
+    "percent": -1.54,
     "volume": 3527604,
-    "amount": 3385284,
-    "timestamp": "",
-    "percent": -1.54
+    "hsl": 0.61,
+    "zgs": 5782957.377049181
   },
   {
     "date": "2015-05-19",
+    "timestamp": 1431964800000,
     "open": 0.958,
     "high": 0.994,
     "low": 0.943,
     "close": 0.99,
+    "percent": 3.23,
     "volume": 9938933,
-    "amount": 9735696,
-    "timestamp": "",
-    "percent": 3.23
+    "hsl": 1.72,
+    "zgs": 5778449.4186046515
   },
   {
     "date": "2015-05-20",
+    "timestamp": 1432051200000,
     "open": 0.989,
     "high": 1.009,
     "low": 0.983,
     "close": 0.991,
-    "volume": 16911636,
-    "amount": 16822590,
-    "timestamp": "",
-    "percent": 0.1
+    "percent": 0.1,
+    "volume": 16911635,
+    "hsl": 2.92,
+    "zgs": 5791655.821917809
   },
   {
     "date": "2015-05-21",
+    "timestamp": 1432137600000,
     "open": 0.99,
     "high": 0.999,
     "low": 0.975,
     "close": 0.987,
+    "percent": -0.4,
     "volume": 8818028,
-    "amount": 8715262,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 1.52,
+    "zgs": 5801334.2105263155
   },
   {
     "date": "2015-05-22",
+    "timestamp": 1432224000000,
     "open": 0.992,
     "high": 1.023,
     "low": 0.992,
     "close": 1.019,
-    "volume": 39754968,
-    "amount": 40350160,
-    "timestamp": "",
-    "percent": 3.24
+    "percent": 3.24,
+    "volume": 39754966,
+    "hsl": 6.87,
+    "zgs": 5786749.053857351
   },
   {
     "date": "2015-05-25",
+    "timestamp": 1432483200000,
     "open": 1.022,
     "high": 1.058,
     "low": 1.022,
     "close": 1.05,
+    "percent": 3.04,
     "volume": 22742326,
-    "amount": 23791490,
-    "timestamp": "",
-    "percent": 3.04
+    "hsl": 3.93,
+    "zgs": 5786851.399491094
   },
   {
     "date": "2015-05-26",
+    "timestamp": 1432569600000,
     "open": 1.052,
     "high": 1.063,
     "low": 1.04,
     "close": 1.06,
+    "percent": 0.95,
     "volume": 18702010,
-    "amount": 19706760,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 3.23,
+    "zgs": 5790095.975232198
   },
   {
     "date": "2015-05-27",
+    "timestamp": 1432656000000,
     "open": 1.059,
     "high": 1.07,
     "low": 1.04,
     "close": 1.054,
+    "percent": -0.57,
     "volume": 13184053,
-    "amount": 13922034,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 2.28,
+    "zgs": 5782479.385964912
   },
   {
     "date": "2015-05-28",
+    "timestamp": 1432742400000,
     "open": 1.051,
     "high": 1.059,
     "low": 0.99,
     "close": 0.991,
+    "percent": -5.98,
     "volume": 15151971,
-    "amount": 15633216,
-    "timestamp": "",
-    "percent": -5.98
+    "hsl": 2.62,
+    "zgs": 5783195.038167939
   },
   {
     "date": "2015-05-29",
+    "timestamp": 1432828800000,
     "open": 0.99,
     "high": 1.009,
     "low": 0.953,
     "close": 0.983,
+    "percent": -0.81,
     "volume": 6098328,
-    "amount": 6010554,
-    "timestamp": "",
-    "percent": -0.81
+    "hsl": 1.05,
+    "zgs": 5807931.428571428
   },
   {
     "date": "2015-06-01",
+    "timestamp": 1433088000000,
     "open": 0.993,
     "high": 1.04,
     "low": 0.966,
     "close": 1.023,
+    "percent": 4.07,
     "volume": 10089261,
-    "amount": 10158517,
-    "timestamp": "",
-    "percent": 4.07
+    "hsl": 1.74,
+    "zgs": 5798425.862068965
   },
   {
     "date": "2015-06-02",
+    "timestamp": 1433174400000,
     "open": 1.024,
     "high": 1.035,
     "low": 1.011,
     "close": 1.023,
+    "percent": 0,
     "volume": 9536331,
-    "amount": 9743013,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 1.65,
+    "zgs": 5779594.545454546
   },
   {
     "date": "2015-06-03",
+    "timestamp": 1433260800000,
     "open": 1.03,
     "high": 1.038,
     "low": 1.018,
     "close": 1.026,
+    "percent": 0.29,
     "volume": 10821823,
-    "amount": 11109870,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 1.87,
+    "zgs": 5787071.122994652
   },
   {
     "date": "2015-06-04",
+    "timestamp": 1433347200000,
     "open": 1.024,
     "high": 1.063,
     "low": 1.011,
     "close": 1.048,
+    "percent": 2.14,
     "volume": 13297619,
-    "amount": 13903947,
-    "timestamp": "",
-    "percent": 2.14
+    "hsl": 2.3,
+    "zgs": 5781573.47826087
   },
   {
     "date": "2015-06-05",
+    "timestamp": 1433433600000,
     "open": 1.051,
     "high": 1.098,
     "low": 1.04,
     "close": 1.061,
+    "percent": 1.24,
     "volume": 11608627,
-    "amount": 12328383,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 2,
+    "zgs": 5804313.5
   },
   {
     "date": "2015-06-08",
+    "timestamp": 1433692800000,
     "open": 1.061,
     "high": 1.11,
     "low": 1.061,
     "close": 1.109,
-    "volume": 19892696,
-    "amount": 21618976,
-    "timestamp": "",
-    "percent": 4.52
+    "percent": 4.52,
+    "volume": 19892697,
+    "hsl": 3.44,
+    "zgs": 5782760.7558139535
   },
   {
     "date": "2015-06-09",
+    "timestamp": 1433779200000,
     "open": 1.109,
     "high": 1.119,
     "low": 1.075,
     "close": 1.086,
+    "percent": -2.07,
     "volume": 13801509,
-    "amount": 15150656,
-    "timestamp": "",
-    "percent": -2.07
+    "hsl": 2.38,
+    "zgs": 5798953.361344538
   },
   {
     "date": "2015-06-10",
+    "timestamp": 1433865600000,
     "open": 1.076,
     "high": 1.099,
     "low": 1.057,
     "close": 1.081,
+    "percent": -0.46,
     "volume": 8880697,
-    "amount": 9652827,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 1.53,
+    "zgs": 5804377.124183007
   },
   {
     "date": "2015-06-11",
+    "timestamp": 1433952000000,
     "open": 1.081,
     "high": 1.09,
     "low": 1.072,
     "close": 1.085,
+    "percent": 0.37,
     "volume": 4033732,
-    "amount": 4352296,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0.7,
+    "zgs": 5762474.285714286
   },
   {
     "date": "2015-06-12",
+    "timestamp": 1434038400000,
     "open": 1.09,
     "high": 1.094,
     "low": 1.084,
     "close": 1.09,
+    "percent": 0.46,
     "volume": 5065178,
-    "amount": 5518261,
-    "timestamp": "",
-    "percent": 0.46
+    "hsl": 0.87,
+    "zgs": 5822043.67816092
   },
   {
     "date": "2015-06-15",
+    "timestamp": 1434297600000,
     "open": 1.06,
     "high": 1.1,
     "low": 1.06,
     "close": 1.065,
+    "percent": -2.29,
     "volume": 4168771,
-    "amount": 4495116,
-    "timestamp": "",
-    "percent": -2.29
+    "hsl": 0.72,
+    "zgs": 5789959.722222222
   },
   {
     "date": "2015-06-16",
+    "timestamp": 1434384000000,
     "open": 1.065,
     "high": 1.082,
     "low": 1.038,
     "close": 1.05,
+    "percent": -1.41,
     "volume": 3988129,
-    "amount": 4209878,
-    "timestamp": "",
-    "percent": -1.41
+    "hsl": 0.69,
+    "zgs": 5779897.101449275
   },
   {
     "date": "2015-06-17",
+    "timestamp": 1434470400000,
     "open": 1.067,
     "high": 1.067,
     "low": 1.039,
     "close": 1.06,
+    "percent": 0.95,
     "volume": 3605785,
-    "amount": 3788376,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0.62,
+    "zgs": 5815782.258064516
   },
   {
     "date": "2015-06-18",
+    "timestamp": 1434556800000,
     "open": 1.06,
     "high": 1.06,
     "low": 1.016,
     "close": 1.016,
+    "percent": -4.15,
     "volume": 3191970,
-    "amount": 3307756,
-    "timestamp": "",
-    "percent": -4.15
+    "hsl": 0.55,
+    "zgs": 5803581.818181817
   },
   {
     "date": "2015-06-19",
+    "timestamp": 1434643200000,
     "open": 1.011,
     "high": 1.016,
     "low": 0.971,
     "close": 0.971,
+    "percent": -4.43,
     "volume": 2883110,
-    "amount": 2889498,
-    "timestamp": "",
-    "percent": -4.43
+    "hsl": 0.5,
+    "zgs": 5766220
   },
   {
     "date": "2015-06-23",
+    "timestamp": 1434988800000,
     "open": 0.971,
     "high": 0.995,
     "low": 0.949,
     "close": 0.991,
+    "percent": 2.06,
     "volume": 2526193,
-    "amount": 2451804,
-    "timestamp": "",
-    "percent": 2.06
+    "hsl": 0.44,
+    "zgs": 5741347.7272727275
   },
   {
     "date": "2015-06-24",
+    "timestamp": 1435075200000,
     "open": 0.99,
     "high": 1.004,
     "low": 0.978,
     "close": 1.004,
+    "percent": 1.31,
     "volume": 3180014,
-    "amount": 3154870,
-    "timestamp": "",
-    "percent": 1.31
+    "hsl": 0.55,
+    "zgs": 5781843.636363636
   },
   {
     "date": "2015-06-25",
+    "timestamp": 1435161600000,
     "open": 1.007,
     "high": 1.026,
     "low": 0.975,
     "close": 0.987,
+    "percent": -1.69,
     "volume": 4185537,
-    "amount": 4205535,
-    "timestamp": "",
-    "percent": -1.69
+    "hsl": 0.72,
+    "zgs": 5813245.833333334
   },
   {
     "date": "2015-06-26",
+    "timestamp": 1435248000000,
     "open": 0.983,
     "high": 0.985,
     "low": 0.921,
     "close": 0.935,
+    "percent": -5.27,
     "volume": 5644689,
-    "amount": 5344037,
-    "timestamp": "",
-    "percent": -5.27
+    "hsl": 0.97,
+    "zgs": 5819267.010309279
   },
   {
     "date": "2015-06-29",
+    "timestamp": 1435507200000,
     "open": 0.98,
     "high": 0.98,
     "low": 0.915,
     "close": 0.92,
+    "percent": -1.6,
     "volume": 4321813,
-    "amount": 4045294,
-    "timestamp": "",
-    "percent": -1.6
+    "hsl": 0.75,
+    "zgs": 5762417.333333333
   },
   {
     "date": "2015-06-30",
+    "timestamp": 1435593600000,
     "open": 0.92,
     "high": 0.965,
     "low": 0.919,
     "close": 0.96,
+    "percent": 4.35,
     "volume": 3591613,
-    "amount": 3387693,
-    "timestamp": "",
-    "percent": 4.35
+    "hsl": 0.62,
+    "zgs": 5792924.193548387
   },
   {
     "date": "2015-07-01",
+    "timestamp": 1435680000000,
     "open": 0.964,
     "high": 0.964,
     "low": 0.924,
     "close": 0.924,
+    "percent": -3.75,
     "volume": 4179144,
-    "amount": 3928852,
-    "timestamp": "",
-    "percent": -3.75
+    "hsl": 2.55,
+    "zgs": 1638880
   },
   {
     "date": "2015-07-02",
+    "timestamp": 1435766400000,
     "open": 0.926,
     "high": 0.936,
     "low": 0.866,
     "close": 0.89,
+    "percent": -3.68,
     "volume": 3444531,
-    "amount": 3145024,
-    "timestamp": "",
-    "percent": -3.68
+    "hsl": 2.1,
+    "zgs": 1640252.857142857
   },
   {
     "date": "2015-07-03",
+    "timestamp": 1435852800000,
     "open": 0.888,
     "high": 0.9,
     "low": 0.81,
     "close": 0.86,
+    "percent": -3.37,
     "volume": 3861772,
-    "amount": 3300483,
-    "timestamp": "",
-    "percent": -3.37
+    "hsl": 2.35,
+    "zgs": 1643307.2340425532
   },
   {
     "date": "2015-07-06",
+    "timestamp": 1436112000000,
     "open": 0.946,
     "high": 0.946,
     "low": 0.868,
     "close": 0.899,
+    "percent": 4.53,
     "volume": 7938897,
-    "amount": 7332790,
-    "timestamp": "",
-    "percent": 4.53
+    "hsl": 4.84,
+    "zgs": 1640267.9752066117
   },
   {
     "date": "2015-07-07",
+    "timestamp": 1436198400000,
     "open": 0.848,
     "high": 0.94,
     "low": 0.844,
     "close": 0.862,
+    "percent": -4.12,
     "volume": 5787791,
-    "amount": 5012226,
-    "timestamp": "",
-    "percent": -4.12
+    "hsl": 3.53,
+    "zgs": 1639600.849858357
   },
   {
     "date": "2015-07-08",
+    "timestamp": 1436284800000,
     "open": 0.839,
     "high": 0.839,
     "low": 0.776,
     "close": 0.776,
+    "percent": -9.98,
     "volume": 4163398,
-    "amount": 3244636,
-    "timestamp": "",
-    "percent": -9.98
+    "hsl": 2.54,
+    "zgs": 1639133.0708661417
   },
   {
     "date": "2015-07-09",
+    "timestamp": 1436371200000,
     "open": 0.698,
     "high": 0.85,
     "low": 0.698,
     "close": 0.84,
+    "percent": 8.25,
     "volume": 7818239,
-    "amount": 6161104,
-    "timestamp": "",
-    "percent": 8.25
+    "hsl": 4.77,
+    "zgs": 1639043.815513627
   },
   {
     "date": "2015-07-10",
+    "timestamp": 1436457600000,
     "open": 0.835,
     "high": 0.919,
     "low": 0.808,
     "close": 0.905,
+    "percent": 7.74,
     "volume": 8241782,
-    "amount": 7385378,
-    "timestamp": "",
-    "percent": 7.74
+    "hsl": 5.02,
+    "zgs": 1641789.2430278885
   },
   {
     "date": "2015-07-13",
+    "timestamp": 1436716800000,
     "open": 0.899,
     "high": 0.919,
     "low": 0.88,
     "close": 0.911,
+    "percent": 0.66,
     "volume": 7020728,
-    "amount": 6331506,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 4.28,
+    "zgs": 1640357.0093457943
   },
   {
     "date": "2015-07-14",
+    "timestamp": 1436803200000,
     "open": 0.88,
     "high": 0.91,
     "low": 0.87,
     "close": 0.894,
+    "percent": -1.87,
     "volume": 5515424,
-    "amount": 4909578,
-    "timestamp": "",
-    "percent": -1.87
+    "hsl": 3.36,
+    "zgs": 1641495.238095238
   },
   {
     "date": "2015-07-15",
+    "timestamp": 1436889600000,
     "open": 0.871,
     "high": 0.894,
     "low": 0.849,
     "close": 0.863,
+    "percent": -3.47,
     "volume": 3246685,
-    "amount": 2838153,
-    "timestamp": "",
-    "percent": -3.47
+    "hsl": 1.98,
+    "zgs": 1639739.898989899
   },
   {
     "date": "2015-07-16",
+    "timestamp": 1436976000000,
     "open": 0.863,
     "high": 0.888,
     "low": 0.83,
     "close": 0.865,
+    "percent": 0.23,
     "volume": 2225134,
-    "amount": 1908310,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 1.36,
+    "zgs": 1636127.9411764704
   },
   {
     "date": "2015-07-17",
+    "timestamp": 1437062400000,
     "open": 0.865,
     "high": 0.899,
     "low": 0.858,
     "close": 0.89,
+    "percent": 2.89,
     "volume": 2339470,
-    "amount": 2077117,
-    "timestamp": "",
-    "percent": 2.89
+    "hsl": 1.43,
+    "zgs": 1635993.0069930071
   },
   {
     "date": "2015-07-20",
+    "timestamp": 1437321600000,
     "open": 0.894,
     "high": 0.9,
     "low": 0.88,
     "close": 0.886,
+    "percent": -0.45,
     "volume": 1330984,
-    "amount": 1184075,
-    "timestamp": "",
-    "percent": -0.45
+    "hsl": 0.81,
+    "zgs": 1643190.12345679
   },
   {
     "date": "2015-07-21",
+    "timestamp": 1437408000000,
     "open": 0.882,
     "high": 0.885,
     "low": 0.866,
     "close": 0.873,
+    "percent": -1.47,
     "volume": 1044703,
-    "amount": 918887,
-    "timestamp": "",
-    "percent": -1.47
+    "hsl": 0.64,
+    "zgs": 1632348.4375
   },
   {
     "date": "2015-07-22",
+    "timestamp": 1437494400000,
     "open": 0.88,
     "high": 0.88,
     "low": 0.86,
     "close": 0.869,
+    "percent": -0.46,
     "volume": 752101,
-    "amount": 652433,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0.46,
+    "zgs": 1635002.1739130435
   },
   {
     "date": "2015-07-23",
+    "timestamp": 1437580800000,
     "open": 0.869,
     "high": 0.888,
     "low": 0.856,
     "close": 0.886,
+    "percent": 1.96,
     "volume": 1934459,
-    "amount": 1693787,
-    "timestamp": "",
-    "percent": 1.96
+    "hsl": 1.18,
+    "zgs": 1639372.0338983051
   },
   {
     "date": "2015-07-24",
+    "timestamp": 1437667200000,
     "open": 0.88,
     "high": 0.896,
     "low": 0.877,
     "close": 0.88,
+    "percent": -0.68,
     "volume": 2155762,
-    "amount": 1911742,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 1.31,
+    "zgs": 1645619.8473282442
   },
   {
     "date": "2015-07-27",
+    "timestamp": 1437926400000,
     "open": 0.86,
     "high": 0.875,
     "low": 0.81,
     "close": 0.81,
+    "percent": -7.95,
     "volume": 801701,
-    "amount": 681745,
-    "timestamp": "",
-    "percent": -7.95
+    "hsl": 0.49,
+    "zgs": 1636124.4897959183
   },
   {
     "date": "2015-07-28",
+    "timestamp": 1438012800000,
     "open": 0.807,
     "high": 0.83,
     "low": 0.77,
     "close": 0.813,
+    "percent": 0.37,
     "volume": 1679548,
-    "amount": 1349381,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 1.02,
+    "zgs": 1646615.6862745099
   },
   {
     "date": "2015-07-29",
+    "timestamp": 1438099200000,
     "open": 0.83,
     "high": 0.83,
     "low": 0.805,
     "close": 0.822,
+    "percent": 1.11,
     "volume": 1148359,
-    "amount": 931790,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0.7,
+    "zgs": 1640512.8571428573
   },
   {
     "date": "2015-07-30",
+    "timestamp": 1438185600000,
     "open": 0.822,
     "high": 0.834,
     "low": 0.815,
     "close": 0.83,
+    "percent": 0.97,
     "volume": 693705,
-    "amount": 573605,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0.42,
+    "zgs": 1651678.5714285716
   },
   {
     "date": "2015-07-31",
+    "timestamp": 1438272000000,
     "open": 0.817,
     "high": 0.835,
     "low": 0.804,
     "close": 0.804,
+    "percent": -3.13,
     "volume": 448406,
-    "amount": 363200,
-    "timestamp": "",
-    "percent": -3.13
+    "hsl": 0.27,
+    "zgs": 1660762.962962963
   },
   {
     "date": "2015-08-03",
+    "timestamp": 1438531200000,
     "open": 0.8,
     "high": 0.821,
     "low": 0.77,
     "close": 0.805,
+    "percent": 0.12,
     "volume": 841326,
-    "amount": 670493,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.51,
+    "zgs": 1649658.8235294118
   },
   {
     "date": "2015-08-04",
+    "timestamp": 1438617600000,
     "open": 0.821,
     "high": 0.822,
     "low": 0.773,
     "close": 0.821,
+    "percent": 1.99,
     "volume": 790814,
-    "amount": 642495,
-    "timestamp": "",
-    "percent": 1.99
+    "hsl": 0.48,
+    "zgs": 1647529.1666666667
   },
   {
     "date": "2015-08-05",
+    "timestamp": 1438704000000,
     "open": 0.83,
     "high": 0.83,
     "low": 0.81,
     "close": 0.811,
+    "percent": -1.22,
     "volume": 665500,
-    "amount": 542697,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0.41,
+    "zgs": 1623170.731707317
   },
   {
     "date": "2015-08-06",
+    "timestamp": 1438790400000,
     "open": 0.801,
     "high": 0.819,
     "low": 0.795,
     "close": 0.816,
+    "percent": 0.62,
     "volume": 231230,
-    "amount": 187375,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0.14,
+    "zgs": 1651642.857142857
   },
   {
     "date": "2015-08-07",
+    "timestamp": 1438876800000,
     "open": 0.816,
     "high": 0.82,
     "low": 0.801,
     "close": 0.818,
+    "percent": 0.25,
     "volume": 663916,
-    "amount": 540765,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.4,
+    "zgs": 1659790
   },
   {
     "date": "2015-08-10",
+    "timestamp": 1439136000000,
     "open": 0.818,
     "high": 0.848,
     "low": 0.808,
     "close": 0.843,
+    "percent": 3.06,
     "volume": 1993164,
-    "amount": 1653521,
-    "timestamp": "",
-    "percent": 3.06
+    "hsl": 1.21,
+    "zgs": 1647242.9752066117
   },
   {
     "date": "2015-08-11",
+    "timestamp": 1439222400000,
     "open": 0.831,
     "high": 0.85,
     "low": 0.831,
     "close": 0.834,
+    "percent": -1.07,
     "volume": 1393717,
-    "amount": 1169542,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0.85,
+    "zgs": 1639667.0588235294
   },
   {
     "date": "2015-08-12",
+    "timestamp": 1439308800000,
     "open": 0.834,
     "high": 0.843,
     "low": 0.821,
     "close": 0.839,
+    "percent": 0.6,
     "volume": 991412,
-    "amount": 826429,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 0.6,
+    "zgs": 1652353.3333333335
   },
   {
     "date": "2015-08-13",
+    "timestamp": 1439395200000,
     "open": 0.825,
     "high": 0.846,
     "low": 0.825,
     "close": 0.839,
+    "percent": 0,
     "volume": 301908,
-    "amount": 252561,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.18,
+    "zgs": 1677266.6666666667
   },
   {
     "date": "2015-08-14",
+    "timestamp": 1439481600000,
     "open": 0.844,
     "high": 0.844,
     "low": 0.83,
     "close": 0.834,
+    "percent": -0.6,
     "volume": 1034254,
-    "amount": 866842,
-    "timestamp": "",
-    "percent": -0.6
+    "hsl": 0.63,
+    "zgs": 1641673.0158730159
   },
   {
     "date": "2015-08-17",
+    "timestamp": 1439740800000,
     "open": 0.834,
     "high": 0.846,
     "low": 0.824,
     "close": 0.825,
+    "percent": -1.08,
     "volume": 860339,
-    "amount": 711897,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0.52,
+    "zgs": 1654498.0769230768
   },
   {
     "date": "2015-08-18",
+    "timestamp": 1439827200000,
     "open": 0.825,
     "high": 0.845,
     "low": 0.781,
     "close": 0.81,
+    "percent": -1.82,
     "volume": 2158558,
-    "amount": 1785617,
-    "timestamp": "",
-    "percent": -1.82
+    "hsl": 1.32,
+    "zgs": 1635271.2121212122
   },
   {
     "date": "2015-08-19",
+    "timestamp": 1439913600000,
     "open": 0.793,
     "high": 0.81,
     "low": 0.782,
     "close": 0.81,
+    "percent": 0,
     "volume": 940633,
-    "amount": 745408,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.57,
+    "zgs": 1650233.3333333335
   },
   {
     "date": "2015-08-20",
+    "timestamp": 1440000000000,
     "open": 0.809,
     "high": 0.81,
     "low": 0.791,
     "close": 0.792,
+    "percent": -2.22,
     "volume": 236601,
-    "amount": 188246,
-    "timestamp": "",
-    "percent": -2.22
+    "hsl": 0.14,
+    "zgs": 1690007.1428571427
   },
   {
     "date": "2015-08-21",
+    "timestamp": 1440086400000,
     "open": 0.792,
     "high": 0.792,
     "low": 0.75,
     "close": 0.75,
+    "percent": -5.3,
     "volume": 1176219,
-    "amount": 904591,
-    "timestamp": "",
-    "percent": -5.3
+    "hsl": 0.72,
+    "zgs": 1633637.5
   },
   {
     "date": "2015-08-24",
+    "timestamp": 1440345600000,
     "open": 0.744,
     "high": 0.8,
     "low": 0.675,
     "close": 0.677,
+    "percent": -9.73,
     "volume": 1766012,
-    "amount": 1225080,
-    "timestamp": "",
-    "percent": -9.73
+    "hsl": 1.08,
+    "zgs": 1635196.2962962962
   },
   {
     "date": "2015-08-25",
+    "timestamp": 1440432000000,
     "open": 0.613,
     "high": 0.699,
     "low": 0.609,
     "close": 0.609,
+    "percent": -10.04,
     "volume": 2470210,
-    "amount": 1555956,
-    "timestamp": "",
-    "percent": -10.04
+    "hsl": 1.51,
+    "zgs": 1635900.6622516557
   },
   {
     "date": "2015-08-26",
+    "timestamp": 1440518400000,
     "open": 0.62,
     "high": 0.665,
     "low": 0.609,
     "close": 0.653,
+    "percent": 7.22,
     "volume": 3448648,
-    "amount": 2204433,
-    "timestamp": "",
-    "percent": 7.22
+    "hsl": 2.1,
+    "zgs": 1642213.3333333333
   },
   {
     "date": "2015-08-27",
+    "timestamp": 1440604800000,
     "open": 0.653,
     "high": 0.696,
     "low": 0.634,
     "close": 0.672,
+    "percent": 2.91,
     "volume": 1499001,
-    "amount": 980938,
-    "timestamp": "",
-    "percent": 2.91
+    "hsl": 0.91,
+    "zgs": 1647253.846153846
   },
   {
     "date": "2015-08-28",
+    "timestamp": 1440691200000,
     "open": 0.673,
     "high": 0.7,
     "low": 0.673,
     "close": 0.7,
+    "percent": 4.17,
     "volume": 2168179,
-    "amount": 1497499,
-    "timestamp": "",
-    "percent": 4.17
+    "hsl": 1.32,
+    "zgs": 1642559.8484848484
   },
   {
     "date": "2015-08-31",
+    "timestamp": 1440950400000,
     "open": 0.709,
     "high": 0.709,
     "low": 0.661,
     "close": 0.698,
+    "percent": -0.29,
     "volume": 1335549,
-    "amount": 908583,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0.81,
+    "zgs": 1648825.9259259258
   },
   {
     "date": "2015-09-01",
+    "timestamp": 1441036800000,
     "open": 0.662,
     "high": 0.711,
     "low": 0.662,
     "close": 0.705,
+    "percent": 1,
     "volume": 2030341,
-    "amount": 1416859,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 1.24,
+    "zgs": 1637371.7741935484
   },
   {
     "date": "2015-09-02",
+    "timestamp": 1441123200000,
     "open": 0.703,
     "high": 0.709,
     "low": 0.685,
     "close": 0.705,
+    "percent": 0,
     "volume": 1131931,
-    "amount": 793724,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.69,
+    "zgs": 1640479.7101449277
   },
   {
     "date": "2015-09-07",
+    "timestamp": 1441555200000,
     "open": 0.69,
     "high": 0.728,
     "low": 0.685,
     "close": 0.688,
+    "percent": -2.41,
     "volume": 423555,
-    "amount": 292997,
-    "timestamp": "",
-    "percent": -2.41
+    "hsl": 0.26,
+    "zgs": 1629057.6923076923
   },
   {
     "date": "2015-09-08",
+    "timestamp": 1441641600000,
     "open": 0.712,
     "high": 0.712,
     "low": 0.683,
     "close": 0.697,
+    "percent": 1.31,
     "volume": 265817,
-    "amount": 184779,
-    "timestamp": "",
-    "percent": 1.31
+    "hsl": 0.16,
+    "zgs": 1661356.25
   },
   {
     "date": "2015-09-09",
+    "timestamp": 1441728000000,
     "open": 0.703,
     "high": 0.719,
     "low": 0.697,
     "close": 0.704,
+    "percent": 1,
     "volume": 331500,
-    "amount": 234599,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0.2,
+    "zgs": 1657500
   },
   {
     "date": "2015-09-10",
+    "timestamp": 1441814400000,
     "open": 0.7,
     "high": 0.71,
     "low": 0.7,
     "close": 0.705,
+    "percent": 0.14,
     "volume": 203011,
-    "amount": 143129,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.12,
+    "zgs": 1691758.3333333335
   },
   {
     "date": "2015-09-11",
+    "timestamp": 1441900800000,
     "open": 0.697,
     "high": 0.709,
     "low": 0.697,
     "close": 0.705,
+    "percent": 0,
     "volume": 409511,
-    "amount": 287275,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.25,
+    "zgs": 1638044
   },
   {
     "date": "2015-09-14",
+    "timestamp": 1442160000000,
     "open": 0.714,
     "high": 0.714,
     "low": 0.683,
     "close": 0.69,
+    "percent": -2.13,
     "volume": 611500,
-    "amount": 424616,
-    "timestamp": "",
-    "percent": -2.13
+    "hsl": 0.37,
+    "zgs": 1652702.7027027027
   },
   {
     "date": "2015-09-15",
+    "timestamp": 1442246400000,
     "open": 0.681,
     "high": 0.704,
     "low": 0.671,
     "close": 0.674,
+    "percent": -2.32,
     "volume": 119906,
-    "amount": 81683,
-    "timestamp": "",
-    "percent": -2.32
+    "hsl": 0.07,
+    "zgs": 1712942.857142857
   },
   {
     "date": "2015-09-16",
+    "timestamp": 1442332800000,
     "open": 0.676,
     "high": 0.701,
     "low": 0.661,
     "close": 0.698,
+    "percent": 3.56,
     "volume": 441900,
-    "amount": 300369,
-    "timestamp": "",
-    "percent": 3.56
+    "hsl": 0.27,
+    "zgs": 1636666.6666666665
   },
   {
     "date": "2015-09-17",
+    "timestamp": 1442419200000,
     "open": 0.699,
     "high": 0.706,
     "low": 0.688,
     "close": 0.697,
+    "percent": -0.14,
     "volume": 1056906,
-    "amount": 741293,
-    "timestamp": "",
-    "percent": -0.14
+    "hsl": 0.64,
+    "zgs": 1651415.625
   },
   {
     "date": "2015-09-18",
+    "timestamp": 1442505600000,
     "open": 0.68,
     "high": 0.709,
     "low": 0.68,
     "close": 0.705,
+    "percent": 1.15,
     "volume": 237023,
-    "amount": 163580,
-    "timestamp": "",
-    "percent": 1.15
+    "hsl": 0.14,
+    "zgs": 1693021.4285714284
   },
   {
     "date": "2015-09-21",
+    "timestamp": 1442764800000,
     "open": 0.705,
     "high": 0.706,
     "low": 0.678,
     "close": 0.7,
+    "percent": -0.71,
     "volume": 175802,
-    "amount": 121982,
-    "timestamp": "",
-    "percent": -0.71
+    "hsl": 0.11,
+    "zgs": 1598200
   },
   {
     "date": "2015-09-22",
+    "timestamp": 1442851200000,
     "open": 0.705,
     "high": 0.715,
     "low": 0.7,
     "close": 0.706,
+    "percent": 0.86,
     "volume": 335611,
-    "amount": 236716,
-    "timestamp": "",
-    "percent": 0.86
+    "hsl": 0.2,
+    "zgs": 1678055
   },
   {
     "date": "2015-09-23",
+    "timestamp": 1442937600000,
     "open": 0.704,
     "high": 0.707,
     "low": 0.688,
     "close": 0.693,
+    "percent": -1.84,
     "volume": 288300,
-    "amount": 200978,
-    "timestamp": "",
-    "percent": -1.84
+    "hsl": 0.18,
+    "zgs": 1601666.6666666667
   },
   {
     "date": "2015-09-24",
+    "timestamp": 1443024000000,
     "open": 0.7,
     "high": 0.7,
     "low": 0.69,
     "close": 0.691,
+    "percent": -0.29,
     "volume": 271300,
-    "amount": 188244,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0.17,
+    "zgs": 1595882.3529411764
   },
   {
     "date": "2015-09-25",
+    "timestamp": 1443110400000,
     "open": 0.686,
     "high": 0.696,
     "low": 0.68,
     "close": 0.688,
+    "percent": -0.43,
     "volume": 144407,
-    "amount": 98933,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0.09,
+    "zgs": 1604522.2222222222
   },
   {
     "date": "2015-09-28",
+    "timestamp": 1443369600000,
     "open": 0.691,
     "high": 0.692,
     "low": 0.688,
     "close": 0.692,
+    "percent": 0.58,
     "volume": 125738,
-    "amount": 86862,
-    "timestamp": "",
-    "percent": 0.58
+    "hsl": 0.08,
+    "zgs": 1571725
   },
   {
     "date": "2015-09-29",
+    "timestamp": 1443456000000,
     "open": 0.679,
     "high": 0.691,
     "low": 0.678,
     "close": 0.687,
+    "percent": -0.72,
     "volume": 34000,
-    "amount": 23211,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0.02,
+    "zgs": 1700000
   },
   {
     "date": "2015-09-30",
+    "timestamp": 1443542400000,
     "open": 0.686,
     "high": 0.689,
     "low": 0.686,
     "close": 0.689,
+    "percent": 0.29,
     "volume": 201900,
-    "amount": 138903,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0.12,
+    "zgs": 1682500
   },
   {
     "date": "2015-10-08",
+    "timestamp": 1444233600000,
     "open": 0.694,
     "high": 0.708,
     "low": 0.694,
     "close": 0.707,
+    "percent": 2.61,
     "volume": 453879,
-    "amount": 318971,
-    "timestamp": "",
-    "percent": 2.61
+    "hsl": 0.28,
+    "zgs": 1620996.4285714284
   },
   {
     "date": "2015-10-09",
+    "timestamp": 1444320000000,
     "open": 0.7,
     "high": 0.709,
     "low": 0.7,
     "close": 0.708,
+    "percent": 0.14,
     "volume": 347602,
-    "amount": 245259,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.21,
+    "zgs": 1655247.6190476192
   },
   {
     "date": "2015-10-12",
+    "timestamp": 1444579200000,
     "open": 0.695,
     "high": 0.735,
     "low": 0.695,
     "close": 0.72,
+    "percent": 1.69,
     "volume": 1168006,
-    "amount": 841224,
-    "timestamp": "",
-    "percent": 1.69
+    "hsl": 0.71,
+    "zgs": 1645078.8732394367
   },
   {
     "date": "2015-10-13",
+    "timestamp": 1444665600000,
     "open": 0.715,
     "high": 0.734,
     "low": 0.715,
     "close": 0.724,
+    "percent": 0.56,
     "volume": 794207,
-    "amount": 576365,
-    "timestamp": "",
-    "percent": 0.56
+    "hsl": 0.48,
+    "zgs": 1654597.9166666667
   },
   {
     "date": "2015-10-14",
+    "timestamp": 1444752000000,
     "open": 0.719,
     "high": 0.73,
     "low": 0.716,
     "close": 0.725,
+    "percent": 0.14,
     "volume": 149407,
-    "amount": 107739,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.09,
+    "zgs": 1660077.7777777778
   },
   {
     "date": "2015-10-15",
+    "timestamp": 1444838400000,
     "open": 0.715,
     "high": 0.736,
     "low": 0.715,
     "close": 0.735,
+    "percent": 1.38,
     "volume": 387205,
-    "amount": 282734,
-    "timestamp": "",
-    "percent": 1.38
+    "hsl": 0.24,
+    "zgs": 1613354.1666666667
   },
   {
     "date": "2015-10-16",
+    "timestamp": 1444924800000,
     "open": 0.732,
     "high": 0.745,
     "low": 0.732,
     "close": 0.736,
+    "percent": 0.14,
     "volume": 904325,
-    "amount": 667601,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.55,
+    "zgs": 1644227.2727272727
   },
   {
     "date": "2015-10-19",
+    "timestamp": 1445184000000,
     "open": 0.737,
     "high": 0.755,
     "low": 0.732,
     "close": 0.745,
+    "percent": 1.22,
     "volume": 1316330,
-    "amount": 983434,
-    "timestamp": "",
-    "percent": 1.22
+    "hsl": 0.8,
+    "zgs": 1645412.5
   },
   {
     "date": "2015-10-20",
+    "timestamp": 1445270400000,
     "open": 0.754,
     "high": 0.755,
     "low": 0.738,
     "close": 0.745,
+    "percent": 0,
     "volume": 498517,
-    "amount": 373494,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.3,
+    "zgs": 1661723.3333333335
   },
   {
     "date": "2015-10-21",
+    "timestamp": 1445356800000,
     "open": 0.757,
     "high": 0.763,
     "low": 0.735,
     "close": 0.736,
+    "percent": -1.21,
     "volume": 1221400,
-    "amount": 917482,
-    "timestamp": "",
-    "percent": -1.21
+    "hsl": 0.74,
+    "zgs": 1650540.5405405406
   },
   {
     "date": "2015-10-22",
+    "timestamp": 1445443200000,
     "open": 0.74,
     "high": 0.749,
     "low": 0.739,
     "close": 0.746,
+    "percent": 1.36,
     "volume": 375519,
-    "amount": 278176,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0.23,
+    "zgs": 1632691.304347826
   },
   {
     "date": "2015-10-23",
+    "timestamp": 1445529600000,
     "open": 0.741,
     "high": 0.759,
     "low": 0.741,
     "close": 0.754,
+    "percent": 1.07,
     "volume": 903547,
-    "amount": 678859,
-    "timestamp": "",
-    "percent": 1.07
+    "hsl": 0.55,
+    "zgs": 1642812.727272727
   },
   {
     "date": "2015-10-26",
+    "timestamp": 1445788800000,
     "open": 0.771,
     "high": 0.776,
     "low": 0.764,
     "close": 0.766,
+    "percent": 1.59,
     "volume": 472830,
-    "amount": 362872,
-    "timestamp": "",
-    "percent": 1.59
+    "hsl": 0.27,
+    "zgs": 1751222.222222222
   },
   {
     "date": "2015-10-27",
+    "timestamp": 1445875200000,
     "open": 0.753,
     "high": 0.769,
     "low": 0.748,
     "close": 0.751,
+    "percent": -1.96,
     "volume": 140126,
-    "amount": 105475,
-    "timestamp": "",
-    "percent": -1.96
+    "hsl": 0.08,
+    "zgs": 1751575
   },
   {
     "date": "2015-10-28",
+    "timestamp": 1445961600000,
     "open": 0.742,
     "high": 0.795,
     "low": 0.742,
     "close": 0.747,
+    "percent": -0.53,
     "volume": 412500,
-    "amount": 310589,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0.23,
+    "zgs": 1793478.2608695652
   },
   {
     "date": "2015-10-29",
+    "timestamp": 1446048000000,
     "open": 0.75,
     "high": 0.77,
     "low": 0.749,
     "close": 0.752,
+    "percent": 0.67,
     "volume": 374406,
-    "amount": 284039,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0.21,
+    "zgs": 1782885.7142857143
   },
   {
     "date": "2015-10-30",
+    "timestamp": 1446134400000,
     "open": 0.75,
     "high": 0.762,
     "low": 0.721,
     "close": 0.753,
+    "percent": 0.13,
     "volume": 127600,
-    "amount": 94066,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.07,
+    "zgs": 1822857.1428571427
   },
   {
     "date": "2015-11-02",
+    "timestamp": 1446393600000,
     "open": 0.725,
     "high": 0.751,
     "low": 0.725,
     "close": 0.735,
+    "percent": -2.39,
     "volume": 318700,
-    "amount": 235839,
-    "timestamp": "",
-    "percent": -2.39
+    "hsl": 0.18,
+    "zgs": 1770555.5555555557
   },
   {
     "date": "2015-11-03",
+    "timestamp": 1446480000000,
     "open": 0.735,
     "high": 0.75,
     "low": 0.73,
     "close": 0.74,
+    "percent": 0.68,
     "volume": 426204,
-    "amount": 314103,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 0.24,
+    "zgs": 1775850
   },
   {
     "date": "2015-11-04",
+    "timestamp": 1446566400000,
     "open": 0.729,
     "high": 0.777,
     "low": 0.729,
     "close": 0.772,
+    "percent": 4.32,
     "volume": 1500158,
-    "amount": 1145006,
-    "timestamp": "",
-    "percent": 4.32
+    "hsl": 0.85,
+    "zgs": 1764891.7647058824
   },
   {
     "date": "2015-11-05",
+    "timestamp": 1446652800000,
     "open": 0.778,
     "high": 0.822,
     "low": 0.771,
     "close": 0.809,
+    "percent": 4.79,
     "volume": 2295949,
-    "amount": 1855692,
-    "timestamp": "",
-    "percent": 4.79
+    "hsl": 1.3,
+    "zgs": 1766114.6153846153
   },
   {
     "date": "2015-11-06",
+    "timestamp": 1446739200000,
     "open": 0.83,
     "high": 0.845,
     "low": 0.8,
     "close": 0.83,
+    "percent": 2.6,
     "volume": 1584403,
-    "amount": 1297547,
-    "timestamp": "",
-    "percent": 2.6
+    "hsl": 0.89,
+    "zgs": 1780228.0898876404
   },
   {
     "date": "2015-11-09",
+    "timestamp": 1446998400000,
     "open": 0.868,
     "high": 0.868,
     "low": 0.831,
     "close": 0.841,
+    "percent": 1.33,
     "volume": 1473209,
-    "amount": 1256151,
-    "timestamp": "",
-    "percent": 1.33
+    "hsl": 0.83,
+    "zgs": 1774950.6024096387
   },
   {
     "date": "2015-11-10",
+    "timestamp": 1447084800000,
     "open": 0.83,
     "high": 0.853,
     "low": 0.826,
     "close": 0.847,
+    "percent": 0.71,
     "volume": 475004,
-    "amount": 397856,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0.27,
+    "zgs": 1759274.074074074
   },
   {
     "date": "2015-11-11",
+    "timestamp": 1447171200000,
     "open": 0.838,
     "high": 0.854,
     "low": 0.826,
     "close": 0.834,
+    "percent": -1.53,
     "volume": 766522,
-    "amount": 636168,
-    "timestamp": "",
-    "percent": -1.53
+    "hsl": 0.43,
+    "zgs": 1782609.3023255814
   },
   {
     "date": "2015-11-12",
+    "timestamp": 1447257600000,
     "open": 0.827,
     "high": 0.84,
     "low": 0.827,
     "close": 0.828,
+    "percent": -0.72,
     "volume": 261935,
-    "amount": 216996,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0.15,
+    "zgs": 1746233.3333333335
   },
   {
     "date": "2015-11-13",
+    "timestamp": 1447344000000,
     "open": 0.822,
     "high": 0.84,
     "low": 0.822,
     "close": 0.826,
+    "percent": -0.24,
     "volume": 238377,
-    "amount": 196531,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.13,
+    "zgs": 1833669.2307692308
   },
   {
     "date": "2015-11-16",
+    "timestamp": 1447603200000,
     "open": 0.8,
     "high": 0.847,
     "low": 0.8,
     "close": 0.817,
+    "percent": -1.09,
     "volume": 96601,
-    "amount": 79449,
-    "timestamp": "",
-    "percent": -1.09
+    "hsl": 0.05,
+    "zgs": 1932020
   },
   {
     "date": "2015-11-17",
+    "timestamp": 1447689600000,
     "open": 0.822,
     "high": 0.845,
     "low": 0.801,
     "close": 0.802,
+    "percent": -1.84,
     "volume": 859706,
-    "amount": 709865,
-    "timestamp": "",
-    "percent": -1.84
+    "hsl": 0.49,
+    "zgs": 1754502.0408163266
   },
   {
     "date": "2015-11-18",
+    "timestamp": 1447776000000,
     "open": 0.808,
     "high": 0.831,
     "low": 0.807,
     "close": 0.819,
+    "percent": 2.12,
     "volume": 562365,
-    "amount": 463073,
-    "timestamp": "",
-    "percent": 2.12
+    "hsl": 0.32,
+    "zgs": 1757390.625
   },
   {
     "date": "2015-11-19",
+    "timestamp": 1447862400000,
     "open": 0.782,
     "high": 0.838,
     "low": 0.782,
     "close": 0.834,
+    "percent": 1.83,
     "volume": 239139,
-    "amount": 197408,
-    "timestamp": "",
-    "percent": 1.83
+    "hsl": 0.14,
+    "zgs": 1708135.714285714
   },
   {
     "date": "2015-11-20",
+    "timestamp": 1447948800000,
     "open": 0.815,
     "high": 0.836,
     "low": 0.815,
     "close": 0.83,
+    "percent": -0.48,
     "volume": 182700,
-    "amount": 151160,
-    "timestamp": "",
-    "percent": -0.48
+    "hsl": 0.1,
+    "zgs": 1827000
   },
   {
     "date": "2015-11-23",
+    "timestamp": 1448208000000,
     "open": 0.811,
     "high": 0.834,
     "low": 0.811,
     "close": 0.827,
+    "percent": -0.36,
     "volume": 192600,
-    "amount": 159213,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0.11,
+    "zgs": 1750909.0909090908
   },
   {
     "date": "2015-11-24",
+    "timestamp": 1448294400000,
     "open": 0.811,
     "high": 0.834,
     "low": 0.811,
     "close": 0.825,
+    "percent": -0.24,
     "volume": 193325,
-    "amount": 157758,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.11,
+    "zgs": 1757500
   },
   {
     "date": "2015-11-25",
+    "timestamp": 1448380800000,
     "open": 0.832,
     "high": 0.834,
     "low": 0.825,
     "close": 0.827,
+    "percent": 0.24,
     "volume": 1609200,
-    "amount": 1332681,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0.91,
+    "zgs": 1768351.6483516484
   },
   {
     "date": "2015-11-26",
+    "timestamp": 1448467200000,
     "open": 0.835,
     "high": 0.84,
     "low": 0.828,
     "close": 0.828,
+    "percent": 0.12,
     "volume": 1939501,
-    "amount": 1612695,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 1.1,
+    "zgs": 1763182.727272727
   },
   {
     "date": "2015-11-27",
+    "timestamp": 1448553600000,
     "open": 0.818,
     "high": 0.83,
     "low": 0.784,
     "close": 0.799,
+    "percent": -3.5,
     "volume": 384610,
-    "amount": 311423,
-    "timestamp": "",
-    "percent": -3.5
+    "hsl": 0.22,
+    "zgs": 1748227.2727272727
   },
   {
     "date": "2015-11-30",
+    "timestamp": 1448812800000,
     "open": 0.801,
     "high": 0.801,
     "low": 0.779,
     "close": 0.792,
+    "percent": -0.88,
     "volume": 1023783,
-    "amount": 805101,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0.58,
+    "zgs": 1765143.103448276
   },
   {
     "date": "2015-12-01",
+    "timestamp": 1448899200000,
     "open": 0.792,
     "high": 0.799,
     "low": 0.776,
     "close": 0.79,
+    "percent": -0.25,
     "volume": 291600,
-    "amount": 232547,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0.16,
+    "zgs": 1822500
   },
   {
     "date": "2015-12-02",
+    "timestamp": 1448985600000,
     "open": 0.804,
     "high": 0.84,
     "low": 0.804,
     "close": 0.84,
+    "percent": 6.33,
     "volume": 3728898,
-    "amount": 3051219,
-    "timestamp": "",
-    "percent": 6.33
+    "hsl": 2.11,
+    "zgs": 1767250.2369668249
   },
   {
     "date": "2015-12-03",
+    "timestamp": 1449072000000,
     "open": 0.838,
     "high": 0.849,
     "low": 0.83,
     "close": 0.841,
+    "percent": 0.12,
     "volume": 1214034,
-    "amount": 1024352,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.69,
+    "zgs": 1759469.5652173914
   },
   {
     "date": "2015-12-04",
+    "timestamp": 1449158400000,
     "open": 0.82,
     "high": 0.841,
     "low": 0.82,
     "close": 0.823,
+    "percent": -2.14,
     "volume": 404983,
-    "amount": 334832,
-    "timestamp": "",
-    "percent": -2.14
+    "hsl": 0.23,
+    "zgs": 1760795.6521739129
   },
   {
     "date": "2015-12-07",
+    "timestamp": 1449417600000,
     "open": 0.802,
     "high": 0.823,
     "low": 0.802,
     "close": 0.815,
+    "percent": -0.97,
     "volume": 291750,
-    "amount": 238643,
-    "timestamp": "",
-    "percent": -0.97
+    "hsl": 0.16,
+    "zgs": 1823437.5
   },
   {
     "date": "2015-12-08",
+    "timestamp": 1449504000000,
     "open": 0.819,
     "high": 0.819,
     "low": 0.809,
     "close": 0.814,
+    "percent": -0.12,
     "volume": 213400,
-    "amount": 173406,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.12,
+    "zgs": 1778333.3333333335
   },
   {
     "date": "2015-12-09",
+    "timestamp": 1449590400000,
     "open": 0.803,
     "high": 0.82,
     "low": 0.803,
     "close": 0.816,
+    "percent": 0.25,
     "volume": 63800,
-    "amount": 51867,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.04,
+    "zgs": 1595000
   },
   {
     "date": "2015-12-10",
+    "timestamp": 1449676800000,
     "open": 0.821,
     "high": 0.821,
     "low": 0.812,
     "close": 0.815,
+    "percent": -0.12,
     "volume": 123400,
-    "amount": 101020,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.07,
+    "zgs": 1762857.1428571427
   },
   {
     "date": "2015-12-11",
+    "timestamp": 1449763200000,
     "open": 0.8,
     "high": 0.819,
     "low": 0.8,
     "close": 0.816,
+    "percent": 0.12,
     "volume": 113406,
-    "amount": 91219,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.06,
+    "zgs": 1890100
   },
   {
     "date": "2015-12-14",
+    "timestamp": 1450022400000,
     "open": 0.811,
     "high": 0.833,
     "low": 0.803,
     "close": 0.83,
+    "percent": 1.72,
     "volume": 523371,
-    "amount": 428912,
-    "timestamp": "",
-    "percent": 1.72
+    "hsl": 0.3,
+    "zgs": 1744570
   },
   {
     "date": "2015-12-15",
+    "timestamp": 1450108800000,
     "open": 0.83,
     "high": 0.845,
     "low": 0.83,
     "close": 0.839,
+    "percent": 1.08,
     "volume": 1289565,
-    "amount": 1083351,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0.73,
+    "zgs": 1766527.397260274
   },
   {
     "date": "2015-12-16",
+    "timestamp": 1450195200000,
     "open": 0.841,
     "high": 0.848,
     "low": 0.821,
     "close": 0.838,
+    "percent": -0.12,
     "volume": 88500,
-    "amount": 73134,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.05,
+    "zgs": 1770000
   },
   {
     "date": "2015-12-17",
+    "timestamp": 1450281600000,
     "open": 0.818,
     "high": 0.855,
     "low": 0.818,
     "close": 0.84,
+    "percent": 0.24,
     "volume": 1177931,
-    "amount": 996103,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0.67,
+    "zgs": 1758105.9701492537
   },
   {
     "date": "2015-12-18",
+    "timestamp": 1450368000000,
     "open": 0.847,
     "high": 0.862,
     "low": 0.83,
     "close": 0.845,
+    "percent": 0.6,
     "volume": 1896058,
-    "amount": 1621345,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 1.07,
+    "zgs": 1772016.8224299063
   },
   {
     "date": "2015-12-21",
+    "timestamp": 1450627200000,
     "open": 0.853,
     "high": 0.871,
     "low": 0.837,
     "close": 0.871,
+    "percent": 3.08,
     "volume": 2570710,
-    "amount": 2217169,
-    "timestamp": "",
-    "percent": 3.08
+    "hsl": 1.45,
+    "zgs": 1772903.448275862
   },
   {
     "date": "2015-12-22",
+    "timestamp": 1450713600000,
     "open": 0.864,
     "high": 0.886,
     "low": 0.864,
     "close": 0.875,
+    "percent": 0.46,
     "volume": 167001,
-    "amount": 145702,
-    "timestamp": "",
-    "percent": 0.46
+    "hsl": 0.09,
+    "zgs": 1855566.6666666667
   },
   {
     "date": "2015-12-23",
+    "timestamp": 1450800000000,
     "open": 0.872,
     "high": 0.905,
     "low": 0.868,
     "close": 0.884,
+    "percent": 1.03,
     "volume": 2398020,
-    "amount": 2122953,
-    "timestamp": "",
-    "percent": 1.03
+    "hsl": 1.35,
+    "zgs": 1776311.111111111
   },
   {
     "date": "2015-12-24",
+    "timestamp": 1450886400000,
     "open": 0.89,
     "high": 0.89,
     "low": 0.86,
     "close": 0.87,
+    "percent": -1.58,
     "volume": 279600,
-    "amount": 243816,
-    "timestamp": "",
-    "percent": -1.58
+    "hsl": 0.16,
+    "zgs": 1747500
   },
   {
     "date": "2015-12-25",
+    "timestamp": 1450972800000,
     "open": 0.909,
     "high": 0.909,
     "low": 0.866,
     "close": 0.873,
+    "percent": 0.34,
     "volume": 193100,
-    "amount": 169007,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0.11,
+    "zgs": 1755454.5454545454
   },
   {
     "date": "2015-12-28",
+    "timestamp": 1451232000000,
     "open": 0.873,
     "high": 0.902,
     "low": 0.85,
     "close": 0.851,
+    "percent": -2.52,
     "volume": 311400,
-    "amount": 269306,
-    "timestamp": "",
-    "percent": -2.52
+    "hsl": 0.18,
+    "zgs": 1730000
   },
   {
     "date": "2015-12-29",
+    "timestamp": 1451318400000,
     "open": 0.851,
     "high": 0.924,
     "low": 0.84,
     "close": 0.854,
+    "percent": 0.35,
     "volume": 414300,
-    "amount": 353448,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0.23,
+    "zgs": 1801304.347826087
   },
   {
     "date": "2015-12-30",
+    "timestamp": 1451404800000,
     "open": 0.869,
     "high": 0.869,
     "low": 0.843,
     "close": 0.861,
+    "percent": 0.82,
     "volume": 183100,
-    "amount": 154965,
-    "timestamp": "",
-    "percent": 0.82
+    "hsl": 0.1,
+    "zgs": 1831000
   },
   {
     "date": "2015-12-31",
+    "timestamp": 1451491200000,
     "open": 0.847,
     "high": 0.857,
     "low": 0.844,
     "close": 0.849,
+    "percent": -1.39,
     "volume": 69601,
-    "amount": 59060,
-    "timestamp": "",
-    "percent": -1.39
+    "hsl": 0.04,
+    "zgs": 1740025
   },
   {
     "date": "2016-01-04",
+    "timestamp": 1451836800000,
     "open": 0.837,
     "high": 0.839,
     "low": 0.803,
     "close": 0.816,
+    "percent": -3.89,
     "volume": 176500,
-    "amount": 145594,
-    "timestamp": "",
-    "percent": -3.89
+    "hsl": 0.09,
+    "zgs": 1961111.1111111112
   },
   {
     "date": "2016-01-05",
+    "timestamp": 1451923200000,
     "open": 0.814,
     "high": 0.814,
     "low": 0.74,
     "close": 0.808,
+    "percent": -0.98,
     "volume": 2789945,
-    "amount": 2202669,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 1.37,
+    "zgs": 2036456.2043795618
   },
   {
     "date": "2016-01-06",
+    "timestamp": 1452009600000,
     "open": 0.78,
     "high": 0.816,
     "low": 0.78,
     "close": 0.808,
+    "percent": 0,
     "volume": 356324,
-    "amount": 284325,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.18,
+    "zgs": 1979577.7777777778
   },
   {
     "date": "2016-01-07",
+    "timestamp": 1452096000000,
     "open": 0.776,
     "high": 0.776,
     "low": 0.733,
     "close": 0.735,
+    "percent": -9.03,
     "volume": 161800,
-    "amount": 123177,
-    "timestamp": "",
-    "percent": -9.03
+    "hsl": 0.08,
+    "zgs": 2022500
   },
   {
     "date": "2016-01-08",
+    "timestamp": 1452182400000,
     "open": 0.796,
     "high": 0.796,
     "low": 0.738,
     "close": 0.776,
+    "percent": 5.58,
     "volume": 463601,
-    "amount": 354860,
-    "timestamp": "",
-    "percent": 5.58
+    "hsl": 0.23,
+    "zgs": 2015656.5217391304
   },
   {
     "date": "2016-01-11",
+    "timestamp": 1452441600000,
     "open": 0.769,
     "high": 0.769,
     "low": 0.731,
     "close": 0.731,
+    "percent": -5.8,
     "volume": 479500,
-    "amount": 356672,
-    "timestamp": "",
-    "percent": -5.8
+    "hsl": 0.24,
+    "zgs": 1997916.6666666667
   },
   {
     "date": "2016-01-12",
+    "timestamp": 1452528000000,
     "open": 0.735,
     "high": 0.746,
     "low": 0.732,
     "close": 0.734,
+    "percent": 0.41,
     "volume": 77800,
-    "amount": 57406,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0.04,
+    "zgs": 1945000
   },
   {
     "date": "2016-01-13",
+    "timestamp": 1452614400000,
     "open": 0.736,
     "high": 0.745,
     "low": 0.723,
     "close": 0.723,
+    "percent": -1.5,
     "volume": 220800,
-    "amount": 162825,
-    "timestamp": "",
-    "percent": -1.5
+    "hsl": 0.11,
+    "zgs": 2007272.7272727273
   },
   {
     "date": "2016-01-14",
+    "timestamp": 1452700800000,
     "open": 0.723,
     "high": 0.735,
     "low": 0.708,
     "close": 0.731,
+    "percent": 1.11,
     "volume": 379809,
-    "amount": 273962,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0.19,
+    "zgs": 1998994.7368421052
   },
   {
     "date": "2016-01-15",
+    "timestamp": 1452787200000,
     "open": 0.752,
     "high": 0.752,
     "low": 0.715,
     "close": 0.715,
+    "percent": -2.19,
     "volume": 141500,
-    "amount": 102485,
-    "timestamp": "",
-    "percent": -2.19
+    "hsl": 0.07,
+    "zgs": 2021428.5714285711
   },
   {
     "date": "2016-01-18",
+    "timestamp": 1453046400000,
     "open": 0.72,
     "high": 0.722,
     "low": 0.708,
     "close": 0.711,
+    "percent": -0.56,
     "volume": 244809,
-    "amount": 174242,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0.12,
+    "zgs": 2040075
   },
   {
     "date": "2016-01-19",
+    "timestamp": 1453132800000,
     "open": 0.728,
     "high": 0.734,
     "low": 0.682,
     "close": 0.733,
+    "percent": 3.09,
     "volume": 97909,
-    "amount": 70862,
-    "timestamp": "",
-    "percent": 3.09
+    "hsl": 0.05,
+    "zgs": 1958180
   },
   {
     "date": "2016-01-20",
+    "timestamp": 1453219200000,
     "open": 0.729,
     "high": 0.733,
     "low": 0.72,
     "close": 0.721,
+    "percent": -1.64,
     "volume": 80100,
-    "amount": 57910,
-    "timestamp": "",
-    "percent": -1.64
+    "hsl": 0.04,
+    "zgs": 2002500
   },
   {
     "date": "2016-01-21",
+    "timestamp": 1453305600000,
     "open": 0.682,
     "high": 0.723,
     "low": 0.682,
     "close": 0.705,
+    "percent": -2.22,
     "volume": 2161600,
-    "amount": 1553603,
-    "timestamp": "",
-    "percent": -2.22
+    "hsl": 1.06,
+    "zgs": 2039245.2830188677
   },
   {
     "date": "2016-01-22",
+    "timestamp": 1453392000000,
     "open": 0.71,
     "high": 0.714,
     "low": 0.691,
     "close": 0.712,
+    "percent": 0.99,
     "volume": 1521901,
-    "amount": 1072778,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0.75,
+    "zgs": 2029201.3333333333
   },
   {
     "date": "2016-01-25",
+    "timestamp": 1453651200000,
     "open": 0.716,
     "high": 0.717,
     "low": 0.706,
     "close": 0.708,
+    "percent": -0.56,
     "volume": 36200,
-    "amount": 25609,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0.02,
+    "zgs": 1810000
   },
   {
     "date": "2016-01-26",
+    "timestamp": 1453737600000,
     "open": 0.691,
     "high": 0.709,
     "low": 0.657,
     "close": 0.674,
+    "percent": -4.8,
     "volume": 459300,
-    "amount": 317821,
-    "timestamp": "",
-    "percent": -4.8
+    "hsl": 0.23,
+    "zgs": 1996956.5217391304
   },
   {
     "date": "2016-01-27",
+    "timestamp": 1453824000000,
     "open": 0.671,
     "high": 0.677,
     "low": 0.66,
     "close": 0.676,
+    "percent": 0.3,
     "volume": 863500,
-    "amount": 581416,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0.43,
+    "zgs": 2008139.534883721
   },
   {
     "date": "2016-01-28",
+    "timestamp": 1453910400000,
     "open": 0.629,
     "high": 0.7,
     "low": 0.629,
     "close": 0.667,
+    "percent": -1.33,
     "volume": 164500,
-    "amount": 111237,
-    "timestamp": "",
-    "percent": -1.33
+    "hsl": 0.08,
+    "zgs": 2056250
   },
   {
     "date": "2016-01-29",
+    "timestamp": 1453996800000,
     "open": 0.667,
     "high": 0.724,
     "low": 0.632,
     "close": 0.682,
+    "percent": 2.25,
     "volume": 12553990,
-    "amount": 8326760,
-    "timestamp": "",
-    "percent": 2.25
+    "hsl": 6.18,
+    "zgs": 2031389.9676375405
   },
   {
     "date": "2016-02-01",
+    "timestamp": 1454256000000,
     "open": 0.682,
     "high": 0.682,
     "low": 0.665,
     "close": 0.665,
+    "percent": -2.49,
     "volume": 195600,
-    "amount": 131549,
-    "timestamp": "",
-    "percent": -2.49
+    "hsl": 0.1,
+    "zgs": 1956000
   },
   {
     "date": "2016-02-02",
+    "timestamp": 1454342400000,
     "open": 0.677,
     "high": 0.683,
     "low": 0.673,
     "close": 0.677,
+    "percent": 1.8,
     "volume": 108101,
-    "amount": 73355,
-    "timestamp": "",
-    "percent": 1.8
+    "hsl": 0.05,
+    "zgs": 2162020
   },
   {
     "date": "2016-02-03",
+    "timestamp": 1454428800000,
     "open": 0.668,
     "high": 0.678,
     "low": 0.668,
     "close": 0.671,
+    "percent": -0.89,
     "volume": 512100,
-    "amount": 345837,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0.25,
+    "zgs": 2048400
   },
   {
     "date": "2016-02-04",
+    "timestamp": 1454515200000,
     "open": 0.686,
     "high": 0.686,
     "low": 0.68,
     "close": 0.683,
+    "percent": 1.79,
     "volume": 1225200,
-    "amount": 835132,
-    "timestamp": "",
-    "percent": 1.79
+    "hsl": 0.6,
+    "zgs": 2042000
   },
   {
     "date": "2016-02-05",
+    "timestamp": 1454601600000,
     "open": 0.685,
     "high": 0.685,
     "low": 0.677,
     "close": 0.68,
+    "percent": -0.44,
     "volume": 163600,
-    "amount": 111709,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0.08,
+    "zgs": 2045000
   },
   {
     "date": "2016-02-15",
+    "timestamp": 1455465600000,
     "open": 0.683,
     "high": 0.683,
     "low": 0.659,
     "close": 0.674,
+    "percent": -0.88,
     "volume": 183271,
-    "amount": 122071,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0.09,
+    "zgs": 2036344.4444444445
   },
   {
     "date": "2016-02-16",
+    "timestamp": 1455552000000,
     "open": 0.665,
     "high": 0.693,
     "low": 0.665,
     "close": 0.692,
+    "percent": 2.67,
     "volume": 131000,
-    "amount": 90095,
-    "timestamp": "",
-    "percent": 2.67
+    "hsl": 0.06,
+    "zgs": 2183333.3333333335
   },
   {
     "date": "2016-02-17",
+    "timestamp": 1455638400000,
     "open": 0.699,
     "high": 0.699,
     "low": 0.69,
     "close": 0.692,
+    "percent": 0,
     "volume": 45500,
-    "amount": 31583,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.02,
+    "zgs": 2275000
   },
   {
     "date": "2016-02-18",
+    "timestamp": 1455724800000,
     "open": 0.7,
     "high": 0.706,
     "low": 0.691,
     "close": 0.692,
+    "percent": 0,
     "volume": 139800,
-    "amount": 97247,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.07,
+    "zgs": 1997142.857142857
   },
   {
     "date": "2016-02-19",
+    "timestamp": 1455811200000,
     "open": 0.699,
     "high": 0.699,
     "low": 0.69,
     "close": 0.694,
+    "percent": 0.29,
     "volume": 209200,
-    "amount": 145236,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0.1,
+    "zgs": 2092000
   },
   {
     "date": "2016-02-22",
+    "timestamp": 1456070400000,
     "open": 0.682,
     "high": 0.715,
     "low": 0.682,
     "close": 0.702,
+    "percent": 1.15,
     "volume": 440303,
-    "amount": 311344,
-    "timestamp": "",
-    "percent": 1.15
+    "hsl": 0.22,
+    "zgs": 2001377.2727272727
   },
   {
     "date": "2016-02-23",
+    "timestamp": 1456156800000,
     "open": 0.715,
     "high": 0.715,
     "low": 0.697,
     "close": 0.702,
+    "percent": 0,
     "volume": 63903,
-    "amount": 44785,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.03,
+    "zgs": 2130100
   },
   {
     "date": "2016-02-24",
+    "timestamp": 1456243200000,
     "open": 0.711,
     "high": 0.711,
     "low": 0.69,
     "close": 0.706,
+    "percent": 0.57,
     "volume": 396675,
-    "amount": 278124,
-    "timestamp": "",
-    "percent": 0.57
+    "hsl": 0.2,
+    "zgs": 1983375
   },
   {
     "date": "2016-02-25",
+    "timestamp": 1456329600000,
     "open": 0.694,
     "high": 0.699,
     "low": 0.651,
     "close": 0.673,
+    "percent": -4.67,
     "volume": 180900,
-    "amount": 123101,
-    "timestamp": "",
-    "percent": -4.67
+    "hsl": 0.09,
+    "zgs": 2010000
   },
   {
     "date": "2016-02-26",
+    "timestamp": 1456416000000,
     "open": 0.685,
     "high": 0.699,
     "low": 0.658,
     "close": 0.689,
+    "percent": 2.38,
     "volume": 184699,
-    "amount": 124575,
-    "timestamp": "",
-    "percent": 2.38
+    "hsl": 0.09,
+    "zgs": 2052211.1111111112
   },
   {
     "date": "2016-02-29",
+    "timestamp": 1456675200000,
     "open": 0.688,
     "high": 0.688,
     "low": 0.658,
     "close": 0.66,
+    "percent": -4.21,
     "volume": 176300,
-    "amount": 116722,
-    "timestamp": "",
-    "percent": -4.21
+    "hsl": 0.09,
+    "zgs": 1958888.888888889
   },
   {
     "date": "2016-03-01",
+    "timestamp": 1456761600000,
     "open": 0.665,
     "high": 0.675,
     "low": 0.665,
     "close": 0.675,
+    "percent": 2.27,
     "volume": 317393,
-    "amount": 212618,
-    "timestamp": "",
-    "percent": 2.27
+    "hsl": 0.16,
+    "zgs": 1983706.25
   },
   {
     "date": "2016-03-02",
+    "timestamp": 1456848000000,
     "open": 0.7,
     "high": 0.707,
     "low": 0.663,
     "close": 0.707,
+    "percent": 4.74,
     "volume": 240793,
-    "amount": 167593,
-    "timestamp": "",
-    "percent": 4.74
+    "hsl": 0.12,
+    "zgs": 2006608.3333333335
   },
   {
     "date": "2016-03-03",
+    "timestamp": 1456934400000,
     "open": 0.705,
     "high": 0.709,
     "low": 0.699,
     "close": 0.706,
+    "percent": -0.14,
     "volume": 460125,
-    "amount": 322887,
-    "timestamp": "",
-    "percent": -0.14
+    "hsl": 0.23,
+    "zgs": 2000543.4782608694
   },
   {
     "date": "2016-03-04",
+    "timestamp": 1457020800000,
     "open": 0.706,
     "high": 0.72,
     "low": 0.692,
     "close": 0.718,
+    "percent": 1.7,
     "volume": 820407,
-    "amount": 578230,
-    "timestamp": "",
-    "percent": 1.7
+    "hsl": 0.4,
+    "zgs": 2051017.5
   },
   {
     "date": "2016-03-07",
+    "timestamp": 1457280000000,
     "open": 0.718,
     "high": 0.72,
     "low": 0.707,
     "close": 0.72,
+    "percent": 0.28,
     "volume": 343622,
-    "amount": 247178,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0.17,
+    "zgs": 2021305.882352941
   },
   {
     "date": "2016-03-08",
+    "timestamp": 1457366400000,
     "open": 0.72,
     "high": 0.72,
     "low": 0.698,
     "close": 0.719,
+    "percent": -0.14,
     "volume": 137479,
-    "amount": 96765,
-    "timestamp": "",
-    "percent": -0.14
+    "hsl": 0.07,
+    "zgs": 1963985.714285714
   },
   {
     "date": "2016-03-09",
+    "timestamp": 1457452800000,
     "open": 0.699,
     "high": 0.716,
     "low": 0.699,
     "close": 0.716,
+    "percent": -0.42,
     "volume": 170800,
-    "amount": 120567,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0.08,
+    "zgs": 2135000
   },
   {
     "date": "2016-03-10",
+    "timestamp": 1457539200000,
     "open": 0.702,
     "high": 0.717,
     "low": 0.701,
     "close": 0.717,
+    "percent": 0.14,
     "volume": 65600,
-    "amount": 46198,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.03,
+    "zgs": 2186666.666666667
   },
   {
     "date": "2016-03-11",
+    "timestamp": 1457625600000,
     "open": 0.715,
     "high": 0.789,
     "low": 0.689,
     "close": 0.707,
+    "percent": -1.39,
     "volume": 399500,
-    "amount": 280512,
-    "timestamp": "",
-    "percent": -1.39
+    "hsl": 0.2,
+    "zgs": 1997500
   },
   {
     "date": "2016-03-14",
+    "timestamp": 1457884800000,
     "open": 0.712,
     "high": 0.717,
     "low": 0.7,
     "close": 0.714,
+    "percent": 0.99,
     "volume": 196484,
-    "amount": 139383,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0.1,
+    "zgs": 1964840
   },
   {
     "date": "2016-03-15",
+    "timestamp": 1457971200000,
     "open": 0.714,
     "high": 0.714,
     "low": 0.701,
     "close": 0.71,
+    "percent": -0.56,
     "volume": 201000,
-    "amount": 141920,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0.1,
+    "zgs": 2010000
   },
   {
     "date": "2016-03-16",
+    "timestamp": 1458057600000,
     "open": 0.697,
     "high": 0.718,
     "low": 0.697,
     "close": 0.715,
+    "percent": 0.7,
     "volume": 561931,
-    "amount": 399677,
-    "timestamp": "",
-    "percent": 0.7
+    "hsl": 0.28,
+    "zgs": 2006896.4285714284
   },
   {
     "date": "2016-03-17",
+    "timestamp": 1458144000000,
     "open": 0.708,
     "high": 0.721,
     "low": 0.708,
     "close": 0.72,
+    "percent": 0.7,
     "volume": 216831,
-    "amount": 155710,
-    "timestamp": "",
-    "percent": 0.7
+    "hsl": 0.11,
+    "zgs": 1971190.9090909092
   },
   {
     "date": "2016-03-18",
+    "timestamp": 1458230400000,
     "open": 0.72,
     "high": 0.73,
     "low": 0.719,
     "close": 0.728,
+    "percent": 1.11,
     "volume": 172604,
-    "amount": 125239,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0.08,
+    "zgs": 2157550
   },
   {
     "date": "2016-03-21",
+    "timestamp": 1458489600000,
     "open": 0.735,
     "high": 0.757,
     "low": 0.735,
     "close": 0.752,
+    "percent": 3.3,
     "volume": 1071300,
-    "amount": 806582,
-    "timestamp": "",
-    "percent": 3.3
+    "hsl": 0.53,
+    "zgs": 2021320.754716981
   },
   {
     "date": "2016-03-22",
+    "timestamp": 1458576000000,
     "open": 0.734,
     "high": 0.758,
     "low": 0.734,
     "close": 0.741,
+    "percent": -1.46,
     "volume": 449600,
-    "amount": 335850,
-    "timestamp": "",
-    "percent": -1.46
+    "hsl": 0.22,
+    "zgs": 2043636.3636363635
   },
   {
     "date": "2016-03-23",
+    "timestamp": 1458662400000,
     "open": 0.731,
     "high": 0.748,
     "low": 0.731,
     "close": 0.742,
+    "percent": 0.13,
     "volume": 311800,
-    "amount": 231025,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.15,
+    "zgs": 2078666.6666666667
   },
   {
     "date": "2016-03-24",
+    "timestamp": 1458748800000,
     "open": 0.733,
     "high": 0.742,
     "low": 0.732,
     "close": 0.732,
+    "percent": -1.35,
     "volume": 421666,
-    "amount": 308781,
-    "timestamp": "",
-    "percent": -1.35
+    "hsl": 0.21,
+    "zgs": 2007933.3333333335
   },
   {
     "date": "2016-03-25",
+    "timestamp": 1458835200000,
     "open": 0.732,
     "high": 0.74,
     "low": 0.721,
     "close": 0.73,
+    "percent": -0.27,
     "volume": 97500,
-    "amount": 71514,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0.05,
+    "zgs": 1950000
   },
   {
     "date": "2016-03-28",
+    "timestamp": 1459094400000,
     "open": 0.767,
     "high": 0.767,
     "low": 0.73,
     "close": 0.731,
+    "percent": 0.14,
     "volume": 237600,
-    "amount": 175470,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.12,
+    "zgs": 1980000
   },
   {
     "date": "2016-03-29",
+    "timestamp": 1459180800000,
     "open": 0.767,
     "high": 0.767,
     "low": 0.719,
     "close": 0.743,
+    "percent": 1.64,
     "volume": 151000,
-    "amount": 109541,
-    "timestamp": "",
-    "percent": 1.64
+    "hsl": 0.07,
+    "zgs": 2157142.857142857
   },
   {
     "date": "2016-03-30",
+    "timestamp": 1459267200000,
     "open": 0.716,
     "high": 0.75,
     "low": 0.716,
     "close": 0.75,
+    "percent": 0.94,
     "volume": 378900,
-    "amount": 280047,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0.19,
+    "zgs": 1994210.5263157894
   },
   {
     "date": "2016-03-31",
+    "timestamp": 1459353600000,
     "open": 0.739,
     "high": 0.744,
     "low": 0.736,
     "close": 0.736,
+    "percent": -1.87,
     "volume": 296715,
-    "amount": 219643,
-    "timestamp": "",
-    "percent": -1.87
+    "hsl": 0.15,
+    "zgs": 1978100
   },
   {
     "date": "2016-04-01",
+    "timestamp": 1459440000000,
     "open": 0.745,
     "high": 0.745,
     "low": 0.726,
     "close": 0.744,
+    "percent": 1.09,
     "volume": 672200,
-    "amount": 492275,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0.33,
+    "zgs": 2036969.6969696968
   },
   {
     "date": "2016-04-05",
+    "timestamp": 1459785600000,
     "open": 0.75,
     "high": 0.753,
     "low": 0.733,
     "close": 0.75,
+    "percent": 0.81,
     "volume": 840612,
-    "amount": 623822,
-    "timestamp": "",
-    "percent": 0.81
+    "hsl": 0.41,
+    "zgs": 2050273.1707317075
   },
   {
     "date": "2016-04-06",
+    "timestamp": 1459872000000,
     "open": 0.75,
     "high": 0.75,
     "low": 0.737,
     "close": 0.743,
+    "percent": -0.93,
     "volume": 234312,
-    "amount": 173127,
-    "timestamp": "",
-    "percent": -0.93
+    "hsl": 0.12,
+    "zgs": 1952600
   },
   {
     "date": "2016-04-07",
+    "timestamp": 1459958400000,
     "open": 0.741,
     "high": 0.744,
     "low": 0.733,
     "close": 0.733,
+    "percent": -1.35,
     "volume": 161200,
-    "amount": 119118,
-    "timestamp": "",
-    "percent": -1.35
+    "hsl": 0.08,
+    "zgs": 2015000
   },
   {
     "date": "2016-04-08",
+    "timestamp": 1460044800000,
     "open": 0.73,
     "high": 0.739,
     "low": 0.722,
     "close": 0.722,
+    "percent": -1.5,
     "volume": 91300,
-    "amount": 66579,
-    "timestamp": "",
-    "percent": -1.5
+    "hsl": 0.04,
+    "zgs": 2282500
   },
   {
     "date": "2016-04-11",
+    "timestamp": 1460304000000,
     "open": 0.737,
     "high": 0.742,
     "low": 0.728,
     "close": 0.737,
+    "percent": 2.08,
     "volume": 246681,
-    "amount": 181642,
-    "timestamp": "",
-    "percent": 2.08
+    "hsl": 0.12,
+    "zgs": 2055675
   },
   {
     "date": "2016-04-12",
+    "timestamp": 1460390400000,
     "open": 0.744,
     "high": 0.744,
     "low": 0.731,
     "close": 0.732,
+    "percent": -0.68,
     "volume": 16100,
-    "amount": 11788,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 0.01,
+    "zgs": 1610000
   },
   {
     "date": "2016-04-13",
+    "timestamp": 1460476800000,
     "open": 0.744,
     "high": 0.752,
     "low": 0.738,
     "close": 0.74,
+    "percent": 1.09,
     "volume": 577826,
-    "amount": 431304,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0.28,
+    "zgs": 2063664.2857142854
   },
   {
     "date": "2016-04-14",
+    "timestamp": 1460563200000,
     "open": 0.742,
     "high": 0.749,
     "low": 0.739,
     "close": 0.74,
+    "percent": 0,
     "volume": 388804,
-    "amount": 287891,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.19,
+    "zgs": 2046336.8421052631
   },
   {
     "date": "2016-04-15",
+    "timestamp": 1460649600000,
     "open": 0.751,
     "high": 0.751,
     "low": 0.736,
     "close": 0.749,
+    "percent": 1.22,
     "volume": 397917,
-    "amount": 295280,
-    "timestamp": "",
-    "percent": 1.22
+    "hsl": 0.2,
+    "zgs": 1989585
   },
   {
     "date": "2016-04-18",
+    "timestamp": 1460908800000,
     "open": 0.737,
     "high": 0.747,
     "low": 0.735,
     "close": 0.736,
+    "percent": -1.74,
     "volume": 426701,
-    "amount": 315041,
-    "timestamp": "",
-    "percent": -1.74
+    "hsl": 0.21,
+    "zgs": 2031909.5238095238
   },
   {
     "date": "2016-04-19",
+    "timestamp": 1460995200000,
     "open": 0.74,
     "high": 0.745,
     "low": 0.74,
     "close": 0.741,
+    "percent": 0.68,
     "volume": 2505704,
-    "amount": 1858635,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 1.23,
+    "zgs": 2037157.7235772358
   },
   {
     "date": "2016-04-20",
+    "timestamp": 1461081600000,
     "open": 0.737,
     "high": 0.737,
     "low": 0.721,
     "close": 0.735,
+    "percent": -0.81,
     "volume": 86800,
-    "amount": 63709,
-    "timestamp": "",
-    "percent": -0.81
+    "hsl": 0.04,
+    "zgs": 2170000
   },
   {
     "date": "2016-04-21",
+    "timestamp": 1461168000000,
     "open": 0.735,
     "high": 0.735,
     "low": 0.729,
     "close": 0.729,
+    "percent": -0.82,
     "volume": 37100,
-    "amount": 27179,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0.02,
+    "zgs": 1855000
   },
   {
     "date": "2016-04-22",
+    "timestamp": 1461254400000,
     "open": 0.729,
     "high": 0.744,
     "low": 0.729,
     "close": 0.731,
+    "percent": 0.27,
     "volume": 32100,
-    "amount": 23576,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0.02,
+    "zgs": 1605000
   },
   {
     "date": "2016-04-25",
+    "timestamp": 1461513600000,
     "open": 0.714,
     "high": 0.75,
     "low": 0.714,
     "close": 0.736,
+    "percent": 0.68,
     "volume": 36704,
-    "amount": 26719,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 0.02,
+    "zgs": 1835200
   },
   {
     "date": "2016-04-26",
+    "timestamp": 1461600000000,
     "open": 0.73,
     "high": 0.749,
     "low": 0.73,
     "close": 0.73,
+    "percent": -0.82,
     "volume": 481100,
-    "amount": 353914,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0.29,
+    "zgs": 1658965.5172413795
   },
   {
     "date": "2016-04-27",
+    "timestamp": 1461686400000,
     "open": 0.727,
     "high": 0.746,
     "low": 0.71,
     "close": 0.739,
+    "percent": 1.23,
     "volume": 194100,
-    "amount": 140426,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0.12,
+    "zgs": 1617500
   },
   {
     "date": "2016-04-28",
+    "timestamp": 1461772800000,
     "open": 0.731,
     "high": 0.737,
     "low": 0.722,
     "close": 0.732,
+    "percent": -0.95,
     "volume": 182105,
-    "amount": 132831,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0.11,
+    "zgs": 1655500
   },
   {
     "date": "2016-04-29",
+    "timestamp": 1461859200000,
     "open": 0.727,
     "high": 0.736,
     "low": 0.727,
     "close": 0.736,
+    "percent": 0.55,
     "volume": 5800,
-    "amount": 4219,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-05-03",
+    "timestamp": 1462204800000,
     "open": 0.735,
     "high": 0.748,
     "low": 0.727,
     "close": 0.746,
+    "percent": 1.36,
     "volume": 678536,
-    "amount": 501609,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0.41,
+    "zgs": 1654965.8536585367
   },
   {
     "date": "2016-05-04",
+    "timestamp": 1462291200000,
     "open": 0.752,
     "high": 0.753,
     "low": 0.731,
     "close": 0.743,
+    "percent": -0.4,
     "volume": 510248,
-    "amount": 377222,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 0.31,
+    "zgs": 1645961.2903225806
   },
   {
     "date": "2016-05-05",
+    "timestamp": 1462377600000,
     "open": 0.733,
     "high": 0.738,
     "low": 0.73,
     "close": 0.738,
+    "percent": -0.67,
     "volume": 863915,
-    "amount": 636715,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0.53,
+    "zgs": 1630028.3018867923
   },
   {
     "date": "2016-05-06",
+    "timestamp": 1462464000000,
     "open": 0.733,
     "high": 0.739,
     "low": 0.725,
     "close": 0.732,
+    "percent": -0.81,
     "volume": 403701,
-    "amount": 297557,
-    "timestamp": "",
-    "percent": -0.81
+    "hsl": 0.25,
+    "zgs": 1614804
   },
   {
     "date": "2016-05-09",
+    "timestamp": 1462723200000,
     "open": 0.727,
     "high": 0.729,
     "low": 0.708,
     "close": 0.711,
+    "percent": -2.87,
     "volume": 70044,
-    "amount": 50437,
-    "timestamp": "",
-    "percent": -2.87
+    "hsl": 0.04,
+    "zgs": 1751100
   },
   {
     "date": "2016-05-10",
+    "timestamp": 1462809600000,
     "open": 0.71,
     "high": 0.718,
     "low": 0.706,
     "close": 0.706,
+    "percent": -0.7,
     "volume": 156236,
-    "amount": 110937,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 0.1,
+    "zgs": 1562360
   },
   {
     "date": "2016-05-11",
+    "timestamp": 1462896000000,
     "open": 0.705,
     "high": 0.711,
     "low": 0.705,
     "close": 0.711,
+    "percent": 0.71,
     "volume": 152000,
-    "amount": 107391,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0.09,
+    "zgs": 1688888.888888889
   },
   {
     "date": "2016-05-12",
+    "timestamp": 1462982400000,
     "open": 0.701,
     "high": 0.709,
     "low": 0.701,
     "close": 0.705,
+    "percent": -0.84,
     "volume": 284205,
-    "amount": 201017,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0.17,
+    "zgs": 1671794.1176470588
   },
   {
     "date": "2016-05-13",
+    "timestamp": 1463068800000,
     "open": 0.707,
     "high": 0.712,
     "low": 0.706,
     "close": 0.712,
+    "percent": 0.99,
     "volume": 20601,
-    "amount": 14557,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0.01,
+    "zgs": 2060100
   },
   {
     "date": "2016-05-16",
+    "timestamp": 1463328000000,
     "open": 0.712,
     "high": 0.712,
     "low": 0.701,
     "close": 0.71,
+    "percent": -0.28,
     "volume": 244210,
-    "amount": 172045,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0.15,
+    "zgs": 1628066.6666666667
   },
   {
     "date": "2016-05-17",
+    "timestamp": 1463414400000,
     "open": 0.71,
     "high": 0.71,
     "low": 0.71,
     "close": 0.71,
+    "percent": 0,
     "volume": 5600,
-    "amount": 3976,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-05-18",
+    "timestamp": 1463500800000,
     "open": 0.711,
     "high": 0.711,
     "low": 0.702,
     "close": 0.703,
+    "percent": -0.99,
     "volume": 31700,
-    "amount": 22293,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0.02,
+    "zgs": 1585000
   },
   {
     "date": "2016-05-19",
+    "timestamp": 1463587200000,
     "open": 0.706,
     "high": 0.707,
     "low": 0.706,
     "close": 0.706,
+    "percent": 0.43,
     "volume": 9500,
-    "amount": 6708,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0.01,
+    "zgs": 950000
   },
   {
     "date": "2016-05-20",
+    "timestamp": 1463673600000,
     "open": 0.706,
     "high": 0.707,
     "low": 0.704,
     "close": 0.704,
+    "percent": -0.28,
     "volume": 270618,
-    "amount": 191039,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0.16,
+    "zgs": 1691362.5
   },
   {
     "date": "2016-05-23",
+    "timestamp": 1463932800000,
     "open": 0.705,
     "high": 0.715,
     "low": 0.705,
     "close": 0.713,
+    "percent": 1.28,
     "volume": 46400,
-    "amount": 33054,
-    "timestamp": "",
-    "percent": 1.28
+    "hsl": 0.03,
+    "zgs": 1546666.6666666667
   },
   {
     "date": "2016-05-24",
+    "timestamp": 1464019200000,
     "open": 0.711,
     "high": 0.711,
     "low": 0.706,
     "close": 0.706,
+    "percent": -0.98,
     "volume": 3700,
-    "amount": 2615,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-05-25",
+    "timestamp": 1464105600000,
     "open": 0.703,
     "high": 0.714,
     "low": 0.703,
     "close": 0.713,
+    "percent": 0.99,
     "volume": 25010,
-    "amount": 17737,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0.02,
+    "zgs": 1250500
   },
   {
     "date": "2016-05-26",
+    "timestamp": 1464192000000,
     "open": 0.702,
     "high": 0.708,
     "low": 0.702,
     "close": 0.707,
+    "percent": -0.84,
     "volume": 37902,
-    "amount": 26656,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0.02,
+    "zgs": 1895100
   },
   {
     "date": "2016-05-27",
+    "timestamp": 1464278400000,
     "open": 0.704,
     "high": 0.709,
     "low": 0.704,
     "close": 0.709,
+    "percent": 0.28,
     "volume": 61000,
-    "amount": 43246,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0.04,
+    "zgs": 1525000
   },
   {
     "date": "2016-05-30",
+    "timestamp": 1464537600000,
     "open": 0.712,
     "high": 0.713,
     "low": 0.705,
     "close": 0.71,
+    "percent": 0.14,
     "volume": 36100,
-    "amount": 25657,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.02,
+    "zgs": 1805000
   },
   {
     "date": "2016-05-31",
+    "timestamp": 1464624000000,
     "open": 0.715,
     "high": 0.73,
     "low": 0.715,
     "close": 0.73,
+    "percent": 2.82,
     "volume": 168700,
-    "amount": 122275,
-    "timestamp": "",
-    "percent": 2.82
+    "hsl": 0.1,
+    "zgs": 1687000
   },
   {
     "date": "2016-06-01",
+    "timestamp": 1464710400000,
     "open": 0.732,
     "high": 0.735,
     "low": 0.72,
     "close": 0.722,
+    "percent": -1.1,
     "volume": 340900,
-    "amount": 248069,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0.21,
+    "zgs": 1623333.3333333335
   },
   {
     "date": "2016-06-02",
+    "timestamp": 1464796800000,
     "open": 0.727,
     "high": 0.727,
     "low": 0.71,
     "close": 0.724,
+    "percent": 0.28,
     "volume": 216905,
-    "amount": 155761,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0.13,
+    "zgs": 1668500
   },
   {
     "date": "2016-06-03",
+    "timestamp": 1464883200000,
     "open": 0.724,
     "high": 0.728,
     "low": 0.721,
     "close": 0.727,
+    "percent": 0.41,
     "volume": 1746400,
-    "amount": 1269095,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 1.06,
+    "zgs": 1647547.1698113207
   },
   {
     "date": "2016-06-06",
+    "timestamp": 1465142400000,
     "open": 0.721,
     "high": 0.731,
     "low": 0.721,
     "close": 0.723,
+    "percent": -0.55,
     "volume": 102602,
-    "amount": 74834,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0.06,
+    "zgs": 1710033.3333333335
   },
   {
     "date": "2016-06-07",
+    "timestamp": 1465228800000,
     "open": 0.73,
     "high": 0.73,
     "low": 0.724,
     "close": 0.728,
+    "percent": 0.69,
     "volume": 100200,
-    "amount": 72981,
-    "timestamp": "",
-    "percent": 0.69
+    "hsl": 0.06,
+    "zgs": 1670000
   },
   {
     "date": "2016-06-08",
+    "timestamp": 1465315200000,
     "open": 0.724,
     "high": 0.731,
     "low": 0.721,
     "close": 0.73,
+    "percent": 0.27,
     "volume": 316800,
-    "amount": 230684,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0.19,
+    "zgs": 1667368.4210526315
   },
   {
     "date": "2016-06-13",
+    "timestamp": 1465747200000,
     "open": 0.725,
     "high": 0.728,
     "low": 0.718,
     "close": 0.718,
+    "percent": -1.64,
     "volume": 59114,
-    "amount": 42793,
-    "timestamp": "",
-    "percent": -1.64
+    "hsl": 0.04,
+    "zgs": 1477850
   },
   {
     "date": "2016-06-14",
+    "timestamp": 1465833600000,
     "open": 0.719,
     "high": 0.719,
     "low": 0.709,
     "close": 0.71,
+    "percent": -1.11,
     "volume": 4000,
-    "amount": 2843,
-    "timestamp": "",
-    "percent": -1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-06-15",
+    "timestamp": 1465920000000,
     "open": 0.711,
     "high": 0.724,
     "low": 0.711,
     "close": 0.724,
+    "percent": 1.97,
     "volume": 46401,
-    "amount": 33284,
-    "timestamp": "",
-    "percent": 1.97
+    "hsl": 0.03,
+    "zgs": 1546700
   },
   {
     "date": "2016-06-16",
+    "timestamp": 1466006400000,
     "open": 0.715,
     "high": 0.721,
     "low": 0.711,
     "close": 0.721,
+    "percent": -0.41,
     "volume": 369916,
-    "amount": 264315,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0.23,
+    "zgs": 1608330.4347826086
   },
   {
     "date": "2016-06-17",
+    "timestamp": 1466092800000,
     "open": 0.721,
     "high": 0.732,
     "low": 0.721,
     "close": 0.725,
+    "percent": 0.55,
     "volume": 55916,
-    "amount": 40605,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0.03,
+    "zgs": 1863866.6666666667
   },
   {
     "date": "2016-06-20",
+    "timestamp": 1466352000000,
     "open": 0.716,
     "high": 0.725,
     "low": 0.713,
     "close": 0.724,
+    "percent": -0.14,
     "volume": 148909,
-    "amount": 106690,
-    "timestamp": "",
-    "percent": -0.14
+    "hsl": 0.09,
+    "zgs": 1654544.4444444445
   },
   {
     "date": "2016-06-21",
+    "timestamp": 1466438400000,
     "open": 0.728,
     "high": 0.73,
     "low": 0.714,
     "close": 0.727,
+    "percent": 0.41,
     "volume": 214200,
-    "amount": 153897,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0.13,
+    "zgs": 1647692.3076923077
   },
   {
     "date": "2016-06-22",
+    "timestamp": 1466524800000,
     "open": 0.712,
     "high": 0.726,
     "low": 0.712,
     "close": 0.724,
+    "percent": -0.41,
     "volume": 931200,
-    "amount": 673118,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0.57,
+    "zgs": 1633684.210526316
   },
   {
     "date": "2016-06-23",
+    "timestamp": 1466611200000,
     "open": 0.724,
     "high": 0.731,
     "low": 0.718,
     "close": 0.731,
+    "percent": 0.97,
     "volume": 326401,
-    "amount": 236355,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0.2,
+    "zgs": 1632005
   },
   {
     "date": "2016-06-24",
+    "timestamp": 1466697600000,
     "open": 0.72,
     "high": 0.726,
     "low": 0.717,
     "close": 0.726,
+    "percent": -0.68,
     "volume": 100719,
-    "amount": 72484,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 0.06,
+    "zgs": 1678650
   },
   {
     "date": "2016-06-27",
+    "timestamp": 1466956800000,
     "open": 0.717,
     "high": 0.726,
     "low": 0.717,
     "close": 0.723,
+    "percent": -0.41,
     "volume": 88820,
-    "amount": 64223,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0.05,
+    "zgs": 1776400
   },
   {
     "date": "2016-06-28",
+    "timestamp": 1467043200000,
     "open": 0.723,
     "high": 0.723,
     "low": 0.718,
     "close": 0.723,
+    "percent": 0,
     "volume": 76100,
-    "amount": 54896,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.05,
+    "zgs": 1522000
   },
   {
     "date": "2016-06-29",
+    "timestamp": 1467129600000,
     "open": 0.722,
     "high": 0.725,
     "low": 0.72,
     "close": 0.724,
+    "percent": 0.14,
     "volume": 295103,
-    "amount": 212595,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.18,
+    "zgs": 1639461.1111111112
   },
   {
     "date": "2016-06-30",
+    "timestamp": 1467216000000,
     "open": 0.72,
     "high": 0.725,
     "low": 0.719,
     "close": 0.723,
+    "percent": -0.14,
     "volume": 233413,
-    "amount": 168254,
-    "timestamp": "",
-    "percent": -0.14
+    "hsl": 0.14,
+    "zgs": 1667235.714285714
   },
   {
     "date": "2016-07-01",
+    "timestamp": 1467302400000,
     "open": 0.725,
     "high": 0.726,
     "low": 0.722,
     "close": 0.726,
+    "percent": 0.41,
     "volume": 171600,
-    "amount": 124353,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0.11,
+    "zgs": 1560000
   },
   {
     "date": "2016-07-04",
+    "timestamp": 1467561600000,
     "open": 0.72,
     "high": 0.736,
     "low": 0.717,
     "close": 0.734,
+    "percent": 1.1,
     "volume": 578630,
-    "amount": 420842,
-    "timestamp": "",
-    "percent": 1.1
+    "hsl": 0.38,
+    "zgs": 1522710.5263157894
   },
   {
     "date": "2016-07-05",
+    "timestamp": 1467648000000,
     "open": 0.725,
     "high": 0.732,
     "low": 0.725,
     "close": 0.732,
+    "percent": -0.27,
     "volume": 215132,
-    "amount": 156519,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0.14,
+    "zgs": 1536657.1428571427
   },
   {
     "date": "2016-07-06",
+    "timestamp": 1467734400000,
     "open": 0.725,
     "high": 0.732,
     "low": 0.725,
     "close": 0.728,
+    "percent": -0.55,
     "volume": 273500,
-    "amount": 199437,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0.18,
+    "zgs": 1519444.4444444445
   },
   {
     "date": "2016-07-07",
+    "timestamp": 1467820800000,
     "open": 0.731,
     "high": 0.734,
     "low": 0.726,
     "close": 0.733,
+    "percent": 0.69,
     "volume": 391046,
-    "amount": 285450,
-    "timestamp": "",
-    "percent": 0.69
+    "hsl": 0.26,
+    "zgs": 1504023.0769230768
   },
   {
     "date": "2016-07-08",
+    "timestamp": 1467907200000,
     "open": 0.73,
     "high": 0.733,
     "low": 0.725,
     "close": 0.733,
+    "percent": 0,
     "volume": 302800,
-    "amount": 221432,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.2,
+    "zgs": 1514000
   },
   {
     "date": "2016-07-11",
+    "timestamp": 1468166400000,
     "open": 0.728,
     "high": 0.737,
     "low": 0.726,
     "close": 0.734,
+    "percent": 0.14,
     "volume": 134508,
-    "amount": 98399,
-    "timestamp": "",
-    "percent": 0.14
+    "hsl": 0.09,
+    "zgs": 1494533.3333333335
   },
   {
     "date": "2016-07-12",
+    "timestamp": 1468252800000,
     "open": 0.735,
     "high": 0.746,
     "low": 0.733,
     "close": 0.741,
+    "percent": 0.95,
     "volume": 1017448,
-    "amount": 750909,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0.67,
+    "zgs": 1518579.1044776118
   },
   {
     "date": "2016-07-13",
+    "timestamp": 1468339200000,
     "open": 0.74,
     "high": 0.753,
     "low": 0.732,
     "close": 0.752,
+    "percent": 1.48,
     "volume": 747861,
-    "amount": 561782,
-    "timestamp": "",
-    "percent": 1.48
+    "hsl": 0.5,
+    "zgs": 1495722
   },
   {
     "date": "2016-07-14",
+    "timestamp": 1468425600000,
     "open": 0.752,
     "high": 0.755,
     "low": 0.748,
     "close": 0.753,
+    "percent": 0.13,
     "volume": 418806,
-    "amount": 315045,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.28,
+    "zgs": 1495735.714285714
   },
   {
     "date": "2016-07-15",
+    "timestamp": 1468512000000,
     "open": 0.755,
     "high": 0.755,
     "low": 0.745,
     "close": 0.745,
+    "percent": -1.06,
     "volume": 33900,
-    "amount": 25334,
-    "timestamp": "",
-    "percent": -1.06
+    "hsl": 0.02,
+    "zgs": 1695000
   },
   {
     "date": "2016-07-18",
+    "timestamp": 1468771200000,
     "open": 0.75,
     "high": 0.75,
     "low": 0.746,
     "close": 0.746,
+    "percent": 0.13,
     "volume": 14000,
-    "amount": 10451,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.01,
+    "zgs": 1400000
   },
   {
     "date": "2016-07-19",
+    "timestamp": 1468857600000,
     "open": 0.737,
     "high": 0.745,
     "low": 0.737,
     "close": 0.738,
+    "percent": -1.07,
     "volume": 113100,
-    "amount": 83449,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0.07,
+    "zgs": 1615714.2857142854
   },
   {
     "date": "2016-07-20",
+    "timestamp": 1468944000000,
     "open": 0.746,
     "high": 0.746,
     "low": 0.745,
     "close": 0.746,
+    "percent": 1.08,
     "volume": 20000,
-    "amount": 14919,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0.01,
+    "zgs": 2000000
   },
   {
     "date": "2016-07-21",
+    "timestamp": 1469030400000,
     "open": 0.739,
     "high": 0.747,
     "low": 0.739,
     "close": 0.747,
+    "percent": 0.13,
     "volume": 354235,
-    "amount": 264299,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.23,
+    "zgs": 1540152.1739130435
   },
   {
     "date": "2016-07-22",
+    "timestamp": 1469116800000,
     "open": 0.748,
     "high": 0.748,
     "low": 0.736,
     "close": 0.737,
+    "percent": -1.34,
     "volume": 131507,
-    "amount": 97833,
-    "timestamp": "",
-    "percent": -1.34
+    "hsl": 0.09,
+    "zgs": 1461188.888888889
   },
   {
     "date": "2016-07-25",
+    "timestamp": 1469376000000,
     "open": 0.733,
     "high": 0.753,
     "low": 0.733,
     "close": 0.74,
+    "percent": 0.41,
     "volume": 83201,
-    "amount": 61203,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0.06,
+    "zgs": 1386683.3333333335
   },
   {
     "date": "2016-07-26",
+    "timestamp": 1469462400000,
     "open": 0.74,
     "high": 0.75,
     "low": 0.736,
     "close": 0.749,
+    "percent": 1.22,
     "volume": 120000,
-    "amount": 89424,
-    "timestamp": "",
-    "percent": 1.22
+    "hsl": 0.08,
+    "zgs": 1500000
   },
   {
     "date": "2016-07-27",
+    "timestamp": 1469548800000,
     "open": 0.746,
     "high": 0.749,
     "low": 0.732,
     "close": 0.745,
+    "percent": -0.53,
     "volume": 374894,
-    "amount": 279626,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0.25,
+    "zgs": 1499576
   },
   {
     "date": "2016-07-28",
+    "timestamp": 1469635200000,
     "open": 0.736,
     "high": 0.745,
     "low": 0.736,
     "close": 0.745,
+    "percent": 0,
     "volume": 2038,
-    "amount": 1509,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-07-29",
+    "timestamp": 1469721600000,
     "open": 0.749,
     "high": 0.749,
     "low": 0.737,
     "close": 0.738,
+    "percent": -0.94,
     "volume": 322110,
-    "amount": 237720,
-    "timestamp": "",
-    "percent": -0.94
+    "hsl": 0.21,
+    "zgs": 1533857.142857143
   },
   {
     "date": "2016-08-01",
+    "timestamp": 1469980800000,
     "open": 0.73,
     "high": 0.748,
     "low": 0.723,
     "close": 0.729,
+    "percent": -1.22,
     "volume": 62002,
-    "amount": 45051,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0.04,
+    "zgs": 1550050
   },
   {
     "date": "2016-08-02",
+    "timestamp": 1470067200000,
     "open": 0.73,
     "high": 0.738,
     "low": 0.73,
     "close": 0.731,
+    "percent": 0.27,
     "volume": 73701,
-    "amount": 53807,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0.05,
+    "zgs": 1474020
   },
   {
     "date": "2016-08-03",
+    "timestamp": 1470153600000,
     "open": 0.727,
     "high": 0.742,
     "low": 0.727,
     "close": 0.73,
+    "percent": -0.14,
     "volume": 3200,
-    "amount": 2336,
-    "timestamp": "",
-    "percent": -0.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-08-04",
+    "timestamp": 1470240000000,
     "open": 0.73,
     "high": 0.739,
     "low": 0.728,
     "close": 0.734,
+    "percent": 0.55,
     "volume": 122507,
-    "amount": 89491,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0.08,
+    "zgs": 1531337.5
   },
   {
     "date": "2016-08-05",
+    "timestamp": 1470326400000,
     "open": 0.734,
     "high": 0.75,
     "low": 0.73,
     "close": 0.743,
+    "percent": 1.23,
     "volume": 903238,
-    "amount": 670701,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0.6,
+    "zgs": 1505396.6666666667
   },
   {
     "date": "2016-08-08",
+    "timestamp": 1470585600000,
     "open": 0.739,
     "high": 0.754,
     "low": 0.739,
     "close": 0.75,
+    "percent": 0.94,
     "volume": 595659,
-    "amount": 446462,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0.39,
+    "zgs": 1527330.7692307692
   },
   {
     "date": "2016-08-09",
+    "timestamp": 1470672000000,
     "open": 0.75,
     "high": 0.755,
     "low": 0.742,
     "close": 0.754,
+    "percent": 0.53,
     "volume": 207245,
-    "amount": 154169,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0.14,
+    "zgs": 1480321.4285714284
   },
   {
     "date": "2016-08-10",
+    "timestamp": 1470758400000,
     "open": 0.749,
     "high": 0.75,
     "low": 0.747,
     "close": 0.747,
+    "percent": -0.93,
     "volume": 2161212,
-    "amount": 1616540,
-    "timestamp": "",
-    "percent": -0.93
+    "hsl": 1.43,
+    "zgs": 1511337.062937063
   },
   {
     "date": "2016-08-11",
+    "timestamp": 1470844800000,
     "open": 0.747,
     "high": 0.759,
     "low": 0.71,
     "close": 0.747,
+    "percent": 0,
     "volume": 680256,
-    "amount": 512798,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.45,
+    "zgs": 1511680
   },
   {
     "date": "2016-08-12",
+    "timestamp": 1470931200000,
     "open": 0.747,
     "high": 0.768,
     "low": 0.742,
     "close": 0.767,
+    "percent": 2.68,
     "volume": 918901,
-    "amount": 698920,
-    "timestamp": "",
-    "percent": 2.68
+    "hsl": 0.61,
+    "zgs": 1506395.0819672132
   },
   {
     "date": "2016-08-15",
+    "timestamp": 1471190400000,
     "open": 0.771,
     "high": 0.808,
     "low": 0.771,
     "close": 0.806,
+    "percent": 5.08,
     "volume": 1234345,
-    "amount": 985483,
-    "timestamp": "",
-    "percent": 5.08
+    "hsl": 0.82,
+    "zgs": 1505298.780487805
   },
   {
     "date": "2016-08-16",
+    "timestamp": 1471276800000,
     "open": 0.826,
     "high": 0.828,
     "low": 0.768,
     "close": 0.801,
+    "percent": -0.62,
     "volume": 140400,
-    "amount": 112756,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.09,
+    "zgs": 1560000
   },
   {
     "date": "2016-08-17",
+    "timestamp": 1471363200000,
     "open": 0.783,
     "high": 0.803,
     "low": 0.783,
     "close": 0.796,
+    "percent": -0.62,
     "volume": 125455,
-    "amount": 98789,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.08,
+    "zgs": 1568187.5
   },
   {
     "date": "2016-08-18",
+    "timestamp": 1471449600000,
     "open": 0.794,
     "high": 0.81,
     "low": 0.792,
     "close": 0.792,
+    "percent": -0.5,
     "volume": 324600,
-    "amount": 258637,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0.21,
+    "zgs": 1545714.2857142857
   },
   {
     "date": "2016-08-19",
+    "timestamp": 1471536000000,
     "open": 0.786,
     "high": 0.795,
     "low": 0.786,
     "close": 0.795,
+    "percent": 0.38,
     "volume": 95700,
-    "amount": 75858,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.06,
+    "zgs": 1595000
   },
   {
     "date": "2016-08-22",
+    "timestamp": 1471795200000,
     "open": 0.793,
     "high": 0.807,
     "low": 0.79,
     "close": 0.791,
+    "percent": -0.5,
     "volume": 36200,
-    "amount": 28644,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0.02,
+    "zgs": 1810000
   },
   {
     "date": "2016-08-23",
+    "timestamp": 1471881600000,
     "open": 0.79,
     "high": 0.793,
     "low": 0.788,
     "close": 0.791,
+    "percent": 0,
     "volume": 17600,
-    "amount": 13890,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 1760000
   },
   {
     "date": "2016-08-24",
+    "timestamp": 1471968000000,
     "open": 0.77,
     "high": 0.792,
     "low": 0.77,
     "close": 0.785,
+    "percent": -0.76,
     "volume": 18700,
-    "amount": 14532,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0.01,
+    "zgs": 1870000
   },
   {
     "date": "2016-08-25",
+    "timestamp": 1472054400000,
     "open": 0.775,
     "high": 0.788,
     "low": 0.775,
     "close": 0.788,
+    "percent": 0.38,
     "volume": 39102,
-    "amount": 30429,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.03,
+    "zgs": 1303400
   },
   {
     "date": "2016-08-26",
+    "timestamp": 1472140800000,
     "open": 0.787,
     "high": 0.787,
     "low": 0.778,
     "close": 0.782,
+    "percent": -0.76,
     "volume": 20701,
-    "amount": 16131,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0.01,
+    "zgs": 2070100
   },
   {
     "date": "2016-08-29",
+    "timestamp": 1472400000000,
     "open": 0.774,
     "high": 0.781,
     "low": 0.774,
     "close": 0.781,
+    "percent": -0.13,
     "volume": 240230,
-    "amount": 186743,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0.16,
+    "zgs": 1501437.5
   },
   {
     "date": "2016-08-30",
+    "timestamp": 1472486400000,
     "open": 0.778,
     "high": 0.785,
     "low": 0.778,
     "close": 0.781,
+    "percent": 0,
     "volume": 83400,
-    "amount": 65167,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.06,
+    "zgs": 1390000
   },
   {
     "date": "2016-08-31",
+    "timestamp": 1472572800000,
     "open": 0.776,
     "high": 0.799,
     "low": 0.776,
     "close": 0.793,
+    "percent": 1.54,
     "volume": 233301,
-    "amount": 184088,
-    "timestamp": "",
-    "percent": 1.54
+    "hsl": 0.15,
+    "zgs": 1555340
   },
   {
     "date": "2016-09-01",
+    "timestamp": 1472659200000,
     "open": 0.788,
     "high": 0.788,
     "low": 0.787,
     "close": 0.787,
+    "percent": -0.76,
     "volume": 1600,
-    "amount": 1261,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-09-02",
+    "timestamp": 1472745600000,
     "open": 0.781,
     "high": 0.789,
     "low": 0.781,
     "close": 0.789,
+    "percent": 0.25,
     "volume": 49106,
-    "amount": 38353,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.03,
+    "zgs": 1636866.6666666667
   },
   {
     "date": "2016-09-05",
+    "timestamp": 1473004800000,
     "open": 0.784,
     "high": 0.792,
     "low": 0.782,
     "close": 0.785,
+    "percent": -0.51,
     "volume": 8069200,
-    "amount": 6339964,
-    "timestamp": "",
-    "percent": -0.51
+    "hsl": 5.34,
+    "zgs": 1511086.1423220974
   },
   {
     "date": "2016-09-06",
+    "timestamp": 1473091200000,
     "open": 0.785,
     "high": 0.792,
     "low": 0.777,
     "close": 0.785,
+    "percent": 0,
     "volume": 1494608,
-    "amount": 1166984,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.99,
+    "zgs": 1509705.0505050505
   },
   {
     "date": "2016-09-07",
+    "timestamp": 1473177600000,
     "open": 0.785,
     "high": 0.788,
     "low": 0.781,
     "close": 0.788,
+    "percent": 0.38,
     "volume": 1149508,
-    "amount": 903350,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.76,
+    "zgs": 1512510.5263157894
   },
   {
     "date": "2016-09-08",
+    "timestamp": 1473264000000,
     "open": 0.785,
     "high": 0.786,
     "low": 0.782,
     "close": 0.785,
+    "percent": -0.38,
     "volume": 422000,
-    "amount": 331334,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0.28,
+    "zgs": 1507142.857142857
   },
   {
     "date": "2016-09-09",
+    "timestamp": 1473350400000,
     "open": 0.783,
     "high": 0.79,
     "low": 0.783,
     "close": 0.787,
+    "percent": 0.25,
     "volume": 232200,
-    "amount": 183243,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.15,
+    "zgs": 1548000
   },
   {
     "date": "2016-09-12",
+    "timestamp": 1473609600000,
     "open": 0.789,
     "high": 0.789,
     "low": 0.766,
     "close": 0.772,
+    "percent": -1.91,
     "volume": 2069800,
-    "amount": 1594172,
-    "timestamp": "",
-    "percent": -1.91
+    "hsl": 1.37,
+    "zgs": 1510802.9197080291
   },
   {
     "date": "2016-09-13",
+    "timestamp": 1473696000000,
     "open": 0.768,
     "high": 0.77,
     "low": 0.768,
     "close": 0.77,
+    "percent": -0.26,
     "volume": 48506,
-    "amount": 37270,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0.03,
+    "zgs": 1616866.6666666667
   },
   {
     "date": "2016-09-14",
+    "timestamp": 1473782400000,
     "open": 0.77,
     "high": 0.77,
     "low": 0.761,
     "close": 0.763,
+    "percent": -0.91,
     "volume": 31700,
-    "amount": 24211,
-    "timestamp": "",
-    "percent": -0.91
+    "hsl": 0.02,
+    "zgs": 1585000
   },
   {
     "date": "2016-09-19",
+    "timestamp": 1474214400000,
     "open": 0.754,
     "high": 0.77,
     "low": 0.754,
     "close": 0.77,
+    "percent": 0.92,
     "volume": 1640624,
-    "amount": 1262240,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 1.09,
+    "zgs": 1505159.6330275228
   },
   {
     "date": "2016-09-20",
+    "timestamp": 1474300800000,
     "open": 0.769,
     "high": 0.77,
     "low": 0.766,
     "close": 0.77,
+    "percent": 0,
     "volume": 383645,
-    "amount": 295349,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.25,
+    "zgs": 1534580
   },
   {
     "date": "2016-09-21",
+    "timestamp": 1474387200000,
     "open": 0.768,
     "high": 0.773,
     "low": 0.768,
     "close": 0.772,
+    "percent": 0.26,
     "volume": 66749,
-    "amount": 51584,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0.04,
+    "zgs": 1668725
   },
   {
     "date": "2016-09-22",
+    "timestamp": 1474473600000,
     "open": 0.772,
     "high": 0.785,
     "low": 0.772,
     "close": 0.783,
+    "percent": 1.42,
     "volume": 909613,
-    "amount": 707732,
-    "timestamp": "",
-    "percent": 1.42
+    "hsl": 0.6,
+    "zgs": 1516021.6666666667
   },
   {
     "date": "2016-09-23",
+    "timestamp": 1474560000000,
     "open": 0.78,
     "high": 0.781,
     "low": 0.771,
     "close": 0.781,
+    "percent": -0.26,
     "volume": 1169100,
-    "amount": 912772,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0.77,
+    "zgs": 1518311.6883116884
   },
   {
     "date": "2016-09-26",
+    "timestamp": 1474819200000,
     "open": 0.772,
     "high": 0.774,
     "low": 0.772,
     "close": 0.772,
+    "percent": -1.15,
     "volume": 6620,
-    "amount": 5116,
-    "timestamp": "",
-    "percent": -1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-09-27",
+    "timestamp": 1474905600000,
     "open": 0.772,
     "high": 0.778,
     "low": 0.772,
     "close": 0.777,
+    "percent": 0.65,
     "volume": 553354,
-    "amount": 427986,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0.37,
+    "zgs": 1495551.3513513515
   },
   {
     "date": "2016-09-28",
+    "timestamp": 1474992000000,
     "open": 0.777,
     "high": 0.777,
     "low": 0.776,
     "close": 0.776,
+    "percent": -0.13,
     "volume": 123000,
-    "amount": 95460,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0.08,
+    "zgs": 1537500
   },
   {
     "date": "2016-09-29",
+    "timestamp": 1475078400000,
     "open": 0.775,
     "high": 0.785,
     "low": 0.775,
     "close": 0.778,
+    "percent": 0.26,
     "volume": 237006,
-    "amount": 184927,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0.16,
+    "zgs": 1481287.5
   },
   {
     "date": "2016-09-30",
+    "timestamp": 1475164800000,
     "open": 0.783,
     "high": 0.783,
     "low": 0.776,
     "close": 0.779,
+    "percent": 0.13,
     "volume": 44900,
-    "amount": 34940,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.03,
+    "zgs": 1496666.6666666667
   },
   {
     "date": "2016-10-10",
+    "timestamp": 1476028800000,
     "open": 0.781,
     "high": 0.781,
     "low": 0.779,
     "close": 0.781,
+    "percent": 0.26,
     "volume": 23500,
-    "amount": 18353,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0.02,
+    "zgs": 1175000
   },
   {
     "date": "2016-10-11",
+    "timestamp": 1476115200000,
     "open": 0.782,
     "high": 0.784,
     "low": 0.779,
     "close": 0.782,
+    "percent": 0.13,
     "volume": 810013,
-    "amount": 634143,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.54,
+    "zgs": 1500024.074074074
   },
   {
     "date": "2016-10-12",
+    "timestamp": 1476201600000,
     "open": 0.782,
     "high": 0.783,
     "low": 0.778,
     "close": 0.781,
+    "percent": -0.13,
     "volume": 580502,
-    "amount": 453553,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0.38,
+    "zgs": 1527636.8421052631
   },
   {
     "date": "2016-10-13",
+    "timestamp": 1476288000000,
     "open": 0.771,
     "high": 0.785,
     "low": 0.771,
     "close": 0.781,
+    "percent": 0,
     "volume": 546200,
-    "amount": 427015,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.36,
+    "zgs": 1517222.2222222222
   },
   {
     "date": "2016-10-14",
+    "timestamp": 1476374400000,
     "open": 0.78,
     "high": 0.785,
     "low": 0.776,
     "close": 0.782,
+    "percent": 0.13,
     "volume": 483800,
-    "amount": 379013,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.32,
+    "zgs": 1511875
   },
   {
     "date": "2016-10-17",
+    "timestamp": 1476633600000,
     "open": 0.781,
     "high": 0.781,
     "low": 0.777,
     "close": 0.779,
+    "percent": -0.38,
     "volume": 574634,
-    "amount": 448761,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0.38,
+    "zgs": 1512194.7368421052
   },
   {
     "date": "2016-10-18",
+    "timestamp": 1476720000000,
     "open": 0.778,
     "high": 0.789,
     "low": 0.774,
     "close": 0.782,
+    "percent": 0.39,
     "volume": 661202,
-    "amount": 515117,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0.44,
+    "zgs": 1502731.8181818181
   },
   {
     "date": "2016-10-19",
+    "timestamp": 1476806400000,
     "open": 0.784,
     "high": 0.785,
     "low": 0.78,
     "close": 0.781,
+    "percent": -0.13,
     "volume": 509006,
-    "amount": 397757,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0.34,
+    "zgs": 1497076.4705882352
   },
   {
     "date": "2016-10-20",
+    "timestamp": 1476892800000,
     "open": 0.782,
     "high": 0.785,
     "low": 0.78,
     "close": 0.782,
+    "percent": 0.13,
     "volume": 434701,
-    "amount": 340092,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.29,
+    "zgs": 1498968.9655172415
   },
   {
     "date": "2016-10-21",
+    "timestamp": 1476979200000,
     "open": 0.78,
     "high": 0.785,
     "low": 0.778,
     "close": 0.783,
+    "percent": 0.13,
     "volume": 734703,
-    "amount": 574599,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.49,
+    "zgs": 1499393.8775510204
   },
   {
     "date": "2016-10-24",
+    "timestamp": 1477238400000,
     "open": 0.784,
     "high": 0.799,
     "low": 0.784,
     "close": 0.794,
+    "percent": 1.4,
     "volume": 731606,
-    "amount": 578177,
-    "timestamp": "",
-    "percent": 1.4
+    "hsl": 0.48,
+    "zgs": 1524179.1666666667
   },
   {
     "date": "2016-10-25",
+    "timestamp": 1477324800000,
     "open": 0.793,
     "high": 0.793,
     "low": 0.79,
     "close": 0.79,
+    "percent": -0.5,
     "volume": 1554402,
-    "amount": 1231452,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 1.02,
+    "zgs": 1523923.5294117646
   },
   {
     "date": "2016-10-26",
+    "timestamp": 1477411200000,
     "open": 0.791,
     "high": 0.791,
     "low": 0.788,
     "close": 0.788,
+    "percent": -0.25,
     "volume": 91200,
-    "amount": 71991,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0.06,
+    "zgs": 1520000
   },
   {
     "date": "2016-10-27",
+    "timestamp": 1477497600000,
     "open": 0.787,
     "high": 0.789,
     "low": 0.787,
     "close": 0.789,
+    "percent": 0.13,
     "volume": 252400,
-    "amount": 198990,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.17,
+    "zgs": 1484705.882352941
   },
   {
     "date": "2016-10-28",
+    "timestamp": 1477584000000,
     "open": 0.787,
     "high": 0.809,
     "low": 0.786,
     "close": 0.795,
+    "percent": 0.76,
     "volume": 111500,
-    "amount": 88379,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0.07,
+    "zgs": 1592857.1428571427
   },
   {
     "date": "2016-10-31",
+    "timestamp": 1477843200000,
     "open": 0.786,
     "high": 0.793,
     "low": 0.785,
     "close": 0.787,
+    "percent": -1.01,
     "volume": 61300,
-    "amount": 48156,
-    "timestamp": "",
-    "percent": -1.01
+    "hsl": 0.04,
+    "zgs": 1532500
   },
   {
     "date": "2016-11-01",
+    "timestamp": 1477929600000,
     "open": 0.793,
     "high": 0.795,
     "low": 0.791,
     "close": 0.795,
+    "percent": 1.02,
     "volume": 416215,
-    "amount": 330869,
-    "timestamp": "",
-    "percent": 1.02
+    "hsl": 0.27,
+    "zgs": 1541537.0370370368
   },
   {
     "date": "2016-11-02",
+    "timestamp": 1478016000000,
     "open": 0.794,
     "high": 0.795,
     "low": 0.79,
     "close": 0.79,
+    "percent": -0.63,
     "volume": 25003,
-    "amount": 19774,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0.02,
+    "zgs": 1250150
   },
   {
     "date": "2016-11-03",
+    "timestamp": 1478102400000,
     "open": 0.791,
     "high": 0.803,
     "low": 0.791,
     "close": 0.794,
+    "percent": 0.51,
     "volume": 270804,
-    "amount": 215184,
-    "timestamp": "",
-    "percent": 0.51
+    "hsl": 0.18,
+    "zgs": 1504466.6666666667
   },
   {
     "date": "2016-11-04",
+    "timestamp": 1478188800000,
     "open": 0.799,
     "high": 0.818,
     "low": 0.794,
     "close": 0.794,
+    "percent": 0,
     "volume": 635103,
-    "amount": 508177,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.42,
+    "zgs": 1512150
   },
   {
     "date": "2016-11-07",
+    "timestamp": 1478448000000,
     "open": 0.795,
     "high": 0.798,
     "low": 0.795,
     "close": 0.796,
+    "percent": 0.25,
     "volume": 349100,
-    "amount": 277666,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.23,
+    "zgs": 1517826.0869565217
   },
   {
     "date": "2016-11-08",
+    "timestamp": 1478534400000,
     "open": 0.8,
     "high": 0.802,
     "low": 0.797,
     "close": 0.8,
+    "percent": 0.5,
     "volume": 3607600,
-    "amount": 2882984,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 2.37,
+    "zgs": 1522194.0928270041
   },
   {
     "date": "2016-11-09",
+    "timestamp": 1478620800000,
     "open": 0.799,
     "high": 0.802,
     "low": 0.792,
     "close": 0.801,
+    "percent": 0.13,
     "volume": 316312,
-    "amount": 252578,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.21,
+    "zgs": 1506247.6190476192
   },
   {
     "date": "2016-11-10",
+    "timestamp": 1478707200000,
     "open": 0.802,
     "high": 0.809,
     "low": 0.801,
     "close": 0.806,
+    "percent": 0.62,
     "volume": 433651,
-    "amount": 349472,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0.29,
+    "zgs": 1495348.275862069
   },
   {
     "date": "2016-11-11",
+    "timestamp": 1478793600000,
     "open": 0.81,
     "high": 0.817,
     "low": 0.807,
     "close": 0.807,
+    "percent": 0.12,
     "volume": 709316,
-    "amount": 575231,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.47,
+    "zgs": 1509182.9787234042
   },
   {
     "date": "2016-11-14",
+    "timestamp": 1479052800000,
     "open": 0.811,
     "high": 0.822,
     "low": 0.809,
     "close": 0.815,
+    "percent": 0.99,
     "volume": 650301,
-    "amount": 528079,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0.43,
+    "zgs": 1512327.9069767443
   },
   {
     "date": "2016-11-15",
+    "timestamp": 1479139200000,
     "open": 0.812,
     "high": 0.816,
     "low": 0.81,
     "close": 0.816,
+    "percent": 0.12,
     "volume": 89107,
-    "amount": 72466,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.06,
+    "zgs": 1485116.6666666667
   },
   {
     "date": "2016-11-16",
+    "timestamp": 1479225600000,
     "open": 0.812,
     "high": 0.823,
     "low": 0.804,
     "close": 0.812,
+    "percent": -0.49,
     "volume": 126901,
-    "amount": 102942,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0.08,
+    "zgs": 1586262.5
   },
   {
     "date": "2016-11-17",
+    "timestamp": 1479312000000,
     "open": 0.811,
     "high": 0.817,
     "low": 0.811,
     "close": 0.814,
+    "percent": 0.25,
     "volume": 32100,
-    "amount": 26158,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.02,
+    "zgs": 1605000
   },
   {
     "date": "2016-11-18",
+    "timestamp": 1479398400000,
     "open": 0.813,
     "high": 0.819,
     "low": 0.813,
     "close": 0.815,
+    "percent": 0.12,
     "volume": 177613,
-    "amount": 144566,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.12,
+    "zgs": 1480108.3333333335
   },
   {
     "date": "2016-11-21",
+    "timestamp": 1479657600000,
     "open": 0.81,
     "high": 0.827,
     "low": 0.81,
     "close": 0.817,
+    "percent": 0.25,
     "volume": 143508,
-    "amount": 118172,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.09,
+    "zgs": 1594533.3333333335
   },
   {
     "date": "2016-11-22",
+    "timestamp": 1479744000000,
     "open": 0.823,
     "high": 0.827,
     "low": 0.823,
     "close": 0.825,
+    "percent": 0.98,
     "volume": 335200,
-    "amount": 276785,
-    "timestamp": "",
-    "percent": 0.98
+    "hsl": 0.22,
+    "zgs": 1523636.3636363635
   },
   {
     "date": "2016-11-23",
+    "timestamp": 1479830400000,
     "open": 0.828,
     "high": 0.89,
     "low": 0.826,
     "close": 0.834,
+    "percent": 1.09,
     "volume": 199700,
-    "amount": 166364,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0.13,
+    "zgs": 1536153.846153846
   },
   {
     "date": "2016-11-24",
+    "timestamp": 1479916800000,
     "open": 0.831,
     "high": 0.84,
     "low": 0.817,
     "close": 0.83,
+    "percent": -0.48,
     "volume": 415117,
-    "amount": 345127,
-    "timestamp": "",
-    "percent": -0.48
+    "hsl": 0.27,
+    "zgs": 1537470.3703703703
   },
   {
     "date": "2016-11-25",
+    "timestamp": 1480003200000,
     "open": 0.83,
     "high": 0.842,
     "low": 0.83,
     "close": 0.841,
+    "percent": 1.33,
     "volume": 246102,
-    "amount": 205844,
-    "timestamp": "",
-    "percent": 1.33
+    "hsl": 0.16,
+    "zgs": 1538137.5
   },
   {
     "date": "2016-11-28",
+    "timestamp": 1480262400000,
     "open": 0.849,
     "high": 0.852,
     "low": 0.845,
     "close": 0.845,
+    "percent": 0.48,
     "volume": 270600,
-    "amount": 230091,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0.18,
+    "zgs": 1503333.3333333335
   },
   {
     "date": "2016-11-29",
+    "timestamp": 1480348800000,
     "open": 0.836,
     "high": 0.849,
     "low": 0.835,
     "close": 0.838,
+    "percent": -0.83,
     "volume": 211321,
-    "amount": 176647,
-    "timestamp": "",
-    "percent": -0.83
+    "hsl": 0.14,
+    "zgs": 1509435.714285714
   },
   {
     "date": "2016-11-30",
+    "timestamp": 1480435200000,
     "open": 0.83,
     "high": 0.858,
     "low": 0.83,
     "close": 0.833,
+    "percent": -0.6,
     "volume": 111475,
-    "amount": 93056,
-    "timestamp": "",
-    "percent": -0.6
+    "hsl": 0.07,
+    "zgs": 1592499.9999999998
   },
   {
     "date": "2016-12-01",
+    "timestamp": 1480521600000,
     "open": 0.83,
     "high": 0.85,
     "low": 0.83,
     "close": 0.842,
+    "percent": 1.08,
     "volume": 98303,
-    "amount": 82476,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0.06,
+    "zgs": 1638383.3333333335
   },
   {
     "date": "2016-12-02",
+    "timestamp": 1480608000000,
     "open": 0.838,
     "high": 0.839,
     "low": 0.832,
     "close": 0.832,
+    "percent": -1.19,
     "volume": 131503,
-    "amount": 109744,
-    "timestamp": "",
-    "percent": -1.19
+    "hsl": 0.09,
+    "zgs": 1461144.4444444445
   },
   {
     "date": "2016-12-05",
+    "timestamp": 1480867200000,
     "open": 0.814,
     "high": 0.837,
     "low": 0.814,
     "close": 0.821,
+    "percent": -1.32,
     "volume": 123000,
-    "amount": 100984,
-    "timestamp": "",
-    "percent": -1.32
+    "hsl": 0.08,
+    "zgs": 1537500
   },
   {
     "date": "2016-12-06",
+    "timestamp": 1480953600000,
     "open": 0.815,
     "high": 0.832,
     "low": 0.815,
     "close": 0.819,
+    "percent": -0.24,
     "volume": 54600,
-    "amount": 44595,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.04,
+    "zgs": 1365000
   },
   {
     "date": "2016-12-07",
+    "timestamp": 1481040000000,
     "open": 0.818,
     "high": 0.823,
     "low": 0.818,
     "close": 0.823,
+    "percent": 0.49,
     "volume": 47200,
-    "amount": 38620,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0.03,
+    "zgs": 1573333.3333333335
   },
   {
     "date": "2016-12-08",
+    "timestamp": 1481126400000,
     "open": 0.823,
     "high": 0.829,
     "low": 0.817,
     "close": 0.829,
+    "percent": 0.73,
     "volume": 34500,
-    "amount": 28332,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0.02,
+    "zgs": 1725000
   },
   {
     "date": "2016-12-09",
+    "timestamp": 1481212800000,
     "open": 0.83,
     "high": 0.835,
     "low": 0.819,
     "close": 0.833,
+    "percent": 0.48,
     "volume": 286907,
-    "amount": 236872,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0.19,
+    "zgs": 1510036.8421052631
   },
   {
     "date": "2016-12-12",
+    "timestamp": 1481472000000,
     "open": 0.831,
     "high": 0.836,
     "low": 0.816,
     "close": 0.82,
+    "percent": -1.56,
     "volume": 1567200,
-    "amount": 1301859,
-    "timestamp": "",
-    "percent": -1.56
+    "hsl": 1.03,
+    "zgs": 1521553.3980582524
   },
   {
     "date": "2016-12-13",
+    "timestamp": 1481558400000,
     "open": 0.813,
     "high": 0.826,
     "low": 0.8,
     "close": 0.813,
+    "percent": -0.85,
     "volume": 372830,
-    "amount": 302112,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0.25,
+    "zgs": 1491320
   },
   {
     "date": "2016-12-14",
+    "timestamp": 1481644800000,
     "open": 0.816,
     "high": 0.819,
     "low": 0.814,
     "close": 0.815,
+    "percent": 0.25,
     "volume": 765500,
-    "amount": 623875,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.5,
+    "zgs": 1531000
   },
   {
     "date": "2016-12-15",
+    "timestamp": 1481731200000,
     "open": 0.809,
     "high": 0.809,
     "low": 0.766,
     "close": 0.807,
+    "percent": -0.98,
     "volume": 180700,
-    "amount": 144809,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 0.12,
+    "zgs": 1505833.3333333335
   },
   {
     "date": "2016-12-16",
+    "timestamp": 1481817600000,
     "open": 0.781,
     "high": 0.806,
     "low": 0.781,
     "close": 0.794,
+    "percent": -1.61,
     "volume": 62100,
-    "amount": 49210,
-    "timestamp": "",
-    "percent": -1.61
+    "hsl": 0.04,
+    "zgs": 1552500
   },
   {
     "date": "2016-12-19",
+    "timestamp": 1482076800000,
     "open": 0.786,
     "high": 0.794,
     "low": 0.786,
     "close": 0.794,
+    "percent": 0,
     "volume": 20200,
-    "amount": 16012,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 2020000
   },
   {
     "date": "2016-12-20",
+    "timestamp": 1482163200000,
     "open": 0.78,
     "high": 0.796,
     "low": 0.78,
     "close": 0.782,
+    "percent": -1.51,
     "volume": 12007,
-    "amount": 9371,
-    "timestamp": "",
-    "percent": -1.51
+    "hsl": 0.01,
+    "zgs": 1200700
   },
   {
     "date": "2016-12-21",
+    "timestamp": 1482249600000,
     "open": 0.776,
     "high": 0.8,
     "low": 0.776,
     "close": 0.8,
+    "percent": 2.3,
     "volume": 3601,
-    "amount": 2807,
-    "timestamp": "",
-    "percent": 2.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2016-12-22",
+    "timestamp": 1482336000000,
     "open": 0.781,
     "high": 0.8,
     "low": 0.781,
     "close": 0.796,
+    "percent": -0.5,
     "volume": 35400,
-    "amount": 28183,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0.02,
+    "zgs": 1770000
   },
   {
     "date": "2016-12-23",
+    "timestamp": 1482422400000,
     "open": 0.783,
     "high": 0.784,
     "low": 0.781,
     "close": 0.782,
+    "percent": -1.76,
     "volume": 191457,
-    "amount": 150030,
-    "timestamp": "",
-    "percent": -1.76
+    "hsl": 0.13,
+    "zgs": 1472746.1538461538
   },
   {
     "date": "2016-12-26",
+    "timestamp": 1482681600000,
     "open": 0.772,
     "high": 0.812,
     "low": 0.772,
     "close": 0.798,
+    "percent": 2.05,
     "volume": 31000,
-    "amount": 24194,
-    "timestamp": "",
-    "percent": 2.05
+    "hsl": 0.02,
+    "zgs": 1550000
   },
   {
     "date": "2016-12-27",
+    "timestamp": 1482768000000,
     "open": 0.771,
     "high": 0.789,
     "low": 0.771,
     "close": 0.782,
+    "percent": -2.01,
     "volume": 12900,
-    "amount": 10144,
-    "timestamp": "",
-    "percent": -2.01
+    "hsl": 0.01,
+    "zgs": 1290000
   },
   {
     "date": "2016-12-28",
+    "timestamp": 1482854400000,
     "open": 0.776,
     "high": 0.789,
     "low": 0.776,
     "close": 0.779,
+    "percent": -0.38,
     "volume": 35100,
-    "amount": 27316,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0.02,
+    "zgs": 1755000
   },
   {
     "date": "2016-12-29",
+    "timestamp": 1482940800000,
     "open": 0.776,
     "high": 0.789,
     "low": 0.776,
     "close": 0.779,
+    "percent": 0,
     "volume": 30700,
-    "amount": 24061,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.02,
+    "zgs": 1535000
   },
   {
     "date": "2016-12-30",
+    "timestamp": 1483027200000,
     "open": 0.773,
     "high": 0.8,
     "low": 0.773,
     "close": 0.795,
+    "percent": 2.05,
     "volume": 64140,
-    "amount": 50875,
-    "timestamp": "",
-    "percent": 2.05
+    "hsl": 0.04,
+    "zgs": 1603500
   },
   {
     "date": "2017-01-03",
+    "timestamp": 1483372800000,
     "open": 0.792,
     "high": 0.814,
     "low": 0.786,
     "close": 0.795,
+    "percent": 0,
     "volume": 122000,
-    "amount": 96619,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.09,
+    "zgs": 1355555.5555555555
   },
   {
     "date": "2017-01-04",
+    "timestamp": 1483459200000,
     "open": 0.793,
     "high": 0.796,
     "low": 0.79,
     "close": 0.796,
+    "percent": 0.13,
     "volume": 188303,
-    "amount": 149627,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.13,
+    "zgs": 1448484.6153846153
   },
   {
     "date": "2017-01-05",
+    "timestamp": 1483545600000,
     "open": 0.795,
     "high": 0.798,
     "low": 0.793,
     "close": 0.797,
+    "percent": 0.13,
     "volume": 1541600,
-    "amount": 1224708,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 1.08,
+    "zgs": 1427407.4074074074
   },
   {
     "date": "2017-01-06",
+    "timestamp": 1483632000000,
     "open": 0.798,
     "high": 0.798,
     "low": 0.786,
     "close": 0.788,
+    "percent": -1.13,
     "volume": 484700,
-    "amount": 382314,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0.34,
+    "zgs": 1425588.2352941176
   },
   {
     "date": "2017-01-09",
+    "timestamp": 1483891200000,
     "open": 0.788,
     "high": 0.795,
     "low": 0.785,
     "close": 0.785,
+    "percent": -0.38,
     "volume": 522000,
-    "amount": 411335,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0.36,
+    "zgs": 1450000
   },
   {
     "date": "2017-01-10",
+    "timestamp": 1483977600000,
     "open": 0.785,
     "high": 0.795,
     "low": 0.785,
     "close": 0.785,
+    "percent": 0,
     "volume": 172620,
-    "amount": 135524,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.12,
+    "zgs": 1438500
   },
   {
     "date": "2017-01-11",
+    "timestamp": 1484064000000,
     "open": 0.785,
     "high": 0.793,
     "low": 0.784,
     "close": 0.786,
+    "percent": 0.13,
     "volume": 178000,
-    "amount": 139993,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.12,
+    "zgs": 1483333.3333333335
   },
   {
     "date": "2017-01-12",
+    "timestamp": 1484150400000,
     "open": 0.79,
     "high": 0.79,
     "low": 0.782,
     "close": 0.79,
+    "percent": 0.51,
     "volume": 22700,
-    "amount": 17867,
-    "timestamp": "",
-    "percent": 0.51
+    "hsl": 0.02,
+    "zgs": 1135000
   },
   {
     "date": "2017-01-13",
+    "timestamp": 1484236800000,
     "open": 0.79,
     "high": 0.793,
     "low": 0.78,
     "close": 0.792,
+    "percent": 0.25,
     "volume": 29200,
-    "amount": 23070,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.02,
+    "zgs": 1460000
   },
   {
     "date": "2017-01-16",
+    "timestamp": 1484496000000,
     "open": 0.781,
     "high": 0.811,
     "low": 0.781,
     "close": 0.79,
+    "percent": -0.25,
     "volume": 55300,
-    "amount": 43783,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0.04,
+    "zgs": 1382500
   },
   {
     "date": "2017-01-17",
+    "timestamp": 1484582400000,
     "open": 0.781,
     "high": 0.799,
     "low": 0.754,
     "close": 0.783,
+    "percent": -0.89,
     "volume": 1525700,
-    "amount": 1204152,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 1.07,
+    "zgs": 1425887.8504672896
   },
   {
     "date": "2017-01-18",
+    "timestamp": 1484668800000,
     "open": 0.772,
     "high": 0.796,
     "low": 0.772,
     "close": 0.795,
+    "percent": 1.53,
     "volume": 151900,
-    "amount": 120545,
-    "timestamp": "",
-    "percent": 1.53
+    "hsl": 0.11,
+    "zgs": 1380909.0909090908
   },
   {
     "date": "2017-01-19",
+    "timestamp": 1484755200000,
     "open": 0.767,
     "high": 0.797,
     "low": 0.767,
     "close": 0.794,
+    "percent": -0.13,
     "volume": 1085500,
-    "amount": 861996,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0.76,
+    "zgs": 1428289.4736842106
   },
   {
     "date": "2017-01-20",
+    "timestamp": 1484841600000,
     "open": 0.79,
     "high": 0.798,
     "low": 0.79,
     "close": 0.797,
+    "percent": 0.38,
     "volume": 46000,
-    "amount": 36564,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.03,
+    "zgs": 1533333.3333333335
   },
   {
     "date": "2017-01-23",
+    "timestamp": 1485100800000,
     "open": 0.793,
     "high": 0.815,
     "low": 0.793,
     "close": 0.805,
+    "percent": 1,
     "volume": 22700,
-    "amount": 18130,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0.02,
+    "zgs": 1135000
   },
   {
     "date": "2017-01-24",
+    "timestamp": 1485187200000,
     "open": 0.794,
     "high": 0.812,
     "low": 0.794,
     "close": 0.804,
+    "percent": -0.12,
     "volume": 139300,
-    "amount": 111032,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.1,
+    "zgs": 1393000
   },
   {
     "date": "2017-01-25",
+    "timestamp": 1485273600000,
     "open": 0.759,
     "high": 0.809,
     "low": 0.759,
     "close": 0.799,
+    "percent": -0.62,
     "volume": 528700,
-    "amount": 422025,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.37,
+    "zgs": 1428918.918918919
   },
   {
     "date": "2017-01-26",
+    "timestamp": 1485360000000,
     "open": 0.774,
     "high": 0.806,
     "low": 0.774,
     "close": 0.802,
+    "percent": 0.38,
     "volume": 15300,
-    "amount": 12291,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.01,
+    "zgs": 1530000
   },
   {
     "date": "2017-02-03",
+    "timestamp": 1486051200000,
     "open": 0.802,
     "high": 0.805,
     "low": 0.779,
     "close": 0.795,
+    "percent": -0.87,
     "volume": 18300,
-    "amount": 14637,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0.01,
+    "zgs": 1830000
   },
   {
     "date": "2017-02-06",
+    "timestamp": 1486310400000,
     "open": 0.787,
     "high": 0.802,
     "low": 0.787,
     "close": 0.795,
+    "percent": 0,
     "volume": 1000,
-    "amount": 798,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-02-07",
+    "timestamp": 1486396800000,
     "open": 0.79,
     "high": 0.803,
     "low": 0.79,
     "close": 0.803,
+    "percent": 1.01,
     "volume": 5300,
-    "amount": 4188,
-    "timestamp": "",
-    "percent": 1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-02-08",
+    "timestamp": 1486483200000,
     "open": 0.797,
     "high": 0.807,
     "low": 0.795,
     "close": 0.807,
+    "percent": 0.5,
     "volume": 333600,
-    "amount": 267427,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 0.23,
+    "zgs": 1450434.7826086956
   },
   {
     "date": "2017-02-09",
+    "timestamp": 1486569600000,
     "open": 0.807,
     "high": 0.813,
     "low": 0.804,
     "close": 0.808,
+    "percent": 0.12,
     "volume": 78860,
-    "amount": 63661,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.06,
+    "zgs": 1314333.3333333335
   },
   {
     "date": "2017-02-10",
+    "timestamp": 1486656000000,
     "open": 0.798,
     "high": 0.811,
     "low": 0.798,
     "close": 0.809,
+    "percent": 0.12,
     "volume": 69160,
-    "amount": 55944,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.05,
+    "zgs": 1383200
   },
   {
     "date": "2017-02-13",
+    "timestamp": 1486915200000,
     "open": 0.809,
     "high": 0.815,
     "low": 0.791,
     "close": 0.815,
+    "percent": 0.74,
     "volume": 151800,
-    "amount": 123073,
-    "timestamp": "",
-    "percent": 0.74
+    "hsl": 0.11,
+    "zgs": 1380000
   },
   {
     "date": "2017-02-14",
+    "timestamp": 1487001600000,
     "open": 0.809,
     "high": 0.811,
     "low": 0.8,
     "close": 0.809,
+    "percent": -0.74,
     "volume": 1131201,
-    "amount": 917151,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0.79,
+    "zgs": 1431900
   },
   {
     "date": "2017-02-15",
+    "timestamp": 1487088000000,
     "open": 0.812,
     "high": 0.815,
     "low": 0.808,
     "close": 0.813,
+    "percent": 0.49,
     "volume": 852600,
-    "amount": 692271,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0.6,
+    "zgs": 1421000
   },
   {
     "date": "2017-02-16",
+    "timestamp": 1487174400000,
     "open": 0.813,
     "high": 0.814,
     "low": 0.803,
     "close": 0.812,
+    "percent": -0.12,
     "volume": 11300,
-    "amount": 9178,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.01,
+    "zgs": 1130000
   },
   {
     "date": "2017-02-17",
+    "timestamp": 1487260800000,
     "open": 0.816,
     "high": 0.823,
     "low": 0.813,
     "close": 0.813,
+    "percent": 0.12,
     "volume": 163200,
-    "amount": 133617,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.11,
+    "zgs": 1483636.3636363635
   },
   {
     "date": "2017-02-20",
+    "timestamp": 1487520000000,
     "open": 0.81,
     "high": 0.825,
     "low": 0.81,
     "close": 0.814,
+    "percent": 0.12,
     "volume": 56201,
-    "amount": 45892,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.04,
+    "zgs": 1405025
   },
   {
     "date": "2017-02-21",
+    "timestamp": 1487606400000,
     "open": 0.823,
     "high": 0.83,
     "low": 0.821,
     "close": 0.823,
+    "percent": 1.11,
     "volume": 123600,
-    "amount": 101772,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0.09,
+    "zgs": 1373333.3333333335
   },
   {
     "date": "2017-02-22",
+    "timestamp": 1487692800000,
     "open": 0.82,
     "high": 0.825,
     "low": 0.82,
     "close": 0.821,
+    "percent": -0.24,
     "volume": 33001,
-    "amount": 27141,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.02,
+    "zgs": 1650050
   },
   {
     "date": "2017-02-23",
+    "timestamp": 1487779200000,
     "open": 0.821,
     "high": 0.823,
     "low": 0.816,
     "close": 0.816,
+    "percent": -0.61,
     "volume": 34300,
-    "amount": 28121,
-    "timestamp": "",
-    "percent": -0.61
+    "hsl": 0.02,
+    "zgs": 1715000
   },
   {
     "date": "2017-02-24",
+    "timestamp": 1487865600000,
     "open": 0.82,
     "high": 0.82,
     "low": 0.811,
     "close": 0.82,
+    "percent": 0.49,
     "volume": 207200,
-    "amount": 169903,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0.14,
+    "zgs": 1479999.9999999998
   },
   {
     "date": "2017-02-27",
+    "timestamp": 1488124800000,
     "open": 0.819,
     "high": 0.819,
     "low": 0.811,
     "close": 0.818,
+    "percent": -0.24,
     "volume": 172307,
-    "amount": 141017,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.12,
+    "zgs": 1435891.6666666667
   },
   {
     "date": "2017-02-28",
+    "timestamp": 1488211200000,
     "open": 0.82,
     "high": 0.825,
     "low": 0.811,
     "close": 0.82,
+    "percent": 0.24,
     "volume": 71400,
-    "amount": 58556,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0.05,
+    "zgs": 1428000
   },
   {
     "date": "2017-03-01",
+    "timestamp": 1488297600000,
     "open": 0.818,
     "high": 0.819,
     "low": 0.811,
     "close": 0.819,
+    "percent": -0.12,
     "volume": 2023907,
-    "amount": 1655572,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 1.41,
+    "zgs": 1435395.035460993
   },
   {
     "date": "2017-03-02",
+    "timestamp": 1488384000000,
     "open": 0.813,
     "high": 0.82,
     "low": 0.813,
     "close": 0.815,
+    "percent": -0.49,
     "volume": 193700,
-    "amount": 158239,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0.14,
+    "zgs": 1383571.4285714284
   },
   {
     "date": "2017-03-03",
+    "timestamp": 1488470400000,
     "open": 0.8,
     "high": 0.823,
     "low": 0.8,
     "close": 0.806,
+    "percent": -1.1,
     "volume": 157800,
-    "amount": 127153,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0.11,
+    "zgs": 1434545.4545454546
   },
   {
     "date": "2017-03-06",
+    "timestamp": 1488729600000,
     "open": 0.809,
     "high": 0.82,
     "low": 0.808,
     "close": 0.808,
+    "percent": 0.25,
     "volume": 64500,
-    "amount": 52247,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.05,
+    "zgs": 1290000
   },
   {
     "date": "2017-03-07",
+    "timestamp": 1488816000000,
     "open": 0.809,
     "high": 0.825,
     "low": 0.8,
     "close": 0.818,
+    "percent": 1.24,
     "volume": 134401,
-    "amount": 109911,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0.09,
+    "zgs": 1493344.4444444445
   },
   {
     "date": "2017-03-08",
+    "timestamp": 1488902400000,
     "open": 0.8,
     "high": 0.817,
     "low": 0.8,
     "close": 0.809,
+    "percent": -1.1,
     "volume": 30200,
-    "amount": 24447,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0.02,
+    "zgs": 1510000
   },
   {
     "date": "2017-03-09",
+    "timestamp": 1488988800000,
     "open": 0.81,
     "high": 0.812,
     "low": 0.803,
     "close": 0.804,
+    "percent": -0.62,
     "volume": 1299701,
-    "amount": 1053739,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.91,
+    "zgs": 1428242.857142857
   },
   {
     "date": "2017-03-10",
+    "timestamp": 1489075200000,
     "open": 0.806,
     "high": 0.812,
     "low": 0.803,
     "close": 0.803,
+    "percent": -0.12,
     "volume": 120500,
-    "amount": 97473,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.08,
+    "zgs": 1506250
   },
   {
     "date": "2017-03-13",
+    "timestamp": 1489334400000,
     "open": 0.81,
     "high": 0.82,
     "low": 0.807,
     "close": 0.815,
+    "percent": 1.49,
     "volume": 1176300,
-    "amount": 953325,
-    "timestamp": "",
-    "percent": 1.49
+    "hsl": 0.82,
+    "zgs": 1434512.1951219514
   },
   {
     "date": "2017-03-14",
+    "timestamp": 1489420800000,
     "open": 0.816,
     "high": 0.824,
     "low": 0.816,
     "close": 0.818,
+    "percent": 0.37,
     "volume": 1311905,
-    "amount": 1076450,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0.92,
+    "zgs": 1425983.6956521738
   },
   {
     "date": "2017-03-15",
+    "timestamp": 1489507200000,
     "open": 0.809,
     "high": 0.823,
     "low": 0.808,
     "close": 0.819,
+    "percent": 0.12,
     "volume": 113404,
-    "amount": 91773,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0.08,
+    "zgs": 1417550
   },
   {
     "date": "2017-03-16",
+    "timestamp": 1489593600000,
     "open": 0.825,
     "high": 0.825,
     "low": 0.816,
     "close": 0.821,
+    "percent": 0.24,
     "volume": 1143202,
-    "amount": 942653,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0.8,
+    "zgs": 1429002.5
   },
   {
     "date": "2017-03-17",
+    "timestamp": 1489680000000,
     "open": 0.821,
     "high": 0.822,
     "low": 0.814,
     "close": 0.814,
+    "percent": -0.85,
     "volume": 137200,
-    "amount": 112446,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0.1,
+    "zgs": 1372000
   },
   {
     "date": "2017-03-20",
+    "timestamp": 1489939200000,
     "open": 0.811,
     "high": 0.82,
     "low": 0.801,
     "close": 0.814,
+    "percent": 0,
     "volume": 142000,
-    "amount": 115080,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.1,
+    "zgs": 1420000
   },
   {
     "date": "2017-03-21",
+    "timestamp": 1490025600000,
     "open": 0.808,
     "high": 0.812,
     "low": 0.803,
     "close": 0.805,
+    "percent": -1.11,
     "volume": 420303,
-    "amount": 339249,
-    "timestamp": "",
-    "percent": -1.11
+    "hsl": 0.29,
+    "zgs": 1449320.6896551724
   },
   {
     "date": "2017-03-22",
+    "timestamp": 1490112000000,
     "open": 0.803,
     "high": 0.811,
     "low": 0.803,
     "close": 0.808,
+    "percent": 0.37,
     "volume": 70001,
-    "amount": 56270,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0.05,
+    "zgs": 1400020
   },
   {
     "date": "2017-03-23",
+    "timestamp": 1490198400000,
     "open": 0.806,
     "high": 0.811,
     "low": 0.798,
     "close": 0.805,
+    "percent": -0.37,
     "volume": 91801,
-    "amount": 73617,
-    "timestamp": "",
-    "percent": -0.37
+    "hsl": 0.06,
+    "zgs": 1530016.6666666667
   },
   {
     "date": "2017-03-24",
+    "timestamp": 1490284800000,
     "open": 0.805,
     "high": 0.81,
     "low": 0.801,
     "close": 0.81,
+    "percent": 0.62,
     "volume": 445012,
-    "amount": 359359,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0.31,
+    "zgs": 1435522.5806451612
   },
   {
     "date": "2017-03-27",
+    "timestamp": 1490544000000,
     "open": 0.806,
     "high": 0.821,
     "low": 0.806,
     "close": 0.812,
+    "percent": 0.25,
     "volume": 395602,
-    "amount": 320720,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.28,
+    "zgs": 1412864.2857142857
   },
   {
     "date": "2017-03-28",
+    "timestamp": 1490630400000,
     "open": 0.812,
     "high": 0.814,
     "low": 0.806,
     "close": 0.81,
+    "percent": -0.25,
     "volume": 1049914,
-    "amount": 852503,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0.73,
+    "zgs": 1438238.3561643837
   },
   {
     "date": "2017-03-29",
+    "timestamp": 1490716800000,
     "open": 0.81,
     "high": 0.812,
     "low": 0.805,
     "close": 0.805,
+    "percent": -0.62,
     "volume": 105405,
-    "amount": 85077,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.07,
+    "zgs": 1505785.714285714
   },
   {
     "date": "2017-03-30",
+    "timestamp": 1490803200000,
     "open": 0.801,
     "high": 0.809,
     "low": 0.796,
     "close": 0.807,
+    "percent": 0.25,
     "volume": 36474,
-    "amount": 29267,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.03,
+    "zgs": 1215800
   },
   {
     "date": "2017-03-31",
+    "timestamp": 1490889600000,
     "open": 0.807,
     "high": 0.808,
     "low": 0.8,
     "close": 0.807,
+    "percent": 0,
     "volume": 128516,
-    "amount": 103683,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.09,
+    "zgs": 1427955.5555555555
   },
   {
     "date": "2017-04-05",
+    "timestamp": 1491321600000,
     "open": 0.807,
     "high": 0.824,
     "low": 0.807,
     "close": 0.815,
+    "percent": 0.99,
     "volume": 387444,
-    "amount": 315178,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0.27,
+    "zgs": 1434977.7777777778
   },
   {
     "date": "2017-04-06",
+    "timestamp": 1491408000000,
     "open": 0.814,
     "high": 0.819,
     "low": 0.81,
     "close": 0.814,
+    "percent": -0.12,
     "volume": 87901,
-    "amount": 71479,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.06,
+    "zgs": 1465016.6666666667
   },
   {
     "date": "2017-04-07",
+    "timestamp": 1491494400000,
     "open": 0.814,
     "high": 0.821,
     "low": 0.805,
     "close": 0.816,
+    "percent": 0.25,
     "volume": 204003,
-    "amount": 166719,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.14,
+    "zgs": 1457164.2857142857
   },
   {
     "date": "2017-04-10",
+    "timestamp": 1491753600000,
     "open": 0.81,
     "high": 0.82,
     "low": 0.81,
     "close": 0.814,
+    "percent": -0.25,
     "volume": 265023,
-    "amount": 215897,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0.19,
+    "zgs": 1394857.894736842
   },
   {
     "date": "2017-04-11",
+    "timestamp": 1491840000000,
     "open": 0.819,
     "high": 0.82,
     "low": 0.813,
     "close": 0.819,
+    "percent": 0.61,
     "volume": 298003,
-    "amount": 243602,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0.21,
+    "zgs": 1419061.9047619049
   },
   {
     "date": "2017-04-12",
+    "timestamp": 1491926400000,
     "open": 0.817,
     "high": 0.824,
     "low": 0.816,
     "close": 0.817,
+    "percent": -0.24,
     "volume": 165201,
-    "amount": 135023,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.12,
+    "zgs": 1376675
   },
   {
     "date": "2017-04-13",
+    "timestamp": 1492012800000,
     "open": 0.82,
     "high": 0.821,
     "low": 0.817,
     "close": 0.817,
+    "percent": 0,
     "volume": 394900,
-    "amount": 323681,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.28,
+    "zgs": 1410357.1428571427
   },
   {
     "date": "2017-04-14",
+    "timestamp": 1492099200000,
     "open": 0.817,
     "high": 0.818,
     "low": 0.813,
     "close": 0.815,
+    "percent": -0.24,
     "volume": 94402,
-    "amount": 77099,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0.07,
+    "zgs": 1348599.9999999998
   },
   {
     "date": "2017-04-17",
+    "timestamp": 1492358400000,
     "open": 0.803,
     "high": 0.809,
     "low": 0.803,
     "close": 0.806,
+    "percent": -1.1,
     "volume": 17500,
-    "amount": 14066,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0.01,
+    "zgs": 1750000
   },
   {
     "date": "2017-04-18",
+    "timestamp": 1492444800000,
     "open": 0.806,
     "high": 0.81,
     "low": 0.726,
     "close": 0.801,
+    "percent": -0.62,
     "volume": 686001,
-    "amount": 550594,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.48,
+    "zgs": 1429168.75
   },
   {
     "date": "2017-04-19",
+    "timestamp": 1492531200000,
     "open": 0.795,
     "high": 0.799,
     "low": 0.785,
     "close": 0.789,
+    "percent": -1.5,
     "volume": 35700,
-    "amount": 28401,
-    "timestamp": "",
-    "percent": -1.5
+    "hsl": 0.02,
+    "zgs": 1785000
   },
   {
     "date": "2017-04-20",
+    "timestamp": 1492617600000,
     "open": 0.791,
     "high": 0.8,
     "low": 0.776,
     "close": 0.794,
+    "percent": 0.63,
     "volume": 343324,
-    "amount": 271494,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0.24,
+    "zgs": 1430516.6666666667
   },
   {
     "date": "2017-04-21",
+    "timestamp": 1492704000000,
     "open": 0.791,
     "high": 0.799,
     "low": 0.791,
     "close": 0.799,
+    "percent": 0.63,
     "volume": 1083900,
-    "amount": 863118,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0.76,
+    "zgs": 1426184.2105263157
   },
   {
     "date": "2017-04-24",
+    "timestamp": 1492963200000,
     "open": 0.799,
     "high": 0.799,
     "low": 0.788,
     "close": 0.792,
+    "percent": -0.88,
     "volume": 119124,
-    "amount": 94924,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0.07,
+    "zgs": 1701771.4285714284
   },
   {
     "date": "2017-04-25",
+    "timestamp": 1493049600000,
     "open": 0.792,
     "high": 0.795,
     "low": 0.792,
     "close": 0.794,
+    "percent": 0.25,
     "volume": 64500,
-    "amount": 51268,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0.04,
+    "zgs": 1612500
   },
   {
     "date": "2017-04-26",
+    "timestamp": 1493136000000,
     "open": 0.793,
     "high": 0.799,
     "low": 0.793,
     "close": 0.798,
+    "percent": 0.5,
     "volume": 420403,
-    "amount": 335395,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 0.25,
+    "zgs": 1681612
   },
   {
     "date": "2017-04-27",
+    "timestamp": 1493222400000,
     "open": 0.798,
     "high": 0.799,
     "low": 0.785,
     "close": 0.799,
+    "percent": 0.13,
     "volume": 21013,
-    "amount": 16634,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.01,
+    "zgs": 2101300
   },
   {
     "date": "2017-04-28",
+    "timestamp": 1493308800000,
     "open": 0.794,
     "high": 0.803,
     "low": 0.792,
     "close": 0.802,
+    "percent": 0.38,
     "volume": 89606,
-    "amount": 71100,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.06,
+    "zgs": 1493433.3333333335
   },
   {
     "date": "2017-05-02",
+    "timestamp": 1493654400000,
     "open": 0.791,
     "high": 0.799,
     "low": 0.791,
     "close": 0.798,
+    "percent": -0.5,
     "volume": 12200,
-    "amount": 9660,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0.01,
+    "zgs": 1220000
+  },
+  {
+    "date": "2017-05-03",
+    "timestamp": 1493740800000,
+    "open": 0.791,
+    "high": 0.799,
+    "low": 0.791,
+    "close": 0.798,
+    "percent": 0,
+    "volume": 0,
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2017-05-04",
+    "timestamp": 1493827200000,
+    "open": 0.791,
+    "high": 0.799,
+    "low": 0.791,
+    "close": 0.798,
+    "percent": 0,
+    "volume": 0,
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-05-05",
+    "timestamp": 1493913600000,
     "open": 0.777,
     "high": 0.786,
     "low": 0.777,
     "close": 0.784,
+    "percent": -1.75,
     "volume": 31900,
-    "amount": 24861,
-    "timestamp": "",
-    "percent": -1.75
+    "hsl": 0.02,
+    "zgs": 1595000
   },
   {
     "date": "2017-05-08",
+    "timestamp": 1494172800000,
     "open": 0.778,
     "high": 0.781,
     "low": 0.774,
     "close": 0.778,
+    "percent": -0.77,
     "volume": 161800,
-    "amount": 125846,
-    "timestamp": "",
-    "percent": -0.77
+    "hsl": 0.1,
+    "zgs": 1618000
   },
   {
     "date": "2017-05-09",
+    "timestamp": 1494259200000,
     "open": 0.771,
     "high": 0.782,
     "low": 0.771,
     "close": 0.775,
+    "percent": -0.39,
     "volume": 50300,
-    "amount": 38963,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0.03,
+    "zgs": 1676666.6666666667
   },
   {
     "date": "2017-05-10",
+    "timestamp": 1494345600000,
     "open": 0.783,
     "high": 0.79,
     "low": 0.776,
     "close": 0.782,
+    "percent": 0.9,
     "volume": 101100,
-    "amount": 78956,
-    "timestamp": "",
-    "percent": 0.9
+    "hsl": 0.06,
+    "zgs": 1685000
   },
   {
     "date": "2017-05-11",
+    "timestamp": 1494432000000,
     "open": 0.775,
     "high": 0.785,
     "low": 0.775,
     "close": 0.785,
+    "percent": 0.38,
     "volume": 52100,
-    "amount": 40888,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.03,
+    "zgs": 1736666.6666666667
   },
   {
     "date": "2017-05-12",
+    "timestamp": 1494518400000,
     "open": 0.786,
     "high": 0.802,
     "low": 0.786,
     "close": 0.8,
+    "percent": 1.91,
     "volume": 434511,
-    "amount": 345088,
-    "timestamp": "",
-    "percent": 1.91
+    "hsl": 0.26,
+    "zgs": 1671196.1538461538
   },
   {
     "date": "2017-05-15",
+    "timestamp": 1494777600000,
     "open": 0.801,
     "high": 0.807,
     "low": 0.8,
     "close": 0.8,
+    "percent": 0,
     "volume": 14708,
-    "amount": 11803,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 1470800
   },
   {
     "date": "2017-05-16",
+    "timestamp": 1494864000000,
     "open": 0.793,
     "high": 0.807,
     "low": 0.792,
     "close": 0.801,
+    "percent": 0.13,
     "volume": 19300,
-    "amount": 15378,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.01,
+    "zgs": 1930000
   },
   {
     "date": "2017-05-17",
+    "timestamp": 1494950400000,
     "open": 0.795,
     "high": 0.801,
     "low": 0.795,
     "close": 0.795,
+    "percent": -0.75,
     "volume": 12000,
-    "amount": 9591,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0.01,
+    "zgs": 1200000
   },
   {
     "date": "2017-05-18",
+    "timestamp": 1495036800000,
     "open": 0.781,
     "high": 0.798,
     "low": 0.781,
     "close": 0.798,
+    "percent": 0.38,
     "volume": 16708,
-    "amount": 13135,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0.01,
+    "zgs": 1670800
   },
   {
     "date": "2017-05-19",
+    "timestamp": 1495123200000,
     "open": 0.797,
     "high": 0.798,
     "low": 0.797,
     "close": 0.797,
+    "percent": -0.13,
     "volume": 31608,
-    "amount": 25192,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0.02,
+    "zgs": 1580400
   },
   {
     "date": "2017-05-22",
+    "timestamp": 1495382400000,
     "open": 0.79,
     "high": 0.797,
     "low": 0.79,
     "close": 0.791,
+    "percent": -0.75,
     "volume": 37600,
-    "amount": 29932,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0.02,
+    "zgs": 1880000
   },
   {
     "date": "2017-05-23",
+    "timestamp": 1495468800000,
     "open": 0.792,
     "high": 0.808,
     "low": 0.792,
     "close": 0.792,
+    "percent": 0.13,
     "volume": 65000,
-    "amount": 52040,
-    "timestamp": "",
-    "percent": 0.13
+    "hsl": 0.04,
+    "zgs": 1625000
   },
   {
     "date": "2017-05-24",
+    "timestamp": 1495555200000,
     "open": 0.795,
     "high": 0.804,
     "low": 0.795,
     "close": 0.802,
+    "percent": 1.26,
     "volume": 94700,
-    "amount": 75887,
-    "timestamp": "",
-    "percent": 1.26
+    "hsl": 0.06,
+    "zgs": 1578333.3333333335
   },
   {
     "date": "2017-05-25",
+    "timestamp": 1495641600000,
     "open": 0.804,
     "high": 0.832,
     "low": 0.804,
     "close": 0.831,
+    "percent": 3.62,
     "volume": 967025,
-    "amount": 795116,
-    "timestamp": "",
-    "percent": 3.62
+    "hsl": 0.58,
+    "zgs": 1667284.4827586208
   },
   {
     "date": "2017-05-26",
+    "timestamp": 1495728000000,
     "open": 0.83,
     "high": 0.836,
     "low": 0.826,
     "close": 0.83,
+    "percent": -0.12,
     "volume": 134600,
-    "amount": 111510,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.09,
+    "zgs": 1495555.5555555555
   },
   {
     "date": "2017-05-31",
+    "timestamp": 1496160000000,
     "open": 0.827,
     "high": 0.842,
     "low": 0.827,
     "close": 0.837,
+    "percent": 0.84,
     "volume": 177130,
-    "amount": 148130,
-    "timestamp": "",
-    "percent": 0.84
+    "hsl": 0.11,
+    "zgs": 1610272.7272727273
   },
   {
     "date": "2017-06-01",
+    "timestamp": 1496246400000,
     "open": 0.838,
     "high": 0.84,
     "low": 0.83,
     "close": 0.834,
+    "percent": -0.36,
     "volume": 60300,
-    "amount": 50296,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0.04,
+    "zgs": 1507500
   },
   {
     "date": "2017-06-02",
+    "timestamp": 1496332800000,
     "open": 0.839,
     "high": 0.84,
     "low": 0.827,
     "close": 0.837,
+    "percent": 0.36,
     "volume": 57700,
-    "amount": 48358,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0.03,
+    "zgs": 1923333.3333333335
   },
   {
     "date": "2017-06-05",
+    "timestamp": 1496592000000,
     "open": 0.822,
     "high": 0.83,
     "low": 0.821,
     "close": 0.83,
+    "percent": -0.84,
     "volume": 421300,
-    "amount": 347577,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0.25,
+    "zgs": 1685200
   },
   {
     "date": "2017-06-06",
+    "timestamp": 1496678400000,
     "open": 0.826,
     "high": 0.83,
     "low": 0.826,
     "close": 0.83,
+    "percent": 0,
     "volume": 10600,
-    "amount": 8760,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 1060000
   },
   {
     "date": "2017-06-07",
+    "timestamp": 1496764800000,
     "open": 0.833,
     "high": 0.84,
     "low": 0.833,
     "close": 0.838,
+    "percent": 0.96,
     "volume": 357500,
-    "amount": 299575,
-    "timestamp": "",
-    "percent": 0.96
+    "hsl": 0.21,
+    "zgs": 1702380.9523809524
   },
   {
     "date": "2017-06-08",
+    "timestamp": 1496851200000,
     "open": 0.839,
     "high": 0.843,
     "low": 0.828,
     "close": 0.838,
+    "percent": 0,
     "volume": 394426,
-    "amount": 329545,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.24,
+    "zgs": 1643441.6666666667
   },
   {
     "date": "2017-06-09",
+    "timestamp": 1496937600000,
     "open": 0.846,
     "high": 0.853,
     "low": 0.842,
     "close": 0.842,
+    "percent": 0.48,
     "volume": 982104,
-    "amount": 835313,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0.59,
+    "zgs": 1664583.0508474577
   },
   {
     "date": "2017-06-12",
+    "timestamp": 1497196800000,
     "open": 0.848,
     "high": 0.85,
     "low": 0.836,
     "close": 0.848,
+    "percent": 0.71,
     "volume": 115500,
-    "amount": 97944,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0.07,
+    "zgs": 1649999.9999999998
   },
   {
     "date": "2017-06-13",
+    "timestamp": 1497283200000,
     "open": 0.838,
     "high": 0.85,
     "low": 0.838,
     "close": 0.842,
+    "percent": -0.71,
     "volume": 23000,
-    "amount": 19339,
-    "timestamp": "",
-    "percent": -0.71
+    "hsl": 0.01,
+    "zgs": 2300000
   },
   {
     "date": "2017-06-14",
+    "timestamp": 1497369600000,
     "open": 0.842,
     "high": 0.849,
     "low": 0.834,
     "close": 0.841,
+    "percent": -0.12,
     "volume": 134319,
-    "amount": 112448,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0.08,
+    "zgs": 1678987.5
   },
   {
     "date": "2017-06-15",
+    "timestamp": 1497456000000,
     "open": 0.831,
     "high": 0.84,
     "low": 0.82,
     "close": 0.826,
+    "percent": -1.78,
     "volume": 309649,
-    "amount": 255701,
-    "timestamp": "",
-    "percent": -1.78
+    "hsl": 0.19,
+    "zgs": 1629731.5789473683
   },
   {
     "date": "2017-06-16",
+    "timestamp": 1497542400000,
     "open": 0.829,
     "high": 0.836,
     "low": 0.828,
     "close": 0.831,
+    "percent": 0.61,
     "volume": 187701,
-    "amount": 156058,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0.11,
+    "zgs": 1706372.7272727273
   },
   {
     "date": "2017-06-19",
+    "timestamp": 1497801600000,
     "open": 0.835,
     "high": 0.845,
     "low": 0.835,
     "close": 0.843,
+    "percent": 1.44,
     "volume": 170001,
-    "amount": 143342,
-    "timestamp": "",
-    "percent": 1.44
+    "hsl": 0.1,
+    "zgs": 1700010
   },
   {
     "date": "2017-06-20",
+    "timestamp": 1497888000000,
     "open": 0.84,
     "high": 0.85,
     "low": 0.84,
     "close": 0.849,
+    "percent": 0.71,
     "volume": 8600,
-    "amount": 7269,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0.01,
+    "zgs": 860000
   },
   {
     "date": "2017-06-21",
+    "timestamp": 1497974400000,
     "open": 0.842,
     "high": 0.849,
     "low": 0.83,
     "close": 0.845,
+    "percent": -0.47,
     "volume": 41000,
-    "amount": 34303,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0.02,
+    "zgs": 2050000
   },
   {
     "date": "2017-06-22",
+    "timestamp": 1498060800000,
     "open": 0.849,
     "high": 0.867,
     "low": 0.849,
     "close": 0.855,
+    "percent": 1.18,
     "volume": 775605,
-    "amount": 665684,
-    "timestamp": "",
-    "percent": 1.18
+    "hsl": 0.46,
+    "zgs": 1686097.8260869565
   },
   {
     "date": "2017-06-23",
+    "timestamp": 1498147200000,
     "open": 0.847,
     "high": 0.859,
     "low": 0.847,
     "close": 0.858,
+    "percent": 0.35,
     "volume": 70031,
-    "amount": 59798,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0.04,
+    "zgs": 1750775
   },
   {
     "date": "2017-06-26",
+    "timestamp": 1498406400000,
     "open": 0.858,
     "high": 0.872,
     "low": 0.858,
     "close": 0.87,
+    "percent": 1.4,
     "volume": 346850,
-    "amount": 301782,
-    "timestamp": "",
-    "percent": 1.4
+    "hsl": 0.21,
+    "zgs": 1651666.6666666667
   },
   {
     "date": "2017-06-27",
+    "timestamp": 1498492800000,
     "open": 0.87,
     "high": 0.872,
     "low": 0.868,
     "close": 0.87,
+    "percent": 0,
     "volume": 424900,
-    "amount": 369635,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.25,
+    "zgs": 1699600
   },
   {
     "date": "2017-06-28",
+    "timestamp": 1498579200000,
     "open": 0.872,
     "high": 0.874,
     "low": 0.863,
     "close": 0.869,
+    "percent": -0.11,
     "volume": 208004,
-    "amount": 180963,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.12,
+    "zgs": 1733366.6666666667
   },
   {
     "date": "2017-06-29",
+    "timestamp": 1498665600000,
     "open": 0.87,
     "high": 0.88,
     "low": 0.862,
     "close": 0.867,
+    "percent": -0.23,
     "volume": 541400,
-    "amount": 469792,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0.32,
+    "zgs": 1691875
   },
   {
     "date": "2017-06-30",
+    "timestamp": 1498752000000,
     "open": 0.866,
     "high": 0.87,
     "low": 0.864,
     "close": 0.865,
+    "percent": -0.23,
     "volume": 831502,
-    "amount": 722164,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0.5,
+    "zgs": 1663004
   },
   {
     "date": "2017-07-03",
+    "timestamp": 1499011200000,
     "open": 0.865,
     "high": 0.869,
     "low": 0.865,
     "close": 0.869,
+    "percent": 0.46,
     "volume": 22100,
-    "amount": 19125,
-    "timestamp": "",
-    "percent": 0.46
+    "hsl": 0.01,
+    "zgs": 2210000
   },
   {
     "date": "2017-07-04",
+    "timestamp": 1499097600000,
     "open": 0.868,
     "high": 0.868,
     "low": 0.86,
     "close": 0.86,
+    "percent": -1.04,
     "volume": 109000,
-    "amount": 93853,
-    "timestamp": "",
-    "percent": -1.04
+    "hsl": 0.06,
+    "zgs": 1816666.6666666667
   },
   {
     "date": "2017-07-05",
+    "timestamp": 1499184000000,
     "open": 0.854,
     "high": 0.872,
     "low": 0.854,
     "close": 0.87,
+    "percent": 1.16,
     "volume": 131400,
-    "amount": 114013,
-    "timestamp": "",
-    "percent": 1.16
+    "hsl": 0.07,
+    "zgs": 1877142.857142857
   },
   {
     "date": "2017-07-06",
+    "timestamp": 1499270400000,
     "open": 0.865,
     "high": 0.874,
     "low": 0.865,
     "close": 0.872,
+    "percent": 0.23,
     "volume": 219705,
-    "amount": 191283,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0.12,
+    "zgs": 1830875
   },
   {
     "date": "2017-07-07",
+    "timestamp": 1499356800000,
     "open": 0.872,
     "high": 0.874,
     "low": 0.87,
     "close": 0.874,
+    "percent": 0.23,
     "volume": 260035,
-    "amount": 226882,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0.14,
+    "zgs": 1857392.857142857
   },
   {
     "date": "2017-07-10",
+    "timestamp": 1499616000000,
     "open": 0.874,
     "high": 0.9,
     "low": 0.87,
     "close": 0.879,
+    "percent": 0.57,
     "volume": 169800,
-    "amount": 148674,
-    "timestamp": "",
-    "percent": 0.57
+    "hsl": 0.09,
+    "zgs": 1886666.6666666667
   },
   {
     "date": "2017-07-11",
+    "timestamp": 1499702400000,
     "open": 0.882,
     "high": 0.89,
     "low": 0.875,
     "close": 0.889,
+    "percent": 1.14,
     "volume": 1033891,
-    "amount": 915376,
-    "timestamp": "",
-    "percent": 1.14
+    "hsl": 0.55,
+    "zgs": 1879801.8181818181
   },
   {
     "date": "2017-07-12",
+    "timestamp": 1499788800000,
     "open": 0.887,
     "high": 0.897,
     "low": 0.887,
     "close": 0.889,
+    "percent": 0,
     "volume": 611292,
-    "amount": 546198,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.32,
+    "zgs": 1910287.5
   },
   {
     "date": "2017-07-13",
+    "timestamp": 1499875200000,
     "open": 0.881,
     "high": 0.9,
     "low": 0.881,
     "close": 0.9,
+    "percent": 1.24,
     "volume": 680848,
-    "amount": 611034,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0.36,
+    "zgs": 1891244.4444444445
   },
   {
     "date": "2017-07-14",
+    "timestamp": 1499961600000,
     "open": 0.897,
     "high": 0.905,
     "low": 0.897,
     "close": 0.905,
+    "percent": 0.56,
     "volume": 518203,
-    "amount": 468166,
-    "timestamp": "",
-    "percent": 0.56
+    "hsl": 0.27,
+    "zgs": 1919270.3703703703
   },
   {
     "date": "2017-07-17",
+    "timestamp": 1500220800000,
     "open": 0.905,
     "high": 0.95,
     "low": 0.89,
     "close": 0.907,
+    "percent": 0.22,
     "volume": 470514,
-    "amount": 427328,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0.25,
+    "zgs": 1882056
   },
   {
     "date": "2017-07-18",
+    "timestamp": 1500307200000,
     "open": 0.892,
     "high": 0.909,
     "low": 0.892,
     "close": 0.909,
+    "percent": 0.22,
     "volume": 379109,
-    "amount": 341260,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0.2,
+    "zgs": 1895545
   },
   {
     "date": "2017-07-19",
+    "timestamp": 1500393600000,
     "open": 0.9,
     "high": 0.92,
     "low": 0.88,
     "close": 0.92,
+    "percent": 1.21,
     "volume": 518901,
-    "amount": 472669,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0.27,
+    "zgs": 1921855.5555555555
   },
   {
     "date": "2017-07-20",
+    "timestamp": 1500480000000,
     "open": 0.892,
     "high": 0.92,
     "low": 0.879,
     "close": 0.92,
+    "percent": 0,
     "volume": 633004,
-    "amount": 580559,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.33,
+    "zgs": 1918193.9393939392
   },
   {
     "date": "2017-07-21",
+    "timestamp": 1500566400000,
     "open": 0.905,
     "high": 0.919,
     "low": 0.905,
     "close": 0.915,
+    "percent": -0.54,
     "volume": 20901,
-    "amount": 19032,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0.01,
+    "zgs": 2090100
   },
   {
     "date": "2017-07-24",
+    "timestamp": 1500825600000,
     "open": 0.9,
     "high": 0.923,
     "low": 0.9,
     "close": 0.92,
+    "percent": 0.55,
     "volume": 115502,
-    "amount": 105552,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0.06,
+    "zgs": 1925033.3333333335
   },
   {
     "date": "2017-07-25",
+    "timestamp": 1500912000000,
     "open": 0.911,
     "high": 0.919,
     "low": 0.911,
     "close": 0.914,
+    "percent": -0.65,
     "volume": 34300,
-    "amount": 31384,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0.02,
+    "zgs": 1715000
   },
   {
     "date": "2017-07-26",
+    "timestamp": 1500998400000,
     "open": 0.915,
     "high": 0.92,
     "low": 0.901,
     "close": 0.906,
+    "percent": -0.88,
     "volume": 87000,
-    "amount": 79647,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0.05,
+    "zgs": 1740000
   },
   {
     "date": "2017-07-27",
+    "timestamp": 1501084800000,
     "open": 0.907,
     "high": 0.916,
     "low": 0.907,
     "close": 0.911,
+    "percent": 0.55,
     "volume": 116100,
-    "amount": 105471,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0.06,
+    "zgs": 1935000
   },
   {
     "date": "2017-07-28",
+    "timestamp": 1501171200000,
     "open": 0.91,
     "high": 0.914,
     "low": 0.909,
     "close": 0.914,
+    "percent": 0.33,
     "volume": 126454,
-    "amount": 115107,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0.07,
+    "zgs": 1806485.714285714
   },
   {
     "date": "2017-07-31",
+    "timestamp": 1501430400000,
     "open": 0.914,
     "high": 0.918,
     "low": 0.906,
     "close": 0.916,
+    "percent": 0.22,
     "volume": 36200,
-    "amount": 33045,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0.02,
+    "zgs": 1810000
   },
   {
     "date": "2017-08-01",
+    "timestamp": 1501516800000,
     "open": 0.912,
     "high": 0.928,
     "low": 0.912,
     "close": 0.927,
+    "percent": 1.2,
     "volume": 345602,
-    "amount": 319695,
-    "timestamp": "",
-    "percent": 1.2
+    "hsl": 0.18,
+    "zgs": 1920011.1111111112
   },
   {
     "date": "2017-08-02",
+    "timestamp": 1501603200000,
     "open": 0.929,
     "high": 0.937,
     "low": 0.926,
     "close": 0.932,
+    "percent": 0.54,
     "volume": 339226,
-    "amount": 316042,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0.18,
+    "zgs": 1884588.888888889
   },
   {
     "date": "2017-08-03",
+    "timestamp": 1501689600000,
     "open": 0.924,
     "high": 0.927,
     "low": 0.924,
     "close": 0.924,
+    "percent": -0.86,
     "volume": 58300,
-    "amount": 54009,
-    "timestamp": "",
-    "percent": -0.86
+    "hsl": 0.03,
+    "zgs": 1943333.3333333335
   },
   {
     "date": "2017-08-04",
+    "timestamp": 1501776000000,
     "open": 0.91,
     "high": 0.928,
     "low": 0.91,
     "close": 0.924,
+    "percent": 0,
     "volume": 46100,
-    "amount": 42357,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.02,
+    "zgs": 2305000
   },
   {
     "date": "2017-08-07",
+    "timestamp": 1502035200000,
     "open": 0.909,
     "high": 0.921,
     "low": 0.909,
     "close": 0.917,
+    "percent": -0.76,
     "volume": 17700,
-    "amount": 16268,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0.01,
+    "zgs": 1770000
   },
   {
     "date": "2017-08-08",
+    "timestamp": 1502121600000,
     "open": 0.911,
     "high": 0.921,
     "low": 0.904,
     "close": 0.915,
+    "percent": -0.22,
     "volume": 69241,
-    "amount": 63081,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0.04,
+    "zgs": 1731025
   },
   {
     "date": "2017-08-09",
+    "timestamp": 1502208000000,
     "open": 0.91,
     "high": 0.91,
     "low": 0.905,
     "close": 0.905,
+    "percent": -1.09,
     "volume": 133601,
-    "amount": 121098,
-    "timestamp": "",
-    "percent": -1.09
+    "hsl": 0.07,
+    "zgs": 1908585.714285714
   },
   {
     "date": "2017-08-10",
+    "timestamp": 1502294400000,
     "open": 0.905,
     "high": 0.909,
     "low": 0.891,
     "close": 0.903,
+    "percent": -0.22,
     "volume": 70030,
-    "amount": 63381,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0.04,
+    "zgs": 1750750
   },
   {
     "date": "2017-08-11",
+    "timestamp": 1502380800000,
     "open": 0.897,
     "high": 0.906,
     "low": 0.885,
     "close": 0.896,
+    "percent": -0.78,
     "volume": 106400,
-    "amount": 94540,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0.06,
+    "zgs": 1773333.3333333335
   },
   {
     "date": "2017-08-14",
+    "timestamp": 1502640000000,
     "open": 0.882,
     "high": 0.891,
     "low": 0.882,
     "close": 0.891,
+    "percent": -0.56,
     "volume": 114400,
-    "amount": 101172,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0.06,
+    "zgs": 1906666.6666666667
   },
   {
     "date": "2017-08-15",
+    "timestamp": 1502726400000,
     "open": 0.892,
     "high": 0.902,
     "low": 0.892,
     "close": 0.901,
+    "percent": 1.12,
     "volume": 27200,
-    "amount": 24412,
-    "timestamp": "",
-    "percent": 1.12
+    "hsl": 0.01,
+    "zgs": 2720000
   },
   {
     "date": "2017-08-16",
+    "timestamp": 1502812800000,
     "open": 0.898,
     "high": 0.9,
     "low": 0.898,
     "close": 0.9,
+    "percent": -0.11,
     "volume": 16400,
-    "amount": 14756,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.01,
+    "zgs": 1640000
   },
   {
     "date": "2017-08-17",
+    "timestamp": 1502899200000,
     "open": 0.885,
     "high": 0.902,
     "low": 0.885,
     "close": 0.899,
+    "percent": -0.11,
     "volume": 150000,
-    "amount": 134581,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.08,
+    "zgs": 1875000
   },
   {
     "date": "2017-08-18",
+    "timestamp": 1502985600000,
     "open": 0.895,
     "high": 0.9,
     "low": 0.889,
     "close": 0.9,
+    "percent": 0.11,
     "volume": 231301,
-    "amount": 207189,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0.12,
+    "zgs": 1927508.3333333335
   },
   {
     "date": "2017-08-21",
+    "timestamp": 1503244800000,
     "open": 0.897,
     "high": 0.902,
     "low": 0.897,
     "close": 0.902,
+    "percent": 0.22,
     "volume": 1700,
-    "amount": 1530,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-08-22",
+    "timestamp": 1503331200000,
     "open": 0.898,
     "high": 0.907,
     "low": 0.898,
     "close": 0.905,
+    "percent": 0.33,
     "volume": 46800,
-    "amount": 42291,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0.02,
+    "zgs": 2340000
   },
   {
     "date": "2017-08-23",
+    "timestamp": 1503417600000,
     "open": 0.908,
     "high": 0.919,
     "low": 0.908,
     "close": 0.913,
+    "percent": 0.88,
     "volume": 293786,
-    "amount": 268393,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0.16,
+    "zgs": 1836162.5
   },
   {
     "date": "2017-08-24",
+    "timestamp": 1503504000000,
     "open": 0.911,
     "high": 0.92,
     "low": 0.91,
     "close": 0.911,
+    "percent": -0.22,
     "volume": 1049200,
-    "amount": 955951,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0.56,
+    "zgs": 1873571.4285714284
   },
   {
     "date": "2017-08-25",
+    "timestamp": 1503590400000,
     "open": 0.914,
     "high": 0.93,
     "low": 0.914,
     "close": 0.929,
+    "percent": 1.98,
     "volume": 714547,
-    "amount": 661233,
-    "timestamp": "",
-    "percent": 1.98
+    "hsl": 0.38,
+    "zgs": 1880386.8421052631
   },
   {
     "date": "2017-08-28",
+    "timestamp": 1503849600000,
     "open": 0.929,
     "high": 0.959,
     "low": 0.929,
     "close": 0.951,
+    "percent": 2.37,
     "volume": 1397010,
-    "amount": 1326446,
-    "timestamp": "",
-    "percent": 2.37
+    "hsl": 0.74,
+    "zgs": 1887851.3513513515
   },
   {
     "date": "2017-08-29",
+    "timestamp": 1503936000000,
     "open": 0.945,
     "high": 0.954,
     "low": 0.939,
     "close": 0.952,
+    "percent": 0.11,
     "volume": 136400,
-    "amount": 129480,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0.07,
+    "zgs": 1948571.4285714284
   },
   {
     "date": "2017-08-30",
+    "timestamp": 1504022400000,
     "open": 0.952,
     "high": 0.958,
     "low": 0.95,
     "close": 0.952,
+    "percent": 0,
     "volume": 381711,
-    "amount": 363482,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.2,
+    "zgs": 1908555
   },
   {
     "date": "2017-08-31",
+    "timestamp": 1504108800000,
     "open": 0.939,
     "high": 0.953,
     "low": 0.939,
     "close": 0.942,
+    "percent": -1.05,
     "volume": 28800,
-    "amount": 27245,
-    "timestamp": "",
-    "percent": -1.05
+    "hsl": 0.02,
+    "zgs": 1440000
   },
   {
     "date": "2017-09-01",
+    "timestamp": 1504195200000,
     "open": 0.942,
     "high": 0.952,
     "low": 0.942,
     "close": 0.943,
+    "percent": 0.11,
     "volume": 14900,
-    "amount": 14060,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0.01,
+    "zgs": 1490000
   },
   {
     "date": "2017-09-04",
+    "timestamp": 1504454400000,
     "open": 0.923,
     "high": 0.948,
     "low": 0.923,
     "close": 0.943,
+    "percent": 0,
     "volume": 19000,
-    "amount": 17887,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 1900000
   },
   {
     "date": "2017-09-05",
+    "timestamp": 1504540800000,
     "open": 0.945,
     "high": 0.954,
     "low": 0.945,
     "close": 0.954,
+    "percent": 1.17,
     "volume": 2143011,
-    "amount": 2026005,
-    "timestamp": "",
-    "percent": 1.17
+    "hsl": 1.13,
+    "zgs": 1896469.9115044249
   },
   {
     "date": "2017-09-06",
+    "timestamp": 1504627200000,
     "open": 0.936,
     "high": 0.949,
     "low": 0.936,
     "close": 0.949,
+    "percent": -0.52,
     "volume": 63800,
-    "amount": 60479,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0.03,
+    "zgs": 2126666.666666667
   },
   {
     "date": "2017-09-07",
+    "timestamp": 1504713600000,
     "open": 0.943,
     "high": 0.95,
     "low": 0.943,
     "close": 0.95,
+    "percent": 0.11,
     "volume": 109805,
-    "amount": 104148,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0.06,
+    "zgs": 1830083.3333333335
   },
   {
     "date": "2017-09-08",
+    "timestamp": 1504800000000,
     "open": 0.94,
     "high": 0.949,
     "low": 0.94,
     "close": 0.949,
+    "percent": -0.11,
     "volume": 24801,
-    "amount": 23362,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.01,
+    "zgs": 2480100
   },
   {
     "date": "2017-09-11",
+    "timestamp": 1505059200000,
     "open": 0.941,
     "high": 0.948,
     "low": 0.941,
     "close": 0.946,
+    "percent": -0.32,
     "volume": 45857,
-    "amount": 43454,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0.02,
+    "zgs": 2292850
   },
   {
     "date": "2017-09-12",
+    "timestamp": 1505145600000,
     "open": 0.942,
     "high": 0.947,
     "low": 0.935,
     "close": 0.945,
+    "percent": -0.11,
     "volume": 91803,
-    "amount": 86305,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.05,
+    "zgs": 1836060
   },
   {
     "date": "2017-09-13",
+    "timestamp": 1505232000000,
     "open": 0.945,
     "high": 0.949,
     "low": 0.935,
     "close": 0.937,
+    "percent": -0.85,
     "volume": 48200,
-    "amount": 45153,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0.03,
+    "zgs": 1606666.6666666667
   },
   {
     "date": "2017-09-14",
+    "timestamp": 1505318400000,
     "open": 0.939,
     "high": 0.949,
     "low": 0.936,
     "close": 0.947,
+    "percent": 1.07,
     "volume": 436231,
-    "amount": 409569,
-    "timestamp": "",
-    "percent": 1.07
+    "hsl": 0.23,
+    "zgs": 1896656.5217391304
   },
   {
     "date": "2017-09-15",
+    "timestamp": 1505404800000,
     "open": 0.946,
     "high": 0.946,
     "low": 0.936,
     "close": 0.944,
+    "percent": -0.32,
     "volume": 34200,
-    "amount": 32107,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0.02,
+    "zgs": 1710000
   },
   {
     "date": "2017-09-18",
+    "timestamp": 1505664000000,
     "open": 0.944,
     "high": 0.95,
     "low": 0.944,
     "close": 0.946,
+    "percent": 0.21,
     "volume": 194100,
-    "amount": 183560,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0.1,
+    "zgs": 1941000
   },
   {
     "date": "2017-09-19",
+    "timestamp": 1505750400000,
     "open": 0.948,
     "high": 0.951,
     "low": 0.939,
     "close": 0.946,
+    "percent": 0,
     "volume": 130904,
-    "amount": 123506,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.07,
+    "zgs": 1870057.1428571427
   },
   {
     "date": "2017-09-20",
+    "timestamp": 1505836800000,
     "open": 0.945,
     "high": 0.948,
     "low": 0.941,
     "close": 0.947,
+    "percent": 0.11,
     "volume": 3042900,
-    "amount": 2878546,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 1.61,
+    "zgs": 1890000
   },
   {
     "date": "2017-09-21",
+    "timestamp": 1505923200000,
     "open": 0.944,
     "high": 0.95,
     "low": 0.936,
     "close": 0.948,
+    "percent": 0.11,
     "volume": 162800,
-    "amount": 154330,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0.09,
+    "zgs": 1808888.888888889
   },
   {
     "date": "2017-09-22",
+    "timestamp": 1506009600000,
     "open": 0.941,
     "high": 0.949,
     "low": 0.941,
     "close": 0.947,
+    "percent": -0.11,
     "volume": 176007,
-    "amount": 166276,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.09,
+    "zgs": 1955633.3333333335
   },
   {
     "date": "2017-09-25",
+    "timestamp": 1506268800000,
     "open": 0.942,
     "high": 0.949,
     "low": 0.933,
     "close": 0.947,
+    "percent": 0,
     "volume": 8300,
-    "amount": 7772,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-09-26",
+    "timestamp": 1506355200000,
     "open": 0.933,
     "high": 0.946,
     "low": 0.933,
     "close": 0.946,
+    "percent": -0.11,
     "volume": 7400,
-    "amount": 6923,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-09-27",
+    "timestamp": 1506441600000,
     "open": 0.945,
     "high": 0.945,
     "low": 0.939,
     "close": 0.94,
+    "percent": -0.63,
     "volume": 55200,
-    "amount": 51900,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0.03,
+    "zgs": 1840000
   },
   {
     "date": "2017-09-28",
+    "timestamp": 1506528000000,
     "open": 0.944,
     "high": 0.944,
     "low": 0.92,
     "close": 0.934,
+    "percent": -0.64,
     "volume": 163500,
-    "amount": 152527,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0.09,
+    "zgs": 1816666.6666666667
   },
   {
     "date": "2017-09-29",
+    "timestamp": 1506614400000,
     "open": 0.934,
     "high": 0.947,
     "low": 0.931,
     "close": 0.934,
+    "percent": 0,
     "volume": 32600,
-    "amount": 30473,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.02,
+    "zgs": 1630000
   },
   {
     "date": "2017-10-09",
+    "timestamp": 1507478400000,
     "open": 0.955,
     "high": 0.958,
     "low": 0.939,
     "close": 0.953,
+    "percent": 2.03,
     "volume": 342119,
-    "amount": 325223,
-    "timestamp": "",
-    "percent": 2.03
+    "hsl": 0.18,
+    "zgs": 1900661.1111111112
   },
   {
     "date": "2017-10-10",
+    "timestamp": 1507564800000,
     "open": 0.942,
     "high": 0.95,
     "low": 0.933,
     "close": 0.95,
+    "percent": -0.31,
     "volume": 5900,
-    "amount": 5542,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-10-11",
+    "timestamp": 1507651200000,
     "open": 0.937,
     "high": 0.95,
     "low": 0.936,
     "close": 0.948,
+    "percent": -0.21,
     "volume": 101300,
-    "amount": 95225,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0.05,
+    "zgs": 2026000
   },
   {
     "date": "2017-10-12",
+    "timestamp": 1507737600000,
     "open": 0.944,
     "high": 0.947,
     "low": 0.944,
     "close": 0.947,
+    "percent": -0.11,
     "volume": 914200,
-    "amount": 864799,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.48,
+    "zgs": 1904583.3333333335
   },
   {
     "date": "2017-10-13",
+    "timestamp": 1507824000000,
     "open": 0.946,
     "high": 0.95,
     "low": 0.946,
     "close": 0.949,
+    "percent": 0.21,
     "volume": 56300,
-    "amount": 53266,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0.03,
+    "zgs": 1876666.6666666667
   },
   {
     "date": "2017-10-16",
+    "timestamp": 1508083200000,
     "open": 0.944,
     "high": 0.952,
     "low": 0.944,
     "close": 0.949,
+    "percent": 0,
     "volume": 705140,
-    "amount": 669703,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.37,
+    "zgs": 1905783.783783784
   },
   {
     "date": "2017-10-17",
+    "timestamp": 1508169600000,
     "open": 0.946,
     "high": 0.948,
     "low": 0.944,
     "close": 0.948,
+    "percent": -0.11,
     "volume": 1167800,
-    "amount": 1106892,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.62,
+    "zgs": 1883548.3870967743
   },
   {
     "date": "2017-10-18",
+    "timestamp": 1508256000000,
     "open": 0.95,
     "high": 0.95,
     "low": 0.946,
     "close": 0.948,
+    "percent": 0,
     "volume": 27300,
-    "amount": 25854,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 2730000
   },
   {
     "date": "2017-10-19",
+    "timestamp": 1508342400000,
     "open": 0.948,
     "high": 0.949,
     "low": 0.942,
     "close": 0.942,
+    "percent": -0.63,
     "volume": 1099794,
-    "amount": 1039795,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0.58,
+    "zgs": 1896196.551724138
   },
   {
     "date": "2017-10-20",
+    "timestamp": 1508428800000,
     "open": 0.943,
     "high": 0.945,
     "low": 0.939,
     "close": 0.943,
+    "percent": 0.11,
     "volume": 295700,
-    "amount": 279008,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0.16,
+    "zgs": 1848125
   },
   {
     "date": "2017-10-23",
+    "timestamp": 1508688000000,
     "open": 0.94,
     "high": 0.943,
     "low": 0.94,
     "close": 0.94,
+    "percent": -0.32,
     "volume": 30002,
-    "amount": 28205,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0.02,
+    "zgs": 1500100
   },
   {
     "date": "2017-10-24",
+    "timestamp": 1508774400000,
     "open": 0.941,
     "high": 0.949,
     "low": 0.941,
     "close": 0.948,
+    "percent": 0.85,
     "volume": 60108,
-    "amount": 56745,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0.03,
+    "zgs": 2003600
   },
   {
     "date": "2017-10-25",
+    "timestamp": 1508860800000,
     "open": 0.949,
     "high": 0.949,
     "low": 0.944,
     "close": 0.947,
+    "percent": -0.11,
     "volume": 45000,
-    "amount": 42588,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0.02,
+    "zgs": 2250000
   },
   {
     "date": "2017-10-26",
+    "timestamp": 1508947200000,
     "open": 0.946,
     "high": 0.952,
     "low": 0.946,
     "close": 0.951,
+    "percent": 0.42,
     "volume": 3466548,
-    "amount": 3285903,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 1.83,
+    "zgs": 1894288.524590164
   },
   {
     "date": "2017-10-27",
+    "timestamp": 1509033600000,
     "open": 0.953,
     "high": 0.957,
     "low": 0.952,
     "close": 0.954,
+    "percent": 0.32,
     "volume": 327106,
-    "amount": 312364,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0.16,
+    "zgs": 2044412.5
   },
   {
     "date": "2017-10-30",
+    "timestamp": 1509292800000,
     "open": 0.955,
     "high": 0.955,
     "low": 0.948,
     "close": 0.949,
+    "percent": -0.52,
     "volume": 124500,
-    "amount": 118303,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0.06,
+    "zgs": 2075000
   },
   {
     "date": "2017-10-31",
+    "timestamp": 1509379200000,
     "open": 0.945,
     "high": 0.952,
     "low": 0.945,
     "close": 0.952,
+    "percent": 0.32,
     "volume": 10101,
-    "amount": 9571,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-11-01",
+    "timestamp": 1509465600000,
     "open": 0.955,
     "high": 0.958,
     "low": 0.948,
     "close": 0.948,
+    "percent": -0.42,
     "volume": 68100,
-    "amount": 65160,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0.03,
+    "zgs": 2270000
   },
   {
     "date": "2017-11-02",
+    "timestamp": 1509552000000,
     "open": 0.941,
     "high": 0.948,
     "low": 0.941,
     "close": 0.948,
+    "percent": 0,
     "volume": 18434,
-    "amount": 17364,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 1843400
   },
   {
     "date": "2017-11-03",
+    "timestamp": 1509638400000,
     "open": 0.941,
     "high": 0.946,
     "low": 0.941,
     "close": 0.946,
+    "percent": -0.21,
     "volume": 36001,
-    "amount": 33877,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0.02,
+    "zgs": 1800050
   },
   {
     "date": "2017-11-06",
+    "timestamp": 1509897600000,
     "open": 0.948,
     "high": 0.948,
     "low": 0.94,
     "close": 0.943,
+    "percent": -0.32,
     "volume": 3637,
-    "amount": 3420,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-11-07",
+    "timestamp": 1509984000000,
     "open": 0.942,
     "high": 0.95,
     "low": 0.942,
     "close": 0.95,
+    "percent": 0.74,
     "volume": 2118121,
-    "amount": 2003960,
-    "timestamp": "",
-    "percent": 0.74
+    "hsl": 1.05,
+    "zgs": 2017258.0952380951
   },
   {
     "date": "2017-11-08",
+    "timestamp": 1510070400000,
     "open": 0.953,
     "high": 0.965,
     "low": 0.952,
     "close": 0.953,
+    "percent": 0.32,
     "volume": 3358947,
-    "amount": 3206211,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 1.66,
+    "zgs": 2023462.0481927712
   },
   {
     "date": "2017-11-09",
+    "timestamp": 1510156800000,
     "open": 0.954,
     "high": 0.954,
     "low": 0.949,
     "close": 0.954,
+    "percent": 0.1,
     "volume": 1511603,
-    "amount": 1441023,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0.75,
+    "zgs": 2015470.6666666667
   },
   {
     "date": "2017-11-10",
+    "timestamp": 1510243200000,
     "open": 0.952,
     "high": 0.962,
     "low": 0.952,
     "close": 0.961,
+    "percent": 0.73,
     "volume": 1242601,
-    "amount": 1187303,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0.62,
+    "zgs": 2004195.1612903227
   },
   {
     "date": "2017-11-13",
+    "timestamp": 1510502400000,
     "open": 0.968,
     "high": 0.975,
     "low": 0.961,
     "close": 0.961,
+    "percent": 0,
     "volume": 525022,
-    "amount": 508423,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.26,
+    "zgs": 2019315.3846153845
   },
   {
     "date": "2017-11-14",
+    "timestamp": 1510588800000,
     "open": 0.967,
     "high": 0.97,
     "low": 0.963,
     "close": 0.965,
+    "percent": 0.42,
     "volume": 713100,
-    "amount": 690532,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0.48,
+    "zgs": 1485625
   },
   {
     "date": "2017-11-15",
+    "timestamp": 1510675200000,
     "open": 0.965,
     "high": 0.97,
     "low": 0.96,
     "close": 0.961,
+    "percent": -0.41,
     "volume": 732600,
-    "amount": 708180,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0.36,
+    "zgs": 2035000
   },
   {
     "date": "2017-11-16",
+    "timestamp": 1510761600000,
     "open": 0.96,
     "high": 0.969,
     "low": 0.96,
     "close": 0.964,
+    "percent": 0.31,
     "volume": 23900,
-    "amount": 22990,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0.01,
+    "zgs": 2390000
   },
   {
     "date": "2017-11-17",
+    "timestamp": 1510848000000,
     "open": 0.97,
     "high": 0.985,
     "low": 0.97,
     "close": 0.984,
+    "percent": 2.07,
     "volume": 1807252,
-    "amount": 1770736,
-    "timestamp": "",
-    "percent": 2.07
+    "hsl": 0.89,
+    "zgs": 2030620.224719101
   },
   {
     "date": "2017-11-20",
+    "timestamp": 1511107200000,
     "open": 0.984,
     "high": 0.988,
     "low": 0.975,
     "close": 0.987,
+    "percent": 0.3,
     "volume": 319904,
-    "amount": 314630,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0.16,
+    "zgs": 1999400
   },
   {
     "date": "2017-11-21",
+    "timestamp": 1511193600000,
     "open": 0.99,
     "high": 1.019,
     "low": 0.988,
     "close": 1.018,
+    "percent": 3.14,
     "volume": 4477023,
-    "amount": 4519796,
-    "timestamp": "",
-    "percent": 3.14
+    "hsl": 2.22,
+    "zgs": 2016677.0270270268
   },
   {
     "date": "2017-11-22",
+    "timestamp": 1511280000000,
     "open": 1.016,
     "high": 1.031,
     "low": 1.012,
     "close": 1.024,
+    "percent": 0.59,
     "volume": 1432164,
-    "amount": 1466910,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0.71,
+    "zgs": 2017132.3943661973
   },
   {
     "date": "2017-11-23",
+    "timestamp": 1511366400000,
     "open": 1.023,
     "high": 1.027,
     "low": 0.995,
     "close": 1.002,
+    "percent": -2.15,
     "volume": 4272911,
-    "amount": 4362321,
-    "timestamp": "",
-    "percent": -2.15
+    "hsl": 2.11,
+    "zgs": 2025076.3033175357
   },
   {
     "date": "2017-11-24",
+    "timestamp": 1511452800000,
     "open": 1.002,
     "high": 1.003,
     "low": 0.988,
     "close": 1.002,
+    "percent": 0,
     "volume": 264100,
-    "amount": 263867,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.13,
+    "zgs": 2031538.4615384615
   },
   {
     "date": "2017-11-27",
+    "timestamp": 1511712000000,
     "open": 1.001,
     "high": 1.004,
     "low": 0.986,
     "close": 0.995,
+    "percent": -0.7,
     "volume": 617904,
-    "amount": 613415,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 0.31,
+    "zgs": 1993238.7096774194
   },
   {
     "date": "2017-11-28",
+    "timestamp": 1511798400000,
     "open": 0.99,
     "high": 0.995,
     "low": 0.981,
     "close": 0.989,
+    "percent": -0.6,
     "volume": 24200,
-    "amount": 23975,
-    "timestamp": "",
-    "percent": -0.6
+    "hsl": 0.01,
+    "zgs": 2420000
   },
   {
     "date": "2017-11-29",
+    "timestamp": 1511884800000,
     "open": 0.99,
     "high": 0.995,
     "low": 0.98,
     "close": 0.995,
+    "percent": 0.61,
     "volume": 194202,
-    "amount": 192199,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0.1,
+    "zgs": 1942020
   },
   {
     "date": "2017-11-30",
+    "timestamp": 1511971200000,
     "open": 0.99,
     "high": 0.992,
     "low": 0.982,
     "close": 0.982,
+    "percent": -1.31,
     "volume": 25300,
-    "amount": 24917,
-    "timestamp": "",
-    "percent": -1.31
+    "hsl": 0.01,
+    "zgs": 2530000
   },
   {
     "date": "2017-12-01",
+    "timestamp": 1512057600000,
     "open": 0.982,
     "high": 0.982,
     "low": 0.972,
     "close": 0.978,
+    "percent": -0.41,
     "volume": 104600,
-    "amount": 102138,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0.05,
+    "zgs": 2092000
   },
   {
     "date": "2017-12-04",
+    "timestamp": 1512316800000,
     "open": 0.973,
     "high": 0.98,
     "low": 0.965,
     "close": 0.978,
+    "percent": 0,
     "volume": 27600,
-    "amount": 26774,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0.01,
+    "zgs": 2760000
   },
   {
     "date": "2017-12-05",
+    "timestamp": 1512403200000,
     "open": 0.971,
     "high": 0.987,
     "low": 0.971,
     "close": 0.987,
+    "percent": 0.92,
     "volume": 11800,
-    "amount": 11609,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 0.01,
+    "zgs": 1180000
   },
   {
     "date": "2017-12-06",
+    "timestamp": 1512489600000,
     "open": 0.981,
     "high": 0.981,
     "low": 0.97,
     "close": 0.97,
+    "percent": -1.72,
     "volume": 367300,
-    "amount": 358878,
-    "timestamp": "",
-    "percent": -1.72
+    "hsl": 0.18,
+    "zgs": 2040555.5555555557
   },
   {
     "date": "2017-12-07",
+    "timestamp": 1512576000000,
     "open": 0.976,
     "high": 0.979,
     "low": 0.966,
     "close": 0.966,
+    "percent": -0.41,
     "volume": 414400,
-    "amount": 404430,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0.21,
+    "zgs": 1973333.3333333335
   },
   {
     "date": "2017-12-08",
+    "timestamp": 1512662400000,
     "open": 0.965,
     "high": 0.975,
     "low": 0.957,
     "close": 0.974,
+    "percent": 0.83,
     "volume": 2078100,
-    "amount": 2003415,
-    "timestamp": "",
-    "percent": 0.83
+    "hsl": 1.03,
+    "zgs": 2017572.8155339805
   },
   {
     "date": "2017-12-11",
+    "timestamp": 1512921600000,
     "open": 0.973,
     "high": 0.978,
     "low": 0.969,
     "close": 0.975,
+    "percent": 0.1,
     "volume": 1108600,
-    "amount": 1078983,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0.55,
+    "zgs": 2015636.3636363635
   },
   {
     "date": "2017-12-12",
+    "timestamp": 1513008000000,
     "open": 0.974,
     "high": 0.974,
     "low": 0.969,
     "close": 0.969,
+    "percent": -0.62,
     "volume": 1010000,
-    "amount": 978787,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0.5,
+    "zgs": 2020000
   },
   {
     "date": "2017-12-13",
+    "timestamp": 1513094400000,
     "open": 0.968,
     "high": 0.97,
     "low": 0.954,
     "close": 0.97,
+    "percent": 0.1,
     "volume": 1335200,
-    "amount": 1287286,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0.66,
+    "zgs": 2023030.303030303
   },
   {
     "date": "2017-12-14",
+    "timestamp": 1513180800000,
     "open": 0.969,
     "high": 0.974,
     "low": 0.962,
     "close": 0.962,
+    "percent": -0.82,
     "volume": 9400,
-    "amount": 9079,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2017-12-15",
+    "timestamp": 1513267200000,
     "open": 0.962,
     "high": 0.962,
     "low": 0.952,
     "close": 0.958,
+    "percent": -0.42,
     "volume": 140500,
-    "amount": 134249,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-18",
+    "timestamp": 1513526400000,
     "open": 0.957,
     "high": 0.957,
     "low": 0.943,
     "close": 0.953,
+    "percent": -0.52,
     "volume": 27400,
-    "amount": 26024,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-19",
+    "timestamp": 1513612800000,
     "open": 0.945,
     "high": 0.963,
     "low": 0.945,
     "close": 0.963,
+    "percent": 1.05,
     "volume": 9200,
-    "amount": 8768,
-    "timestamp": "",
-    "percent": 1.05
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-20",
+    "timestamp": 1513699200000,
     "open": 0.96,
     "high": 0.964,
     "low": 0.952,
     "close": 0.963,
+    "percent": 0,
     "volume": 15800,
-    "amount": 15205,
-    "timestamp": "",
-    "percent": 0
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-21",
+    "timestamp": 1513785600000,
     "open": 0.958,
     "high": 0.973,
     "low": 0.948,
     "close": 0.973,
+    "percent": 1.04,
     "volume": 168200,
-    "amount": 162163,
-    "timestamp": "",
-    "percent": 1.04
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-22",
+    "timestamp": 1513872000000,
     "open": 0.968,
     "high": 0.972,
     "low": 0.96,
     "close": 0.96,
+    "percent": -1.34,
     "volume": 1018403,
-    "amount": 982644,
-    "timestamp": "",
-    "percent": -1.34
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-25",
+    "timestamp": 1514131200000,
     "open": 0.958,
     "high": 0.975,
     "low": 0.958,
     "close": 0.967,
+    "percent": 0.73,
     "volume": 95805,
-    "amount": 92803,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-26",
+    "timestamp": 1514217600000,
     "open": 0.96,
     "high": 0.964,
     "low": 0.96,
     "close": 0.964,
+    "percent": -0.31,
     "volume": 9200,
-    "amount": 8868,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-27",
+    "timestamp": 1514304000000,
     "open": 0.964,
     "high": 0.97,
     "low": 0.939,
     "close": 0.956,
+    "percent": -0.83,
     "volume": 591405,
-    "amount": 569882,
-    "timestamp": "",
-    "percent": -0.83
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-28",
+    "timestamp": 1514390400000,
     "open": 0.948,
     "high": 0.957,
     "low": 0.936,
     "close": 0.951,
+    "percent": -0.52,
     "volume": 63700,
-    "amount": 60658,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2017-12-29",
+    "timestamp": 1514476800000,
     "open": 0.951,
     "high": 0.96,
     "low": 0.946,
     "close": 0.956,
+    "percent": 0.53,
     "volume": 156700,
-    "amount": 150116,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-02",
+    "timestamp": 1514822400000,
     "open": 0.961,
     "high": 0.975,
     "low": 0.947,
     "close": 0.97,
+    "percent": 1.46,
     "volume": 101500,
-    "amount": 98303,
-    "timestamp": "",
-    "percent": 1.46
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-03",
+    "timestamp": 1514908800000,
     "open": 0.978,
     "high": 0.985,
     "low": 0.974,
     "close": 0.978,
+    "percent": 0.82,
     "volume": 344500,
-    "amount": 338161,
-    "timestamp": "",
-    "percent": 0.82
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-04",
+    "timestamp": 1514995200000,
     "open": 0.975,
     "high": 0.976,
     "low": 0.974,
     "close": 0.976,
+    "percent": -0.2,
     "volume": 34903,
-    "amount": 34060,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-05",
+    "timestamp": 1515081600000,
     "open": 0.974,
     "high": 0.985,
     "low": 0.97,
     "close": 0.983,
+    "percent": 0.72,
     "volume": 383300,
-    "amount": 376907,
-    "timestamp": "",
-    "percent": 0.72
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-08",
+    "timestamp": 1515340800000,
     "open": 0.986,
     "high": 0.992,
     "low": 0.982,
     "close": 0.991,
+    "percent": 0.81,
     "volume": 2187310,
-    "amount": 2156700,
-    "timestamp": "",
-    "percent": 0.81
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-09",
+    "timestamp": 1515427200000,
     "open": 0.99,
     "high": 0.995,
     "low": 0.984,
     "close": 0.99,
+    "percent": -0.1,
     "volume": 348013,
-    "amount": 344341,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-10",
+    "timestamp": 1515513600000,
     "open": 0.988,
     "high": 0.999,
     "low": 0.988,
     "close": 0.997,
+    "percent": 0.71,
     "volume": 550213,
-    "amount": 548358,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-11",
+    "timestamp": 1515600000000,
     "open": 0.999,
     "high": 1.004,
     "low": 0.993,
     "close": 1,
+    "percent": 0.3,
     "volume": 199460,
-    "amount": 199131,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": null,
+    "zgs": null
   },
   {
     "date": "2018-01-12",
-    "open": 0.997,
+    "timestamp": 1515686400000,
+    "open": 1.007,
     "high": 1.012,
-    "low": 0.997,
+    "low": 1.007,
     "close": 1.007,
+    "percent": 0.7,
     "volume": 674662,
-    "amount": 678546,
-    "timestamp": "",
-    "percent": 0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-15",
+    "timestamp": 1515945600000,
     "open": 1.011,
     "high": 1.027,
     "low": 1.006,
     "close": 1.02,
+    "percent": 1.29,
     "volume": 4160363,
-    "amount": 4240577,
-    "timestamp": "",
-    "percent": 1.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-16",
+    "timestamp": 1516032000000,
     "open": 1.018,
     "high": 1.033,
     "low": 1.001,
     "close": 1.033,
+    "percent": 1.27,
     "volume": 7055489,
-    "amount": 7209196,
-    "timestamp": "",
-    "percent": 1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-17",
+    "timestamp": 1516118400000,
     "open": 1.033,
     "high": 1.065,
     "low": 1.031,
     "close": 1.047,
+    "percent": 1.36,
     "volume": 2233658,
-    "amount": 2348292,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-18",
+    "timestamp": 1516204800000,
     "open": 1.05,
     "high": 1.057,
     "low": 1.048,
     "close": 1.05,
+    "percent": 0.29,
     "volume": 1215551,
-    "amount": 1279610,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-19",
+    "timestamp": 1516291200000,
     "open": 1.059,
     "high": 1.07,
     "low": 1.057,
     "close": 1.059,
+    "percent": 0.86,
     "volume": 2269300,
-    "amount": 2419296,
-    "timestamp": "",
-    "percent": 0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-22",
+    "timestamp": 1516550400000,
     "open": 1.059,
     "high": 1.067,
     "low": 1.051,
     "close": 1.056,
+    "percent": -0.28,
     "volume": 785301,
-    "amount": 833576,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-23",
+    "timestamp": 1516636800000,
     "open": 1.064,
     "high": 1.082,
     "low": 1.064,
     "close": 1.082,
+    "percent": 2.46,
     "volume": 2032650,
-    "amount": 2180706,
-    "timestamp": "",
-    "percent": 2.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-24",
+    "timestamp": 1516723200000,
     "open": 1.082,
     "high": 1.094,
     "low": 1.063,
     "close": 1.087,
+    "percent": 0.46,
     "volume": 1894538,
-    "amount": 2060928,
-    "timestamp": "",
-    "percent": 0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-25",
+    "timestamp": 1516809600000,
     "open": 1.086,
     "high": 1.086,
     "low": 1.065,
     "close": 1.076,
+    "percent": -1.01,
     "volume": 267440,
-    "amount": 286859,
-    "timestamp": "",
-    "percent": -1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-26",
+    "timestamp": 1516896000000,
     "open": 1.076,
     "high": 1.112,
     "low": 1.055,
     "close": 1.078,
+    "percent": 0.19,
     "volume": 299515,
-    "amount": 323071,
-    "timestamp": "",
-    "percent": 0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-29",
+    "timestamp": 1517155200000,
     "open": 1.085,
     "high": 1.092,
     "low": 1.057,
     "close": 1.06,
+    "percent": -1.67,
     "volume": 1822523,
-    "amount": 1966814,
-    "timestamp": "",
-    "percent": -1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-30",
+    "timestamp": 1517241600000,
     "open": 1.06,
     "high": 1.068,
     "low": 1.05,
     "close": 1.052,
+    "percent": -0.75,
     "volume": 414100,
-    "amount": 439176,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-01-31",
+    "timestamp": 1517328000000,
     "open": 1.041,
     "high": 1.066,
     "low": 1.041,
     "close": 1.059,
+    "percent": 0.67,
     "volume": 123200,
-    "amount": 130301,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-01",
+    "timestamp": 1517414400000,
     "open": 1.061,
     "high": 1.062,
     "low": 1.044,
     "close": 1.05,
+    "percent": -0.85,
     "volume": 165410,
-    "amount": 173735,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-02",
+    "timestamp": 1517500800000,
     "open": 1.05,
     "high": 1.06,
     "low": 1.035,
     "close": 1.058,
+    "percent": 0.76,
     "volume": 168100,
-    "amount": 175276,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-05",
+    "timestamp": 1517760000000,
     "open": 1.05,
     "high": 1.072,
     "low": 1.022,
     "close": 1.071,
+    "percent": 1.23,
     "volume": 373000,
-    "amount": 390825,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-06",
+    "timestamp": 1517846400000,
     "open": 1.062,
     "high": 1.062,
     "low": 1.036,
     "close": 1.038,
+    "percent": -3.08,
     "volume": 145100,
-    "amount": 151730,
-    "timestamp": "",
-    "percent": -3.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-07",
+    "timestamp": 1517932800000,
     "open": 1.041,
     "high": 1.058,
     "low": 1.01,
     "close": 1.012,
+    "percent": -2.5,
     "volume": 718502,
-    "amount": 746115,
-    "timestamp": "",
-    "percent": -2.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-08",
+    "timestamp": 1518019200000,
     "open": 1.01,
     "high": 1.01,
     "low": 0.981,
     "close": 0.997,
+    "percent": -1.48,
     "volume": 278900,
-    "amount": 275975,
-    "timestamp": "",
-    "percent": -1.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-09",
+    "timestamp": 1518105600000,
     "open": 0.98,
     "high": 0.98,
     "low": 0.905,
     "close": 0.945,
+    "percent": -5.22,
     "volume": 729412,
-    "amount": 687114,
-    "timestamp": "",
-    "percent": -5.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-12",
+    "timestamp": 1518364800000,
     "open": 0.94,
     "high": 0.952,
     "low": 0.934,
     "close": 0.952,
+    "percent": 0.74,
     "volume": 67901,
-    "amount": 63837,
-    "timestamp": "",
-    "percent": 0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-13",
+    "timestamp": 1518451200000,
     "open": 0.96,
     "high": 0.964,
     "low": 0.945,
     "close": 0.957,
+    "percent": 0.53,
     "volume": 318100,
-    "amount": 304960,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-14",
+    "timestamp": 1518537600000,
     "open": 0.95,
     "high": 0.958,
     "low": 0.945,
     "close": 0.958,
+    "percent": 0.1,
     "volume": 66900,
-    "amount": 63312,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-22",
+    "timestamp": 1519228800000,
     "open": 0.962,
     "high": 0.975,
     "low": 0.958,
     "close": 0.974,
+    "percent": 1.67,
     "volume": 374301,
-    "amount": 362968,
-    "timestamp": "",
-    "percent": 1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-23",
+    "timestamp": 1519315200000,
     "open": 0.974,
     "high": 0.995,
     "low": 0.974,
     "close": 0.979,
+    "percent": 0.51,
     "volume": 92600,
-    "amount": 90948,
-    "timestamp": "",
-    "percent": 0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-26",
+    "timestamp": 1519574400000,
     "open": 0.98,
     "high": 0.987,
     "low": 0.976,
     "close": 0.987,
+    "percent": 0.82,
     "volume": 1040300,
-    "amount": 1017475,
-    "timestamp": "",
-    "percent": 0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-27",
+    "timestamp": 1519660800000,
     "open": 0.991,
     "high": 0.991,
     "low": 0.957,
     "close": 0.957,
+    "percent": -3.04,
     "volume": 114000,
-    "amount": 112045,
-    "timestamp": "",
-    "percent": -3.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-02-28",
+    "timestamp": 1519747200000,
     "open": 0.962,
     "high": 0.967,
     "low": 0.957,
     "close": 0.96,
+    "percent": 0.31,
     "volume": 542300,
-    "amount": 520735,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-01",
+    "timestamp": 1519833600000,
     "open": 0.959,
     "high": 0.972,
     "low": 0.958,
     "close": 0.968,
+    "percent": 0.83,
     "volume": 209900,
-    "amount": 202872,
-    "timestamp": "",
-    "percent": 0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-02",
+    "timestamp": 1519920000000,
     "open": 0.968,
     "high": 0.968,
     "low": 0.94,
     "close": 0.96,
+    "percent": -0.83,
     "volume": 235300,
-    "amount": 223905,
-    "timestamp": "",
-    "percent": -0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-05",
+    "timestamp": 1520179200000,
     "open": 0.963,
     "high": 0.963,
     "low": 0.956,
     "close": 0.96,
+    "percent": 0,
     "volume": 39900,
-    "amount": 38233,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-06",
+    "timestamp": 1520265600000,
     "open": 0.954,
     "high": 0.966,
     "low": 0.954,
     "close": 0.966,
+    "percent": 0.63,
     "volume": 15300,
-    "amount": 14716,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-07",
+    "timestamp": 1520352000000,
     "open": 0.966,
     "high": 0.982,
     "low": 0.961,
     "close": 0.961,
+    "percent": -0.52,
     "volume": 50100,
-    "amount": 48647,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-08",
+    "timestamp": 1520438400000,
     "open": 0.961,
     "high": 0.971,
     "low": 0.95,
     "close": 0.97,
+    "percent": 0.94,
     "volume": 330002,
-    "amount": 319781,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-09",
+    "timestamp": 1520524800000,
     "open": 0.978,
     "high": 0.98,
     "low": 0.968,
     "close": 0.971,
+    "percent": 0.1,
     "volume": 38100,
-    "amount": 37150,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-12",
+    "timestamp": 1520784000000,
     "open": 0.971,
     "high": 0.975,
     "low": 0.963,
     "close": 0.97,
+    "percent": -0.1,
     "volume": 6186200,
-    "amount": 6012421,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-13",
+    "timestamp": 1520870400000,
     "open": 0.977,
     "high": 0.977,
     "low": 0.963,
     "close": 0.971,
+    "percent": 0.1,
     "volume": 1083500,
-    "amount": 1048928,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-14",
+    "timestamp": 1520956800000,
     "open": 0.964,
     "high": 0.969,
     "low": 0.952,
     "close": 0.966,
+    "percent": -0.51,
     "volume": 31800,
-    "amount": 30542,
-    "timestamp": "",
-    "percent": -0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-15",
+    "timestamp": 1521043200000,
     "open": 0.958,
     "high": 0.966,
     "low": 0.958,
     "close": 0.96,
+    "percent": -0.62,
     "volume": 32900,
-    "amount": 31655,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-16",
+    "timestamp": 1521129600000,
     "open": 0.959,
     "high": 0.969,
     "low": 0.953,
     "close": 0.954,
+    "percent": -0.63,
     "volume": 62501,
-    "amount": 60008,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-19",
+    "timestamp": 1521388800000,
     "open": 0.953,
     "high": 0.962,
     "low": 0.953,
     "close": 0.958,
+    "percent": 0.42,
     "volume": 21100,
-    "amount": 20238,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-20",
+    "timestamp": 1521475200000,
     "open": 0.953,
     "high": 0.96,
     "low": 0.953,
     "close": 0.958,
+    "percent": 0,
     "volume": 20800,
-    "amount": 19865,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-21",
+    "timestamp": 1521561600000,
     "open": 0.963,
     "high": 0.969,
     "low": 0.958,
     "close": 0.958,
+    "percent": 0,
     "volume": 90200,
-    "amount": 87104,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-22",
+    "timestamp": 1521648000000,
     "open": 0.959,
     "high": 0.959,
     "low": 0.95,
     "close": 0.95,
+    "percent": -0.84,
     "volume": 27900,
-    "amount": 26659,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-23",
+    "timestamp": 1521734400000,
     "open": 0.95,
     "high": 0.95,
     "low": 0.898,
     "close": 0.948,
+    "percent": -0.21,
     "volume": 168101,
-    "amount": 156009,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-26",
+    "timestamp": 1521993600000,
     "open": 0.947,
     "high": 0.947,
     "low": 0.901,
     "close": 0.908,
+    "percent": -4.22,
     "volume": 152300,
-    "amount": 138800,
-    "timestamp": "",
-    "percent": -4.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-27",
+    "timestamp": 1522080000000,
     "open": 0.908,
     "high": 0.922,
     "low": 0.908,
     "close": 0.91,
+    "percent": 0.22,
     "volume": 86400,
-    "amount": 78876,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-28",
+    "timestamp": 1522166400000,
     "open": 0.915,
     "high": 0.918,
     "low": 0.907,
     "close": 0.907,
+    "percent": -0.33,
     "volume": 20200,
-    "amount": 18394,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-29",
+    "timestamp": 1522252800000,
     "open": 0.902,
     "high": 0.924,
     "low": 0.902,
     "close": 0.924,
+    "percent": 1.87,
     "volume": 79001,
-    "amount": 72258,
-    "timestamp": "",
-    "percent": 1.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-03-30",
+    "timestamp": 1522339200000,
     "open": 0.924,
     "high": 0.926,
     "low": 0.912,
     "close": 0.916,
+    "percent": -0.87,
     "volume": 225309,
-    "amount": 207949,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-02",
+    "timestamp": 1522598400000,
     "open": 0.925,
     "high": 0.936,
     "low": 0.914,
     "close": 0.914,
+    "percent": -0.22,
     "volume": 117733,
-    "amount": 108544,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-03",
+    "timestamp": 1522684800000,
     "open": 0.913,
     "high": 0.913,
     "low": 0.905,
     "close": 0.91,
+    "percent": -0.44,
     "volume": 10800,
-    "amount": 9811,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-04",
+    "timestamp": 1522771200000,
     "open": 0.917,
     "high": 0.917,
     "low": 0.906,
     "close": 0.906,
+    "percent": -0.44,
     "volume": 19400,
-    "amount": 17686,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-09",
+    "timestamp": 1523203200000,
     "open": 0.905,
     "high": 0.914,
     "low": 0.904,
     "close": 0.914,
+    "percent": 0.88,
     "volume": 13800,
-    "amount": 12500,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-10",
+    "timestamp": 1523289600000,
     "open": 0.914,
     "high": 0.926,
     "low": 0.914,
     "close": 0.926,
+    "percent": 1.31,
     "volume": 106606,
-    "amount": 97999,
-    "timestamp": "",
-    "percent": 1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-11",
+    "timestamp": 1523376000000,
     "open": 0.926,
     "high": 0.938,
     "low": 0.926,
     "close": 0.936,
+    "percent": 1.08,
     "volume": 353200,
-    "amount": 329895,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-12",
+    "timestamp": 1523462400000,
     "open": 0.934,
     "high": 0.934,
     "low": 0.921,
     "close": 0.927,
+    "percent": -0.96,
     "volume": 27100,
-    "amount": 25116,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-13",
+    "timestamp": 1523548800000,
     "open": 0.927,
     "high": 0.928,
     "low": 0.919,
     "close": 0.919,
+    "percent": -0.86,
     "volume": 32000,
-    "amount": 29522,
-    "timestamp": "",
-    "percent": -0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-16",
+    "timestamp": 1523808000000,
     "open": 0.917,
     "high": 0.917,
     "low": 0.896,
     "close": 0.896,
+    "percent": -2.5,
     "volume": 67000,
-    "amount": 60380,
-    "timestamp": "",
-    "percent": -2.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-17",
+    "timestamp": 1523894400000,
     "open": 0.909,
     "high": 0.909,
     "low": 0.891,
     "close": 0.891,
+    "percent": -0.56,
     "volume": 7600,
-    "amount": 6792,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-18",
+    "timestamp": 1523980800000,
     "open": 0.896,
     "high": 0.898,
     "low": 0.881,
     "close": 0.897,
+    "percent": 0.67,
     "volume": 198821,
-    "amount": 176754,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-19",
+    "timestamp": 1524067200000,
     "open": 0.901,
     "high": 0.902,
     "low": 0.898,
     "close": 0.898,
+    "percent": 0.11,
     "volume": 222900,
-    "amount": 200221,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-20",
+    "timestamp": 1524153600000,
     "open": 0.895,
     "high": 0.898,
     "low": 0.886,
     "close": 0.886,
+    "percent": -1.34,
     "volume": 57300,
-    "amount": 51058,
-    "timestamp": "",
-    "percent": -1.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-23",
+    "timestamp": 1524412800000,
     "open": 0.885,
     "high": 0.89,
     "low": 0.884,
     "close": 0.89,
+    "percent": 0.45,
     "volume": 2900,
-    "amount": 2566,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-24",
+    "timestamp": 1524499200000,
     "open": 0.897,
     "high": 0.917,
     "low": 0.897,
     "close": 0.909,
+    "percent": 2.13,
     "volume": 574331,
-    "amount": 526246,
-    "timestamp": "",
-    "percent": 2.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-25",
+    "timestamp": 1524585600000,
     "open": 0.908,
     "high": 0.91,
     "low": 0.902,
     "close": 0.91,
+    "percent": 0.11,
     "volume": 1920,
-    "amount": 1743,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-26",
+    "timestamp": 1524672000000,
     "open": 0.901,
     "high": 0.901,
     "low": 0.891,
     "close": 0.891,
+    "percent": -2.09,
     "volume": 276200,
-    "amount": 246969,
-    "timestamp": "",
-    "percent": -2.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-04-27",
+    "timestamp": 1524758400000,
     "open": 0.886,
     "high": 0.898,
     "low": 0.868,
     "close": 0.895,
+    "percent": 0.45,
     "volume": 7000,
-    "amount": 6268,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-02",
+    "timestamp": 1525190400000,
     "open": 0.897,
     "high": 0.897,
     "low": 0.886,
     "close": 0.89,
+    "percent": -0.56,
     "volume": 22720,
-    "amount": 20259,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-03",
+    "timestamp": 1525276800000,
     "open": 0.89,
     "high": 0.897,
     "low": 0.881,
     "close": 0.897,
+    "percent": 0.79,
     "volume": 28220,
-    "amount": 25170,
-    "timestamp": "",
-    "percent": 0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-04",
+    "timestamp": 1525363200000,
     "open": 0.891,
     "high": 0.891,
     "low": 0.888,
     "close": 0.889,
+    "percent": -0.89,
     "volume": 21400,
-    "amount": 19065,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-07",
+    "timestamp": 1525622400000,
     "open": 0.891,
     "high": 0.897,
     "low": 0.887,
     "close": 0.894,
+    "percent": 0.56,
     "volume": 32800,
-    "amount": 29334,
-    "timestamp": "",
-    "percent": 0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-08",
+    "timestamp": 1525708800000,
     "open": 0.894,
     "high": 0.911,
     "low": 0.894,
     "close": 0.91,
+    "percent": 1.79,
     "volume": 157203,
-    "amount": 142040,
-    "timestamp": "",
-    "percent": 1.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-09",
+    "timestamp": 1525795200000,
     "open": 0.908,
     "high": 0.908,
     "low": 0.89,
     "close": 0.903,
+    "percent": -0.77,
     "volume": 446900,
-    "amount": 402655,
-    "timestamp": "",
-    "percent": -0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-10",
+    "timestamp": 1525881600000,
     "open": 0.904,
     "high": 0.907,
     "low": 0.9,
     "close": 0.907,
+    "percent": 0.44,
     "volume": 149700,
-    "amount": 135465,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-11",
+    "timestamp": 1525968000000,
     "open": 0.907,
     "high": 0.908,
     "low": 0.905,
     "close": 0.908,
+    "percent": 0.11,
     "volume": 14800,
-    "amount": 13412,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-14",
+    "timestamp": 1526227200000,
     "open": 0.908,
     "high": 0.916,
     "low": 0.904,
     "close": 0.913,
+    "percent": 0.55,
     "volume": 270800,
-    "amount": 246123,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-15",
+    "timestamp": 1526313600000,
     "open": 0.909,
     "high": 0.909,
     "low": 0.903,
     "close": 0.908,
+    "percent": -0.55,
     "volume": 57100,
-    "amount": 51768,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-16",
+    "timestamp": 1526400000000,
     "open": 0.907,
     "high": 0.907,
     "low": 0.897,
     "close": 0.9,
+    "percent": -0.88,
     "volume": 53200,
-    "amount": 47926,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-17",
+    "timestamp": 1526486400000,
     "open": 0.9,
     "high": 0.904,
     "low": 0.896,
     "close": 0.903,
+    "percent": 0.33,
     "volume": 13200,
-    "amount": 11913,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-18",
+    "timestamp": 1526572800000,
     "open": 0.897,
     "high": 0.905,
     "low": 0.896,
     "close": 0.905,
+    "percent": 0.22,
     "volume": 119000,
-    "amount": 106798,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-21",
+    "timestamp": 1526832000000,
     "open": 0.908,
     "high": 0.909,
     "low": 0.903,
     "close": 0.909,
+    "percent": 0.44,
     "volume": 14300,
-    "amount": 12968,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-22",
+    "timestamp": 1526918400000,
     "open": 0.907,
     "high": 0.907,
     "low": 0.892,
     "close": 0.903,
+    "percent": -0.66,
     "volume": 14601,
-    "amount": 13041,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-23",
+    "timestamp": 1527004800000,
     "open": 0.902,
     "high": 0.902,
     "low": 0.888,
     "close": 0.889,
+    "percent": -1.55,
     "volume": 28800,
-    "amount": 25631,
-    "timestamp": "",
-    "percent": -1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-24",
+    "timestamp": 1527091200000,
     "open": 0.888,
     "high": 0.897,
     "low": 0.876,
     "close": 0.879,
+    "percent": -1.12,
     "volume": 59600,
-    "amount": 53096,
-    "timestamp": "",
-    "percent": -1.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-25",
+    "timestamp": 1527177600000,
     "open": 0.883,
     "high": 0.898,
     "low": 0.881,
     "close": 0.891,
+    "percent": 1.37,
     "volume": 5000,
-    "amount": 4433,
-    "timestamp": "",
-    "percent": 1.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-28",
+    "timestamp": 1527436800000,
     "open": 0.894,
     "high": 0.894,
     "low": 0.873,
     "close": 0.891,
+    "percent": 0,
     "volume": 47700,
-    "amount": 41814,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-29",
+    "timestamp": 1527523200000,
     "open": 0.877,
     "high": 0.892,
     "low": 0.865,
     "close": 0.89,
+    "percent": -0.11,
     "volume": 47900,
-    "amount": 41725,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-30",
+    "timestamp": 1527609600000,
     "open": 0.872,
     "high": 0.882,
     "low": 0.852,
     "close": 0.856,
+    "percent": -3.82,
     "volume": 53501,
-    "amount": 46165,
-    "timestamp": "",
-    "percent": -3.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-05-31",
+    "timestamp": 1527696000000,
     "open": 0.86,
     "high": 0.907,
     "low": 0.854,
     "close": 0.885,
+    "percent": 3.39,
     "volume": 68600,
-    "amount": 59896,
-    "timestamp": "",
-    "percent": 3.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-01",
+    "timestamp": 1527782400000,
     "open": 0.874,
     "high": 0.877,
     "low": 0.863,
     "close": 0.874,
+    "percent": -1.24,
     "volume": 44902,
-    "amount": 38993,
-    "timestamp": "",
-    "percent": -1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-04",
+    "timestamp": 1528041600000,
     "open": 0.869,
     "high": 0.878,
     "low": 0.847,
     "close": 0.871,
+    "percent": -0.34,
     "volume": 86708,
-    "amount": 74626,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-05",
+    "timestamp": 1528128000000,
     "open": 0.871,
     "high": 0.873,
     "low": 0.859,
     "close": 0.873,
+    "percent": 0.23,
     "volume": 3164804,
-    "amount": 2755507,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-06",
+    "timestamp": 1528214400000,
     "open": 0.87,
     "high": 0.873,
     "low": 0.863,
     "close": 0.871,
+    "percent": -0.23,
     "volume": 1015000,
-    "amount": 886055,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-07",
+    "timestamp": 1528300800000,
     "open": 0.874,
     "high": 0.875,
     "low": 0.87,
     "close": 0.874,
+    "percent": 0.34,
     "volume": 10900,
-    "amount": 9517,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-08",
+    "timestamp": 1528387200000,
     "open": 0.872,
     "high": 0.875,
     "low": 0.854,
     "close": 0.873,
+    "percent": -0.11,
     "volume": 34000,
-    "amount": 29427,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-11",
+    "timestamp": 1528646400000,
     "open": 0.858,
     "high": 0.871,
     "low": 0.858,
     "close": 0.871,
+    "percent": -0.23,
     "volume": 1400,
-    "amount": 1204,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-12",
+    "timestamp": 1528732800000,
     "open": 0.87,
     "high": 0.87,
     "low": 0.861,
     "close": 0.87,
+    "percent": -0.11,
     "volume": 68700,
-    "amount": 59668,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-13",
+    "timestamp": 1528819200000,
     "open": 0.866,
     "high": 0.867,
     "low": 0.866,
     "close": 0.867,
+    "percent": -0.34,
     "volume": 200,
-    "amount": 173,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-14",
+    "timestamp": 1528905600000,
     "open": 0.871,
     "high": 0.872,
     "low": 0.862,
     "close": 0.87,
+    "percent": 0.35,
     "volume": 546900,
-    "amount": 475117,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-15",
+    "timestamp": 1528992000000,
     "open": 0.868,
     "high": 0.899,
     "low": 0.868,
     "close": 0.873,
+    "percent": 0.34,
     "volume": 181800,
-    "amount": 158767,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-19",
+    "timestamp": 1529337600000,
     "open": 0.87,
     "high": 0.876,
     "low": 0.828,
     "close": 0.846,
+    "percent": -3.09,
     "volume": 81000,
-    "amount": 69698,
-    "timestamp": "",
-    "percent": -3.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-20",
+    "timestamp": 1529424000000,
     "open": 0.846,
     "high": 0.846,
     "low": 0.831,
     "close": 0.841,
+    "percent": -0.59,
     "volume": 50000,
-    "amount": 42149,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-21",
+    "timestamp": 1529510400000,
     "open": 0.835,
     "high": 0.845,
     "low": 0.828,
     "close": 0.828,
+    "percent": -1.55,
     "volume": 50700,
-    "amount": 42458,
-    "timestamp": "",
-    "percent": -1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-22",
+    "timestamp": 1529596800000,
     "open": 0.827,
     "high": 0.839,
     "low": 0.827,
     "close": 0.838,
+    "percent": 1.21,
     "volume": 78400,
-    "amount": 65473,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-25",
+    "timestamp": 1529856000000,
     "open": 0.849,
     "high": 0.849,
     "low": 0.821,
     "close": 0.822,
+    "percent": -1.91,
     "volume": 114400,
-    "amount": 94883,
-    "timestamp": "",
-    "percent": -1.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-26",
+    "timestamp": 1529942400000,
     "open": 0.822,
     "high": 0.838,
     "low": 0.788,
     "close": 0.806,
+    "percent": -1.95,
     "volume": 143600,
-    "amount": 115767,
-    "timestamp": "",
-    "percent": -1.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-27",
+    "timestamp": 1530028800000,
     "open": 0.815,
     "high": 0.83,
     "low": 0.789,
     "close": 0.807,
+    "percent": 0.12,
     "volume": 43000,
-    "amount": 34371,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-28",
+    "timestamp": 1530115200000,
     "open": 0.808,
     "high": 0.82,
     "low": 0.791,
     "close": 0.808,
+    "percent": 0.12,
     "volume": 444300,
-    "amount": 355228,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-06-29",
+    "timestamp": 1530201600000,
     "open": 0.81,
     "high": 0.822,
     "low": 0.796,
     "close": 0.808,
+    "percent": 0,
     "volume": 178200,
-    "amount": 143851,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-02",
+    "timestamp": 1530460800000,
     "open": 0.808,
     "high": 0.814,
     "low": 0.788,
     "close": 0.788,
+    "percent": -2.48,
     "volume": 133005,
-    "amount": 105402,
-    "timestamp": "",
-    "percent": -2.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-03",
+    "timestamp": 1530547200000,
     "open": 0.79,
     "high": 0.812,
     "low": 0.781,
     "close": 0.791,
+    "percent": 0.38,
     "volume": 189200,
-    "amount": 149548,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-04",
+    "timestamp": 1530633600000,
     "open": 0.799,
     "high": 0.799,
     "low": 0.782,
     "close": 0.791,
+    "percent": 0,
     "volume": 25600,
-    "amount": 20323,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-05",
+    "timestamp": 1530720000000,
     "open": 0.798,
     "high": 0.799,
     "low": 0.781,
     "close": 0.784,
+    "percent": -0.88,
     "volume": 38700,
-    "amount": 30723,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-06",
+    "timestamp": 1530806400000,
     "open": 0.804,
     "high": 0.812,
     "low": 0.771,
     "close": 0.783,
+    "percent": -0.13,
     "volume": 67100,
-    "amount": 52533,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-09",
+    "timestamp": 1531065600000,
     "open": 0.778,
     "high": 0.796,
     "low": 0.778,
     "close": 0.796,
+    "percent": 1.66,
     "volume": 43900,
-    "amount": 34826,
-    "timestamp": "",
-    "percent": 1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-10",
+    "timestamp": 1531152000000,
     "open": 0.801,
     "high": 0.804,
     "low": 0.783,
     "close": 0.798,
+    "percent": 0.25,
     "volume": 762700,
-    "amount": 608598,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-11",
+    "timestamp": 1531238400000,
     "open": 0.796,
     "high": 0.798,
     "low": 0.772,
     "close": 0.796,
+    "percent": -0.25,
     "volume": 46100,
-    "amount": 36050,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-12",
+    "timestamp": 1531324800000,
     "open": 0.789,
     "high": 0.804,
     "low": 0.789,
     "close": 0.801,
+    "percent": 0.63,
     "volume": 61700,
-    "amount": 49356,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-13",
+    "timestamp": 1531411200000,
     "open": 0.8,
     "high": 0.807,
     "low": 0.797,
     "close": 0.804,
+    "percent": 0.37,
     "volume": 82700,
-    "amount": 66558,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-16",
+    "timestamp": 1531670400000,
     "open": 0.804,
     "high": 0.804,
     "low": 0.793,
     "close": 0.795,
+    "percent": -1.12,
     "volume": 156200,
-    "amount": 124199,
-    "timestamp": "",
-    "percent": -1.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-17",
+    "timestamp": 1531756800000,
     "open": 0.79,
     "high": 0.795,
     "low": 0.783,
     "close": 0.786,
+    "percent": -1.13,
     "volume": 13042200,
-    "amount": 10235832,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-18",
+    "timestamp": 1531843200000,
     "open": 0.794,
     "high": 0.8,
     "low": 0.787,
     "close": 0.79,
+    "percent": 0.51,
     "volume": 139800,
-    "amount": 110775,
-    "timestamp": "",
-    "percent": 0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-19",
+    "timestamp": 1531929600000,
     "open": 0.794,
     "high": 0.794,
     "low": 0.783,
     "close": 0.785,
+    "percent": -0.63,
     "volume": 12200,
-    "amount": 9607,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-20",
+    "timestamp": 1532016000000,
     "open": 0.781,
     "high": 0.816,
     "low": 0.779,
     "close": 0.814,
+    "percent": 3.69,
     "volume": 176100,
-    "amount": 140852,
-    "timestamp": "",
-    "percent": 3.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-23",
+    "timestamp": 1532275200000,
     "open": 0.81,
     "high": 0.828,
     "low": 0.807,
     "close": 0.825,
+    "percent": 1.35,
     "volume": 84300,
-    "amount": 68682,
-    "timestamp": "",
-    "percent": 1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-24",
+    "timestamp": 1532361600000,
     "open": 0.83,
     "high": 0.846,
     "low": 0.83,
     "close": 0.833,
+    "percent": 0.97,
     "volume": 145300,
-    "amount": 122395,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-25",
+    "timestamp": 1532448000000,
     "open": 0.832,
     "high": 0.839,
     "low": 0.83,
     "close": 0.839,
+    "percent": 0.72,
     "volume": 25100,
-    "amount": 20960,
-    "timestamp": "",
-    "percent": 0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-26",
+    "timestamp": 1532534400000,
     "open": 0.84,
     "high": 0.84,
     "low": 0.826,
     "close": 0.83,
+    "percent": -1.07,
     "volume": 4400,
-    "amount": 3665,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-27",
+    "timestamp": 1532620800000,
     "open": 0.83,
     "high": 0.838,
     "low": 0.825,
     "close": 0.828,
+    "percent": -0.24,
     "volume": 21000,
-    "amount": 17484,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-30",
+    "timestamp": 1532880000000,
     "open": 0.824,
     "high": 0.835,
     "low": 0.824,
     "close": 0.829,
+    "percent": 0.12,
     "volume": 48500,
-    "amount": 40296,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-07-31",
+    "timestamp": 1532966400000,
     "open": 0.828,
     "high": 0.835,
     "low": 0.827,
     "close": 0.835,
+    "percent": 0.72,
     "volume": 42400,
-    "amount": 35229,
-    "timestamp": "",
-    "percent": 0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-01",
+    "timestamp": 1533052800000,
     "open": 0.833,
     "high": 0.84,
     "low": 0.817,
     "close": 0.817,
+    "percent": -2.16,
     "volume": 40700,
-    "amount": 33882,
-    "timestamp": "",
-    "percent": -2.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-02",
+    "timestamp": 1533139200000,
     "open": 0.817,
     "high": 0.82,
     "low": 0.791,
     "close": 0.8,
+    "percent": -2.08,
     "volume": 143500,
-    "amount": 114910,
-    "timestamp": "",
-    "percent": -2.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-03",
+    "timestamp": 1533225600000,
     "open": 0.808,
     "high": 0.808,
     "low": 0.793,
     "close": 0.796,
+    "percent": -0.5,
     "volume": 46600,
-    "amount": 37145,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-06",
+    "timestamp": 1533484800000,
     "open": 0.789,
     "high": 0.802,
     "low": 0.775,
     "close": 0.8,
+    "percent": 0.5,
     "volume": 35700,
-    "amount": 28207,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-07",
+    "timestamp": 1533571200000,
     "open": 0.8,
     "high": 0.804,
     "low": 0.777,
     "close": 0.804,
+    "percent": 0.5,
     "volume": 58900,
-    "amount": 46918,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-08",
+    "timestamp": 1533657600000,
     "open": 0.803,
     "high": 0.804,
     "low": 0.789,
     "close": 0.789,
+    "percent": -1.87,
     "volume": 10000,
-    "amount": 7947,
-    "timestamp": "",
-    "percent": -1.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-09",
+    "timestamp": 1533744000000,
     "open": 0.804,
     "high": 0.811,
     "low": 0.794,
     "close": 0.811,
+    "percent": 2.79,
     "volume": 152811,
-    "amount": 123069,
-    "timestamp": "",
-    "percent": 2.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-10",
+    "timestamp": 1533830400000,
     "open": 0.809,
     "high": 0.815,
     "low": 0.809,
     "close": 0.811,
+    "percent": 0,
     "volume": 53900,
-    "amount": 43745,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-13",
+    "timestamp": 1534089600000,
     "open": 0.811,
     "high": 0.811,
     "low": 0.797,
     "close": 0.809,
+    "percent": -0.25,
     "volume": 53400,
-    "amount": 42777,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-14",
+    "timestamp": 1534176000000,
     "open": 0.802,
     "high": 0.802,
     "low": 0.799,
     "close": 0.8,
+    "percent": -1.11,
     "volume": 12400,
-    "amount": 9916,
-    "timestamp": "",
-    "percent": -1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-15",
+    "timestamp": 1534262400000,
     "open": 0.798,
     "high": 0.801,
     "low": 0.792,
     "close": 0.799,
+    "percent": -0.13,
     "volume": 43200,
-    "amount": 34412,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-16",
+    "timestamp": 1534348800000,
     "open": 0.79,
     "high": 0.798,
     "low": 0.789,
     "close": 0.796,
+    "percent": -0.38,
     "volume": 15700,
-    "amount": 12491,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-17",
+    "timestamp": 1534435200000,
     "open": 0.812,
     "high": 0.812,
     "low": 0.786,
     "close": 0.786,
+    "percent": -1.26,
     "volume": 17700,
-    "amount": 13995,
-    "timestamp": "",
-    "percent": -1.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-20",
+    "timestamp": 1534694400000,
     "open": 0.799,
     "high": 0.799,
     "low": 0.785,
     "close": 0.785,
+    "percent": -0.13,
     "volume": 25802,
-    "amount": 20442,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-21",
+    "timestamp": 1534780800000,
     "open": 0.798,
     "high": 0.802,
     "low": 0.798,
     "close": 0.801,
+    "percent": 2.04,
     "volume": 29600,
-    "amount": 23695,
-    "timestamp": "",
-    "percent": 2.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-22",
+    "timestamp": 1534867200000,
     "open": 0.801,
     "high": 0.801,
     "low": 0.798,
     "close": 0.798,
+    "percent": -0.37,
     "volume": 18300,
-    "amount": 14609,
-    "timestamp": "",
-    "percent": -0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-23",
+    "timestamp": 1534953600000,
     "open": 0.803,
     "high": 0.804,
     "low": 0.8,
     "close": 0.8,
+    "percent": 0.25,
     "volume": 119400,
-    "amount": 95841,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-24",
+    "timestamp": 1535040000000,
     "open": 0.805,
     "high": 0.813,
     "low": 0.802,
     "close": 0.813,
+    "percent": 1.62,
     "volume": 129911,
-    "amount": 104331,
-    "timestamp": "",
-    "percent": 1.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-27",
+    "timestamp": 1535299200000,
     "open": 0.81,
     "high": 0.822,
     "low": 0.81,
     "close": 0.822,
+    "percent": 1.11,
     "volume": 153974,
-    "amount": 125441,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-28",
+    "timestamp": 1535385600000,
     "open": 0.822,
     "high": 0.827,
     "low": 0.82,
     "close": 0.822,
+    "percent": 0,
     "volume": 11971,
-    "amount": 9843,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-29",
+    "timestamp": 1535472000000,
     "open": 0.824,
     "high": 0.833,
     "low": 0.82,
     "close": 0.833,
+    "percent": 1.34,
     "volume": 35900,
-    "amount": 29618,
-    "timestamp": "",
-    "percent": 1.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-30",
+    "timestamp": 1535558400000,
     "open": 0.83,
     "high": 0.83,
     "low": 0.804,
     "close": 0.819,
+    "percent": -1.68,
     "volume": 33300,
-    "amount": 27123,
-    "timestamp": "",
-    "percent": -1.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-08-31",
+    "timestamp": 1535644800000,
     "open": 0.806,
     "high": 0.829,
     "low": 0.794,
     "close": 0.823,
+    "percent": 0.49,
     "volume": 59202,
-    "amount": 48160,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-03",
+    "timestamp": 1535904000000,
     "open": 0.814,
     "high": 0.827,
     "low": 0.81,
     "close": 0.819,
+    "percent": -0.49,
     "volume": 26877,
-    "amount": 21907,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-04",
+    "timestamp": 1535990400000,
     "open": 0.821,
     "high": 0.825,
     "low": 0.821,
     "close": 0.822,
+    "percent": 0.37,
     "volume": 7274,
-    "amount": 5986,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-05",
+    "timestamp": 1536076800000,
     "open": 0.828,
     "high": 0.828,
     "low": 0.812,
     "close": 0.813,
+    "percent": -1.09,
     "volume": 14900,
-    "amount": 12187,
-    "timestamp": "",
-    "percent": -1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-06",
+    "timestamp": 1536163200000,
     "open": 0.81,
     "high": 0.821,
     "low": 0.809,
     "close": 0.821,
+    "percent": 0.98,
     "volume": 10177,
-    "amount": 8248,
-    "timestamp": "",
-    "percent": 0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-07",
+    "timestamp": 1536249600000,
     "open": 0.817,
     "high": 0.825,
     "low": 0.802,
     "close": 0.807,
+    "percent": -1.71,
     "volume": 6100,
-    "amount": 4932,
-    "timestamp": "",
-    "percent": -1.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-10",
+    "timestamp": 1536508800000,
     "open": 0.8,
     "high": 0.809,
     "low": 0.789,
     "close": 0.8,
+    "percent": -0.87,
     "volume": 42375,
-    "amount": 34113,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-11",
+    "timestamp": 1536595200000,
     "open": 0.804,
     "high": 0.804,
     "low": 0.794,
     "close": 0.8,
+    "percent": 0,
     "volume": 7300,
-    "amount": 5842,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-12",
+    "timestamp": 1536681600000,
     "open": 0.796,
     "high": 0.799,
     "low": 0.793,
     "close": 0.799,
+    "percent": -0.13,
     "volume": 700,
-    "amount": 558,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-13",
+    "timestamp": 1536768000000,
     "open": 0.798,
     "high": 0.814,
     "low": 0.798,
     "close": 0.814,
+    "percent": 1.88,
     "volume": 1300,
-    "amount": 1039,
-    "timestamp": "",
-    "percent": 1.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-14",
+    "timestamp": 1536854400000,
     "open": 0.807,
     "high": 0.811,
     "low": 0.792,
     "close": 0.811,
+    "percent": -0.37,
     "volume": 29200,
-    "amount": 23269,
-    "timestamp": "",
-    "percent": -0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-17",
+    "timestamp": 1537113600000,
     "open": 0.805,
     "high": 0.805,
     "low": 0.8,
     "close": 0.804,
+    "percent": -0.86,
     "volume": 4100,
-    "amount": 3281,
-    "timestamp": "",
-    "percent": -0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-18",
+    "timestamp": 1537200000000,
     "open": 0.798,
     "high": 0.813,
     "low": 0.798,
     "close": 0.813,
+    "percent": 1.12,
     "volume": 58000,
-    "amount": 46736,
-    "timestamp": "",
-    "percent": 1.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-19",
+    "timestamp": 1537286400000,
     "open": 0.818,
     "high": 0.824,
     "low": 0.813,
     "close": 0.82,
+    "percent": 0.86,
     "volume": 74900,
-    "amount": 61059,
-    "timestamp": "",
-    "percent": 0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-20",
+    "timestamp": 1537372800000,
     "open": 0.82,
     "high": 0.824,
     "low": 0.82,
     "close": 0.824,
+    "percent": 0.49,
     "volume": 41000,
-    "amount": 33684,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-21",
+    "timestamp": 1537459200000,
     "open": 0.826,
     "high": 0.857,
     "low": 0.826,
     "close": 0.856,
+    "percent": 3.88,
     "volume": 248700,
-    "amount": 210427,
-    "timestamp": "",
-    "percent": 3.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-25",
+    "timestamp": 1537804800000,
     "open": 0.85,
     "high": 0.856,
     "low": 0.843,
     "close": 0.846,
+    "percent": -1.17,
     "volume": 321875,
-    "amount": 273066,
-    "timestamp": "",
-    "percent": -1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-26",
+    "timestamp": 1537891200000,
     "open": 0.852,
     "high": 0.885,
     "low": 0.852,
     "close": 0.856,
+    "percent": 1.18,
     "volume": 152822,
-    "amount": 131448,
-    "timestamp": "",
-    "percent": 1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-27",
+    "timestamp": 1537977600000,
     "open": 0.85,
     "high": 0.869,
     "low": 0.848,
     "close": 0.851,
+    "percent": -0.58,
     "volume": 812100,
-    "amount": 690696,
-    "timestamp": "",
-    "percent": -0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-09-28",
+    "timestamp": 1538064000000,
     "open": 0.856,
     "high": 0.864,
     "low": 0.854,
     "close": 0.86,
+    "percent": 1.06,
     "volume": 40400,
-    "amount": 34683,
-    "timestamp": "",
-    "percent": 1.06
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-08",
+    "timestamp": 1538928000000,
     "open": 0.855,
     "high": 0.862,
     "low": 0.831,
     "close": 0.835,
+    "percent": -2.91,
     "volume": 249600,
-    "amount": 212136,
-    "timestamp": "",
-    "percent": -2.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-09",
+    "timestamp": 1539014400000,
     "open": 0.835,
     "high": 0.853,
     "low": 0.833,
     "close": 0.835,
+    "percent": 0,
     "volume": 19600,
-    "amount": 16638,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-10",
+    "timestamp": 1539100800000,
     "open": 0.835,
     "high": 0.835,
     "low": 0.819,
     "close": 0.826,
+    "percent": -1.08,
     "volume": 149100,
-    "amount": 123128,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-11",
+    "timestamp": 1539187200000,
     "open": 0.812,
     "high": 0.821,
     "low": 0.78,
     "close": 0.785,
+    "percent": -4.96,
     "volume": 226500,
-    "amount": 179833,
-    "timestamp": "",
-    "percent": -4.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-12",
+    "timestamp": 1539273600000,
     "open": 0.788,
     "high": 0.803,
     "low": 0.774,
     "close": 0.801,
+    "percent": 2.04,
     "volume": 105000,
-    "amount": 82706,
-    "timestamp": "",
-    "percent": 2.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-15",
+    "timestamp": 1539532800000,
     "open": 0.798,
     "high": 0.803,
     "low": 0.782,
     "close": 0.783,
+    "percent": -2.25,
     "volume": 130600,
-    "amount": 102707,
-    "timestamp": "",
-    "percent": -2.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-16",
+    "timestamp": 1539619200000,
     "open": 0.785,
     "high": 0.794,
     "low": 0.774,
     "close": 0.776,
+    "percent": -0.89,
     "volume": 73800,
-    "amount": 57636,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-17",
+    "timestamp": 1539705600000,
     "open": 0.79,
     "high": 0.79,
     "low": 0.776,
     "close": 0.783,
+    "percent": 0.9,
     "volume": 64000,
-    "amount": 49968,
-    "timestamp": "",
-    "percent": 0.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-18",
+    "timestamp": 1539792000000,
     "open": 0.779,
     "high": 0.781,
     "low": 0.773,
     "close": 0.774,
+    "percent": -1.15,
     "volume": 25900,
-    "amount": 20091,
-    "timestamp": "",
-    "percent": -1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-19",
+    "timestamp": 1539878400000,
     "open": 0.774,
     "high": 0.794,
     "low": 0.763,
     "close": 0.779,
+    "percent": 0.65,
     "volume": 50200,
-    "amount": 39207,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-22",
+    "timestamp": 1540137600000,
     "open": 0.8,
     "high": 0.836,
     "low": 0.783,
     "close": 0.835,
+    "percent": 7.19,
     "volume": 553310,
-    "amount": 455882,
-    "timestamp": "",
-    "percent": 7.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-23",
+    "timestamp": 1540224000000,
     "open": 0.828,
     "high": 0.829,
     "low": 0.804,
     "close": 0.817,
+    "percent": -2.16,
     "volume": 349510,
-    "amount": 287957,
-    "timestamp": "",
-    "percent": -2.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-24",
+    "timestamp": 1540310400000,
     "open": 0.813,
     "high": 0.839,
     "low": 0.813,
     "close": 0.825,
+    "percent": 0.98,
     "volume": 288010,
-    "amount": 239713,
-    "timestamp": "",
-    "percent": 0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-25",
+    "timestamp": 1540396800000,
     "open": 0.812,
     "high": 0.835,
     "low": 0.812,
     "close": 0.835,
+    "percent": 1.21,
     "volume": 168101,
-    "amount": 139137,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-26",
+    "timestamp": 1540483200000,
     "open": 0.836,
     "high": 0.841,
     "low": 0.835,
     "close": 0.837,
+    "percent": 0.24,
     "volume": 123700,
-    "amount": 103590,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-29",
+    "timestamp": 1540742400000,
     "open": 0.831,
     "high": 0.833,
     "low": 0.813,
     "close": 0.826,
+    "percent": -1.31,
     "volume": 100800,
-    "amount": 83200,
-    "timestamp": "",
-    "percent": -1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-30",
+    "timestamp": 1540828800000,
     "open": 0.814,
     "high": 0.848,
     "low": 0.791,
     "close": 0.846,
+    "percent": 2.42,
     "volume": 295700,
-    "amount": 245978,
-    "timestamp": "",
-    "percent": 2.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-10-31",
+    "timestamp": 1540915200000,
     "open": 0.833,
     "high": 0.842,
     "low": 0.824,
     "close": 0.841,
+    "percent": -0.59,
     "volume": 1154219,
-    "amount": 954335,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-01",
+    "timestamp": 1541001600000,
     "open": 0.835,
     "high": 0.859,
     "low": 0.832,
     "close": 0.846,
+    "percent": 0.59,
     "volume": 427000,
-    "amount": 362135,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-02",
+    "timestamp": 1541088000000,
     "open": 0.855,
     "high": 0.864,
     "low": 0.843,
     "close": 0.864,
+    "percent": 2.13,
     "volume": 333401,
-    "amount": 284008,
-    "timestamp": "",
-    "percent": 2.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-05",
+    "timestamp": 1541347200000,
     "open": 0.858,
     "high": 0.859,
     "low": 0.843,
     "close": 0.846,
+    "percent": -2.08,
     "volume": 75700,
-    "amount": 64507,
-    "timestamp": "",
-    "percent": -2.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-06",
+    "timestamp": 1541433600000,
     "open": 0.849,
     "high": 0.849,
     "low": 0.842,
     "close": 0.849,
+    "percent": 0.35,
     "volume": 55700,
-    "amount": 47172,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-07",
+    "timestamp": 1541520000000,
     "open": 0.848,
     "high": 0.861,
     "low": 0.843,
     "close": 0.851,
+    "percent": 0.24,
     "volume": 441700,
-    "amount": 377311,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-08",
+    "timestamp": 1541606400000,
     "open": 0.841,
     "high": 0.852,
     "low": 0.84,
     "close": 0.844,
+    "percent": -0.82,
     "volume": 24000,
-    "amount": 20253,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-09",
+    "timestamp": 1541692800000,
     "open": 0.84,
     "high": 0.84,
     "low": 0.829,
     "close": 0.83,
+    "percent": -1.66,
     "volume": 10000,
-    "amount": 8317,
-    "timestamp": "",
-    "percent": -1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-12",
+    "timestamp": 1541952000000,
     "open": 0.832,
     "high": 0.842,
     "low": 0.83,
     "close": 0.834,
+    "percent": 0.48,
     "volume": 13300,
-    "amount": 11072,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-13",
+    "timestamp": 1542038400000,
     "open": 0.834,
     "high": 0.86,
     "low": 0.834,
     "close": 0.86,
+    "percent": 3.12,
     "volume": 90200,
-    "amount": 77325,
-    "timestamp": "",
-    "percent": 3.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-14",
+    "timestamp": 1542124800000,
     "open": 0.855,
     "high": 0.855,
     "low": 0.835,
     "close": 0.84,
+    "percent": -2.33,
     "volume": 86300,
-    "amount": 72424,
-    "timestamp": "",
-    "percent": -2.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-15",
+    "timestamp": 1542211200000,
     "open": 0.832,
     "high": 0.85,
     "low": 0.832,
     "close": 0.843,
+    "percent": 0.36,
     "volume": 75400,
-    "amount": 63524,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-16",
+    "timestamp": 1542297600000,
     "open": 0.849,
     "high": 0.861,
     "low": 0.849,
     "close": 0.859,
+    "percent": 1.9,
     "volume": 83200,
-    "amount": 70999,
-    "timestamp": "",
-    "percent": 1.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-19",
+    "timestamp": 1542556800000,
     "open": 0.862,
     "high": 0.866,
     "low": 0.859,
     "close": 0.864,
+    "percent": 0.58,
     "volume": 188000,
-    "amount": 162282,
-    "timestamp": "",
-    "percent": 0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-20",
+    "timestamp": 1542643200000,
     "open": 0.866,
     "high": 0.866,
     "low": 0.852,
     "close": 0.852,
+    "percent": -1.39,
     "volume": 10300,
-    "amount": 8812,
-    "timestamp": "",
-    "percent": -1.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-21",
+    "timestamp": 1542729600000,
     "open": 0.84,
     "high": 0.858,
     "low": 0.831,
     "close": 0.853,
+    "percent": 0.12,
     "volume": 21400,
-    "amount": 18208,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-22",
+    "timestamp": 1542816000000,
     "open": 0.845,
     "high": 0.849,
     "low": 0.841,
     "close": 0.849,
+    "percent": -0.47,
     "volume": 22100,
-    "amount": 18680,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-23",
+    "timestamp": 1542902400000,
     "open": 0.837,
     "high": 0.847,
     "low": 0.828,
     "close": 0.828,
+    "percent": -2.47,
     "volume": 43000,
-    "amount": 35834,
-    "timestamp": "",
-    "percent": -2.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-26",
+    "timestamp": 1543161600000,
     "open": 0.83,
     "high": 0.841,
     "low": 0.8,
     "close": 0.828,
+    "percent": 0,
     "volume": 799000,
-    "amount": 656548,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-27",
+    "timestamp": 1543248000000,
     "open": 0.828,
     "high": 0.831,
     "low": 0.822,
     "close": 0.827,
+    "percent": -0.12,
     "volume": 177900,
-    "amount": 147099,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-28",
+    "timestamp": 1543334400000,
     "open": 0.827,
     "high": 0.838,
     "low": 0.826,
     "close": 0.837,
+    "percent": 1.21,
     "volume": 159500,
-    "amount": 133196,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-29",
+    "timestamp": 1543420800000,
     "open": 0.84,
     "high": 0.84,
     "low": 0.828,
     "close": 0.828,
+    "percent": -1.08,
     "volume": 35000,
-    "amount": 29203,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-11-30",
+    "timestamp": 1543507200000,
     "open": 0.826,
     "high": 0.832,
     "low": 0.824,
     "close": 0.831,
+    "percent": 0.36,
     "volume": 28800,
-    "amount": 23832,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-03",
+    "timestamp": 1543766400000,
     "open": 0.834,
     "high": 0.854,
     "low": 0.834,
     "close": 0.844,
+    "percent": 1.56,
     "volume": 91800,
-    "amount": 77682,
-    "timestamp": "",
-    "percent": 1.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-04",
+    "timestamp": 1543852800000,
     "open": 0.85,
     "high": 0.85,
     "low": 0.848,
     "close": 0.85,
+    "percent": 0.71,
     "volume": 15200,
-    "amount": 12912,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-05",
+    "timestamp": 1543939200000,
     "open": 0.835,
     "high": 0.847,
     "low": 0.835,
     "close": 0.843,
+    "percent": -0.82,
     "volume": 18600,
-    "amount": 15645,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-06",
+    "timestamp": 1544025600000,
     "open": 0.838,
     "high": 0.84,
     "low": 0.825,
     "close": 0.835,
+    "percent": -0.95,
     "volume": 30500,
-    "amount": 25255,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-07",
+    "timestamp": 1544112000000,
     "open": 0.838,
     "high": 0.838,
     "low": 0.834,
     "close": 0.835,
+    "percent": 0,
     "volume": 47800,
-    "amount": 39901,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-10",
+    "timestamp": 1544371200000,
     "open": 0.832,
     "high": 0.832,
     "low": 0.826,
     "close": 0.827,
+    "percent": -0.96,
     "volume": 31700,
-    "amount": 26282,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-11",
+    "timestamp": 1544457600000,
     "open": 0.829,
     "high": 0.83,
     "low": 0.822,
     "close": 0.828,
+    "percent": 0.12,
     "volume": 400,
-    "amount": 331,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-12",
+    "timestamp": 1544544000000,
     "open": 0.836,
     "high": 0.837,
     "low": 0.826,
     "close": 0.837,
+    "percent": 1.09,
     "volume": 1600,
-    "amount": 1325,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-13",
+    "timestamp": 1544630400000,
     "open": 0.836,
     "high": 0.844,
     "low": 0.829,
     "close": 0.842,
+    "percent": 0.6,
     "volume": 52700,
-    "amount": 44044,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-14",
+    "timestamp": 1544716800000,
     "open": 0.828,
     "high": 0.835,
     "low": 0.828,
     "close": 0.828,
+    "percent": -1.66,
     "volume": 81701,
-    "amount": 67803,
-    "timestamp": "",
-    "percent": -1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-17",
+    "timestamp": 1544976000000,
     "open": 0.829,
     "high": 0.831,
     "low": 0.825,
     "close": 0.83,
+    "percent": 0.24,
     "volume": 25500,
-    "amount": 21118,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-18",
+    "timestamp": 1545062400000,
     "open": 0.827,
     "high": 0.827,
     "low": 0.81,
     "close": 0.819,
+    "percent": -1.33,
     "volume": 52800,
-    "amount": 43145,
-    "timestamp": "",
-    "percent": -1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-19",
+    "timestamp": 1545148800000,
     "open": 0.813,
     "high": 0.819,
     "low": 0.812,
     "close": 0.812,
+    "percent": -0.85,
     "volume": 50700,
-    "amount": 41253,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-20",
+    "timestamp": 1545235200000,
     "open": 0.801,
     "high": 0.806,
     "low": 0.796,
     "close": 0.797,
+    "percent": -1.85,
     "volume": 87700,
-    "amount": 70110,
-    "timestamp": "",
-    "percent": -1.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-21",
+    "timestamp": 1545321600000,
     "open": 0.793,
     "high": 0.793,
     "low": 0.783,
     "close": 0.788,
+    "percent": -1.13,
     "volume": 39500,
-    "amount": 31182,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-24",
+    "timestamp": 1545580800000,
     "open": 0.788,
     "high": 0.796,
     "low": 0.78,
     "close": 0.793,
+    "percent": 0.63,
     "volume": 28100,
-    "amount": 21987,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-25",
+    "timestamp": 1545667200000,
     "open": 0.788,
     "high": 0.812,
     "low": 0.773,
     "close": 0.785,
+    "percent": -1.01,
     "volume": 44400,
-    "amount": 34637,
-    "timestamp": "",
-    "percent": -1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-26",
+    "timestamp": 1545753600000,
     "open": 0.783,
     "high": 0.783,
     "low": 0.783,
     "close": 0.783,
+    "percent": -0.25,
     "volume": 333300,
-    "amount": 260974,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-27",
+    "timestamp": 1545840000000,
     "open": 0.785,
     "high": 0.785,
     "low": 0.772,
     "close": 0.782,
+    "percent": -0.13,
     "volume": 189400,
-    "amount": 147456,
-    "timestamp": "",
-    "percent": -0.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2018-12-28",
+    "timestamp": 1545926400000,
     "open": 0.771,
     "high": 0.786,
     "low": 0.75,
     "close": 0.784,
+    "percent": 0.26,
     "volume": 213100,
-    "amount": 165429,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-02",
+    "timestamp": 1546358400000,
     "open": 0.779,
     "high": 0.781,
     "low": 0.765,
     "close": 0.771,
+    "percent": -1.66,
     "volume": 36500,
-    "amount": 28240,
-    "timestamp": "",
-    "percent": -1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-03",
+    "timestamp": 1546444800000,
     "open": 0.78,
     "high": 0.787,
     "low": 0.776,
     "close": 0.776,
+    "percent": 0.65,
     "volume": 18500,
-    "amount": 14439,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-04",
+    "timestamp": 1546531200000,
     "open": 0.776,
     "high": 0.8,
     "low": 0.776,
     "close": 0.797,
+    "percent": 2.71,
     "volume": 68600,
-    "amount": 54563,
-    "timestamp": "",
-    "percent": 2.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-07",
+    "timestamp": 1546790400000,
     "open": 0.823,
     "high": 0.823,
     "low": 0.786,
     "close": 0.8,
+    "percent": 0.38,
     "volume": 123103,
-    "amount": 97425,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-08",
+    "timestamp": 1546876800000,
     "open": 0.795,
     "high": 0.803,
     "low": 0.788,
     "close": 0.803,
+    "percent": 0.38,
     "volume": 12700,
-    "amount": 10166,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-09",
+    "timestamp": 1546963200000,
     "open": 0.794,
     "high": 0.81,
     "low": 0.794,
     "close": 0.802,
+    "percent": -0.12,
     "volume": 130800,
-    "amount": 105141,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-10",
+    "timestamp": 1547049600000,
     "open": 0.799,
     "high": 0.799,
     "low": 0.791,
     "close": 0.794,
+    "percent": -1,
     "volume": 28800,
-    "amount": 23001,
-    "timestamp": "",
-    "percent": -1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-11",
+    "timestamp": 1547136000000,
     "open": 0.793,
     "high": 0.804,
     "low": 0.791,
     "close": 0.804,
+    "percent": 1.26,
     "volume": 442701,
-    "amount": 353343,
-    "timestamp": "",
-    "percent": 1.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-14",
+    "timestamp": 1547395200000,
     "open": 0.806,
     "high": 0.806,
     "low": 0.794,
     "close": 0.798,
+    "percent": -0.75,
     "volume": 19400,
-    "amount": 15460,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-15",
+    "timestamp": 1547481600000,
     "open": 0.8,
     "high": 0.809,
     "low": 0.796,
     "close": 0.808,
+    "percent": 1.25,
     "volume": 424800,
-    "amount": 341112,
-    "timestamp": "",
-    "percent": 1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-16",
+    "timestamp": 1547568000000,
     "open": 0.811,
     "high": 0.813,
     "low": 0.811,
     "close": 0.813,
+    "percent": 0.62,
     "volume": 131900,
-    "amount": 107004,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-17",
+    "timestamp": 1547654400000,
     "open": 0.814,
     "high": 0.818,
     "low": 0.808,
     "close": 0.808,
+    "percent": -0.62,
     "volume": 34600,
-    "amount": 28283,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-18",
+    "timestamp": 1547740800000,
     "open": 0.815,
     "high": 0.817,
     "low": 0.806,
     "close": 0.816,
+    "percent": 0.99,
     "volume": 31100,
-    "amount": 25386,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-21",
+    "timestamp": 1548000000000,
     "open": 0.816,
     "high": 0.827,
     "low": 0.816,
     "close": 0.822,
+    "percent": 0.74,
     "volume": 28000,
-    "amount": 23114,
-    "timestamp": "",
-    "percent": 0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-22",
+    "timestamp": 1548086400000,
     "open": 0.816,
     "high": 0.816,
     "low": 0.816,
     "close": 0.816,
+    "percent": -0.73,
     "volume": 850000,
-    "amount": 693600,
-    "timestamp": "",
-    "percent": -0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-23",
+    "timestamp": 1548172800000,
     "open": 0.818,
     "high": 0.821,
     "low": 0.81,
     "close": 0.81,
+    "percent": -0.74,
     "volume": 128200,
-    "amount": 104138,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-24",
+    "timestamp": 1548259200000,
     "open": 0.81,
     "high": 0.819,
     "low": 0.81,
     "close": 0.814,
+    "percent": 0.49,
     "volume": 30301,
-    "amount": 24649,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-25",
+    "timestamp": 1548345600000,
     "open": 0.824,
     "high": 0.83,
     "low": 0.824,
     "close": 0.828,
+    "percent": 1.72,
     "volume": 108000,
-    "amount": 89495,
-    "timestamp": "",
-    "percent": 1.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-28",
+    "timestamp": 1548604800000,
     "open": 0.836,
     "high": 0.844,
     "low": 0.829,
     "close": 0.831,
+    "percent": 0.36,
     "volume": 848401,
-    "amount": 708690,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-29",
+    "timestamp": 1548691200000,
     "open": 0.834,
     "high": 0.834,
     "low": 0.813,
     "close": 0.824,
+    "percent": -0.84,
     "volume": 25900,
-    "amount": 21231,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-30",
+    "timestamp": 1548777600000,
     "open": 0.814,
     "high": 0.844,
     "low": 0.811,
     "close": 0.828,
+    "percent": 0.49,
     "volume": 119202,
-    "amount": 99652,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-01-31",
+    "timestamp": 1548864000000,
     "open": 0.831,
     "high": 0.846,
     "low": 0.831,
     "close": 0.845,
+    "percent": 2.05,
     "volume": 159800,
-    "amount": 134690,
-    "timestamp": "",
-    "percent": 2.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-01",
+    "timestamp": 1548950400000,
     "open": 0.85,
     "high": 0.853,
     "low": 0.84,
     "close": 0.85,
+    "percent": 0.59,
     "volume": 120400,
-    "amount": 102273,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-11",
+    "timestamp": 1549814400000,
     "open": 0.841,
     "high": 0.858,
     "low": 0.841,
     "close": 0.858,
+    "percent": 0.94,
     "volume": 530500,
-    "amount": 453770,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-12",
+    "timestamp": 1549900800000,
     "open": 0.853,
     "high": 0.864,
     "low": 0.841,
     "close": 0.855,
+    "percent": -0.35,
     "volume": 245216,
-    "amount": 210450,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-13",
+    "timestamp": 1549987200000,
     "open": 0.878,
     "high": 0.878,
     "low": 0.862,
     "close": 0.877,
+    "percent": 2.57,
     "volume": 129100,
-    "amount": 111962,
-    "timestamp": "",
-    "percent": 2.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-14",
+    "timestamp": 1550073600000,
     "open": 0.868,
     "high": 0.879,
     "low": 0.868,
     "close": 0.873,
+    "percent": -0.46,
     "volume": 87502,
-    "amount": 76525,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-15",
+    "timestamp": 1550160000000,
     "open": 0.87,
     "high": 0.872,
     "low": 0.845,
     "close": 0.853,
+    "percent": -2.29,
     "volume": 1820000,
-    "amount": 1562418,
-    "timestamp": "",
-    "percent": -2.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-18",
+    "timestamp": 1550419200000,
     "open": 0.861,
     "high": 0.879,
     "low": 0.858,
     "close": 0.879,
+    "percent": 3.05,
     "volume": 390441,
-    "amount": 340004,
-    "timestamp": "",
-    "percent": 3.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-19",
+    "timestamp": 1550505600000,
     "open": 0.873,
     "high": 0.896,
     "low": 0.873,
     "close": 0.887,
+    "percent": 0.91,
     "volume": 219100,
-    "amount": 194365,
-    "timestamp": "",
-    "percent": 0.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-20",
+    "timestamp": 1550592000000,
     "open": 0.88,
     "high": 0.889,
     "low": 0.88,
     "close": 0.885,
+    "percent": -0.23,
     "volume": 154100,
-    "amount": 136357,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-21",
+    "timestamp": 1550678400000,
     "open": 0.885,
     "high": 0.899,
     "low": 0.881,
     "close": 0.886,
+    "percent": 0.11,
     "volume": 104200,
-    "amount": 92309,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-22",
+    "timestamp": 1550764800000,
     "open": 0.882,
     "high": 0.919,
     "low": 0.882,
     "close": 0.915,
+    "percent": 3.27,
     "volume": 209300,
-    "amount": 189264,
-    "timestamp": "",
-    "percent": 3.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-25",
+    "timestamp": 1551024000000,
     "open": 0.923,
     "high": 0.998,
     "low": 0.923,
     "close": 0.979,
+    "percent": 6.99,
     "volume": 502124,
-    "amount": 479351,
-    "timestamp": "",
-    "percent": 6.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-26",
+    "timestamp": 1551110400000,
     "open": 0.979,
     "high": 0.99,
     "low": 0.951,
     "close": 0.966,
+    "percent": -1.33,
     "volume": 415113,
-    "amount": 405341,
-    "timestamp": "",
-    "percent": -1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-27",
+    "timestamp": 1551196800000,
     "open": 0.972,
     "high": 0.99,
     "low": 0.95,
     "close": 0.969,
+    "percent": 0.31,
     "volume": 817403,
-    "amount": 797600,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-02-28",
+    "timestamp": 1551283200000,
     "open": 0.979,
     "high": 0.979,
     "low": 0.961,
     "close": 0.968,
+    "percent": -0.1,
     "volume": 391200,
-    "amount": 379017,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-01",
+    "timestamp": 1551369600000,
     "open": 0.968,
     "high": 0.991,
     "low": 0.958,
     "close": 0.979,
+    "percent": 1.14,
     "volume": 258017,
-    "amount": 251004,
-    "timestamp": "",
-    "percent": 1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-04",
+    "timestamp": 1551628800000,
     "open": 0.979,
     "high": 1.05,
     "low": 0.979,
     "close": 1,
+    "percent": 2.15,
     "volume": 839473,
-    "amount": 846844,
-    "timestamp": "",
-    "percent": 2.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-05",
+    "timestamp": 1551715200000,
     "open": 1,
     "high": 1.014,
     "low": 0.989,
     "close": 1,
+    "percent": 0,
     "volume": 233201,
-    "amount": 233423,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-06",
+    "timestamp": 1551801600000,
     "open": 0.999,
     "high": 1.026,
     "low": 0.994,
     "close": 1.023,
+    "percent": 2.3,
     "volume": 587107,
-    "amount": 591537,
-    "timestamp": "",
-    "percent": 2.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-07",
+    "timestamp": 1551888000000,
     "open": 1.034,
     "high": 1.034,
     "low": 1.005,
     "close": 1.027,
+    "percent": 0.39,
     "volume": 697852,
-    "amount": 707058,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-08",
+    "timestamp": 1551974400000,
     "open": 1,
     "high": 1,
     "low": 0.957,
     "close": 0.967,
+    "percent": -5.84,
     "volume": 12443205,
-    "amount": 12110000,
-    "timestamp": "",
-    "percent": -5.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-11",
+    "timestamp": 1552233600000,
     "open": 0.966,
     "high": 0.978,
     "low": 0.945,
     "close": 0.978,
+    "percent": 1.14,
     "volume": 1170002,
-    "amount": 1127392,
-    "timestamp": "",
-    "percent": 1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-12",
+    "timestamp": 1552320000000,
     "open": 0.991,
     "high": 0.999,
     "low": 0.966,
     "close": 0.98,
+    "percent": 0.2,
     "volume": 274005,
-    "amount": 271534,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-13",
+    "timestamp": 1552406400000,
     "open": 0.977,
     "high": 0.992,
     "low": 0.974,
     "close": 0.975,
+    "percent": -0.51,
     "volume": 147600,
-    "amount": 144510,
-    "timestamp": "",
-    "percent": -0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-14",
+    "timestamp": 1552492800000,
     "open": 0.983,
     "high": 0.986,
     "low": 0.968,
     "close": 0.97,
+    "percent": -0.51,
     "volume": 60300,
-    "amount": 58832,
-    "timestamp": "",
-    "percent": -0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-15",
+    "timestamp": 1552579200000,
     "open": 0.979,
     "high": 0.991,
     "low": 0.96,
     "close": 0.984,
+    "percent": 1.44,
     "volume": 331854,
-    "amount": 327060,
-    "timestamp": "",
-    "percent": 1.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-18",
+    "timestamp": 1552838400000,
     "open": 0.983,
     "high": 1.009,
     "low": 0.983,
     "close": 1.009,
+    "percent": 2.54,
     "volume": 1275518,
-    "amount": 1283088,
-    "timestamp": "",
-    "percent": 2.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-19",
+    "timestamp": 1552924800000,
     "open": 1.012,
     "high": 1.016,
     "low": 0.994,
     "close": 1.003,
+    "percent": -0.59,
     "volume": 550972,
-    "amount": 557556,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-20",
+    "timestamp": 1553011200000,
     "open": 1.005,
     "high": 1.013,
     "low": 0.99,
     "close": 1.011,
+    "percent": 0.8,
     "volume": 2629729,
-    "amount": 2635671,
-    "timestamp": "",
-    "percent": 0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-21",
+    "timestamp": 1553097600000,
     "open": 0.99,
     "high": 1.025,
     "low": 0.99,
     "close": 1.011,
+    "percent": 0,
     "volume": 613858,
-    "amount": 621224,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-22",
+    "timestamp": 1553184000000,
     "open": 1.004,
     "high": 1.021,
     "low": 0.996,
     "close": 1.02,
+    "percent": 0.89,
     "volume": 1102804,
-    "amount": 1108940,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-25",
+    "timestamp": 1553443200000,
     "open": 0.985,
     "high": 1.02,
     "low": 0.977,
     "close": 0.978,
+    "percent": -4.12,
     "volume": 1079700,
-    "amount": 1067700,
-    "timestamp": "",
-    "percent": -4.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-26",
+    "timestamp": 1553529600000,
     "open": 0.971,
     "high": 0.989,
     "low": 0.961,
     "close": 0.964,
+    "percent": -1.43,
     "volume": 1443500,
-    "amount": 1400520,
-    "timestamp": "",
-    "percent": -1.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-27",
+    "timestamp": 1553616000000,
     "open": 0.971,
     "high": 0.98,
     "low": 0.962,
     "close": 0.977,
+    "percent": 1.35,
     "volume": 692100,
-    "amount": 672470,
-    "timestamp": "",
-    "percent": 1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-28",
+    "timestamp": 1553702400000,
     "open": 0.969,
     "high": 0.979,
     "low": 0.957,
     "close": 0.966,
+    "percent": -1.13,
     "volume": 57800,
-    "amount": 55909,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-03-29",
+    "timestamp": 1553788800000,
     "open": 0.966,
     "high": 1,
     "low": 0.966,
     "close": 0.991,
+    "percent": 2.59,
     "volume": 172500,
-    "amount": 170049,
-    "timestamp": "",
-    "percent": 2.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-01",
+    "timestamp": 1554048000000,
     "open": 1.01,
     "high": 1.027,
     "low": 1.01,
     "close": 1.02,
+    "percent": 2.93,
     "volume": 1216907,
-    "amount": 1241718,
-    "timestamp": "",
-    "percent": 2.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-02",
+    "timestamp": 1554134400000,
     "open": 1.022,
     "high": 1.036,
     "low": 1.008,
     "close": 1.025,
+    "percent": 0.49,
     "volume": 811511,
-    "amount": 835693,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-03",
+    "timestamp": 1554220800000,
     "open": 1.025,
     "high": 1.05,
     "low": 1.016,
     "close": 1.05,
+    "percent": 2.44,
     "volume": 1296284,
-    "amount": 1348751,
-    "timestamp": "",
-    "percent": 2.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-04",
+    "timestamp": 1554307200000,
     "open": 1.058,
     "high": 1.06,
     "low": 1.04,
     "close": 1.05,
+    "percent": 0,
     "volume": 252311,
-    "amount": 264615,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-08",
+    "timestamp": 1554652800000,
     "open": 1.047,
     "high": 1.07,
     "low": 1.047,
     "close": 1.051,
+    "percent": 0.1,
     "volume": 334001,
-    "amount": 352959,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-09",
+    "timestamp": 1554739200000,
     "open": 1.05,
     "high": 1.058,
     "low": 1.045,
     "close": 1.052,
+    "percent": 0.1,
     "volume": 387206,
-    "amount": 406606,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-10",
+    "timestamp": 1554825600000,
     "open": 1.05,
     "high": 1.054,
     "low": 1.036,
     "close": 1.053,
+    "percent": 0.1,
     "volume": 346249,
-    "amount": 362305,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-11",
+    "timestamp": 1554912000000,
     "open": 1.05,
     "high": 1.053,
     "low": 1.038,
     "close": 1.046,
+    "percent": -0.66,
     "volume": 286300,
-    "amount": 299296,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-12",
+    "timestamp": 1554998400000,
     "open": 1.038,
     "high": 1.046,
     "low": 1.032,
     "close": 1.046,
+    "percent": 0,
     "volume": 52929,
-    "amount": 54815,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-15",
+    "timestamp": 1555257600000,
     "open": 1.053,
     "high": 1.066,
     "low": 1.038,
     "close": 1.038,
+    "percent": -0.76,
     "volume": 191700,
-    "amount": 202738,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-16",
+    "timestamp": 1555344000000,
     "open": 1.031,
     "high": 1.075,
     "low": 1.029,
     "close": 1.07,
+    "percent": 3.08,
     "volume": 949959,
-    "amount": 1008913,
-    "timestamp": "",
-    "percent": 3.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-17",
+    "timestamp": 1555430400000,
     "open": 1.08,
     "high": 1.08,
     "low": 0.963,
     "close": 1.063,
+    "percent": -0.65,
     "volume": 257418,
-    "amount": 268740,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-18",
+    "timestamp": 1555516800000,
     "open": 1.06,
     "high": 1.063,
     "low": 1.049,
     "close": 1.056,
+    "percent": -0.66,
     "volume": 127800,
-    "amount": 134930,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-19",
+    "timestamp": 1555603200000,
     "open": 1.045,
     "high": 1.069,
     "low": 1.045,
     "close": 1.058,
+    "percent": 0.19,
     "volume": 161530,
-    "amount": 170939,
-    "timestamp": "",
-    "percent": 0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-22",
+    "timestamp": 1555862400000,
     "open": 1.067,
     "high": 1.067,
     "low": 1.031,
     "close": 1.039,
+    "percent": -1.8,
     "volume": 232400,
-    "amount": 242993,
-    "timestamp": "",
-    "percent": -1.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-23",
+    "timestamp": 1555948800000,
     "open": 1.029,
     "high": 1.058,
     "low": 1.029,
     "close": 1.048,
+    "percent": 0.87,
     "volume": 129991,
-    "amount": 135032,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-24",
+    "timestamp": 1556035200000,
     "open": 1.045,
     "high": 1.05,
     "low": 1.035,
     "close": 1.045,
+    "percent": -0.29,
     "volume": 36800,
-    "amount": 38473,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-25",
+    "timestamp": 1556121600000,
     "open": 1.042,
     "high": 1.042,
     "low": 1.022,
     "close": 1.027,
+    "percent": -1.72,
     "volume": 144400,
-    "amount": 149376,
-    "timestamp": "",
-    "percent": -1.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-26",
+    "timestamp": 1556208000000,
     "open": 1.022,
     "high": 1.037,
     "low": 1.016,
     "close": 1.032,
+    "percent": 0.49,
     "volume": 86300,
-    "amount": 88008,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-29",
+    "timestamp": 1556467200000,
     "open": 1.008,
     "high": 1.031,
     "low": 1.008,
     "close": 1.028,
+    "percent": -0.39,
     "volume": 197810,
-    "amount": 201384,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-04-30",
+    "timestamp": 1556553600000,
     "open": 1.016,
     "high": 1.023,
     "low": 1.006,
     "close": 1.02,
+    "percent": -0.78,
     "volume": 160881,
-    "amount": 162944,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-06",
+    "timestamp": 1557072000000,
     "open": 0.998,
     "high": 0.998,
     "low": 0.927,
     "close": 0.963,
+    "percent": -5.59,
     "volume": 146581,
-    "amount": 140474,
-    "timestamp": "",
-    "percent": -5.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-07",
+    "timestamp": 1557158400000,
     "open": 0.966,
     "high": 0.98,
     "low": 0.95,
     "close": 0.969,
+    "percent": 0.62,
     "volume": 69400,
-    "amount": 66745,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-08",
+    "timestamp": 1557244800000,
     "open": 0.971,
     "high": 0.971,
     "low": 0.935,
     "close": 0.96,
+    "percent": -0.93,
     "volume": 255981,
-    "amount": 242310,
-    "timestamp": "",
-    "percent": -0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-09",
+    "timestamp": 1557331200000,
     "open": 0.951,
     "high": 0.973,
     "low": 0.931,
     "close": 0.934,
+    "percent": -2.71,
     "volume": 85400,
-    "amount": 80229,
-    "timestamp": "",
-    "percent": -2.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-10",
+    "timestamp": 1557417600000,
     "open": 0.946,
     "high": 0.966,
     "low": 0.938,
     "close": 0.966,
+    "percent": 3.43,
     "volume": 218881,
-    "amount": 207924,
-    "timestamp": "",
-    "percent": 3.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-13",
+    "timestamp": 1557676800000,
     "open": 0.961,
     "high": 0.963,
     "low": 0.941,
     "close": 0.946,
+    "percent": -2.07,
     "volume": 78500,
-    "amount": 74222,
-    "timestamp": "",
-    "percent": -2.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-14",
+    "timestamp": 1557763200000,
     "open": 0.949,
     "high": 0.956,
     "low": 0.94,
     "close": 0.948,
+    "percent": 0.21,
     "volume": 117900,
-    "amount": 111618,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-15",
+    "timestamp": 1557849600000,
     "open": 0.953,
     "high": 0.962,
     "low": 0.953,
     "close": 0.954,
+    "percent": 0.63,
     "volume": 43500,
-    "amount": 41694,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-16",
+    "timestamp": 1557936000000,
     "open": 0.954,
     "high": 0.962,
     "low": 0.953,
     "close": 0.96,
+    "percent": 0.63,
     "volume": 50229,
-    "amount": 47968,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-17",
+    "timestamp": 1558022400000,
     "open": 0.958,
     "high": 0.958,
     "low": 0.937,
     "close": 0.94,
+    "percent": -2.08,
     "volume": 56100,
-    "amount": 53125,
-    "timestamp": "",
-    "percent": -2.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-20",
+    "timestamp": 1558281600000,
     "open": 0.93,
     "high": 0.945,
     "low": 0.93,
     "close": 0.939,
+    "percent": -0.11,
     "volume": 44729,
-    "amount": 41740,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-21",
+    "timestamp": 1558368000000,
     "open": 0.943,
     "high": 0.956,
     "low": 0.943,
     "close": 0.95,
+    "percent": 1.17,
     "volume": 37000,
-    "amount": 34935,
-    "timestamp": "",
-    "percent": 1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-22",
+    "timestamp": 1558454400000,
     "open": 0.95,
     "high": 0.95,
     "low": 0.944,
     "close": 0.944,
+    "percent": -0.63,
     "volume": 20400,
-    "amount": 19258,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-23",
+    "timestamp": 1558540800000,
     "open": 0.939,
     "high": 0.94,
     "low": 0.937,
     "close": 0.94,
+    "percent": -0.42,
     "volume": 3600,
-    "amount": 3384,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-24",
+    "timestamp": 1558627200000,
     "open": 0.944,
     "high": 0.944,
     "low": 0.937,
     "close": 0.942,
+    "percent": 0.21,
     "volume": 195600,
-    "amount": 183755,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-27",
+    "timestamp": 1558886400000,
     "open": 0.936,
     "high": 0.948,
     "low": 0.935,
     "close": 0.947,
+    "percent": 0.53,
     "volume": 92003,
-    "amount": 86894,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-28",
+    "timestamp": 1558972800000,
     "open": 0.947,
     "high": 0.953,
     "low": 0.94,
     "close": 0.947,
+    "percent": 0,
     "volume": 95300,
-    "amount": 90210,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-29",
+    "timestamp": 1559059200000,
     "open": 0.943,
     "high": 0.953,
     "low": 0.943,
     "close": 0.949,
+    "percent": 0.21,
     "volume": 21700,
-    "amount": 20577,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-30",
+    "timestamp": 1559145600000,
     "open": 0.947,
     "high": 0.95,
     "low": 0.939,
     "close": 0.944,
+    "percent": -0.53,
     "volume": 17100,
-    "amount": 16087,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-05-31",
+    "timestamp": 1559232000000,
     "open": 0.949,
     "high": 0.95,
     "low": 0.947,
     "close": 0.947,
+    "percent": 0.32,
     "volume": 2700,
-    "amount": 2559,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-03",
+    "timestamp": 1559491200000,
     "open": 0.947,
     "high": 0.947,
     "low": 0.935,
     "close": 0.94,
+    "percent": -0.74,
     "volume": 19800,
-    "amount": 18653,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-04",
+    "timestamp": 1559577600000,
     "open": 0.937,
     "high": 0.94,
     "low": 0.935,
     "close": 0.94,
+    "percent": 0,
     "volume": 3200,
-    "amount": 2993,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-05",
+    "timestamp": 1559664000000,
     "open": 0.95,
     "high": 0.95,
     "low": 0.938,
     "close": 0.938,
+    "percent": -0.21,
     "volume": 62100,
-    "amount": 58970,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-06",
+    "timestamp": 1559750400000,
     "open": 0.939,
     "high": 0.944,
     "low": 0.934,
     "close": 0.939,
+    "percent": 0.11,
     "volume": 107000,
-    "amount": 100470,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-10",
+    "timestamp": 1560096000000,
     "open": 0.944,
     "high": 0.944,
     "low": 0.944,
     "close": 0.944,
+    "percent": 0.53,
     "volume": 12000,
-    "amount": 11328,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-11",
+    "timestamp": 1560182400000,
     "open": 0.947,
     "high": 0.965,
     "low": 0.947,
     "close": 0.962,
+    "percent": 1.91,
     "volume": 282934,
-    "amount": 272136,
-    "timestamp": "",
-    "percent": 1.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-12",
+    "timestamp": 1560268800000,
     "open": 0.962,
     "high": 0.967,
     "low": 0.955,
     "close": 0.966,
+    "percent": 0.42,
     "volume": 110400,
-    "amount": 106395,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-13",
+    "timestamp": 1560355200000,
     "open": 0.961,
     "high": 0.966,
     "low": 0.957,
     "close": 0.966,
+    "percent": 0,
     "volume": 86702,
-    "amount": 83743,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-14",
+    "timestamp": 1560441600000,
     "open": 0.973,
     "high": 0.973,
     "low": 0.959,
     "close": 0.959,
+    "percent": -0.72,
     "volume": 26300,
-    "amount": 25450,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-17",
+    "timestamp": 1560700800000,
     "open": 0.966,
     "high": 0.966,
     "low": 0.966,
     "close": 0.966,
+    "percent": 0.73,
     "volume": 100,
-    "amount": 97,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-18",
+    "timestamp": 1560787200000,
     "open": 0.954,
     "high": 0.954,
     "low": 0.954,
     "close": 0.954,
+    "percent": -1.24,
     "volume": 32200,
-    "amount": 30719,
-    "timestamp": "",
-    "percent": -1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-19",
+    "timestamp": 1560873600000,
     "open": 0.964,
     "high": 0.984,
     "low": 0.964,
     "close": 0.979,
+    "percent": 2.62,
     "volume": 340900,
-    "amount": 333439,
-    "timestamp": "",
-    "percent": 2.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-20",
+    "timestamp": 1560960000000,
     "open": 0.979,
     "high": 1.02,
     "low": 0.979,
     "close": 1.007,
+    "percent": 2.86,
     "volume": 136988,
-    "amount": 137001,
-    "timestamp": "",
-    "percent": 2.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-21",
+    "timestamp": 1561046400000,
     "open": 1.007,
     "high": 1.015,
     "low": 1.007,
     "close": 1.008,
+    "percent": 0.1,
     "volume": 288005,
-    "amount": 290168,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-24",
+    "timestamp": 1561305600000,
     "open": 1.007,
     "high": 1.014,
     "low": 1.007,
     "close": 1.01,
+    "percent": 0.2,
     "volume": 106401,
-    "amount": 107334,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-25",
+    "timestamp": 1561392000000,
     "open": 0.999,
     "high": 0.999,
     "low": 0.991,
     "close": 0.993,
+    "percent": -1.68,
     "volume": 26200,
-    "amount": 26022,
-    "timestamp": "",
-    "percent": -1.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-26",
+    "timestamp": 1561478400000,
     "open": 0.992,
     "high": 0.997,
     "low": 0.991,
     "close": 0.991,
+    "percent": -0.2,
     "volume": 19200,
-    "amount": 19086,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-27",
+    "timestamp": 1561564800000,
     "open": 1.001,
     "high": 1.007,
     "low": 1,
     "close": 1.002,
+    "percent": 1.11,
     "volume": 23600,
-    "amount": 23662,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-06-28",
+    "timestamp": 1561651200000,
     "open": 0.996,
     "high": 0.999,
     "low": 0.996,
     "close": 0.999,
+    "percent": -0.3,
     "volume": 2300,
-    "amount": 2292,
-    "timestamp": "",
-    "percent": -0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-01",
+    "timestamp": 1561910400000,
     "open": 1.001,
     "high": 1.023,
     "low": 1.001,
     "close": 1.02,
+    "percent": 2.1,
     "volume": 478129,
-    "amount": 480959,
-    "timestamp": "",
-    "percent": 2.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-02",
+    "timestamp": 1561996800000,
     "open": 1.02,
     "high": 1.023,
     "low": 1.014,
     "close": 1.022,
+    "percent": 0.2,
     "volume": 381205,
-    "amount": 387728,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-03",
+    "timestamp": 1562083200000,
     "open": 1.013,
     "high": 1.013,
     "low": 1.008,
     "close": 1.01,
+    "percent": -1.17,
     "volume": 44700,
-    "amount": 45150,
-    "timestamp": "",
-    "percent": -1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-04",
+    "timestamp": 1562169600000,
     "open": 1.011,
     "high": 1.014,
     "low": 1.01,
     "close": 1.01,
+    "percent": 0,
     "volume": 23000,
-    "amount": 23271,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-05",
+    "timestamp": 1562256000000,
     "open": 1.009,
     "high": 1.01,
     "low": 1.007,
     "close": 1.01,
+    "percent": 0,
     "volume": 8900,
-    "amount": 8985,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-08",
+    "timestamp": 1562515200000,
     "open": 1.01,
     "high": 1.01,
     "low": 0.991,
     "close": 0.992,
+    "percent": -1.78,
     "volume": 127701,
-    "amount": 127445,
-    "timestamp": "",
-    "percent": -1.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-09",
+    "timestamp": 1562601600000,
     "open": 0.99,
     "high": 0.999,
     "low": 0.979,
     "close": 0.99,
+    "percent": -0.2,
     "volume": 61700,
-    "amount": 61019,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-10",
+    "timestamp": 1562688000000,
     "open": 0.99,
     "high": 0.996,
     "low": 0.987,
     "close": 0.989,
+    "percent": -0.1,
     "volume": 42700,
-    "amount": 42232,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-11",
+    "timestamp": 1562774400000,
     "open": 0.982,
     "high": 0.996,
     "low": 0.982,
     "close": 0.99,
+    "percent": 0.1,
     "volume": 2857100,
-    "amount": 2837609,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-12",
+    "timestamp": 1562860800000,
     "open": 0.996,
     "high": 1.01,
     "low": 0.995,
     "close": 1.002,
+    "percent": 1.21,
     "volume": 897211,
-    "amount": 896015,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-15",
+    "timestamp": 1563120000000,
     "open": 0.991,
     "high": 1.005,
     "low": 0.991,
     "close": 1.004,
+    "percent": 0.2,
     "volume": 1036800,
-    "amount": 1035167,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-16",
+    "timestamp": 1563206400000,
     "open": 1.003,
     "high": 1.006,
     "low": 1,
     "close": 1.006,
+    "percent": 0.2,
     "volume": 462800,
-    "amount": 464333,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-17",
+    "timestamp": 1563292800000,
     "open": 1.008,
     "high": 1.008,
     "low": 1.001,
     "close": 1.002,
+    "percent": -0.4,
     "volume": 84303,
-    "amount": 84432,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-18",
+    "timestamp": 1563379200000,
     "open": 0.991,
     "high": 1.002,
     "low": 0.986,
     "close": 0.999,
+    "percent": -0.3,
     "volume": 54309,
-    "amount": 54272,
-    "timestamp": "",
-    "percent": -0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-19",
+    "timestamp": 1563465600000,
     "open": 1.002,
     "high": 1.014,
     "low": 1.002,
     "close": 1.009,
+    "percent": 1,
     "volume": 496600,
-    "amount": 500876,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-22",
+    "timestamp": 1563724800000,
     "open": 1.013,
     "high": 1.013,
     "low": 1.007,
     "close": 1.008,
+    "percent": -0.1,
     "volume": 11200,
-    "amount": 11339,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-23",
+    "timestamp": 1563811200000,
     "open": 1.018,
     "high": 1.018,
     "low": 1.008,
     "close": 1.008,
+    "percent": 0,
     "volume": 10000,
-    "amount": 10081,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-24",
+    "timestamp": 1563897600000,
     "open": 1.015,
     "high": 1.025,
     "low": 1.015,
     "close": 1.025,
+    "percent": 1.69,
     "volume": 885896,
-    "amount": 905774,
-    "timestamp": "",
-    "percent": 1.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-25",
+    "timestamp": 1563984000000,
     "open": 1.017,
     "high": 1.029,
     "low": 1.017,
     "close": 1.029,
+    "percent": 0.39,
     "volume": 741601,
-    "amount": 761639,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-26",
+    "timestamp": 1564070400000,
     "open": 1.019,
     "high": 1.028,
     "low": 1.019,
     "close": 1.026,
+    "percent": -0.29,
     "volume": 13300,
-    "amount": 13632,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-29",
+    "timestamp": 1564329600000,
     "open": 1.023,
     "high": 1.023,
     "low": 1.023,
     "close": 1.023,
+    "percent": -0.29,
     "volume": 100,
-    "amount": 102,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-30",
+    "timestamp": 1564416000000,
     "open": 1.029,
     "high": 1.029,
     "low": 1.029,
     "close": 1.029,
+    "percent": 0.59,
     "volume": 7100,
-    "amount": 7306,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-07-31",
+    "timestamp": 1564502400000,
     "open": 1.032,
     "high": 1.032,
     "low": 1.018,
     "close": 1.018,
+    "percent": -1.07,
     "volume": 355700,
-    "amount": 362817,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-01",
+    "timestamp": 1564588800000,
     "open": 1.011,
     "high": 1.015,
     "low": 1.007,
     "close": 1.011,
+    "percent": -0.69,
     "volume": 2492200,
-    "amount": 2511784,
-    "timestamp": "",
-    "percent": -0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-02",
+    "timestamp": 1564675200000,
     "open": 1.011,
     "high": 1.011,
     "low": 0.961,
     "close": 0.996,
+    "percent": -1.48,
     "volume": 77353,
-    "amount": 76247,
-    "timestamp": "",
-    "percent": -1.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-05",
+    "timestamp": 1564934400000,
     "open": 0.982,
     "high": 0.986,
     "low": 0.98,
     "close": 0.986,
+    "percent": -1,
     "volume": 40200,
-    "amount": 39463,
-    "timestamp": "",
-    "percent": -1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-06",
+    "timestamp": 1565020800000,
     "open": 0.953,
     "high": 0.969,
     "low": 0.95,
     "close": 0.962,
+    "percent": -2.43,
     "volume": 356000,
-    "amount": 341486,
-    "timestamp": "",
-    "percent": -2.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-07",
+    "timestamp": 1565107200000,
     "open": 0.962,
     "high": 0.962,
     "low": 0.959,
     "close": 0.961,
+    "percent": -0.1,
     "volume": 27100,
-    "amount": 26037,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-08",
+    "timestamp": 1565193600000,
     "open": 0.963,
     "high": 0.97,
     "low": 0.961,
     "close": 0.965,
+    "percent": 0.42,
     "volume": 47600,
-    "amount": 45985,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-09",
+    "timestamp": 1565280000000,
     "open": 0.972,
     "high": 0.973,
     "low": 0.97,
     "close": 0.971,
+    "percent": 0.62,
     "volume": 2100,
-    "amount": 2041,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-12",
+    "timestamp": 1565539200000,
     "open": 0.972,
     "high": 1.02,
     "low": 0.972,
     "close": 0.98,
+    "percent": 0.93,
     "volume": 414500,
-    "amount": 406045,
-    "timestamp": "",
-    "percent": 0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-13",
+    "timestamp": 1565625600000,
     "open": 0.98,
     "high": 0.98,
     "low": 0.98,
     "close": 0.98,
+    "percent": 0,
     "volume": 10000,
-    "amount": 9800,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-14",
+    "timestamp": 1565712000000,
     "open": 0.982,
     "high": 0.982,
     "low": 0.98,
     "close": 0.98,
+    "percent": 0,
     "volume": 100500,
-    "amount": 98510,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-15",
+    "timestamp": 1565798400000,
     "open": 0.972,
     "high": 0.972,
     "low": 0.972,
     "close": 0.972,
+    "percent": -0.82,
     "volume": 37600,
-    "amount": 36547,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-16",
+    "timestamp": 1565884800000,
     "open": 0.98,
     "high": 1,
     "low": 0.978,
     "close": 0.98,
+    "percent": 0.82,
     "volume": 244700,
-    "amount": 240003,
-    "timestamp": "",
-    "percent": 0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-19",
+    "timestamp": 1566144000000,
     "open": 0.98,
     "high": 1.017,
     "low": 0.976,
     "close": 1.006,
+    "percent": 2.65,
     "volume": 19491300,
-    "amount": 19149505,
-    "timestamp": "",
-    "percent": 2.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-20",
+    "timestamp": 1566230400000,
     "open": 0.995,
     "high": 1.01,
     "low": 0.994,
     "close": 1.01,
+    "percent": 0.4,
     "volume": 82200,
-    "amount": 82253,
-    "timestamp": "",
-    "percent": 0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-21",
+    "timestamp": 1566316800000,
     "open": 0.994,
     "high": 1.005,
     "low": 0.993,
     "close": 0.995,
+    "percent": -1.49,
     "volume": 3900,
-    "amount": 3884,
-    "timestamp": "",
-    "percent": -1.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-22",
+    "timestamp": 1566403200000,
     "open": 0.998,
     "high": 1,
     "low": 0.989,
     "close": 0.999,
+    "percent": 0.4,
     "volume": 68000,
-    "amount": 67592,
-    "timestamp": "",
-    "percent": 0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-23",
+    "timestamp": 1566489600000,
     "open": 0.994,
     "high": 1.008,
     "low": 0.994,
     "close": 1.007,
+    "percent": 0.8,
     "volume": 90900,
-    "amount": 90992,
-    "timestamp": "",
-    "percent": 0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-26",
+    "timestamp": 1566748800000,
     "open": 0.98,
     "high": 0.998,
     "low": 0.98,
     "close": 0.985,
+    "percent": -2.18,
     "volume": 34503,
-    "amount": 34019,
-    "timestamp": "",
-    "percent": -2.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-27",
+    "timestamp": 1566835200000,
     "open": 1,
     "high": 1.007,
     "low": 0.988,
     "close": 1.003,
+    "percent": 1.83,
     "volume": 572400,
-    "amount": 571241,
-    "timestamp": "",
-    "percent": 1.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-28",
+    "timestamp": 1566921600000,
     "open": 0.988,
     "high": 0.995,
     "low": 0.986,
     "close": 0.992,
+    "percent": -1.1,
     "volume": 43800,
-    "amount": 43334,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-29",
+    "timestamp": 1567008000000,
     "open": 0.985,
     "high": 0.987,
     "low": 0.98,
     "close": 0.987,
+    "percent": -0.5,
     "volume": 72800,
-    "amount": 71659,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-08-30",
+    "timestamp": 1567094400000,
     "open": 0.983,
     "high": 0.999,
     "low": 0.981,
     "close": 0.981,
+    "percent": -0.61,
     "volume": 77900,
-    "amount": 76525,
-    "timestamp": "",
-    "percent": -0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-02",
+    "timestamp": 1567353600000,
     "open": 0.982,
     "high": 0.99,
     "low": 0.981,
     "close": 0.99,
+    "percent": 0.92,
     "volume": 351816,
-    "amount": 346486,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-03",
+    "timestamp": 1567440000000,
     "open": 0.991,
     "high": 0.991,
     "low": 0.986,
     "close": 0.991,
+    "percent": 0.1,
     "volume": 46600,
-    "amount": 46176,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-04",
+    "timestamp": 1567526400000,
     "open": 0.994,
     "high": 1.008,
     "low": 0.993,
     "close": 1,
+    "percent": 0.91,
     "volume": 826200,
-    "amount": 824143,
-    "timestamp": "",
-    "percent": 0.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-05",
+    "timestamp": 1567612800000,
     "open": 1.013,
     "high": 1.03,
     "low": 1.013,
     "close": 1.016,
+    "percent": 1.6,
     "volume": 663700,
-    "amount": 679944,
-    "timestamp": "",
-    "percent": 1.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-06",
+    "timestamp": 1567699200000,
     "open": 1.023,
     "high": 1.025,
     "low": 1.016,
     "close": 1.025,
+    "percent": 0.89,
     "volume": 111700,
-    "amount": 113807,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-09",
+    "timestamp": 1567958400000,
     "open": 1.032,
     "high": 1.058,
     "low": 1.024,
     "close": 1.036,
+    "percent": 1.07,
     "volume": 495118,
-    "amount": 513671,
-    "timestamp": "",
-    "percent": 1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-10",
+    "timestamp": 1568044800000,
     "open": 1.02,
     "high": 1.035,
     "low": 1.013,
     "close": 1.035,
+    "percent": -0.1,
     "volume": 255801,
-    "amount": 262364,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-11",
+    "timestamp": 1568131200000,
     "open": 1.026,
     "high": 1.034,
     "low": 1.025,
     "close": 1.026,
+    "percent": -0.87,
     "volume": 346900,
-    "amount": 356178,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-12",
+    "timestamp": 1568217600000,
     "open": 1.033,
     "high": 1.04,
     "low": 1.026,
     "close": 1.04,
+    "percent": 1.36,
     "volume": 588460,
-    "amount": 607773,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-16",
+    "timestamp": 1568563200000,
     "open": 1.04,
     "high": 1.04,
     "low": 1.03,
     "close": 1.034,
+    "percent": -0.58,
     "volume": 142100,
-    "amount": 147091,
-    "timestamp": "",
-    "percent": -0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-17",
+    "timestamp": 1568649600000,
     "open": 1.024,
     "high": 1.03,
     "low": 1.002,
     "close": 1.02,
+    "percent": -1.35,
     "volume": 102102,
-    "amount": 103608,
-    "timestamp": "",
-    "percent": -1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-18",
+    "timestamp": 1568736000000,
     "open": 1.019,
     "high": 1.021,
     "low": 1.016,
     "close": 1.019,
+    "percent": -0.1,
     "volume": 23302,
-    "amount": 23761,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-19",
+    "timestamp": 1568822400000,
     "open": 1.015,
     "high": 1.017,
     "low": 1.011,
     "close": 1.016,
+    "percent": -0.29,
     "volume": 216308,
-    "amount": 219213,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-20",
+    "timestamp": 1568908800000,
     "open": 1.015,
     "high": 1.02,
     "low": 1.015,
     "close": 1.015,
+    "percent": -0.1,
     "volume": 10613,
-    "amount": 10820,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-23",
+    "timestamp": 1569168000000,
     "open": 1.008,
     "high": 1.008,
     "low": 1.005,
     "close": 1.005,
+    "percent": -0.99,
     "volume": 5400,
-    "amount": 5434,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-24",
+    "timestamp": 1569254400000,
     "open": 1.009,
     "high": 1.013,
     "low": 1.006,
     "close": 1.013,
+    "percent": 0.8,
     "volume": 263103,
-    "amount": 265901,
-    "timestamp": "",
-    "percent": 0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-25",
+    "timestamp": 1569340800000,
     "open": 1.005,
     "high": 1.049,
     "low": 0.999,
     "close": 1.024,
+    "percent": 1.09,
     "volume": 26190001,
-    "amount": 26322086,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-26",
+    "timestamp": 1569427200000,
     "open": 1.007,
     "high": 1.032,
     "low": 1.007,
     "close": 1.031,
+    "percent": 0.68,
     "volume": 345000,
-    "amount": 349595,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-27",
+    "timestamp": 1569513600000,
     "open": 1.031,
     "high": 1.031,
     "low": 1.01,
     "close": 1.012,
+    "percent": -1.84,
     "volume": 96800,
-    "amount": 98149,
-    "timestamp": "",
-    "percent": -1.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-09-30",
+    "timestamp": 1569772800000,
     "open": 1.01,
     "high": 1.01,
     "low": 1.01,
     "close": 1.01,
+    "percent": -0.2,
     "volume": 2100,
-    "amount": 2121,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-08",
+    "timestamp": 1570464000000,
     "open": 1.008,
     "high": 1.025,
     "low": 1,
     "close": 1.025,
+    "percent": 1.49,
     "volume": 40600,
-    "amount": 40899,
-    "timestamp": "",
-    "percent": 1.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-09",
+    "timestamp": 1570550400000,
     "open": 1.003,
     "high": 1.029,
     "low": 1.003,
     "close": 1.019,
+    "percent": -0.59,
     "volume": 6000,
-    "amount": 6159,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-10",
+    "timestamp": 1570636800000,
     "open": 1.02,
     "high": 1.02,
     "low": 1.014,
     "close": 1.018,
+    "percent": -0.1,
     "volume": 45368,
-    "amount": 46189,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-11",
+    "timestamp": 1570723200000,
     "open": 1.012,
     "high": 1.035,
     "low": 1.012,
     "close": 1.026,
+    "percent": 0.79,
     "volume": 560019,
-    "amount": 574900,
-    "timestamp": "",
-    "percent": 0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-14",
+    "timestamp": 1570982400000,
     "open": 1.035,
     "high": 1.058,
     "low": 1.035,
     "close": 1.05,
+    "percent": 2.34,
     "volume": 1010344,
-    "amount": 1060172,
-    "timestamp": "",
-    "percent": 2.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-15",
+    "timestamp": 1571068800000,
     "open": 1.049,
     "high": 1.057,
     "low": 1.045,
     "close": 1.045,
+    "percent": -0.48,
     "volume": 579200,
-    "amount": 609031,
-    "timestamp": "",
-    "percent": -0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-16",
+    "timestamp": 1571155200000,
     "open": 1.067,
     "high": 1.067,
     "low": 1.045,
     "close": 1.049,
+    "percent": 0.38,
     "volume": 178789,
-    "amount": 188774,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-17",
+    "timestamp": 1571241600000,
     "open": 1.048,
     "high": 1.05,
     "low": 1.046,
     "close": 1.046,
+    "percent": -0.29,
     "volume": 237784,
-    "amount": 249635,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-18",
+    "timestamp": 1571328000000,
     "open": 1.045,
     "high": 1.05,
     "low": 1.021,
     "close": 1.022,
+    "percent": -2.29,
     "volume": 55301,
-    "amount": 56967,
-    "timestamp": "",
-    "percent": -2.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-21",
+    "timestamp": 1571587200000,
     "open": 1.013,
     "high": 1.028,
     "low": 1.013,
     "close": 1.028,
+    "percent": 0.59,
     "volume": 84501,
-    "amount": 86601,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-22",
+    "timestamp": 1571673600000,
     "open": 1.027,
     "high": 1.03,
     "low": 1.022,
     "close": 1.028,
+    "percent": 0,
     "volume": 16101,
-    "amount": 16517,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-23",
+    "timestamp": 1571760000000,
     "open": 1.03,
     "high": 1.03,
     "low": 1.02,
     "close": 1.023,
+    "percent": -0.49,
     "volume": 10500,
-    "amount": 10781,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-24",
+    "timestamp": 1571846400000,
     "open": 1.03,
     "high": 1.032,
     "low": 1.026,
     "close": 1.031,
+    "percent": 0.78,
     "volume": 308503,
-    "amount": 317263,
-    "timestamp": "",
-    "percent": 0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-25",
+    "timestamp": 1571932800000,
     "open": 1.032,
     "high": 1.032,
     "low": 1.032,
     "close": 1.032,
+    "percent": 0.1,
     "volume": 800,
-    "amount": 826,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-28",
+    "timestamp": 1572192000000,
     "open": 1.031,
     "high": 1.037,
     "low": 1.027,
     "close": 1.029,
+    "percent": -0.29,
     "volume": 45401,
-    "amount": 46880,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-29",
+    "timestamp": 1572278400000,
     "open": 1.029,
     "high": 1.03,
     "low": 1.025,
     "close": 1.025,
+    "percent": -0.39,
     "volume": 41200,
-    "amount": 42304,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-30",
+    "timestamp": 1572364800000,
     "open": 1.033,
     "high": 1.033,
     "low": 1.02,
     "close": 1.02,
+    "percent": -0.49,
     "volume": 26400,
-    "amount": 27054,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-10-31",
+    "timestamp": 1572451200000,
     "open": 1.02,
     "high": 1.024,
     "low": 1.016,
     "close": 1.019,
+    "percent": -0.1,
     "volume": 26400,
-    "amount": 26889,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-01",
+    "timestamp": 1572537600000,
     "open": 1.016,
     "high": 1.036,
     "low": 1.016,
     "close": 1.031,
+    "percent": 1.18,
     "volume": 146800,
-    "amount": 151374,
-    "timestamp": "",
-    "percent": 1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-04",
+    "timestamp": 1572796800000,
     "open": 1.03,
     "high": 1.039,
     "low": 1.03,
     "close": 1.035,
+    "percent": 0.39,
     "volume": 101787,
-    "amount": 105347,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-05",
+    "timestamp": 1572883200000,
     "open": 1.038,
     "high": 1.055,
     "low": 1.038,
     "close": 1.048,
+    "percent": 1.26,
     "volume": 236358,
-    "amount": 247810,
-    "timestamp": "",
-    "percent": 1.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-06",
+    "timestamp": 1572969600000,
     "open": 1.046,
     "high": 1.053,
     "low": 1.043,
     "close": 1.051,
+    "percent": 0.29,
     "volume": 397581,
-    "amount": 415516,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-07",
+    "timestamp": 1573056000000,
     "open": 1.049,
     "high": 1.051,
     "low": 1.046,
     "close": 1.046,
+    "percent": -0.48,
     "volume": 85013,
-    "amount": 89209,
-    "timestamp": "",
-    "percent": -0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-08",
+    "timestamp": 1573142400000,
     "open": 1.059,
     "high": 1.059,
     "low": 1.04,
     "close": 1.04,
+    "percent": -0.57,
     "volume": 309200,
-    "amount": 326615,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-11",
+    "timestamp": 1573401600000,
     "open": 1.032,
     "high": 1.032,
     "low": 1.024,
     "close": 1.024,
+    "percent": -1.54,
     "volume": 685400,
-    "amount": 704652,
-    "timestamp": "",
-    "percent": -1.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-12",
+    "timestamp": 1573488000000,
     "open": 1.024,
     "high": 1.025,
     "low": 1.023,
     "close": 1.023,
+    "percent": -0.1,
     "volume": 217200,
-    "amount": 222236,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-13",
+    "timestamp": 1573574400000,
     "open": 1.017,
     "high": 1.02,
     "low": 1.017,
     "close": 1.017,
+    "percent": -0.59,
     "volume": 58909,
-    "amount": 59925,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-14",
+    "timestamp": 1573660800000,
     "open": 1.015,
     "high": 1.018,
     "low": 1.012,
     "close": 1.015,
+    "percent": -0.2,
     "volume": 35625,
-    "amount": 36165,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-15",
+    "timestamp": 1573747200000,
     "open": 1.012,
     "high": 1.016,
     "low": 1.011,
     "close": 1.011,
+    "percent": -0.39,
     "volume": 44300,
-    "amount": 44828,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-18",
+    "timestamp": 1574006400000,
     "open": 1.015,
     "high": 1.024,
     "low": 1.015,
     "close": 1.023,
+    "percent": 1.19,
     "volume": 25625,
-    "amount": 26188,
-    "timestamp": "",
-    "percent": 1.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-19",
+    "timestamp": 1574092800000,
     "open": 1.125,
     "high": 1.125,
     "low": 1.024,
     "close": 1.029,
+    "percent": 0.59,
     "volume": 1491395,
-    "amount": 1529296,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-20",
+    "timestamp": 1574179200000,
     "open": 1.03,
     "high": 1.03,
     "low": 1.016,
     "close": 1.017,
+    "percent": -1.17,
     "volume": 3160500,
-    "amount": 3232277,
-    "timestamp": "",
-    "percent": -1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-21",
+    "timestamp": 1574265600000,
     "open": 1.01,
     "high": 1.014,
     "low": 1.004,
     "close": 1.009,
+    "percent": -0.79,
     "volume": 4150417,
-    "amount": 4185563,
-    "timestamp": "",
-    "percent": -0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-22",
+    "timestamp": 1574352000000,
     "open": 1.012,
     "high": 1.016,
     "low": 1.003,
     "close": 1.003,
+    "percent": -0.59,
     "volume": 6459000,
-    "amount": 6517013,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-25",
+    "timestamp": 1574611200000,
     "open": 1.006,
     "high": 1.015,
     "low": 1.006,
     "close": 1.015,
+    "percent": 1.2,
     "volume": 1381200,
-    "amount": 1396498,
-    "timestamp": "",
-    "percent": 1.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-26",
+    "timestamp": 1574697600000,
     "open": 1.015,
     "high": 1.019,
     "low": 1.014,
     "close": 1.017,
+    "percent": 0.2,
     "volume": 5146200,
-    "amount": 5233489,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-27",
+    "timestamp": 1574784000000,
     "open": 1.014,
     "high": 1.018,
     "low": 1.012,
     "close": 1.013,
+    "percent": -0.39,
     "volume": 2895800,
-    "amount": 2938309,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-28",
+    "timestamp": 1574870400000,
     "open": 1.009,
     "high": 1.012,
     "low": 1.006,
     "close": 1.006,
+    "percent": -0.69,
     "volume": 53603,
-    "amount": 54046,
-    "timestamp": "",
-    "percent": -0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-11-29",
+    "timestamp": 1574956800000,
     "open": 1.005,
     "high": 1.006,
     "low": 1.002,
     "close": 1.004,
+    "percent": -0.2,
     "volume": 20100,
-    "amount": 20158,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-02",
+    "timestamp": 1575216000000,
     "open": 1.01,
     "high": 1.016,
     "low": 1.009,
     "close": 1.009,
+    "percent": 0.5,
     "volume": 2805406,
-    "amount": 2838055,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-03",
+    "timestamp": 1575302400000,
     "open": 1.005,
     "high": 1.015,
     "low": 1.004,
     "close": 1.015,
+    "percent": 0.59,
     "volume": 3653600,
-    "amount": 3692217,
-    "timestamp": "",
-    "percent": 0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-04",
+    "timestamp": 1575388800000,
     "open": 1.011,
     "high": 1.011,
     "low": 1.007,
     "close": 1.01,
+    "percent": -0.49,
     "volume": 1015000,
-    "amount": 1023789,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-05",
+    "timestamp": 1575475200000,
     "open": 1.012,
     "high": 1.018,
     "low": 1.012,
     "close": 1.018,
+    "percent": 0.79,
     "volume": 500100,
-    "amount": 508247,
-    "timestamp": "",
-    "percent": 0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-06",
+    "timestamp": 1575561600000,
     "open": 1.018,
     "high": 1.02,
     "low": 1.012,
     "close": 1.018,
+    "percent": 0,
     "volume": 1004300,
-    "amount": 1019979,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-09",
+    "timestamp": 1575820800000,
     "open": 1.018,
     "high": 1.019,
     "low": 1.014,
     "close": 1.018,
+    "percent": 0,
     "volume": 33100,
-    "amount": 33653,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-10",
+    "timestamp": 1575907200000,
     "open": 1.017,
     "high": 1.018,
     "low": 1.01,
     "close": 1.011,
+    "percent": -0.69,
     "volume": 930000,
-    "amount": 943469,
-    "timestamp": "",
-    "percent": -0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-11",
+    "timestamp": 1575993600000,
     "open": 1.019,
     "high": 1.022,
     "low": 1.016,
     "close": 1.022,
+    "percent": 1.09,
     "volume": 15617300,
-    "amount": 15914792,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-12",
+    "timestamp": 1576080000000,
     "open": 1.018,
     "high": 1.021,
     "low": 1.016,
     "close": 1.018,
+    "percent": -0.39,
     "volume": 10882801,
-    "amount": 11095560,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-13",
+    "timestamp": 1576166400000,
     "open": 0.997,
     "high": 1.044,
     "low": 0.997,
     "close": 1.044,
+    "percent": 2.55,
     "volume": 8390104,
-    "amount": 8691049,
-    "timestamp": "",
-    "percent": 2.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-16",
+    "timestamp": 1576425600000,
     "open": 1.043,
     "high": 1.051,
     "low": 1.039,
     "close": 1.05,
+    "percent": 0.57,
     "volume": 2305605,
-    "amount": 2407829,
-    "timestamp": "",
-    "percent": 0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-17",
+    "timestamp": 1576512000000,
     "open": 1.051,
     "high": 1.083,
     "low": 1.046,
     "close": 1.069,
+    "percent": 1.81,
     "volume": 2125600,
-    "amount": 2266208,
-    "timestamp": "",
-    "percent": 1.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-18",
+    "timestamp": 1576598400000,
     "open": 1.072,
     "high": 1.074,
     "low": 1.065,
     "close": 1.069,
+    "percent": 0,
     "volume": 2172505,
-    "amount": 2322450,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-19",
+    "timestamp": 1576684800000,
     "open": 1.069,
     "high": 1.072,
     "low": 1.057,
     "close": 1.061,
+    "percent": -0.75,
     "volume": 1476404,
-    "amount": 1575658,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-20",
+    "timestamp": 1576771200000,
     "open": 1.058,
     "high": 1.086,
     "low": 1.058,
     "close": 1.071,
+    "percent": 0.94,
     "volume": 298002,
-    "amount": 320303,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-23",
+    "timestamp": 1577030400000,
     "open": 1.069,
     "high": 1.075,
     "low": 1.054,
     "close": 1.064,
+    "percent": -0.65,
     "volume": 1098700,
-    "amount": 1170394,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-24",
+    "timestamp": 1577116800000,
     "open": 1.054,
     "high": 1.059,
     "low": 1.05,
     "close": 1.057,
+    "percent": -0.66,
     "volume": 7519400,
-    "amount": 7929353,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-25",
+    "timestamp": 1577203200000,
     "open": 1.052,
     "high": 1.06,
     "low": 1.052,
     "close": 1.055,
+    "percent": -0.19,
     "volume": 2068900,
-    "amount": 2182623,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-26",
+    "timestamp": 1577289600000,
     "open": 1.06,
     "high": 1.068,
     "low": 1.058,
     "close": 1.068,
+    "percent": 1.23,
     "volume": 3061800,
-    "amount": 3253203,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-27",
+    "timestamp": 1577376000000,
     "open": 1.068,
     "high": 1.079,
     "low": 1.047,
     "close": 1.047,
+    "percent": -1.97,
     "volume": 3264201,
-    "amount": 3498463,
-    "timestamp": "",
-    "percent": -1.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-30",
+    "timestamp": 1577635200000,
     "open": 1.05,
     "high": 1.083,
     "low": 1.05,
     "close": 1.082,
+    "percent": 3.34,
     "volume": 3504000,
-    "amount": 3770799,
-    "timestamp": "",
-    "percent": 3.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2019-12-31",
+    "timestamp": 1577721600000,
     "open": 1.08,
     "high": 1.084,
     "low": 1.075,
     "close": 1.083,
+    "percent": 0.09,
     "volume": 1352800,
-    "amount": 1460839,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-02",
+    "timestamp": 1577894400000,
     "open": 1.137,
     "high": 1.137,
     "low": 1.095,
     "close": 1.097,
+    "percent": 1.29,
     "volume": 1016301,
-    "amount": 1119372,
-    "timestamp": "",
-    "percent": 1.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-03",
+    "timestamp": 1577980800000,
     "open": 1.085,
     "high": 1.109,
     "low": 1.085,
     "close": 1.094,
+    "percent": -0.27,
     "volume": 4126402,
-    "amount": 4528453,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-06",
+    "timestamp": 1578240000000,
     "open": 1.095,
     "high": 1.102,
     "low": 1.084,
     "close": 1.09,
+    "percent": -0.37,
     "volume": 3127700,
-    "amount": 3424252,
-    "timestamp": "",
-    "percent": -0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-07",
+    "timestamp": 1578326400000,
     "open": 1.084,
     "high": 1.101,
     "low": 1.084,
     "close": 1.095,
+    "percent": 0.46,
     "volume": 1596606,
-    "amount": 1742606,
-    "timestamp": "",
-    "percent": 0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-08",
+    "timestamp": 1578412800000,
     "open": 1.095,
     "high": 1.095,
     "low": 1.07,
     "close": 1.075,
+    "percent": -1.83,
     "volume": 3552600,
-    "amount": 3836849,
-    "timestamp": "",
-    "percent": -1.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-09",
+    "timestamp": 1578499200000,
     "open": 1.089,
     "high": 1.089,
     "low": 1.079,
     "close": 1.085,
+    "percent": 0.93,
     "volume": 186300,
-    "amount": 202022,
-    "timestamp": "",
-    "percent": 0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-10",
+    "timestamp": 1578585600000,
     "open": 1.087,
     "high": 1.09,
     "low": 1.08,
     "close": 1.086,
+    "percent": 0.09,
     "volume": 4815406,
-    "amount": 5221806,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-13",
+    "timestamp": 1578844800000,
     "open": 1.08,
     "high": 1.09,
     "low": 1.074,
     "close": 1.09,
+    "percent": 0.37,
     "volume": 877204,
-    "amount": 948045,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-14",
+    "timestamp": 1578931200000,
     "open": 1.092,
     "high": 1.099,
     "low": 1.086,
     "close": 1.087,
+    "percent": -0.28,
     "volume": 1195200,
-    "amount": 1304421,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-15",
+    "timestamp": 1579017600000,
     "open": 1.085,
     "high": 1.087,
     "low": 1.075,
     "close": 1.078,
+    "percent": -0.83,
     "volume": 1716900,
-    "amount": 1850930,
-    "timestamp": "",
-    "percent": -0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-16",
+    "timestamp": 1579104000000,
     "open": 1.078,
     "high": 1.081,
     "low": 1.069,
     "close": 1.071,
+    "percent": -0.65,
     "volume": 2270500,
-    "amount": 2436447,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-17",
+    "timestamp": 1579190400000,
     "open": 1.075,
     "high": 1.081,
     "low": 1.07,
     "close": 1.07,
+    "percent": -0.09,
     "volume": 4078200,
-    "amount": 4380476,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-20",
+    "timestamp": 1579449600000,
     "open": 1.074,
     "high": 1.08,
     "low": 1.074,
     "close": 1.08,
+    "percent": 0.93,
     "volume": 1959100,
-    "amount": 2111452,
-    "timestamp": "",
-    "percent": 0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-21",
+    "timestamp": 1579536000000,
     "open": 1.089,
     "high": 1.089,
     "low": 1.06,
     "close": 1.062,
+    "percent": -1.67,
     "volume": 2531400,
-    "amount": 2691457,
-    "timestamp": "",
-    "percent": -1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-22",
+    "timestamp": 1579622400000,
     "open": 1.051,
     "high": 1.068,
     "low": 1.045,
     "close": 1.066,
+    "percent": 0.38,
     "volume": 880200,
-    "amount": 929546,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-01-23",
+    "timestamp": 1579708800000,
     "open": 1.063,
     "high": 1.082,
     "low": 1.024,
     "close": 1.03,
+    "percent": -3.38,
     "volume": 2075000,
-    "amount": 2161641,
-    "timestamp": "",
-    "percent": -3.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-03",
+    "timestamp": 1580659200000,
     "open": 0.975,
     "high": 1.01,
     "low": 0.932,
     "close": 0.933,
+    "percent": -9.42,
     "volume": 6638700,
-    "amount": 6244138,
-    "timestamp": "",
-    "percent": -9.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-04",
+    "timestamp": 1580745600000,
     "open": 0.933,
     "high": 0.961,
     "low": 0.933,
     "close": 0.96,
+    "percent": 2.89,
     "volume": 297700,
-    "amount": 283883,
-    "timestamp": "",
-    "percent": 2.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-05",
+    "timestamp": 1580832000000,
     "open": 0.952,
     "high": 0.978,
     "low": 0.951,
     "close": 0.963,
+    "percent": 0.31,
     "volume": 1333690,
-    "amount": 1288940,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-06",
+    "timestamp": 1580918400000,
     "open": 0.962,
     "high": 0.981,
     "low": 0.961,
     "close": 0.975,
+    "percent": 1.25,
     "volume": 3259500,
-    "amount": 3168451,
-    "timestamp": "",
-    "percent": 1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-07",
+    "timestamp": 1581004800000,
     "open": 0.97,
     "high": 0.975,
     "low": 0.962,
     "close": 0.975,
+    "percent": 0,
     "volume": 4625700,
-    "amount": 4468543,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-10",
+    "timestamp": 1581264000000,
     "open": 0.974,
     "high": 0.981,
     "low": 0.966,
     "close": 0.979,
+    "percent": 0.41,
     "volume": 3809000,
-    "amount": 3719174,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-11",
+    "timestamp": 1581350400000,
     "open": 0.979,
     "high": 0.993,
     "low": 0.979,
     "close": 0.985,
+    "percent": 0.61,
     "volume": 1267400,
-    "amount": 1252453,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-12",
+    "timestamp": 1581436800000,
     "open": 0.983,
     "high": 0.992,
     "low": 0.979,
     "close": 0.991,
+    "percent": 0.61,
     "volume": 3262700,
-    "amount": 3217638,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-13",
+    "timestamp": 1581523200000,
     "open": 0.992,
     "high": 0.996,
     "low": 0.985,
     "close": 0.986,
+    "percent": -0.5,
     "volume": 3817700,
-    "amount": 3777113,
-    "timestamp": "",
-    "percent": -0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-14",
+    "timestamp": 1581609600000,
     "open": 0.984,
     "high": 1.005,
     "low": 0.984,
     "close": 1.001,
+    "percent": 1.52,
     "volume": 7237700,
-    "amount": 7221755,
-    "timestamp": "",
-    "percent": 1.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-17",
+    "timestamp": 1581868800000,
     "open": 1.005,
     "high": 1.029,
     "low": 1.005,
     "close": 1.026,
+    "percent": 2.5,
     "volume": 5559900,
-    "amount": 5642683,
-    "timestamp": "",
-    "percent": 2.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-18",
+    "timestamp": 1581955200000,
     "open": 1.024,
     "high": 1.026,
     "low": 1.012,
     "close": 1.017,
+    "percent": -0.88,
     "volume": 5379700,
-    "amount": 5475523,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-19",
+    "timestamp": 1582041600000,
     "open": 1.021,
     "high": 1.032,
     "low": 1.019,
     "close": 1.019,
+    "percent": 0.2,
     "volume": 4463500,
-    "amount": 4581661,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-20",
+    "timestamp": 1582128000000,
     "open": 1.031,
     "high": 1.048,
     "low": 1.015,
     "close": 1.045,
+    "percent": 2.55,
     "volume": 1387700,
-    "amount": 1429157,
-    "timestamp": "",
-    "percent": 2.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-21",
+    "timestamp": 1582214400000,
     "open": 1.035,
     "high": 1.055,
     "low": 1.035,
     "close": 1.042,
+    "percent": -0.29,
     "volume": 1802201,
-    "amount": 1876617,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-24",
+    "timestamp": 1582473600000,
     "open": 1.042,
     "high": 1.042,
     "low": 1.027,
     "close": 1.03,
+    "percent": -1.15,
     "volume": 3734403,
-    "amount": 3855380,
-    "timestamp": "",
-    "percent": -1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-25",
+    "timestamp": 1582560000000,
     "open": 1.01,
     "high": 1.03,
     "low": 1.001,
     "close": 1.025,
+    "percent": -0.49,
     "volume": 4932001,
-    "amount": 5017880,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-26",
+    "timestamp": 1582646400000,
     "open": 1.02,
     "high": 1.04,
     "low": 1.015,
     "close": 1.028,
+    "percent": 0.29,
     "volume": 29961300,
-    "amount": 30969599,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-27",
+    "timestamp": 1582732800000,
     "open": 1.041,
     "high": 1.049,
     "low": 1.024,
     "close": 1.028,
+    "percent": 0,
     "volume": 13486300,
-    "amount": 13892727,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-02-28",
+    "timestamp": 1582819200000,
     "open": 1.02,
     "high": 1.024,
     "low": 0.99,
     "close": 0.99,
+    "percent": -3.7,
     "volume": 18146500,
-    "amount": 18222576,
-    "timestamp": "",
-    "percent": -3.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-02",
+    "timestamp": 1583078400000,
     "open": 0.99,
     "high": 1.03,
     "low": 0.99,
     "close": 1.022,
+    "percent": 3.23,
     "volume": 7449919,
-    "amount": 7600987,
-    "timestamp": "",
-    "percent": 3.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-03",
+    "timestamp": 1583164800000,
     "open": 1.048,
     "high": 1.05,
     "low": 1.02,
     "close": 1.023,
+    "percent": 0.1,
     "volume": 8860104,
-    "amount": 9140825,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-04",
+    "timestamp": 1583251200000,
     "open": 1.025,
     "high": 1.04,
     "low": 1.023,
     "close": 1.04,
+    "percent": 1.66,
     "volume": 3040300,
-    "amount": 3134625,
-    "timestamp": "",
-    "percent": 1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-05",
+    "timestamp": 1583337600000,
     "open": 1.042,
     "high": 1.071,
     "low": 1.038,
     "close": 1.064,
+    "percent": 2.31,
     "volume": 8273613,
-    "amount": 8748722,
-    "timestamp": "",
-    "percent": 2.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-06",
+    "timestamp": 1583424000000,
     "open": 1.058,
     "high": 1.06,
     "low": 1.039,
     "close": 1.041,
+    "percent": -2.16,
     "volume": 5590700,
-    "amount": 5841266,
-    "timestamp": "",
-    "percent": -2.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-09",
+    "timestamp": 1583683200000,
     "open": 1.01,
     "high": 1.032,
     "low": 1.008,
     "close": 1.011,
+    "percent": -2.88,
     "volume": 13721900,
-    "amount": 13941513,
-    "timestamp": "",
-    "percent": -2.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-10",
+    "timestamp": 1583769600000,
     "open": 1.01,
     "high": 1.032,
     "low": 1.004,
     "close": 1.029,
+    "percent": 1.78,
     "volume": 3549200,
-    "amount": 3630082,
-    "timestamp": "",
-    "percent": 1.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-11",
+    "timestamp": 1583856000000,
     "open": 1.026,
     "high": 1.036,
     "low": 1.015,
     "close": 1.016,
+    "percent": -1.26,
     "volume": 12006975,
-    "amount": 12303055,
-    "timestamp": "",
-    "percent": -1.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-12",
+    "timestamp": 1583942400000,
     "open": 1.01,
     "high": 1.035,
     "low": 0.998,
     "close": 1.004,
+    "percent": -1.18,
     "volume": 2473900,
-    "amount": 2481908,
-    "timestamp": "",
-    "percent": -1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-13",
+    "timestamp": 1584028800000,
     "open": 0.996,
     "high": 1,
     "low": 0.96,
     "close": 0.993,
+    "percent": -1.1,
     "volume": 13262500,
-    "amount": 13010738,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-16",
+    "timestamp": 1584288000000,
     "open": 1.003,
     "high": 1.003,
     "low": 0.952,
     "close": 0.954,
+    "percent": -3.93,
     "volume": 7863200,
-    "amount": 7651602,
-    "timestamp": "",
-    "percent": -3.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-17",
+    "timestamp": 1584374400000,
     "open": 0.95,
     "high": 0.969,
     "low": 0.938,
     "close": 0.951,
+    "percent": -0.31,
     "volume": 10732200,
-    "amount": 10214031,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-18",
+    "timestamp": 1584460800000,
     "open": 0.952,
     "high": 0.975,
     "low": 0.925,
     "close": 0.926,
+    "percent": -2.63,
     "volume": 5410700,
-    "amount": 5085642,
-    "timestamp": "",
-    "percent": -2.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-19",
+    "timestamp": 1584547200000,
     "open": 0.932,
     "high": 0.945,
     "low": 0.893,
     "close": 0.91,
+    "percent": -1.73,
     "volume": 10092400,
-    "amount": 9207751,
-    "timestamp": "",
-    "percent": -1.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-20",
+    "timestamp": 1584633600000,
     "open": 0.92,
     "high": 0.929,
     "low": 0.911,
     "close": 0.929,
+    "percent": 2.09,
     "volume": 3681700,
-    "amount": 3388427,
-    "timestamp": "",
-    "percent": 2.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-23",
+    "timestamp": 1584892800000,
     "open": 0.925,
     "high": 0.925,
     "low": 0.894,
     "close": 0.898,
+    "percent": -3.34,
     "volume": 1872802,
-    "amount": 1687390,
-    "timestamp": "",
-    "percent": -3.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-24",
+    "timestamp": 1584979200000,
     "open": 0.916,
     "high": 0.92,
     "low": 0.903,
     "close": 0.92,
+    "percent": 2.45,
     "volume": 7086900,
-    "amount": 6471359,
-    "timestamp": "",
-    "percent": 2.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-25",
+    "timestamp": 1585065600000,
     "open": 0.94,
     "high": 0.947,
     "low": 0.93,
     "close": 0.941,
+    "percent": 2.28,
     "volume": 5772603,
-    "amount": 5412455,
-    "timestamp": "",
-    "percent": 2.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-26",
+    "timestamp": 1585152000000,
     "open": 0.94,
     "high": 0.948,
     "low": 0.93,
     "close": 0.938,
+    "percent": -0.32,
     "volume": 4935000,
-    "amount": 4639062,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-27",
+    "timestamp": 1585238400000,
     "open": 0.949,
     "high": 0.957,
     "low": 0.94,
     "close": 0.94,
+    "percent": 0.21,
     "volume": 2952300,
-    "amount": 2792225,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-30",
+    "timestamp": 1585497600000,
     "open": 0.936,
     "high": 0.938,
     "low": 0.924,
     "close": 0.933,
+    "percent": -0.74,
     "volume": 5954900,
-    "amount": 5553092,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-03-31",
+    "timestamp": 1585584000000,
     "open": 0.95,
     "high": 0.95,
     "low": 0.925,
     "close": 0.927,
+    "percent": -0.64,
     "volume": 363100,
-    "amount": 338309,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-01",
+    "timestamp": 1585670400000,
     "open": 0.927,
     "high": 0.939,
     "low": 0.926,
     "close": 0.926,
+    "percent": -0.11,
     "volume": 747500,
-    "amount": 695471,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-02",
+    "timestamp": 1585756800000,
     "open": 0.933,
     "high": 0.935,
     "low": 0.916,
     "close": 0.935,
+    "percent": 0.97,
     "volume": 11497100,
-    "amount": 10659366,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-03",
+    "timestamp": 1585843200000,
     "open": 0.943,
     "high": 0.943,
     "low": 0.916,
     "close": 0.929,
+    "percent": -0.64,
     "volume": 824700,
-    "amount": 766102,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-07",
+    "timestamp": 1586188800000,
     "open": 0.973,
     "high": 0.973,
     "low": 0.914,
     "close": 0.942,
+    "percent": 1.4,
     "volume": 904200,
-    "amount": 851602,
-    "timestamp": "",
-    "percent": 1.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-08",
+    "timestamp": 1586275200000,
     "open": 0.94,
     "high": 0.94,
     "low": 0.934,
     "close": 0.937,
+    "percent": -0.53,
     "volume": 7855200,
-    "amount": 7363044,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-09",
+    "timestamp": 1586361600000,
     "open": 0.937,
     "high": 0.945,
     "low": 0.937,
     "close": 0.939,
+    "percent": 0.21,
     "volume": 966400,
-    "amount": 910311,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-10",
+    "timestamp": 1586448000000,
     "open": 0.939,
     "high": 0.945,
     "low": 0.934,
     "close": 0.937,
+    "percent": -0.21,
     "volume": 5680300,
-    "amount": 5323786,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-13",
+    "timestamp": 1586707200000,
     "open": 0.934,
     "high": 0.936,
     "low": 0.927,
     "close": 0.929,
+    "percent": -0.85,
     "volume": 5672500,
-    "amount": 5280465,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-14",
+    "timestamp": 1586793600000,
     "open": 0.931,
     "high": 0.946,
     "low": 0.931,
     "close": 0.944,
+    "percent": 1.61,
     "volume": 9654500,
-    "amount": 9067555,
-    "timestamp": "",
-    "percent": 1.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-15",
+    "timestamp": 1586880000000,
     "open": 0.95,
     "high": 0.95,
     "low": 0.937,
     "close": 0.938,
+    "percent": -0.64,
     "volume": 604100,
-    "amount": 568297,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-16",
+    "timestamp": 1586966400000,
     "open": 0.938,
     "high": 0.942,
     "low": 0.933,
     "close": 0.937,
+    "percent": -0.11,
     "volume": 7577300,
-    "amount": 7105863,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-17",
+    "timestamp": 1587052800000,
     "open": 0.952,
     "high": 0.952,
     "low": 0.939,
     "close": 0.945,
+    "percent": 0.85,
     "volume": 1087100,
-    "amount": 1027217,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-20",
+    "timestamp": 1587312000000,
     "open": 0.946,
     "high": 0.947,
     "low": 0.935,
     "close": 0.946,
+    "percent": 0.11,
     "volume": 571000,
-    "amount": 539110,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-21",
+    "timestamp": 1587398400000,
     "open": 0.945,
     "high": 0.945,
     "low": 0.931,
     "close": 0.937,
+    "percent": -0.95,
     "volume": 8415500,
-    "amount": 7879661,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-22",
+    "timestamp": 1587484800000,
     "open": 0.937,
     "high": 0.937,
     "low": 0.929,
     "close": 0.937,
+    "percent": 0,
     "volume": 7210300,
-    "amount": 6735128,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-23",
+    "timestamp": 1587571200000,
     "open": 0.936,
     "high": 0.938,
     "low": 0.933,
     "close": 0.934,
+    "percent": -0.32,
     "volume": 9573600,
-    "amount": 8960841,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-24",
+    "timestamp": 1587657600000,
     "open": 0.934,
     "high": 0.934,
     "low": 0.922,
     "close": 0.925,
+    "percent": -0.96,
     "volume": 639900,
-    "amount": 592637,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-27",
+    "timestamp": 1587916800000,
     "open": 0.933,
     "high": 0.941,
     "low": 0.928,
     "close": 0.935,
+    "percent": 1.08,
     "volume": 8782200,
-    "amount": 8233044,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-28",
+    "timestamp": 1588003200000,
     "open": 0.938,
     "high": 0.944,
     "low": 0.927,
     "close": 0.94,
+    "percent": 0.53,
     "volume": 771500,
-    "amount": 723485,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-29",
+    "timestamp": 1588089600000,
     "open": 0.938,
     "high": 0.958,
     "low": 0.938,
     "close": 0.955,
+    "percent": 1.6,
     "volume": 5165900,
-    "amount": 4927392,
-    "timestamp": "",
-    "percent": 1.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-04-30",
+    "timestamp": 1588176000000,
     "open": 0.959,
     "high": 0.97,
     "low": 0.959,
     "close": 0.966,
+    "percent": 1.15,
     "volume": 10785803,
-    "amount": 10426667,
-    "timestamp": "",
-    "percent": 1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-06",
+    "timestamp": 1588694400000,
     "open": 0.965,
     "high": 0.965,
     "low": 0.948,
     "close": 0.962,
+    "percent": -0.41,
     "volume": 18070900,
-    "amount": 17262029,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-07",
+    "timestamp": 1588780800000,
     "open": 0.962,
     "high": 0.962,
     "low": 0.953,
     "close": 0.953,
+    "percent": -0.94,
     "volume": 9950500,
-    "amount": 9513459,
-    "timestamp": "",
-    "percent": -0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-08",
+    "timestamp": 1588867200000,
     "open": 0.956,
     "high": 0.969,
     "low": 0.956,
     "close": 0.964,
+    "percent": 1.15,
     "volume": 11450400,
-    "amount": 11029058,
-    "timestamp": "",
-    "percent": 1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-11",
+    "timestamp": 1589126400000,
     "open": 0.965,
     "high": 0.971,
     "low": 0.96,
     "close": 0.963,
+    "percent": -0.1,
     "volume": 4774500,
-    "amount": 4612550,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-12",
+    "timestamp": 1589212800000,
     "open": 0.964,
     "high": 0.964,
     "low": 0.954,
     "close": 0.959,
+    "percent": -0.42,
     "volume": 8549800,
-    "amount": 8198182,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-13",
+    "timestamp": 1589299200000,
     "open": 0.964,
     "high": 0.964,
     "low": 0.951,
     "close": 0.957,
+    "percent": -0.21,
     "volume": 3821700,
-    "amount": 3655555,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-14",
+    "timestamp": 1589385600000,
     "open": 0.958,
     "high": 0.958,
     "low": 0.944,
     "close": 0.945,
+    "percent": -1.25,
     "volume": 11838500,
-    "amount": 11224800,
-    "timestamp": "",
-    "percent": -1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-15",
+    "timestamp": 1589472000000,
     "open": 0.946,
     "high": 0.947,
     "low": 0.938,
     "close": 0.938,
+    "percent": -0.74,
     "volume": 9053400,
-    "amount": 8517231,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-18",
+    "timestamp": 1589731200000,
     "open": 0.944,
     "high": 0.949,
     "low": 0.94,
     "close": 0.945,
+    "percent": 0.75,
     "volume": 1125100,
-    "amount": 1065565,
-    "timestamp": "",
-    "percent": 0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-19",
+    "timestamp": 1589817600000,
     "open": 0.949,
     "high": 0.954,
     "low": 0.948,
     "close": 0.95,
+    "percent": 0.53,
     "volume": 601000,
-    "amount": 571801,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-20",
+    "timestamp": 1589904000000,
     "open": 0.949,
     "high": 0.958,
     "low": 0.946,
     "close": 0.953,
+    "percent": 0.32,
     "volume": 5496800,
-    "amount": 5224719,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-21",
+    "timestamp": 1589990400000,
     "open": 0.953,
     "high": 0.954,
     "low": 0.946,
     "close": 0.947,
+    "percent": -0.63,
     "volume": 841100,
-    "amount": 799509,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-22",
+    "timestamp": 1590076800000,
     "open": 0.942,
     "high": 0.942,
     "low": 0.925,
     "close": 0.926,
+    "percent": -2.22,
     "volume": 10467600,
-    "amount": 9768354,
-    "timestamp": "",
-    "percent": -2.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-25",
+    "timestamp": 1590336000000,
     "open": 0.936,
     "high": 0.936,
     "low": 0.921,
     "close": 0.924,
+    "percent": -0.22,
     "volume": 1798300,
-    "amount": 1661270,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-26",
+    "timestamp": 1590422400000,
     "open": 0.933,
     "high": 0.933,
     "low": 0.924,
     "close": 0.931,
+    "percent": 0.76,
     "volume": 637500,
-    "amount": 591315,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-27",
+    "timestamp": 1590508800000,
     "open": 0.931,
     "high": 0.935,
     "low": 0.929,
     "close": 0.93,
+    "percent": -0.11,
     "volume": 4022200,
-    "amount": 3743205,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-28",
+    "timestamp": 1590595200000,
     "open": 0.934,
     "high": 0.946,
     "low": 0.934,
     "close": 0.94,
+    "percent": 1.08,
     "volume": 1505200,
-    "amount": 1415818,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-05-29",
+    "timestamp": 1590681600000,
     "open": 0.94,
     "high": 0.94,
     "low": 0.931,
     "close": 0.935,
+    "percent": -0.53,
     "volume": 380900,
-    "amount": 356006,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-01",
+    "timestamp": 1590940800000,
     "open": 0.941,
     "high": 0.959,
     "low": 0.941,
     "close": 0.957,
+    "percent": 2.35,
     "volume": 3347700,
-    "amount": 3199366,
-    "timestamp": "",
-    "percent": 2.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-02",
+    "timestamp": 1591027200000,
     "open": 0.958,
     "high": 0.969,
     "low": 0.923,
     "close": 0.965,
+    "percent": 0.84,
     "volume": 3624400,
-    "amount": 3488593,
-    "timestamp": "",
-    "percent": 0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-03",
+    "timestamp": 1591113600000,
     "open": 0.965,
     "high": 0.982,
     "low": 0.964,
     "close": 0.964,
+    "percent": -0.1,
     "volume": 8747800,
-    "amount": 8502713,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-04",
+    "timestamp": 1591200000000,
     "open": 0.968,
     "high": 0.968,
     "low": 0.959,
     "close": 0.961,
+    "percent": -0.31,
     "volume": 4027100,
-    "amount": 3872045,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-05",
+    "timestamp": 1591286400000,
     "open": 0.961,
     "high": 0.963,
     "low": 0.955,
     "close": 0.963,
+    "percent": 0.21,
     "volume": 572900,
-    "amount": 549398,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-08",
+    "timestamp": 1591545600000,
     "open": 0.973,
     "high": 0.973,
     "low": 0.965,
     "close": 0.966,
+    "percent": 0.31,
     "volume": 1192200,
-    "amount": 1154786,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-09",
+    "timestamp": 1591632000000,
     "open": 0.967,
     "high": 0.973,
     "low": 0.967,
     "close": 0.97,
+    "percent": 0.41,
     "volume": 626801,
-    "amount": 608198,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-10",
+    "timestamp": 1591718400000,
     "open": 0.975,
     "high": 0.975,
     "low": 0.962,
     "close": 0.965,
+    "percent": -0.52,
     "volume": 2959800,
-    "amount": 2859073,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-11",
+    "timestamp": 1591804800000,
     "open": 0.965,
     "high": 0.966,
     "low": 0.952,
     "close": 0.955,
+    "percent": -1.04,
     "volume": 995300,
-    "amount": 954906,
-    "timestamp": "",
-    "percent": -1.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-12",
+    "timestamp": 1591891200000,
     "open": 0.95,
     "high": 0.956,
     "low": 0.943,
     "close": 0.951,
+    "percent": -0.42,
     "volume": 1104000,
-    "amount": 1047318,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-15",
+    "timestamp": 1592150400000,
     "open": 0.951,
     "high": 0.956,
     "low": 0.944,
     "close": 0.945,
+    "percent": -0.63,
     "volume": 623000,
-    "amount": 590797,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-16",
+    "timestamp": 1592236800000,
     "open": 0.97,
     "high": 0.97,
     "low": 0.945,
     "close": 0.953,
+    "percent": 0.85,
     "volume": 713602,
-    "amount": 679468,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-17",
+    "timestamp": 1592323200000,
     "open": 0.954,
     "high": 0.954,
     "low": 0.946,
     "close": 0.951,
+    "percent": -0.21,
     "volume": 745700,
-    "amount": 708260,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-18",
+    "timestamp": 1592409600000,
     "open": 0.947,
     "high": 0.957,
     "low": 0.941,
     "close": 0.955,
+    "percent": 0.42,
     "volume": 1190500,
-    "amount": 1128512,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-19",
+    "timestamp": 1592496000000,
     "open": 0.955,
     "high": 0.97,
     "low": 0.954,
     "close": 0.965,
+    "percent": 1.05,
     "volume": 1924906,
-    "amount": 1847278,
-    "timestamp": "",
-    "percent": 1.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-22",
+    "timestamp": 1592755200000,
     "open": 0.965,
     "high": 0.983,
     "low": 0.958,
     "close": 0.968,
+    "percent": 0.31,
     "volume": 8630100,
-    "amount": 8399606,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-23",
+    "timestamp": 1592841600000,
     "open": 0.97,
     "high": 0.97,
     "low": 0.96,
     "close": 0.97,
+    "percent": 0.21,
     "volume": 1137700,
-    "amount": 1097632,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-24",
+    "timestamp": 1592928000000,
     "open": 0.973,
     "high": 0.978,
     "low": 0.972,
     "close": 0.977,
+    "percent": 0.72,
     "volume": 2003600,
-    "amount": 1954972,
-    "timestamp": "",
-    "percent": 0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-29",
+    "timestamp": 1593360000000,
     "open": 0.985,
     "high": 0.986,
     "low": 0.962,
     "close": 0.963,
+    "percent": -1.43,
     "volume": 2004700,
-    "amount": 1940114,
-    "timestamp": "",
-    "percent": -1.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-06-30",
+    "timestamp": 1593446400000,
     "open": 0.963,
     "high": 0.989,
     "low": 0.963,
     "close": 0.988,
+    "percent": 2.6,
     "volume": 8398200,
-    "amount": 8174890,
-    "timestamp": "",
-    "percent": 2.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-01",
+    "timestamp": 1593532800000,
     "open": 0.981,
     "high": 1.001,
     "low": 0.976,
     "close": 1,
+    "percent": 1.21,
     "volume": 5871313,
-    "amount": 5814986,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-02",
+    "timestamp": 1593619200000,
     "open": 1.004,
     "high": 1.045,
     "low": 0.997,
     "close": 1.043,
+    "percent": 4.3,
     "volume": 12318533,
-    "amount": 12604411,
-    "timestamp": "",
-    "percent": 4.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-03",
+    "timestamp": 1593705600000,
     "open": 1.056,
     "high": 1.129,
     "low": 1.049,
     "close": 1.12,
+    "percent": 7.38,
     "volume": 24599021,
-    "amount": 26394708,
-    "timestamp": "",
-    "percent": 7.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-06",
+    "timestamp": 1593964800000,
     "open": 1.151,
     "high": 1.232,
     "low": 1.12,
     "close": 1.232,
+    "percent": 10,
     "volume": 71996151,
-    "amount": 83445748,
-    "timestamp": "",
-    "percent": 10
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-07",
+    "timestamp": 1594051200000,
     "open": 1.269,
     "high": 1.28,
     "low": 1.163,
     "close": 1.166,
+    "percent": -5.36,
     "volume": 75838615,
-    "amount": 90247573,
-    "timestamp": "",
-    "percent": -5.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-08",
+    "timestamp": 1594137600000,
     "open": 1.16,
     "high": 1.22,
     "low": 1.154,
     "close": 1.199,
+    "percent": 2.83,
     "volume": 35075919,
-    "amount": 41580517,
-    "timestamp": "",
-    "percent": 2.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-09",
+    "timestamp": 1594224000000,
     "open": 1.188,
     "high": 1.21,
     "low": 1.176,
     "close": 1.199,
+    "percent": 0,
     "volume": 24632631,
-    "amount": 29455778,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-10",
+    "timestamp": 1594310400000,
     "open": 1.18,
     "high": 1.189,
     "low": 1.156,
     "close": 1.159,
+    "percent": -3.34,
     "volume": 19319601,
-    "amount": 22657284,
-    "timestamp": "",
-    "percent": -3.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-13",
+    "timestamp": 1594569600000,
     "open": 1.157,
     "high": 1.185,
     "low": 1.144,
     "close": 1.168,
+    "percent": 0.78,
     "volume": 26152000,
-    "amount": 30368876,
-    "timestamp": "",
-    "percent": 0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-14",
+    "timestamp": 1594656000000,
     "open": 1.166,
     "high": 1.171,
     "low": 1.145,
     "close": 1.16,
+    "percent": -0.68,
     "volume": 13190400,
-    "amount": 15329752,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-15",
+    "timestamp": 1594742400000,
     "open": 1.16,
     "high": 1.173,
     "low": 1.135,
     "close": 1.136,
+    "percent": -2.07,
     "volume": 12434600,
-    "amount": 14269694,
-    "timestamp": "",
-    "percent": -2.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-16",
+    "timestamp": 1594828800000,
     "open": 1.137,
     "high": 1.155,
     "low": 1.098,
     "close": 1.1,
+    "percent": -3.17,
     "volume": 19433001,
-    "amount": 21921666,
-    "timestamp": "",
-    "percent": -3.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-17",
+    "timestamp": 1594915200000,
     "open": 1.081,
     "high": 1.12,
     "low": 1.074,
     "close": 1.086,
+    "percent": -1.27,
     "volume": 24507300,
-    "amount": 26691817,
-    "timestamp": "",
-    "percent": -1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-20",
+    "timestamp": 1595174400000,
     "open": 1.09,
     "high": 1.148,
     "low": 1.09,
     "close": 1.132,
+    "percent": 4.24,
     "volume": 34331403,
-    "amount": 38590122,
-    "timestamp": "",
-    "percent": 4.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-21",
+    "timestamp": 1595260800000,
     "open": 1.141,
     "high": 1.147,
     "low": 1.113,
     "close": 1.12,
+    "percent": -1.06,
     "volume": 8722900,
-    "amount": 9810138,
-    "timestamp": "",
-    "percent": -1.06
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-22",
+    "timestamp": 1595347200000,
     "open": 1.12,
     "high": 1.147,
     "low": 1.113,
     "close": 1.122,
+    "percent": 0.18,
     "volume": 10180100,
-    "amount": 11498160,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-23",
+    "timestamp": 1595433600000,
     "open": 1.118,
     "high": 1.121,
     "low": 1.088,
     "close": 1.111,
+    "percent": -0.98,
     "volume": 12385201,
-    "amount": 13677634,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-24",
+    "timestamp": 1595520000000,
     "open": 1.1,
     "high": 1.109,
     "low": 1.059,
     "close": 1.063,
+    "percent": -4.32,
     "volume": 17447901,
-    "amount": 18884744,
-    "timestamp": "",
-    "percent": -4.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-27",
+    "timestamp": 1595779200000,
     "open": 1.072,
     "high": 1.075,
     "low": 1.048,
     "close": 1.059,
+    "percent": -0.38,
     "volume": 6818300,
-    "amount": 7243214,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-28",
+    "timestamp": 1595865600000,
     "open": 1.069,
     "high": 1.07,
     "low": 1.056,
     "close": 1.062,
+    "percent": 0.28,
     "volume": 4268900,
-    "amount": 4529356,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-29",
+    "timestamp": 1595952000000,
     "open": 1.057,
     "high": 1.09,
     "low": 1.057,
     "close": 1.087,
+    "percent": 2.35,
     "volume": 13880100,
-    "amount": 15014738,
-    "timestamp": "",
-    "percent": 2.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-30",
+    "timestamp": 1596038400000,
     "open": 1.085,
     "high": 1.086,
     "low": 1.076,
     "close": 1.076,
+    "percent": -1.01,
     "volume": 13203100,
-    "amount": 14254261,
-    "timestamp": "",
-    "percent": -1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-07-31",
+    "timestamp": 1596124800000,
     "open": 1.08,
     "high": 1.098,
     "low": 1.072,
     "close": 1.085,
+    "percent": 0.84,
     "volume": 11668908,
-    "amount": 12644337,
-    "timestamp": "",
-    "percent": 0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-03",
+    "timestamp": 1596384000000,
     "open": 1.093,
     "high": 1.099,
     "low": 1.086,
     "close": 1.098,
+    "percent": 1.2,
     "volume": 9507700,
-    "amount": 10387296,
-    "timestamp": "",
-    "percent": 1.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-04",
+    "timestamp": 1596470400000,
     "open": 1.098,
     "high": 1.126,
     "low": 1.093,
     "close": 1.119,
+    "percent": 1.91,
     "volume": 19179875,
-    "amount": 21280346,
-    "timestamp": "",
-    "percent": 1.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-05",
+    "timestamp": 1596556800000,
     "open": 1.113,
     "high": 1.113,
     "low": 1.094,
     "close": 1.103,
+    "percent": -1.43,
     "volume": 10312900,
-    "amount": 11369646,
-    "timestamp": "",
-    "percent": -1.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-06",
+    "timestamp": 1596643200000,
     "open": 1.108,
     "high": 1.122,
     "low": 1.091,
     "close": 1.12,
+    "percent": 1.54,
     "volume": 8146000,
-    "amount": 8991554,
-    "timestamp": "",
-    "percent": 1.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-07",
+    "timestamp": 1596729600000,
     "open": 1.113,
     "high": 1.115,
     "low": 1.087,
     "close": 1.1,
+    "percent": -1.79,
     "volume": 8110800,
-    "amount": 8908103,
-    "timestamp": "",
-    "percent": -1.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-10",
+    "timestamp": 1596988800000,
     "open": 1.098,
     "high": 1.123,
     "low": 1.088,
     "close": 1.113,
+    "percent": 1.18,
     "volume": 7500800,
-    "amount": 8340559,
-    "timestamp": "",
-    "percent": 1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-11",
+    "timestamp": 1597075200000,
     "open": 1.11,
     "high": 1.13,
     "low": 1.098,
     "close": 1.104,
+    "percent": -0.81,
     "volume": 6297500,
-    "amount": 7041933,
-    "timestamp": "",
-    "percent": -0.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-12",
+    "timestamp": 1597161600000,
     "open": 1.101,
     "high": 1.109,
     "low": 1.085,
     "close": 1.101,
+    "percent": -0.27,
     "volume": 8938906,
-    "amount": 9821471,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-13",
+    "timestamp": 1597248000000,
     "open": 1.101,
     "high": 1.109,
     "low": 1.098,
     "close": 1.102,
+    "percent": 0.09,
     "volume": 2005702,
-    "amount": 2210186,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-14",
+    "timestamp": 1597334400000,
     "open": 1.096,
     "high": 1.12,
     "low": 1.096,
     "close": 1.12,
+    "percent": 1.63,
     "volume": 5274401,
-    "amount": 5831591,
-    "timestamp": "",
-    "percent": 1.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-17",
+    "timestamp": 1597593600000,
     "open": 1.121,
     "high": 1.178,
     "low": 1.121,
     "close": 1.165,
+    "percent": 4.02,
     "volume": 20482277,
-    "amount": 23723528,
-    "timestamp": "",
-    "percent": 4.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-18",
+    "timestamp": 1597680000000,
     "open": 1.16,
     "high": 1.162,
     "low": 1.146,
     "close": 1.153,
+    "percent": -1.03,
     "volume": 7218717,
-    "amount": 8328748,
-    "timestamp": "",
-    "percent": -1.03
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-19",
+    "timestamp": 1597766400000,
     "open": 1.153,
     "high": 1.155,
     "low": 1.137,
     "close": 1.14,
+    "percent": -1.13,
     "volume": 14376023,
-    "amount": 16505079,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-20",
+    "timestamp": 1597852800000,
     "open": 1.125,
     "high": 1.135,
     "low": 1.116,
     "close": 1.119,
+    "percent": -1.84,
     "volume": 5974800,
-    "amount": 6716639,
-    "timestamp": "",
-    "percent": -1.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-21",
+    "timestamp": 1597939200000,
     "open": 1.12,
     "high": 1.133,
     "low": 1.12,
     "close": 1.13,
+    "percent": 0.98,
     "volume": 4723100,
-    "amount": 5323460,
-    "timestamp": "",
-    "percent": 0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-24",
+    "timestamp": 1598198400000,
     "open": 1.13,
     "high": 1.134,
     "low": 1.123,
     "close": 1.126,
+    "percent": -0.35,
     "volume": 3050400,
-    "amount": 3442109,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-25",
+    "timestamp": 1598284800000,
     "open": 1.126,
     "high": 1.136,
     "low": 1.118,
     "close": 1.124,
+    "percent": -0.18,
     "volume": 2884500,
-    "amount": 3249563,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-26",
+    "timestamp": 1598371200000,
     "open": 1.126,
     "high": 1.126,
     "low": 1.103,
     "close": 1.11,
+    "percent": -1.25,
     "volume": 5432700,
-    "amount": 6037521,
-    "timestamp": "",
-    "percent": -1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-27",
+    "timestamp": 1598457600000,
     "open": 1.101,
     "high": 1.124,
     "low": 1.098,
     "close": 1.107,
+    "percent": -0.27,
     "volume": 2198300,
-    "amount": 2426731,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-28",
+    "timestamp": 1598544000000,
     "open": 1.109,
     "high": 1.136,
     "low": 1.098,
     "close": 1.136,
+    "percent": 2.62,
     "volume": 16360502,
-    "amount": 18327717,
-    "timestamp": "",
-    "percent": 2.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-08-31",
+    "timestamp": 1598803200000,
     "open": 1.136,
     "high": 1.151,
     "low": 1.123,
     "close": 1.123,
+    "percent": -1.14,
     "volume": 7356402,
-    "amount": 8387766,
-    "timestamp": "",
-    "percent": -1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-01",
+    "timestamp": 1598889600000,
     "open": 1.123,
     "high": 1.125,
     "low": 1.116,
     "close": 1.123,
+    "percent": 0,
     "volume": 2779013,
-    "amount": 3114854,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-02",
+    "timestamp": 1598976000000,
     "open": 1.126,
     "high": 1.135,
     "low": 1.112,
     "close": 1.123,
+    "percent": 0,
     "volume": 12571600,
-    "amount": 14092652,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-03",
+    "timestamp": 1599062400000,
     "open": 1.122,
     "high": 1.127,
     "low": 1.111,
     "close": 1.113,
+    "percent": -0.89,
     "volume": 1949800,
-    "amount": 2180744,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-04",
+    "timestamp": 1599148800000,
     "open": 1.107,
     "high": 1.11,
     "low": 1.099,
     "close": 1.103,
+    "percent": -0.9,
     "volume": 12158100,
-    "amount": 13402041,
-    "timestamp": "",
-    "percent": -0.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-07",
+    "timestamp": 1599408000000,
     "open": 1.104,
     "high": 1.113,
     "low": 1.09,
     "close": 1.101,
+    "percent": -0.18,
     "volume": 4653700,
-    "amount": 5125871,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-08",
+    "timestamp": 1599494400000,
     "open": 1.103,
     "high": 1.121,
     "low": 1.092,
     "close": 1.105,
+    "percent": 0.36,
     "volume": 4863600,
-    "amount": 5376231,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-09",
+    "timestamp": 1599580800000,
     "open": 1.099,
     "high": 1.105,
     "low": 1.09,
     "close": 1.095,
+    "percent": -0.9,
     "volume": 3575300,
-    "amount": 3926677,
-    "timestamp": "",
-    "percent": -0.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-10",
+    "timestamp": 1599667200000,
     "open": 1.102,
     "high": 1.108,
     "low": 1.087,
     "close": 1.088,
+    "percent": -0.64,
     "volume": 4731507,
-    "amount": 5195936,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-11",
+    "timestamp": 1599753600000,
     "open": 1.092,
     "high": 1.092,
     "low": 1.078,
     "close": 1.087,
+    "percent": -0.09,
     "volume": 34675999,
-    "amount": 37704501,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-14",
+    "timestamp": 1600012800000,
     "open": 1.106,
     "high": 1.106,
     "low": 1.083,
     "close": 1.088,
+    "percent": 0.09,
     "volume": 1071500,
-    "amount": 1167537,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-15",
+    "timestamp": 1600099200000,
     "open": 1.091,
     "high": 1.093,
     "low": 1.085,
     "close": 1.091,
+    "percent": 0.28,
     "volume": 6182703,
-    "amount": 6738728,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-16",
+    "timestamp": 1600185600000,
     "open": 1.09,
     "high": 1.103,
     "low": 1.09,
     "close": 1.095,
+    "percent": 0.37,
     "volume": 6037903,
-    "amount": 6619571,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-17",
+    "timestamp": 1600272000000,
     "open": 1.098,
     "high": 1.098,
     "low": 1.087,
     "close": 1.09,
+    "percent": -0.46,
     "volume": 2390941,
-    "amount": 2611999,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-18",
+    "timestamp": 1600358400000,
     "open": 1.089,
     "high": 1.134,
     "low": 1.089,
     "close": 1.129,
+    "percent": 3.58,
     "volume": 11854302,
-    "amount": 13230032,
-    "timestamp": "",
-    "percent": 3.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-21",
+    "timestamp": 1600617600000,
     "open": 1.14,
     "high": 1.145,
     "low": 1.119,
     "close": 1.12,
+    "percent": -0.8,
     "volume": 7921600,
-    "amount": 8907946,
-    "timestamp": "",
-    "percent": -0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-22",
+    "timestamp": 1600704000000,
     "open": 1.12,
     "high": 1.135,
     "low": 1.108,
     "close": 1.111,
+    "percent": -0.8,
     "volume": 3661900,
-    "amount": 4088169,
-    "timestamp": "",
-    "percent": -0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-23",
+    "timestamp": 1600790400000,
     "open": 1.111,
     "high": 1.115,
     "low": 1.103,
     "close": 1.111,
+    "percent": 0,
     "volume": 1290400,
-    "amount": 1428678,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-24",
+    "timestamp": 1600876800000,
     "open": 1.104,
     "high": 1.104,
     "low": 1.088,
     "close": 1.093,
+    "percent": -1.62,
     "volume": 3504000,
-    "amount": 3835301,
-    "timestamp": "",
-    "percent": -1.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-25",
+    "timestamp": 1600963200000,
     "open": 1.092,
     "high": 1.098,
     "low": 1.086,
     "close": 1.093,
+    "percent": 0,
     "volume": 1813000,
-    "amount": 1979462,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-28",
+    "timestamp": 1601222400000,
     "open": 1.093,
     "high": 1.099,
     "low": 1.091,
     "close": 1.094,
+    "percent": 0.09,
     "volume": 648200,
-    "amount": 710000,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-29",
+    "timestamp": 1601308800000,
     "open": 1.101,
     "high": 1.101,
     "low": 1.091,
     "close": 1.094,
+    "percent": 0,
     "volume": 1639600,
-    "amount": 1797315,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-09-30",
+    "timestamp": 1601395200000,
     "open": 1.094,
     "high": 1.095,
     "low": 1.078,
     "close": 1.086,
+    "percent": -0.73,
     "volume": 1890600,
-    "amount": 2056076,
-    "timestamp": "",
-    "percent": -0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-09",
+    "timestamp": 1602172800000,
     "open": 1.095,
     "high": 1.098,
     "low": 1.093,
     "close": 1.096,
+    "percent": 0.92,
     "volume": 2212400,
-    "amount": 2422933,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-12",
+    "timestamp": 1602432000000,
     "open": 1.097,
     "high": 1.131,
     "low": 1.097,
     "close": 1.128,
+    "percent": 2.92,
     "volume": 5763504,
-    "amount": 6464762,
-    "timestamp": "",
-    "percent": 2.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-13",
+    "timestamp": 1602518400000,
     "open": 1.127,
     "high": 1.127,
     "low": 1.116,
     "close": 1.123,
+    "percent": -0.44,
     "volume": 1680800,
-    "amount": 1880397,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-14",
+    "timestamp": 1602604800000,
     "open": 1.121,
     "high": 1.121,
     "low": 1.107,
     "close": 1.113,
+    "percent": -0.89,
     "volume": 14576900,
-    "amount": 16211869,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-15",
+    "timestamp": 1602691200000,
     "open": 1.112,
     "high": 1.13,
     "low": 1.112,
     "close": 1.118,
+    "percent": 0.45,
     "volume": 16027400,
-    "amount": 17986794,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-16",
+    "timestamp": 1602777600000,
     "open": 1.118,
     "high": 1.136,
     "low": 1.118,
     "close": 1.132,
+    "percent": 1.25,
     "volume": 25191600,
-    "amount": 28404282,
-    "timestamp": "",
-    "percent": 1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-19",
+    "timestamp": 1603036800000,
     "open": 1.132,
     "high": 1.16,
     "low": 1.128,
     "close": 1.129,
+    "percent": -0.27,
     "volume": 9383200,
-    "amount": 10758452,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-20",
+    "timestamp": 1603123200000,
     "open": 1.128,
     "high": 1.128,
     "low": 1.116,
     "close": 1.125,
+    "percent": -0.35,
     "volume": 1412000,
-    "amount": 1581714,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-21",
+    "timestamp": 1603209600000,
     "open": 1.125,
     "high": 1.135,
     "low": 1.12,
     "close": 1.135,
+    "percent": 0.89,
     "volume": 6922200,
-    "amount": 7815450,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-22",
+    "timestamp": 1603296000000,
     "open": 1.135,
     "high": 1.139,
     "low": 1.121,
     "close": 1.133,
+    "percent": -0.18,
     "volume": 2352300,
-    "amount": 2652945,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-23",
+    "timestamp": 1603382400000,
     "open": 1.126,
     "high": 1.148,
     "low": 1.126,
     "close": 1.134,
+    "percent": 0.09,
     "volume": 4088000,
-    "amount": 4660904,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-26",
+    "timestamp": 1603641600000,
     "open": 1.135,
     "high": 1.135,
     "low": 1.101,
     "close": 1.105,
+    "percent": -2.56,
     "volume": 9186200,
-    "amount": 10218736,
-    "timestamp": "",
-    "percent": -2.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-27",
+    "timestamp": 1603728000000,
     "open": 1.105,
     "high": 1.106,
     "low": 1.097,
     "close": 1.103,
+    "percent": -0.18,
     "volume": 3033500,
-    "amount": 3341475,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-28",
+    "timestamp": 1603814400000,
     "open": 1.103,
     "high": 1.103,
     "low": 1.088,
     "close": 1.096,
+    "percent": -0.63,
     "volume": 9432000,
-    "amount": 10331716,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-29",
+    "timestamp": 1603900800000,
     "open": 1.08,
     "high": 1.106,
     "low": 1.08,
     "close": 1.098,
+    "percent": 0.18,
     "volume": 2913200,
-    "amount": 3180863,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-10-30",
+    "timestamp": 1603987200000,
     "open": 1.099,
     "high": 1.106,
     "low": 1.077,
     "close": 1.078,
+    "percent": -1.82,
     "volume": 5278300,
-    "amount": 5761171,
-    "timestamp": "",
-    "percent": -1.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-02",
+    "timestamp": 1604246400000,
     "open": 1.076,
     "high": 1.09,
     "low": 1.066,
     "close": 1.072,
+    "percent": -0.56,
     "volume": 10902700,
-    "amount": 11691219,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-03",
+    "timestamp": 1604332800000,
     "open": 1.074,
     "high": 1.098,
     "low": 1.074,
     "close": 1.091,
+    "percent": 1.77,
     "volume": 9197400,
-    "amount": 10025082,
-    "timestamp": "",
-    "percent": 1.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-04",
+    "timestamp": 1604419200000,
     "open": 1.095,
     "high": 1.099,
     "low": 1.088,
     "close": 1.093,
+    "percent": 0.18,
     "volume": 2170101,
-    "amount": 2370518,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-05",
+    "timestamp": 1604505600000,
     "open": 1.098,
     "high": 1.109,
     "low": 1.097,
     "close": 1.104,
+    "percent": 1.01,
     "volume": 4122400,
-    "amount": 4546485,
-    "timestamp": "",
-    "percent": 1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-06",
+    "timestamp": 1604592000000,
     "open": 1.104,
     "high": 1.109,
     "low": 1.098,
     "close": 1.1,
+    "percent": -0.36,
     "volume": 2080803,
-    "amount": 2298001,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-09",
+    "timestamp": 1604851200000,
     "open": 1.101,
     "high": 1.13,
     "low": 1.101,
     "close": 1.124,
+    "percent": 2.18,
     "volume": 5474300,
-    "amount": 6134587,
-    "timestamp": "",
-    "percent": 2.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-10",
+    "timestamp": 1604937600000,
     "open": 1.133,
     "high": 1.139,
     "low": 1.117,
     "close": 1.122,
+    "percent": -0.18,
     "volume": 2973100,
-    "amount": 3359394,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-11",
+    "timestamp": 1605024000000,
     "open": 1.122,
     "high": 1.128,
     "low": 1.115,
     "close": 1.119,
+    "percent": -0.27,
     "volume": 3094800,
-    "amount": 3466198,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-12",
+    "timestamp": 1605110400000,
     "open": 1.117,
     "high": 1.121,
     "low": 1.108,
     "close": 1.11,
+    "percent": -0.8,
     "volume": 1175700,
-    "amount": 1307957,
-    "timestamp": "",
-    "percent": -0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-13",
+    "timestamp": 1605196800000,
     "open": 1.101,
     "high": 1.11,
     "low": 1.086,
     "close": 1.092,
+    "percent": -1.62,
     "volume": 2224600,
-    "amount": 2426880,
-    "timestamp": "",
-    "percent": -1.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-16",
+    "timestamp": 1605456000000,
     "open": 1.1,
     "high": 1.102,
     "low": 1.092,
     "close": 1.1,
+    "percent": 0.73,
     "volume": 1531305,
-    "amount": 1682230,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-17",
+    "timestamp": 1605542400000,
     "open": 1.102,
     "high": 1.112,
     "low": 1.099,
     "close": 1.111,
+    "percent": 1,
     "volume": 5230500,
-    "amount": 5800562,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-18",
+    "timestamp": 1605628800000,
     "open": 1.115,
     "high": 1.135,
     "low": 1.113,
     "close": 1.128,
+    "percent": 1.53,
     "volume": 6451103,
-    "amount": 7264470,
-    "timestamp": "",
-    "percent": 1.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-19",
+    "timestamp": 1605715200000,
     "open": 1.128,
     "high": 1.136,
     "low": 1.118,
     "close": 1.132,
+    "percent": 0.35,
     "volume": 6236500,
-    "amount": 7031192,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-20",
+    "timestamp": 1605801600000,
     "open": 1.128,
     "high": 1.131,
     "low": 1.122,
     "close": 1.13,
+    "percent": -0.18,
     "volume": 4272100,
-    "amount": 4808488,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-23",
+    "timestamp": 1606060800000,
     "open": 1.13,
     "high": 1.156,
     "low": 1.127,
     "close": 1.147,
+    "percent": 1.5,
     "volume": 22868201,
-    "amount": 26271613,
-    "timestamp": "",
-    "percent": 1.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-24",
+    "timestamp": 1606147200000,
     "open": 1.139,
     "high": 1.15,
     "low": 1.135,
     "close": 1.138,
+    "percent": -0.78,
     "volume": 5065600,
-    "amount": 5783749,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-25",
+    "timestamp": 1606233600000,
     "open": 1.145,
     "high": 1.158,
     "low": 1.131,
     "close": 1.132,
+    "percent": -0.53,
     "volume": 5388300,
-    "amount": 6163524,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-26",
+    "timestamp": 1606320000000,
     "open": 1.132,
     "high": 1.145,
     "low": 1.126,
     "close": 1.142,
+    "percent": 0.88,
     "volume": 2472600,
-    "amount": 2816044,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-27",
+    "timestamp": 1606406400000,
     "open": 1.142,
     "high": 1.167,
     "low": 1.142,
     "close": 1.167,
+    "percent": 2.19,
     "volume": 7000821,
-    "amount": 8068760,
-    "timestamp": "",
-    "percent": 2.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-11-30",
+    "timestamp": 1606665600000,
     "open": 1.181,
     "high": 1.207,
     "low": 1.16,
     "close": 1.162,
+    "percent": -0.43,
     "volume": 15940800,
-    "amount": 18997912,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-01",
+    "timestamp": 1606752000000,
     "open": 1.162,
     "high": 1.195,
     "low": 1.146,
     "close": 1.189,
+    "percent": 2.32,
     "volume": 7438003,
-    "amount": 8747542,
-    "timestamp": "",
-    "percent": 2.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-02",
+    "timestamp": 1606838400000,
     "open": 1.189,
     "high": 1.204,
     "low": 1.179,
     "close": 1.188,
+    "percent": -0.08,
     "volume": 16057004,
-    "amount": 19116944,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-03",
+    "timestamp": 1606924800000,
     "open": 1.189,
     "high": 1.193,
     "low": 1.174,
     "close": 1.184,
+    "percent": -0.34,
     "volume": 8487400,
-    "amount": 10053721,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-04",
+    "timestamp": 1607011200000,
     "open": 1.179,
     "high": 1.183,
     "low": 1.161,
     "close": 1.172,
+    "percent": -1.01,
     "volume": 23788600,
-    "amount": 27790433,
-    "timestamp": "",
-    "percent": -1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-07",
+    "timestamp": 1607270400000,
     "open": 1.168,
     "high": 1.173,
     "low": 1.148,
     "close": 1.15,
+    "percent": -1.88,
     "volume": 4235900,
-    "amount": 4890284,
-    "timestamp": "",
-    "percent": -1.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-08",
+    "timestamp": 1607356800000,
     "open": 1.151,
     "high": 1.157,
     "low": 1.141,
     "close": 1.145,
+    "percent": -0.43,
     "volume": 4610910,
-    "amount": 5297021,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-09",
+    "timestamp": 1607443200000,
     "open": 1.147,
     "high": 1.156,
     "low": 1.131,
     "close": 1.134,
+    "percent": -0.96,
     "volume": 20103800,
-    "amount": 23056347,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-10",
+    "timestamp": 1607529600000,
     "open": 1.134,
     "high": 1.134,
     "low": 1.119,
     "close": 1.125,
+    "percent": -0.79,
     "volume": 8094400,
-    "amount": 9106679,
-    "timestamp": "",
-    "percent": -0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-11",
+    "timestamp": 1607616000000,
     "open": 1.126,
     "high": 1.129,
     "low": 1.106,
     "close": 1.114,
+    "percent": -0.98,
     "volume": 4238600,
-    "amount": 4725240,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-14",
+    "timestamp": 1607875200000,
     "open": 1.114,
     "high": 1.128,
     "low": 1.114,
     "close": 1.122,
+    "percent": 0.72,
     "volume": 26353704,
-    "amount": 29524917,
-    "timestamp": "",
-    "percent": 0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-15",
+    "timestamp": 1607961600000,
     "open": 1.115,
     "high": 1.119,
     "low": 1.104,
     "close": 1.118,
+    "percent": -0.36,
     "volume": 9573600,
-    "amount": 10647328,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-16",
+    "timestamp": 1608048000000,
     "open": 1.118,
     "high": 1.123,
     "low": 1.108,
     "close": 1.115,
+    "percent": -0.27,
     "volume": 11197600,
-    "amount": 12494882,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-17",
+    "timestamp": 1608134400000,
     "open": 1.116,
     "high": 1.135,
     "low": 1.105,
     "close": 1.135,
+    "percent": 1.79,
     "volume": 3072301,
-    "amount": 3438640,
-    "timestamp": "",
-    "percent": 1.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-18",
+    "timestamp": 1608220800000,
     "open": 1.127,
     "high": 1.13,
     "low": 1.112,
     "close": 1.117,
+    "percent": -1.59,
     "volume": 27711601,
-    "amount": 30975120,
-    "timestamp": "",
-    "percent": -1.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-21",
+    "timestamp": 1608480000000,
     "open": 1.116,
     "high": 1.123,
     "low": 1.103,
     "close": 1.114,
+    "percent": -0.27,
     "volume": 12344700,
-    "amount": 13744015,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-22",
+    "timestamp": 1608566400000,
     "open": 1.11,
     "high": 1.111,
     "low": 1.084,
     "close": 1.086,
+    "percent": -2.51,
     "volume": 5443700,
-    "amount": 5977775,
-    "timestamp": "",
-    "percent": -2.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-23",
+    "timestamp": 1608652800000,
     "open": 1.088,
     "high": 1.093,
     "low": 1.079,
     "close": 1.089,
+    "percent": 0.28,
     "volume": 8954500,
-    "amount": 9729446,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-24",
+    "timestamp": 1608739200000,
     "open": 1.094,
     "high": 1.1,
     "low": 1.083,
     "close": 1.087,
+    "percent": -0.18,
     "volume": 7019600,
-    "amount": 7634272,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-25",
+    "timestamp": 1608825600000,
     "open": 1.091,
     "high": 1.092,
     "low": 1.075,
     "close": 1.089,
+    "percent": 0.18,
     "volume": 14469402,
-    "amount": 15732238,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-28",
+    "timestamp": 1609084800000,
     "open": 1.09,
     "high": 1.102,
     "low": 1.083,
     "close": 1.092,
+    "percent": 0.28,
     "volume": 4292400,
-    "amount": 4684932,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-29",
+    "timestamp": 1609171200000,
     "open": 1.092,
     "high": 1.108,
     "low": 1.092,
     "close": 1.098,
+    "percent": 0.55,
     "volume": 8189500,
-    "amount": 9025795,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-30",
+    "timestamp": 1609257600000,
     "open": 1.098,
     "high": 1.101,
     "low": 1.089,
     "close": 1.101,
+    "percent": 0.27,
     "volume": 3887300,
-    "amount": 4260359,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2020-12-31",
+    "timestamp": 1609344000000,
     "open": 1.102,
     "high": 1.136,
     "low": 1.101,
     "close": 1.126,
+    "percent": 2.27,
     "volume": 6918600,
-    "amount": 7775001,
-    "timestamp": "",
-    "percent": 2.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-04",
+    "timestamp": 1609689600000,
     "open": 1.127,
     "high": 1.13,
     "low": 1.104,
     "close": 1.116,
+    "percent": -0.89,
     "volume": 8559011,
-    "amount": 9511913,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-05",
+    "timestamp": 1609776000000,
     "open": 1.106,
     "high": 1.114,
     "low": 1.089,
     "close": 1.11,
+    "percent": -0.54,
     "volume": 17616600,
-    "amount": 19364238,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-06",
+    "timestamp": 1609862400000,
     "open": 1.104,
     "high": 1.122,
     "low": 1.104,
     "close": 1.121,
+    "percent": 0.99,
     "volume": 8900000,
-    "amount": 9928428,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-07",
+    "timestamp": 1609948800000,
     "open": 1.12,
     "high": 1.135,
     "low": 1.11,
     "close": 1.129,
+    "percent": 0.71,
     "volume": 9734200,
-    "amount": 10939323,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-08",
+    "timestamp": 1610035200000,
     "open": 1.135,
     "high": 1.14,
     "low": 1.121,
     "close": 1.132,
+    "percent": 0.27,
     "volume": 38164600,
-    "amount": 43014817,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-11",
+    "timestamp": 1610294400000,
     "open": 1.133,
     "high": 1.143,
     "low": 1.126,
     "close": 1.131,
+    "percent": -0.09,
     "volume": 39998700,
-    "amount": 45330783,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-12",
+    "timestamp": 1610380800000,
     "open": 1.139,
     "high": 1.166,
     "low": 1.121,
     "close": 1.165,
+    "percent": 3.01,
     "volume": 17707300,
-    "amount": 20148049,
-    "timestamp": "",
-    "percent": 3.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-13",
+    "timestamp": 1610467200000,
     "open": 1.164,
     "high": 1.169,
     "low": 1.146,
     "close": 1.154,
+    "percent": -0.94,
     "volume": 11520719,
-    "amount": 13318702,
-    "timestamp": "",
-    "percent": -0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-14",
+    "timestamp": 1610553600000,
     "open": 1.154,
     "high": 1.16,
     "low": 1.14,
     "close": 1.143,
+    "percent": -0.95,
     "volume": 9015407,
-    "amount": 10351558,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-15",
+    "timestamp": 1610640000000,
     "open": 1.145,
     "high": 1.182,
     "low": 1.145,
     "close": 1.158,
+    "percent": 1.31,
     "volume": 22310000,
-    "amount": 26019870,
-    "timestamp": "",
-    "percent": 1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-18",
+    "timestamp": 1610899200000,
     "open": 1.158,
     "high": 1.183,
     "low": 1.156,
     "close": 1.178,
+    "percent": 1.73,
     "volume": 20745512,
-    "amount": 24373586,
-    "timestamp": "",
-    "percent": 1.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-19",
+    "timestamp": 1610985600000,
     "open": 1.178,
     "high": 1.192,
     "low": 1.165,
     "close": 1.178,
+    "percent": 0,
     "volume": 9958614,
-    "amount": 11747957,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-20",
+    "timestamp": 1611072000000,
     "open": 1.178,
     "high": 1.185,
     "low": 1.163,
     "close": 1.166,
+    "percent": -1.02,
     "volume": 23200900,
-    "amount": 27167832,
-    "timestamp": "",
-    "percent": -1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-21",
+    "timestamp": 1611158400000,
     "open": 1.17,
     "high": 1.186,
     "low": 1.162,
     "close": 1.176,
+    "percent": 0.86,
     "volume": 17931000,
-    "amount": 21076824,
-    "timestamp": "",
-    "percent": 0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-22",
+    "timestamp": 1611244800000,
     "open": 1.181,
     "high": 1.181,
     "low": 1.144,
     "close": 1.15,
+    "percent": -2.21,
     "volume": 11788600,
-    "amount": 13569243,
-    "timestamp": "",
-    "percent": -2.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-25",
+    "timestamp": 1611504000000,
     "open": 1.15,
     "high": 1.155,
     "low": 1.134,
     "close": 1.155,
+    "percent": 0.43,
     "volume": 11482600,
-    "amount": 13138759,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-26",
+    "timestamp": 1611590400000,
     "open": 1.15,
     "high": 1.156,
     "low": 1.131,
     "close": 1.133,
+    "percent": -1.9,
     "volume": 14986200,
-    "amount": 17089574,
-    "timestamp": "",
-    "percent": -1.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-27",
+    "timestamp": 1611676800000,
     "open": 1.133,
     "high": 1.149,
     "low": 1.133,
     "close": 1.137,
+    "percent": 0.35,
     "volume": 11853000,
-    "amount": 13522327,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-28",
+    "timestamp": 1611763200000,
     "open": 1.133,
     "high": 1.133,
     "low": 1.117,
     "close": 1.123,
+    "percent": -1.23,
     "volume": 7348300,
-    "amount": 8248053,
-    "timestamp": "",
-    "percent": -1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-01-29",
+    "timestamp": 1611849600000,
     "open": 1.128,
     "high": 1.131,
     "low": 1.106,
     "close": 1.116,
+    "percent": -0.62,
     "volume": 15273500,
-    "amount": 17111204,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-01",
+    "timestamp": 1612108800000,
     "open": 1.116,
     "high": 1.132,
     "low": 1.11,
     "close": 1.127,
+    "percent": 0.99,
     "volume": 9799300,
-    "amount": 10994339,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-02",
+    "timestamp": 1612195200000,
     "open": 1.127,
     "high": 1.131,
     "low": 1.117,
     "close": 1.122,
+    "percent": -0.44,
     "volume": 9888600,
-    "amount": 11098999,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-03",
+    "timestamp": 1612281600000,
     "open": 1.122,
     "high": 1.135,
     "low": 1.111,
     "close": 1.124,
+    "percent": 0.18,
     "volume": 7383500,
-    "amount": 8305000,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-04",
+    "timestamp": 1612368000000,
     "open": 1.123,
     "high": 1.135,
     "low": 1.111,
     "close": 1.121,
+    "percent": -0.27,
     "volume": 8221100,
-    "amount": 9218158,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-05",
+    "timestamp": 1612454400000,
     "open": 1.122,
     "high": 1.143,
     "low": 1.121,
     "close": 1.134,
+    "percent": 1.16,
     "volume": 9798300,
-    "amount": 11120955,
-    "timestamp": "",
-    "percent": 1.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-08",
+    "timestamp": 1612713600000,
     "open": 1.136,
     "high": 1.14,
     "low": 1.122,
     "close": 1.136,
+    "percent": 0.18,
     "volume": 9592800,
-    "amount": 10875508,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-09",
+    "timestamp": 1612800000000,
     "open": 1.131,
     "high": 1.145,
     "low": 1.121,
     "close": 1.145,
+    "percent": 0.79,
     "volume": 9077000,
-    "amount": 10301586,
-    "timestamp": "",
-    "percent": 0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-10",
+    "timestamp": 1612886400000,
     "open": 1.145,
     "high": 1.155,
     "low": 1.134,
     "close": 1.144,
+    "percent": -0.09,
     "volume": 7499300,
-    "amount": 8570564,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-18",
+    "timestamp": 1613577600000,
     "open": 1.155,
     "high": 1.177,
     "low": 1.155,
     "close": 1.166,
+    "percent": 1.92,
     "volume": 9792202,
-    "amount": 11407435,
-    "timestamp": "",
-    "percent": 1.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-19",
+    "timestamp": 1613664000000,
     "open": 1.167,
     "high": 1.176,
     "low": 1.155,
     "close": 1.173,
+    "percent": 0.6,
     "volume": 7723213,
-    "amount": 9035740,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-22",
+    "timestamp": 1613923200000,
     "open": 1.175,
     "high": 1.177,
     "low": 1.154,
     "close": 1.155,
+    "percent": -1.53,
     "volume": 6423600,
-    "amount": 7495749,
-    "timestamp": "",
-    "percent": -1.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-23",
+    "timestamp": 1614009600000,
     "open": 1.155,
     "high": 1.173,
     "low": 1.15,
     "close": 1.158,
+    "percent": 0.26,
     "volume": 14310019,
-    "amount": 16689016,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-24",
+    "timestamp": 1614096000000,
     "open": 1.158,
     "high": 1.167,
     "low": 1.137,
     "close": 1.153,
+    "percent": -0.43,
     "volume": 7471200,
-    "amount": 8635277,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-25",
+    "timestamp": 1614182400000,
     "open": 1.155,
     "high": 1.183,
     "low": 1.151,
     "close": 1.175,
+    "percent": 1.91,
     "volume": 7166503,
-    "amount": 8414831,
-    "timestamp": "",
-    "percent": 1.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-02-26",
+    "timestamp": 1614268800000,
     "open": 1.17,
     "high": 1.17,
     "low": 1.139,
     "close": 1.145,
+    "percent": -2.55,
     "volume": 4905900,
-    "amount": 5642226,
-    "timestamp": "",
-    "percent": -2.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-01",
+    "timestamp": 1614528000000,
     "open": 1.156,
     "high": 1.156,
     "low": 1.134,
     "close": 1.142,
+    "percent": -0.26,
     "volume": 16447500,
-    "amount": 18737229,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-02",
+    "timestamp": 1614614400000,
     "open": 1.142,
     "high": 1.151,
     "low": 1.125,
     "close": 1.132,
+    "percent": -0.88,
     "volume": 11724100,
-    "amount": 13316629,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-03",
+    "timestamp": 1614700800000,
     "open": 1.13,
     "high": 1.166,
     "low": 1.13,
     "close": 1.166,
+    "percent": 3,
     "volume": 13615400,
-    "amount": 15745760,
-    "timestamp": "",
-    "percent": 3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-04",
+    "timestamp": 1614787200000,
     "open": 1.163,
     "high": 1.17,
     "low": 1.146,
     "close": 1.15,
+    "percent": -1.37,
     "volume": 3747400,
-    "amount": 4337058,
-    "timestamp": "",
-    "percent": -1.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-05",
+    "timestamp": 1614873600000,
     "open": 1.15,
     "high": 1.153,
     "low": 1.131,
     "close": 1.145,
+    "percent": -0.43,
     "volume": 3293400,
-    "amount": 3756367,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-08",
+    "timestamp": 1615132800000,
     "open": 1.145,
     "high": 1.161,
     "low": 1.131,
     "close": 1.131,
+    "percent": -1.22,
     "volume": 3801600,
-    "amount": 4352636,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-09",
+    "timestamp": 1615219200000,
     "open": 1.129,
     "high": 1.144,
     "low": 1.105,
     "close": 1.117,
+    "percent": -1.24,
     "volume": 17549400,
-    "amount": 19684683,
-    "timestamp": "",
-    "percent": -1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-10",
+    "timestamp": 1615305600000,
     "open": 1.117,
     "high": 1.128,
     "low": 1.102,
     "close": 1.102,
+    "percent": -1.34,
     "volume": 3544300,
-    "amount": 3933218,
-    "timestamp": "",
-    "percent": -1.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-11",
+    "timestamp": 1615392000000,
     "open": 1.106,
     "high": 1.129,
     "low": 1.106,
     "close": 1.127,
+    "percent": 2.27,
     "volume": 3400000,
-    "amount": 3819985,
-    "timestamp": "",
-    "percent": 2.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-12",
+    "timestamp": 1615478400000,
     "open": 1.131,
     "high": 1.138,
     "low": 1.122,
     "close": 1.136,
+    "percent": 0.8,
     "volume": 7004600,
-    "amount": 7940629,
-    "timestamp": "",
-    "percent": 0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-15",
+    "timestamp": 1615737600000,
     "open": 1.136,
     "high": 1.143,
     "low": 1.126,
     "close": 1.131,
+    "percent": -0.44,
     "volume": 3196000,
-    "amount": 3622165,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-16",
+    "timestamp": 1615824000000,
     "open": 1.131,
     "high": 1.147,
     "low": 1.131,
     "close": 1.147,
+    "percent": 1.41,
     "volume": 5144300,
-    "amount": 5869572,
-    "timestamp": "",
-    "percent": 1.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-17",
+    "timestamp": 1615910400000,
     "open": 1.15,
     "high": 1.15,
     "low": 1.129,
     "close": 1.135,
+    "percent": -1.05,
     "volume": 1732600,
-    "amount": 1965701,
-    "timestamp": "",
-    "percent": -1.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-18",
+    "timestamp": 1615996800000,
     "open": 1.14,
     "high": 1.14,
     "low": 1.128,
     "close": 1.134,
+    "percent": -0.09,
     "volume": 1706200,
-    "amount": 1931743,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-19",
+    "timestamp": 1616083200000,
     "open": 1.132,
     "high": 1.132,
     "low": 1.105,
     "close": 1.113,
+    "percent": -1.85,
     "volume": 3917800,
-    "amount": 4367062,
-    "timestamp": "",
-    "percent": -1.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-22",
+    "timestamp": 1616342400000,
     "open": 1.109,
     "high": 1.129,
     "low": 1.109,
     "close": 1.125,
+    "percent": 1.08,
     "volume": 16803700,
-    "amount": 18896577,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-23",
+    "timestamp": 1616428800000,
     "open": 1.125,
     "high": 1.131,
     "low": 1.115,
     "close": 1.126,
+    "percent": 0.09,
     "volume": 1831200,
-    "amount": 2057028,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-24",
+    "timestamp": 1616515200000,
     "open": 1.126,
     "high": 1.126,
     "low": 1.11,
     "close": 1.112,
+    "percent": -1.24,
     "volume": 1336200,
-    "amount": 1490274,
-    "timestamp": "",
-    "percent": -1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-25",
+    "timestamp": 1616601600000,
     "open": 1.112,
     "high": 1.116,
     "low": 1.105,
     "close": 1.105,
+    "percent": -0.63,
     "volume": 1881100,
-    "amount": 2084382,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-26",
+    "timestamp": 1616688000000,
     "open": 1.107,
     "high": 1.118,
     "low": 1.107,
     "close": 1.117,
+    "percent": 1.09,
     "volume": 1680003,
-    "amount": 1870871,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-29",
+    "timestamp": 1616947200000,
     "open": 1.123,
     "high": 1.123,
     "low": 1.107,
     "close": 1.115,
+    "percent": -0.18,
     "volume": 12083900,
-    "amount": 13453213,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-30",
+    "timestamp": 1617033600000,
     "open": 1.115,
     "high": 1.119,
     "low": 1.108,
     "close": 1.118,
+    "percent": 0.27,
     "volume": 4761300,
-    "amount": 5298177,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-03-31",
+    "timestamp": 1617120000000,
     "open": 1.118,
     "high": 1.12,
     "low": 1.107,
     "close": 1.112,
+    "percent": -0.54,
     "volume": 2249900,
-    "amount": 2501469,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-01",
+    "timestamp": 1617206400000,
     "open": 1.113,
     "high": 1.116,
     "low": 1.108,
     "close": 1.115,
+    "percent": 0.27,
     "volume": 1190200,
-    "amount": 1323905,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-02",
+    "timestamp": 1617292800000,
     "open": 1.118,
     "high": 1.119,
     "low": 1.107,
     "close": 1.112,
+    "percent": -0.27,
     "volume": 5806000,
-    "amount": 6440953,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-06",
+    "timestamp": 1617638400000,
     "open": 1.113,
     "high": 1.117,
     "low": 1.108,
     "close": 1.11,
+    "percent": -0.18,
     "volume": 2863000,
-    "amount": 3179597,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-07",
+    "timestamp": 1617724800000,
     "open": 1.111,
     "high": 1.111,
     "low": 1.102,
     "close": 1.105,
+    "percent": -0.45,
     "volume": 5258500,
-    "amount": 5807783,
-    "timestamp": "",
-    "percent": -0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-08",
+    "timestamp": 1617811200000,
     "open": 1.107,
     "high": 1.109,
     "low": 1.1,
     "close": 1.105,
+    "percent": 0,
     "volume": 4420400,
-    "amount": 4886704,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-09",
+    "timestamp": 1617897600000,
     "open": 1.107,
     "high": 1.107,
     "low": 1.094,
     "close": 1.097,
+    "percent": -0.72,
     "volume": 3011400,
-    "amount": 3305274,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-12",
+    "timestamp": 1618156800000,
     "open": 1.097,
     "high": 1.099,
     "low": 1.087,
     "close": 1.089,
+    "percent": -0.73,
     "volume": 3412100,
-    "amount": 3726161,
-    "timestamp": "",
-    "percent": -0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-13",
+    "timestamp": 1618243200000,
     "open": 1.089,
     "high": 1.101,
     "low": 1.079,
     "close": 1.083,
+    "percent": -0.55,
     "volume": 4823100,
-    "amount": 5230615,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-14",
+    "timestamp": 1618329600000,
     "open": 1.085,
     "high": 1.089,
     "low": 1.079,
     "close": 1.086,
+    "percent": 0.28,
     "volume": 2154800,
-    "amount": 2335809,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-15",
+    "timestamp": 1618416000000,
     "open": 1.086,
     "high": 1.086,
     "low": 1.066,
     "close": 1.073,
+    "percent": -1.2,
     "volume": 4327900,
-    "amount": 4635278,
-    "timestamp": "",
-    "percent": -1.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-16",
+    "timestamp": 1618502400000,
     "open": 1.073,
     "high": 1.081,
     "low": 1.072,
     "close": 1.08,
+    "percent": 0.65,
     "volume": 10311800,
-    "amount": 11099039,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-19",
+    "timestamp": 1618761600000,
     "open": 1.081,
     "high": 1.098,
     "low": 1.073,
     "close": 1.095,
+    "percent": 1.39,
     "volume": 3308900,
-    "amount": 3603171,
-    "timestamp": "",
-    "percent": 1.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-20",
+    "timestamp": 1618848000000,
     "open": 1.09,
     "high": 1.099,
     "low": 1.089,
     "close": 1.092,
+    "percent": -0.27,
     "volume": 1426100,
-    "amount": 1562169,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-21",
+    "timestamp": 1618934400000,
     "open": 1.092,
     "high": 1.105,
     "low": 1.092,
     "close": 1.1,
+    "percent": 0.73,
     "volume": 1967600,
-    "amount": 2162299,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-22",
+    "timestamp": 1619020800000,
     "open": 1.105,
     "high": 1.108,
     "low": 1.094,
     "close": 1.096,
+    "percent": -0.36,
     "volume": 5008500,
-    "amount": 5502585,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-23",
+    "timestamp": 1619107200000,
     "open": 1.092,
     "high": 1.101,
     "low": 1.091,
     "close": 1.096,
+    "percent": 0,
     "volume": 7714000,
-    "amount": 8466256,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-26",
+    "timestamp": 1619366400000,
     "open": 1.095,
     "high": 1.102,
     "low": 1.083,
     "close": 1.089,
+    "percent": -0.64,
     "volume": 20177800,
-    "amount": 22122866,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-27",
+    "timestamp": 1619452800000,
     "open": 1.085,
     "high": 1.088,
     "low": 1.079,
     "close": 1.088,
+    "percent": -0.09,
     "volume": 932900,
-    "amount": 1010183,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-28",
+    "timestamp": 1619539200000,
     "open": 1.088,
     "high": 1.088,
     "low": 1.081,
     "close": 1.085,
+    "percent": -0.28,
     "volume": 1093300,
-    "amount": 1185315,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-29",
+    "timestamp": 1619625600000,
     "open": 1.082,
     "high": 1.105,
     "low": 1.081,
     "close": 1.105,
+    "percent": 1.84,
     "volume": 2244600,
-    "amount": 2467142,
-    "timestamp": "",
-    "percent": 1.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-04-30",
+    "timestamp": 1619712000000,
     "open": 1.105,
     "high": 1.106,
     "low": 1.085,
     "close": 1.092,
+    "percent": -1.18,
     "volume": 2005200,
-    "amount": 2192372,
-    "timestamp": "",
-    "percent": -1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-06",
+    "timestamp": 1620230400000,
     "open": 1.091,
     "high": 1.101,
     "low": 1.088,
     "close": 1.09,
+    "percent": -0.18,
     "volume": 1262800,
-    "amount": 1380104,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-07",
+    "timestamp": 1620316800000,
     "open": 1.092,
     "high": 1.098,
     "low": 1.086,
     "close": 1.09,
+    "percent": 0,
     "volume": 1041100,
-    "amount": 1137624,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-10",
+    "timestamp": 1620576000000,
     "open": 1.09,
     "high": 1.09,
     "low": 1.073,
     "close": 1.078,
+    "percent": -1.1,
     "volume": 1406000,
-    "amount": 1515422,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-11",
+    "timestamp": 1620662400000,
     "open": 1.08,
     "high": 1.09,
     "low": 1.074,
     "close": 1.086,
+    "percent": 0.74,
     "volume": 1236500,
-    "amount": 1335025,
-    "timestamp": "",
-    "percent": 0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-12",
+    "timestamp": 1620748800000,
     "open": 1.086,
     "high": 1.093,
     "low": 1.082,
     "close": 1.089,
+    "percent": 0.28,
     "volume": 844400,
-    "amount": 917813,
-    "timestamp": "",
-    "percent": 0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-13",
+    "timestamp": 1620835200000,
     "open": 1.084,
     "high": 1.09,
     "low": 1.081,
     "close": 1.084,
+    "percent": -0.46,
     "volume": 1009600,
-    "amount": 1095542,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-14",
+    "timestamp": 1620921600000,
     "open": 1.089,
     "high": 1.119,
     "low": 1.084,
     "close": 1.117,
+    "percent": 3.04,
     "volume": 8832007,
-    "amount": 9788157,
-    "timestamp": "",
-    "percent": 3.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-17",
+    "timestamp": 1621180800000,
     "open": 1.115,
     "high": 1.122,
     "low": 1.101,
     "close": 1.113,
+    "percent": -0.36,
     "volume": 2907500,
-    "amount": 3237354,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-18",
+    "timestamp": 1621267200000,
     "open": 1.118,
     "high": 1.121,
     "low": 1.11,
     "close": 1.118,
+    "percent": 0.45,
     "volume": 3853808,
-    "amount": 4309457,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-19",
+    "timestamp": 1621353600000,
     "open": 1.116,
     "high": 1.116,
     "low": 1.104,
     "close": 1.106,
+    "percent": -1.07,
     "volume": 3856500,
-    "amount": 4280697,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-20",
+    "timestamp": 1621440000000,
     "open": 1.106,
     "high": 1.119,
     "low": 1.082,
     "close": 1.115,
+    "percent": 0.81,
     "volume": 1087407,
-    "amount": 1204177,
-    "timestamp": "",
-    "percent": 0.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-21",
+    "timestamp": 1621526400000,
     "open": 1.109,
     "high": 1.116,
     "low": 1.101,
     "close": 1.103,
+    "percent": -1.08,
     "volume": 764800,
-    "amount": 846333,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-24",
+    "timestamp": 1621785600000,
     "open": 1.103,
     "high": 1.111,
     "low": 1.101,
     "close": 1.105,
+    "percent": 0.18,
     "volume": 599600,
-    "amount": 663926,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-25",
+    "timestamp": 1621872000000,
     "open": 1.105,
     "high": 1.146,
     "low": 1.105,
     "close": 1.144,
+    "percent": 3.53,
     "volume": 13746300,
-    "amount": 15596256,
-    "timestamp": "",
-    "percent": 3.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-26",
+    "timestamp": 1621958400000,
     "open": 1.146,
     "high": 1.16,
     "low": 1.135,
     "close": 1.15,
+    "percent": 0.52,
     "volume": 30883400,
-    "amount": 35741460,
-    "timestamp": "",
-    "percent": 0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-27",
+    "timestamp": 1622044800000,
     "open": 1.151,
     "high": 1.157,
     "low": 1.139,
     "close": 1.149,
+    "percent": -0.09,
     "volume": 5791503,
-    "amount": 6630496,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-28",
+    "timestamp": 1622131200000,
     "open": 1.142,
     "high": 1.161,
     "low": 1.142,
     "close": 1.152,
+    "percent": 0.26,
     "volume": 3350799,
-    "amount": 3853507,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-05-31",
+    "timestamp": 1622390400000,
     "open": 1.152,
     "high": 1.16,
     "low": 1.14,
     "close": 1.16,
+    "percent": 0.69,
     "volume": 2056100,
-    "amount": 2352501,
-    "timestamp": "",
-    "percent": 0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-01",
+    "timestamp": 1622476800000,
     "open": 1.16,
     "high": 1.16,
     "low": 1.13,
     "close": 1.137,
+    "percent": -1.98,
     "volume": 4876900,
-    "amount": 5538641,
-    "timestamp": "",
-    "percent": -1.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-02",
+    "timestamp": 1622563200000,
     "open": 1.136,
     "high": 1.137,
     "low": 1.127,
     "close": 1.13,
+    "percent": -0.62,
     "volume": 2281300,
-    "amount": 2577833,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-03",
+    "timestamp": 1622649600000,
     "open": 1.129,
     "high": 1.14,
     "low": 1.127,
     "close": 1.127,
+    "percent": -0.27,
     "volume": 1589300,
-    "amount": 1799235,
-    "timestamp": "",
-    "percent": -0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-04",
+    "timestamp": 1622736000000,
     "open": 1.135,
     "high": 1.147,
     "low": 1.122,
     "close": 1.133,
+    "percent": 0.53,
     "volume": 2713600,
-    "amount": 3085038,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-07",
+    "timestamp": 1622995200000,
     "open": 1.135,
     "high": 1.14,
     "low": 1.125,
     "close": 1.13,
+    "percent": -0.26,
     "volume": 1512400,
-    "amount": 1706870,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-08",
+    "timestamp": 1623081600000,
     "open": 1.13,
     "high": 1.14,
     "low": 1.125,
     "close": 1.129,
+    "percent": -0.09,
     "volume": 1508215,
-    "amount": 1705532,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-09",
+    "timestamp": 1623168000000,
     "open": 1.13,
     "high": 1.135,
     "low": 1.124,
     "close": 1.125,
+    "percent": -0.35,
     "volume": 1320100,
-    "amount": 1487007,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-10",
+    "timestamp": 1623254400000,
     "open": 1.125,
     "high": 1.133,
     "low": 1.122,
     "close": 1.124,
+    "percent": -0.09,
     "volume": 3396000,
-    "amount": 3823494,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-11",
+    "timestamp": 1623340800000,
     "open": 1.124,
     "high": 1.124,
     "low": 1.105,
     "close": 1.108,
+    "percent": -1.42,
     "volume": 5488900,
-    "amount": 6094418,
-    "timestamp": "",
-    "percent": -1.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-15",
+    "timestamp": 1623686400000,
     "open": 1.108,
     "high": 1.108,
     "low": 1.087,
     "close": 1.092,
+    "percent": -1.44,
     "volume": 6543200,
-    "amount": 7152009,
-    "timestamp": "",
-    "percent": -1.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-16",
+    "timestamp": 1623772800000,
     "open": 1.092,
     "high": 1.102,
     "low": 1.088,
     "close": 1.091,
+    "percent": -0.09,
     "volume": 8411800,
-    "amount": 9188705,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-17",
+    "timestamp": 1623859200000,
     "open": 1.091,
     "high": 1.096,
     "low": 1.087,
     "close": 1.09,
+    "percent": -0.09,
     "volume": 1708700,
-    "amount": 1862695,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-18",
+    "timestamp": 1623945600000,
     "open": 1.087,
     "high": 1.092,
     "low": 1.079,
     "close": 1.084,
+    "percent": -0.55,
     "volume": 3378700,
-    "amount": 3660440,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-21",
+    "timestamp": 1624204800000,
     "open": 1.084,
     "high": 1.088,
     "low": 1.072,
     "close": 1.076,
+    "percent": -0.74,
     "volume": 5328000,
-    "amount": 5734061,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-22",
+    "timestamp": 1624291200000,
     "open": 1.08,
     "high": 1.087,
     "low": 1.076,
     "close": 1.083,
+    "percent": 0.65,
     "volume": 6909602,
-    "amount": 7464540,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-23",
+    "timestamp": 1624377600000,
     "open": 1.088,
     "high": 1.088,
     "low": 1.08,
     "close": 1.084,
+    "percent": 0.09,
     "volume": 2070900,
-    "amount": 2243809,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-24",
+    "timestamp": 1624464000000,
     "open": 1.088,
     "high": 1.091,
     "low": 1.083,
     "close": 1.088,
+    "percent": 0.37,
     "volume": 1859400,
-    "amount": 2021706,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-25",
+    "timestamp": 1624550400000,
     "open": 1.095,
     "high": 1.11,
     "low": 1.081,
     "close": 1.106,
+    "percent": 1.65,
     "volume": 4258200,
-    "amount": 4687305,
-    "timestamp": "",
-    "percent": 1.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-28",
+    "timestamp": 1624809600000,
     "open": 1.11,
     "high": 1.11,
     "low": 1.087,
     "close": 1.092,
+    "percent": -1.27,
     "volume": 8724200,
-    "amount": 9515348,
-    "timestamp": "",
-    "percent": -1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-29",
+    "timestamp": 1624896000000,
     "open": 1.092,
     "high": 1.092,
     "low": 1.078,
     "close": 1.08,
+    "percent": -1.1,
     "volume": 3063600,
-    "amount": 3315825,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-06-30",
+    "timestamp": 1624982400000,
     "open": 1.085,
     "high": 1.088,
     "low": 1.081,
     "close": 1.087,
+    "percent": 0.65,
     "volume": 2493800,
-    "amount": 2702638,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-01",
+    "timestamp": 1625068800000,
     "open": 1.091,
     "high": 1.097,
     "low": 1.085,
     "close": 1.089,
+    "percent": 0.18,
     "volume": 2707865,
-    "amount": 2955434,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-02",
+    "timestamp": 1625155200000,
     "open": 1.091,
     "high": 1.091,
     "low": 1.063,
     "close": 1.064,
+    "percent": -2.3,
     "volume": 6652200,
-    "amount": 7118325,
-    "timestamp": "",
-    "percent": -2.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-05",
+    "timestamp": 1625414400000,
     "open": 1.066,
     "high": 1.069,
     "low": 1.055,
     "close": 1.061,
+    "percent": -0.28,
     "volume": 4368600,
-    "amount": 4627173,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-06",
+    "timestamp": 1625500800000,
     "open": 1.063,
     "high": 1.076,
     "low": 1.062,
     "close": 1.075,
+    "percent": 1.32,
     "volume": 1839600,
-    "amount": 1965426,
-    "timestamp": "",
-    "percent": 1.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-07",
+    "timestamp": 1625587200000,
     "open": 1.075,
     "high": 1.078,
     "low": 1.069,
     "close": 1.074,
+    "percent": -0.09,
     "volume": 1045000,
-    "amount": 1121506,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-08",
+    "timestamp": 1625673600000,
     "open": 1.081,
     "high": 1.081,
     "low": 1.051,
     "close": 1.056,
+    "percent": -1.68,
     "volume": 8107900,
-    "amount": 8578311,
-    "timestamp": "",
-    "percent": -1.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-09",
+    "timestamp": 1625760000000,
     "open": 1.062,
     "high": 1.062,
     "low": 1.046,
     "close": 1.05,
+    "percent": -0.57,
     "volume": 3909700,
-    "amount": 4112335,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-12",
+    "timestamp": 1626019200000,
     "open": 1.064,
     "high": 1.064,
     "low": 1.049,
     "close": 1.052,
+    "percent": 0.19,
     "volume": 3131600,
-    "amount": 3300136,
-    "timestamp": "",
-    "percent": 0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-13",
+    "timestamp": 1626105600000,
     "open": 1.055,
     "high": 1.058,
     "low": 1.046,
     "close": 1.055,
+    "percent": 0.29,
     "volume": 1941200,
-    "amount": 2044141,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-14",
+    "timestamp": 1626192000000,
     "open": 1.06,
     "high": 1.06,
     "low": 1.037,
     "close": 1.04,
+    "percent": -1.42,
     "volume": 5906500,
-    "amount": 6152669,
-    "timestamp": "",
-    "percent": -1.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-15",
+    "timestamp": 1626278400000,
     "open": 1.043,
     "high": 1.06,
     "low": 1.037,
     "close": 1.058,
+    "percent": 1.73,
     "volume": 7102500,
-    "amount": 7490367,
-    "timestamp": "",
-    "percent": 1.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-16",
+    "timestamp": 1626364800000,
     "open": 1.061,
     "high": 1.064,
     "low": 1.052,
     "close": 1.055,
+    "percent": -0.28,
     "volume": 2577000,
-    "amount": 2727126,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-19",
+    "timestamp": 1626624000000,
     "open": 1.061,
     "high": 1.061,
     "low": 1.039,
     "close": 1.053,
+    "percent": -0.19,
     "volume": 3034500,
-    "amount": 3175947,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-20",
+    "timestamp": 1626710400000,
     "open": 1.046,
     "high": 1.052,
     "low": 1.039,
     "close": 1.041,
+    "percent": -1.14,
     "volume": 2793800,
-    "amount": 2914341,
-    "timestamp": "",
-    "percent": -1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-21",
+    "timestamp": 1626796800000,
     "open": 1.043,
     "high": 1.05,
     "low": 1.04,
     "close": 1.042,
+    "percent": 0.1,
     "volume": 3323100,
-    "amount": 3470454,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-22",
+    "timestamp": 1626883200000,
     "open": 1.043,
     "high": 1.057,
     "low": 1.041,
     "close": 1.055,
+    "percent": 1.25,
     "volume": 4369400,
-    "amount": 4593861,
-    "timestamp": "",
-    "percent": 1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-23",
+    "timestamp": 1626969600000,
     "open": 1.055,
     "high": 1.064,
     "low": 1.045,
     "close": 1.053,
+    "percent": -0.19,
     "volume": 3655501,
-    "amount": 3863249,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-26",
+    "timestamp": 1627228800000,
     "open": 1.05,
     "high": 1.05,
     "low": 1.015,
     "close": 1.019,
+    "percent": -3.23,
     "volume": 9241800,
-    "amount": 9503152,
-    "timestamp": "",
-    "percent": -3.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-27",
+    "timestamp": 1627315200000,
     "open": 1.019,
     "high": 1.023,
     "low": 0.982,
     "close": 0.989,
+    "percent": -2.94,
     "volume": 11120900,
-    "amount": 11106639,
-    "timestamp": "",
-    "percent": -2.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-28",
+    "timestamp": 1627401600000,
     "open": 0.994,
     "high": 0.998,
     "low": 0.984,
     "close": 0.987,
+    "percent": -0.2,
     "volume": 7010436,
-    "amount": 6918588,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-29",
+    "timestamp": 1627488000000,
     "open": 0.996,
     "high": 0.996,
     "low": 0.985,
     "close": 0.99,
+    "percent": 0.3,
     "volume": 6280900,
-    "amount": 6205157,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-07-30",
+    "timestamp": 1627574400000,
     "open": 0.987,
     "high": 0.99,
     "low": 0.972,
     "close": 0.976,
+    "percent": -1.41,
     "volume": 3864100,
-    "amount": 3773204,
-    "timestamp": "",
-    "percent": -1.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-02",
+    "timestamp": 1627833600000,
     "open": 0.976,
     "high": 1.005,
     "low": 0.962,
     "close": 0.997,
+    "percent": 2.15,
     "volume": 4110200,
-    "amount": 4055120,
-    "timestamp": "",
-    "percent": 2.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-03",
+    "timestamp": 1627920000000,
     "open": 0.997,
     "high": 1.003,
     "low": 0.988,
     "close": 0.994,
+    "percent": -0.3,
     "volume": 1224800,
-    "amount": 1219538,
-    "timestamp": "",
-    "percent": -0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-04",
+    "timestamp": 1628006400000,
     "open": 0.991,
     "high": 1,
     "low": 0.987,
     "close": 0.99,
+    "percent": -0.4,
     "volume": 1378803,
-    "amount": 1364637,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-05",
+    "timestamp": 1628092800000,
     "open": 0.991,
     "high": 1,
     "low": 0.985,
     "close": 0.986,
+    "percent": -0.4,
     "volume": 2603400,
-    "amount": 2579614,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-06",
+    "timestamp": 1628179200000,
     "open": 0.983,
     "high": 0.989,
     "low": 0.98,
     "close": 0.989,
+    "percent": 0.3,
     "volume": 1390100,
-    "amount": 1369400,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-09",
+    "timestamp": 1628438400000,
     "open": 0.993,
     "high": 1.022,
     "low": 0.991,
     "close": 1.015,
+    "percent": 2.63,
     "volume": 4857500,
-    "amount": 4922894,
-    "timestamp": "",
-    "percent": 2.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-10",
+    "timestamp": 1628524800000,
     "open": 1.023,
     "high": 1.029,
     "low": 1.005,
     "close": 1.027,
+    "percent": 1.18,
     "volume": 3953100,
-    "amount": 4032167,
-    "timestamp": "",
-    "percent": 1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-11",
+    "timestamp": 1628611200000,
     "open": 1.027,
     "high": 1.046,
     "low": 1.02,
     "close": 1.034,
+    "percent": 0.68,
     "volume": 6280500,
-    "amount": 6533007,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-12",
+    "timestamp": 1628697600000,
     "open": 1.027,
     "high": 1.035,
     "low": 1.024,
     "close": 1.024,
+    "percent": -0.97,
     "volume": 1433100,
-    "amount": 1474460,
-    "timestamp": "",
-    "percent": -0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-13",
+    "timestamp": 1628784000000,
     "open": 1.024,
     "high": 1.031,
     "low": 1.019,
     "close": 1.025,
+    "percent": 0.1,
     "volume": 1989263,
-    "amount": 2036193,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-16",
+    "timestamp": 1629043200000,
     "open": 1.027,
     "high": 1.039,
     "low": 1.024,
     "close": 1.03,
+    "percent": 0.49,
     "volume": 3048800,
-    "amount": 3148079,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-17",
+    "timestamp": 1629129600000,
     "open": 1.029,
     "high": 1.049,
     "low": 1.023,
     "close": 1.025,
+    "percent": -0.49,
     "volume": 8295500,
-    "amount": 8644079,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-18",
+    "timestamp": 1629216000000,
     "open": 1.025,
     "high": 1.07,
     "low": 1.023,
     "close": 1.065,
+    "percent": 3.9,
     "volume": 8381363,
-    "amount": 8855822,
-    "timestamp": "",
-    "percent": 3.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-19",
+    "timestamp": 1629302400000,
     "open": 1.065,
     "high": 1.067,
     "low": 1.043,
     "close": 1.044,
+    "percent": -1.97,
     "volume": 5852500,
-    "amount": 6180915,
-    "timestamp": "",
-    "percent": -1.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-20",
+    "timestamp": 1629388800000,
     "open": 1.044,
     "high": 1.049,
     "low": 1.029,
     "close": 1.037,
+    "percent": -0.67,
     "volume": 2083400,
-    "amount": 2158617,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-23",
+    "timestamp": 1629648000000,
     "open": 1.039,
     "high": 1.048,
     "low": 1.037,
     "close": 1.038,
+    "percent": 0.1,
     "volume": 2553100,
-    "amount": 2657076,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-24",
+    "timestamp": 1629734400000,
     "open": 1.037,
     "high": 1.05,
     "low": 1.033,
     "close": 1.048,
+    "percent": 0.96,
     "volume": 2030800,
-    "amount": 2120386,
-    "timestamp": "",
-    "percent": 0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-25",
+    "timestamp": 1629820800000,
     "open": 1.048,
     "high": 1.048,
     "low": 1.033,
     "close": 1.036,
+    "percent": -1.15,
     "volume": 2068500,
-    "amount": 2146278,
-    "timestamp": "",
-    "percent": -1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-26",
+    "timestamp": 1629907200000,
     "open": 1.035,
     "high": 1.035,
     "low": 1.02,
     "close": 1.02,
+    "percent": -1.54,
     "volume": 2721600,
-    "amount": 2795158,
-    "timestamp": "",
-    "percent": -1.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-27",
+    "timestamp": 1629993600000,
     "open": 1.02,
     "high": 1.032,
     "low": 1.019,
     "close": 1.023,
+    "percent": 0.29,
     "volume": 1313714,
-    "amount": 1345301,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-30",
+    "timestamp": 1630252800000,
     "open": 1.022,
     "high": 1.022,
     "low": 1.002,
     "close": 1.007,
+    "percent": -1.56,
     "volume": 3852600,
-    "amount": 3885038,
-    "timestamp": "",
-    "percent": -1.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-08-31",
+    "timestamp": 1630339200000,
     "open": 1.007,
     "high": 1.021,
     "low": 0.998,
     "close": 1.02,
+    "percent": 1.29,
     "volume": 3760413,
-    "amount": 3796721,
-    "timestamp": "",
-    "percent": 1.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-01",
+    "timestamp": 1630425600000,
     "open": 1.015,
     "high": 1.061,
     "low": 1.015,
     "close": 1.05,
+    "percent": 2.94,
     "volume": 6726309,
-    "amount": 7004702,
-    "timestamp": "",
-    "percent": 2.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-02",
+    "timestamp": 1630512000000,
     "open": 1.049,
     "high": 1.065,
     "low": 1.046,
     "close": 1.063,
+    "percent": 1.24,
     "volume": 10487200,
-    "amount": 11095399,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-03",
+    "timestamp": 1630598400000,
     "open": 1.077,
     "high": 1.079,
     "low": 1.055,
     "close": 1.062,
+    "percent": -0.09,
     "volume": 12661400,
-    "amount": 13551162,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-06",
+    "timestamp": 1630857600000,
     "open": 1.063,
     "high": 1.077,
     "low": 1.058,
     "close": 1.067,
+    "percent": 0.47,
     "volume": 3374500,
-    "amount": 3611139,
-    "timestamp": "",
-    "percent": 0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-07",
+    "timestamp": 1630944000000,
     "open": 1.069,
     "high": 1.092,
     "low": 1.058,
     "close": 1.085,
+    "percent": 1.69,
     "volume": 42212800,
-    "amount": 45131008,
-    "timestamp": "",
-    "percent": 1.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-08",
+    "timestamp": 1631030400000,
     "open": 1.085,
     "high": 1.104,
     "low": 1.083,
     "close": 1.085,
+    "percent": 0,
     "volume": 33399300,
-    "amount": 36526032,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-09",
+    "timestamp": 1631116800000,
     "open": 1.077,
     "high": 1.085,
     "low": 1.075,
     "close": 1.082,
+    "percent": -0.28,
     "volume": 4383104,
-    "amount": 4735736,
-    "timestamp": "",
-    "percent": -0.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-10",
+    "timestamp": 1631203200000,
     "open": 1.083,
     "high": 1.119,
     "low": 1.082,
     "close": 1.099,
+    "percent": 1.57,
     "volume": 12933200,
-    "amount": 14258821,
-    "timestamp": "",
-    "percent": 1.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-13",
+    "timestamp": 1631462400000,
     "open": 1.094,
     "high": 1.108,
     "low": 1.093,
     "close": 1.101,
+    "percent": 0.18,
     "volume": 35250700,
-    "amount": 38834647,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-14",
+    "timestamp": 1631548800000,
     "open": 1.106,
     "high": 1.106,
     "low": 1.069,
     "close": 1.071,
+    "percent": -2.72,
     "volume": 4780100,
-    "amount": 5177319,
-    "timestamp": "",
-    "percent": -2.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-15",
+    "timestamp": 1631635200000,
     "open": 1.07,
     "high": 1.074,
     "low": 1.057,
     "close": 1.062,
+    "percent": -0.84,
     "volume": 7257400,
-    "amount": 7717084,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-16",
+    "timestamp": 1631721600000,
     "open": 1.063,
     "high": 1.069,
     "low": 1.047,
     "close": 1.048,
+    "percent": -1.32,
     "volume": 2894900,
-    "amount": 3053886,
-    "timestamp": "",
-    "percent": -1.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-17",
+    "timestamp": 1631808000000,
     "open": 1.048,
     "high": 1.06,
     "low": 1.046,
     "close": 1.05,
+    "percent": 0.19,
     "volume": 2366700,
-    "amount": 2488578,
-    "timestamp": "",
-    "percent": 0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-22",
+    "timestamp": 1632240000000,
     "open": 1.027,
     "high": 1.058,
     "low": 1.025,
     "close": 1.044,
+    "percent": -0.57,
     "volume": 2850400,
-    "amount": 2951812,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-23",
+    "timestamp": 1632326400000,
     "open": 1.043,
     "high": 1.066,
     "low": 1.042,
     "close": 1.051,
+    "percent": 0.67,
     "volume": 2507000,
-    "amount": 2645867,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-24",
+    "timestamp": 1632412800000,
     "open": 1.048,
     "high": 1.055,
     "low": 1.04,
     "close": 1.04,
+    "percent": -1.05,
     "volume": 3160300,
-    "amount": 3306743,
-    "timestamp": "",
-    "percent": -1.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-27",
+    "timestamp": 1632672000000,
     "open": 1.048,
     "high": 1.048,
     "low": 1.027,
     "close": 1.03,
+    "percent": -0.96,
     "volume": 2891600,
-    "amount": 2986309,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-28",
+    "timestamp": 1632758400000,
     "open": 1.03,
     "high": 1.053,
     "low": 1.03,
     "close": 1.044,
+    "percent": 1.36,
     "volume": 1582500,
-    "amount": 1653274,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-29",
+    "timestamp": 1632844800000,
     "open": 1.04,
     "high": 1.052,
     "low": 1.037,
     "close": 1.049,
+    "percent": 0.48,
     "volume": 1789900,
-    "amount": 1866237,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-09-30",
+    "timestamp": 1632931200000,
     "open": 1.06,
     "high": 1.06,
     "low": 1.036,
     "close": 1.039,
+    "percent": -0.95,
     "volume": 1648300,
-    "amount": 1716656,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-08",
+    "timestamp": 1633622400000,
     "open": 1.04,
     "high": 1.059,
     "low": 1.04,
     "close": 1.057,
+    "percent": 1.73,
     "volume": 1832800,
-    "amount": 1929474,
-    "timestamp": "",
-    "percent": 1.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-11",
+    "timestamp": 1633881600000,
     "open": 1.058,
     "high": 1.082,
     "low": 1.058,
     "close": 1.07,
+    "percent": 1.23,
     "volume": 1988404,
-    "amount": 2133253,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-12",
+    "timestamp": 1633968000000,
     "open": 1.068,
     "high": 1.072,
     "low": 1.053,
     "close": 1.061,
+    "percent": -0.84,
     "volume": 1330600,
-    "amount": 1412707,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-13",
+    "timestamp": 1634054400000,
     "open": 1.06,
     "high": 1.061,
     "low": 1.049,
     "close": 1.059,
+    "percent": -0.19,
     "volume": 770400,
-    "amount": 813362,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-14",
+    "timestamp": 1634140800000,
     "open": 1.059,
     "high": 1.064,
     "low": 1.048,
     "close": 1.052,
+    "percent": -0.66,
     "volume": 1437600,
-    "amount": 1513318,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-15",
+    "timestamp": 1634227200000,
     "open": 1.046,
     "high": 1.056,
     "low": 1.046,
     "close": 1.053,
+    "percent": 0.1,
     "volume": 1394702,
-    "amount": 1466875,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-18",
+    "timestamp": 1634486400000,
     "open": 1.053,
     "high": 1.053,
     "low": 1.04,
     "close": 1.045,
+    "percent": -0.76,
     "volume": 818200,
-    "amount": 853612,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-19",
+    "timestamp": 1634572800000,
     "open": 1.046,
     "high": 1.057,
     "low": 1.044,
     "close": 1.05,
+    "percent": 0.48,
     "volume": 1482300,
-    "amount": 1561154,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-20",
+    "timestamp": 1634659200000,
     "open": 1.05,
     "high": 1.059,
     "low": 1.045,
     "close": 1.048,
+    "percent": -0.19,
     "volume": 1540400,
-    "amount": 1616936,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-21",
+    "timestamp": 1634745600000,
     "open": 1.056,
     "high": 1.071,
     "low": 1.05,
     "close": 1.065,
+    "percent": 1.62,
     "volume": 3400100,
-    "amount": 3608219,
-    "timestamp": "",
-    "percent": 1.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-22",
+    "timestamp": 1634832000000,
     "open": 1.075,
     "high": 1.077,
     "low": 1.066,
     "close": 1.069,
+    "percent": 0.38,
     "volume": 2191800,
-    "amount": 2347810,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-25",
+    "timestamp": 1635091200000,
     "open": 1.078,
     "high": 1.078,
     "low": 1.059,
     "close": 1.073,
+    "percent": 0.37,
     "volume": 1563301,
-    "amount": 1664868,
-    "timestamp": "",
-    "percent": 0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-26",
+    "timestamp": 1635177600000,
     "open": 1.072,
     "high": 1.075,
     "low": 1.063,
     "close": 1.064,
+    "percent": -0.84,
     "volume": 1069500,
-    "amount": 1142538,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-27",
+    "timestamp": 1635264000000,
     "open": 1.064,
     "high": 1.064,
     "low": 1.043,
     "close": 1.046,
+    "percent": -1.69,
     "volume": 1764300,
-    "amount": 1852317,
-    "timestamp": "",
-    "percent": -1.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-28",
+    "timestamp": 1635350400000,
     "open": 1.048,
     "high": 1.051,
     "low": 1.036,
     "close": 1.039,
+    "percent": -0.67,
     "volume": 1284800,
-    "amount": 1336437,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-10-29",
+    "timestamp": 1635436800000,
     "open": 1.039,
     "high": 1.04,
     "low": 1.025,
     "close": 1.033,
+    "percent": -0.58,
     "volume": 2912000,
-    "amount": 3002477,
-    "timestamp": "",
-    "percent": -0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-01",
+    "timestamp": 1635696000000,
     "open": 1.034,
     "high": 1.044,
     "low": 1.027,
     "close": 1.038,
+    "percent": 0.48,
     "volume": 1196400,
-    "amount": 1237548,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-02",
+    "timestamp": 1635782400000,
     "open": 1.038,
     "high": 1.041,
     "low": 1.01,
     "close": 1.023,
+    "percent": -1.45,
     "volume": 5459700,
-    "amount": 5568665,
-    "timestamp": "",
-    "percent": -1.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-03",
+    "timestamp": 1635868800000,
     "open": 1.023,
     "high": 1.028,
     "low": 1.016,
     "close": 1.019,
+    "percent": -0.39,
     "volume": 1331200,
-    "amount": 1356549,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-04",
+    "timestamp": 1635955200000,
     "open": 1.019,
     "high": 1.021,
     "low": 1.014,
     "close": 1.016,
+    "percent": -0.29,
     "volume": 1963300,
-    "amount": 1995210,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-05",
+    "timestamp": 1636041600000,
     "open": 1.018,
     "high": 1.018,
     "low": 1.01,
     "close": 1.011,
+    "percent": -0.49,
     "volume": 1567501,
-    "amount": 1588819,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-08",
+    "timestamp": 1636300800000,
     "open": 1.013,
     "high": 1.02,
     "low": 1.008,
     "close": 1.014,
+    "percent": 0.3,
     "volume": 1576100,
-    "amount": 1597951,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-09",
+    "timestamp": 1636387200000,
     "open": 1.015,
     "high": 1.019,
     "low": 1.011,
     "close": 1.017,
+    "percent": 0.3,
     "volume": 823600,
-    "amount": 836495,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-10",
+    "timestamp": 1636473600000,
     "open": 1.017,
     "high": 1.018,
     "low": 1.005,
     "close": 1.016,
+    "percent": -0.1,
     "volume": 1956100,
-    "amount": 1975383,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-11",
+    "timestamp": 1636560000000,
     "open": 1.02,
     "high": 1.05,
     "low": 1.016,
     "close": 1.048,
+    "percent": 3.15,
     "volume": 4300800,
-    "amount": 4473269,
-    "timestamp": "",
-    "percent": 3.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-12",
+    "timestamp": 1636646400000,
     "open": 1.045,
     "high": 1.05,
     "low": 1.039,
     "close": 1.042,
+    "percent": -0.57,
     "volume": 1291400,
-    "amount": 1347571,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-15",
+    "timestamp": 1636905600000,
     "open": 1.042,
     "high": 1.049,
     "low": 1.039,
     "close": 1.041,
+    "percent": -0.1,
     "volume": 1044500,
-    "amount": 1087946,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-16",
+    "timestamp": 1636992000000,
     "open": 1.04,
     "high": 1.046,
     "low": 1.03,
     "close": 1.034,
+    "percent": -0.67,
     "volume": 2793000,
-    "amount": 2906206,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-17",
+    "timestamp": 1637078400000,
     "open": 1.034,
     "high": 1.036,
     "low": 1.031,
     "close": 1.032,
+    "percent": -0.19,
     "volume": 1112000,
-    "amount": 1147647,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-18",
+    "timestamp": 1637164800000,
     "open": 1.034,
     "high": 1.034,
     "low": 1.021,
     "close": 1.022,
+    "percent": -0.97,
     "volume": 1720000,
-    "amount": 1762389,
-    "timestamp": "",
-    "percent": -0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-19",
+    "timestamp": 1637251200000,
     "open": 1.023,
     "high": 1.038,
     "low": 1.021,
     "close": 1.038,
+    "percent": 1.57,
     "volume": 3144000,
-    "amount": 3229614,
-    "timestamp": "",
-    "percent": 1.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-22",
+    "timestamp": 1637510400000,
     "open": 1.038,
     "high": 1.04,
     "low": 1.03,
     "close": 1.034,
+    "percent": -0.39,
     "volume": 1412600,
-    "amount": 1460319,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-23",
+    "timestamp": 1637596800000,
     "open": 1.036,
     "high": 1.041,
     "low": 1.032,
     "close": 1.035,
+    "percent": 0.1,
     "volume": 1251600,
-    "amount": 1297126,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-24",
+    "timestamp": 1637683200000,
     "open": 1.035,
     "high": 1.039,
     "low": 1.031,
     "close": 1.035,
+    "percent": 0,
     "volume": 1878600,
-    "amount": 1940307,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-25",
+    "timestamp": 1637769600000,
     "open": 1.034,
     "high": 1.035,
     "low": 1.029,
     "close": 1.031,
+    "percent": -0.39,
     "volume": 1093300,
-    "amount": 1126392,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-26",
+    "timestamp": 1637856000000,
     "open": 1.03,
     "high": 1.032,
     "low": 1.022,
     "close": 1.023,
+    "percent": -0.78,
     "volume": 1376900,
-    "amount": 1409384,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-29",
+    "timestamp": 1638115200000,
     "open": 1.02,
     "high": 1.02,
     "low": 1.009,
     "close": 1.014,
+    "percent": -0.88,
     "volume": 2486600,
-    "amount": 2517698,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-11-30",
+    "timestamp": 1638201600000,
     "open": 1.019,
     "high": 1.021,
     "low": 1.009,
     "close": 1.012,
+    "percent": -0.2,
     "volume": 1321649,
-    "amount": 1338438,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-01",
+    "timestamp": 1638288000000,
     "open": 1.016,
     "high": 1.023,
     "low": 1.013,
     "close": 1.021,
+    "percent": 0.89,
     "volume": 936000,
-    "amount": 954805,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-02",
+    "timestamp": 1638374400000,
     "open": 1.021,
     "high": 1.031,
     "low": 1.018,
     "close": 1.028,
+    "percent": 0.69,
     "volume": 1371000,
-    "amount": 1408267,
-    "timestamp": "",
-    "percent": 0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-03",
+    "timestamp": 1638460800000,
     "open": 1.03,
     "high": 1.035,
     "low": 1.022,
     "close": 1.034,
+    "percent": 0.58,
     "volume": 1776500,
-    "amount": 1828476,
-    "timestamp": "",
-    "percent": 0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-06",
+    "timestamp": 1638720000000,
     "open": 1.034,
     "high": 1.057,
     "low": 1.034,
     "close": 1.043,
+    "percent": 0.87,
     "volume": 5011400,
-    "amount": 5259870,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-07",
+    "timestamp": 1638806400000,
     "open": 1.045,
     "high": 1.058,
     "low": 1.042,
     "close": 1.047,
+    "percent": 0.38,
     "volume": 5791755,
-    "amount": 6077647,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-08",
+    "timestamp": 1638892800000,
     "open": 1.047,
     "high": 1.055,
     "low": 1.042,
     "close": 1.054,
+    "percent": 0.67,
     "volume": 17218900,
-    "amount": 18064140,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-09",
+    "timestamp": 1638979200000,
     "open": 1.053,
     "high": 1.08,
     "low": 1.053,
     "close": 1.068,
+    "percent": 1.33,
     "volume": 8837019,
-    "amount": 9453975,
-    "timestamp": "",
-    "percent": 1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-10",
+    "timestamp": 1639065600000,
     "open": 1.068,
     "high": 1.069,
     "low": 1.06,
     "close": 1.06,
+    "percent": -0.75,
     "volume": 2845200,
-    "amount": 3027989,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-13",
+    "timestamp": 1639324800000,
     "open": 1.065,
     "high": 1.081,
     "low": 1.059,
     "close": 1.062,
+    "percent": 0.19,
     "volume": 10777500,
-    "amount": 11548033,
-    "timestamp": "",
-    "percent": 0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-14",
+    "timestamp": 1639411200000,
     "open": 1.061,
     "high": 1.061,
     "low": 1.048,
     "close": 1.05,
+    "percent": -1.13,
     "volume": 1386700,
-    "amount": 1456441,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-15",
+    "timestamp": 1639497600000,
     "open": 1.05,
     "high": 1.057,
     "low": 1.046,
     "close": 1.051,
+    "percent": 0.1,
     "volume": 703100,
-    "amount": 739524,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-16",
+    "timestamp": 1639584000000,
     "open": 1.052,
     "high": 1.058,
     "low": 1.05,
     "close": 1.058,
+    "percent": 0.67,
     "volume": 1416200,
-    "amount": 1496343,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-17",
+    "timestamp": 1639670400000,
     "open": 1.058,
     "high": 1.061,
     "low": 1.049,
     "close": 1.053,
+    "percent": -0.47,
     "volume": 2235600,
-    "amount": 2364821,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-20",
+    "timestamp": 1639929600000,
     "open": 1.051,
     "high": 1.057,
     "low": 1.045,
     "close": 1.046,
+    "percent": -0.66,
     "volume": 716600,
-    "amount": 753172,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-21",
+    "timestamp": 1640016000000,
     "open": 1.041,
     "high": 1.061,
     "low": 1.041,
     "close": 1.058,
+    "percent": 1.15,
     "volume": 1374100,
-    "amount": 1450282,
-    "timestamp": "",
-    "percent": 1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-22",
+    "timestamp": 1640102400000,
     "open": 1.058,
     "high": 1.059,
     "low": 1.048,
     "close": 1.05,
+    "percent": -0.76,
     "volume": 813100,
-    "amount": 856444,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-23",
+    "timestamp": 1640188800000,
     "open": 1.05,
     "high": 1.055,
     "low": 1.044,
     "close": 1.045,
+    "percent": -0.48,
     "volume": 2131500,
-    "amount": 2232184,
-    "timestamp": "",
-    "percent": -0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-24",
+    "timestamp": 1640275200000,
     "open": 1.045,
     "high": 1.049,
     "low": 1.041,
     "close": 1.042,
+    "percent": -0.29,
     "volume": 665200,
-    "amount": 694703,
-    "timestamp": "",
-    "percent": -0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-27",
+    "timestamp": 1640534400000,
     "open": 1.04,
     "high": 1.047,
     "low": 1.039,
     "close": 1.041,
+    "percent": -0.1,
     "volume": 1024900,
-    "amount": 1068919,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-28",
+    "timestamp": 1640620800000,
     "open": 1.042,
     "high": 1.048,
     "low": 1.041,
     "close": 1.048,
+    "percent": 0.67,
     "volume": 2600700,
-    "amount": 2715649,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-29",
+    "timestamp": 1640707200000,
     "open": 1.049,
     "high": 1.049,
     "low": 1.04,
     "close": 1.042,
+    "percent": -0.57,
     "volume": 1031100,
-    "amount": 1074334,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-30",
+    "timestamp": 1640793600000,
     "open": 1.042,
     "high": 1.048,
     "low": 1.038,
     "close": 1.043,
+    "percent": 0.1,
     "volume": 959200,
-    "amount": 1001107,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2021-12-31",
+    "timestamp": 1640880000000,
     "open": 1.043,
     "high": 1.048,
     "low": 1.043,
     "close": 1.046,
+    "percent": 0.29,
     "volume": 1107400,
-    "amount": 1158424,
-    "timestamp": "",
-    "percent": 0.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-04",
+    "timestamp": 1641225600000,
     "open": 1.045,
     "high": 1.052,
     "low": 1.041,
     "close": 1.051,
+    "percent": 0.48,
     "volume": 1244400,
-    "amount": 1302661,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-05",
+    "timestamp": 1641312000000,
     "open": 1.051,
     "high": 1.067,
     "low": 1.051,
     "close": 1.059,
+    "percent": 0.76,
     "volume": 1402900,
-    "amount": 1485602,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-06",
+    "timestamp": 1641398400000,
     "open": 1.059,
     "high": 1.059,
     "low": 1.046,
     "close": 1.048,
+    "percent": -1.04,
     "volume": 6772000,
-    "amount": 7117108,
-    "timestamp": "",
-    "percent": -1.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-07",
+    "timestamp": 1641484800000,
     "open": 1.048,
     "high": 1.064,
     "low": 1.048,
     "close": 1.059,
+    "percent": 1.05,
     "volume": 1887000,
-    "amount": 1999319,
-    "timestamp": "",
-    "percent": 1.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-10",
+    "timestamp": 1641744000000,
     "open": 1.06,
     "high": 1.071,
     "low": 1.057,
     "close": 1.066,
+    "percent": 0.66,
     "volume": 1812300,
-    "amount": 1929541,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-11",
+    "timestamp": 1641830400000,
     "open": 1.066,
     "high": 1.078,
     "low": 1.062,
     "close": 1.067,
+    "percent": 0.09,
     "volume": 4294500,
-    "amount": 4602617,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-12",
+    "timestamp": 1641916800000,
     "open": 1.068,
     "high": 1.073,
     "low": 1.056,
     "close": 1.067,
+    "percent": 0,
     "volume": 1577100,
-    "amount": 1674776,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-13",
+    "timestamp": 1642003200000,
     "open": 1.067,
     "high": 1.078,
     "low": 1.061,
     "close": 1.063,
+    "percent": -0.37,
     "volume": 1452300,
-    "amount": 1552078,
-    "timestamp": "",
-    "percent": -0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-14",
+    "timestamp": 1642089600000,
     "open": 1.062,
     "high": 1.062,
     "low": 1.037,
     "close": 1.041,
+    "percent": -2.07,
     "volume": 2773700,
-    "amount": 2897994,
-    "timestamp": "",
-    "percent": -2.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-17",
+    "timestamp": 1642348800000,
     "open": 1.035,
     "high": 1.045,
     "low": 1.034,
     "close": 1.039,
+    "percent": -0.19,
     "volume": 985300,
-    "amount": 1023029,
-    "timestamp": "",
-    "percent": -0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-18",
+    "timestamp": 1642435200000,
     "open": 1.043,
     "high": 1.055,
     "low": 1.037,
     "close": 1.052,
+    "percent": 1.25,
     "volume": 3941800,
-    "amount": 4117566,
-    "timestamp": "",
-    "percent": 1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-19",
+    "timestamp": 1642521600000,
     "open": 1.052,
     "high": 1.062,
     "low": 1.051,
     "close": 1.06,
+    "percent": 0.76,
     "volume": 2060600,
-    "amount": 2181342,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-20",
+    "timestamp": 1642608000000,
     "open": 1.063,
     "high": 1.082,
     "low": 1.057,
     "close": 1.078,
+    "percent": 1.7,
     "volume": 3719603,
-    "amount": 4003041,
-    "timestamp": "",
-    "percent": 1.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-21",
+    "timestamp": 1642694400000,
     "open": 1.079,
     "high": 1.079,
     "low": 1.068,
     "close": 1.071,
+    "percent": -0.65,
     "volume": 6860000,
-    "amount": 7347135,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-24",
+    "timestamp": 1642953600000,
     "open": 1.071,
     "high": 1.074,
     "low": 1.061,
     "close": 1.072,
+    "percent": 0.09,
     "volume": 6630600,
-    "amount": 7085839,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-25",
+    "timestamp": 1643040000000,
     "open": 1.07,
     "high": 1.07,
     "low": 1.046,
     "close": 1.048,
+    "percent": -2.24,
     "volume": 2193303,
-    "amount": 2311752,
-    "timestamp": "",
-    "percent": -2.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-26",
+    "timestamp": 1643126400000,
     "open": 1.048,
     "high": 1.068,
     "low": 1.039,
     "close": 1.053,
+    "percent": 0.48,
     "volume": 2983900,
-    "amount": 3122813,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-27",
+    "timestamp": 1643212800000,
     "open": 1.052,
     "high": 1.052,
     "low": 1.038,
     "close": 1.04,
+    "percent": -1.23,
     "volume": 2041800,
-    "amount": 2131085,
-    "timestamp": "",
-    "percent": -1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-01-28",
+    "timestamp": 1643299200000,
     "open": 1.04,
     "high": 1.047,
     "low": 1.029,
     "close": 1.031,
+    "percent": -0.87,
     "volume": 1789200,
-    "amount": 1855440,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-07",
+    "timestamp": 1644163200000,
     "open": 1.038,
     "high": 1.051,
     "low": 1.036,
     "close": 1.049,
+    "percent": 1.75,
     "volume": 1840501,
-    "amount": 1924546,
-    "timestamp": "",
-    "percent": 1.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-08",
+    "timestamp": 1644249600000,
     "open": 1.05,
     "high": 1.066,
     "low": 1.048,
     "close": 1.061,
+    "percent": 1.14,
     "volume": 2590300,
-    "amount": 2740488,
-    "timestamp": "",
-    "percent": 1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-09",
+    "timestamp": 1644336000000,
     "open": 1.056,
     "high": 1.074,
     "low": 1.056,
     "close": 1.063,
+    "percent": 0.19,
     "volume": 2334900,
-    "amount": 2492195,
-    "timestamp": "",
-    "percent": 0.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-10",
+    "timestamp": 1644422400000,
     "open": 1.064,
     "high": 1.072,
     "low": 1.056,
     "close": 1.071,
+    "percent": 0.75,
     "volume": 2153300,
-    "amount": 2299495,
-    "timestamp": "",
-    "percent": 0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-11",
+    "timestamp": 1644508800000,
     "open": 1.071,
     "high": 1.098,
     "low": 1.071,
     "close": 1.082,
+    "percent": 1.03,
     "volume": 5900502,
-    "amount": 6396063,
-    "timestamp": "",
-    "percent": 1.03
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-14",
+    "timestamp": 1644768000000,
     "open": 1.072,
     "high": 1.077,
     "low": 1.047,
     "close": 1.049,
+    "percent": -3.05,
     "volume": 3948501,
-    "amount": 4173431,
-    "timestamp": "",
-    "percent": -3.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-15",
+    "timestamp": 1644854400000,
     "open": 1.05,
     "high": 1.053,
     "low": 1.035,
     "close": 1.04,
+    "percent": -0.86,
     "volume": 3285800,
-    "amount": 3421051,
-    "timestamp": "",
-    "percent": -0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-16",
+    "timestamp": 1644940800000,
     "open": 1.044,
     "high": 1.052,
     "low": 1.044,
     "close": 1.049,
+    "percent": 0.87,
     "volume": 1361000,
-    "amount": 1426117,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-17",
+    "timestamp": 1645027200000,
     "open": 1.05,
     "high": 1.054,
     "low": 1.044,
     "close": 1.05,
+    "percent": 0.1,
     "volume": 1046900,
-    "amount": 1097674,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-18",
+    "timestamp": 1645113600000,
     "open": 1.044,
     "high": 1.056,
     "low": 1.044,
     "close": 1.055,
+    "percent": 0.48,
     "volume": 1299200,
-    "amount": 1367932,
-    "timestamp": "",
-    "percent": 0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-21",
+    "timestamp": 1645372800000,
     "open": 1.055,
     "high": 1.057,
     "low": 1.045,
     "close": 1.056,
+    "percent": 0.09,
     "volume": 1229500,
-    "amount": 1292510,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-22",
+    "timestamp": 1645459200000,
     "open": 1.049,
     "high": 1.052,
     "low": 1.04,
     "close": 1.042,
+    "percent": -1.33,
     "volume": 1496100,
-    "amount": 1562466,
-    "timestamp": "",
-    "percent": -1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-23",
+    "timestamp": 1645545600000,
     "open": 1.046,
     "high": 1.046,
     "low": 1.038,
     "close": 1.041,
+    "percent": -0.1,
     "volume": 3753100,
-    "amount": 3905669,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-24",
+    "timestamp": 1645632000000,
     "open": 1.042,
     "high": 1.042,
     "low": 1.018,
     "close": 1.021,
+    "percent": -1.92,
     "volume": 5807000,
-    "amount": 5956734,
-    "timestamp": "",
-    "percent": -1.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-25",
+    "timestamp": 1645718400000,
     "open": 1.023,
     "high": 1.035,
     "low": 1.015,
     "close": 1.017,
+    "percent": -0.39,
     "volume": 4974200,
-    "amount": 5076247,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-02-28",
+    "timestamp": 1645977600000,
     "open": 1.02,
     "high": 1.02,
     "low": 1.009,
     "close": 1.013,
+    "percent": -0.39,
     "volume": 2439000,
-    "amount": 2467213,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-01",
+    "timestamp": 1646064000000,
     "open": 1.026,
     "high": 1.026,
     "low": 1.013,
     "close": 1.024,
+    "percent": 1.09,
     "volume": 2847600,
-    "amount": 2905286,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-02",
+    "timestamp": 1646150400000,
     "open": 1.02,
     "high": 1.03,
     "low": 1.014,
     "close": 1.024,
+    "percent": 0,
     "volume": 10911600,
-    "amount": 11196441,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-03",
+    "timestamp": 1646236800000,
     "open": 1.024,
     "high": 1.03,
     "low": 1.021,
     "close": 1.026,
+    "percent": 0.2,
     "volume": 1609003,
-    "amount": 1651832,
-    "timestamp": "",
-    "percent": 0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-04",
+    "timestamp": 1646323200000,
     "open": 1.023,
     "high": 1.023,
     "low": 1.013,
     "close": 1.015,
+    "percent": -1.07,
     "volume": 1211700,
-    "amount": 1230018,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-07",
+    "timestamp": 1646582400000,
     "open": 1.015,
     "high": 1.015,
     "low": 0.993,
     "close": 0.999,
+    "percent": -1.58,
     "volume": 3954800,
-    "amount": 3961373,
-    "timestamp": "",
-    "percent": -1.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-08",
+    "timestamp": 1646668800000,
     "open": 0.995,
     "high": 0.998,
     "low": 0.97,
     "close": 0.977,
+    "percent": -2.2,
     "volume": 3428200,
-    "amount": 3373379,
-    "timestamp": "",
-    "percent": -2.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-09",
+    "timestamp": 1646755200000,
     "open": 0.975,
     "high": 0.985,
     "low": 0.938,
     "close": 0.946,
+    "percent": -3.17,
     "volume": 6260900,
-    "amount": 5983550,
-    "timestamp": "",
-    "percent": -3.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-10",
+    "timestamp": 1646841600000,
     "open": 0.962,
     "high": 0.968,
     "low": 0.953,
     "close": 0.954,
+    "percent": 0.85,
     "volume": 1881900,
-    "amount": 1807564,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-11",
+    "timestamp": 1646928000000,
     "open": 0.941,
     "high": 0.966,
     "low": 0.936,
     "close": 0.961,
+    "percent": 0.73,
     "volume": 3762200,
-    "amount": 3562460,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-14",
+    "timestamp": 1647187200000,
     "open": 0.957,
     "high": 0.962,
     "low": 0.943,
     "close": 0.944,
+    "percent": -1.77,
     "volume": 1729000,
-    "amount": 1644190,
-    "timestamp": "",
-    "percent": -1.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-15",
+    "timestamp": 1647273600000,
     "open": 0.935,
     "high": 0.935,
     "low": 0.897,
     "close": 0.898,
+    "percent": -4.87,
     "volume": 10311700,
-    "amount": 9472339,
-    "timestamp": "",
-    "percent": -4.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-16",
+    "timestamp": 1647360000000,
     "open": 0.907,
     "high": 0.94,
     "low": 0.888,
     "close": 0.931,
+    "percent": 3.67,
     "volume": 6177800,
-    "amount": 5621536,
-    "timestamp": "",
-    "percent": 3.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-17",
+    "timestamp": 1647446400000,
     "open": 0.93,
     "high": 0.954,
     "low": 0.93,
     "close": 0.944,
+    "percent": 1.4,
     "volume": 2461000,
-    "amount": 2322449,
-    "timestamp": "",
-    "percent": 1.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-18",
+    "timestamp": 1647532800000,
     "open": 0.946,
     "high": 0.968,
     "low": 0.94,
     "close": 0.968,
+    "percent": 2.54,
     "volume": 2595300,
-    "amount": 2489506,
-    "timestamp": "",
-    "percent": 2.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-21",
+    "timestamp": 1647792000000,
     "open": 0.973,
     "high": 0.973,
     "low": 0.951,
     "close": 0.958,
+    "percent": -1.03,
     "volume": 1183600,
-    "amount": 1132188,
-    "timestamp": "",
-    "percent": -1.03
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-22",
+    "timestamp": 1647878400000,
     "open": 0.958,
     "high": 0.974,
     "low": 0.95,
     "close": 0.967,
+    "percent": 0.94,
     "volume": 2216800,
-    "amount": 2138640,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-23",
+    "timestamp": 1647964800000,
     "open": 0.967,
     "high": 0.97,
     "low": 0.96,
     "close": 0.966,
+    "percent": -0.1,
     "volume": 1330100,
-    "amount": 1285174,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-24",
+    "timestamp": 1648051200000,
     "open": 0.963,
     "high": 0.969,
     "low": 0.961,
     "close": 0.965,
+    "percent": -0.1,
     "volume": 970000,
-    "amount": 935091,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-25",
+    "timestamp": 1648137600000,
     "open": 0.967,
     "high": 0.972,
     "low": 0.956,
     "close": 0.957,
+    "percent": -0.83,
     "volume": 793000,
-    "amount": 763049,
-    "timestamp": "",
-    "percent": -0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-28",
+    "timestamp": 1648396800000,
     "open": 0.957,
     "high": 0.969,
     "low": 0.948,
     "close": 0.962,
+    "percent": 0.52,
     "volume": 1561900,
-    "amount": 1499952,
-    "timestamp": "",
-    "percent": 0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-29",
+    "timestamp": 1648483200000,
     "open": 0.967,
     "high": 0.968,
     "low": 0.959,
     "close": 0.961,
+    "percent": -0.1,
     "volume": 20301100,
-    "amount": 19584074,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-30",
+    "timestamp": 1648569600000,
     "open": 0.967,
     "high": 0.986,
     "low": 0.966,
     "close": 0.983,
+    "percent": 2.29,
     "volume": 8827900,
-    "amount": 8673257,
-    "timestamp": "",
-    "percent": 2.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-03-31",
+    "timestamp": 1648656000000,
     "open": 0.982,
     "high": 1,
     "low": 0.979,
     "close": 0.991,
+    "percent": 0.81,
     "volume": 12712300,
-    "amount": 12626553,
-    "timestamp": "",
-    "percent": 0.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-01",
+    "timestamp": 1648742400000,
     "open": 0.985,
     "high": 1.008,
     "low": 0.984,
     "close": 1.007,
+    "percent": 1.61,
     "volume": 1912300,
-    "amount": 1915447,
-    "timestamp": "",
-    "percent": 1.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-06",
+    "timestamp": 1649174400000,
     "open": 1.008,
     "high": 1.023,
     "low": 1.001,
     "close": 1.02,
+    "percent": 1.29,
     "volume": 4245400,
-    "amount": 4310162,
-    "timestamp": "",
-    "percent": 1.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-07",
+    "timestamp": 1649260800000,
     "open": 1.018,
     "high": 1.023,
     "low": 1.001,
     "close": 1.001,
+    "percent": -1.86,
     "volume": 2139900,
-    "amount": 2161553,
-    "timestamp": "",
-    "percent": -1.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-08",
+    "timestamp": 1649347200000,
     "open": 1,
     "high": 1.018,
     "low": 0.995,
     "close": 1.016,
+    "percent": 1.5,
     "volume": 62534100,
-    "amount": 62846000,
-    "timestamp": "",
-    "percent": 1.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-11",
+    "timestamp": 1649606400000,
     "open": 1.009,
     "high": 1.022,
     "low": 0.988,
     "close": 0.99,
+    "percent": -2.56,
     "volume": 24592200,
-    "amount": 24570793,
-    "timestamp": "",
-    "percent": -2.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-12",
+    "timestamp": 1649692800000,
     "open": 0.99,
     "high": 1.01,
     "low": 0.983,
     "close": 0.999,
+    "percent": 0.91,
     "volume": 6237400,
-    "amount": 6202377,
-    "timestamp": "",
-    "percent": 0.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-13",
+    "timestamp": 1649779200000,
     "open": 0.999,
     "high": 1.008,
     "low": 0.991,
     "close": 0.997,
+    "percent": -0.2,
     "volume": 7254200,
-    "amount": 7243732,
-    "timestamp": "",
-    "percent": -0.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-14",
+    "timestamp": 1649865600000,
     "open": 1.003,
     "high": 1.01,
     "low": 0.998,
     "close": 1.007,
+    "percent": 1,
     "volume": 114890900,
-    "amount": 115368709,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-15",
+    "timestamp": 1649952000000,
     "open": 1.009,
     "high": 1.016,
     "low": 0.999,
     "close": 1.01,
+    "percent": 0.3,
     "volume": 35295100,
-    "amount": 35667292,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-18",
+    "timestamp": 1650211200000,
     "open": 1.01,
     "high": 1.01,
     "low": 0.979,
     "close": 0.981,
+    "percent": -2.87,
     "volume": 7396100,
-    "amount": 7265416,
-    "timestamp": "",
-    "percent": -2.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-19",
+    "timestamp": 1650297600000,
     "open": 0.981,
     "high": 0.984,
     "low": 0.97,
     "close": 0.973,
+    "percent": -0.82,
     "volume": 7415900,
-    "amount": 7238710,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-20",
+    "timestamp": 1650384000000,
     "open": 0.975,
     "high": 0.983,
     "low": 0.958,
     "close": 0.96,
+    "percent": -1.34,
     "volume": 9736200,
-    "amount": 9413938,
-    "timestamp": "",
-    "percent": -1.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-21",
+    "timestamp": 1650470400000,
     "open": 0.96,
     "high": 0.967,
     "low": 0.952,
     "close": 0.955,
+    "percent": -0.52,
     "volume": 16046700,
-    "amount": 15368156,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-22",
+    "timestamp": 1650556800000,
     "open": 0.953,
     "high": 0.969,
     "low": 0.948,
     "close": 0.965,
+    "percent": 1.05,
     "volume": 181716800,
-    "amount": 174247706,
-    "timestamp": "",
-    "percent": 1.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-25",
+    "timestamp": 1650816000000,
     "open": 0.958,
     "high": 0.958,
     "low": 0.921,
     "close": 0.928,
+    "percent": -3.83,
     "volume": 18552800,
-    "amount": 17527778,
-    "timestamp": "",
-    "percent": -3.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-26",
+    "timestamp": 1650902400000,
     "open": 0.927,
     "high": 0.928,
     "low": 0.904,
     "close": 0.906,
+    "percent": -2.37,
     "volume": 27577700,
-    "amount": 25343982,
-    "timestamp": "",
-    "percent": -2.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-27",
+    "timestamp": 1650988800000,
     "open": 0.908,
     "high": 0.915,
     "low": 0.89,
     "close": 0.912,
+    "percent": 0.66,
     "volume": 24691600,
-    "amount": 22384727,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-28",
+    "timestamp": 1651075200000,
     "open": 0.911,
     "high": 0.919,
     "low": 0.904,
     "close": 0.915,
+    "percent": 0.33,
     "volume": 66047900,
-    "amount": 60168560,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-04-29",
+    "timestamp": 1651161600000,
     "open": 0.913,
     "high": 0.941,
     "low": 0.907,
     "close": 0.935,
+    "percent": 2.19,
     "volume": 3479700,
-    "amount": 3204429,
-    "timestamp": "",
-    "percent": 2.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-05",
+    "timestamp": 1651680000000,
     "open": 0.938,
     "high": 0.938,
     "low": 0.92,
     "close": 0.927,
+    "percent": -0.86,
     "volume": 11655500,
-    "amount": 10768542,
-    "timestamp": "",
-    "percent": -0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-06",
+    "timestamp": 1651766400000,
     "open": 0.92,
     "high": 0.922,
     "low": 0.901,
     "close": 0.903,
+    "percent": -2.59,
     "volume": 10826800,
-    "amount": 9832821,
-    "timestamp": "",
-    "percent": -2.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-09",
+    "timestamp": 1652025600000,
     "open": 0.902,
     "high": 0.908,
     "low": 0.892,
     "close": 0.896,
+    "percent": -0.78,
     "volume": 5427800,
-    "amount": 4867527,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-10",
+    "timestamp": 1652112000000,
     "open": 0.896,
     "high": 0.911,
     "low": 0.885,
     "close": 0.907,
+    "percent": 1.23,
     "volume": 7396100,
-    "amount": 6651914,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-11",
+    "timestamp": 1652198400000,
     "open": 0.902,
     "high": 0.916,
     "low": 0.902,
     "close": 0.908,
+    "percent": 0.11,
     "volume": 3779500,
-    "amount": 3437987,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-12",
+    "timestamp": 1652284800000,
     "open": 0.903,
     "high": 0.907,
     "low": 0.897,
     "close": 0.9,
+    "percent": -0.88,
     "volume": 8105200,
-    "amount": 7304511,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-13",
+    "timestamp": 1652371200000,
     "open": 0.904,
     "high": 0.912,
     "low": 0.904,
     "close": 0.909,
+    "percent": 1,
     "volume": 4920300,
-    "amount": 4471684,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-16",
+    "timestamp": 1652630400000,
     "open": 0.918,
     "high": 0.918,
     "low": 0.901,
     "close": 0.906,
+    "percent": -0.33,
     "volume": 6075100,
-    "amount": 5501095,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-17",
+    "timestamp": 1652716800000,
     "open": 0.906,
     "high": 0.916,
     "low": 0.903,
     "close": 0.913,
+    "percent": 0.77,
     "volume": 10707000,
-    "amount": 9722885,
-    "timestamp": "",
-    "percent": 0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-18",
+    "timestamp": 1652803200000,
     "open": 0.916,
     "high": 0.916,
     "low": 0.903,
     "close": 0.906,
+    "percent": -0.77,
     "volume": 24324000,
-    "amount": 22047260,
-    "timestamp": "",
-    "percent": -0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-19",
+    "timestamp": 1652889600000,
     "open": 0.901,
     "high": 0.905,
     "low": 0.896,
     "close": 0.904,
+    "percent": -0.22,
     "volume": 22942300,
-    "amount": 20678301,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-20",
+    "timestamp": 1652976000000,
     "open": 0.906,
     "high": 0.919,
     "low": 0.906,
     "close": 0.918,
+    "percent": 1.55,
     "volume": 2455200,
-    "amount": 2243183,
-    "timestamp": "",
-    "percent": 1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-23",
+    "timestamp": 1653235200000,
     "open": 0.918,
     "high": 0.918,
     "low": 0.91,
     "close": 0.913,
+    "percent": -0.54,
     "volume": 1229300,
-    "amount": 1122316,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-24",
+    "timestamp": 1653321600000,
     "open": 0.913,
     "high": 0.917,
     "low": 0.9,
     "close": 0.901,
+    "percent": -1.31,
     "volume": 3070100,
-    "amount": 2786923,
-    "timestamp": "",
-    "percent": -1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-25",
+    "timestamp": 1653408000000,
     "open": 0.901,
     "high": 0.903,
     "low": 0.897,
     "close": 0.901,
+    "percent": 0,
     "volume": 1660100,
-    "amount": 1493401,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-26",
+    "timestamp": 1653494400000,
     "open": 0.901,
     "high": 0.911,
     "low": 0.899,
     "close": 0.905,
+    "percent": 0.44,
     "volume": 5231200,
-    "amount": 4723384,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-27",
+    "timestamp": 1653580800000,
     "open": 0.91,
     "high": 0.912,
     "low": 0.901,
     "close": 0.907,
+    "percent": 0.22,
     "volume": 1570400,
-    "amount": 1426673,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-30",
+    "timestamp": 1653840000000,
     "open": 0.911,
     "high": 0.913,
     "low": 0.903,
     "close": 0.906,
+    "percent": -0.11,
     "volume": 6154600,
-    "amount": 5589181,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-05-31",
+    "timestamp": 1653926400000,
     "open": 0.905,
     "high": 0.916,
     "low": 0.903,
     "close": 0.913,
+    "percent": 0.77,
     "volume": 4682700,
-    "amount": 4268054,
-    "timestamp": "",
-    "percent": 0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-01",
+    "timestamp": 1654012800000,
     "open": 0.917,
     "high": 0.917,
     "low": 0.906,
     "close": 0.907,
+    "percent": -0.66,
     "volume": 7635100,
-    "amount": 6929394,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-02",
+    "timestamp": 1654099200000,
     "open": 0.907,
     "high": 0.909,
     "low": 0.902,
     "close": 0.905,
+    "percent": -0.22,
     "volume": 2626700,
-    "amount": 2376502,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-06",
+    "timestamp": 1654444800000,
     "open": 0.905,
     "high": 0.909,
     "low": 0.894,
     "close": 0.908,
+    "percent": 0.33,
     "volume": 29305500,
-    "amount": 26390287,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-07",
+    "timestamp": 1654531200000,
     "open": 0.909,
     "high": 0.919,
     "low": 0.901,
     "close": 0.918,
+    "percent": 1.1,
     "volume": 3998500,
-    "amount": 3660478,
-    "timestamp": "",
-    "percent": 1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-08",
+    "timestamp": 1654617600000,
     "open": 0.919,
     "high": 0.924,
     "low": 0.912,
     "close": 0.924,
+    "percent": 0.65,
     "volume": 3891300,
-    "amount": 3575553,
-    "timestamp": "",
-    "percent": 0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-09",
+    "timestamp": 1654704000000,
     "open": 0.924,
     "high": 0.936,
     "low": 0.922,
     "close": 0.928,
+    "percent": 0.43,
     "volume": 5134300,
-    "amount": 4764236,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-10",
+    "timestamp": 1654790400000,
     "open": 0.928,
     "high": 0.941,
     "low": 0.922,
     "close": 0.938,
+    "percent": 1.08,
     "volume": 3945500,
-    "amount": 3688059,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-13",
+    "timestamp": 1655049600000,
     "open": 0.936,
     "high": 0.936,
     "low": 0.914,
     "close": 0.922,
+    "percent": -1.71,
     "volume": 3729400,
-    "amount": 3438684,
-    "timestamp": "",
-    "percent": -1.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-14",
+    "timestamp": 1655136000000,
     "open": 0.912,
     "high": 0.943,
     "low": 0.911,
     "close": 0.94,
+    "percent": 1.95,
     "volume": 17232700,
-    "amount": 15808317,
-    "timestamp": "",
-    "percent": 1.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-15",
+    "timestamp": 1655222400000,
     "open": 0.94,
     "high": 0.993,
     "low": 0.94,
     "close": 0.973,
+    "percent": 3.51,
     "volume": 15896118,
-    "amount": 15355604,
-    "timestamp": "",
-    "percent": 3.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-16",
+    "timestamp": 1655308800000,
     "open": 0.965,
     "high": 0.979,
     "low": 0.947,
     "close": 0.95,
+    "percent": -2.36,
     "volume": 2962200,
-    "amount": 2846187,
-    "timestamp": "",
-    "percent": -2.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-17",
+    "timestamp": 1655395200000,
     "open": 0.95,
     "high": 0.956,
     "low": 0.938,
     "close": 0.952,
+    "percent": 0.21,
     "volume": 2188100,
-    "amount": 2067789,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-20",
+    "timestamp": 1655654400000,
     "open": 0.943,
     "high": 0.952,
     "low": 0.943,
     "close": 0.95,
+    "percent": -0.21,
     "volume": 1188400,
-    "amount": 1126315,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-21",
+    "timestamp": 1655740800000,
     "open": 0.95,
     "high": 0.964,
     "low": 0.948,
     "close": 0.955,
+    "percent": 0.53,
     "volume": 15611900,
-    "amount": 14987770,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-22",
+    "timestamp": 1655827200000,
     "open": 0.962,
     "high": 0.962,
     "low": 0.942,
     "close": 0.943,
+    "percent": -1.26,
     "volume": 2809100,
-    "amount": 2667832,
-    "timestamp": "",
-    "percent": -1.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-23",
+    "timestamp": 1655913600000,
     "open": 0.943,
     "high": 0.96,
     "low": 0.942,
     "close": 0.959,
+    "percent": 1.7,
     "volume": 1919906,
-    "amount": 1825594,
-    "timestamp": "",
-    "percent": 1.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-24",
+    "timestamp": 1656000000000,
     "open": 0.958,
     "high": 0.964,
     "low": 0.95,
     "close": 0.958,
+    "percent": -0.1,
     "volume": 13019206,
-    "amount": 12409519,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-27",
+    "timestamp": 1656259200000,
     "open": 0.958,
     "high": 0.966,
     "low": 0.956,
     "close": 0.962,
+    "percent": 0.42,
     "volume": 19358000,
-    "amount": 18647930,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-28",
+    "timestamp": 1656345600000,
     "open": 0.962,
     "high": 0.969,
     "low": 0.955,
     "close": 0.967,
+    "percent": 0.52,
     "volume": 18100506,
-    "amount": 17341209,
-    "timestamp": "",
-    "percent": 0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-29",
+    "timestamp": 1656432000000,
     "open": 0.966,
     "high": 0.976,
     "low": 0.965,
     "close": 0.965,
+    "percent": -0.21,
     "volume": 9800500,
-    "amount": 9524405,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-06-30",
+    "timestamp": 1656518400000,
     "open": 0.966,
     "high": 0.979,
     "low": 0.966,
     "close": 0.975,
+    "percent": 1.04,
     "volume": 5619600,
-    "amount": 5484471,
-    "timestamp": "",
-    "percent": 1.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-01",
+    "timestamp": 1656604800000,
     "open": 0.976,
     "high": 0.976,
     "low": 0.967,
     "close": 0.969,
+    "percent": -0.62,
     "volume": 1147900,
-    "amount": 1115016,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-04",
+    "timestamp": 1656864000000,
     "open": 0.968,
     "high": 0.97,
     "low": 0.958,
     "close": 0.969,
+    "percent": 0,
     "volume": 3157900,
-    "amount": 3045565,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-05",
+    "timestamp": 1656950400000,
     "open": 0.969,
     "high": 0.974,
     "low": 0.96,
     "close": 0.964,
+    "percent": -0.52,
     "volume": 4333800,
-    "amount": 4171172,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-06",
+    "timestamp": 1657036800000,
     "open": 0.965,
     "high": 0.965,
     "low": 0.946,
     "close": 0.949,
+    "percent": -1.56,
     "volume": 5225100,
-    "amount": 4966354,
-    "timestamp": "",
-    "percent": -1.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-07",
+    "timestamp": 1657123200000,
     "open": 0.948,
     "high": 0.955,
     "low": 0.942,
     "close": 0.945,
+    "percent": -0.42,
     "volume": 9244300,
-    "amount": 8791305,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-08",
+    "timestamp": 1657209600000,
     "open": 0.948,
     "high": 0.953,
     "low": 0.944,
     "close": 0.953,
+    "percent": 0.85,
     "volume": 2805600,
-    "amount": 2660402,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-11",
+    "timestamp": 1657468800000,
     "open": 0.95,
     "high": 0.952,
     "low": 0.936,
     "close": 0.94,
+    "percent": -1.36,
     "volume": 1804100,
-    "amount": 1697703,
-    "timestamp": "",
-    "percent": -1.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-12",
+    "timestamp": 1657555200000,
     "open": 0.938,
     "high": 0.948,
     "low": 0.938,
     "close": 0.943,
+    "percent": 0.32,
     "volume": 4697200,
-    "amount": 4437808,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-13",
+    "timestamp": 1657641600000,
     "open": 0.943,
     "high": 0.943,
     "low": 0.931,
     "close": 0.934,
+    "percent": -0.95,
     "volume": 5122300,
-    "amount": 4805011,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-14",
+    "timestamp": 1657728000000,
     "open": 0.932,
     "high": 0.934,
     "low": 0.918,
     "close": 0.921,
+    "percent": -1.39,
     "volume": 6317600,
-    "amount": 5813567,
-    "timestamp": "",
-    "percent": -1.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-15",
+    "timestamp": 1657814400000,
     "open": 0.921,
     "high": 0.921,
     "low": 0.9,
     "close": 0.908,
+    "percent": -1.41,
     "volume": 5941100,
-    "amount": 5397186,
-    "timestamp": "",
-    "percent": -1.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-18",
+    "timestamp": 1658073600000,
     "open": 0.906,
     "high": 0.916,
     "low": 0.904,
     "close": 0.916,
+    "percent": 0.88,
     "volume": 2707800,
-    "amount": 2471202,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-19",
+    "timestamp": 1658160000000,
     "open": 0.912,
     "high": 0.92,
     "low": 0.91,
     "close": 0.92,
+    "percent": 0.44,
     "volume": 1680700,
-    "amount": 1538177,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-20",
+    "timestamp": 1658246400000,
     "open": 0.922,
     "high": 0.926,
     "low": 0.92,
     "close": 0.922,
+    "percent": 0.22,
     "volume": 4631000,
-    "amount": 4274658,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-21",
+    "timestamp": 1658332800000,
     "open": 0.921,
     "high": 0.921,
     "low": 0.908,
     "close": 0.915,
+    "percent": -0.76,
     "volume": 1990200,
-    "amount": 1820085,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-22",
+    "timestamp": 1658419200000,
     "open": 0.914,
     "high": 0.918,
     "low": 0.906,
     "close": 0.914,
+    "percent": -0.11,
     "volume": 1304200,
-    "amount": 1189185,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-25",
+    "timestamp": 1658678400000,
     "open": 0.914,
     "high": 0.914,
     "low": 0.907,
     "close": 0.911,
+    "percent": -0.33,
     "volume": 10033000,
-    "amount": 9158574,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-26",
+    "timestamp": 1658764800000,
     "open": 0.914,
     "high": 0.923,
     "low": 0.912,
     "close": 0.922,
+    "percent": 1.21,
     "volume": 3729700,
-    "amount": 3428935,
-    "timestamp": "",
-    "percent": 1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-27",
+    "timestamp": 1658851200000,
     "open": 0.922,
     "high": 0.922,
     "low": 0.915,
     "close": 0.92,
+    "percent": -0.22,
     "volume": 790600,
-    "amount": 724946,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-28",
+    "timestamp": 1658937600000,
     "open": 0.924,
     "high": 0.945,
     "low": 0.916,
     "close": 0.917,
+    "percent": -0.33,
     "volume": 93949700,
-    "amount": 86676123,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-07-29",
+    "timestamp": 1659024000000,
     "open": 0.917,
     "high": 0.924,
     "low": 0.906,
     "close": 0.91,
+    "percent": -0.76,
     "volume": 78137400,
-    "amount": 71597009,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-01",
+    "timestamp": 1659283200000,
     "open": 0.91,
     "high": 0.91,
     "low": 0.898,
     "close": 0.902,
+    "percent": -0.88,
     "volume": 12078300,
-    "amount": 10892178,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-02",
+    "timestamp": 1659369600000,
     "open": 0.886,
     "high": 0.899,
     "low": 0.873,
     "close": 0.882,
+    "percent": -2.22,
     "volume": 9059701,
-    "amount": 7982180,
-    "timestamp": "",
-    "percent": -2.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-03",
+    "timestamp": 1659456000000,
     "open": 0.882,
     "high": 0.886,
     "low": 0.868,
     "close": 0.869,
+    "percent": -1.47,
     "volume": 31191799,
-    "amount": 27328409,
-    "timestamp": "",
-    "percent": -1.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-04",
+    "timestamp": 1659542400000,
     "open": 0.869,
     "high": 0.878,
     "low": 0.869,
     "close": 0.876,
+    "percent": 0.81,
     "volume": 61332100,
-    "amount": 53609345,
-    "timestamp": "",
-    "percent": 0.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-05",
+    "timestamp": 1659628800000,
     "open": 0.881,
     "high": 0.89,
     "low": 0.876,
     "close": 0.89,
+    "percent": 1.6,
     "volume": 3155500,
-    "amount": 2792767,
-    "timestamp": "",
-    "percent": 1.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-08",
+    "timestamp": 1659888000000,
     "open": 0.889,
     "high": 0.899,
     "low": 0.888,
     "close": 0.891,
+    "percent": 0.11,
     "volume": 7728400,
-    "amount": 6887277,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-09",
+    "timestamp": 1659974400000,
     "open": 0.882,
     "high": 0.891,
     "low": 0.882,
     "close": 0.888,
+    "percent": -0.34,
     "volume": 3206400,
-    "amount": 2846918,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-10",
+    "timestamp": 1660060800000,
     "open": 0.888,
     "high": 0.89,
     "low": 0.879,
     "close": 0.881,
+    "percent": -0.79,
     "volume": 5732200,
-    "amount": 5057842,
-    "timestamp": "",
-    "percent": -0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-11",
+    "timestamp": 1660147200000,
     "open": 0.885,
     "high": 0.907,
     "low": 0.885,
     "close": 0.907,
+    "percent": 2.95,
     "volume": 11036800,
-    "amount": 9910507,
-    "timestamp": "",
-    "percent": 2.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-12",
+    "timestamp": 1660233600000,
     "open": 0.903,
     "high": 0.912,
     "low": 0.901,
     "close": 0.91,
+    "percent": 0.33,
     "volume": 1657700,
-    "amount": 1507184,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-15",
+    "timestamp": 1660492800000,
     "open": 0.901,
     "high": 0.909,
     "low": 0.898,
     "close": 0.9,
+    "percent": -1.1,
     "volume": 2639200,
-    "amount": 2380495,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-16",
+    "timestamp": 1660579200000,
     "open": 0.906,
     "high": 0.906,
     "low": 0.897,
     "close": 0.9,
+    "percent": 0,
     "volume": 4627100,
-    "amount": 4160606,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-17",
+    "timestamp": 1660665600000,
     "open": 0.9,
     "high": 0.915,
     "low": 0.897,
     "close": 0.914,
+    "percent": 1.56,
     "volume": 9102300,
-    "amount": 8273287,
-    "timestamp": "",
-    "percent": 1.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-18",
+    "timestamp": 1660752000000,
     "open": 0.908,
     "high": 0.911,
     "low": 0.899,
     "close": 0.899,
+    "percent": -1.64,
     "volume": 5196600,
-    "amount": 4692439,
-    "timestamp": "",
-    "percent": -1.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-19",
+    "timestamp": 1660838400000,
     "open": 0.899,
     "high": 0.913,
     "low": 0.899,
     "close": 0.905,
+    "percent": 0.67,
     "volume": 3422100,
-    "amount": 3113965,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-22",
+    "timestamp": 1661097600000,
     "open": 0.9,
     "high": 0.91,
     "low": 0.9,
     "close": 0.904,
+    "percent": -0.11,
     "volume": 842100,
-    "amount": 762435,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-23",
+    "timestamp": 1661184000000,
     "open": 0.904,
     "high": 0.907,
     "low": 0.895,
     "close": 0.9,
+    "percent": -0.44,
     "volume": 1343800,
-    "amount": 1208528,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-24",
+    "timestamp": 1661270400000,
     "open": 0.905,
     "high": 0.91,
     "low": 0.896,
     "close": 0.897,
+    "percent": -0.33,
     "volume": 3182400,
-    "amount": 2873250,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-25",
+    "timestamp": 1661356800000,
     "open": 0.903,
     "high": 0.911,
     "low": 0.897,
     "close": 0.91,
+    "percent": 1.45,
     "volume": 4180700,
-    "amount": 3779410,
-    "timestamp": "",
-    "percent": 1.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-26",
+    "timestamp": 1661443200000,
     "open": 0.909,
     "high": 0.914,
     "low": 0.904,
     "close": 0.909,
+    "percent": -0.11,
     "volume": 2482300,
-    "amount": 2258559,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-29",
+    "timestamp": 1661702400000,
     "open": 0.901,
     "high": 0.905,
     "low": 0.896,
     "close": 0.905,
+    "percent": -0.44,
     "volume": 1776300,
-    "amount": 1600305,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-30",
+    "timestamp": 1661788800000,
     "open": 0.905,
     "high": 0.909,
     "low": 0.899,
     "close": 0.908,
+    "percent": 0.33,
     "volume": 633001,
-    "amount": 572448,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-08-31",
+    "timestamp": 1661875200000,
     "open": 0.908,
     "high": 0.92,
     "low": 0.908,
     "close": 0.915,
+    "percent": 0.77,
     "volume": 1486500,
-    "amount": 1360512,
-    "timestamp": "",
-    "percent": 0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-01",
+    "timestamp": 1661961600000,
     "open": 0.919,
     "high": 0.921,
     "low": 0.912,
     "close": 0.913,
+    "percent": -0.22,
     "volume": 1383000,
-    "amount": 1267182,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-02",
+    "timestamp": 1662048000000,
     "open": 0.91,
     "high": 0.92,
     "low": 0.907,
     "close": 0.911,
+    "percent": -0.22,
     "volume": 1764300,
-    "amount": 1604373,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-05",
+    "timestamp": 1662307200000,
     "open": 0.911,
     "high": 0.914,
     "low": 0.901,
     "close": 0.914,
+    "percent": 0.33,
     "volume": 11722900,
-    "amount": 10652857,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-06",
+    "timestamp": 1662393600000,
     "open": 0.915,
     "high": 0.921,
     "low": 0.913,
     "close": 0.917,
+    "percent": 0.33,
     "volume": 2282800,
-    "amount": 2095171,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-07",
+    "timestamp": 1662480000000,
     "open": 0.913,
     "high": 0.915,
     "low": 0.911,
     "close": 0.913,
+    "percent": -0.44,
     "volume": 758400,
-    "amount": 692822,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-08",
+    "timestamp": 1662566400000,
     "open": 0.916,
     "high": 0.918,
     "low": 0.913,
     "close": 0.914,
+    "percent": 0.11,
     "volume": 2540700,
-    "amount": 2325807,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-09",
+    "timestamp": 1662652800000,
     "open": 0.914,
     "high": 0.934,
     "low": 0.914,
     "close": 0.93,
+    "percent": 1.75,
     "volume": 13196080,
-    "amount": 12283715,
-    "timestamp": "",
-    "percent": 1.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-13",
+    "timestamp": 1662998400000,
     "open": 0.932,
     "high": 0.942,
     "low": 0.929,
     "close": 0.935,
+    "percent": 0.54,
     "volume": 16587800,
-    "amount": 15534226,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-14",
+    "timestamp": 1663084800000,
     "open": 0.934,
     "high": 0.934,
     "low": 0.913,
     "close": 0.926,
+    "percent": -0.96,
     "volume": 3226704,
-    "amount": 2993767,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-15",
+    "timestamp": 1663171200000,
     "open": 0.933,
     "high": 0.941,
     "low": 0.927,
     "close": 0.933,
+    "percent": 0.76,
     "volume": 5327300,
-    "amount": 4968311,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-16",
+    "timestamp": 1663257600000,
     "open": 0.933,
     "high": 0.933,
     "low": 0.901,
     "close": 0.901,
+    "percent": -3.43,
     "volume": 3741000,
-    "amount": 3403766,
-    "timestamp": "",
-    "percent": -3.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-19",
+    "timestamp": 1663516800000,
     "open": 0.9,
     "high": 0.918,
     "low": 0.895,
     "close": 0.899,
+    "percent": -0.22,
     "volume": 2615400,
-    "amount": 2351487,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-20",
+    "timestamp": 1663603200000,
     "open": 0.904,
     "high": 0.905,
     "low": 0.891,
     "close": 0.9,
+    "percent": 0.11,
     "volume": 4632800,
-    "amount": 4156581,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-21",
+    "timestamp": 1663689600000,
     "open": 0.891,
     "high": 0.903,
     "low": 0.885,
     "close": 0.898,
+    "percent": -0.22,
     "volume": 1759200,
-    "amount": 1573443,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-22",
+    "timestamp": 1663776000000,
     "open": 0.89,
     "high": 0.892,
     "low": 0.885,
     "close": 0.888,
+    "percent": -1.11,
     "volume": 2856700,
-    "amount": 2535883,
-    "timestamp": "",
-    "percent": -1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-23",
+    "timestamp": 1663862400000,
     "open": 0.885,
     "high": 0.898,
     "low": 0.885,
     "close": 0.892,
+    "percent": 0.45,
     "volume": 1389200,
-    "amount": 1238087,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-26",
+    "timestamp": 1664121600000,
     "open": 0.892,
     "high": 0.893,
     "low": 0.879,
     "close": 0.88,
+    "percent": -1.35,
     "volume": 4918200,
-    "amount": 4362720,
-    "timestamp": "",
-    "percent": -1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-27",
+    "timestamp": 1664208000000,
     "open": 0.88,
     "high": 0.886,
     "low": 0.876,
     "close": 0.885,
+    "percent": 0.57,
     "volume": 2973400,
-    "amount": 2618545,
-    "timestamp": "",
-    "percent": 0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-28",
+    "timestamp": 1664294400000,
     "open": 0.884,
     "high": 0.887,
     "low": 0.877,
     "close": 0.877,
+    "percent": -0.9,
     "volume": 5670000,
-    "amount": 5000896,
-    "timestamp": "",
-    "percent": -0.9
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-29",
+    "timestamp": 1664380800000,
     "open": 0.887,
     "high": 0.887,
     "low": 0.863,
     "close": 0.867,
+    "percent": -1.14,
     "volume": 4183500,
-    "amount": 3634149,
-    "timestamp": "",
-    "percent": -1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-09-30",
+    "timestamp": 1664467200000,
     "open": 0.868,
     "high": 0.877,
     "low": 0.867,
     "close": 0.874,
+    "percent": 0.81,
     "volume": 6779800,
-    "amount": 5921630,
-    "timestamp": "",
-    "percent": 0.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-10",
+    "timestamp": 1665331200000,
     "open": 0.871,
     "high": 0.871,
     "low": 0.861,
     "close": 0.861,
+    "percent": -1.49,
     "volume": 4028000,
-    "amount": 3490598,
-    "timestamp": "",
-    "percent": -1.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-11",
+    "timestamp": 1665417600000,
     "open": 0.861,
     "high": 0.866,
     "low": 0.856,
     "close": 0.858,
+    "percent": -0.35,
     "volume": 5425000,
-    "amount": 4665334,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-12",
+    "timestamp": 1665504000000,
     "open": 0.858,
     "high": 0.868,
     "low": 0.853,
     "close": 0.868,
+    "percent": 1.17,
     "volume": 4833000,
-    "amount": 4157831,
-    "timestamp": "",
-    "percent": 1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-13",
+    "timestamp": 1665590400000,
     "open": 0.868,
     "high": 0.868,
     "low": 0.855,
     "close": 0.859,
+    "percent": -1.04,
     "volume": 2318600,
-    "amount": 1991848,
-    "timestamp": "",
-    "percent": -1.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-14",
+    "timestamp": 1665676800000,
     "open": 0.86,
     "high": 0.872,
     "low": 0.86,
     "close": 0.87,
+    "percent": 1.28,
     "volume": 3796500,
-    "amount": 3305032,
-    "timestamp": "",
-    "percent": 1.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-17",
+    "timestamp": 1665936000000,
     "open": 0.87,
     "high": 0.872,
     "low": 0.861,
     "close": 0.871,
+    "percent": 0.11,
     "volume": 926000,
-    "amount": 802439,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-18",
+    "timestamp": 1666022400000,
     "open": 0.874,
     "high": 0.877,
     "low": 0.864,
     "close": 0.866,
+    "percent": -0.57,
     "volume": 885000,
-    "amount": 767374,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-19",
+    "timestamp": 1666108800000,
     "open": 0.866,
     "high": 0.869,
     "low": 0.857,
     "close": 0.858,
+    "percent": -0.92,
     "volume": 1913800,
-    "amount": 1647311,
-    "timestamp": "",
-    "percent": -0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-20",
+    "timestamp": 1666195200000,
     "open": 0.858,
     "high": 0.867,
     "low": 0.852,
     "close": 0.853,
+    "percent": -0.58,
     "volume": 2278400,
-    "amount": 1946565,
-    "timestamp": "",
-    "percent": -0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-21",
+    "timestamp": 1666281600000,
     "open": 0.86,
     "high": 0.868,
     "low": 0.852,
     "close": 0.854,
+    "percent": 0.12,
     "volume": 479500,
-    "amount": 411546,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-24",
+    "timestamp": 1666540800000,
     "open": 0.854,
     "high": 0.86,
     "low": 0.828,
     "close": 0.829,
+    "percent": -2.93,
     "volume": 8826300,
-    "amount": 7424939,
-    "timestamp": "",
-    "percent": -2.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-25",
+    "timestamp": 1666627200000,
     "open": 0.829,
     "high": 0.833,
     "low": 0.818,
     "close": 0.823,
+    "percent": -0.72,
     "volume": 2421100,
-    "amount": 1989176,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-26",
+    "timestamp": 1666713600000,
     "open": 0.823,
     "high": 0.827,
     "low": 0.817,
     "close": 0.823,
+    "percent": 0,
     "volume": 1482000,
-    "amount": 1214668,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-27",
+    "timestamp": 1666800000000,
     "open": 0.823,
     "high": 0.827,
     "low": 0.818,
     "close": 0.823,
+    "percent": 0,
     "volume": 3684700,
-    "amount": 3033439,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-28",
+    "timestamp": 1666886400000,
     "open": 0.828,
     "high": 0.852,
     "low": 0.801,
     "close": 0.805,
+    "percent": -2.19,
     "volume": 2870000,
-    "amount": 2332634,
-    "timestamp": "",
-    "percent": -2.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-10-31",
+    "timestamp": 1667145600000,
     "open": 0.8,
     "high": 0.806,
     "low": 0.792,
     "close": 0.797,
+    "percent": -0.99,
     "volume": 9156100,
-    "amount": 7331997,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-01",
+    "timestamp": 1667232000000,
     "open": 0.796,
     "high": 0.817,
     "low": 0.796,
     "close": 0.816,
+    "percent": 2.38,
     "volume": 11322900,
-    "amount": 9150078,
-    "timestamp": "",
-    "percent": 2.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-02",
+    "timestamp": 1667318400000,
     "open": 0.824,
     "high": 0.825,
     "low": 0.81,
     "close": 0.82,
+    "percent": 0.49,
     "volume": 12913900,
-    "amount": 10575499,
-    "timestamp": "",
-    "percent": 0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-03",
+    "timestamp": 1667404800000,
     "open": 0.82,
     "high": 0.82,
     "low": 0.809,
     "close": 0.813,
+    "percent": -0.85,
     "volume": 3574200,
-    "amount": 2904790,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-04",
+    "timestamp": 1667491200000,
     "open": 0.808,
     "high": 0.838,
     "low": 0.808,
     "close": 0.835,
+    "percent": 2.71,
     "volume": 5583300,
-    "amount": 4638347,
-    "timestamp": "",
-    "percent": 2.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-07",
+    "timestamp": 1667750400000,
     "open": 0.83,
     "high": 0.839,
     "low": 0.827,
     "close": 0.832,
+    "percent": -0.36,
     "volume": 2762100,
-    "amount": 2303315,
-    "timestamp": "",
-    "percent": -0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-08",
+    "timestamp": 1667836800000,
     "open": 0.832,
     "high": 0.837,
     "low": 0.828,
     "close": 0.83,
+    "percent": -0.24,
     "volume": 543300,
-    "amount": 452203,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-09",
+    "timestamp": 1667923200000,
     "open": 0.83,
     "high": 0.84,
     "low": 0.829,
     "close": 0.833,
+    "percent": 0.36,
     "volume": 4676300,
-    "amount": 3890937,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-10",
+    "timestamp": 1668009600000,
     "open": 0.826,
     "high": 0.836,
     "low": 0.825,
     "close": 0.833,
+    "percent": 0,
     "volume": 2275000,
-    "amount": 1893233,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-11",
+    "timestamp": 1668096000000,
     "open": 0.837,
     "high": 0.873,
     "low": 0.837,
     "close": 0.865,
+    "percent": 3.84,
     "volume": 12103400,
-    "amount": 10374722,
-    "timestamp": "",
-    "percent": 3.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-14",
+    "timestamp": 1668355200000,
     "open": 0.89,
     "high": 0.896,
     "low": 0.871,
     "close": 0.886,
+    "percent": 2.43,
     "volume": 11742100,
-    "amount": 10424620,
-    "timestamp": "",
-    "percent": 2.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-15",
+    "timestamp": 1668441600000,
     "open": 0.88,
     "high": 0.901,
     "low": 0.876,
     "close": 0.895,
+    "percent": 1.02,
     "volume": 9833200,
-    "amount": 8767605,
-    "timestamp": "",
-    "percent": 1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-16",
+    "timestamp": 1668528000000,
     "open": 0.895,
     "high": 0.895,
     "low": 0.881,
     "close": 0.885,
+    "percent": -1.12,
     "volume": 15501300,
-    "amount": 13744845,
-    "timestamp": "",
-    "percent": -1.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-17",
+    "timestamp": 1668614400000,
     "open": 0.88,
     "high": 0.885,
     "low": 0.876,
     "close": 0.881,
+    "percent": -0.45,
     "volume": 7681400,
-    "amount": 6749185,
-    "timestamp": "",
-    "percent": -0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-18",
+    "timestamp": 1668700800000,
     "open": 0.886,
     "high": 0.886,
     "low": 0.875,
     "close": 0.875,
+    "percent": -0.68,
     "volume": 1444800,
-    "amount": 1272245,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-21",
+    "timestamp": 1668960000000,
     "open": 0.87,
     "high": 0.87,
     "low": 0.857,
     "close": 0.868,
+    "percent": -0.8,
     "volume": 11997100,
-    "amount": 10348105,
-    "timestamp": "",
-    "percent": -0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-22",
+    "timestamp": 1669046400000,
     "open": 0.861,
     "high": 0.883,
     "low": 0.861,
     "close": 0.877,
+    "percent": 1.04,
     "volume": 1881100,
-    "amount": 1648144,
-    "timestamp": "",
-    "percent": 1.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-23",
+    "timestamp": 1669132800000,
     "open": 0.877,
     "high": 0.888,
     "low": 0.876,
     "close": 0.877,
+    "percent": 0,
     "volume": 863000,
-    "amount": 761077,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-24",
+    "timestamp": 1669219200000,
     "open": 0.887,
     "high": 0.889,
     "low": 0.878,
     "close": 0.882,
+    "percent": 0.57,
     "volume": 557300,
-    "amount": 491680,
-    "timestamp": "",
-    "percent": 0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-25",
+    "timestamp": 1669305600000,
     "open": 0.889,
     "high": 0.903,
     "low": 0.882,
     "close": 0.903,
+    "percent": 2.38,
     "volume": 1845400,
-    "amount": 1656735,
-    "timestamp": "",
-    "percent": 2.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-28",
+    "timestamp": 1669564800000,
     "open": 0.903,
     "high": 0.903,
     "low": 0.853,
     "close": 0.886,
+    "percent": -1.88,
     "volume": 64333700,
-    "amount": 56623477,
-    "timestamp": "",
-    "percent": -1.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-29",
+    "timestamp": 1669651200000,
     "open": 0.897,
     "high": 0.936,
     "low": 0.897,
     "close": 0.931,
+    "percent": 5.08,
     "volume": 25604300,
-    "amount": 23676926,
-    "timestamp": "",
-    "percent": 5.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-11-30",
+    "timestamp": 1669737600000,
     "open": 0.922,
     "high": 0.943,
     "low": 0.918,
     "close": 0.925,
+    "percent": -0.64,
     "volume": 15434600,
-    "amount": 14420227,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-01",
+    "timestamp": 1669824000000,
     "open": 0.933,
     "high": 0.941,
     "low": 0.922,
     "close": 0.925,
+    "percent": 0,
     "volume": 6372800,
-    "amount": 5917157,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-02",
+    "timestamp": 1669910400000,
     "open": 0.925,
     "high": 0.925,
     "low": 0.909,
     "close": 0.914,
+    "percent": -1.19,
     "volume": 56466219,
-    "amount": 51827457,
-    "timestamp": "",
-    "percent": -1.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-05",
+    "timestamp": 1670169600000,
     "open": 0.92,
     "high": 0.945,
     "low": 0.92,
     "close": 0.945,
+    "percent": 3.39,
     "volume": 24241700,
-    "amount": 22797377,
-    "timestamp": "",
-    "percent": 3.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-06",
+    "timestamp": 1670256000000,
     "open": 0.936,
     "high": 0.947,
     "low": 0.935,
     "close": 0.945,
+    "percent": 0,
     "volume": 13481400,
-    "amount": 12707586,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-07",
+    "timestamp": 1670342400000,
     "open": 0.945,
     "high": 0.945,
     "low": 0.927,
     "close": 0.932,
+    "percent": -1.38,
     "volume": 4493800,
-    "amount": 4194615,
-    "timestamp": "",
-    "percent": -1.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-08",
+    "timestamp": 1670428800000,
     "open": 0.929,
     "high": 0.941,
     "low": 0.929,
     "close": 0.935,
+    "percent": 0.32,
     "volume": 12930100,
-    "amount": 12069617,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-09",
+    "timestamp": 1670515200000,
     "open": 0.934,
     "high": 0.954,
     "low": 0.933,
     "close": 0.95,
+    "percent": 1.6,
     "volume": 59201700,
-    "amount": 55509391,
-    "timestamp": "",
-    "percent": 1.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-12",
+    "timestamp": 1670774400000,
     "open": 0.946,
     "high": 0.946,
     "low": 0.925,
     "close": 0.927,
+    "percent": -2.42,
     "volume": 15711200,
-    "amount": 14619009,
-    "timestamp": "",
-    "percent": -2.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-13",
+    "timestamp": 1670860800000,
     "open": 0.927,
     "high": 0.935,
     "low": 0.923,
     "close": 0.932,
+    "percent": 0.54,
     "volume": 3879800,
-    "amount": 3605931,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-14",
+    "timestamp": 1670947200000,
     "open": 0.93,
     "high": 0.938,
     "low": 0.924,
     "close": 0.934,
+    "percent": 0.21,
     "volume": 5500200,
-    "amount": 5118862,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-15",
+    "timestamp": 1671033600000,
     "open": 0.934,
     "high": 0.934,
     "low": 0.921,
     "close": 0.922,
+    "percent": -1.28,
     "volume": 6600720,
-    "amount": 6102179,
-    "timestamp": "",
-    "percent": -1.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-16",
+    "timestamp": 1671120000000,
     "open": 0.92,
     "high": 0.937,
     "low": 0.92,
     "close": 0.93,
+    "percent": 0.87,
     "volume": 3642400,
-    "amount": 3385211,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-19",
+    "timestamp": 1671379200000,
     "open": 0.93,
     "high": 0.937,
     "low": 0.908,
     "close": 0.912,
+    "percent": -1.94,
     "volume": 4499600,
-    "amount": 4140122,
-    "timestamp": "",
-    "percent": -1.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-20",
+    "timestamp": 1671465600000,
     "open": 0.911,
     "high": 0.914,
     "low": 0.899,
     "close": 0.902,
+    "percent": -1.1,
     "volume": 37640900,
-    "amount": 33999795,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-21",
+    "timestamp": 1671552000000,
     "open": 0.901,
     "high": 0.909,
     "low": 0.9,
     "close": 0.9,
+    "percent": -0.22,
     "volume": 3659300,
-    "amount": 3310744,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-22",
+    "timestamp": 1671638400000,
     "open": 0.904,
     "high": 0.915,
     "low": 0.903,
     "close": 0.905,
+    "percent": 0.56,
     "volume": 2080300,
-    "amount": 1894224,
-    "timestamp": "",
-    "percent": 0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-23",
+    "timestamp": 1671724800000,
     "open": 0.906,
     "high": 0.91,
     "low": 0.897,
     "close": 0.901,
+    "percent": -0.44,
     "volume": 9449900,
-    "amount": 8521107,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-26",
+    "timestamp": 1671984000000,
     "open": 0.908,
     "high": 0.91,
     "low": 0.894,
     "close": 0.896,
+    "percent": -0.55,
     "volume": 4473800,
-    "amount": 4026221,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-27",
+    "timestamp": 1672070400000,
     "open": 0.899,
     "high": 0.914,
     "low": 0.899,
     "close": 0.911,
+    "percent": 1.67,
     "volume": 3055234,
-    "amount": 2778566,
-    "timestamp": "",
-    "percent": 1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-28",
+    "timestamp": 1672156800000,
     "open": 0.903,
     "high": 0.92,
     "low": 0.903,
     "close": 0.912,
+    "percent": 0.11,
     "volume": 4489600,
-    "amount": 4102018,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-29",
+    "timestamp": 1672243200000,
     "open": 0.908,
     "high": 0.908,
     "low": 0.9,
     "close": 0.906,
+    "percent": -0.66,
     "volume": 5209100,
-    "amount": 4707910,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2022-12-30",
+    "timestamp": 1672329600000,
     "open": 0.906,
     "high": 0.917,
     "low": 0.906,
     "close": 0.915,
+    "percent": 0.99,
     "volume": 4895500,
-    "amount": 4463085,
-    "timestamp": "",
-    "percent": 0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-03",
+    "timestamp": 1672675200000,
     "open": 0.915,
     "high": 0.92,
     "low": 0.898,
     "close": 0.918,
+    "percent": 0.33,
     "volume": 10451300,
-    "amount": 9509385,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-04",
+    "timestamp": 1672761600000,
     "open": 0.91,
     "high": 0.934,
     "low": 0.91,
     "close": 0.933,
+    "percent": 1.63,
     "volume": 4209400,
-    "amount": 3906033,
-    "timestamp": "",
-    "percent": 1.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-05",
+    "timestamp": 1672848000000,
     "open": 0.934,
     "high": 0.942,
     "low": 0.933,
     "close": 0.937,
+    "percent": 0.43,
     "volume": 3639700,
-    "amount": 3416975,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-06",
+    "timestamp": 1672934400000,
     "open": 0.945,
     "high": 0.945,
     "low": 0.934,
     "close": 0.939,
+    "percent": 0.21,
     "volume": 2224300,
-    "amount": 2086542,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-09",
+    "timestamp": 1673193600000,
     "open": 0.946,
     "high": 0.951,
     "low": 0.939,
     "close": 0.947,
+    "percent": 0.85,
     "volume": 7857703,
-    "amount": 7435815,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-10",
+    "timestamp": 1673280000000,
     "open": 0.947,
     "high": 0.952,
     "low": 0.935,
     "close": 0.935,
+    "percent": -1.27,
     "volume": 6842900,
-    "amount": 6446004,
-    "timestamp": "",
-    "percent": -1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-11",
+    "timestamp": 1673366400000,
     "open": 0.935,
     "high": 0.948,
     "low": 0.935,
     "close": 0.938,
+    "percent": 0.32,
     "volume": 4201300,
-    "amount": 3958244,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-12",
+    "timestamp": 1673452800000,
     "open": 0.942,
     "high": 0.943,
     "low": 0.936,
     "close": 0.942,
+    "percent": 0.43,
     "volume": 3516900,
-    "amount": 3307632,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-13",
+    "timestamp": 1673539200000,
     "open": 0.941,
     "high": 0.958,
     "low": 0.941,
     "close": 0.958,
+    "percent": 1.7,
     "volume": 3587300,
-    "amount": 3411959,
-    "timestamp": "",
-    "percent": 1.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-16",
+    "timestamp": 1673798400000,
     "open": 0.957,
     "high": 0.979,
     "low": 0.948,
     "close": 0.968,
+    "percent": 1.04,
     "volume": 6391481,
-    "amount": 6178475,
-    "timestamp": "",
-    "percent": 1.04
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-17",
+    "timestamp": 1673884800000,
     "open": 0.967,
     "high": 0.969,
     "low": 0.96,
     "close": 0.968,
+    "percent": 0,
     "volume": 11062300,
-    "amount": 10693018,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-18",
+    "timestamp": 1673971200000,
     "open": 0.967,
     "high": 0.973,
     "low": 0.964,
     "close": 0.967,
+    "percent": -0.1,
     "volume": 21361500,
-    "amount": 20656280,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-19",
+    "timestamp": 1674057600000,
     "open": 0.966,
     "high": 0.976,
     "low": 0.96,
     "close": 0.974,
+    "percent": 0.72,
     "volume": 42851900,
-    "amount": 41493459,
-    "timestamp": "",
-    "percent": 0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-20",
+    "timestamp": 1674144000000,
     "open": 0.975,
     "high": 0.976,
     "low": 0.967,
     "close": 0.972,
+    "percent": -0.21,
     "volume": 63104700,
-    "amount": 61373692,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-30",
+    "timestamp": 1675008000000,
     "open": 0.985,
     "high": 0.99,
     "low": 0.971,
     "close": 0.973,
+    "percent": 0.1,
     "volume": 21288600,
-    "amount": 20797323,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-01-31",
+    "timestamp": 1675094400000,
     "open": 0.97,
     "high": 0.979,
     "low": 0.963,
     "close": 0.966,
+    "percent": -0.72,
     "volume": 37963600,
-    "amount": 36809659,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-01",
+    "timestamp": 1675180800000,
     "open": 0.967,
     "high": 0.973,
     "low": 0.958,
     "close": 0.97,
+    "percent": 0.41,
     "volume": 10144839,
-    "amount": 9778744,
-    "timestamp": "",
-    "percent": 0.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-02",
+    "timestamp": 1675267200000,
     "open": 0.973,
     "high": 0.975,
     "low": 0.959,
     "close": 0.965,
+    "percent": -0.52,
     "volume": 7744939,
-    "amount": 7467355,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-03",
+    "timestamp": 1675353600000,
     "open": 0.964,
     "high": 0.964,
     "low": 0.947,
     "close": 0.953,
+    "percent": -1.24,
     "volume": 4268100,
-    "amount": 4065718,
-    "timestamp": "",
-    "percent": -1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-06",
+    "timestamp": 1675612800000,
     "open": 0.952,
     "high": 0.952,
     "low": 0.933,
     "close": 0.935,
+    "percent": -1.89,
     "volume": 7029900,
-    "amount": 6578412,
-    "timestamp": "",
-    "percent": -1.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-07",
+    "timestamp": 1675699200000,
     "open": 0.937,
     "high": 0.948,
     "low": 0.937,
     "close": 0.944,
+    "percent": 0.96,
     "volume": 3875100,
-    "amount": 3652956,
-    "timestamp": "",
-    "percent": 0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-08",
+    "timestamp": 1675785600000,
     "open": 0.945,
     "high": 0.948,
     "low": 0.937,
     "close": 0.943,
+    "percent": -0.11,
     "volume": 7185600,
-    "amount": 6760230,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-09",
+    "timestamp": 1675872000000,
     "open": 0.941,
     "high": 0.951,
     "low": 0.941,
     "close": 0.949,
+    "percent": 0.64,
     "volume": 1565800,
-    "amount": 1482110,
-    "timestamp": "",
-    "percent": 0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-10",
+    "timestamp": 1675958400000,
     "open": 0.951,
     "high": 0.951,
     "low": 0.942,
     "close": 0.947,
+    "percent": -0.21,
     "volume": 1077100,
-    "amount": 1018605,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-13",
+    "timestamp": 1676217600000,
     "open": 0.946,
     "high": 0.951,
     "low": 0.938,
     "close": 0.947,
+    "percent": 0,
     "volume": 5119303,
-    "amount": 4813811,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-14",
+    "timestamp": 1676304000000,
     "open": 0.947,
     "high": 0.95,
     "low": 0.942,
     "close": 0.947,
+    "percent": 0,
     "volume": 4684500,
-    "amount": 4423259,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-15",
+    "timestamp": 1676390400000,
     "open": 0.947,
     "high": 0.947,
     "low": 0.935,
     "close": 0.937,
+    "percent": -1.06,
     "volume": 1990700,
-    "amount": 1867715,
-    "timestamp": "",
-    "percent": -1.06
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-16",
+    "timestamp": 1676476800000,
     "open": 0.939,
     "high": 0.951,
     "low": 0.93,
     "close": 0.933,
+    "percent": -0.43,
     "volume": 5863700,
-    "amount": 5542667,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-17",
+    "timestamp": 1676563200000,
     "open": 0.931,
     "high": 0.939,
     "low": 0.922,
     "close": 0.924,
+    "percent": -0.96,
     "volume": 9283039,
-    "amount": 8645527,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-20",
+    "timestamp": 1676822400000,
     "open": 0.938,
     "high": 0.952,
     "low": 0.928,
     "close": 0.952,
+    "percent": 3.03,
     "volume": 7429239,
-    "amount": 6981291,
-    "timestamp": "",
-    "percent": 3.03
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-21",
+    "timestamp": 1676908800000,
     "open": 0.953,
     "high": 0.959,
     "low": 0.947,
     "close": 0.957,
+    "percent": 0.53,
     "volume": 2057400,
-    "amount": 1962265,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-22",
+    "timestamp": 1676995200000,
     "open": 0.957,
     "high": 0.957,
     "low": 0.943,
     "close": 0.946,
+    "percent": -1.15,
     "volume": 6928900,
-    "amount": 6561756,
-    "timestamp": "",
-    "percent": -1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-23",
+    "timestamp": 1677081600000,
     "open": 0.942,
     "high": 0.955,
     "low": 0.942,
     "close": 0.949,
+    "percent": 0.32,
     "volume": 1674300,
-    "amount": 1594152,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-24",
+    "timestamp": 1677168000000,
     "open": 0.949,
     "high": 0.95,
     "low": 0.935,
     "close": 0.936,
+    "percent": -1.37,
     "volume": 2433900,
-    "amount": 2285150,
-    "timestamp": "",
-    "percent": -1.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-27",
+    "timestamp": 1677427200000,
     "open": 0.931,
     "high": 0.937,
     "low": 0.927,
     "close": 0.93,
+    "percent": -0.64,
     "volume": 2233100,
-    "amount": 2081281,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-02-28",
+    "timestamp": 1677513600000,
     "open": 0.929,
     "high": 0.936,
     "low": 0.928,
     "close": 0.935,
+    "percent": 0.54,
     "volume": 1457100,
-    "amount": 1356781,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-01",
+    "timestamp": 1677600000000,
     "open": 0.933,
     "high": 0.95,
     "low": 0.932,
     "close": 0.948,
+    "percent": 1.39,
     "volume": 6807800,
-    "amount": 6434413,
-    "timestamp": "",
-    "percent": 1.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-02",
+    "timestamp": 1677686400000,
     "open": 0.948,
     "high": 0.954,
     "low": 0.945,
     "close": 0.947,
+    "percent": -0.11,
     "volume": 3508500,
-    "amount": 3326554,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-03",
+    "timestamp": 1677772800000,
     "open": 0.95,
     "high": 0.959,
     "low": 0.948,
     "close": 0.957,
+    "percent": 1.06,
     "volume": 4181100,
-    "amount": 3985752,
-    "timestamp": "",
-    "percent": 1.06
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-06",
+    "timestamp": 1678032000000,
     "open": 0.967,
     "high": 0.967,
     "low": 0.936,
     "close": 0.94,
+    "percent": -1.78,
     "volume": 5644800,
-    "amount": 5304339,
-    "timestamp": "",
-    "percent": -1.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-07",
+    "timestamp": 1678118400000,
     "open": 0.937,
     "high": 0.95,
     "low": 0.931,
     "close": 0.932,
+    "percent": -0.85,
     "volume": 4518900,
-    "amount": 4231522,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-08",
+    "timestamp": 1678204800000,
     "open": 0.932,
     "high": 0.932,
     "low": 0.922,
     "close": 0.926,
+    "percent": -0.64,
     "volume": 943400,
-    "amount": 871515,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-09",
+    "timestamp": 1678291200000,
     "open": 0.927,
     "high": 0.93,
     "low": 0.918,
     "close": 0.922,
+    "percent": -0.43,
     "volume": 12992700,
-    "amount": 11963007,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-10",
+    "timestamp": 1678377600000,
     "open": 0.922,
     "high": 0.922,
     "low": 0.908,
     "close": 0.908,
+    "percent": -1.52,
     "volume": 2142500,
-    "amount": 1953554,
-    "timestamp": "",
-    "percent": -1.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-13",
+    "timestamp": 1678636800000,
     "open": 0.907,
     "high": 0.915,
     "low": 0.906,
     "close": 0.909,
+    "percent": 0.11,
     "volume": 1626700,
-    "amount": 1477158,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-14",
+    "timestamp": 1678723200000,
     "open": 0.905,
     "high": 0.909,
     "low": 0.897,
     "close": 0.9,
+    "percent": -0.99,
     "volume": 1829900,
-    "amount": 1647637,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-15",
+    "timestamp": 1678809600000,
     "open": 0.906,
     "high": 0.915,
     "low": 0.906,
     "close": 0.91,
+    "percent": 1.11,
     "volume": 799601,
-    "amount": 728038,
-    "timestamp": "",
-    "percent": 1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-16",
+    "timestamp": 1678896000000,
     "open": 0.91,
     "high": 0.912,
     "low": 0.902,
     "close": 0.906,
+    "percent": -0.44,
     "volume": 567200,
-    "amount": 514880,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-17",
+    "timestamp": 1678982400000,
     "open": 0.907,
     "high": 0.925,
     "low": 0.907,
     "close": 0.913,
+    "percent": 0.77,
     "volume": 886200,
-    "amount": 813326,
-    "timestamp": "",
-    "percent": 0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-20",
+    "timestamp": 1679241600000,
     "open": 0.914,
     "high": 0.92,
     "low": 0.906,
     "close": 0.906,
+    "percent": -0.77,
     "volume": 660800,
-    "amount": 601645,
-    "timestamp": "",
-    "percent": -0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-21",
+    "timestamp": 1679328000000,
     "open": 0.91,
     "high": 0.915,
     "low": 0.905,
     "close": 0.908,
+    "percent": 0.22,
     "volume": 488100,
-    "amount": 443837,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-22",
+    "timestamp": 1679414400000,
     "open": 0.909,
     "high": 0.916,
     "low": 0.907,
     "close": 0.91,
+    "percent": 0.22,
     "volume": 5576200,
-    "amount": 5076421,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-23",
+    "timestamp": 1679500800000,
     "open": 0.904,
     "high": 0.922,
     "low": 0.904,
     "close": 0.92,
+    "percent": 1.1,
     "volume": 2422500,
-    "amount": 2226796,
-    "timestamp": "",
-    "percent": 1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-24",
+    "timestamp": 1679587200000,
     "open": 0.92,
     "high": 0.92,
     "low": 0.912,
     "close": 0.914,
+    "percent": -0.65,
     "volume": 731200,
-    "amount": 669073,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-27",
+    "timestamp": 1679846400000,
     "open": 0.914,
     "high": 0.918,
     "low": 0.905,
     "close": 0.911,
+    "percent": -0.33,
     "volume": 3446900,
-    "amount": 3133118,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-28",
+    "timestamp": 1679932800000,
     "open": 0.913,
     "high": 0.913,
     "low": 0.905,
     "close": 0.906,
+    "percent": -0.55,
     "volume": 400200,
-    "amount": 363511,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-29",
+    "timestamp": 1680019200000,
     "open": 0.914,
     "high": 0.914,
     "low": 0.9,
     "close": 0.902,
+    "percent": -0.44,
     "volume": 3429400,
-    "amount": 3093650,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-30",
+    "timestamp": 1680105600000,
     "open": 0.901,
     "high": 0.907,
     "low": 0.895,
     "close": 0.905,
+    "percent": 0.33,
     "volume": 1441300,
-    "amount": 1298077,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-03-31",
+    "timestamp": 1680192000000,
     "open": 0.905,
     "high": 0.912,
     "low": 0.9,
     "close": 0.905,
+    "percent": 0,
     "volume": 2833900,
-    "amount": 2562214,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-03",
+    "timestamp": 1680451200000,
     "open": 0.906,
     "high": 0.92,
     "low": 0.905,
     "close": 0.919,
+    "percent": 1.55,
     "volume": 2096600,
-    "amount": 1918499,
-    "timestamp": "",
-    "percent": 1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-04",
+    "timestamp": 1680537600000,
     "open": 0.919,
     "high": 0.922,
     "low": 0.917,
     "close": 0.921,
+    "percent": 0.22,
     "volume": 1098700,
-    "amount": 1010970,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-06",
+    "timestamp": 1680710400000,
     "open": 0.921,
     "high": 0.921,
     "low": 0.915,
     "close": 0.917,
+    "percent": -0.43,
     "volume": 1321000,
-    "amount": 1212082,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-07",
+    "timestamp": 1680796800000,
     "open": 0.918,
     "high": 0.927,
     "low": 0.918,
     "close": 0.925,
+    "percent": 0.87,
     "volume": 11681500,
-    "amount": 10786214,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-10",
+    "timestamp": 1681056000000,
     "open": 0.928,
     "high": 0.93,
     "low": 0.924,
     "close": 0.925,
+    "percent": 0,
     "volume": 1256600,
-    "amount": 1165198,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-11",
+    "timestamp": 1681142400000,
     "open": 0.928,
     "high": 0.934,
     "low": 0.923,
     "close": 0.925,
+    "percent": 0,
     "volume": 1148200,
-    "amount": 1064799,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-12",
+    "timestamp": 1681228800000,
     "open": 0.928,
     "high": 0.934,
     "low": 0.926,
     "close": 0.93,
+    "percent": 0.54,
     "volume": 3865600,
-    "amount": 3598046,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-13",
+    "timestamp": 1681315200000,
     "open": 0.93,
     "high": 0.934,
     "low": 0.923,
     "close": 0.927,
+    "percent": -0.32,
     "volume": 891500,
-    "amount": 825666,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-14",
+    "timestamp": 1681401600000,
     "open": 0.935,
     "high": 0.935,
     "low": 0.925,
     "close": 0.928,
+    "percent": 0.11,
     "volume": 5648003,
-    "amount": 5240693,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-17",
+    "timestamp": 1681660800000,
     "open": 0.924,
     "high": 0.949,
     "low": 0.924,
     "close": 0.949,
+    "percent": 2.26,
     "volume": 9593100,
-    "amount": 9022480,
-    "timestamp": "",
-    "percent": 2.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-18",
+    "timestamp": 1681747200000,
     "open": 0.95,
     "high": 0.965,
     "low": 0.946,
     "close": 0.954,
+    "percent": 0.53,
     "volume": 2661400,
-    "amount": 2551075,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-19",
+    "timestamp": 1681833600000,
     "open": 0.954,
     "high": 0.959,
     "low": 0.934,
     "close": 0.947,
+    "percent": -0.73,
     "volume": 13896400,
-    "amount": 13193132,
-    "timestamp": "",
-    "percent": -0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-20",
+    "timestamp": 1681920000000,
     "open": 0.946,
     "high": 0.951,
     "low": 0.94,
     "close": 0.949,
+    "percent": 0.21,
     "volume": 10663100,
-    "amount": 10088004,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-21",
+    "timestamp": 1682006400000,
     "open": 0.953,
     "high": 0.953,
     "low": 0.926,
     "close": 0.927,
+    "percent": -2.32,
     "volume": 1395100,
-    "amount": 1305065,
-    "timestamp": "",
-    "percent": -2.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-24",
+    "timestamp": 1682265600000,
     "open": 0.933,
     "high": 0.933,
     "low": 0.916,
     "close": 0.919,
+    "percent": -0.86,
     "volume": 5575100,
-    "amount": 5146730,
-    "timestamp": "",
-    "percent": -0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-25",
+    "timestamp": 1682352000000,
     "open": 0.919,
     "high": 0.944,
     "low": 0.911,
     "close": 0.922,
+    "percent": 0.33,
     "volume": 2486335,
-    "amount": 2289193,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-26",
+    "timestamp": 1682438400000,
     "open": 0.922,
     "high": 0.922,
     "low": 0.91,
     "close": 0.918,
+    "percent": -0.43,
     "volume": 423700,
-    "amount": 387673,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-27",
+    "timestamp": 1682524800000,
     "open": 0.918,
     "high": 0.931,
     "low": 0.911,
     "close": 0.928,
+    "percent": 1.09,
     "volume": 453800,
-    "amount": 419605,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-04-28",
+    "timestamp": 1682611200000,
     "open": 0.932,
     "high": 0.95,
     "low": 0.93,
     "close": 0.942,
+    "percent": 1.51,
     "volume": 1844100,
-    "amount": 1736167,
-    "timestamp": "",
-    "percent": 1.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-04",
+    "timestamp": 1683129600000,
     "open": 0.942,
     "high": 0.965,
     "low": 0.931,
     "close": 0.963,
+    "percent": 2.23,
     "volume": 2953300,
-    "amount": 2826230,
-    "timestamp": "",
-    "percent": 2.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-05",
+    "timestamp": 1683216000000,
     "open": 0.963,
     "high": 0.986,
     "low": 0.955,
     "close": 0.979,
+    "percent": 1.66,
     "volume": 9492900,
-    "amount": 9261221,
-    "timestamp": "",
-    "percent": 1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-08",
+    "timestamp": 1683475200000,
     "open": 0.98,
     "high": 1.011,
     "low": 0.973,
     "close": 1.006,
+    "percent": 2.76,
     "volume": 24366200,
-    "amount": 24139157,
-    "timestamp": "",
-    "percent": 2.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-09",
+    "timestamp": 1683561600000,
     "open": 1.006,
     "high": 1.03,
     "low": 0.997,
     "close": 0.997,
+    "percent": -0.89,
     "volume": 9939700,
-    "amount": 10087547,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-10",
+    "timestamp": 1683648000000,
     "open": 0.99,
     "high": 0.997,
     "low": 0.968,
     "close": 0.973,
+    "percent": -2.41,
     "volume": 10667000,
-    "amount": 10498442,
-    "timestamp": "",
-    "percent": -2.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-11",
+    "timestamp": 1683734400000,
     "open": 0.973,
     "high": 0.987,
     "low": 0.97,
     "close": 0.971,
+    "percent": -0.21,
     "volume": 2709400,
-    "amount": 2644194,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-12",
+    "timestamp": 1683820800000,
     "open": 0.972,
     "high": 0.974,
     "low": 0.959,
     "close": 0.96,
+    "percent": -1.13,
     "volume": 1585900,
-    "amount": 1530016,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-15",
+    "timestamp": 1684080000000,
     "open": 0.955,
     "high": 0.976,
     "low": 0.947,
     "close": 0.973,
+    "percent": 1.35,
     "volume": 7993300,
-    "amount": 7747126,
-    "timestamp": "",
-    "percent": 1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-16",
+    "timestamp": 1684166400000,
     "open": 0.973,
     "high": 0.983,
     "low": 0.968,
     "close": 0.97,
+    "percent": -0.31,
     "volume": 2237200,
-    "amount": 2178891,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-17",
+    "timestamp": 1684252800000,
     "open": 0.97,
     "high": 0.97,
     "low": 0.956,
     "close": 0.962,
+    "percent": -0.82,
     "volume": 2846400,
-    "amount": 2737412,
-    "timestamp": "",
-    "percent": -0.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-18",
+    "timestamp": 1684339200000,
     "open": 0.962,
     "high": 0.973,
     "low": 0.962,
     "close": 0.965,
+    "percent": 0.31,
     "volume": 782700,
-    "amount": 755238,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-19",
+    "timestamp": 1684425600000,
     "open": 0.961,
     "high": 0.961,
     "low": 0.949,
     "close": 0.95,
+    "percent": -1.55,
     "volume": 1220600,
-    "amount": 1164297,
-    "timestamp": "",
-    "percent": -1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-22",
+    "timestamp": 1684684800000,
     "open": 0.95,
     "high": 0.955,
     "low": 0.946,
     "close": 0.949,
+    "percent": -0.11,
     "volume": 533600,
-    "amount": 506384,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-23",
+    "timestamp": 1684771200000,
     "open": 0.953,
     "high": 0.953,
     "low": 0.93,
     "close": 0.944,
+    "percent": -0.53,
     "volume": 4493700,
-    "amount": 4212169,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-24",
+    "timestamp": 1684857600000,
     "open": 0.935,
     "high": 0.935,
     "low": 0.915,
     "close": 0.917,
+    "percent": -2.86,
     "volume": 2556900,
-    "amount": 2357764,
-    "timestamp": "",
-    "percent": -2.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-25",
+    "timestamp": 1684944000000,
     "open": 0.915,
     "high": 0.915,
     "low": 0.905,
     "close": 0.915,
+    "percent": -0.22,
     "volume": 2010100,
-    "amount": 1829367,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-26",
+    "timestamp": 1685030400000,
     "open": 0.914,
     "high": 0.92,
     "low": 0.906,
     "close": 0.917,
+    "percent": 0.22,
     "volume": 654100,
-    "amount": 596967,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-29",
+    "timestamp": 1685289600000,
     "open": 0.922,
     "high": 0.922,
     "low": 0.909,
     "close": 0.913,
+    "percent": -0.44,
     "volume": 3918500,
-    "amount": 3575960,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-30",
+    "timestamp": 1685376000000,
     "open": 0.913,
     "high": 0.917,
     "low": 0.902,
     "close": 0.917,
+    "percent": 0.44,
     "volume": 3341800,
-    "amount": 3044107,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-05-31",
+    "timestamp": 1685462400000,
     "open": 0.913,
     "high": 0.913,
     "low": 0.906,
     "close": 0.909,
+    "percent": -0.87,
     "volume": 527100,
-    "amount": 479652,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-01",
+    "timestamp": 1685548800000,
     "open": 0.903,
     "high": 0.913,
     "low": 0.903,
     "close": 0.906,
+    "percent": -0.33,
     "volume": 3599100,
-    "amount": 3256117,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-02",
+    "timestamp": 1685635200000,
     "open": 0.92,
     "high": 0.925,
     "low": 0.906,
     "close": 0.921,
+    "percent": 1.66,
     "volume": 14130100,
-    "amount": 12987348,
-    "timestamp": "",
-    "percent": 1.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-05",
+    "timestamp": 1685894400000,
     "open": 0.921,
     "high": 0.925,
     "low": 0.912,
     "close": 0.92,
+    "percent": -0.11,
     "volume": 13937200,
-    "amount": 12791459,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-06",
+    "timestamp": 1685980800000,
     "open": 0.916,
     "high": 0.934,
     "low": 0.915,
     "close": 0.917,
+    "percent": -0.33,
     "volume": 2169900,
-    "amount": 2004407,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-07",
+    "timestamp": 1686067200000,
     "open": 0.92,
     "high": 0.929,
     "low": 0.918,
     "close": 0.925,
+    "percent": 0.87,
     "volume": 841900,
-    "amount": 778901,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-08",
+    "timestamp": 1686153600000,
     "open": 0.925,
     "high": 0.941,
     "low": 0.919,
     "close": 0.941,
+    "percent": 1.73,
     "volume": 2114900,
-    "amount": 1976286,
-    "timestamp": "",
-    "percent": 1.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-09",
+    "timestamp": 1686240000000,
     "open": 0.945,
     "high": 0.945,
     "low": 0.93,
     "close": 0.935,
+    "percent": -0.64,
     "volume": 7688801,
-    "amount": 7178620,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-12",
+    "timestamp": 1686499200000,
     "open": 0.939,
     "high": 0.939,
     "low": 0.922,
     "close": 0.924,
+    "percent": -1.18,
     "volume": 7852300,
-    "amount": 7296620,
-    "timestamp": "",
-    "percent": -1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-13",
+    "timestamp": 1686585600000,
     "open": 0.92,
     "high": 0.929,
     "low": 0.92,
     "close": 0.927,
+    "percent": 0.32,
     "volume": 1025500,
-    "amount": 950602,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-14",
+    "timestamp": 1686672000000,
     "open": 0.927,
     "high": 0.935,
     "low": 0.922,
     "close": 0.924,
+    "percent": -0.32,
     "volume": 2229400,
-    "amount": 2073284,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-15",
+    "timestamp": 1686758400000,
     "open": 0.923,
     "high": 0.93,
     "low": 0.919,
     "close": 0.925,
+    "percent": 0.11,
     "volume": 1415100,
-    "amount": 1308674,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-16",
+    "timestamp": 1686844800000,
     "open": 0.926,
     "high": 0.934,
     "low": 0.925,
     "close": 0.927,
+    "percent": 0.22,
     "volume": 3354700,
-    "amount": 3119626,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-19",
+    "timestamp": 1687104000000,
     "open": 0.925,
     "high": 0.926,
     "low": 0.915,
     "close": 0.918,
+    "percent": -0.97,
     "volume": 1424100,
-    "amount": 1309730,
-    "timestamp": "",
-    "percent": -0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-20",
+    "timestamp": 1687190400000,
     "open": 0.916,
     "high": 0.917,
     "low": 0.912,
     "close": 0.913,
+    "percent": -0.54,
     "volume": 1056900,
-    "amount": 966956,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-21",
+    "timestamp": 1687276800000,
     "open": 0.913,
     "high": 0.915,
     "low": 0.905,
     "close": 0.905,
+    "percent": -0.88,
     "volume": 1103800,
-    "amount": 1004273,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-26",
+    "timestamp": 1687708800000,
     "open": 0.906,
     "high": 0.906,
     "low": 0.884,
     "close": 0.891,
+    "percent": -1.55,
     "volume": 3639400,
-    "amount": 3242918,
-    "timestamp": "",
-    "percent": -1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-27",
+    "timestamp": 1687795200000,
     "open": 0.891,
     "high": 0.9,
     "low": 0.885,
     "close": 0.9,
+    "percent": 1.01,
     "volume": 6920900,
-    "amount": 6177821,
-    "timestamp": "",
-    "percent": 1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-28",
+    "timestamp": 1687881600000,
     "open": 0.9,
     "high": 0.901,
     "low": 0.894,
     "close": 0.9,
+    "percent": 0,
     "volume": 4799800,
-    "amount": 4313571,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-29",
+    "timestamp": 1687968000000,
     "open": 0.9,
     "high": 0.9,
     "low": 0.892,
     "close": 0.898,
+    "percent": -0.22,
     "volume": 1791300,
-    "amount": 1602733,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-06-30",
+    "timestamp": 1688054400000,
     "open": 0.892,
     "high": 0.907,
     "low": 0.892,
     "close": 0.904,
+    "percent": 0.67,
     "volume": 1066900,
-    "amount": 962300,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-03",
+    "timestamp": 1688313600000,
     "open": 0.903,
     "high": 0.924,
     "low": 0.903,
     "close": 0.921,
+    "percent": 1.88,
     "volume": 3798000,
-    "amount": 3481615,
-    "timestamp": "",
-    "percent": 1.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-04",
+    "timestamp": 1688400000000,
     "open": 0.921,
     "high": 0.921,
     "low": 0.909,
     "close": 0.918,
+    "percent": -0.33,
     "volume": 1644000,
-    "amount": 1503626,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-05",
+    "timestamp": 1688486400000,
     "open": 0.918,
     "high": 0.918,
     "low": 0.905,
     "close": 0.907,
+    "percent": -1.2,
     "volume": 1890000,
-    "amount": 1716861,
-    "timestamp": "",
-    "percent": -1.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-06",
+    "timestamp": 1688572800000,
     "open": 0.902,
     "high": 0.912,
     "low": 0.902,
     "close": 0.904,
+    "percent": -0.33,
     "volume": 887000,
-    "amount": 802373,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-07",
+    "timestamp": 1688659200000,
     "open": 0.904,
     "high": 0.908,
     "low": 0.9,
     "close": 0.904,
+    "percent": 0,
     "volume": 731000,
-    "amount": 661505,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-10",
+    "timestamp": 1688918400000,
     "open": 0.904,
     "high": 0.911,
     "low": 0.903,
     "close": 0.905,
+    "percent": 0.11,
     "volume": 4170300,
-    "amount": 3788512,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-11",
+    "timestamp": 1689004800000,
     "open": 0.905,
     "high": 0.911,
     "low": 0.904,
     "close": 0.911,
+    "percent": 0.66,
     "volume": 10778000,
-    "amount": 9773604,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-12",
+    "timestamp": 1689091200000,
     "open": 0.912,
     "high": 0.913,
     "low": 0.903,
     "close": 0.907,
+    "percent": -0.44,
     "volume": 2396600,
-    "amount": 2175605,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-13",
+    "timestamp": 1689177600000,
     "open": 0.908,
     "high": 0.921,
     "low": 0.908,
     "close": 0.92,
+    "percent": 1.43,
     "volume": 6518900,
-    "amount": 5977448,
-    "timestamp": "",
-    "percent": 1.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-14",
+    "timestamp": 1689264000000,
     "open": 0.919,
     "high": 0.925,
     "low": 0.918,
     "close": 0.921,
+    "percent": 0.11,
     "volume": 2765400,
-    "amount": 2550838,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-17",
+    "timestamp": 1689523200000,
     "open": 0.915,
     "high": 0.92,
     "low": 0.905,
     "close": 0.92,
+    "percent": -0.11,
     "volume": 3579400,
-    "amount": 3268142,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-18",
+    "timestamp": 1689609600000,
     "open": 0.912,
     "high": 0.918,
     "low": 0.911,
     "close": 0.918,
+    "percent": -0.22,
     "volume": 854600,
-    "amount": 780968,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-19",
+    "timestamp": 1689696000000,
     "open": 0.918,
     "high": 0.921,
     "low": 0.913,
     "close": 0.921,
+    "percent": 0.33,
     "volume": 1499500,
-    "amount": 1375497,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-20",
+    "timestamp": 1689782400000,
     "open": 0.921,
     "high": 0.924,
     "low": 0.915,
     "close": 0.92,
+    "percent": -0.11,
     "volume": 4788500,
-    "amount": 4409384,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-21",
+    "timestamp": 1689868800000,
     "open": 0.92,
     "high": 0.921,
     "low": 0.915,
     "close": 0.918,
+    "percent": -0.22,
     "volume": 1085600,
-    "amount": 996838,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-24",
+    "timestamp": 1690128000000,
     "open": 0.912,
     "high": 0.919,
     "low": 0.911,
     "close": 0.915,
+    "percent": -0.33,
     "volume": 2883700,
-    "amount": 2642230,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-25",
+    "timestamp": 1690214400000,
     "open": 0.923,
     "high": 0.958,
     "low": 0.923,
     "close": 0.954,
+    "percent": 4.26,
     "volume": 5743900,
-    "amount": 5439201,
-    "timestamp": "",
-    "percent": 4.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-26",
+    "timestamp": 1690300800000,
     "open": 0.955,
     "high": 0.958,
     "low": 0.946,
     "close": 0.953,
+    "percent": -0.1,
     "volume": 3478000,
-    "amount": 3320932,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-27",
+    "timestamp": 1690387200000,
     "open": 0.953,
     "high": 0.967,
     "low": 0.953,
     "close": 0.957,
+    "percent": 0.42,
     "volume": 5778200,
-    "amount": 5524314,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-28",
+    "timestamp": 1690473600000,
     "open": 0.957,
     "high": 1.005,
     "low": 0.93,
     "close": 1,
+    "percent": 4.49,
     "volume": 21430500,
-    "amount": 21293100,
-    "timestamp": "",
-    "percent": 4.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-07-31",
+    "timestamp": 1690732800000,
     "open": 1.005,
     "high": 1.028,
     "low": 1.005,
     "close": 1.011,
+    "percent": 1.1,
     "volume": 28397202,
-    "amount": 28832938,
-    "timestamp": "",
-    "percent": 1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-01",
+    "timestamp": 1690819200000,
     "open": 1.009,
     "high": 1.02,
     "low": 1,
     "close": 1.004,
+    "percent": -0.69,
     "volume": 19713200,
-    "amount": 19894773,
-    "timestamp": "",
-    "percent": -0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-02",
+    "timestamp": 1690905600000,
     "open": 0.994,
     "high": 1.013,
     "low": 0.993,
     "close": 0.997,
+    "percent": -0.7,
     "volume": 5569900,
-    "amount": 5577410,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-03",
+    "timestamp": 1690992000000,
     "open": 0.996,
     "high": 1.02,
     "low": 0.991,
     "close": 1.019,
+    "percent": 2.21,
     "volume": 18597900,
-    "amount": 18848468,
-    "timestamp": "",
-    "percent": 2.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-04",
+    "timestamp": 1691078400000,
     "open": 1.037,
     "high": 1.046,
     "low": 1.02,
     "close": 1.023,
+    "percent": 0.39,
     "volume": 16551500,
-    "amount": 17123827,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-07",
+    "timestamp": 1691337600000,
     "open": 1.018,
     "high": 1.018,
     "low": 1,
     "close": 1.012,
+    "percent": -1.08,
     "volume": 15799900,
-    "amount": 15929575,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-08",
+    "timestamp": 1691424000000,
     "open": 1.011,
     "high": 1.017,
     "low": 0.997,
     "close": 1.006,
+    "percent": -0.59,
     "volume": 9185000,
-    "amount": 9275657,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-09",
+    "timestamp": 1691510400000,
     "open": 1,
     "high": 1.011,
     "low": 1,
     "close": 1.007,
+    "percent": 0.1,
     "volume": 10547800,
-    "amount": 10644266,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-10",
+    "timestamp": 1691596800000,
     "open": 1.007,
     "high": 1.013,
     "low": 1.002,
     "close": 1.013,
+    "percent": 0.6,
     "volume": 6256400,
-    "amount": 6302609,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-11",
+    "timestamp": 1691683200000,
     "open": 1.014,
     "high": 1.014,
     "low": 0.984,
     "close": 0.985,
+    "percent": -2.76,
     "volume": 12499300,
-    "amount": 12499452,
-    "timestamp": "",
-    "percent": -2.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-14",
+    "timestamp": 1691942400000,
     "open": 0.984,
     "high": 0.984,
     "low": 0.967,
     "close": 0.973,
+    "percent": -1.22,
     "volume": 4571200,
-    "amount": 4446183,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-15",
+    "timestamp": 1692028800000,
     "open": 0.973,
     "high": 0.985,
     "low": 0.97,
     "close": 0.984,
+    "percent": 1.13,
     "volume": 6466200,
-    "amount": 6334545,
-    "timestamp": "",
-    "percent": 1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-16",
+    "timestamp": 1692115200000,
     "open": 0.984,
     "high": 0.996,
     "low": 0.973,
     "close": 0.985,
+    "percent": 0.1,
     "volume": 20994600,
-    "amount": 20628244,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-17",
+    "timestamp": 1692201600000,
     "open": 0.985,
     "high": 0.985,
     "low": 0.97,
     "close": 0.979,
+    "percent": -0.61,
     "volume": 10808400,
-    "amount": 10589204,
-    "timestamp": "",
-    "percent": -0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-18",
+    "timestamp": 1692288000000,
     "open": 0.983,
     "high": 0.996,
     "low": 0.975,
     "close": 0.975,
+    "percent": -0.41,
     "volume": 10644500,
-    "amount": 10456439,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-21",
+    "timestamp": 1692547200000,
     "open": 0.97,
     "high": 0.97,
     "low": 0.951,
     "close": 0.952,
+    "percent": -2.36,
     "volume": 5208800,
-    "amount": 5000516,
-    "timestamp": "",
-    "percent": -2.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-22",
+    "timestamp": 1692633600000,
     "open": 0.96,
     "high": 0.966,
     "low": 0.952,
     "close": 0.963,
+    "percent": 1.16,
     "volume": 8614300,
-    "amount": 8269968,
-    "timestamp": "",
-    "percent": 1.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-23",
+    "timestamp": 1692720000000,
     "open": 0.96,
     "high": 0.969,
     "low": 0.95,
     "close": 0.951,
+    "percent": -1.25,
     "volume": 5208300,
-    "amount": 4987913,
-    "timestamp": "",
-    "percent": -1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-24",
+    "timestamp": 1692806400000,
     "open": 0.954,
     "high": 0.959,
     "low": 0.947,
     "close": 0.953,
+    "percent": 0.21,
     "volume": 5544200,
-    "amount": 5287068,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-25",
+    "timestamp": 1692892800000,
     "open": 0.949,
     "high": 0.967,
     "low": 0.949,
     "close": 0.96,
+    "percent": 0.73,
     "volume": 5193200,
-    "amount": 4974760,
-    "timestamp": "",
-    "percent": 0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-28",
+    "timestamp": 1693152000000,
     "open": 1.039,
     "high": 1.039,
     "low": 0.977,
     "close": 0.983,
+    "percent": 2.4,
     "volume": 20402100,
-    "amount": 20368559,
-    "timestamp": "",
-    "percent": 2.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-29",
+    "timestamp": 1693238400000,
     "open": 0.981,
     "high": 0.981,
     "low": 0.961,
     "close": 0.977,
+    "percent": -0.61,
     "volume": 11918600,
-    "amount": 11599511,
-    "timestamp": "",
-    "percent": -0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-30",
+    "timestamp": 1693324800000,
     "open": 0.983,
     "high": 0.983,
     "low": 0.962,
     "close": 0.964,
+    "percent": -1.33,
     "volume": 10296400,
-    "amount": 9955000,
-    "timestamp": "",
-    "percent": -1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-08-31",
+    "timestamp": 1693411200000,
     "open": 0.964,
     "high": 0.968,
     "low": 0.95,
     "close": 0.95,
+    "percent": -1.45,
     "volume": 5441900,
-    "amount": 5212744,
-    "timestamp": "",
-    "percent": -1.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-01",
+    "timestamp": 1693497600000,
     "open": 0.95,
     "high": 0.968,
     "low": 0.95,
     "close": 0.961,
+    "percent": 1.16,
     "volume": 13373100,
-    "amount": 12844360,
-    "timestamp": "",
-    "percent": 1.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-04",
+    "timestamp": 1693756800000,
     "open": 0.965,
     "high": 0.979,
     "low": 0.964,
     "close": 0.974,
+    "percent": 1.35,
     "volume": 11126300,
-    "amount": 10794639,
-    "timestamp": "",
-    "percent": 1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-05",
+    "timestamp": 1693843200000,
     "open": 0.974,
     "high": 0.974,
     "low": 0.959,
     "close": 0.96,
+    "percent": -1.44,
     "volume": 3333100,
-    "amount": 3205083,
-    "timestamp": "",
-    "percent": -1.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-06",
+    "timestamp": 1693929600000,
     "open": 0.956,
     "high": 0.968,
     "low": 0.956,
     "close": 0.966,
+    "percent": 0.63,
     "volume": 9003000,
-    "amount": 8675300,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-07",
+    "timestamp": 1694016000000,
     "open": 0.962,
     "high": 0.97,
     "low": 0.96,
     "close": 0.961,
+    "percent": -0.52,
     "volume": 7271200,
-    "amount": 7008981,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-08",
+    "timestamp": 1694102400000,
     "open": 0.96,
     "high": 0.963,
     "low": 0.954,
     "close": 0.96,
+    "percent": -0.1,
     "volume": 3005400,
-    "amount": 2880514,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-11",
+    "timestamp": 1694361600000,
     "open": 0.962,
     "high": 0.97,
     "low": 0.957,
     "close": 0.966,
+    "percent": 0.63,
     "volume": 10222100,
-    "amount": 9861890,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-12",
+    "timestamp": 1694448000000,
     "open": 0.964,
     "high": 0.964,
     "low": 0.957,
     "close": 0.959,
+    "percent": -0.72,
     "volume": 3950700,
-    "amount": 3789047,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-13",
+    "timestamp": 1694534400000,
     "open": 0.958,
     "high": 0.961,
     "low": 0.951,
     "close": 0.956,
+    "percent": -0.31,
     "volume": 8732400,
-    "amount": 8337380,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-14",
+    "timestamp": 1694620800000,
     "open": 0.954,
     "high": 0.96,
     "low": 0.954,
     "close": 0.958,
+    "percent": 0.21,
     "volume": 3233000,
-    "amount": 3092145,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-15",
+    "timestamp": 1694707200000,
     "open": 0.96,
     "high": 0.971,
     "low": 0.952,
     "close": 0.957,
+    "percent": -0.1,
     "volume": 2366200,
-    "amount": 2271647,
-    "timestamp": "",
-    "percent": -0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-18",
+    "timestamp": 1694966400000,
     "open": 0.95,
     "high": 0.955,
     "low": 0.948,
     "close": 0.955,
+    "percent": -0.21,
     "volume": 2495900,
-    "amount": 2375996,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-19",
+    "timestamp": 1695052800000,
     "open": 0.954,
     "high": 0.958,
     "low": 0.952,
     "close": 0.957,
+    "percent": 0.21,
     "volume": 10422800,
-    "amount": 9944756,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-20",
+    "timestamp": 1695139200000,
     "open": 0.958,
     "high": 0.96,
     "low": 0.952,
     "close": 0.96,
+    "percent": 0.31,
     "volume": 7253300,
-    "amount": 6932070,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-21",
+    "timestamp": 1695225600000,
     "open": 0.956,
     "high": 0.961,
     "low": 0.95,
     "close": 0.951,
+    "percent": -0.94,
     "volume": 3105500,
-    "amount": 2961039,
-    "timestamp": "",
-    "percent": -0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-22",
+    "timestamp": 1695312000000,
     "open": 0.95,
     "high": 0.97,
     "low": 0.945,
     "close": 0.968,
+    "percent": 1.79,
     "volume": 15987400,
-    "amount": 15455353,
-    "timestamp": "",
-    "percent": 1.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-25",
+    "timestamp": 1695571200000,
     "open": 0.972,
     "high": 0.972,
     "low": 0.956,
     "close": 0.957,
+    "percent": -1.14,
     "volume": 7009600,
-    "amount": 6722515,
-    "timestamp": "",
-    "percent": -1.14
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-26",
+    "timestamp": 1695657600000,
     "open": 0.958,
     "high": 0.96,
     "low": 0.953,
     "close": 0.957,
+    "percent": 0,
     "volume": 3852900,
-    "amount": 3685658,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-27",
+    "timestamp": 1695744000000,
     "open": 0.957,
     "high": 0.958,
     "low": 0.95,
     "close": 0.952,
+    "percent": -0.52,
     "volume": 16131700,
-    "amount": 15348600,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-09-28",
+    "timestamp": 1695830400000,
     "open": 0.949,
     "high": 0.955,
     "low": 0.949,
     "close": 0.95,
+    "percent": -0.21,
     "volume": 3045100,
-    "amount": 2896533,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-09",
+    "timestamp": 1696780800000,
     "open": 0.949,
     "high": 0.949,
     "low": 0.934,
     "close": 0.942,
+    "percent": -0.84,
     "volume": 9597900,
-    "amount": 9019000,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-10",
+    "timestamp": 1696867200000,
     "open": 0.942,
     "high": 0.947,
     "low": 0.936,
     "close": 0.936,
+    "percent": -0.64,
     "volume": 4769200,
-    "amount": 4495872,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-11",
+    "timestamp": 1696953600000,
     "open": 0.936,
     "high": 0.941,
     "low": 0.933,
     "close": 0.936,
+    "percent": 0,
     "volume": 9815800,
-    "amount": 9190556,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-12",
+    "timestamp": 1697040000000,
     "open": 0.941,
     "high": 0.951,
     "low": 0.941,
     "close": 0.948,
+    "percent": 1.28,
     "volume": 2952900,
-    "amount": 2800647,
-    "timestamp": "",
-    "percent": 1.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-13",
+    "timestamp": 1697126400000,
     "open": 0.947,
     "high": 0.947,
     "low": 0.939,
     "close": 0.942,
+    "percent": -0.63,
     "volume": 9059300,
-    "amount": 8543983,
-    "timestamp": "",
-    "percent": -0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-16",
+    "timestamp": 1697385600000,
     "open": 0.941,
     "high": 0.944,
     "low": 0.937,
     "close": 0.94,
+    "percent": -0.21,
     "volume": 6726500,
-    "amount": 6322346,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-17",
+    "timestamp": 1697472000000,
     "open": 0.939,
     "high": 0.949,
     "low": 0.937,
     "close": 0.944,
+    "percent": 0.43,
     "volume": 7351500,
-    "amount": 6917916,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-18",
+    "timestamp": 1697558400000,
     "open": 0.944,
     "high": 0.947,
     "low": 0.94,
     "close": 0.945,
+    "percent": 0.11,
     "volume": 8043500,
-    "amount": 7585356,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-19",
+    "timestamp": 1697644800000,
     "open": 0.936,
     "high": 0.936,
     "low": 0.924,
     "close": 0.925,
+    "percent": -2.12,
     "volume": 8615700,
-    "amount": 8016481,
-    "timestamp": "",
-    "percent": -2.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-20",
+    "timestamp": 1697731200000,
     "open": 0.93,
     "high": 0.93,
     "low": 0.919,
     "close": 0.926,
+    "percent": 0.11,
     "volume": 7471600,
-    "amount": 6906389,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-23",
+    "timestamp": 1697990400000,
     "open": 0.92,
     "high": 0.922,
     "low": 0.908,
     "close": 0.914,
+    "percent": -1.3,
     "volume": 4960300,
-    "amount": 4546696,
-    "timestamp": "",
-    "percent": -1.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-24",
+    "timestamp": 1698076800000,
     "open": 0.92,
     "high": 0.922,
     "low": 0.912,
     "close": 0.922,
+    "percent": 0.88,
     "volume": 7830200,
-    "amount": 7179293,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-25",
+    "timestamp": 1698163200000,
     "open": 0.925,
     "high": 0.928,
     "low": 0.92,
     "close": 0.923,
+    "percent": 0.11,
     "volume": 1721200,
-    "amount": 1589989,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-26",
+    "timestamp": 1698249600000,
     "open": 0.92,
     "high": 0.925,
     "low": 0.919,
     "close": 0.925,
+    "percent": 0.22,
     "volume": 2075100,
-    "amount": 1912337,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-27",
+    "timestamp": 1698336000000,
     "open": 0.919,
     "high": 0.928,
     "low": 0.916,
     "close": 0.925,
+    "percent": 0,
     "volume": 2387800,
-    "amount": 2200208,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-30",
+    "timestamp": 1698595200000,
     "open": 0.919,
     "high": 0.92,
     "low": 0.908,
     "close": 0.915,
+    "percent": -1.08,
     "volume": 6913900,
-    "amount": 6305021,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-10-31",
+    "timestamp": 1698681600000,
     "open": 0.912,
     "high": 0.918,
     "low": 0.912,
     "close": 0.917,
+    "percent": 0.22,
     "volume": 1972500,
-    "amount": 1806670,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-01",
+    "timestamp": 1698768000000,
     "open": 0.917,
     "high": 0.92,
     "low": 0.914,
     "close": 0.915,
+    "percent": -0.22,
     "volume": 2156000,
-    "amount": 1975354,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-02",
+    "timestamp": 1698854400000,
     "open": 0.916,
     "high": 0.921,
     "low": 0.913,
     "close": 0.913,
+    "percent": -0.22,
     "volume": 1883800,
-    "amount": 1726618,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-03",
+    "timestamp": 1698940800000,
     "open": 0.915,
     "high": 0.919,
     "low": 0.912,
     "close": 0.916,
+    "percent": 0.33,
     "volume": 3052800,
-    "amount": 2795267,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-06",
+    "timestamp": 1699200000000,
     "open": 0.919,
     "high": 0.934,
     "low": 0.919,
     "close": 0.932,
+    "percent": 1.75,
     "volume": 12591600,
-    "amount": 11672470,
-    "timestamp": "",
-    "percent": 1.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-07",
+    "timestamp": 1699286400000,
     "open": 0.923,
     "high": 0.933,
     "low": 0.923,
     "close": 0.931,
+    "percent": -0.11,
     "volume": 2107500,
-    "amount": 1962001,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-08",
+    "timestamp": 1699372800000,
     "open": 0.931,
     "high": 0.932,
     "low": 0.921,
     "close": 0.925,
+    "percent": -0.64,
     "volume": 7625200,
-    "amount": 7059645,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-09",
+    "timestamp": 1699459200000,
     "open": 0.925,
     "high": 0.927,
     "low": 0.92,
     "close": 0.922,
+    "percent": -0.32,
     "volume": 3316900,
-    "amount": 3062303,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-10",
+    "timestamp": 1699545600000,
     "open": 0.919,
     "high": 0.923,
     "low": 0.914,
     "close": 0.914,
+    "percent": -0.87,
     "volume": 18135300,
-    "amount": 16662323,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-13",
+    "timestamp": 1699804800000,
     "open": 0.916,
     "high": 0.916,
     "low": 0.909,
     "close": 0.914,
+    "percent": 0,
     "volume": 4461900,
-    "amount": 4063833,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-14",
+    "timestamp": 1699891200000,
     "open": 0.915,
     "high": 0.923,
     "low": 0.914,
     "close": 0.919,
+    "percent": 0.55,
     "volume": 4162833,
-    "amount": 3822571,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-15",
+    "timestamp": 1699977600000,
     "open": 0.928,
     "high": 0.929,
     "low": 0.921,
     "close": 0.922,
+    "percent": 0.33,
     "volume": 2993800,
-    "amount": 2770907,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-16",
+    "timestamp": 1700064000000,
     "open": 0.922,
     "high": 0.923,
     "low": 0.917,
     "close": 0.917,
+    "percent": -0.54,
     "volume": 6535633,
-    "amount": 6019648,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-17",
+    "timestamp": 1700150400000,
     "open": 0.917,
     "high": 0.917,
     "low": 0.911,
     "close": 0.915,
+    "percent": -0.22,
     "volume": 2751600,
-    "amount": 2513478,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-20",
+    "timestamp": 1700409600000,
     "open": 0.915,
     "high": 0.918,
     "low": 0.909,
     "close": 0.917,
+    "percent": 0.22,
     "volume": 2721834,
-    "amount": 2489482,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-21",
+    "timestamp": 1700496000000,
     "open": 0.921,
     "high": 0.93,
     "low": 0.918,
     "close": 0.92,
+    "percent": 0.33,
     "volume": 6369900,
-    "amount": 5875876,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-22",
+    "timestamp": 1700582400000,
     "open": 0.923,
     "high": 0.923,
     "low": 0.914,
     "close": 0.914,
+    "percent": -0.65,
     "volume": 1378300,
-    "amount": 1265277,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-23",
+    "timestamp": 1700668800000,
     "open": 0.914,
     "high": 0.919,
     "low": 0.911,
     "close": 0.919,
+    "percent": 0.55,
     "volume": 2233500,
-    "amount": 2041375,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-24",
+    "timestamp": 1700755200000,
     "open": 0.916,
     "high": 0.917,
     "low": 0.914,
     "close": 0.916,
+    "percent": -0.33,
     "volume": 7946300,
-    "amount": 7283875,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-27",
+    "timestamp": 1701014400000,
     "open": 0.911,
     "high": 0.911,
     "low": 0.9,
     "close": 0.904,
+    "percent": -1.31,
     "volume": 7285401,
-    "amount": 6579580,
-    "timestamp": "",
-    "percent": -1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-28",
+    "timestamp": 1701100800000,
     "open": 0.903,
     "high": 0.905,
     "low": 0.898,
     "close": 0.901,
+    "percent": -0.33,
     "volume": 3814400,
-    "amount": 3439212,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-29",
+    "timestamp": 1701187200000,
     "open": 0.901,
     "high": 0.901,
     "low": 0.887,
     "close": 0.889,
+    "percent": -1.33,
     "volume": 4307500,
-    "amount": 3834212,
-    "timestamp": "",
-    "percent": -1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-11-30",
+    "timestamp": 1701273600000,
     "open": 0.889,
     "high": 0.893,
     "low": 0.887,
     "close": 0.89,
+    "percent": 0.11,
     "volume": 4653200,
-    "amount": 4140439,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-01",
+    "timestamp": 1701360000000,
     "open": 0.893,
     "high": 0.895,
     "low": 0.885,
     "close": 0.894,
+    "percent": 0.45,
     "volume": 4184002,
-    "amount": 3727860,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-04",
+    "timestamp": 1701619200000,
     "open": 0.892,
     "high": 0.894,
     "low": 0.887,
     "close": 0.887,
+    "percent": -0.78,
     "volume": 1700200,
-    "amount": 1510248,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-05",
+    "timestamp": 1701705600000,
     "open": 0.886,
     "high": 0.886,
     "low": 0.873,
     "close": 0.874,
+    "percent": -1.47,
     "volume": 1413500,
-    "amount": 1242685,
-    "timestamp": "",
-    "percent": -1.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-06",
+    "timestamp": 1701792000000,
     "open": 0.874,
     "high": 0.877,
     "low": 0.869,
     "close": 0.872,
+    "percent": -0.23,
     "volume": 1426500,
-    "amount": 1245231,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-07",
+    "timestamp": 1701878400000,
     "open": 0.87,
     "high": 0.878,
     "low": 0.866,
     "close": 0.874,
+    "percent": 0.23,
     "volume": 1528500,
-    "amount": 1336125,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-08",
+    "timestamp": 1701964800000,
     "open": 0.88,
     "high": 0.88,
     "low": 0.871,
     "close": 0.872,
+    "percent": -0.23,
     "volume": 5345200,
-    "amount": 4673566,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-11",
+    "timestamp": 1702224000000,
     "open": 0.87,
     "high": 0.88,
     "low": 0.858,
     "close": 0.879,
-    "volume": 0,
-    "amount": 0,
-    "timestamp": "",
-    "percent": 0.8
+    "percent": 0.8,
+    "volume": 2647900,
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-12",
+    "timestamp": 1702310400000,
     "open": 0.873,
     "high": 0.885,
     "low": 0.873,
     "close": 0.884,
+    "percent": 0.57,
     "volume": 1932700,
-    "amount": 1705481,
-    "timestamp": "",
-    "percent": 0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-13",
+    "timestamp": 1702396800000,
     "open": 0.884,
     "high": 0.884,
     "low": 0.87,
     "close": 0.87,
-    "volume": 0,
-    "amount": 0,
-    "timestamp": "",
-    "percent": -1.58
+    "percent": -1.58,
+    "volume": 1354600,
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-14",
+    "timestamp": 1702483200000,
     "open": 0.876,
     "high": 0.877,
     "low": 0.867,
     "close": 0.867,
-    "volume": 0,
-    "amount": 0,
-    "timestamp": "",
-    "percent": -0.34
+    "percent": -0.34,
+    "volume": 1206000,
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-15",
+    "timestamp": 1702569600000,
     "open": 0.872,
     "high": 0.877,
     "low": 0.866,
     "close": 0.867,
+    "percent": 0,
     "volume": 971200,
-    "amount": 846453,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-18",
+    "timestamp": 1702828800000,
     "open": 0.878,
     "high": 0.878,
     "low": 0.862,
     "close": 0.865,
+    "percent": -0.23,
     "volume": 357700,
-    "amount": 310045,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-19",
+    "timestamp": 1702915200000,
     "open": 0.873,
     "high": 0.873,
     "low": 0.86,
     "close": 0.863,
+    "percent": -0.23,
     "volume": 2870000,
-    "amount": 2486571,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-20",
+    "timestamp": 1703001600000,
     "open": 0.861,
     "high": 0.863,
     "low": 0.852,
     "close": 0.853,
+    "percent": -1.16,
     "volume": 3593700,
-    "amount": 3084150,
-    "timestamp": "",
-    "percent": -1.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-21",
+    "timestamp": 1703088000000,
     "open": 0.852,
     "high": 0.857,
     "low": 0.847,
     "close": 0.856,
+    "percent": 0.35,
     "volume": 1666700,
-    "amount": 1422509,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-22",
+    "timestamp": 1703174400000,
     "open": 0.848,
     "high": 0.86,
     "low": 0.848,
     "close": 0.856,
+    "percent": 0,
     "volume": 952100,
-    "amount": 815216,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-25",
+    "timestamp": 1703433600000,
     "open": 0.856,
     "high": 0.856,
     "low": 0.851,
     "close": 0.853,
+    "percent": -0.35,
     "volume": 1162400,
-    "amount": 992373,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-26",
+    "timestamp": 1703520000000,
     "open": 0.853,
     "high": 0.853,
     "low": 0.846,
     "close": 0.848,
+    "percent": -0.59,
     "volume": 1841500,
-    "amount": 1564073,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-27",
+    "timestamp": 1703606400000,
     "open": 0.848,
     "high": 0.851,
     "low": 0.841,
     "close": 0.85,
+    "percent": 0.24,
     "volume": 2386100,
-    "amount": 2024240,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-28",
+    "timestamp": 1703692800000,
     "open": 0.842,
     "high": 0.869,
     "low": 0.841,
     "close": 0.865,
+    "percent": 1.76,
     "volume": 2744200,
-    "amount": 2366107,
-    "timestamp": "",
-    "percent": 1.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2023-12-29",
+    "timestamp": 1703779200000,
     "open": 0.866,
     "high": 0.867,
     "low": 0.863,
     "close": 0.864,
+    "percent": -0.12,
     "volume": 8080400,
-    "amount": 6987191,
-    "timestamp": "",
-    "percent": -0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-02",
+    "timestamp": 1704124800000,
     "open": 0.864,
     "high": 0.866,
     "low": 0.857,
     "close": 0.857,
+    "percent": -0.81,
     "volume": 3986500,
-    "amount": 3425760,
-    "timestamp": "",
-    "percent": -0.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-03",
+    "timestamp": 1704211200000,
     "open": 0.86,
     "high": 0.864,
     "low": 0.857,
     "close": 0.862,
+    "percent": 0.58,
     "volume": 4332600,
-    "amount": 3728606,
-    "timestamp": "",
-    "percent": 0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-04",
+    "timestamp": 1704297600000,
     "open": 0.86,
     "high": 0.864,
     "low": 0.851,
     "close": 0.856,
+    "percent": -0.7,
     "volume": 5180800,
-    "amount": 4423400,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-05",
+    "timestamp": 1704384000000,
     "open": 0.853,
     "high": 0.869,
     "low": 0.853,
     "close": 0.858,
+    "percent": 0.23,
     "volume": 2933800,
-    "amount": 2527362,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-08",
+    "timestamp": 1704643200000,
     "open": 0.857,
     "high": 0.86,
     "low": 0.845,
     "close": 0.847,
+    "percent": -1.28,
     "volume": 2377100,
-    "amount": 2022764,
-    "timestamp": "",
-    "percent": -1.28
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-09",
+    "timestamp": 1704729600000,
     "open": 0.844,
     "high": 0.851,
     "low": 0.844,
     "close": 0.848,
+    "percent": 0.12,
     "volume": 1799700,
-    "amount": 1527363,
-    "timestamp": "",
-    "percent": 0.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-10",
+    "timestamp": 1704816000000,
     "open": 0.848,
     "high": 0.85,
     "low": 0.842,
     "close": 0.843,
+    "percent": -0.59,
     "volume": 2171900,
-    "amount": 1838127,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-11",
+    "timestamp": 1704902400000,
     "open": 0.843,
     "high": 0.85,
     "low": 0.84,
     "close": 0.846,
+    "percent": 0.36,
     "volume": 1437000,
-    "amount": 1212817,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-12",
+    "timestamp": 1704988800000,
     "open": 0.846,
     "high": 0.852,
     "low": 0.84,
     "close": 0.846,
+    "percent": 0,
     "volume": 2157300,
-    "amount": 1828425,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-15",
+    "timestamp": 1705248000000,
     "open": 0.84,
     "high": 0.853,
     "low": 0.84,
     "close": 0.848,
+    "percent": 0.24,
     "volume": 688200,
-    "amount": 582585,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-16",
+    "timestamp": 1705334400000,
     "open": 0.842,
     "high": 0.855,
     "low": 0.842,
     "close": 0.855,
+    "percent": 0.83,
     "volume": 2635200,
-    "amount": 2241649,
-    "timestamp": "",
-    "percent": 0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-17",
+    "timestamp": 1705420800000,
     "open": 0.854,
     "high": 0.857,
     "low": 0.846,
     "close": 0.846,
+    "percent": -1.05,
     "volume": 3121700,
-    "amount": 2666544,
-    "timestamp": "",
-    "percent": -1.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-18",
+    "timestamp": 1705507200000,
     "open": 0.844,
     "high": 0.853,
     "low": 0.827,
     "close": 0.853,
+    "percent": 0.83,
     "volume": 4121800,
-    "amount": 3442911,
-    "timestamp": "",
-    "percent": 0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-19",
+    "timestamp": 1705593600000,
     "open": 0.85,
     "high": 0.85,
     "low": 0.842,
     "close": 0.848,
+    "percent": -0.59,
     "volume": 6106000,
-    "amount": 5164707,
-    "timestamp": "",
-    "percent": -0.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-22",
+    "timestamp": 1705852800000,
     "open": 0.84,
     "high": 0.853,
     "low": 0.832,
     "close": 0.838,
+    "percent": -1.18,
     "volume": 1574700,
-    "amount": 1329844,
-    "timestamp": "",
-    "percent": -1.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-23",
+    "timestamp": 1705939200000,
     "open": 0.834,
     "high": 0.848,
     "low": 0.83,
     "close": 0.846,
+    "percent": 0.95,
     "volume": 1111900,
-    "amount": 935093,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-24",
+    "timestamp": 1706025600000,
     "open": 0.849,
     "high": 0.868,
     "low": 0.839,
     "close": 0.865,
+    "percent": 2.25,
     "volume": 11189300,
-    "amount": 9569698,
-    "timestamp": "",
-    "percent": 2.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-25",
+    "timestamp": 1706112000000,
     "open": 0.86,
     "high": 0.886,
     "low": 0.859,
     "close": 0.883,
+    "percent": 2.08,
     "volume": 4564600,
-    "amount": 4021915,
-    "timestamp": "",
-    "percent": 2.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-26",
+    "timestamp": 1706198400000,
     "open": 0.886,
     "high": 0.898,
     "low": 0.883,
     "close": 0.893,
+    "percent": 1.13,
     "volume": 10852500,
-    "amount": 9672892,
-    "timestamp": "",
-    "percent": 1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-29",
+    "timestamp": 1706457600000,
     "open": 0.896,
     "high": 0.903,
     "low": 0.89,
     "close": 0.89,
+    "percent": -0.34,
     "volume": 6926700,
-    "amount": 6201649,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-30",
+    "timestamp": 1706544000000,
     "open": 0.89,
     "high": 0.895,
     "low": 0.88,
     "close": 0.881,
+    "percent": -1.01,
     "volume": 5517700,
-    "amount": 4886590,
-    "timestamp": "",
-    "percent": -1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-01-31",
+    "timestamp": 1706630400000,
     "open": 0.88,
     "high": 0.883,
     "low": 0.868,
     "close": 0.875,
+    "percent": -0.68,
     "volume": 4937100,
-    "amount": 4333207,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-01",
+    "timestamp": 1706716800000,
     "open": 0.87,
     "high": 0.876,
     "low": 0.864,
     "close": 0.871,
+    "percent": -0.46,
     "volume": 4660400,
-    "amount": 4061444,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-02",
+    "timestamp": 1706803200000,
     "open": 0.87,
     "high": 0.873,
     "low": 0.843,
     "close": 0.867,
+    "percent": -0.46,
     "volume": 7205900,
-    "amount": 6178383,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-05",
+    "timestamp": 1707062400000,
     "open": 0.859,
     "high": 0.868,
     "low": 0.844,
     "close": 0.856,
+    "percent": -1.27,
     "volume": 2840100,
-    "amount": 2421034,
-    "timestamp": "",
-    "percent": -1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-06",
+    "timestamp": 1707148800000,
     "open": 0.854,
     "high": 0.885,
     "low": 0.853,
     "close": 0.883,
+    "percent": 3.15,
     "volume": 1885800,
-    "amount": 1644041,
-    "timestamp": "",
-    "percent": 3.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-07",
+    "timestamp": 1707235200000,
     "open": 0.883,
     "high": 0.887,
     "low": 0.877,
     "close": 0.886,
+    "percent": 0.34,
     "volume": 1581500,
-    "amount": 1395418,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-08",
+    "timestamp": 1707321600000,
     "open": 0.886,
     "high": 0.893,
     "low": 0.883,
     "close": 0.89,
+    "percent": 0.45,
     "volume": 59119600,
-    "amount": 52414406,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-19",
+    "timestamp": 1708272000000,
     "open": 0.908,
     "high": 0.908,
     "low": 0.885,
     "close": 0.896,
+    "percent": 0.67,
     "volume": 1986000,
-    "amount": 1771533,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-20",
+    "timestamp": 1708358400000,
     "open": 0.895,
     "high": 0.904,
     "low": 0.893,
     "close": 0.904,
+    "percent": 0.89,
     "volume": 2319700,
-    "amount": 2088795,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-21",
+    "timestamp": 1708444800000,
     "open": 0.904,
     "high": 0.938,
     "low": 0.899,
     "close": 0.921,
+    "percent": 1.88,
     "volume": 30567200,
-    "amount": 28017152,
-    "timestamp": "",
-    "percent": 1.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-22",
+    "timestamp": 1708531200000,
     "open": 0.921,
     "high": 0.926,
     "low": 0.915,
     "close": 0.926,
+    "percent": 0.54,
     "volume": 4589900,
-    "amount": 4232556,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-23",
+    "timestamp": 1708617600000,
     "open": 0.926,
     "high": 0.936,
     "low": 0.926,
     "close": 0.929,
+    "percent": 0.32,
     "volume": 16197200,
-    "amount": 15064763,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-26",
+    "timestamp": 1708876800000,
     "open": 0.922,
     "high": 0.929,
     "low": 0.909,
     "close": 0.91,
+    "percent": -2.05,
     "volume": 5211654,
-    "amount": 4795362,
-    "timestamp": "",
-    "percent": -2.05
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-27",
+    "timestamp": 1708963200000,
     "open": 0.909,
     "high": 0.92,
     "low": 0.909,
     "close": 0.916,
+    "percent": 0.66,
     "volume": 6619701,
-    "amount": 6053465,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-28",
+    "timestamp": 1709049600000,
     "open": 0.916,
     "high": 0.925,
     "low": 0.91,
     "close": 0.911,
+    "percent": -0.55,
     "volume": 5667700,
-    "amount": 5215301,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-02-29",
+    "timestamp": 1709136000000,
     "open": 0.91,
     "high": 0.919,
     "low": 0.906,
     "close": 0.919,
+    "percent": 0.88,
     "volume": 2262600,
-    "amount": 2071715,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-01",
+    "timestamp": 1709222400000,
     "open": 0.921,
     "high": 0.921,
     "low": 0.914,
     "close": 0.92,
+    "percent": 0.11,
     "volume": 4675500,
-    "amount": 4291776,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-04",
+    "timestamp": 1709481600000,
     "open": 0.917,
     "high": 0.917,
     "low": 0.907,
     "close": 0.909,
+    "percent": -1.2,
     "volume": 2628300,
-    "amount": 2391750,
-    "timestamp": "",
-    "percent": -1.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-05",
+    "timestamp": 1709568000000,
     "open": 0.907,
     "high": 0.917,
     "low": 0.907,
     "close": 0.916,
+    "percent": 0.77,
     "volume": 1276000,
-    "amount": 1166172,
-    "timestamp": "",
-    "percent": 0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-06",
+    "timestamp": 1709654400000,
     "open": 0.915,
     "high": 0.919,
     "low": 0.91,
     "close": 0.911,
+    "percent": -0.55,
     "volume": 7784000,
-    "amount": 7105957,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-07",
+    "timestamp": 1709740800000,
     "open": 0.911,
     "high": 0.92,
     "low": 0.908,
     "close": 0.909,
+    "percent": -0.22,
     "volume": 1361900,
-    "amount": 1242202,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-08",
+    "timestamp": 1709827200000,
     "open": 0.913,
     "high": 0.913,
     "low": 0.904,
     "close": 0.909,
+    "percent": 0,
     "volume": 783500,
-    "amount": 710627,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-11",
+    "timestamp": 1710086400000,
     "open": 0.908,
     "high": 0.914,
     "low": 0.906,
     "close": 0.914,
+    "percent": 0.55,
     "volume": 1934600,
-    "amount": 1763276,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-12",
+    "timestamp": 1710172800000,
     "open": 0.914,
     "high": 0.919,
     "low": 0.91,
     "close": 0.917,
+    "percent": 0.33,
     "volume": 7812900,
-    "amount": 7134452,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-13",
+    "timestamp": 1710259200000,
     "open": 0.917,
     "high": 0.917,
     "low": 0.902,
     "close": 0.903,
+    "percent": -1.53,
     "volume": 2278500,
-    "amount": 2063292,
-    "timestamp": "",
-    "percent": -1.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-14",
+    "timestamp": 1710345600000,
     "open": 0.898,
     "high": 0.907,
     "low": 0.898,
     "close": 0.9,
+    "percent": -0.33,
     "volume": 1983100,
-    "amount": 1794054,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-15",
+    "timestamp": 1710432000000,
     "open": 0.895,
     "high": 0.905,
     "low": 0.895,
     "close": 0.904,
+    "percent": 0.44,
     "volume": 1194000,
-    "amount": 1078878,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-18",
+    "timestamp": 1710691200000,
     "open": 0.903,
     "high": 0.913,
     "low": 0.903,
     "close": 0.912,
+    "percent": 0.88,
     "volume": 3278600,
-    "amount": 2979429,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-19",
+    "timestamp": 1710777600000,
     "open": 0.915,
     "high": 0.915,
     "low": 0.897,
     "close": 0.9,
+    "percent": -1.32,
     "volume": 13907700,
-    "amount": 12542496,
-    "timestamp": "",
-    "percent": -1.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-20",
+    "timestamp": 1710864000000,
     "open": 0.9,
     "high": 0.905,
     "low": 0.897,
     "close": 0.903,
+    "percent": 0.33,
     "volume": 3586300,
-    "amount": 3229456,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-21",
+    "timestamp": 1710950400000,
     "open": 0.903,
     "high": 0.913,
     "low": 0.903,
     "close": 0.908,
+    "percent": 0.55,
     "volume": 1391100,
-    "amount": 1265225,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-22",
+    "timestamp": 1711036800000,
     "open": 0.908,
     "high": 0.908,
     "low": 0.891,
     "close": 0.897,
+    "percent": -1.21,
     "volume": 16609200,
-    "amount": 14893711,
-    "timestamp": "",
-    "percent": -1.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-25",
+    "timestamp": 1711296000000,
     "open": 0.896,
     "high": 0.899,
     "low": 0.889,
     "close": 0.889,
+    "percent": -0.89,
     "volume": 5006600,
-    "amount": 4474225,
-    "timestamp": "",
-    "percent": -0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-26",
+    "timestamp": 1711382400000,
     "open": 0.893,
     "high": 0.901,
     "low": 0.893,
     "close": 0.9,
+    "percent": 1.24,
     "volume": 2237900,
-    "amount": 2008399,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-27",
+    "timestamp": 1711468800000,
     "open": 0.9,
     "high": 0.902,
     "low": 0.895,
     "close": 0.895,
+    "percent": -0.56,
     "volume": 1685301,
-    "amount": 1513193,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-28",
+    "timestamp": 1711555200000,
     "open": 0.894,
     "high": 0.9,
     "low": 0.887,
     "close": 0.891,
+    "percent": -0.45,
     "volume": 4392100,
-    "amount": 3905895,
-    "timestamp": "",
-    "percent": -0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-03-29",
+    "timestamp": 1711641600000,
     "open": 0.885,
     "high": 0.892,
     "low": 0.885,
     "close": 0.89,
+    "percent": -0.11,
     "volume": 1559900,
-    "amount": 1388499,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-01",
+    "timestamp": 1711900800000,
     "open": 0.896,
     "high": 0.901,
     "low": 0.896,
     "close": 0.901,
+    "percent": 1.24,
     "volume": 4309101,
-    "amount": 3875990,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-02",
+    "timestamp": 1711987200000,
     "open": 0.902,
     "high": 0.904,
     "low": 0.895,
     "close": 0.898,
+    "percent": -0.33,
     "volume": 18677300,
-    "amount": 16787023,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-03",
+    "timestamp": 1712073600000,
     "open": 0.898,
     "high": 0.899,
     "low": 0.89,
     "close": 0.892,
+    "percent": -0.67,
     "volume": 12572700,
-    "amount": 11234270,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-08",
+    "timestamp": 1712505600000,
     "open": 0.89,
     "high": 0.893,
     "low": 0.884,
     "close": 0.887,
+    "percent": -0.56,
     "volume": 2367600,
-    "amount": 2104107,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-09",
+    "timestamp": 1712592000000,
     "open": 0.887,
     "high": 0.892,
     "low": 0.885,
     "close": 0.887,
+    "percent": 0,
     "volume": 2518300,
-    "amount": 2236328,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-10",
+    "timestamp": 1712678400000,
     "open": 0.885,
     "high": 0.888,
     "low": 0.874,
     "close": 0.876,
+    "percent": -1.24,
     "volume": 4211300,
-    "amount": 3719876,
-    "timestamp": "",
-    "percent": -1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-11",
+    "timestamp": 1712764800000,
     "open": 0.877,
     "high": 0.879,
     "low": 0.871,
     "close": 0.875,
+    "percent": -0.11,
     "volume": 2121500,
-    "amount": 1860125,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-12",
+    "timestamp": 1712851200000,
     "open": 0.875,
     "high": 0.875,
     "low": 0.861,
     "close": 0.861,
+    "percent": -1.6,
     "volume": 4413987,
-    "amount": 3827485,
-    "timestamp": "",
-    "percent": -1.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-15",
+    "timestamp": 1713110400000,
     "open": 0.869,
     "high": 0.882,
     "low": 0.86,
     "close": 0.878,
+    "percent": 1.97,
     "volume": 4294900,
-    "amount": 3745407,
-    "timestamp": "",
-    "percent": 1.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-16",
+    "timestamp": 1713196800000,
     "open": 0.876,
     "high": 0.879,
     "low": 0.869,
     "close": 0.873,
+    "percent": -0.57,
     "volume": 3769605,
-    "amount": 3296246,
-    "timestamp": "",
-    "percent": -0.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-17",
+    "timestamp": 1713283200000,
     "open": 0.873,
     "high": 0.888,
     "low": 0.869,
     "close": 0.887,
+    "percent": 1.6,
     "volume": 4336800,
-    "amount": 3809657,
-    "timestamp": "",
-    "percent": 1.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-18",
+    "timestamp": 1713369600000,
     "open": 0.883,
     "high": 0.908,
     "low": 0.883,
     "close": 0.896,
+    "percent": 1.01,
     "volume": 4182400,
-    "amount": 3752409,
-    "timestamp": "",
-    "percent": 1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-19",
+    "timestamp": 1713456000000,
     "open": 0.894,
     "high": 0.898,
     "low": 0.89,
     "close": 0.891,
+    "percent": -0.56,
     "volume": 10016700,
-    "amount": 8952185,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-22",
+    "timestamp": 1713715200000,
     "open": 0.899,
     "high": 0.899,
     "low": 0.888,
     "close": 0.89,
+    "percent": -0.11,
     "volume": 4021900,
-    "amount": 3594007,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-23",
+    "timestamp": 1713801600000,
     "open": 0.89,
     "high": 0.897,
     "low": 0.888,
     "close": 0.892,
+    "percent": 0.22,
     "volume": 2271200,
-    "amount": 2026712,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-24",
+    "timestamp": 1713888000000,
     "open": 0.892,
     "high": 0.892,
     "low": 0.883,
     "close": 0.889,
+    "percent": -0.34,
     "volume": 3170900,
-    "amount": 2813017,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-25",
+    "timestamp": 1713974400000,
     "open": 0.888,
     "high": 0.896,
     "low": 0.886,
     "close": 0.896,
+    "percent": 0.79,
     "volume": 4153600,
-    "amount": 3693661,
-    "timestamp": "",
-    "percent": 0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-26",
+    "timestamp": 1714060800000,
     "open": 0.901,
     "high": 0.913,
     "low": 0.892,
     "close": 0.911,
+    "percent": 1.67,
     "volume": 3484300,
-    "amount": 3148506,
-    "timestamp": "",
-    "percent": 1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-29",
+    "timestamp": 1714320000000,
     "open": 0.911,
     "high": 0.93,
     "low": 0.907,
     "close": 0.925,
+    "percent": 1.54,
     "volume": 14286500,
-    "amount": 13196452,
-    "timestamp": "",
-    "percent": 1.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-04-30",
+    "timestamp": 1714406400000,
     "open": 0.919,
     "high": 0.925,
     "low": 0.915,
     "close": 0.919,
+    "percent": -0.65,
     "volume": 3783600,
-    "amount": 3482508,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-06",
+    "timestamp": 1714924800000,
     "open": 0.92,
     "high": 0.936,
     "low": 0.92,
     "close": 0.923,
+    "percent": 0.44,
     "volume": 3969500,
-    "amount": 3676562,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-07",
+    "timestamp": 1715011200000,
     "open": 0.923,
     "high": 0.925,
     "low": 0.916,
     "close": 0.923,
+    "percent": 0,
     "volume": 1431300,
-    "amount": 1319441,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-08",
+    "timestamp": 1715097600000,
     "open": 0.923,
     "high": 0.924,
     "low": 0.916,
     "close": 0.917,
+    "percent": -0.65,
     "volume": 1881600,
-    "amount": 1726352,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-09",
+    "timestamp": 1715184000000,
     "open": 0.921,
     "high": 0.924,
     "low": 0.918,
     "close": 0.92,
+    "percent": 0.33,
     "volume": 6746500,
-    "amount": 6209374,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-10",
+    "timestamp": 1715270400000,
     "open": 0.922,
     "high": 0.935,
     "low": 0.922,
     "close": 0.933,
+    "percent": 1.41,
     "volume": 3247700,
-    "amount": 3013711,
-    "timestamp": "",
-    "percent": 1.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-13",
+    "timestamp": 1715529600000,
     "open": 0.932,
     "high": 0.94,
     "low": 0.924,
     "close": 0.936,
+    "percent": 0.32,
     "volume": 3400700,
-    "amount": 3170203,
-    "timestamp": "",
-    "percent": 0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-14",
+    "timestamp": 1715616000000,
     "open": 0.935,
     "high": 0.94,
     "low": 0.928,
     "close": 0.932,
+    "percent": -0.43,
     "volume": 2735800,
-    "amount": 2546417,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-15",
+    "timestamp": 1715702400000,
     "open": 0.933,
     "high": 0.934,
     "low": 0.924,
     "close": 0.926,
+    "percent": -0.64,
     "volume": 8791500,
-    "amount": 8165882,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-16",
+    "timestamp": 1715788800000,
     "open": 0.923,
     "high": 0.946,
     "low": 0.923,
     "close": 0.943,
+    "percent": 1.84,
     "volume": 2943900,
-    "amount": 2768919,
-    "timestamp": "",
-    "percent": 1.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-17",
+    "timestamp": 1715875200000,
     "open": 0.943,
     "high": 0.97,
     "low": 0.941,
     "close": 0.966,
+    "percent": 2.44,
     "volume": 33553800,
-    "amount": 31842918,
-    "timestamp": "",
-    "percent": 2.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-20",
+    "timestamp": 1716134400000,
     "open": 0.968,
     "high": 0.97,
     "low": 0.954,
     "close": 0.959,
+    "percent": -0.72,
     "volume": 20243081,
-    "amount": 19449010,
-    "timestamp": "",
-    "percent": -0.72
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-21",
+    "timestamp": 1716220800000,
     "open": 0.954,
     "high": 0.964,
     "low": 0.953,
     "close": 0.96,
+    "percent": 0.1,
     "volume": 3667500,
-    "amount": 3517715,
-    "timestamp": "",
-    "percent": 0.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-22",
+    "timestamp": 1716307200000,
     "open": 0.96,
     "high": 0.972,
     "low": 0.958,
     "close": 0.964,
+    "percent": 0.42,
     "volume": 5732600,
-    "amount": 5536084,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-23",
+    "timestamp": 1716393600000,
     "open": 0.962,
     "high": 0.962,
     "low": 0.951,
     "close": 0.951,
+    "percent": -1.35,
     "volume": 5376800,
-    "amount": 5129802,
-    "timestamp": "",
-    "percent": -1.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-24",
+    "timestamp": 1716480000000,
     "open": 0.944,
     "high": 0.953,
     "low": 0.94,
     "close": 0.94,
+    "percent": -1.16,
     "volume": 4521400,
-    "amount": 4293554,
-    "timestamp": "",
-    "percent": -1.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-27",
+    "timestamp": 1716739200000,
     "open": 0.935,
     "high": 0.95,
     "low": 0.935,
     "close": 0.95,
+    "percent": 1.06,
     "volume": 5099500,
-    "amount": 4813160,
-    "timestamp": "",
-    "percent": 1.06
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-28",
+    "timestamp": 1716825600000,
     "open": 0.95,
     "high": 0.951,
     "low": 0.94,
     "close": 0.949,
+    "percent": -0.11,
     "volume": 1167900,
-    "amount": 1105291,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-29",
+    "timestamp": 1716912000000,
     "open": 0.949,
     "high": 0.949,
     "low": 0.935,
     "close": 0.936,
+    "percent": -1.37,
     "volume": 2132800,
-    "amount": 2002233,
-    "timestamp": "",
-    "percent": -1.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-30",
+    "timestamp": 1716998400000,
     "open": 0.936,
     "high": 0.938,
     "low": 0.928,
     "close": 0.93,
+    "percent": -0.64,
     "volume": 2575400,
-    "amount": 2403621,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-05-31",
+    "timestamp": 1717084800000,
     "open": 0.926,
     "high": 0.937,
     "low": 0.926,
     "close": 0.932,
+    "percent": 0.22,
     "volume": 6371990,
-    "amount": 5941061,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-03",
+    "timestamp": 1717344000000,
     "open": 0.932,
     "high": 0.932,
     "low": 0.918,
     "close": 0.922,
+    "percent": -1.07,
     "volume": 6487600,
-    "amount": 5977694,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-04",
+    "timestamp": 1717430400000,
     "open": 0.922,
     "high": 0.928,
     "low": 0.922,
     "close": 0.927,
+    "percent": 0.54,
     "volume": 6806800,
-    "amount": 6304011,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-05",
+    "timestamp": 1717516800000,
     "open": 0.927,
     "high": 0.927,
     "low": 0.919,
     "close": 0.922,
+    "percent": -0.54,
     "volume": 2351600,
-    "amount": 2169163,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-06",
+    "timestamp": 1717603200000,
     "open": 0.922,
     "high": 0.922,
     "low": 0.911,
     "close": 0.911,
+    "percent": -1.19,
     "volume": 2272600,
-    "amount": 2082020,
-    "timestamp": "",
-    "percent": -1.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-07",
+    "timestamp": 1717689600000,
     "open": 0.912,
     "high": 0.921,
     "low": 0.91,
     "close": 0.917,
+    "percent": 0.66,
     "volume": 5862600,
-    "amount": 5362372,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-11",
+    "timestamp": 1718035200000,
     "open": 0.914,
     "high": 0.915,
     "low": 0.907,
     "close": 0.908,
+    "percent": -0.98,
     "volume": 4333200,
-    "amount": 3945994,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-12",
+    "timestamp": 1718121600000,
     "open": 0.908,
     "high": 0.908,
     "low": 0.898,
     "close": 0.905,
+    "percent": -0.33,
     "volume": 1746500,
-    "amount": 1573835,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-13",
+    "timestamp": 1718208000000,
     "open": 0.906,
     "high": 0.906,
     "low": 0.815,
     "close": 0.898,
+    "percent": -0.77,
     "volume": 2577306,
-    "amount": 2248261,
-    "timestamp": "",
-    "percent": -0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-14",
+    "timestamp": 1718294400000,
     "open": 0.896,
     "high": 0.916,
     "low": 0.896,
     "close": 0.913,
+    "percent": 1.67,
     "volume": 2991800,
-    "amount": 2713116,
-    "timestamp": "",
-    "percent": 1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-17",
+    "timestamp": 1718553600000,
     "open": 0.902,
     "high": 0.908,
     "low": 0.902,
     "close": 0.905,
+    "percent": -0.88,
     "volume": 1319700,
-    "amount": 1196659,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-18",
+    "timestamp": 1718640000000,
     "open": 0.908,
     "high": 0.914,
     "low": 0.905,
     "close": 0.91,
+    "percent": 0.55,
     "volume": 2134200,
-    "amount": 1939178,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-19",
+    "timestamp": 1718726400000,
     "open": 0.91,
     "high": 0.917,
     "low": 0.908,
     "close": 0.911,
+    "percent": 0.11,
     "volume": 993100,
-    "amount": 906752,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-20",
+    "timestamp": 1718812800000,
     "open": 0.911,
     "high": 0.911,
     "low": 0.901,
     "close": 0.902,
+    "percent": -0.99,
     "volume": 1620400,
-    "amount": 1465750,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-21",
+    "timestamp": 1718899200000,
     "open": 0.902,
     "high": 0.905,
     "low": 0.899,
     "close": 0.902,
+    "percent": 0,
     "volume": 3495800,
-    "amount": 3147410,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-24",
+    "timestamp": 1719158400000,
     "open": 0.9,
     "high": 0.902,
     "low": 0.892,
     "close": 0.897,
+    "percent": -0.55,
     "volume": 2648902,
-    "amount": 2374238,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-25",
+    "timestamp": 1719244800000,
     "open": 0.896,
     "high": 0.902,
     "low": 0.892,
     "close": 0.897,
+    "percent": 0,
     "volume": 2852300,
-    "amount": 2562406,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-26",
+    "timestamp": 1719331200000,
     "open": 0.897,
     "high": 0.904,
     "low": 0.893,
     "close": 0.904,
+    "percent": 0.78,
     "volume": 24082800,
-    "amount": 21661664,
-    "timestamp": "",
-    "percent": 0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-27",
+    "timestamp": 1719417600000,
     "open": 0.902,
     "high": 0.906,
     "low": 0.898,
     "close": 0.902,
+    "percent": -0.22,
     "volume": 1626800,
-    "amount": 1465183,
-    "timestamp": "",
-    "percent": -0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-06-28",
+    "timestamp": 1719504000000,
     "open": 0.902,
     "high": 0.908,
     "low": 0.894,
     "close": 0.895,
+    "percent": -0.78,
     "volume": 18912500,
-    "amount": 16985949,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-01",
+    "timestamp": 1719763200000,
     "open": 0.898,
     "high": 0.907,
     "low": 0.893,
     "close": 0.907,
+    "percent": 1.34,
     "volume": 5158300,
-    "amount": 4633965,
-    "timestamp": "",
-    "percent": 1.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-02",
+    "timestamp": 1719849600000,
     "open": 0.904,
     "high": 0.917,
     "low": 0.904,
     "close": 0.912,
+    "percent": 0.55,
     "volume": 3690507,
-    "amount": 3375707,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-03",
+    "timestamp": 1719936000000,
     "open": 0.912,
     "high": 0.914,
     "low": 0.907,
     "close": 0.912,
+    "percent": 0,
     "volume": 17195300,
-    "amount": 15635526,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-04",
+    "timestamp": 1720022400000,
     "open": 0.912,
     "high": 0.912,
     "low": 0.903,
     "close": 0.903,
+    "percent": -0.99,
     "volume": 2409800,
-    "amount": 2186843,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-05",
+    "timestamp": 1720108800000,
     "open": 0.903,
     "high": 0.903,
     "low": 0.888,
     "close": 0.892,
+    "percent": -1.22,
     "volume": 13866900,
-    "amount": 12389131,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-08",
+    "timestamp": 1720368000000,
     "open": 0.89,
     "high": 0.895,
     "low": 0.882,
     "close": 0.885,
+    "percent": -0.78,
     "volume": 9134500,
-    "amount": 8089939,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-09",
+    "timestamp": 1720454400000,
     "open": 0.882,
     "high": 0.899,
     "low": 0.882,
     "close": 0.899,
+    "percent": 1.58,
     "volume": 5903500,
-    "amount": 5249385,
-    "timestamp": "",
-    "percent": 1.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-10",
+    "timestamp": 1720540800000,
     "open": 0.897,
     "high": 0.902,
     "low": 0.895,
     "close": 0.899,
+    "percent": 0,
     "volume": 6348600,
-    "amount": 5710939,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-11",
+    "timestamp": 1720627200000,
     "open": 0.902,
     "high": 0.907,
     "low": 0.899,
     "close": 0.902,
+    "percent": 0.33,
     "volume": 5433900,
-    "amount": 4898701,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-12",
+    "timestamp": 1720713600000,
     "open": 0.904,
     "high": 0.916,
     "low": 0.904,
     "close": 0.913,
+    "percent": 1.22,
     "volume": 1509900,
-    "amount": 1380566,
-    "timestamp": "",
-    "percent": 1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-15",
+    "timestamp": 1720972800000,
     "open": 0.91,
     "high": 0.917,
     "low": 0.91,
     "close": 0.917,
+    "percent": 0.44,
     "volume": 8247900,
-    "amount": 7549137,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-16",
+    "timestamp": 1721059200000,
     "open": 0.914,
     "high": 0.92,
     "low": 0.912,
     "close": 0.916,
+    "percent": -0.11,
     "volume": 2553200,
-    "amount": 2337597,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-17",
+    "timestamp": 1721145600000,
     "open": 0.918,
     "high": 0.927,
     "low": 0.917,
     "close": 0.926,
+    "percent": 1.09,
     "volume": 7774700,
-    "amount": 7172204,
-    "timestamp": "",
-    "percent": 1.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-18",
+    "timestamp": 1721232000000,
     "open": 0.921,
     "high": 0.929,
     "low": 0.919,
     "close": 0.928,
+    "percent": 0.22,
     "volume": 3111800,
-    "amount": 2874077,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-19",
+    "timestamp": 1721318400000,
     "open": 0.924,
     "high": 0.932,
     "low": 0.92,
     "close": 0.93,
+    "percent": 0.22,
     "volume": 4474800,
-    "amount": 4134371,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-22",
+    "timestamp": 1721577600000,
     "open": 0.93,
     "high": 0.93,
     "low": 0.916,
     "close": 0.924,
+    "percent": -0.65,
     "volume": 7990500,
-    "amount": 7353561,
-    "timestamp": "",
-    "percent": -0.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-23",
+    "timestamp": 1721664000000,
     "open": 0.921,
     "high": 0.931,
     "low": 0.92,
     "close": 0.92,
+    "percent": -0.43,
     "volume": 3169100,
-    "amount": 2940551,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-24",
+    "timestamp": 1721750400000,
     "open": 0.92,
     "high": 0.922,
     "low": 0.913,
     "close": 0.915,
+    "percent": -0.54,
     "volume": 2763800,
-    "amount": 2531152,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-25",
+    "timestamp": 1721836800000,
     "open": 0.914,
     "high": 0.918,
     "low": 0.908,
     "close": 0.914,
+    "percent": -0.11,
     "volume": 2712900,
-    "amount": 2476496,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-26",
+    "timestamp": 1721923200000,
     "open": 0.914,
     "high": 0.918,
     "low": 0.906,
     "close": 0.914,
+    "percent": 0,
     "volume": 3010100,
-    "amount": 2738285,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-29",
+    "timestamp": 1722182400000,
     "open": 0.921,
     "high": 0.921,
     "low": 0.91,
     "close": 0.917,
+    "percent": 0.33,
     "volume": 4706400,
-    "amount": 4309985,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-30",
+    "timestamp": 1722268800000,
     "open": 0.916,
     "high": 0.919,
     "low": 0.908,
     "close": 0.916,
+    "percent": -0.11,
     "volume": 5325600,
-    "amount": 4866071,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-07-31",
+    "timestamp": 1722355200000,
     "open": 0.912,
     "high": 0.938,
     "low": 0.912,
     "close": 0.937,
+    "percent": 2.29,
     "volume": 5523700,
-    "amount": 5150392,
-    "timestamp": "",
-    "percent": 2.29
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-01",
+    "timestamp": 1722441600000,
     "open": 0.933,
     "high": 0.938,
     "low": 0.928,
     "close": 0.933,
+    "percent": -0.43,
     "volume": 5134800,
-    "amount": 4778483,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-02",
+    "timestamp": 1722528000000,
     "open": 0.929,
     "high": 0.931,
     "low": 0.922,
     "close": 0.924,
+    "percent": -0.96,
     "volume": 2783800,
-    "amount": 2580343,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-05",
+    "timestamp": 1722787200000,
     "open": 0.922,
     "high": 0.93,
     "low": 0.918,
     "close": 0.919,
+    "percent": -0.54,
     "volume": 3628300,
-    "amount": 3349076,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-06",
+    "timestamp": 1722873600000,
     "open": 0.922,
     "high": 0.924,
     "low": 0.905,
     "close": 0.914,
+    "percent": -0.54,
     "volume": 2532800,
-    "amount": 2317129,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-07",
+    "timestamp": 1722960000000,
     "open": 0.913,
     "high": 0.915,
     "low": 0.91,
     "close": 0.91,
+    "percent": -0.44,
     "volume": 904700,
-    "amount": 824546,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-08",
+    "timestamp": 1723046400000,
     "open": 0.909,
     "high": 0.918,
     "low": 0.907,
     "close": 0.914,
+    "percent": 0.44,
     "volume": 4997800,
-    "amount": 4561660,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-09",
+    "timestamp": 1723132800000,
     "open": 0.914,
     "high": 0.92,
     "low": 0.913,
     "close": 0.913,
+    "percent": -0.11,
     "volume": 1046200,
-    "amount": 958344,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-12",
+    "timestamp": 1723392000000,
     "open": 0.913,
     "high": 0.913,
     "low": 0.906,
     "close": 0.908,
+    "percent": -0.55,
     "volume": 9887700,
-    "amount": 8977034,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-13",
+    "timestamp": 1723478400000,
     "open": 0.91,
     "high": 0.915,
     "low": 0.908,
     "close": 0.915,
+    "percent": 0.77,
     "volume": 2226300,
-    "amount": 2027909,
-    "timestamp": "",
-    "percent": 0.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-14",
+    "timestamp": 1723564800000,
     "open": 0.913,
     "high": 0.918,
     "low": 0.909,
     "close": 0.911,
+    "percent": -0.44,
     "volume": 4286600,
-    "amount": 3910707,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-15",
+    "timestamp": 1723651200000,
     "open": 0.914,
     "high": 0.927,
     "low": 0.914,
     "close": 0.924,
+    "percent": 1.43,
     "volume": 2231700,
-    "amount": 2054342,
-    "timestamp": "",
-    "percent": 1.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-16",
+    "timestamp": 1723737600000,
     "open": 0.923,
     "high": 0.929,
     "low": 0.922,
     "close": 0.926,
+    "percent": 0.22,
     "volume": 5380900,
-    "amount": 4978300,
-    "timestamp": "",
-    "percent": 0.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-19",
+    "timestamp": 1723996800000,
     "open": 0.927,
     "high": 0.938,
     "low": 0.927,
     "close": 0.937,
+    "percent": 1.19,
     "volume": 6569700,
-    "amount": 6137783,
-    "timestamp": "",
-    "percent": 1.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-20",
+    "timestamp": 1724083200000,
     "open": 0.94,
     "high": 0.94,
     "low": 0.933,
     "close": 0.935,
+    "percent": -0.21,
     "volume": 3724300,
-    "amount": 3482402,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-21",
+    "timestamp": 1724169600000,
     "open": 0.935,
     "high": 0.935,
     "low": 0.924,
     "close": 0.928,
+    "percent": -0.75,
     "volume": 25195900,
-    "amount": 23398238,
-    "timestamp": "",
-    "percent": -0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-22",
+    "timestamp": 1724256000000,
     "open": 0.928,
     "high": 0.934,
     "low": 0.927,
     "close": 0.927,
+    "percent": -0.11,
     "volume": 1639700,
-    "amount": 1526707,
-    "timestamp": "",
-    "percent": -0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-23",
+    "timestamp": 1724342400000,
     "open": 0.931,
     "high": 0.939,
     "low": 0.927,
     "close": 0.936,
+    "percent": 0.97,
     "volume": 1147400,
-    "amount": 1071842,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-26",
+    "timestamp": 1724601600000,
     "open": 0.938,
     "high": 0.938,
     "low": 0.933,
     "close": 0.938,
+    "percent": 0.21,
     "volume": 5231800,
-    "amount": 4897136,
-    "timestamp": "",
-    "percent": 0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-27",
+    "timestamp": 1724688000000,
     "open": 0.932,
     "high": 0.939,
     "low": 0.931,
     "close": 0.936,
+    "percent": -0.21,
     "volume": 2806700,
-    "amount": 2624247,
-    "timestamp": "",
-    "percent": -0.21
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-28",
+    "timestamp": 1724774400000,
     "open": 0.936,
     "high": 0.936,
     "low": 0.927,
     "close": 0.931,
+    "percent": -0.53,
     "volume": 24666700,
-    "amount": 22943640,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-29",
+    "timestamp": 1724860800000,
     "open": 0.931,
     "high": 0.933,
     "low": 0.914,
     "close": 0.914,
+    "percent": -1.83,
     "volume": 2101900,
-    "amount": 1928290,
-    "timestamp": "",
-    "percent": -1.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-08-30",
+    "timestamp": 1724947200000,
     "open": 0.916,
     "high": 0.928,
     "low": 0.914,
     "close": 0.922,
+    "percent": 0.88,
     "volume": 4114100,
-    "amount": 3804120,
-    "timestamp": "",
-    "percent": 0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-02",
+    "timestamp": 1725206400000,
     "open": 0.925,
     "high": 0.925,
     "low": 0.91,
     "close": 0.912,
+    "percent": -1.08,
     "volume": 8399800,
-    "amount": 7679120,
-    "timestamp": "",
-    "percent": -1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-03",
+    "timestamp": 1725292800000,
     "open": 0.91,
     "high": 0.91,
     "low": 0.902,
     "close": 0.906,
+    "percent": -0.66,
     "volume": 1780700,
-    "amount": 1610506,
-    "timestamp": "",
-    "percent": -0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-04",
+    "timestamp": 1725379200000,
     "open": 0.906,
     "high": 0.911,
     "low": 0.899,
     "close": 0.901,
+    "percent": -0.55,
     "volume": 1588400,
-    "amount": 1434443,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-05",
+    "timestamp": 1725465600000,
     "open": 0.902,
     "high": 0.908,
     "low": 0.9,
     "close": 0.907,
+    "percent": 0.67,
     "volume": 578200,
-    "amount": 522500,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-06",
+    "timestamp": 1725552000000,
     "open": 0.906,
     "high": 0.92,
     "low": 0.906,
     "close": 0.908,
+    "percent": 0.11,
     "volume": 3533000,
-    "amount": 3230424,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-09",
+    "timestamp": 1725811200000,
     "open": 0.906,
     "high": 0.906,
     "low": 0.895,
     "close": 0.899,
+    "percent": -0.99,
     "volume": 1326100,
-    "amount": 1193254,
-    "timestamp": "",
-    "percent": -0.99
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-10",
+    "timestamp": 1725897600000,
     "open": 0.898,
     "high": 0.9,
     "low": 0.892,
     "close": 0.9,
+    "percent": 0.11,
     "volume": 2929500,
-    "amount": 2622565,
-    "timestamp": "",
-    "percent": 0.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-11",
+    "timestamp": 1725984000000,
     "open": 0.899,
     "high": 0.899,
     "low": 0.885,
     "close": 0.887,
+    "percent": -1.44,
     "volume": 2260500,
-    "amount": 2006576,
-    "timestamp": "",
-    "percent": -1.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-12",
+    "timestamp": 1726070400000,
     "open": 0.886,
     "high": 0.892,
     "low": 0.884,
     "close": 0.889,
+    "percent": 0.23,
     "volume": 7445400,
-    "amount": 6616275,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-13",
+    "timestamp": 1726156800000,
     "open": 0.89,
     "high": 0.899,
     "low": 0.89,
     "close": 0.892,
+    "percent": 0.34,
     "volume": 2758700,
-    "amount": 2468476,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-18",
+    "timestamp": 1726588800000,
     "open": 0.89,
     "high": 0.9,
     "low": 0.89,
     "close": 0.898,
+    "percent": 0.67,
     "volume": 3438300,
-    "amount": 3081391,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-19",
+    "timestamp": 1726675200000,
     "open": 0.9,
     "high": 0.908,
     "low": 0.894,
     "close": 0.905,
+    "percent": 0.78,
     "volume": 7569000,
-    "amount": 6839112,
-    "timestamp": "",
-    "percent": 0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-20",
+    "timestamp": 1726761600000,
     "open": 0.904,
     "high": 0.91,
     "low": 0.903,
     "close": 0.91,
+    "percent": 0.55,
     "volume": 4793900,
-    "amount": 4345253,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-23",
+    "timestamp": 1727020800000,
     "open": 0.908,
     "high": 0.92,
     "low": 0.906,
     "close": 0.915,
+    "percent": 0.55,
     "volume": 5500200,
-    "amount": 5034368,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-24",
+    "timestamp": 1727107200000,
     "open": 0.914,
     "high": 0.961,
     "low": 0.914,
     "close": 0.961,
+    "percent": 5.03,
     "volume": 17725800,
-    "amount": 16820629,
-    "timestamp": "",
-    "percent": 5.03
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-25",
+    "timestamp": 1727193600000,
     "open": 0.971,
     "high": 0.997,
     "low": 0.971,
     "close": 0.98,
+    "percent": 1.98,
     "volume": 12898800,
-    "amount": 12720410,
-    "timestamp": "",
-    "percent": 1.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-26",
+    "timestamp": 1727280000000,
     "open": 0.971,
     "high": 1.03,
     "low": 0.971,
     "close": 1.029,
+    "percent": 5,
     "volume": 19345500,
-    "amount": 19455482,
-    "timestamp": "",
-    "percent": 5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-27",
+    "timestamp": 1727366400000,
     "open": 1.051,
     "high": 1.069,
     "low": 1.029,
     "close": 1.069,
+    "percent": 3.89,
     "volume": 14827600,
-    "amount": 15513331,
-    "timestamp": "",
-    "percent": 3.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-09-30",
+    "timestamp": 1727625600000,
     "open": 1.122,
     "high": 1.15,
     "low": 1.075,
     "close": 1.15,
+    "percent": 7.58,
     "volume": 38033304,
-    "amount": 42799721,
-    "timestamp": "",
-    "percent": 7.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-08",
+    "timestamp": 1728316800000,
     "open": 1.265,
     "high": 1.265,
     "low": 1.131,
     "close": 1.212,
+    "percent": 5.39,
     "volume": 93325009,
-    "amount": 112712939,
-    "timestamp": "",
-    "percent": 5.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-09",
+    "timestamp": 1728403200000,
     "open": 1.181,
     "high": 1.199,
     "low": 1.12,
     "close": 1.12,
+    "percent": -7.59,
     "volume": 32756300,
-    "amount": 38051883,
-    "timestamp": "",
-    "percent": -7.59
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-10",
+    "timestamp": 1728489600000,
     "open": 1.124,
     "high": 1.166,
     "low": 1.104,
     "close": 1.13,
+    "percent": 0.89,
     "volume": 53760300,
-    "amount": 61247176,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-11",
+    "timestamp": 1728576000000,
     "open": 1.129,
     "high": 1.144,
     "low": 1.114,
     "close": 1.126,
+    "percent": -0.35,
     "volume": 35662300,
-    "amount": 40245582,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-14",
+    "timestamp": 1728835200000,
     "open": 1.13,
     "high": 1.161,
     "low": 1.121,
     "close": 1.154,
+    "percent": 2.49,
     "volume": 23219400,
-    "amount": 26535242,
-    "timestamp": "",
-    "percent": 2.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-15",
+    "timestamp": 1728921600000,
     "open": 1.141,
     "high": 1.159,
     "low": 1.124,
     "close": 1.124,
+    "percent": -2.6,
     "volume": 24301900,
-    "amount": 27766784,
-    "timestamp": "",
-    "percent": -2.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-16",
+    "timestamp": 1729008000000,
     "open": 1.121,
     "high": 1.155,
     "low": 1.116,
     "close": 1.144,
+    "percent": 1.78,
     "volume": 8044300,
-    "amount": 9153999,
-    "timestamp": "",
-    "percent": 1.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-17",
+    "timestamp": 1729094400000,
     "open": 1.151,
     "high": 1.16,
     "low": 1.126,
     "close": 1.126,
+    "percent": -1.57,
     "volume": 5600800,
-    "amount": 6393821,
-    "timestamp": "",
-    "percent": -1.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-18",
+    "timestamp": 1729180800000,
     "open": 1.118,
     "high": 1.181,
     "low": 1.11,
     "close": 1.158,
+    "percent": 2.84,
     "volume": 20649300,
-    "amount": 23605983,
-    "timestamp": "",
-    "percent": 2.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-21",
+    "timestamp": 1729440000000,
     "open": 1.156,
     "high": 1.157,
     "low": 1.135,
     "close": 1.145,
+    "percent": -1.12,
     "volume": 23319600,
-    "amount": 26686677,
-    "timestamp": "",
-    "percent": -1.12
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-22",
+    "timestamp": 1729526400000,
     "open": 1.143,
     "high": 1.158,
     "low": 1.14,
     "close": 1.147,
+    "percent": 0.17,
     "volume": 17186300,
-    "amount": 19692422,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-23",
+    "timestamp": 1729612800000,
     "open": 1.148,
     "high": 1.166,
     "low": 1.142,
     "close": 1.153,
+    "percent": 0.52,
     "volume": 11147700,
-    "amount": 12884136,
-    "timestamp": "",
-    "percent": 0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-24",
+    "timestamp": 1729699200000,
     "open": 1.148,
     "high": 1.155,
     "low": 1.142,
     "close": 1.149,
+    "percent": -0.35,
     "volume": 10102000,
-    "amount": 11604618,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-25",
+    "timestamp": 1729785600000,
     "open": 1.154,
     "high": 1.16,
     "low": 1.146,
     "close": 1.151,
+    "percent": 0.17,
     "volume": 7305400,
-    "amount": 8405551,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-28",
+    "timestamp": 1730044800000,
     "open": 1.15,
     "high": 1.15,
     "low": 1.142,
     "close": 1.149,
+    "percent": -0.17,
     "volume": 11061600,
-    "amount": 12663513,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-29",
+    "timestamp": 1730131200000,
     "open": 1.15,
     "high": 1.166,
     "low": 1.142,
     "close": 1.143,
+    "percent": -0.52,
     "volume": 9515600,
-    "amount": 10959020,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-30",
+    "timestamp": 1730217600000,
     "open": 1.143,
     "high": 1.149,
     "low": 1.126,
     "close": 1.133,
+    "percent": -0.87,
     "volume": 10635400,
-    "amount": 12070217,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-10-31",
+    "timestamp": 1730304000000,
     "open": 1.135,
     "high": 1.16,
     "low": 1.128,
     "close": 1.144,
+    "percent": 0.97,
     "volume": 11419900,
-    "amount": 13086726,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-01",
+    "timestamp": 1730390400000,
     "open": 1.144,
     "high": 1.165,
     "low": 1.144,
     "close": 1.147,
-    "volume": 0,
-    "amount": 0,
-    "timestamp": "",
-    "percent": 0.26
+    "percent": 0.26,
+    "volume": 6247500,
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-04",
+    "timestamp": 1730649600000,
     "open": 1.149,
     "high": 1.171,
     "low": 1.141,
     "close": 1.165,
+    "percent": 1.57,
     "volume": 15988400,
-    "amount": 18437297,
-    "timestamp": "",
-    "percent": 1.57
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-05",
+    "timestamp": 1730736000000,
     "open": 1.16,
     "high": 1.205,
     "low": 1.16,
     "close": 1.202,
+    "percent": 3.18,
     "volume": 14702239,
-    "amount": 17499560,
-    "timestamp": "",
-    "percent": 3.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-06",
+    "timestamp": 1730822400000,
     "open": 1.201,
     "high": 1.22,
     "low": 1.188,
     "close": 1.19,
+    "percent": -1,
     "volume": 35287603,
-    "amount": 42355635,
-    "timestamp": "",
-    "percent": -1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-07",
+    "timestamp": 1730908800000,
     "open": 1.175,
     "high": 1.26,
     "low": 1.175,
     "close": 1.26,
+    "percent": 5.88,
     "volume": 153412800,
-    "amount": 184130740,
-    "timestamp": "",
-    "percent": 5.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-08",
+    "timestamp": 1730995200000,
     "open": 1.268,
     "high": 1.299,
     "low": 1.22,
     "close": 1.223,
+    "percent": -2.94,
     "volume": 39447923,
-    "amount": 48814432,
-    "timestamp": "",
-    "percent": -2.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-11",
+    "timestamp": 1731254400000,
     "open": 1.199,
     "high": 1.218,
     "low": 1.199,
     "close": 1.214,
+    "percent": -0.74,
     "volume": 5839800,
-    "amount": 7053787,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-12",
+    "timestamp": 1731340800000,
     "open": 1.214,
     "high": 1.223,
     "low": 1.184,
     "close": 1.196,
+    "percent": -1.48,
     "volume": 7359100,
-    "amount": 8849530,
-    "timestamp": "",
-    "percent": -1.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-13",
+    "timestamp": 1731427200000,
     "open": 1.184,
     "high": 1.199,
     "low": 1.184,
     "close": 1.194,
+    "percent": -0.17,
     "volume": 4486800,
-    "amount": 5339968,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-14",
+    "timestamp": 1731513600000,
     "open": 1.204,
     "high": 1.208,
     "low": 1.186,
     "close": 1.186,
+    "percent": -0.67,
     "volume": 5100000,
-    "amount": 6113544,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-15",
+    "timestamp": 1731600000000,
     "open": 1.185,
     "high": 1.186,
     "low": 1.159,
     "close": 1.16,
+    "percent": -2.19,
     "volume": 5261900,
-    "amount": 6187236,
-    "timestamp": "",
-    "percent": -2.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-18",
+    "timestamp": 1731859200000,
     "open": 1.159,
     "high": 1.19,
     "low": 1.158,
     "close": 1.165,
+    "percent": 0.43,
     "volume": 12773700,
-    "amount": 14976639,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-19",
+    "timestamp": 1731945600000,
     "open": 1.161,
     "high": 1.176,
     "low": 1.152,
     "close": 1.172,
+    "percent": 0.6,
     "volume": 8825702,
-    "amount": 10261567,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-20",
+    "timestamp": 1732032000000,
     "open": 1.172,
     "high": 1.174,
     "low": 1.161,
     "close": 1.169,
+    "percent": -0.26,
     "volume": 1865500,
-    "amount": 2179943,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-21",
+    "timestamp": 1732118400000,
     "open": 1.167,
     "high": 1.174,
     "low": 1.162,
     "close": 1.17,
+    "percent": 0.09,
     "volume": 2502800,
-    "amount": 2923958,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-22",
+    "timestamp": 1732204800000,
     "open": 1.17,
     "high": 1.17,
     "low": 1.129,
     "close": 1.13,
+    "percent": -3.42,
     "volume": 11734900,
-    "amount": 13524232,
-    "timestamp": "",
-    "percent": -3.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-25",
+    "timestamp": 1732464000000,
     "open": 1.13,
     "high": 1.136,
     "low": 1.117,
     "close": 1.129,
+    "percent": -0.09,
     "volume": 6789200,
-    "amount": 7646851,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-26",
+    "timestamp": 1732550400000,
     "open": 1.12,
     "high": 1.138,
     "low": 1.12,
     "close": 1.131,
+    "percent": 0.18,
     "volume": 2579100,
-    "amount": 2920903,
-    "timestamp": "",
-    "percent": 0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-27",
+    "timestamp": 1732636800000,
     "open": 1.13,
     "high": 1.149,
     "low": 1.126,
     "close": 1.146,
+    "percent": 1.33,
     "volume": 8858700,
-    "amount": 10103781,
-    "timestamp": "",
-    "percent": 1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-28",
+    "timestamp": 1732723200000,
     "open": 1.145,
     "high": 1.153,
     "low": 1.144,
     "close": 1.145,
+    "percent": -0.09,
     "volume": 2983600,
-    "amount": 3430882,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-11-29",
+    "timestamp": 1732809600000,
     "open": 1.148,
     "high": 1.176,
     "low": 1.147,
     "close": 1.161,
+    "percent": 1.4,
     "volume": 15768200,
-    "amount": 18262676,
-    "timestamp": "",
-    "percent": 1.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-02",
+    "timestamp": 1733068800000,
     "open": 1.16,
     "high": 1.167,
     "low": 1.155,
     "close": 1.164,
+    "percent": 0.26,
     "volume": 2282000,
-    "amount": 2652338,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-03",
+    "timestamp": 1733155200000,
     "open": 1.164,
     "high": 1.177,
     "low": 1.158,
     "close": 1.175,
+    "percent": 0.95,
     "volume": 9192600,
-    "amount": 10721080,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-04",
+    "timestamp": 1733241600000,
     "open": 1.174,
     "high": 1.174,
     "low": 1.162,
     "close": 1.165,
+    "percent": -0.85,
     "volume": 9850100,
-    "amount": 11519909,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-05",
+    "timestamp": 1733328000000,
     "open": 1.165,
     "high": 1.173,
     "low": 1.165,
     "close": 1.169,
+    "percent": 0.34,
     "volume": 2792800,
-    "amount": 3267552,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-06",
+    "timestamp": 1733414400000,
     "open": 1.17,
     "high": 1.194,
     "low": 1.17,
     "close": 1.188,
+    "percent": 1.63,
     "volume": 3093800,
-    "amount": 3669474,
-    "timestamp": "",
-    "percent": 1.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-09",
+    "timestamp": 1733673600000,
     "open": 1.186,
     "high": 1.191,
     "low": 1.173,
     "close": 1.179,
+    "percent": -0.76,
     "volume": 11070200,
-    "amount": 13040528,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-10",
+    "timestamp": 1733760000000,
     "open": 1.225,
     "high": 1.225,
     "low": 1.191,
     "close": 1.195,
+    "percent": 1.36,
     "volume": 21007800,
-    "amount": 25346905,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-11",
+    "timestamp": 1733846400000,
     "open": 1.185,
     "high": 1.197,
     "low": 1.182,
     "close": 1.185,
+    "percent": -0.84,
     "volume": 105462200,
-    "amount": 125372116,
-    "timestamp": "",
-    "percent": -0.84
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-12",
+    "timestamp": 1733932800000,
     "open": 1.186,
     "high": 1.204,
     "low": 1.182,
     "close": 1.2,
+    "percent": 1.27,
     "volume": 34036500,
-    "amount": 40608947,
-    "timestamp": "",
-    "percent": 1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-13",
+    "timestamp": 1734019200000,
     "open": 1.193,
     "high": 1.193,
     "low": 1.168,
     "close": 1.168,
+    "percent": -2.67,
     "volume": 13612000,
-    "amount": 15990702,
-    "timestamp": "",
-    "percent": -2.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-16",
+    "timestamp": 1734278400000,
     "open": 1.165,
     "high": 1.172,
     "low": 1.162,
     "close": 1.165,
+    "percent": -0.26,
     "volume": 6175700,
-    "amount": 7205142,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-17",
+    "timestamp": 1734364800000,
     "open": 1.162,
     "high": 1.169,
     "low": 1.157,
     "close": 1.16,
+    "percent": -0.43,
     "volume": 9435200,
-    "amount": 10979585,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-18",
+    "timestamp": 1734451200000,
     "open": 1.165,
     "high": 1.175,
     "low": 1.164,
     "close": 1.165,
+    "percent": 0.43,
     "volume": 2051800,
-    "amount": 2397964,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-19",
+    "timestamp": 1734537600000,
     "open": 1.162,
     "high": 1.162,
     "low": 1.155,
     "close": 1.158,
+    "percent": -0.6,
     "volume": 3278500,
-    "amount": 3800960,
-    "timestamp": "",
-    "percent": -0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-20",
+    "timestamp": 1734624000000,
     "open": 1.157,
     "high": 1.168,
     "low": 1.157,
     "close": 1.159,
+    "percent": 0.09,
     "volume": 1042600,
-    "amount": 1210967,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-23",
+    "timestamp": 1734883200000,
     "open": 1.162,
     "high": 1.172,
     "low": 1.161,
     "close": 1.161,
+    "percent": 0.17,
     "volume": 3155600,
-    "amount": 3683752,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-24",
+    "timestamp": 1734969600000,
     "open": 1.161,
     "high": 1.18,
     "low": 1.161,
     "close": 1.178,
+    "percent": 1.46,
     "volume": 7396800,
-    "amount": 8682769,
-    "timestamp": "",
-    "percent": 1.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-25",
+    "timestamp": 1735056000000,
     "open": 1.178,
     "high": 1.188,
     "low": 1.173,
     "close": 1.181,
+    "percent": 0.25,
     "volume": 2609700,
-    "amount": 3079671,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-26",
+    "timestamp": 1735142400000,
     "open": 1.177,
     "high": 1.179,
     "low": 1.173,
     "close": 1.178,
+    "percent": -0.25,
     "volume": 13857900,
-    "amount": 16303999,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-27",
+    "timestamp": 1735228800000,
     "open": 1.178,
     "high": 1.189,
     "low": 1.169,
     "close": 1.182,
+    "percent": 0.34,
     "volume": 4310010,
-    "amount": 5093703,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-30",
+    "timestamp": 1735488000000,
     "open": 1.18,
     "high": 1.195,
     "low": 1.18,
     "close": 1.195,
+    "percent": 1.1,
     "volume": 4369600,
-    "amount": 5200340,
-    "timestamp": "",
-    "percent": 1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2024-12-31",
+    "timestamp": 1735574400000,
     "open": 1.194,
     "high": 1.197,
     "low": 1.166,
     "close": 1.167,
+    "percent": -2.34,
     "volume": 16688600,
-    "amount": 19701084,
-    "timestamp": "",
-    "percent": -2.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-02",
+    "timestamp": 1735747200000,
     "open": 1.164,
     "high": 1.167,
     "low": 1.118,
     "close": 1.129,
+    "percent": -3.26,
     "volume": 6467200,
-    "amount": 7401650,
-    "timestamp": "",
-    "percent": -3.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-03",
+    "timestamp": 1735833600000,
     "open": 1.124,
     "high": 1.165,
     "low": 1.106,
     "close": 1.108,
+    "percent": -1.86,
     "volume": 9423700,
-    "amount": 10501203,
-    "timestamp": "",
-    "percent": -1.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-06",
+    "timestamp": 1736092800000,
     "open": 1.108,
     "high": 1.112,
     "low": 1.094,
     "close": 1.112,
+    "percent": 0.36,
     "volume": 9772900,
-    "amount": 10804682,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-07",
+    "timestamp": 1736179200000,
     "open": 1.112,
     "high": 1.12,
     "low": 1.104,
     "close": 1.119,
+    "percent": 0.63,
     "volume": 5294900,
-    "amount": 5909048,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-08",
+    "timestamp": 1736265600000,
     "open": 1.122,
     "high": 1.125,
     "low": 1.104,
     "close": 1.12,
+    "percent": 0.09,
     "volume": 3951100,
-    "amount": 4411024,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-09",
+    "timestamp": 1736352000000,
     "open": 1.118,
     "high": 1.12,
     "low": 1.111,
     "close": 1.115,
+    "percent": -0.45,
     "volume": 2506200,
-    "amount": 2794240,
-    "timestamp": "",
-    "percent": -0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-10",
+    "timestamp": 1736438400000,
     "open": 1.113,
     "high": 1.116,
     "low": 1.101,
     "close": 1.101,
+    "percent": -1.26,
     "volume": 1942800,
-    "amount": 2147168,
-    "timestamp": "",
-    "percent": -1.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-13",
+    "timestamp": 1736697600000,
     "open": 1.088,
     "high": 1.109,
     "low": 1.086,
     "close": 1.094,
+    "percent": -0.64,
     "volume": 1933800,
-    "amount": 2111602,
-    "timestamp": "",
-    "percent": -0.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-14",
+    "timestamp": 1736784000000,
     "open": 1.095,
     "high": 1.122,
     "low": 1.092,
     "close": 1.12,
+    "percent": 2.38,
     "volume": 15628400,
-    "amount": 17395578,
-    "timestamp": "",
-    "percent": 2.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-15",
+    "timestamp": 1736870400000,
     "open": 1.115,
     "high": 1.13,
     "low": 1.115,
     "close": 1.12,
+    "percent": 0,
     "volume": 10239600,
-    "amount": 11477531,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-16",
+    "timestamp": 1736956800000,
     "open": 1.119,
     "high": 1.13,
     "low": 1.119,
     "close": 1.126,
+    "percent": 0.54,
     "volume": 6264600,
-    "amount": 7043397,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-17",
+    "timestamp": 1737043200000,
     "open": 1.115,
     "high": 1.131,
     "low": 1.115,
     "close": 1.121,
+    "percent": -0.44,
     "volume": 3815200,
-    "amount": 4301234,
-    "timestamp": "",
-    "percent": -0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-20",
+    "timestamp": 1737302400000,
     "open": 1.129,
     "high": 1.136,
     "low": 1.125,
     "close": 1.125,
+    "percent": 0.36,
     "volume": 2021900,
-    "amount": 2281583,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-21",
+    "timestamp": 1737388800000,
     "open": 1.125,
     "high": 1.135,
     "low": 1.123,
     "close": 1.128,
+    "percent": 0.27,
     "volume": 13721500,
-    "amount": 15474012,
-    "timestamp": "",
-    "percent": 0.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-22",
+    "timestamp": 1737475200000,
     "open": 1.122,
     "high": 1.122,
     "low": 1.108,
     "close": 1.112,
+    "percent": -1.42,
     "volume": 3781400,
-    "amount": 4200118,
-    "timestamp": "",
-    "percent": -1.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-23",
+    "timestamp": 1737561600000,
     "open": 1.123,
     "high": 1.145,
     "low": 1.113,
     "close": 1.132,
+    "percent": 1.8,
     "volume": 8477902,
-    "amount": 9609510,
-    "timestamp": "",
-    "percent": 1.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-24",
+    "timestamp": 1737648000000,
     "open": 1.129,
     "high": 1.144,
     "low": 1.124,
     "close": 1.138,
+    "percent": 0.53,
     "volume": 1615000,
-    "amount": 1838416,
-    "timestamp": "",
-    "percent": 0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-01-27",
+    "timestamp": 1737907200000,
     "open": 1.143,
     "high": 1.148,
     "low": 1.136,
     "close": 1.136,
+    "percent": -0.18,
     "volume": 3116900,
-    "amount": 3557372,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-05",
+    "timestamp": 1738684800000,
     "open": 1.136,
     "high": 1.136,
     "low": 1.119,
     "close": 1.121,
+    "percent": -1.32,
     "volume": 7784500,
-    "amount": 8739903,
-    "timestamp": "",
-    "percent": -1.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-06",
+    "timestamp": 1738771200000,
     "open": 1.124,
     "high": 1.131,
     "low": 1.117,
     "close": 1.13,
+    "percent": 0.8,
     "volume": 11324500,
-    "amount": 12756554,
-    "timestamp": "",
-    "percent": 0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-07",
+    "timestamp": 1738857600000,
     "open": 1.131,
     "high": 1.149,
     "low": 1.125,
     "close": 1.141,
+    "percent": 0.97,
     "volume": 7768600,
-    "amount": 8856105,
-    "timestamp": "",
-    "percent": 0.97
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-10",
+    "timestamp": 1739116800000,
     "open": 1.143,
     "high": 1.148,
     "low": 1.141,
     "close": 1.144,
+    "percent": 0.26,
     "volume": 4295100,
-    "amount": 4909569,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-11",
+    "timestamp": 1739203200000,
     "open": 1.142,
     "high": 1.143,
     "low": 1.134,
     "close": 1.142,
+    "percent": -0.17,
     "volume": 12836800,
-    "amount": 14640800,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-12",
+    "timestamp": 1739289600000,
     "open": 1.139,
     "high": 1.158,
     "low": 1.139,
     "close": 1.157,
+    "percent": 1.31,
     "volume": 3049200,
-    "amount": 3503081,
-    "timestamp": "",
-    "percent": 1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-13",
+    "timestamp": 1739376000000,
     "open": 1.157,
     "high": 1.168,
     "low": 1.152,
     "close": 1.159,
+    "percent": 0.17,
     "volume": 2157600,
-    "amount": 2500022,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-14",
+    "timestamp": 1739462400000,
     "open": 1.152,
     "high": 1.17,
     "low": 1.148,
     "close": 1.159,
+    "percent": 0,
     "volume": 12630000,
-    "amount": 14583899,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-17",
+    "timestamp": 1739721600000,
     "open": 1.163,
     "high": 1.166,
     "low": 1.153,
     "close": 1.16,
+    "percent": 0.09,
     "volume": 1748900,
-    "amount": 2028284,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-18",
+    "timestamp": 1739808000000,
     "open": 1.16,
     "high": 1.165,
     "low": 1.148,
     "close": 1.151,
+    "percent": -0.78,
     "volume": 16694000,
-    "amount": 19357257,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-19",
+    "timestamp": 1739894400000,
     "open": 1.151,
     "high": 1.159,
     "low": 1.147,
     "close": 1.154,
+    "percent": 0.26,
     "volume": 8895800,
-    "amount": 10259693,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-20",
+    "timestamp": 1739980800000,
     "open": 1.151,
     "high": 1.157,
     "low": 1.148,
     "close": 1.151,
+    "percent": -0.26,
     "volume": 4237000,
-    "amount": 4879073,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-21",
+    "timestamp": 1740067200000,
     "open": 1.15,
     "high": 1.157,
     "low": 1.141,
     "close": 1.151,
+    "percent": 0,
     "volume": 5962600,
-    "amount": 6865799,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-24",
+    "timestamp": 1740326400000,
     "open": 1.148,
     "high": 1.155,
     "low": 1.144,
     "close": 1.149,
+    "percent": -0.17,
     "volume": 14299300,
-    "amount": 16448631,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-25",
+    "timestamp": 1740412800000,
     "open": 1.146,
     "high": 1.148,
     "low": 1.133,
     "close": 1.135,
+    "percent": -1.22,
     "volume": 8324800,
-    "amount": 9493054,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-26",
+    "timestamp": 1740499200000,
     "open": 1.139,
     "high": 1.152,
     "low": 1.139,
     "close": 1.151,
+    "percent": 1.41,
     "volume": 721413,
-    "amount": 826195,
-    "timestamp": "",
-    "percent": 1.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-27",
+    "timestamp": 1740585600000,
     "open": 1.149,
     "high": 1.159,
     "low": 1.144,
     "close": 1.159,
+    "percent": 0.7,
     "volume": 16127754,
-    "amount": 18538995,
-    "timestamp": "",
-    "percent": 0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-02-28",
+    "timestamp": 1740672000000,
     "open": 1.159,
     "high": 1.161,
     "low": 1.139,
     "close": 1.141,
+    "percent": -1.55,
     "volume": 864400,
-    "amount": 994677,
-    "timestamp": "",
-    "percent": -1.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-03",
+    "timestamp": 1740931200000,
     "open": 1.14,
     "high": 1.144,
     "low": 1.133,
     "close": 1.137,
+    "percent": -0.35,
     "volume": 2419000,
-    "amount": 2758625,
-    "timestamp": "",
-    "percent": -0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-04",
+    "timestamp": 1741017600000,
     "open": 1.139,
     "high": 1.141,
     "low": 1.129,
     "close": 1.138,
+    "percent": 0.09,
     "volume": 939700,
-    "amount": 1069091,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-05",
+    "timestamp": 1741104000000,
     "open": 1.134,
     "high": 1.148,
     "low": 1.134,
     "close": 1.146,
+    "percent": 0.7,
     "volume": 5568100,
-    "amount": 6364989,
-    "timestamp": "",
-    "percent": 0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-06",
+    "timestamp": 1741190400000,
     "open": 1.146,
     "high": 1.161,
     "low": 1.144,
     "close": 1.156,
+    "percent": 0.87,
     "volume": 12210500,
-    "amount": 14110214,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-07",
+    "timestamp": 1741276800000,
     "open": 1.159,
     "high": 1.159,
     "low": 1.149,
     "close": 1.151,
+    "percent": -0.43,
     "volume": 2066500,
-    "amount": 2382861,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-10",
+    "timestamp": 1741536000000,
     "open": 1.151,
     "high": 1.151,
     "low": 1.137,
     "close": 1.141,
+    "percent": -0.87,
     "volume": 693900,
-    "amount": 790784,
-    "timestamp": "",
-    "percent": -0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-11",
+    "timestamp": 1741622400000,
     "open": 1.136,
     "high": 1.145,
     "low": 1.119,
     "close": 1.144,
+    "percent": 0.26,
     "volume": 7000300,
-    "amount": 7965918,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-12",
+    "timestamp": 1741708800000,
     "open": 1.144,
     "high": 1.156,
     "low": 1.142,
     "close": 1.148,
+    "percent": 0.35,
     "volume": 1808500,
-    "amount": 2075523,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-13",
+    "timestamp": 1741795200000,
     "open": 1.149,
     "high": 1.151,
     "low": 1.141,
     "close": 1.145,
+    "percent": -0.26,
     "volume": 683100,
-    "amount": 782337,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-14",
+    "timestamp": 1741881600000,
     "open": 1.147,
     "high": 1.183,
     "low": 1.147,
     "close": 1.171,
+    "percent": 2.27,
     "volume": 5402400,
-    "amount": 6320146,
-    "timestamp": "",
-    "percent": 2.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-17",
+    "timestamp": 1742140800000,
     "open": 1.172,
     "high": 1.177,
     "low": 1.17,
     "close": 1.173,
+    "percent": 0.17,
     "volume": 888800,
-    "amount": 1043326,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-18",
+    "timestamp": 1742227200000,
     "open": 1.177,
     "high": 1.178,
     "low": 1.164,
     "close": 1.172,
+    "percent": -0.09,
     "volume": 14196400,
-    "amount": 16640001,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-19",
+    "timestamp": 1742313600000,
     "open": 1.172,
     "high": 1.183,
     "low": 1.168,
     "close": 1.18,
+    "percent": 0.68,
     "volume": 2695300,
-    "amount": 3173297,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-20",
+    "timestamp": 1742400000000,
     "open": 1.18,
     "high": 1.18,
     "low": 1.167,
     "close": 1.168,
+    "percent": -1.02,
     "volume": 8764300,
-    "amount": 10258783,
-    "timestamp": "",
-    "percent": -1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-21",
+    "timestamp": 1742486400000,
     "open": 1.168,
     "high": 1.172,
     "low": 1.153,
     "close": 1.155,
+    "percent": -1.11,
     "volume": 3319000,
-    "amount": 3864160,
-    "timestamp": "",
-    "percent": -1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-24",
+    "timestamp": 1742745600000,
     "open": 1.153,
     "high": 1.159,
     "low": 1.151,
     "close": 1.158,
+    "percent": 0.26,
     "volume": 5141710,
-    "amount": 5943482,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-25",
+    "timestamp": 1742832000000,
     "open": 1.16,
     "high": 1.161,
     "low": 1.158,
     "close": 1.159,
+    "percent": 0.09,
     "volume": 79400,
-    "amount": 92054,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-26",
+    "timestamp": 1742918400000,
     "open": 1.156,
     "high": 1.16,
     "low": 1.149,
     "close": 1.15,
+    "percent": -0.78,
     "volume": 3070200,
-    "amount": 3535256,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-27",
+    "timestamp": 1743004800000,
     "open": 1.152,
     "high": 1.161,
     "low": 1.149,
     "close": 1.154,
+    "percent": 0.35,
     "volume": 999100,
-    "amount": 1154306,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-28",
+    "timestamp": 1743091200000,
     "open": 1.152,
     "high": 1.157,
     "low": 1.15,
     "close": 1.153,
+    "percent": -0.09,
     "volume": 5015900,
-    "amount": 5787890,
-    "timestamp": "",
-    "percent": -0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-03-31",
+    "timestamp": 1743350400000,
     "open": 1.16,
     "high": 1.164,
     "low": 1.141,
     "close": 1.144,
+    "percent": -0.78,
     "volume": 1120302,
-    "amount": 1283762,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-01",
+    "timestamp": 1743436800000,
     "open": 1.15,
     "high": 1.15,
     "low": 1.138,
     "close": 1.141,
+    "percent": -0.26,
     "volume": 319200,
-    "amount": 365078,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-02",
+    "timestamp": 1743523200000,
     "open": 1.141,
     "high": 1.152,
     "low": 1.141,
     "close": 1.15,
+    "percent": 0.79,
     "volume": 894200,
-    "amount": 1027092,
-    "timestamp": "",
-    "percent": 0.79
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-03",
+    "timestamp": 1743609600000,
     "open": 1.151,
     "high": 1.155,
     "low": 1.145,
     "close": 1.148,
+    "percent": -0.17,
     "volume": 5600600,
-    "amount": 6432266,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-07",
+    "timestamp": 1743955200000,
     "open": 1.108,
     "high": 1.146,
     "low": 1.041,
     "close": 1.05,
+    "percent": -8.54,
     "volume": 5302200,
-    "amount": 5703342,
-    "timestamp": "",
-    "percent": -8.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-08",
+    "timestamp": 1744041600000,
     "open": 1.051,
     "high": 1.092,
     "low": 1.051,
     "close": 1.092,
+    "percent": 4,
     "volume": 10151000,
-    "amount": 10978721,
-    "timestamp": "",
-    "percent": 4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-09",
+    "timestamp": 1744128000000,
     "open": 1.095,
     "high": 1.097,
     "low": 1.072,
     "close": 1.093,
+    "percent": 0.09,
     "volume": 8174400,
-    "amount": 8915552,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-10",
+    "timestamp": 1744214400000,
     "open": 1.093,
     "high": 1.112,
     "low": 1.093,
     "close": 1.109,
+    "percent": 1.46,
     "volume": 5298400,
-    "amount": 5875008,
-    "timestamp": "",
-    "percent": 1.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-11",
+    "timestamp": 1744300800000,
     "open": 1.109,
     "high": 1.111,
     "low": 1.099,
     "close": 1.107,
+    "percent": -0.18,
     "volume": 2341400,
-    "amount": 2587373,
-    "timestamp": "",
-    "percent": -0.18
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-14",
+    "timestamp": 1744560000000,
     "open": 1.108,
     "high": 1.115,
     "low": 1.108,
     "close": 1.113,
+    "percent": 0.54,
     "volume": 1880100,
-    "amount": 2092349,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-15",
+    "timestamp": 1744646400000,
     "open": 1.112,
     "high": 1.121,
     "low": 1.111,
     "close": 1.12,
+    "percent": 0.63,
     "volume": 6398000,
-    "amount": 7146116,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-16",
+    "timestamp": 1744732800000,
     "open": 1.11,
     "high": 1.125,
     "low": 1.11,
     "close": 1.125,
+    "percent": 0.45,
     "volume": 8786800,
-    "amount": 9800810,
-    "timestamp": "",
-    "percent": 0.45
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-17",
+    "timestamp": 1744819200000,
     "open": 1.118,
     "high": 1.128,
     "low": 1.115,
     "close": 1.126,
+    "percent": 0.09,
     "volume": 2725900,
-    "amount": 3066447,
-    "timestamp": "",
-    "percent": 0.09
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-18",
+    "timestamp": 1744905600000,
     "open": 1.126,
     "high": 1.137,
     "low": 1.12,
     "close": 1.136,
+    "percent": 0.89,
     "volume": 5107205,
-    "amount": 5776327,
-    "timestamp": "",
-    "percent": 0.89
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-21",
+    "timestamp": 1745164800000,
     "open": 1.136,
     "high": 1.143,
     "low": 1.13,
     "close": 1.13,
+    "percent": -0.53,
     "volume": 1881100,
-    "amount": 2132048,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-22",
+    "timestamp": 1745251200000,
     "open": 1.134,
     "high": 1.14,
     "low": 1.134,
     "close": 1.137,
+    "percent": 0.62,
     "volume": 1200500,
-    "amount": 1364843,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-23",
+    "timestamp": 1745337600000,
     "open": 1.137,
     "high": 1.137,
     "low": 1.131,
     "close": 1.131,
+    "percent": -0.53,
     "volume": 2394700,
-    "amount": 2718981,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-24",
+    "timestamp": 1745424000000,
     "open": 1.131,
     "high": 1.142,
     "low": 1.131,
     "close": 1.138,
+    "percent": 0.62,
     "volume": 2393400,
-    "amount": 2724660,
-    "timestamp": "",
-    "percent": 0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-25",
+    "timestamp": 1745510400000,
     "open": 1.135,
     "high": 1.143,
     "low": 1.135,
     "close": 1.138,
+    "percent": 0,
     "volume": 2514700,
-    "amount": 2867857,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-28",
+    "timestamp": 1745769600000,
     "open": 1.135,
     "high": 1.139,
     "low": 1.131,
     "close": 1.138,
+    "percent": 0,
     "volume": 2056700,
-    "amount": 2340534,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-29",
+    "timestamp": 1745856000000,
     "open": 1.134,
     "high": 1.141,
     "low": 1.131,
     "close": 1.132,
+    "percent": -0.53,
     "volume": 969800,
-    "amount": 1099734,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-04-30",
+    "timestamp": 1745942400000,
     "open": 1.132,
     "high": 1.132,
     "low": 1.121,
     "close": 1.122,
+    "percent": -0.88,
     "volume": 2981300,
-    "amount": 3347914,
-    "timestamp": "",
-    "percent": -0.88
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-06",
+    "timestamp": 1746460800000,
     "open": 1.122,
     "high": 1.133,
     "low": 1.094,
     "close": 1.126,
+    "percent": 0.36,
     "volume": 6250801,
-    "amount": 7039828,
-    "timestamp": "",
-    "percent": 0.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-07",
+    "timestamp": 1746547200000,
     "open": 1.129,
     "high": 1.186,
     "low": 1.129,
     "close": 1.143,
+    "percent": 1.51,
     "volume": 2949100,
-    "amount": 3368341,
-    "timestamp": "",
-    "percent": 1.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-08",
+    "timestamp": 1746633600000,
     "open": 1.135,
     "high": 1.153,
     "low": 1.135,
     "close": 1.15,
+    "percent": 0.61,
     "volume": 2323400,
-    "amount": 2668723,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-09",
+    "timestamp": 1746720000000,
     "open": 1.152,
     "high": 1.154,
     "low": 1.15,
     "close": 1.152,
+    "percent": 0.17,
     "volume": 2581300,
-    "amount": 2973292,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-12",
+    "timestamp": 1746979200000,
     "open": 1.152,
     "high": 1.166,
     "low": 1.148,
     "close": 1.163,
+    "percent": 0.95,
     "volume": 6194400,
-    "amount": 7172628,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-13",
+    "timestamp": 1747065600000,
     "open": 1.154,
     "high": 1.17,
     "low": 1.154,
     "close": 1.168,
+    "percent": 0.43,
     "volume": 5717700,
-    "amount": 6669594,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-14",
+    "timestamp": 1747152000000,
     "open": 1.171,
     "high": 1.202,
     "low": 1.165,
     "close": 1.196,
+    "percent": 2.4,
     "volume": 5756400,
-    "amount": 6840382,
-    "timestamp": "",
-    "percent": 2.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-15",
+    "timestamp": 1747238400000,
     "open": 1.195,
     "high": 1.196,
     "low": 1.182,
     "close": 1.182,
+    "percent": -1.17,
     "volume": 2462300,
-    "amount": 2923840,
-    "timestamp": "",
-    "percent": -1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-16",
+    "timestamp": 1747324800000,
     "open": 1.187,
     "high": 1.187,
     "low": 1.166,
     "close": 1.17,
+    "percent": -1.02,
     "volume": 13539000,
-    "amount": 15845127,
-    "timestamp": "",
-    "percent": -1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-19",
+    "timestamp": 1747584000000,
     "open": 1.169,
     "high": 1.176,
     "low": 1.161,
     "close": 1.17,
+    "percent": 0,
     "volume": 288000,
-    "amount": 337457,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-20",
+    "timestamp": 1747670400000,
     "open": 1.168,
     "high": 1.179,
     "low": 1.162,
     "close": 1.173,
+    "percent": 0.26,
     "volume": 255500,
-    "amount": 299591,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-21",
+    "timestamp": 1747756800000,
     "open": 1.173,
     "high": 1.181,
     "low": 1.173,
     "close": 1.175,
+    "percent": 0.17,
     "volume": 498900,
-    "amount": 586975,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-22",
+    "timestamp": 1747843200000,
     "open": 1.179,
     "high": 1.18,
     "low": 1.173,
     "close": 1.177,
+    "percent": 0.17,
     "volume": 345000,
-    "amount": 405818,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-23",
+    "timestamp": 1747929600000,
     "open": 1.179,
     "high": 1.183,
     "low": 1.165,
     "close": 1.166,
+    "percent": -0.93,
     "volume": 1277600,
-    "amount": 1497842,
-    "timestamp": "",
-    "percent": -0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-26",
+    "timestamp": 1748188800000,
     "open": 1.168,
     "high": 1.169,
     "low": 1.158,
     "close": 1.16,
+    "percent": -0.51,
     "volume": 6663600,
-    "amount": 7740481,
-    "timestamp": "",
-    "percent": -0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-27",
+    "timestamp": 1748275200000,
     "open": 1.161,
     "high": 1.168,
     "low": 1.161,
     "close": 1.165,
+    "percent": 0.43,
     "volume": 2220200,
-    "amount": 2588013,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-28",
+    "timestamp": 1748361600000,
     "open": 1.166,
     "high": 1.169,
     "low": 1.16,
     "close": 1.161,
+    "percent": -0.34,
     "volume": 1106200,
-    "amount": 1287966,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-29",
+    "timestamp": 1748448000000,
     "open": 1.169,
     "high": 1.172,
     "low": 1.159,
     "close": 1.172,
+    "percent": 0.95,
     "volume": 1994302,
-    "amount": 2326743,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-05-30",
+    "timestamp": 1748534400000,
     "open": 1.161,
     "high": 1.171,
     "low": 1.161,
     "close": 1.17,
+    "percent": -0.17,
     "volume": 1140300,
-    "amount": 1330513,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-03",
+    "timestamp": 1748880000000,
     "open": 1.17,
     "high": 1.189,
     "low": 1.17,
     "close": 1.181,
+    "percent": 0.94,
     "volume": 9229300,
-    "amount": 10911979,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-04",
+    "timestamp": 1748966400000,
     "open": 1.186,
     "high": 1.19,
     "low": 1.184,
     "close": 1.189,
+    "percent": 0.68,
     "volume": 2581700,
-    "amount": 3064205,
-    "timestamp": "",
-    "percent": 0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-05",
+    "timestamp": 1749052800000,
     "open": 1.19,
     "high": 1.193,
     "low": 1.184,
     "close": 1.188,
+    "percent": -0.08,
     "volume": 4607900,
-    "amount": 5475636,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-06",
+    "timestamp": 1749139200000,
     "open": 1.192,
     "high": 1.195,
     "low": 1.184,
     "close": 1.186,
+    "percent": -0.17,
     "volume": 1377100,
-    "amount": 1636423,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-09",
+    "timestamp": 1749398400000,
     "open": 1.186,
     "high": 1.196,
     "low": 1.186,
     "close": 1.194,
+    "percent": 0.67,
     "volume": 7019900,
-    "amount": 8370833,
-    "timestamp": "",
-    "percent": 0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-10",
+    "timestamp": 1749484800000,
     "open": 1.189,
     "high": 1.205,
     "low": 1.187,
     "close": 1.191,
+    "percent": -0.25,
     "volume": 1782000,
-    "amount": 2134295,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-11",
+    "timestamp": 1749571200000,
     "open": 1.19,
     "high": 1.21,
     "low": 1.19,
     "close": 1.203,
+    "percent": 1.01,
     "volume": 7606500,
-    "amount": 9160673,
-    "timestamp": "",
-    "percent": 1.01
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-12",
+    "timestamp": 1749657600000,
     "open": 1.205,
     "high": 1.212,
     "low": 1.198,
     "close": 1.206,
+    "percent": 0.25,
     "volume": 10810600,
-    "amount": 13051391,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-13",
+    "timestamp": 1749744000000,
     "open": 1.206,
     "high": 1.206,
     "low": 1.195,
     "close": 1.195,
+    "percent": -0.91,
     "volume": 4085000,
-    "amount": 4890644,
-    "timestamp": "",
-    "percent": -0.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-16",
+    "timestamp": 1750003200000,
     "open": 1.194,
     "high": 1.212,
     "low": 1.194,
     "close": 1.212,
+    "percent": 1.42,
     "volume": 6437600,
-    "amount": 7754840,
-    "timestamp": "",
-    "percent": 1.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-17",
+    "timestamp": 1750089600000,
     "open": 1.203,
     "high": 1.214,
     "low": 1.203,
     "close": 1.212,
+    "percent": 0,
     "volume": 5612500,
-    "amount": 6797497,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-18",
+    "timestamp": 1750176000000,
     "open": 1.212,
     "high": 1.213,
     "low": 1.202,
     "close": 1.213,
+    "percent": 0.08,
     "volume": 739200,
-    "amount": 892423,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-19",
+    "timestamp": 1750262400000,
     "open": 1.206,
     "high": 1.208,
     "low": 1.196,
     "close": 1.199,
+    "percent": -1.15,
     "volume": 2607307,
-    "amount": 3131176,
-    "timestamp": "",
-    "percent": -1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-20",
+    "timestamp": 1750348800000,
     "open": 1.199,
     "high": 1.212,
     "low": 1.199,
     "close": 1.21,
+    "percent": 0.92,
     "volume": 1964800,
-    "amount": 2372509,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-23",
+    "timestamp": 1750608000000,
     "open": 1.205,
     "high": 1.227,
     "low": 1.202,
     "close": 1.225,
+    "percent": 1.24,
     "volume": 10633700,
-    "amount": 12950667,
-    "timestamp": "",
-    "percent": 1.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-24",
+    "timestamp": 1750694400000,
     "open": 1.215,
     "high": 1.247,
     "low": 1.215,
     "close": 1.24,
+    "percent": 1.22,
     "volume": 1270102,
-    "amount": 1573987,
-    "timestamp": "",
-    "percent": 1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-25",
+    "timestamp": 1750780800000,
     "open": 1.239,
     "high": 1.274,
     "low": 1.23,
     "close": 1.271,
+    "percent": 2.5,
     "volume": 2757200,
-    "amount": 3455798,
-    "timestamp": "",
-    "percent": 2.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-26",
+    "timestamp": 1750867200000,
     "open": 1.277,
     "high": 1.277,
     "low": 1.26,
     "close": 1.272,
+    "percent": 0.08,
     "volume": 10428300,
-    "amount": 13213684,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-27",
+    "timestamp": 1750953600000,
     "open": 1.27,
     "high": 1.287,
     "low": 1.247,
     "close": 1.249,
+    "percent": -1.81,
     "volume": 5367200,
-    "amount": 6757361,
-    "timestamp": "",
-    "percent": -1.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-06-30",
+    "timestamp": 1751212800000,
     "open": 1.241,
     "high": 1.251,
     "low": 1.238,
     "close": 1.249,
+    "percent": 0,
     "volume": 10667800,
-    "amount": 13284695,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-01",
+    "timestamp": 1751299200000,
     "open": 1.248,
     "high": 1.259,
     "low": 1.247,
     "close": 1.259,
+    "percent": 0.8,
     "volume": 16702000,
-    "amount": 20966485,
-    "timestamp": "",
-    "percent": 0.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-02",
+    "timestamp": 1751385600000,
     "open": 1.259,
     "high": 1.265,
     "low": 1.253,
     "close": 1.258,
+    "percent": -0.08,
     "volume": 2603700,
-    "amount": 3280572,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-03",
+    "timestamp": 1751472000000,
     "open": 1.254,
     "high": 1.263,
     "low": 1.253,
     "close": 1.261,
+    "percent": 0.24,
     "volume": 13734000,
-    "amount": 17288941,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-04",
+    "timestamp": 1751558400000,
     "open": 1.259,
     "high": 1.287,
     "low": 1.257,
     "close": 1.272,
+    "percent": 0.87,
     "volume": 6212000,
-    "amount": 7912041,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-07",
+    "timestamp": 1751817600000,
     "open": 1.275,
     "high": 1.28,
     "low": 1.265,
     "close": 1.278,
+    "percent": 0.47,
     "volume": 9253400,
-    "amount": 11812398,
-    "timestamp": "",
-    "percent": 0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-08",
+    "timestamp": 1751904000000,
     "open": 1.278,
     "high": 1.284,
     "low": 1.273,
     "close": 1.283,
+    "percent": 0.39,
     "volume": 2332100,
-    "amount": 2987678,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-09",
+    "timestamp": 1751990400000,
     "open": 1.282,
     "high": 1.291,
     "low": 1.279,
     "close": 1.284,
+    "percent": 0.08,
     "volume": 8508300,
-    "amount": 10946354,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-10",
+    "timestamp": 1752076800000,
     "open": 1.283,
     "high": 1.309,
     "low": 1.283,
     "close": 1.309,
+    "percent": 1.95,
     "volume": 14833400,
-    "amount": 19313762,
-    "timestamp": "",
-    "percent": 1.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-11",
+    "timestamp": 1752163200000,
     "open": 1.297,
     "high": 1.325,
     "low": 1.297,
     "close": 1.302,
+    "percent": -0.53,
     "volume": 2765305,
-    "amount": 3630586,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-14",
+    "timestamp": 1752422400000,
     "open": 1.302,
     "high": 1.309,
     "low": 1.295,
     "close": 1.295,
+    "percent": -0.54,
     "volume": 4886600,
-    "amount": 6352705,
-    "timestamp": "",
-    "percent": -0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-15",
+    "timestamp": 1752508800000,
     "open": 1.296,
     "high": 1.302,
     "low": 1.28,
     "close": 1.291,
+    "percent": -0.31,
     "volume": 82928114,
-    "amount": 107145875,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-16",
+    "timestamp": 1752595200000,
     "open": 1.288,
     "high": 1.288,
     "low": 1.273,
     "close": 1.282,
+    "percent": -0.7,
     "volume": 38610214,
-    "amount": 49318084,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-17",
+    "timestamp": 1752681600000,
     "open": 1.279,
     "high": 1.286,
     "low": 1.277,
     "close": 1.282,
+    "percent": 0,
     "volume": 3708500,
-    "amount": 4749768,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-18",
+    "timestamp": 1752768000000,
     "open": 1.289,
     "high": 1.295,
     "low": 1.279,
     "close": 1.292,
+    "percent": 0.78,
     "volume": 4888900,
-    "amount": 6308027,
-    "timestamp": "",
-    "percent": 0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-21",
+    "timestamp": 1753027200000,
     "open": 1.292,
     "high": 1.294,
     "low": 1.285,
     "close": 1.29,
+    "percent": -0.15,
     "volume": 1200000,
-    "amount": 1547490,
-    "timestamp": "",
-    "percent": -0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-22",
+    "timestamp": 1753113600000,
     "open": 1.287,
     "high": 1.29,
     "low": 1.274,
     "close": 1.284,
+    "percent": -0.47,
     "volume": 3004103,
-    "amount": 3843161,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-23",
+    "timestamp": 1753200000000,
     "open": 1.278,
     "high": 1.307,
     "low": 1.278,
     "close": 1.296,
+    "percent": 0.93,
     "volume": 13614400,
-    "amount": 17653158,
-    "timestamp": "",
-    "percent": 0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-24",
+    "timestamp": 1753286400000,
     "open": 1.296,
     "high": 1.303,
     "low": 1.29,
     "close": 1.298,
+    "percent": 0.15,
     "volume": 4477800,
-    "amount": 5808118,
-    "timestamp": "",
-    "percent": 0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-25",
+    "timestamp": 1753372800000,
     "open": 1.298,
     "high": 1.301,
     "low": 1.294,
     "close": 1.295,
+    "percent": -0.23,
     "volume": 1406200,
-    "amount": 1824399,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-28",
+    "timestamp": 1753632000000,
     "open": 1.296,
     "high": 1.316,
     "low": 1.295,
     "close": 1.307,
+    "percent": 0.93,
     "volume": 2657200,
-    "amount": 3476617,
-    "timestamp": "",
-    "percent": 0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-29",
+    "timestamp": 1753718400000,
     "open": 1.35,
     "high": 1.35,
     "low": 1.257,
     "close": 1.295,
+    "percent": -0.92,
     "volume": 3179400,
-    "amount": 4123454,
-    "timestamp": "",
-    "percent": -0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-30",
+    "timestamp": 1753804800000,
     "open": 1.295,
     "high": 1.307,
     "low": 1.291,
     "close": 1.299,
+    "percent": 0.31,
     "volume": 6861900,
-    "amount": 8931921,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-07-31",
+    "timestamp": 1753891200000,
     "open": 1.29,
     "high": 1.294,
     "low": 1.272,
     "close": 1.276,
+    "percent": -1.77,
     "volume": 2220800,
-    "amount": 2846875,
-    "timestamp": "",
-    "percent": -1.77
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-01",
+    "timestamp": 1753977600000,
     "open": 1.276,
     "high": 1.282,
     "low": 1.27,
     "close": 1.275,
+    "percent": -0.08,
     "volume": 8667300,
-    "amount": 11051343,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-04",
+    "timestamp": 1754236800000,
     "open": 1.276,
     "high": 1.283,
     "low": 1.275,
     "close": 1.28,
+    "percent": 0.39,
     "volume": 1528200,
-    "amount": 1953474,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-05",
+    "timestamp": 1754323200000,
     "open": 1.294,
     "high": 1.298,
     "low": 1.281,
     "close": 1.297,
+    "percent": 1.33,
     "volume": 2760100,
-    "amount": 3557462,
-    "timestamp": "",
-    "percent": 1.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-06",
+    "timestamp": 1754409600000,
     "open": 1.304,
     "high": 1.304,
     "low": 1.292,
     "close": 1.296,
+    "percent": -0.08,
     "volume": 3973500,
-    "amount": 5150928,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-07",
+    "timestamp": 1754496000000,
     "open": 1.3,
     "high": 1.307,
     "low": 1.293,
     "close": 1.299,
+    "percent": 0.23,
     "volume": 3770000,
-    "amount": 4899874,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-08",
+    "timestamp": 1754582400000,
     "open": 1.3,
     "high": 1.301,
     "low": 1.293,
     "close": 1.293,
+    "percent": -0.46,
     "volume": 2847800,
-    "amount": 3694105,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-11",
+    "timestamp": 1754841600000,
     "open": 1.296,
     "high": 1.298,
     "low": 1.29,
     "close": 1.292,
+    "percent": -0.08,
     "volume": 8477100,
-    "amount": 10971751,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-12",
+    "timestamp": 1754928000000,
     "open": 1.292,
     "high": 1.303,
     "low": 1.292,
     "close": 1.296,
+    "percent": 0.31,
     "volume": 3886800,
-    "amount": 5056240,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-13",
+    "timestamp": 1755014400000,
     "open": 1.308,
     "high": 1.31,
     "low": 1.295,
     "close": 1.3,
+    "percent": 0.31,
     "volume": 1049500,
-    "amount": 1366428,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-14",
+    "timestamp": 1755100800000,
     "open": 1.305,
     "high": 1.318,
     "low": 1.301,
     "close": 1.305,
+    "percent": 0.38,
     "volume": 2004731,
-    "amount": 2623607,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-15",
+    "timestamp": 1755187200000,
     "open": 1.298,
     "high": 1.32,
     "low": 1.295,
     "close": 1.318,
+    "percent": 1,
     "volume": 14718201,
-    "amount": 19161168,
-    "timestamp": "",
-    "percent": 1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-18",
+    "timestamp": 1755446400000,
     "open": 1.319,
     "high": 1.33,
     "low": 1.307,
     "close": 1.322,
+    "percent": 0.3,
     "volume": 6525100,
-    "amount": 8589729,
-    "timestamp": "",
-    "percent": 0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-19",
+    "timestamp": 1755532800000,
     "open": 1.315,
     "high": 1.324,
     "low": 1.308,
     "close": 1.311,
+    "percent": -0.83,
     "volume": 7797400,
-    "amount": 10255214,
-    "timestamp": "",
-    "percent": -0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-20",
+    "timestamp": 1755619200000,
     "open": 1.311,
     "high": 1.321,
     "low": 1.298,
     "close": 1.32,
+    "percent": 0.69,
     "volume": 3753600,
-    "amount": 4922438,
-    "timestamp": "",
-    "percent": 0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-21",
+    "timestamp": 1755705600000,
     "open": 1.324,
     "high": 1.327,
     "low": 1.32,
     "close": 1.322,
+    "percent": 0.15,
     "volume": 737500,
-    "amount": 976411,
-    "timestamp": "",
-    "percent": 0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-22",
+    "timestamp": 1755792000000,
     "open": 1.31,
     "high": 1.338,
     "low": 1.31,
     "close": 1.333,
+    "percent": 0.83,
     "volume": 857600,
-    "amount": 1139071,
-    "timestamp": "",
-    "percent": 0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-25",
+    "timestamp": 1756051200000,
     "open": 1.334,
     "high": 1.355,
     "low": 1.334,
     "close": 1.352,
+    "percent": 1.43,
     "volume": 6965700,
-    "amount": 9371695,
-    "timestamp": "",
-    "percent": 1.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-26",
+    "timestamp": 1756137600000,
     "open": 1.355,
     "high": 1.355,
     "low": 1.34,
     "close": 1.347,
+    "percent": -0.37,
     "volume": 16343402,
-    "amount": 21957098,
-    "timestamp": "",
-    "percent": -0.37
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-27",
+    "timestamp": 1756224000000,
     "open": 1.338,
     "high": 1.342,
     "low": 1.309,
     "close": 1.309,
+    "percent": -2.82,
     "volume": 3704601,
-    "amount": 4925851,
-    "timestamp": "",
-    "percent": -2.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-28",
+    "timestamp": 1756310400000,
     "open": 1.309,
     "high": 1.324,
     "low": 1.303,
     "close": 1.324,
+    "percent": 1.15,
     "volume": 4912100,
-    "amount": 6455603,
-    "timestamp": "",
-    "percent": 1.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-08-29",
+    "timestamp": 1756396800000,
     "open": 1.327,
     "high": 1.342,
     "low": 1.318,
     "close": 1.32,
+    "percent": -0.3,
     "volume": 8572700,
-    "amount": 11367419,
-    "timestamp": "",
-    "percent": -0.3
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-01",
+    "timestamp": 1756656000000,
     "open": 1.329,
     "high": 1.33,
     "low": 1.305,
     "close": 1.307,
+    "percent": -0.98,
     "volume": 5721800,
-    "amount": 7522023,
-    "timestamp": "",
-    "percent": -0.98
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-02",
+    "timestamp": 1756742400000,
     "open": 1.309,
     "high": 1.32,
     "low": 1.298,
     "close": 1.309,
+    "percent": 0.15,
     "volume": 13395900,
-    "amount": 17493134,
-    "timestamp": "",
-    "percent": 0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-03",
+    "timestamp": 1756828800000,
     "open": 1.308,
     "high": 1.316,
     "low": 1.277,
     "close": 1.284,
+    "percent": -1.91,
     "volume": 1957000,
-    "amount": 2542255,
-    "timestamp": "",
-    "percent": -1.91
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-04",
+    "timestamp": 1756915200000,
     "open": 1.285,
     "high": 1.285,
     "low": 1.27,
     "close": 1.282,
+    "percent": -0.16,
     "volume": 5962600,
-    "amount": 7624792,
-    "timestamp": "",
-    "percent": -0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-05",
+    "timestamp": 1757001600000,
     "open": 1.285,
     "high": 1.285,
     "low": 1.271,
     "close": 1.283,
+    "percent": 0.08,
     "volume": 4964300,
-    "amount": 6346784,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-08",
+    "timestamp": 1757260800000,
     "open": 1.285,
     "high": 1.286,
     "low": 1.276,
     "close": 1.278,
+    "percent": -0.39,
     "volume": 986000,
-    "amount": 1263268,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-09",
+    "timestamp": 1757347200000,
     "open": 1.278,
     "high": 1.286,
     "low": 1.278,
     "close": 1.284,
+    "percent": 0.47,
     "volume": 657100,
-    "amount": 842163,
-    "timestamp": "",
-    "percent": 0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-10",
+    "timestamp": 1757433600000,
     "open": 1.281,
     "high": 1.287,
     "low": 1.278,
     "close": 1.284,
+    "percent": 0,
     "volume": 566900,
-    "amount": 727581,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-11",
+    "timestamp": 1757520000000,
     "open": 1.28,
     "high": 1.303,
     "low": 1.274,
     "close": 1.303,
+    "percent": 1.48,
     "volume": 4713000,
-    "amount": 6106250,
-    "timestamp": "",
-    "percent": 1.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-12",
+    "timestamp": 1757606400000,
     "open": 1.312,
     "high": 1.312,
     "low": 1.284,
     "close": 1.287,
+    "percent": -1.23,
     "volume": 1507000,
-    "amount": 1948836,
-    "timestamp": "",
-    "percent": -1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-15",
+    "timestamp": 1757865600000,
     "open": 1.289,
     "high": 1.289,
     "low": 1.274,
     "close": 1.279,
+    "percent": -0.62,
     "volume": 797601,
-    "amount": 1022629,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-16",
+    "timestamp": 1757952000000,
     "open": 1.278,
     "high": 1.309,
     "low": 1.176,
     "close": 1.27,
+    "percent": -0.7,
     "volume": 7954700,
-    "amount": 10138319,
-    "timestamp": "",
-    "percent": -0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-17",
+    "timestamp": 1758038400000,
     "open": 1.287,
     "high": 1.29,
     "low": 1.269,
     "close": 1.278,
+    "percent": 0.63,
     "volume": 2025200,
-    "amount": 2579948,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-18",
+    "timestamp": 1758124800000,
     "open": 1.269,
     "high": 1.271,
     "low": 1.236,
     "close": 1.242,
+    "percent": -2.82,
     "volume": 2487800,
-    "amount": 3115760,
-    "timestamp": "",
-    "percent": -2.82
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-19",
+    "timestamp": 1758211200000,
     "open": 1.242,
     "high": 1.245,
     "low": 1.233,
     "close": 1.241,
+    "percent": -0.08,
     "volume": 1429700,
-    "amount": 1770246,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-22",
+    "timestamp": 1758470400000,
     "open": 1.24,
     "high": 1.241,
     "low": 1.229,
     "close": 1.237,
+    "percent": -0.32,
     "volume": 7553312,
-    "amount": 9333603,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-23",
+    "timestamp": 1758556800000,
     "open": 1.238,
     "high": 1.241,
     "low": 1.213,
     "close": 1.238,
+    "percent": 0.08,
     "volume": 7474600,
-    "amount": 9227877,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-24",
+    "timestamp": 1758643200000,
     "open": 1.229,
     "high": 1.248,
     "low": 1.229,
     "close": 1.243,
+    "percent": 0.4,
     "volume": 1895500,
-    "amount": 2348170,
-    "timestamp": "",
-    "percent": 0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-25",
+    "timestamp": 1758729600000,
     "open": 1.242,
     "high": 1.242,
     "low": 1.234,
     "close": 1.239,
+    "percent": -0.32,
     "volume": 1030905,
-    "amount": 1275063,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-26",
+    "timestamp": 1758816000000,
     "open": 1.239,
     "high": 1.244,
     "low": 1.23,
     "close": 1.235,
+    "percent": -0.32,
     "volume": 2776700,
-    "amount": 3442853,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-29",
+    "timestamp": 1759075200000,
     "open": 1.24,
     "high": 1.278,
     "low": 1.231,
     "close": 1.262,
+    "percent": 2.19,
     "volume": 1735000,
-    "amount": 2186008,
-    "timestamp": "",
-    "percent": 2.19
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-09-30",
+    "timestamp": 1759161600000,
     "open": 1.261,
     "high": 1.261,
     "low": 1.247,
     "close": 1.25,
+    "percent": -0.95,
     "volume": 823300,
-    "amount": 1030567,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-09",
+    "timestamp": 1759939200000,
     "open": 1.252,
     "high": 1.253,
     "low": 1.231,
     "close": 1.245,
+    "percent": -0.4,
     "volume": 562600,
-    "amount": 697234,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-10",
+    "timestamp": 1760025600000,
     "open": 1.248,
     "high": 1.262,
     "low": 1.248,
     "close": 1.252,
+    "percent": 0.56,
     "volume": 1181400,
-    "amount": 1485069,
-    "timestamp": "",
-    "percent": 0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-13",
+    "timestamp": 1760284800000,
     "open": 1.252,
     "high": 1.254,
     "low": 1.236,
     "close": 1.252,
+    "percent": 0,
     "volume": 1737200,
-    "amount": 2160924,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-14",
+    "timestamp": 1760371200000,
     "open": 1.252,
     "high": 1.274,
     "low": 1.252,
     "close": 1.269,
+    "percent": 1.36,
     "volume": 1133600,
-    "amount": 1435011,
-    "timestamp": "",
-    "percent": 1.36
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-15",
+    "timestamp": 1760457600000,
     "open": 1.271,
     "high": 1.28,
     "low": 1.265,
     "close": 1.278,
+    "percent": 0.71,
     "volume": 1114200,
-    "amount": 1419555,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-16",
+    "timestamp": 1760544000000,
     "open": 1.278,
     "high": 1.288,
     "low": 1.277,
     "close": 1.288,
+    "percent": 0.78,
     "volume": 5094000,
-    "amount": 6536892,
-    "timestamp": "",
-    "percent": 0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-17",
+    "timestamp": 1760630400000,
     "open": 1.288,
     "high": 1.296,
     "low": 1.27,
     "close": 1.271,
+    "percent": -1.32,
     "volume": 3296100,
-    "amount": 4242607,
-    "timestamp": "",
-    "percent": -1.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-20",
+    "timestamp": 1760889600000,
     "open": 1.277,
     "high": 1.28,
     "low": 1.265,
     "close": 1.275,
+    "percent": 0.31,
     "volume": 1352700,
-    "amount": 1722927,
-    "timestamp": "",
-    "percent": 0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-21",
+    "timestamp": 1760976000000,
     "open": 1.27,
     "high": 1.29,
     "low": 1.268,
     "close": 1.283,
+    "percent": 0.63,
     "volume": 3595200,
-    "amount": 4613592,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-22",
+    "timestamp": 1761062400000,
     "open": 1.284,
     "high": 1.287,
     "low": 1.278,
     "close": 1.285,
+    "percent": 0.16,
     "volume": 5012700,
-    "amount": 6429471,
-    "timestamp": "",
-    "percent": 0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-23",
+    "timestamp": 1761148800000,
     "open": 1.281,
     "high": 1.294,
     "low": 1.279,
     "close": 1.29,
+    "percent": 0.39,
     "volume": 4145500,
-    "amount": 5332525,
-    "timestamp": "",
-    "percent": 0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-24",
+    "timestamp": 1761235200000,
     "open": 1.297,
     "high": 1.298,
     "low": 1.29,
     "close": 1.293,
+    "percent": 0.23,
     "volume": 1508900,
-    "amount": 1951876,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-27",
+    "timestamp": 1761494400000,
     "open": 1.3,
     "high": 1.306,
     "low": 1.289,
     "close": 1.3,
+    "percent": 0.54,
     "volume": 3995600,
-    "amount": 5169305,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-28",
+    "timestamp": 1761580800000,
     "open": 1.298,
     "high": 1.302,
     "low": 1.289,
     "close": 1.294,
+    "percent": -0.46,
     "volume": 4097901,
-    "amount": 5315189,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-29",
+    "timestamp": 1761667200000,
     "open": 1.294,
     "high": 1.301,
     "low": 1.288,
     "close": 1.296,
+    "percent": 0.15,
     "volume": 1649958,
-    "amount": 2139025,
-    "timestamp": "",
-    "percent": 0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-30",
+    "timestamp": 1761753600000,
     "open": 1.293,
     "high": 1.299,
     "low": 1.284,
     "close": 1.284,
+    "percent": -0.93,
     "volume": 1658300,
-    "amount": 2142900,
-    "timestamp": "",
-    "percent": -0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-10-31",
+    "timestamp": 1761840000000,
     "open": 1.285,
     "high": 1.296,
     "low": 1.276,
     "close": 1.277,
+    "percent": -0.55,
     "volume": 5478700,
-    "amount": 7005666,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-03",
+    "timestamp": 1762099200000,
     "open": 1.272,
     "high": 1.285,
     "low": 1.272,
     "close": 1.285,
+    "percent": 0.63,
     "volume": 6886700,
-    "amount": 8805313,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-04",
+    "timestamp": 1762185600000,
     "open": 1.281,
     "high": 1.3,
     "low": 1.281,
     "close": 1.296,
+    "percent": 0.86,
     "volume": 1143700,
-    "amount": 1479909,
-    "timestamp": "",
-    "percent": 0.86
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-05",
+    "timestamp": 1762272000000,
     "open": 1.297,
     "high": 1.299,
     "low": 1.29,
     "close": 1.296,
+    "percent": 0,
     "volume": 847500,
-    "amount": 1098479,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-06",
+    "timestamp": 1762358400000,
     "open": 1.292,
     "high": 1.301,
     "low": 1.291,
     "close": 1.297,
+    "percent": 0.08,
     "volume": 630500,
-    "amount": 818310,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-07",
+    "timestamp": 1762444800000,
     "open": 1.302,
     "high": 1.302,
     "low": 1.293,
     "close": 1.294,
+    "percent": -0.23,
     "volume": 4556200,
-    "amount": 5901607,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-10",
+    "timestamp": 1762704000000,
     "open": 1.294,
     "high": 1.308,
     "low": 1.294,
     "close": 1.305,
+    "percent": 0.85,
     "volume": 1027700,
-    "amount": 1337394,
-    "timestamp": "",
-    "percent": 0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-11",
+    "timestamp": 1762790400000,
     "open": 1.303,
     "high": 1.306,
     "low": 1.298,
     "close": 1.302,
+    "percent": -0.23,
     "volume": 818200,
-    "amount": 1066956,
-    "timestamp": "",
-    "percent": -0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-12",
+    "timestamp": 1762876800000,
     "open": 1.304,
     "high": 1.313,
     "low": 1.302,
     "close": 1.307,
+    "percent": 0.38,
     "volume": 436600,
-    "amount": 571143,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-13",
+    "timestamp": 1762963200000,
     "open": 1.318,
     "high": 1.318,
     "low": 1.295,
     "close": 1.312,
+    "percent": 0.38,
     "volume": 1026600,
-    "amount": 1340843,
-    "timestamp": "",
-    "percent": 0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-14",
+    "timestamp": 1763049600000,
     "open": 1.314,
     "high": 1.319,
     "low": 1.305,
     "close": 1.305,
+    "percent": -0.53,
     "volume": 604600,
-    "amount": 793789,
-    "timestamp": "",
-    "percent": -0.53
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-17",
+    "timestamp": 1763308800000,
     "open": 1.302,
     "high": 1.302,
     "low": 1.288,
     "close": 1.291,
+    "percent": -1.07,
     "volume": 4739800,
-    "amount": 6122893,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-18",
+    "timestamp": 1763395200000,
     "open": 1.29,
     "high": 1.292,
     "low": 1.285,
     "close": 1.287,
+    "percent": -0.31,
     "volume": 1504000,
-    "amount": 1937952,
-    "timestamp": "",
-    "percent": -0.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-19",
+    "timestamp": 1763481600000,
     "open": 1.29,
     "high": 1.299,
     "low": 1.287,
     "close": 1.294,
+    "percent": 0.54,
     "volume": 1561000,
-    "amount": 2020739,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-20",
+    "timestamp": 1763568000000,
     "open": 1.292,
     "high": 1.317,
     "low": 1.292,
     "close": 1.297,
+    "percent": 0.23,
     "volume": 3610700,
-    "amount": 4709978,
-    "timestamp": "",
-    "percent": 0.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-21",
+    "timestamp": 1763654400000,
     "open": 1.309,
     "high": 1.309,
     "low": 1.258,
     "close": 1.269,
+    "percent": -2.16,
     "volume": 17872200,
-    "amount": 22902722,
-    "timestamp": "",
-    "percent": -2.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-24",
+    "timestamp": 1763913600000,
     "open": 1.268,
     "high": 1.278,
     "low": 1.266,
     "close": 1.267,
+    "percent": -0.16,
     "volume": 10137800,
-    "amount": 12880199,
-    "timestamp": "",
-    "percent": -0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-25",
+    "timestamp": 1764000000000,
     "open": 1.258,
     "high": 1.281,
     "low": 1.258,
     "close": 1.278,
+    "percent": 0.87,
     "volume": 7642200,
-    "amount": 9763664,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-26",
+    "timestamp": 1764086400000,
     "open": 1.279,
     "high": 1.281,
     "low": 1.272,
     "close": 1.272,
+    "percent": -0.47,
     "volume": 852600,
-    "amount": 1088567,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-27",
+    "timestamp": 1764172800000,
     "open": 1.271,
     "high": 1.281,
     "low": 1.265,
     "close": 1.275,
+    "percent": 0.24,
     "volume": 12971400,
-    "amount": 16574338,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-11-28",
+    "timestamp": 1764259200000,
     "open": 1.275,
     "high": 1.275,
     "low": 1.265,
     "close": 1.272,
+    "percent": -0.24,
     "volume": 3261600,
-    "amount": 4138570,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-01",
+    "timestamp": 1764518400000,
     "open": 1.269,
     "high": 1.275,
     "low": 1.265,
     "close": 1.275,
+    "percent": 0.24,
     "volume": 2569900,
-    "amount": 3268418,
-    "timestamp": "",
-    "percent": 0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-02",
+    "timestamp": 1764604800000,
     "open": 1.275,
     "high": 1.277,
     "low": 1.265,
     "close": 1.27,
+    "percent": -0.39,
     "volume": 2851400,
-    "amount": 3624838,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-03",
+    "timestamp": 1764691200000,
     "open": 1.276,
     "high": 1.276,
     "low": 1.26,
     "close": 1.261,
+    "percent": -0.71,
     "volume": 381800,
-    "amount": 485786,
-    "timestamp": "",
-    "percent": -0.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-04",
+    "timestamp": 1764777600000,
     "open": 1.272,
     "high": 1.273,
     "low": 1.259,
     "close": 1.259,
+    "percent": -0.16,
     "volume": 730300,
-    "amount": 920693,
-    "timestamp": "",
-    "percent": -0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-05",
+    "timestamp": 1764864000000,
     "open": 1.264,
     "high": 1.28,
     "low": 1.254,
     "close": 1.275,
+    "percent": 1.27,
     "volume": 2761400,
-    "amount": 3505756,
-    "timestamp": "",
-    "percent": 1.27
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-08",
+    "timestamp": 1765123200000,
     "open": 1.275,
     "high": 1.296,
     "low": 1.274,
     "close": 1.287,
+    "percent": 0.94,
     "volume": 4566700,
-    "amount": 5895575,
-    "timestamp": "",
-    "percent": 0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-09",
+    "timestamp": 1765209600000,
     "open": 1.286,
     "high": 1.286,
     "low": 1.277,
     "close": 1.277,
+    "percent": -0.78,
     "volume": 2890300,
-    "amount": 3702044,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-10",
+    "timestamp": 1765296000000,
     "open": 1.278,
     "high": 1.278,
     "low": 1.263,
     "close": 1.271,
+    "percent": -0.47,
     "volume": 7835200,
-    "amount": 9934796,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-11",
+    "timestamp": 1765382400000,
     "open": 1.271,
     "high": 1.279,
     "low": 1.26,
     "close": 1.262,
+    "percent": -0.71,
     "volume": 5540000,
-    "amount": 7000325,
-    "timestamp": "",
-    "percent": -0.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-12",
+    "timestamp": 1765468800000,
     "open": 1.264,
     "high": 1.271,
     "low": 1.26,
     "close": 1.269,
+    "percent": 0.55,
     "volume": 8302400,
-    "amount": 10511827,
-    "timestamp": "",
-    "percent": 0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-15",
+    "timestamp": 1765728000000,
     "open": 1.284,
     "high": 1.286,
     "low": 1.266,
     "close": 1.278,
+    "percent": 0.71,
     "volume": 1197400,
-    "amount": 1530318,
-    "timestamp": "",
-    "percent": 0.71
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-16",
+    "timestamp": 1765814400000,
     "open": 1.278,
     "high": 1.282,
     "low": 1.267,
     "close": 1.271,
+    "percent": -0.55,
     "volume": 5745600,
-    "amount": 7310261,
-    "timestamp": "",
-    "percent": -0.55
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-17",
+    "timestamp": 1765900800000,
     "open": 1.271,
     "high": 1.292,
     "low": 1.267,
     "close": 1.284,
+    "percent": 1.02,
     "volume": 7639200,
-    "amount": 9805337,
-    "timestamp": "",
-    "percent": 1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-18",
+    "timestamp": 1765987200000,
     "open": 1.281,
     "high": 1.293,
     "low": 1.269,
     "close": 1.293,
+    "percent": 0.7,
     "volume": 10328200,
-    "amount": 13314931,
-    "timestamp": "",
-    "percent": 0.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-19",
+    "timestamp": 1766073600000,
     "open": 1.292,
     "high": 1.298,
     "low": 1.288,
     "close": 1.293,
+    "percent": 0,
     "volume": 9978500,
-    "amount": 12864689,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-22",
+    "timestamp": 1766332800000,
     "open": 1.297,
     "high": 1.297,
     "low": 1.288,
     "close": 1.288,
+    "percent": -0.39,
     "volume": 1275000,
-    "amount": 1645989,
-    "timestamp": "",
-    "percent": -0.39
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-23",
+    "timestamp": 1766419200000,
     "open": 1.293,
     "high": 1.301,
     "low": 1.29,
     "close": 1.294,
+    "percent": 0.47,
     "volume": 3951000,
-    "amount": 5121526,
-    "timestamp": "",
-    "percent": 0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-24",
+    "timestamp": 1766505600000,
     "open": 1.296,
     "high": 1.297,
     "low": 1.289,
     "close": 1.292,
+    "percent": -0.15,
     "volume": 2652100,
-    "amount": 3428325,
-    "timestamp": "",
-    "percent": -0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-25",
+    "timestamp": 1766592000000,
     "open": 1.299,
     "high": 1.305,
     "low": 1.286,
     "close": 1.299,
+    "percent": 0.54,
     "volume": 1309200,
-    "amount": 1700480,
-    "timestamp": "",
-    "percent": 0.54
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-26",
+    "timestamp": 1766678400000,
     "open": 1.294,
     "high": 1.309,
     "low": 1.294,
     "close": 1.3,
+    "percent": 0.08,
     "volume": 1496400,
-    "amount": 1948866,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-29",
+    "timestamp": 1766937600000,
     "open": 1.3,
     "high": 1.307,
     "low": 1.296,
     "close": 1.302,
+    "percent": 0.15,
     "volume": 5536200,
-    "amount": 7194728,
-    "timestamp": "",
-    "percent": 0.15
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-30",
+    "timestamp": 1767024000000,
     "open": 1.298,
     "high": 1.305,
     "low": 1.293,
     "close": 1.297,
+    "percent": -0.38,
     "volume": 5097500,
-    "amount": 6610727,
-    "timestamp": "",
-    "percent": -0.38
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2025-12-31",
+    "timestamp": 1767110400000,
     "open": 1.297,
     "high": 1.303,
     "low": 1.294,
     "close": 1.298,
+    "percent": 0.08,
     "volume": 3946100,
-    "amount": 5127394,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-05",
+    "timestamp": 1767542400000,
     "open": 1.294,
     "high": 1.314,
     "low": 1.294,
     "close": 1.312,
+    "percent": 1.08,
     "volume": 1298400,
-    "amount": 1697828,
-    "timestamp": "",
-    "percent": 1.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-06",
+    "timestamp": 1767628800000,
     "open": 1.313,
     "high": 1.342,
     "low": 1.31,
     "close": 1.34,
+    "percent": 2.13,
     "volume": 3243001,
-    "amount": 4290244,
-    "timestamp": "",
-    "percent": 2.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-07",
+    "timestamp": 1767715200000,
     "open": 1.335,
     "high": 1.341,
     "low": 1.326,
     "close": 1.331,
+    "percent": -0.67,
     "volume": 9176100,
-    "amount": 12258857,
-    "timestamp": "",
-    "percent": -0.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-08",
+    "timestamp": 1767801600000,
     "open": 1.326,
     "high": 1.326,
     "low": 1.302,
     "close": 1.307,
+    "percent": -1.8,
     "volume": 3295100,
-    "amount": 4317879,
-    "timestamp": "",
-    "percent": -1.8
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-09",
+    "timestamp": 1767888000000,
     "open": 1.307,
     "high": 1.314,
     "low": 1.298,
     "close": 1.301,
+    "percent": -0.46,
     "volume": 4551700,
-    "amount": 5939927,
-    "timestamp": "",
-    "percent": -0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-12",
+    "timestamp": 1768147200000,
     "open": 1.302,
     "high": 1.318,
     "low": 1.296,
     "close": 1.307,
+    "percent": 0.46,
     "volume": 8242600,
-    "amount": 10716717,
-    "timestamp": "",
-    "percent": 0.46
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-13",
+    "timestamp": 1768233600000,
     "open": 1.311,
     "high": 1.326,
     "low": 1.308,
     "close": 1.308,
+    "percent": 0.08,
     "volume": 5615700,
-    "amount": 7392755,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-14",
+    "timestamp": 1768320000000,
     "open": 1.314,
     "high": 1.322,
     "low": 1.293,
     "close": 1.294,
+    "percent": -1.07,
     "volume": 9567100,
-    "amount": 12476842,
-    "timestamp": "",
-    "percent": -1.07
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-15",
+    "timestamp": 1768406400000,
     "open": 1.294,
     "high": 1.297,
     "low": 1.28,
     "close": 1.281,
+    "percent": -1,
     "volume": 4595400,
-    "amount": 5906869,
-    "timestamp": "",
-    "percent": -1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-16",
+    "timestamp": 1768492800000,
     "open": 1.288,
     "high": 1.29,
     "low": 1.267,
     "close": 1.273,
+    "percent": -0.62,
     "volume": 2358800,
-    "amount": 3013058,
-    "timestamp": "",
-    "percent": -0.62
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-19",
+    "timestamp": 1768752000000,
     "open": 1.265,
     "high": 1.275,
     "low": 1.263,
     "close": 1.267,
+    "percent": -0.47,
     "volume": 3460200,
-    "amount": 4387475,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-20",
+    "timestamp": 1768838400000,
     "open": 1.27,
     "high": 1.277,
     "low": 1.266,
     "close": 1.275,
+    "percent": 0.63,
     "volume": 2607100,
-    "amount": 3314874,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-21",
+    "timestamp": 1768924800000,
     "open": 1.275,
     "high": 1.276,
     "low": 1.258,
     "close": 1.259,
+    "percent": -1.25,
     "volume": 2548100,
-    "amount": 3222345,
-    "timestamp": "",
-    "percent": -1.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-22",
+    "timestamp": 1769011200000,
     "open": 1.259,
     "high": 1.272,
     "low": 1.256,
     "close": 1.256,
+    "percent": -0.24,
     "volume": 3170800,
-    "amount": 4000843,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-23",
+    "timestamp": 1769097600000,
     "open": 1.26,
     "high": 1.26,
     "low": 1.247,
     "close": 1.249,
+    "percent": -0.56,
     "volume": 3915300,
-    "amount": 4908887,
-    "timestamp": "",
-    "percent": -0.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-26",
+    "timestamp": 1769356800000,
     "open": 1.246,
     "high": 1.269,
     "low": 1.242,
     "close": 1.254,
+    "percent": 0.4,
     "volume": 7770600,
-    "amount": 9800529,
-    "timestamp": "",
-    "percent": 0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-27",
+    "timestamp": 1769443200000,
     "open": 1.255,
     "high": 1.262,
     "low": 1.25,
     "close": 1.25,
+    "percent": -0.32,
     "volume": 5033400,
-    "amount": 6324265,
-    "timestamp": "",
-    "percent": -0.32
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-28",
+    "timestamp": 1769529600000,
     "open": 1.252,
     "high": 1.262,
     "low": 1.247,
     "close": 1.249,
+    "percent": -0.08,
     "volume": 4122000,
-    "amount": 5166450,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-29",
+    "timestamp": 1769616000000,
     "open": 1.249,
     "high": 1.276,
     "low": 1.239,
     "close": 1.273,
+    "percent": 1.92,
     "volume": 3291600,
-    "amount": 4126578,
-    "timestamp": "",
-    "percent": 1.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-01-30",
+    "timestamp": 1769702400000,
     "open": 1.272,
     "high": 1.276,
     "low": 1.258,
     "close": 1.259,
+    "percent": -1.1,
     "volume": 4382700,
-    "amount": 5542026,
-    "timestamp": "",
-    "percent": -1.1
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-02",
+    "timestamp": 1769961600000,
     "open": 1.258,
     "high": 1.273,
     "low": 1.246,
     "close": 1.247,
+    "percent": -0.95,
     "volume": 9119400,
-    "amount": 11482201,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-03",
+    "timestamp": 1770048000000,
     "open": 1.249,
     "high": 1.249,
     "low": 1.237,
     "close": 1.242,
+    "percent": -0.4,
     "volume": 2874500,
-    "amount": 3571080,
-    "timestamp": "",
-    "percent": -0.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-04",
+    "timestamp": 1770134400000,
     "open": 1.244,
     "high": 1.265,
     "low": 1.244,
     "close": 1.265,
+    "percent": 1.85,
     "volume": 3733200,
-    "amount": 4690480,
-    "timestamp": "",
-    "percent": 1.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-05",
+    "timestamp": 1770220800000,
     "open": 1.26,
     "high": 1.277,
     "low": 1.26,
     "close": 1.273,
+    "percent": 0.63,
     "volume": 5153500,
-    "amount": 6529283,
-    "timestamp": "",
-    "percent": 0.63
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-06",
+    "timestamp": 1770307200000,
     "open": 1.273,
     "high": 1.282,
     "low": 1.264,
     "close": 1.267,
+    "percent": -0.47,
     "volume": 2926900,
-    "amount": 3714838,
-    "timestamp": "",
-    "percent": -0.47
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-09",
+    "timestamp": 1770566400000,
     "open": 1.267,
     "high": 1.28,
     "low": 1.267,
     "close": 1.279,
+    "percent": 0.95,
     "volume": 2555100,
-    "amount": 3257283,
-    "timestamp": "",
-    "percent": 0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-10",
+    "timestamp": 1770652800000,
     "open": 1.28,
     "high": 1.28,
     "low": 1.275,
     "close": 1.277,
+    "percent": -0.16,
     "volume": 1371800,
-    "amount": 1752561,
-    "timestamp": "",
-    "percent": -0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-11",
+    "timestamp": 1770739200000,
     "open": 1.276,
     "high": 1.277,
     "low": 1.271,
     "close": 1.275,
+    "percent": -0.16,
     "volume": 6289800,
-    "amount": 8013673,
-    "timestamp": "",
-    "percent": -0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-12",
+    "timestamp": 1770825600000,
     "open": 1.281,
     "high": 1.281,
     "low": 1.26,
     "close": 1.262,
+    "percent": -1.02,
     "volume": 803100,
-    "amount": 1013557,
-    "timestamp": "",
-    "percent": -1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-13",
+    "timestamp": 1770912000000,
     "open": 1.262,
     "high": 1.262,
     "low": 1.248,
     "close": 1.248,
+    "percent": -1.11,
     "volume": 2856900,
-    "amount": 3579882,
-    "timestamp": "",
-    "percent": -1.11
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-24",
+    "timestamp": 1771862400000,
     "open": 1.248,
     "high": 1.255,
     "low": 1.244,
     "close": 1.245,
+    "percent": -0.24,
     "volume": 2464600,
-    "amount": 3074269,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-25",
+    "timestamp": 1771948800000,
     "open": 1.246,
     "high": 1.257,
     "low": 1.244,
     "close": 1.247,
+    "percent": 0.16,
     "volume": 1580500,
-    "amount": 1978870,
-    "timestamp": "",
-    "percent": 0.16
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-26",
+    "timestamp": 1772035200000,
     "open": 1.248,
     "high": 1.249,
     "low": 1.231,
     "close": 1.235,
+    "percent": -0.96,
     "volume": 11497600,
-    "amount": 14170095,
-    "timestamp": "",
-    "percent": -0.96
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-02-27",
+    "timestamp": 1772121600000,
     "open": 1.235,
     "high": 1.24,
     "low": 1.23,
     "close": 1.236,
+    "percent": 0.08,
     "volume": 2180900,
-    "amount": 2696342,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-02",
+    "timestamp": 1772380800000,
     "open": 1.229,
     "high": 1.234,
     "low": 1.218,
     "close": 1.233,
+    "percent": -0.24,
     "volume": 11877000,
-    "amount": 14546371,
-    "timestamp": "",
-    "percent": -0.24
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-03",
+    "timestamp": 1772467200000,
     "open": 1.23,
     "high": 1.247,
     "low": 1.225,
     "close": 1.232,
+    "percent": -0.08,
     "volume": 5480000,
-    "amount": 6770937,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-04",
+    "timestamp": 1772553600000,
     "open": 1.221,
     "high": 1.226,
     "low": 1.203,
     "close": 1.211,
+    "percent": -1.7,
     "volume": 2470300,
-    "amount": 2988638,
-    "timestamp": "",
-    "percent": -1.7
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-05",
+    "timestamp": 1772640000000,
     "open": 1.209,
     "high": 1.222,
     "low": 1.209,
     "close": 1.217,
+    "percent": 0.5,
     "volume": 5936900,
-    "amount": 7226685,
-    "timestamp": "",
-    "percent": 0.5
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-06",
+    "timestamp": 1772726400000,
     "open": 1.217,
     "high": 1.228,
     "low": 1.216,
     "close": 1.225,
+    "percent": 0.66,
     "volume": 1272700,
-    "amount": 1553230,
-    "timestamp": "",
-    "percent": 0.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-09",
+    "timestamp": 1772985600000,
     "open": 1.22,
     "high": 1.22,
     "low": 1.208,
     "close": 1.21,
+    "percent": -1.22,
     "volume": 1442200,
-    "amount": 1746611,
-    "timestamp": "",
-    "percent": -1.22
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-10",
+    "timestamp": 1773072000000,
     "open": 1.21,
     "high": 1.22,
     "low": 1.21,
     "close": 1.22,
+    "percent": 0.83,
     "volume": 1650300,
-    "amount": 2006649,
-    "timestamp": "",
-    "percent": 0.83
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-11",
+    "timestamp": 1773158400000,
     "open": 1.213,
     "high": 1.226,
     "low": 1.213,
     "close": 1.224,
+    "percent": 0.33,
     "volume": 2346800,
-    "amount": 2867740,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-12",
+    "timestamp": 1773244800000,
     "open": 1.225,
     "high": 1.229,
     "low": 1.221,
     "close": 1.228,
+    "percent": 0.33,
     "volume": 1138300,
-    "amount": 1395452,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-13",
+    "timestamp": 1773331200000,
     "open": 1.227,
     "high": 1.234,
     "low": 1.22,
     "close": 1.222,
+    "percent": -0.49,
     "volume": 4165500,
-    "amount": 5115216,
-    "timestamp": "",
-    "percent": -0.49
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-16",
+    "timestamp": 1773590400000,
     "open": 1.214,
     "high": 1.227,
     "low": 1.21,
     "close": 1.222,
+    "percent": 0,
     "volume": 2594503,
-    "amount": 3170291,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-17",
+    "timestamp": 1773676800000,
     "open": 1.221,
     "high": 1.249,
     "low": 1.221,
     "close": 1.238,
+    "percent": 1.31,
     "volume": 4207400,
-    "amount": 5223884,
-    "timestamp": "",
-    "percent": 1.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-18",
+    "timestamp": 1773763200000,
     "open": 1.238,
     "high": 1.239,
     "low": 1.226,
     "close": 1.232,
+    "percent": -0.48,
     "volume": 4203000,
-    "amount": 5176388,
-    "timestamp": "",
-    "percent": -0.48
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-19",
+    "timestamp": 1773849600000,
     "open": 1.227,
     "high": 1.229,
     "low": 1.218,
     "close": 1.223,
+    "percent": -0.73,
     "volume": 6621500,
-    "amount": 8105486,
-    "timestamp": "",
-    "percent": -0.73
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-20",
+    "timestamp": 1773936000000,
     "open": 1.223,
     "high": 1.223,
     "low": 1.208,
     "close": 1.208,
+    "percent": -1.23,
     "volume": 3440700,
-    "amount": 4187870,
-    "timestamp": "",
-    "percent": -1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-23",
+    "timestamp": 1774195200000,
     "open": 1.207,
     "high": 1.207,
     "low": 1.159,
     "close": 1.162,
+    "percent": -3.81,
     "volume": 13338600,
-    "amount": 15719918,
-    "timestamp": "",
-    "percent": -3.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-24",
+    "timestamp": 1774281600000,
     "open": 1.173,
     "high": 1.185,
     "low": 1.169,
     "close": 1.183,
+    "percent": 1.81,
     "volume": 7170300,
-    "amount": 8443988,
-    "timestamp": "",
-    "percent": 1.81
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-25",
+    "timestamp": 1774368000000,
     "open": 1.183,
     "high": 1.195,
     "low": 1.182,
     "close": 1.194,
+    "percent": 0.93,
     "volume": 4195100,
-    "amount": 4986661,
-    "timestamp": "",
-    "percent": 0.93
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-26",
+    "timestamp": 1774454400000,
     "open": 1.195,
     "high": 1.195,
     "low": 1.18,
     "close": 1.18,
+    "percent": -1.17,
     "volume": 5592300,
-    "amount": 6624295,
-    "timestamp": "",
-    "percent": -1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-27",
+    "timestamp": 1774540800000,
     "open": 1.18,
     "high": 1.184,
     "low": 1.176,
     "close": 1.181,
+    "percent": 0.08,
     "volume": 6437300,
-    "amount": 7603580,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-30",
+    "timestamp": 1774800000000,
     "open": 1.176,
     "high": 1.18,
     "low": 1.169,
     "close": 1.178,
+    "percent": -0.25,
     "volume": 6997800,
-    "amount": 8240894,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-03-31",
+    "timestamp": 1774886400000,
     "open": 1.183,
     "high": 1.193,
     "low": 1.181,
     "close": 1.182,
+    "percent": 0.34,
     "volume": 1812800,
-    "amount": 2151842,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-01",
+    "timestamp": 1774972800000,
     "open": 1.193,
     "high": 1.197,
     "low": 1.189,
     "close": 1.191,
+    "percent": 0.76,
     "volume": 810600,
-    "amount": 967366,
-    "timestamp": "",
-    "percent": 0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-02",
+    "timestamp": 1775059200000,
     "open": 1.191,
     "high": 1.192,
     "low": 1.181,
     "close": 1.182,
+    "percent": -0.76,
     "volume": 5254000,
-    "amount": 6228241,
-    "timestamp": "",
-    "percent": -0.76
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-03",
+    "timestamp": 1775145600000,
     "open": 1.18,
     "high": 1.183,
     "low": 1.166,
     "close": 1.172,
+    "percent": -0.85,
     "volume": 1736000,
-    "amount": 2042687,
-    "timestamp": "",
-    "percent": -0.85
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-07",
+    "timestamp": 1775491200000,
     "open": 1.168,
     "high": 1.175,
     "low": 1.162,
     "close": 1.165,
+    "percent": -0.6,
     "volume": 1910200,
-    "amount": 2230588,
-    "timestamp": "",
-    "percent": -0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-08",
+    "timestamp": 1775577600000,
     "open": 1.175,
     "high": 1.194,
     "low": 1.175,
     "close": 1.193,
+    "percent": 2.4,
     "volume": 2801800,
-    "amount": 3334295,
-    "timestamp": "",
-    "percent": 2.4
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-09",
+    "timestamp": 1775664000000,
     "open": 1.193,
     "high": 1.193,
     "low": 1.177,
     "close": 1.179,
+    "percent": -1.17,
     "volume": 2621400,
-    "amount": 3088681,
-    "timestamp": "",
-    "percent": -1.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-10",
+    "timestamp": 1775750400000,
     "open": 1.185,
     "high": 1.202,
     "low": 1.185,
     "close": 1.191,
+    "percent": 1.02,
     "volume": 3740700,
-    "amount": 4473069,
-    "timestamp": "",
-    "percent": 1.02
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-13",
+    "timestamp": 1776009600000,
     "open": 1.184,
     "high": 1.191,
     "low": 1.184,
     "close": 1.19,
+    "percent": -0.08,
     "volume": 2438000,
-    "amount": 2900359,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-14",
+    "timestamp": 1776096000000,
     "open": 1.198,
     "high": 1.201,
     "low": 1.194,
     "close": 1.201,
+    "percent": 0.92,
     "volume": 5698388,
-    "amount": 6839453,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-15",
+    "timestamp": 1776182400000,
     "open": 1.204,
     "high": 1.207,
     "low": 1.204,
     "close": 1.206,
+    "percent": 0.42,
     "volume": 5207805,
-    "amount": 6276145,
-    "timestamp": "",
-    "percent": 0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-16",
+    "timestamp": 1776268800000,
     "open": 1.204,
     "high": 1.211,
     "low": 1.201,
     "close": 1.205,
+    "percent": -0.08,
     "volume": 2916300,
-    "amount": 3515971,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-17",
+    "timestamp": 1776355200000,
     "open": 1.204,
     "high": 1.204,
     "low": 1.2,
     "close": 1.2,
+    "percent": -0.41,
     "volume": 1675600,
-    "amount": 2012984,
-    "timestamp": "",
-    "percent": -0.41
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-20",
+    "timestamp": 1776614400000,
     "open": 1.2,
     "high": 1.208,
     "low": 1.197,
     "close": 1.207,
+    "percent": 0.58,
     "volume": 1163098,
-    "amount": 1401664,
-    "timestamp": "",
-    "percent": 0.58
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-21",
+    "timestamp": 1776700800000,
     "open": 1.211,
     "high": 1.213,
     "low": 1.204,
     "close": 1.208,
+    "percent": 0.08,
     "volume": 7850500,
-    "amount": 9468725,
-    "timestamp": "",
-    "percent": 0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-22",
+    "timestamp": 1776787200000,
     "open": 1.199,
     "high": 1.209,
     "low": 1.199,
     "close": 1.205,
+    "percent": -0.25,
     "volume": 1570000,
-    "amount": 1890936,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-23",
+    "timestamp": 1776873600000,
     "open": 1.205,
     "high": 1.208,
     "low": 1.197,
     "close": 1.202,
+    "percent": -0.25,
     "volume": 2356100,
-    "amount": 2841699,
-    "timestamp": "",
-    "percent": -0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-24",
+    "timestamp": 1776960000000,
     "open": 1.194,
     "high": 1.2,
     "low": 1.192,
     "close": 1.197,
+    "percent": -0.42,
     "volume": 969500,
-    "amount": 1161230,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-27",
+    "timestamp": 1777219200000,
     "open": 1.207,
     "high": 1.207,
     "low": 1.191,
     "close": 1.192,
+    "percent": -0.42,
     "volume": 4133200,
-    "amount": 4943036,
-    "timestamp": "",
-    "percent": -0.42
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-28",
+    "timestamp": 1777305600000,
     "open": 1.182,
     "high": 1.205,
     "low": 1.181,
     "close": 1.203,
+    "percent": 0.92,
     "volume": 1187500,
-    "amount": 1424269,
-    "timestamp": "",
-    "percent": 0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-29",
+    "timestamp": 1777392000000,
     "open": 1.204,
     "high": 1.208,
     "low": 1.197,
     "close": 1.207,
+    "percent": 0.33,
     "volume": 758704,
-    "amount": 910675,
-    "timestamp": "",
-    "percent": 0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-04-30",
+    "timestamp": 1777478400000,
     "open": 1.2,
     "high": 1.218,
     "low": 1.2,
     "close": 1.205,
+    "percent": -0.17,
     "volume": 1284900,
-    "amount": 1551156,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-06",
+    "timestamp": 1777996800000,
     "open": 1.205,
     "high": 1.21,
     "low": 1.201,
     "close": 1.207,
+    "percent": 0.17,
     "volume": 437500,
-    "amount": 526870,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-07",
+    "timestamp": 1778083200000,
     "open": 1.207,
     "high": 1.214,
     "low": 1.202,
     "close": 1.206,
+    "percent": -0.08,
     "volume": 3413000,
-    "amount": 4111082,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-08",
+    "timestamp": 1778169600000,
     "open": 1.209,
     "high": 1.209,
     "low": 1.2,
     "close": 1.202,
+    "percent": -0.33,
     "volume": 907100,
-    "amount": 1092193,
-    "timestamp": "",
-    "percent": -0.33
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-11",
+    "timestamp": 1778428800000,
     "open": 1.201,
     "high": 1.213,
     "low": 1.197,
     "close": 1.211,
+    "percent": 0.75,
     "volume": 1447000,
-    "amount": 1744243,
-    "timestamp": "",
-    "percent": 0.75
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-12",
+    "timestamp": 1778515200000,
     "open": 1.218,
     "high": 1.219,
     "low": 1.206,
     "close": 1.21,
+    "percent": -0.08,
     "volume": 651100,
-    "amount": 789131,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-13",
+    "timestamp": 1778601600000,
     "open": 1.21,
     "high": 1.21,
     "low": 1.196,
     "close": 1.201,
+    "percent": -0.74,
     "volume": 1102900,
-    "amount": 1323044,
-    "timestamp": "",
-    "percent": -0.74
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-14",
+    "timestamp": 1778688000000,
     "open": 1.194,
     "high": 1.201,
     "low": 1.19,
     "close": 1.19,
+    "percent": -0.92,
     "volume": 3126300,
-    "amount": 3742604,
-    "timestamp": "",
-    "percent": -0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-15",
+    "timestamp": 1778774400000,
     "open": 1.185,
     "high": 1.188,
     "low": 1.171,
     "close": 1.174,
+    "percent": -1.34,
     "volume": 1987800,
-    "amount": 2344508,
-    "timestamp": "",
-    "percent": -1.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-18",
+    "timestamp": 1779033600000,
     "open": 1.176,
     "high": 1.176,
     "low": 1.16,
     "close": 1.163,
+    "percent": -0.94,
     "volume": 191000,
-    "amount": 222432,
-    "timestamp": "",
-    "percent": -0.94
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-19",
+    "timestamp": 1779120000000,
     "open": 1.168,
     "high": 1.174,
     "low": 1.162,
     "close": 1.17,
+    "percent": 0.6,
     "volume": 694800,
-    "amount": 812191,
-    "timestamp": "",
-    "percent": 0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-20",
+    "timestamp": 1779206400000,
     "open": 1.164,
     "high": 1.167,
     "low": 1.16,
     "close": 1.162,
+    "percent": -0.68,
     "volume": 888500,
-    "amount": 1033324,
-    "timestamp": "",
-    "percent": -0.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-21",
+    "timestamp": 1779292800000,
     "open": 1.17,
     "high": 1.179,
     "low": 1.158,
     "close": 1.159,
+    "percent": -0.26,
     "volume": 1918100,
-    "amount": 2235524,
-    "timestamp": "",
-    "percent": -0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-22",
+    "timestamp": 1779379200000,
     "open": 1.159,
     "high": 1.159,
     "low": 1.15,
     "close": 1.153,
+    "percent": -0.52,
     "volume": 913900,
-    "amount": 1054557,
-    "timestamp": "",
-    "percent": -0.52
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-25",
+    "timestamp": 1779638400000,
     "open": 1.152,
     "high": 1.162,
     "low": 1.151,
     "close": 1.156,
+    "percent": 0.26,
     "volume": 8607200,
-    "amount": 9948336,
-    "timestamp": "",
-    "percent": 0.26
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-26",
+    "timestamp": 1779724800000,
     "open": 1.152,
     "high": 1.168,
     "low": 1.152,
     "close": 1.16,
+    "percent": 0.35,
     "volume": 1792300,
-    "amount": 2080591,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-27",
+    "timestamp": 1779811200000,
     "open": 1.17,
     "high": 1.17,
     "low": 1.146,
     "close": 1.149,
+    "percent": -0.95,
     "volume": 4729600,
-    "amount": 5450323,
-    "timestamp": "",
-    "percent": -0.95
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-28",
+    "timestamp": 1779897600000,
     "open": 1.149,
     "high": 1.149,
     "low": 1.133,
     "close": 1.136,
+    "percent": -1.13,
     "volume": 1758500,
-    "amount": 2005388,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-05-29",
+    "timestamp": 1779984000000,
     "open": 1.13,
     "high": 1.159,
     "low": 1.12,
     "close": 1.155,
+    "percent": 1.67,
     "volume": 1049300,
-    "amount": 1200450,
-    "timestamp": "",
-    "percent": 1.67
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-01",
+    "timestamp": 1780243200000,
     "open": 1.15,
     "high": 1.162,
     "low": 1.138,
     "close": 1.162,
+    "percent": 0.61,
     "volume": 1684700,
-    "amount": 1948747,
-    "timestamp": "",
-    "percent": 0.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-02",
+    "timestamp": 1780329600000,
     "open": 1.16,
     "high": 1.171,
     "low": 1.16,
     "close": 1.166,
+    "percent": 0.34,
     "volume": 2922700,
-    "amount": 3394041,
-    "timestamp": "",
-    "percent": 0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-03",
+    "timestamp": 1780416000000,
     "open": 1.165,
     "high": 1.171,
     "low": 1.153,
     "close": 1.158,
+    "percent": -0.69,
     "volume": 3327000,
-    "amount": 3851458,
-    "timestamp": "",
-    "percent": -0.69
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-04",
+    "timestamp": 1780502400000,
     "open": 1.15,
     "high": 1.16,
     "low": 1.14,
     "close": 1.149,
+    "percent": -0.78,
     "volume": 2477600,
-    "amount": 2846157,
-    "timestamp": "",
-    "percent": -0.78
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-05",
+    "timestamp": 1780588800000,
     "open": 1.155,
     "high": 1.159,
     "low": 1.148,
     "close": 1.149,
+    "percent": 0,
     "volume": 1635400,
-    "amount": 1884659,
-    "timestamp": "",
-    "percent": 0
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-08",
+    "timestamp": 1780848000000,
     "open": 1.149,
     "high": 1.157,
     "low": 1.138,
     "close": 1.147,
+    "percent": -0.17,
     "volume": 1334900,
-    "amount": 1532065,
-    "timestamp": "",
-    "percent": -0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-09",
+    "timestamp": 1780934400000,
     "open": 1.154,
     "high": 1.154,
     "low": 1.143,
     "close": 1.152,
+    "percent": 0.44,
     "volume": 1541400,
-    "amount": 1773647,
-    "timestamp": "",
-    "percent": 0.44
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-10",
+    "timestamp": 1781020800000,
     "open": 1.16,
     "high": 1.174,
     "low": 1.151,
     "close": 1.171,
+    "percent": 1.65,
     "volume": 6889300,
-    "amount": 7993969,
-    "timestamp": "",
-    "percent": 1.65
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-11",
+    "timestamp": 1781107200000,
     "open": 1.171,
     "high": 1.178,
     "low": 1.16,
     "close": 1.165,
+    "percent": -0.51,
     "volume": 1860100,
-    "amount": 2175409,
-    "timestamp": "",
-    "percent": -0.51
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-12",
+    "timestamp": 1781193600000,
     "open": 1.164,
     "high": 1.192,
     "low": 1.155,
     "close": 1.191,
+    "percent": 2.23,
     "volume": 3186300,
-    "amount": 3768646,
-    "timestamp": "",
-    "percent": 2.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-15",
+    "timestamp": 1781452800000,
     "open": 1.185,
     "high": 1.211,
     "low": 1.185,
     "close": 1.194,
+    "percent": 0.25,
     "volume": 2093600,
-    "amount": 2508513,
-    "timestamp": "",
-    "percent": 0.25
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-16",
+    "timestamp": 1781539200000,
     "open": 1.201,
     "high": 1.202,
     "low": 1.179,
     "close": 1.183,
+    "percent": -0.92,
     "volume": 3213500,
-    "amount": 3807426,
-    "timestamp": "",
-    "percent": -0.92
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-17",
+    "timestamp": 1781625600000,
     "open": 1.189,
     "high": 1.189,
     "low": 1.173,
     "close": 1.179,
+    "percent": -0.34,
     "volume": 4973400,
-    "amount": 5858768,
-    "timestamp": "",
-    "percent": -0.34
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-18",
+    "timestamp": 1781712000000,
     "open": 1.171,
     "high": 1.185,
     "low": 1.139,
     "close": 1.14,
+    "percent": -3.31,
     "volume": 7464900,
-    "amount": 8531978,
-    "timestamp": "",
-    "percent": -3.31
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-22",
+    "timestamp": 1782057600000,
     "open": 1.138,
     "high": 1.182,
     "low": 1.133,
     "close": 1.182,
+    "percent": 3.68,
     "volume": 11812100,
-    "amount": 13633974,
-    "timestamp": "",
-    "percent": 3.68
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-23",
+    "timestamp": 1782144000000,
     "open": 1.182,
     "high": 1.203,
     "low": 1.178,
     "close": 1.181,
+    "percent": -0.08,
     "volume": 8821100,
-    "amount": 10498404,
-    "timestamp": "",
-    "percent": -0.08
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-24",
+    "timestamp": 1782230400000,
     "open": 1.175,
     "high": 1.187,
     "low": 1.154,
     "close": 1.155,
+    "percent": -2.2,
     "volume": 7485900,
-    "amount": 8707753,
-    "timestamp": "",
-    "percent": -2.2
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-25",
+    "timestamp": 1782316800000,
     "open": 1.151,
     "high": 1.177,
     "low": 1.148,
     "close": 1.165,
+    "percent": 0.87,
     "volume": 9854614,
-    "amount": 11437654,
-    "timestamp": "",
-    "percent": 0.87
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-26",
+    "timestamp": 1782403200000,
     "open": 1.167,
     "high": 1.168,
     "low": 1.134,
     "close": 1.134,
+    "percent": -2.66,
     "volume": 7276700,
-    "amount": 8365035,
-    "timestamp": "",
-    "percent": -2.66
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-29",
+    "timestamp": 1782662400000,
     "open": 1.133,
     "high": 1.152,
     "low": 1.127,
     "close": 1.148,
+    "percent": 1.23,
     "volume": 7274200,
-    "amount": 8323589,
-    "timestamp": "",
-    "percent": 1.23
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-06-30",
+    "timestamp": 1782748800000,
     "open": 1.142,
     "high": 1.149,
     "low": 1.128,
     "close": 1.135,
+    "percent": -1.13,
     "volume": 6293200,
-    "amount": 7154598,
-    "timestamp": "",
-    "percent": -1.13
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-01",
+    "timestamp": 1782835200000,
     "open": 1.135,
     "high": 1.173,
     "low": 1.132,
     "close": 1.164,
+    "percent": 2.56,
     "volume": 11188500,
-    "amount": 12875069,
-    "timestamp": "",
-    "percent": 2.56
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-02",
+    "timestamp": 1782921600000,
     "open": 1.164,
     "high": 1.174,
     "low": 1.152,
     "close": 1.157,
+    "percent": -0.6,
     "volume": 7326500,
-    "amount": 8492519,
-    "timestamp": "",
-    "percent": -0.6
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-03",
+    "timestamp": 1783008000000,
     "open": 1.162,
     "high": 1.165,
     "low": 1.146,
     "close": 1.161,
+    "percent": 0.35,
     "volume": 3606100,
-    "amount": 4177481,
-    "timestamp": "",
-    "percent": 0.35
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-06",
+    "timestamp": 1783267200000,
     "open": 1.156,
     "high": 1.18,
     "low": 1.156,
     "close": 1.18,
+    "percent": 1.64,
     "volume": 5845900,
-    "amount": 6825442,
-    "timestamp": "",
-    "percent": 1.64
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-07",
+    "timestamp": 1783353600000,
     "open": 1.172,
     "high": 1.176,
     "low": 1.158,
     "close": 1.161,
+    "percent": -1.61,
     "volume": 2353500,
-    "amount": 2736386,
-    "timestamp": "",
-    "percent": -1.61
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-08",
+    "timestamp": 1783440000000,
     "open": 1.163,
     "high": 1.17,
     "low": 1.159,
     "close": 1.166,
+    "percent": 0.43,
     "volume": 2926500,
-    "amount": 3408456,
-    "timestamp": "",
-    "percent": 0.43
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-09",
+    "timestamp": 1783526400000,
     "open": 1.177,
     "high": 1.196,
     "low": 1.152,
-    "close": 1.168,
+    "close": 1.167,
+    "percent": 0.09,
     "volume": 5644600,
-    "amount": 6543763,
-    "timestamp": "",
-    "percent": 0.17
+    "hsl": 0,
+    "zgs": null
   },
   {
     "date": "2026-07-10",
+    "timestamp": 1783612800000,
     "open": 1.159,
     "high": 1.173,
     "low": 1.157,
     "close": 1.163,
+    "percent": -0.43,
     "volume": 2082200,
-    "amount": 2421440,
-    "timestamp": "",
-    "percent": -0.43
+    "hsl": 0,
+    "zgs": null
+  },
+  {
+    "date": "2026-07-13",
+    "timestamp": 1783872000000,
+    "open": 1.163,
+    "high": 1.171,
+    "low": 1.155,
+    "close": 1.168,
+    "percent": 0.43,
+    "volume": 8620200,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.金融地产ETF广发 = 金融地产ETF广发
-    exports.dataSource = "新浪"
-    exports.writeDateTime = "2026-07-11 19:15:35"
+    exports.dataSource = "雪球"
+    exports.writeDateTime = "2026-07-13 20:41:23"
 };

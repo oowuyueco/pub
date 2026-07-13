@@ -2528,7 +2528,7 @@ var triggerLogObj区间 = {
         }
       ]
     },
-    "2022-11-03=>2026-07-10": {
+    "2022-11-03=>2026-07-13": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -3430,9 +3430,9 @@ var triggerLogObj区间 = {
             "low": ",0,0"
           },
           "after": {
-            "close": "23->2026-07-10,67.15,1.42",
+            "close": "24->2026-07-13,-18.26,-0.39",
             "high": "9->2026-06-22,346.02,7.34",
-            "low": ",0,0",
+            "low": "24->2026-07-13,-18.26,-0.39",
             "nextSecondDelivery周五": "2026-07-17",
             "nextThirdDelivery周五": "2026-08-21"
           }
@@ -6516,7 +6516,7 @@ var triggerLogObj区间 = {
     }
   }
 }
-var runLastKlineDate = "2026-07-10"
+var runLastKlineDate = "2026-07-13"
 
         if (typeof module !== "undefined" && module.exports) {
             exports.triggerLogObj区间 = triggerLogObj区间
