@@ -13864,9 +13864,20 @@ var 恐贪指数 =  [
         "jiucaishuo": 6.53,
         "baifenwei": 23.09,
         "miumiu": 2.8
+    },
+    {
+        "date": "2026-07-14",
+        "jiucaishuo": 10.19,
+        "baifenwei": 44.35,
+        "miumiu": "",
+        "ths股吧资金": [
+            "7.2",
+            "偏多",
+            null
+        ]
     }
 ]
-var 恐贪writeDateTime = "2026-07-14 11:04:27"
+var 恐贪writeDateTime = "2026-07-14 19:48:04"
 
      if (typeof module !== "undefined" && module.exports) {
           exports.恐贪指数 = 恐贪指数
