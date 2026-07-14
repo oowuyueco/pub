@@ -2528,7 +2528,7 @@ var triggerLogObj区间 = {
         }
       ]
     },
-    "2022-11-03=>2026-07-13": {
+    "2022-11-03=>2026-07-14": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -3430,11 +3430,28 @@ var triggerLogObj区间 = {
             "low": ",0,0"
           },
           "after": {
-            "close": "24->2026-07-13,-18.26,-0.39",
+            "close": "25->2026-07-14,82.86,1.76",
             "high": "9->2026-06-22,346.02,7.34",
             "low": "24->2026-07-13,-18.26,-0.39",
             "nextSecondDelivery周五": "2026-07-17",
             "nextThirdDelivery周五": "2026-08-21"
+          }
+        }
+      ],
+      "2026-07-14": [
+        {
+          "trigDate": "2026-07-14",
+          "quantName": "上证50低位_ma5金叉10绿空绿红",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": ",0,0",
+            "high": ",0,0",
+            "low": ",0,0",
+            "nextFirstDelivery周五": "2026-07-17",
+            "nextSecondDelivery周五": "2026-08-21",
+            "nextThirdDelivery周五": "2026-09-18"
           }
         }
       ]
@@ -6516,7 +6533,7 @@ var triggerLogObj区间 = {
     }
   }
 }
-var runLastKlineDate = "2026-07-13"
+var runLastKlineDate = "2026-07-14"
 
         if (typeof module !== "undefined" && module.exports) {
             exports.triggerLogObj区间 = triggerLogObj区间
