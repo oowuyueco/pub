@@ -293,7 +293,7 @@ var triggerLogObj同花顺 = {
                 "low": ",0,0"
             },
             "after": {
-                "close": "25->2026-07-14,82.86,1.76",
+                "close": "26->2026-07-15,73.14,1.55",
                 "high": "9->2026-06-22,346.02,7.34",
                 "low": "24->2026-07-13,-18.26,-0.39",
                 "nextSecondDelivery周五": "2026-07-17",
@@ -310,7 +310,7 @@ var triggerLogObj同花顺 = {
                 "low": ",0,0"
             },
             "after": {
-                "close": "22->2026-07-14,74.09,1.57",
+                "close": "23->2026-07-15,64.37,1.36",
                 "high": "6->2026-06-22,337.25,7.14",
                 "low": "21->2026-07-13,-27.03,-0.57",
                 "nextSecondDelivery周五": "2026-07-17",
@@ -322,7 +322,7 @@ var triggerLogObj同花顺 = {
         "大市值ths低位收盘通知已止损卖出",
         {
             "after": {
-                "close": "1->2026-07-14,101.12,2.15",
+                "close": "2->2026-07-15,91.4,1.95",
                 "high": "1->2026-07-14,101.12,2.15",
                 "low": ",0,0",
                 "nextFirstDelivery周五": "2026-07-17",
@@ -335,5 +335,5 @@ var triggerLogObj同花顺 = {
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj同花顺 = triggerLogObj同花顺
-        exports.同花顺策略runLastTime = "2026-07-14 19:51:07"
+        exports.同花顺策略runLastTime = "2026-07-15 19:58:24"
     }
