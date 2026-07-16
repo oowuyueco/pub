@@ -13338,11 +13338,31 @@ var 生猪连续 = [
     "volume": 169100,
     "hold": 188318,
     "settle": 12005
+  },
+  {
+    "date": "2026-07-15",
+    "open": 12035,
+    "high": 12050,
+    "low": 11900,
+    "close": 11960,
+    "volume": 120702,
+    "hold": 196779,
+    "settle": 11955
+  },
+  {
+    "date": "2026-07-16",
+    "open": 12100,
+    "high": 12125,
+    "low": 11865,
+    "close": 11915,
+    "volume": 144381,
+    "hold": 194307,
+    "settle": 11980
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.生猪连续 = 生猪连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-14 19:43:11"
+    exports.writeDateTime = "2026-07-16 19:57:59"
 };

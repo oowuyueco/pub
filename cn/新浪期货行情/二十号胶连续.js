@@ -16768,11 +16768,31 @@ var 二十号胶连续 = [
     "volume": 111801,
     "hold": 58674,
     "settle": 14710
+  },
+  {
+    "date": "2026-07-15",
+    "open": 14815,
+    "high": 15010,
+    "low": 14725,
+    "close": 14925,
+    "volume": 66023,
+    "hold": 59725,
+    "settle": 14850
+  },
+  {
+    "date": "2026-07-16",
+    "open": 14900,
+    "high": 14965,
+    "low": 14505,
+    "close": 14605,
+    "volume": 88264,
+    "hold": 56486,
+    "settle": 14745
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.二十号胶连续 = 二十号胶连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-14 19:42:47"
+    exports.writeDateTime = "2026-07-16 19:57:29"
 };
