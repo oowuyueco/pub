@@ -1055,14 +1055,14 @@ var triggerLogObj大宗={
                     7.15,
                     0.79
                 ],
-                "day93LowUp": [
+                "day94LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    0.38
+                    0
                 ],
-                "lastDay": 93
+                "lastDay": 94
             }
         },
         {
@@ -14774,8 +14774,8 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-07-16"
-var cnFutures策略runLastTime = "2026-07-16 19:59:29"
+var runLastKlineDate = "2026-07-17"
+var cnFutures策略runLastTime = "2026-07-17 20:46:49"
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj大宗 = triggerLogObj大宗
