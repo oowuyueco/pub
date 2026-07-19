@@ -1283,6 +1283,7 @@ function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
     }
     if (trigDateDayIndex == -1) return logProfileN
     let trigDateDayData = dayDatas[trigDateDayIndex]
+    let trigDateNextDayOpen = dayDatas?.[trigDateDayIndex + 1] ? dayDatas?.[trigDateDayIndex + 1].open : trigDateDayData.close  //实际第二天开盘买
 
     /**
      * 计算给定日期之后的最近 N 个中金所股指期权交割日。
@@ -1460,8 +1461,8 @@ function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
             let tmpCloseDate = ""
 
             for (let after = 1; after <= after交易日Day; after++) {
-                let pointChange = dayDatas[trigDateDayIndex + after].close - trigDateDayData.close
-                let profile = pointChange / trigDateDayData.close
+                let pointChange = dayDatas[trigDateDayIndex + after].close - trigDateNextDayOpen
+                let profile = pointChange / trigDateNextDayOpen
                 if (profile > tmpHigh) {
                     tmpHighPoint = pointChange
                     tmpHigh = profile
@@ -1504,8 +1505,8 @@ function afterDayProfileW5(trigDate, after交易日DayArr, dayDatas) {
             let tmpCloseDate = ""
 
             for (let after = 1; after <= lastDay; after++) {
-                let pointChange = dayDatas[trigDateDayIndex + after].close - trigDateDayData.close
-                let profile = pointChange / trigDateDayData.close
+                let pointChange = dayDatas[trigDateDayIndex + after].close - trigDateNextDayOpen
+                let profile = pointChange / trigDateNextDayOpen
                 if (profile > tmpHigh) {
                     tmpHighPoint = pointChange
                     tmpHigh = profile
