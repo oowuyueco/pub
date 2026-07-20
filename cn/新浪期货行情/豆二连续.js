@@ -44428,11 +44428,21 @@ var 豆二连续 = [
     "volume": 133894,
     "hold": 144843,
     "settle": 3791
+  },
+  {
+    "date": "2026-07-20",
+    "open": 3799,
+    "high": 3863,
+    "low": 3794,
+    "close": 3858,
+    "volume": 194778,
+    "hold": 154724,
+    "settle": 3823
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.豆二连续 = 豆二连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-18 19:28:41"
+    exports.writeDateTime = "2026-07-20 20:32:49"
 };
