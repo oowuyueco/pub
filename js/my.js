@@ -212,6 +212,40 @@ function unifyQuarterDate(site, date) {
     }
 }
 
+/**
+ * 计算两个日期之间的工作日天数（周一至周五）
+ * @param {Date|string} date1 - 第一个日期
+ * @param {Date|string} date2 - 第二个日期
+ * @param {boolean} [inclusive=true] - 是否包含结束日期，默认为 true
+ * @returns {number} 工作日天数
+ */
+function countWorkdays(date1, date2, inclusive = false) {
+    // 复制并归一化到当天零点，避免时间干扰
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+    d1.setHours(0, 0, 0, 0);
+    d2.setHours(0, 0, 0, 0);
+
+    // 确保 d1 <= d2
+    if (d1 > d2) [d1, d2] = [d2, d1];
+
+    let count = 0;
+    const current = new Date(d1);
+    const shouldContinue = inclusive
+        ? () => current <= d2
+        : () => current < d2;
+
+    while (shouldContinue()) {
+        const day = current.getDay(); // 0=周日, 1=周一 ... 6=周六
+        if (day >= 1 && day <= 5) count++;
+        current.setDate(current.getDate() + 1);
+    }
+
+    // if (date1 && date2 && count > 20)
+    //     console.log(date1, date2, count)
+
+    return count;
+}
 
 //获取日期dateStr 所在周的周weekDay 的日期
 function getDateInWeekDay(dateStr, weekDay = 5) {
@@ -2056,6 +2090,8 @@ if (typeof module !== "undefined" && module.exports) {
     exports.dateToStamp = dateToStamp
     exports.getDateInWeekDay = getDateInWeekDay
 
+
+    exports.countWorkdays = countWorkdays
     exports.unifyDate = unifyDate
     exports.findSameTime = findSameTime
     exports.isSameWeek = isSameWeek
