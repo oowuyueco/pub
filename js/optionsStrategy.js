@@ -1115,6 +1115,7 @@ let 模拟买卖 = [
     ["2025-01-13", "2025-02-21", " ↑ ", "3722.51 购沪深300模拟 3834.185", "IO2502-C-3800.xlsx"],
 
     ["2024-10-08", "2024-11-15", "高位", "4256.1 沽沪深300模拟 4128.417", "IO2411-P-4150.xlsx"],
+    ['2024-09-30', '2024-11-15', '高位', '4017.85 沽沪深300模拟 3897.314', "IO2411-P-3900.xlsx"],
 
     ["2024-09-27", "2024-11-15", "低★", "3703.68 购沪深300模拟 3814.79", "IO2411-C-3800.xlsx"],
     ["2024-09-23", "2024-11-15", "低★", "3212.76 购沪深300模拟 3309.143", "IO2411-C-3300.xlsx"],
@@ -1431,7 +1432,7 @@ function 附加xls过滤时间(期权建议ByDay) {
     if (期权endDate == "false") 期权endDate = "9999-09-09" //默认结束
     return structuredClone(期权建议ByDay)
         .filter(ele => 期权startDate <= ele[0] && ele[0] <= 期权endDate)
-        //.filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
+        .filter(ele => !(ele[0].includes("2024-09") || ele[0].includes("2024-08")))
         .map((ele, index) => {
             let s1 = 模拟买卖.find((e) => ele[0] + ele[1] + ele[2].unif高低位() == e[0] + e[1] + e[2].unif高低位());
             if (s1) { ele[3] = s1[3]; ele[4] = s1[4]; return ele; }//模拟
@@ -2112,7 +2113,7 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
 
 
     if (
-        asset期权[buyPriceIndex] / extractFirstNumber(asset期权[3]) > 0.05 &&
+        asset期权[buyPriceIndex] / extractFirstNumber(asset期权[3]) > 0.045 &&
         curtPercent(curDay) < 0 &&
         (curDay.J < 0 || 绿空绿(沪深300技术.currentDayList)) &&
         (curDay.bias.bias1 < 0 || curDay.bias.bias2 < 0) &&
