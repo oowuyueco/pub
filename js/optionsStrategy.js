@@ -1089,6 +1089,9 @@ String.prototype.unif高低位 = function () {
 };
 
 let 手动买卖 = [
+
+    ['2026-07-13', '2026-08-21', '低位', '4.744 购沪深300ETF手动 4.8', '2026-08-21购4800:4张', null, '2026-07-14', 0.1014, 4055.00]
+
     // ['2026-05-18', '2026-07-17', '高位', '4833.52 沽沪深300 4688.514', tAr: '沪深300高位VKM多叉', yes1: 1] start
     // ['2026-06-08', '2026-07-17', '低位', '4.852 购沪深300ETF手动 4.876', '2026-07-17沽4776:6张', null, '2026-06-09', 0.0795, 3078.350],
     // ['2026-06-04', '2026-07-17', '高位', '4.852 沽沪深300ETF手动 4.776', '2026-07-17沽4776:5张', null, '2026-06-05', 0.0795, 4078.350],
@@ -1968,6 +1971,12 @@ function get深度恐贪(curDate) {
         const ele = 恐贪指数[curDate恐贪指数Index - ii];
         if (ele?.jiucaishuo > preN5HigJC) preN5HigJC = ele?.jiucaishuo
         if (ele?.ashare > preN5HigASH) preN5HigASH = ele?.ashare
+    }
+
+    let thsPlus资金 = ""
+    if (curDate恐贪指数.ths资金?.[0] && curDate恐贪指数.ths资金?.[0] != "" && curDate恐贪指数.ths资金?.[1] != "") {
+        thsPlus资金 = curDate恐贪指数.ths资金[0] + curDate恐贪指数.ths资金[1]
+        if (thsPlus资金 < 55.5 || 65.5 < thsPlus资金) pageSendMail("测试thsPlus资金=" + thsPlus资金, () => { })
     }
 
     let 深度贪婪count = 0
