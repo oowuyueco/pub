@@ -2776,7 +2776,7 @@ async function 模拟交易(期权买卖List) {
     //, asset现金:${+asset.现金.toFixed(2)} 
     // ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
     await pageSendMail(`
-最新策略运行日期(恐贪指数):${window?.恐贪writeDateTime} ${JSON.stringify(window?.恐贪指数.at(-1))}
+最新策略运行日期(恐贪指数):${window?.恐贪writeDateTime} ${JSON.stringify(window?.恐贪指数.at(-1))} ${get深度恐贪(currentDayYMD)}
 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}全部策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()}
 
 当日${currentDayYMD}期权交易：
