@@ -1957,7 +1957,7 @@ function 沪深300行业割裂大标准差(trigDate) {
     return false
 }
 
-function get深度恐贪(curDate) {
+function get深度恐贪old(curDate) {
     let curDate恐贪指数Index = 恐贪指数.findIndex(ele => ele.date == curDate)
     if (curDate恐贪指数Index < 0) curDate恐贪指数 = { "jiucaishuo": "", "baifenwei": "", "miumiu": "" }
     else curDate恐贪指数 = 恐贪指数[curDate恐贪指数Index]
@@ -1985,6 +1985,69 @@ function get深度恐贪(curDate) {
 
     if (深度恐惧count == 3) return "深度恐惧"
     if (深度恐惧count >= 2 && 深度贪婪count == 0) return "深度恐惧"
+
+    return ""
+}
+function get深度恐贪(curDate) {
+    let curDate恐贪指数Index = 恐贪指数.findIndex(ele => ele.date == curDate)
+    if (curDate恐贪指数Index < 0) curDate恐贪指数 = { "jiucaishuo": "", "baifenwei": "", "ashare": "", "miumiu": "" }
+    else curDate恐贪指数 = 恐贪指数[curDate恐贪指数Index]
+
+    let preN5HigJC = -1000
+    let preN5HigASH = -1000
+    for (let ii = 1; ii < 7; ii++) {
+        const ele = 恐贪指数[curDate恐贪指数Index - ii];
+        if (ele?.jiucaishuo > preN5HigJC) preN5HigJC = ele?.jiucaishuo
+        if (ele?.ashare > preN5HigASH) preN5HigASH = ele?.ashare
+    }
+
+    let 深度贪婪count = 0
+    if (curDate恐贪指数?.jiucaishuo > 79 || (curDate恐贪指数?.jiucaishuo > 71 && preN5HigJC > 79)) 深度贪婪count++
+    if (curDate恐贪指数?.baifenwei > 74) 深度贪婪count++
+    if (curDate恐贪指数?.ashare > 95 && preN5HigASH > 99) 深度贪婪count++
+    if (curDate恐贪指数?.miumiu > 85) 深度贪婪count++
+
+    let 深度恐惧count = 0
+    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
+    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 20) 深度恐惧count++
+    if (curDate恐贪指数?.ashare && curDate恐贪指数?.ashare < 15) 深度恐惧count++
+    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 10) 深度恐惧count++
+
+
+    ////////////////////////////////////
+    if (深度贪婪count >= 3 && 深度恐惧count == 0) return "深度贪婪"
+
+    if (
+        curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo > 79 &&
+        curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei > 74 &&
+        curDate恐贪指数?.ashare && curDate恐贪指数?.ashare > 95 && preN5HigASH > 99 &&
+        深度恐惧count == 0
+    ) return "深度贪婪"
+
+
+    ////////////////////////////////////
+    if (深度恐惧count >= 3 && 深度贪婪count == 0) return "深度恐惧"
+    if (
+        curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8 &&
+        curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 30 &&
+        curDate恐贪指数?.ashare && curDate恐贪指数?.ashare < 15 &&
+        深度贪婪count == 0
+    ) return "深度恐惧"
+
+    if (
+        curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 15 &&
+        curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 20 &&
+        curDate恐贪指数?.ashare && curDate恐贪指数?.ashare < 15 &&
+        深度贪婪count == 0
+    ) return "深度恐惧"
+
+    if (
+        curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8 &&
+        curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 30 &&
+        curDate恐贪指数?.ashare && curDate恐贪指数?.ashare < 0 &&
+        深度贪婪count == 0
+    ) return "深度恐惧"
+
 
     return ""
 }
@@ -2779,8 +2842,13 @@ asset现金:${+asset.现金.toFixed(2)} 。
 
 信号 && 无反向亏损持仓  =》买入
 
-提前信号 && 盈利                        =》卖出 
-倒数三天信号 && 盈利 && 期权开盘价上跳空  =》卖出 
-最后一天                                =》卖出 
+买入的是ETF期权，策略js是按照股指期权。   股指期权到日期 之后5天左右 ETF期权到日期。
+
+提前信号 && 盈利                               =》卖出 
+
+股指期权倒数三天信号 && 盈利 && 期权开盘价上跳空  =》卖出 
+股指期权最后一天 && 盈利                        =》卖出 
+ 
+ETF期权 && 盈利                                =》卖出 
 
 */
