@@ -20738,11 +20738,21 @@ var 苹果连续 = [
     "volume": 109922,
     "hold": 105840,
     "settle": 7522
+  },
+  {
+    "date": "2026-07-22",
+    "open": 7570,
+    "high": 7648,
+    "low": 7531,
+    "close": 7603,
+    "volume": 83368,
+    "hold": 99425,
+    "settle": 7599
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.苹果连续 = 苹果连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-21 20:10:20"
+    exports.writeDateTime = "2026-07-22 20:16:33"
 };
