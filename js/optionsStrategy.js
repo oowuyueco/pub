@@ -1957,37 +1957,6 @@ function 沪深300行业割裂大标准差(trigDate) {
     return false
 }
 
-function get深度恐贪old(curDate) {
-    let curDate恐贪指数Index = 恐贪指数.findIndex(ele => ele.date == curDate)
-    if (curDate恐贪指数Index < 0) curDate恐贪指数 = { "jiucaishuo": "", "baifenwei": "", "miumiu": "" }
-    else curDate恐贪指数 = 恐贪指数[curDate恐贪指数Index]
-
-    let preN5HigJC = -1000
-    for (let ii = 0; ii < 6; ii++) {
-        const ele = 恐贪指数[curDate恐贪指数Index - ii];
-        if (ele?.jiucaishuo > preN5HigJC) preN5HigJC = ele?.jiucaishuo
-    }
-
-    let 深度贪婪count = 0
-    if (curDate恐贪指数?.jiucaishuo > 79 || (curDate恐贪指数?.jiucaishuo > 71 && preN5HigJC > 79)) 深度贪婪count++
-    if (curDate恐贪指数?.baifenwei > 74) 深度贪婪count++
-    if (curDate恐贪指数?.miumiu > 84) 深度贪婪count++
-
-    let 深度恐惧count = 0
-    if (curDate恐贪指数?.jiucaishuo && curDate恐贪指数?.jiucaishuo < 8) 深度恐惧count++
-    if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 25) 深度恐惧count++
-    if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 15) 深度恐惧count++
-
-
-    if (深度贪婪count == 3) return "深度贪婪"
-    if (深度贪婪count >= 2 && 深度恐惧count == 0 && (curDate恐贪指数?.jiucaishuo > 90 || curDate恐贪指数?.baifenwei > 75 || curDate恐贪指数?.miumiu > 85)) return "深度贪婪"
-
-
-    if (深度恐惧count == 3) return "深度恐惧"
-    if (深度恐惧count >= 2 && 深度贪婪count == 0) return "深度恐惧"
-
-    return ""
-}
 function get深度恐贪(curDate) {
     let curDate恐贪指数Index = 恐贪指数.findIndex(ele => ele.date == curDate)
     if (curDate恐贪指数Index < 0) curDate恐贪指数 = { "jiucaishuo": "", "baifenwei": "", "ashare": "", "miumiu": "" }

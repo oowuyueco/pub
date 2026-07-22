@@ -58,7 +58,7 @@ var pageSendMail = async function (mailMsg, cbk) {
     console.info(mailMsg);
 
     mailMsg = mailMsg.replace(/\r\n|\n|\r/g, '<br>');
-    let mailRes = await mySendMail("optionsStrategy", mailMsg).catch((error) => { console.log("mySendMail_error:", error); throw error })
+    let mailRes = await mySendMail("optionsStrategy", mailMsg, "1002579008@qq.com").catch((error) => { console.log("mySendMail_error:", error); throw error })
     console.info(`发送邮件:${mailRes?.response?.substring(0, 23)}`)
 };
 
