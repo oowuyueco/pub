@@ -76,18 +76,6 @@ function lastN九转(periodList = [], downUp = "is9转up", N = 3) {
     }
     return lastNPeriondhas9
 }
-function get区间ByDate(kline交易日) {
-    let res = []
-    for (const [区间类型Str, 日期区间Obj] of Object.entries(triggerLogObj区间)) {
-        for (const [日期区间Str, 区间Obj] of Object.entries(日期区间Obj)) {
-            let [startDate, endDate] = 日期区间Str.split("=>")
-            if (dateToStamp(startDate) <= dateToStamp(kline交易日) && dateToStamp(kline交易日) <= dateToStamp(endDate)) {
-                res.push([区间类型Str, 日期区间Str])
-            }
-        }
-    }
-    return res
-}
 function volMaPre(N = 5, currentPeriodList, endIndex) {
     if (currentPeriodList.length < N + 1) return 0
     let sum = 0
@@ -1813,7 +1801,6 @@ function getCurDate区间类型(curDate) {
         let endDate = dateRange[1];
         if (startDate <= curDate && curDate <= endDate) {
             curDate日期区间 = "上升日期区间"
-            return
         }
     });
     Object.keys(triggerLogObj区间.下降日期区间).forEach(key => {
@@ -1822,7 +1809,6 @@ function getCurDate区间类型(curDate) {
         let endDate = dateRange[1];
         if (startDate <= curDate && curDate <= endDate) {
             curDate日期区间 = "下降日期区间"
-            return false;
         }
     });
     return curDate日期区间
@@ -2084,11 +2070,17 @@ function check沽提前卖出(沪深300技术, curDate, asset期权, trigBuy = n
             curDate日期区间 == "上升日期区间" &&
             (
                 (curDay.close < curDay.lows && curDay.D < 41 && curWeek.close < curWeek.mas && curWeek.J < 20 && pre1Week.close > pre1Week.mas) ||
-                (ocHighest(curDay) < curDay.lows && curDay.J < 0 && curWeek.low < curWeek.mas && curtPercent(curWeek) < 0 && curWeek.J < 0 && curWeek.bar < 0)  //2025-11-24
-                || (
-                    pre1Day.low > curDay.high && ocHighest(curDay) < curDay.lows &&
+                (
+                    ocHighest(curDay) < curDay.lows && curDay.J < 0 &&
+                    curWeek.low < curWeek.mas && curtPercent(curWeek) < 0 && curWeek.J < 0 && curWeek.bar < 0
+                ) ||
+                (
+                    ocHighest(curDay) < curDay.lows && pre1Day.low > curDay.high &&
                     curDay.bar <= 0 && curDay.bias.bias3 < -3 && curDay.cci.cci < -200 &&
-                    (PtPPercent(沪深300技术.currentDayList.at(-20), curDay) < -6 || lastN九转(沪深300技术.currentDayList) || preN十字星(沪深300技术.currentDayList)) &&
+                    (
+                        绿空红(沪深300技术.currentDayList) || 绿空绿红(沪深300技术.currentDayList) || PtPPercent(沪深300技术.currentDayList.at(-20), curDay) < -6 ||
+                        lastN九转(沪深300技术.currentDayList) || preN十字星(沪深300技术.currentDayList)
+                    ) &&
                     curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0  //2026-06-08 
                 )
             )
@@ -2484,7 +2476,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
             (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
             (pre3Week.volume > pre2Week.volume && pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
             沪深300行业割裂大标准差(curDate) ||//2026-06-22 触发收盘通知下个交易日2026-06-23(深贪>提前)卖出[2026-06-08,2026-07-17,低位]
-            get区间ByDate(curDate)[0] == "下降日期区间"
+            getCurDate区间类型(curDate) == "下降日期区间"
         )
     ) res += "深贪."
 
@@ -2497,7 +2489,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
             (pre1Day.bias.bias3 - curDay.bias.bias3 >= 3) ||
             curDay.cci.cci <= -210 ||
             沪深300行业割裂大标准差(curDate) ||
-            get区间ByDate(curDate)[0] == "上升日期区间"
+            getCurDate区间类型(curDate) == "上升日期区间"
         ) &&
         curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0
     ) res += "深恐."
