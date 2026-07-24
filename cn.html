@@ -59,8 +59,8 @@
 
         function pageSendMail(msg, onfinal = () => { }) {
 
-            if (devTestEnv) {
-                console.log("\r\n测试环境，邮件内容：", msg.trim())
+            if (devTestEnv) {//开发者工具 cmd
+                console.log("\r\n测试环境，邮件内容：", msg.replaceAll("空格", " ").trim())
                 return
             }
 

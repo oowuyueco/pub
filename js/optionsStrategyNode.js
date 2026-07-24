@@ -55,9 +55,10 @@ var getQueryVariable = function (attr) {
 };
 
 var pageSendMail = async function (mailMsg, cbk) {
-    console.info(mailMsg);
+    console.info(mailMsg.replaceAll("空格", " ").trim());//cmd 开发者工具
 
-    mailMsg = mailMsg.replace(/\r\n|\n|\r/g, '<br>');
+
+    mailMsg = mailMsg.replaceAll("空格", "&nbsp;&nbsp;&nbsp;&nbsp;").replace(/\r\n/g, '<br>');
     let mailRes = await mySendMail("optionsStrategy", mailMsg, "1002579008@qq.com").catch((error) => { console.log("mySendMail_error:", error); throw error })
     console.info(`发送邮件:${mailRes?.response?.substring(0, 23)}`)
 };

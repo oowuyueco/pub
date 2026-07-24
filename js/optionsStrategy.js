@@ -1089,7 +1089,8 @@ String.prototype.unif高低位 = function () {
 
 let 手动买卖 = [
 
-    ['2026-07-13', '2026-08-21', '低位', '4.744 购沪深300ETF手动 4.8', '2026-08-21购4800:4张', null, '2026-07-14', 0.1014, 4055.00]
+    ['2026-07-20', '2026-07-23', '低位', '4.744 购沪深300ETF手动 4.8', '2026-08-21购4800:4张', null, '2026-07-21', 0.1014, 4055.00],
+    ['2026-07-13', '2026-07-23', '低位', '4.744 购沪深300ETF手动 4.8', '2026-08-21购4800:4张', null, '2026-07-14', 0.1014, 4055.00]
 
     // ['2026-05-18', '2026-07-17', '高位', '4833.52 沽沪深300 4688.514', tAr: '沪深300高位VKM多叉', yes1: 1] start
     // ['2026-06-08', '2026-07-17', '低位', '4.852 购沪深300ETF手动 4.876', '2026-07-17沽4776:6张', null, '2026-06-09', 0.0795, 3078.350],
@@ -2649,7 +2650,7 @@ async function 模拟交易(期权买卖List) {
                 let msg = `${cur沪深300Date} 触发收盘通知下个交易日${preNext交易日(cur沪深300Date, 1)}开盘买入 [${getKeyId(curTrigBuy)}] 预估买ETF期权${buyCash}`
                 console.log(msg);
                 curDateHasConsole = true;
-                if (isSendMail(cur沪深300Date, "五天之内")) todayNearMailMsg += (msg + "\r\n" + "&nbsp;".repeat(35))//pageSendMail(msg)
+                if (isSendMail(cur沪深300Date, "五天之内")) todayNearMailMsg += ("\r\n" + "空格".repeat(21) + msg)// 首次且只有一个 (msg + "\r\n" + "&nbsp;".repeat(35))//pageSendMail(msg)
             }
             if (curTrigBuy[3].includes("手动")) { };
             if (curTrigBuy[3].includes("模拟")) curTrigBuy[buyDateIndex] = preNext交易日(cur沪深300Date, 1);
@@ -2747,7 +2748,7 @@ async function 模拟交易(期权买卖List) {
                 console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
                 curDateHasConsole = true;
                 if (isSendMail(cur沪深300Date, "五天之内")) {
-                    if (!todayNearMailMsg.includes(`${cur沪深300Date} 触发收盘通知下个交易日${sellDateStr}卖出`)) todayNearMailMsg += msg//pageSendMail(msg)
+                    if (!todayNearMailMsg.includes(`${cur沪深300Date} 触发收盘通知下个交易日${sellDateStr}卖出`)) todayNearMailMsg += ("\r\n" + "空格".repeat(21) + msg)//pageSendMail(msg)
                     else todayNearMailMsg += msg.split("卖出")[1]
                 }
             };
@@ -2792,6 +2793,7 @@ async function 模拟交易(期权买卖List) {
 
     const endJs = performance.now();
     window.asset = asset
+    window.todayNearMailMsg = todayNearMailMsg
 
     //, asset现金:${+asset.现金.toFixed(2)} 
     // ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
@@ -2801,8 +2803,8 @@ ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); r
 
 当日${currentDayYMD}期权交易：
 代码运行时间: ${(endJs - startJs).toFixed(2)} 毫秒 。 
-当日及五天内收盘通知:${todayNearMailMsg.trim()} 。
-asset持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).map(ele => `[${getKeyId(ele)}]`).join(`\r\n${"&nbsp;".repeat(16)}`)} 。
+当日及五天内收盘通知:${todayNearMailMsg.trim().replace(/^(空格)+|(空格)+$/g, '')} 。
+asset持仓:${asset.期权.filter(ele => arrayHasIndex(ele, buyDateIndex) && !arrayHasIndex(ele, sellDateIndex)).map(ele => `[${getKeyId(ele)}]`).join(`\r\n${"空格".repeat(10)}`)} 。
 asset现金:${+asset.现金.toFixed(2)} 。
 `
         , () => { window.optionRunEnd = true });
