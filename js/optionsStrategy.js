@@ -2731,7 +2731,8 @@ async function 模拟交易(期权买卖List) {
                         continue  //单独的月KM死叉副高位右侧 高位Pmi股债 到最后一天
                     }
                     if (curNextOne交易日 == preNext交易日(asset期权[1], preDay)) {
-                        sellDateStr = `${curNextOne交易日}`;
+                        let checkPreN股指期权到期日 = preDay != 0 ? `到期前${-1 * preDay}天` : '到期日'
+                        sellDateStr = `${curNextOne交易日}${checkPreN股指期权到期日}`;
                         break
                     }
                 }
@@ -2740,6 +2741,7 @@ async function 模拟交易(期权买卖List) {
             if (!sellDateStr) continue
 
             if (asset期权[3].includes("手动")) {
+                if (sellDateStr.includes("到期")) { sellDateStr = sellDateStr.replace("到期", "(股指期权到期") + "检测如果明日期权上跳空)" }
                 let msg = `${cur沪深300Date} 触发收盘通知下个交易日${sellDateStr}卖出[${getKeyId(asset期权)}]`
                 console.log(curDateHasConsole ? msg.substring(11).leftAppend() : msg);
                 curDateHasConsole = true;
@@ -2838,7 +2840,8 @@ asset现金:${+asset.现金.toFixed(2)} 。
 
 信号 && 无反向亏损持仓  =》买入
 
-买入的是ETF期权，策略js是按照股指期权。   股指期权到日期 之后5天左右 ETF期权到日期。
+
+代码按照股指期权到期日2026-08-21  (一般5天后)  实际购买etf期权到期日2026-08-26
 
 提前信号 && 盈利                               =》卖出 
 
