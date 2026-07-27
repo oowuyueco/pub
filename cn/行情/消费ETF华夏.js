@@ -38542,11 +38542,23 @@ var 消费ETF华夏 = [
     "volume": 66433100,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-07-27",
+    "timestamp": 1785081600000,
+    "open": 0.797,
+    "high": 0.803,
+    "low": 0.788,
+    "close": 0.799,
+    "percent": 0.88,
+    "volume": 97685100,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.消费ETF华夏 = 消费ETF华夏
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-25 20:14:08"
+    exports.writeDateTime = "2026-07-27 21:47:23"
 };
