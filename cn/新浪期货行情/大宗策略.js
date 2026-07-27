@@ -654,6 +654,9 @@ var triggerLogObj大宗={
         ],
         "2026-03-02": [
             "高位KDJ_豆一连续"
+        ],
+        "2026-07-27": [
+            "低位低量_纯碱连续"
         ]
     },
     "高位KDJ": [
@@ -1055,14 +1058,13 @@ var triggerLogObj大宗={
                     7.15,
                     0.79
                 ],
-                "day99LowUp": [
+                "day100LowUp": [
                     "19,2026-03-27",
                     -2.8,
                     "36,2026-04-22",
                     7.15,
-                    1.99
-                ],
-                "lastDay": 99
+                    1.67
+                ]
             }
         },
         {
@@ -13989,6 +13991,25 @@ var triggerLogObj大宗={
                     25.72
                 ]
             }
+        },
+        {
+            "dataName": "纯碱连续",
+            "quantName": "低位低量",
+            "trigDate": "2026-07-27",
+            "trigAtIndex": 1607,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
         }
     ],
     "低位黄金VKM多叉": [
@@ -14774,8 +14795,8 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-07-24"
-var cnFutures策略runLastTime = "2026-07-25 20:16:05"
+var runLastKlineDate = "2026-07-27"
+var cnFutures策略runLastTime = "2026-07-27 21:49:39"
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj大宗 = triggerLogObj大宗
