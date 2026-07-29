@@ -6908,11 +6908,21 @@ var 对二甲苯连续 = [
     "volume": 168442,
     "hold": 112520,
     "settle": 7968
+  },
+  {
+    "date": "2026-07-29",
+    "open": 7916,
+    "high": 8076,
+    "low": 7894,
+    "close": 7998,
+    "volume": 198506,
+    "hold": 110391,
+    "settle": 8000
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.对二甲苯连续 = 对二甲苯连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-28 21:10:39"
+    exports.writeDateTime = "2026-07-30 00:30:40"
 };

@@ -660,6 +660,9 @@ var triggerLogObj大宗={
         ],
         "2026-07-28": [
             "低位低量_纯碱连续"
+        ],
+        "2026-07-29": [
+            "低位低量_纯碱连续"
         ]
     },
     "高位KDJ": [
@@ -14004,14 +14007,14 @@ var triggerLogObj大宗={
             "trigcalType": "",
             "test": "",
             "logProfileN": {
-                "day1LowUp": [
-                    "1,2026-07-28",
-                    -2.31,
+                "day2LowUp": [
+                    "2,2026-07-29",
+                    -3.52,
                     "",
                     0,
-                    -2.31
+                    -3.52
                 ],
-                "lastDay": 1
+                "lastDay": 2
             }
         },
         {
@@ -14019,6 +14022,25 @@ var triggerLogObj大宗={
             "quantName": "低位低量",
             "trigDate": "2026-07-28",
             "trigAtIndex": 1608,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day1LowUp": [
+                    "1,2026-07-29",
+                    -1.23,
+                    "",
+                    0,
+                    -1.23
+                ],
+                "lastDay": 1
+            }
+        },
+        {
+            "dataName": "纯碱连续",
+            "quantName": "低位低量",
+            "trigDate": "2026-07-29",
+            "trigAtIndex": 1609,
             "dataType": "工业",
             "trigcalType": "",
             "test": "",
@@ -14817,8 +14839,8 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-07-28"
-var cnFutures策略runLastTime = "2026-07-28 21:10:48"
+var runLastKlineDate = "2026-07-29"
+var cnFutures策略runLastTime = "2026-07-30 00:30:45"
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj大宗 = triggerLogObj大宗
