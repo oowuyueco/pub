@@ -639,7 +639,7 @@
         }
     ]
 }
-var runLastKlineDate = "2026-07-28"
+var runLastKlineDate = "2026-07-29"
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj券商 = triggerLogObj券商
