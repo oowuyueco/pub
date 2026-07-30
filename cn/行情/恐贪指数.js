@@ -3484,9 +3484,40 @@ var 恐贪指数 =  [
             0.806,
             0.147
         ]
+    },
+    {
+        "date": "2026-07-30",
+        "jiucaishuo": 7.21,
+        "jiucaishuo六子": [
+            21.28,
+            23452.38,
+            0.16,
+            -7.81,
+            -5.9,
+            8.13
+        ],
+        "baifenwei": 19.53,
+        "baifenwei六子": [
+            4.39,
+            46.3,
+            0.79,
+            36.38,
+            21.56,
+            14.02
+        ],
+        "ashare": 51.3,
+        "miumiu": null,
+        "dazhihu": [
+            0.233,
+            0.155
+        ],
+        "ths资金": [
+            5.1,
+            48
+        ]
     }
 ]
-var 恐贪writeDateTime = "2026-07-30 10:10:35"
+var 恐贪writeDateTime = "2026-07-30 21:37:37"
 
      if (typeof module !== "undefined" && module.exports) {
           exports.恐贪指数 = 恐贪指数
