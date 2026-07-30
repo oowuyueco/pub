@@ -662,6 +662,7 @@ var triggerLogObj大宗={
             "低位低量_纯碱连续"
         ],
         "2026-07-29": [
+            "低位低量_纯碱连续",
             "低位低量_纯碱连续"
         ]
     },
@@ -14054,6 +14055,25 @@ var triggerLogObj大宗={
                 ],
                 "lastDay": 0
             }
+        },
+        {
+            "dataName": "纯碱连续",
+            "quantName": "低位低量",
+            "trigDate": "2026-07-29",
+            "trigAtIndex": 1609,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day0LowUp": [
+                    "",
+                    0,
+                    "",
+                    0,
+                    0
+                ],
+                "lastDay": 0
+            }
         }
     ],
     "低位黄金VKM多叉": [
@@ -14840,7 +14860,7 @@ var triggerLogObj大宗={
     ]
 }
 var runLastKlineDate = "2026-07-29"
-var cnFutures策略runLastTime = "2026-07-30 00:30:45"
+var cnFutures策略runLastTime = "2026-07-30 09:57:06"
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj大宗 = triggerLogObj大宗
