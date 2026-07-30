@@ -3129,11 +3129,6 @@ var triggerLogObj区间 = {
           "logInfo": ""
         },
         {
-          "trigDate": "2025-08-12",
-          "quantName": "科创50低位_ma5金叉10绿空绿红",
-          "logInfo": ""
-        },
-        {
           "nextFirstDelivery周五": {
             "close": "3->2025-08-15,51.85,1.25",
             "high": "3->2025-08-15,51.85,1.25",
@@ -3342,8 +3337,18 @@ var triggerLogObj区间 = {
         },
         {
           "trigDate": "2026-03-23",
+          "quantName": "上证低位_周downMa40",
+          "logInfo": ""
+        },
+        {
+          "trigDate": "2026-03-23",
           "quantName": "沪深300低位_日周急跌lows",
           "logInfo": "type2"
+        },
+        {
+          "trigDate": "2026-03-23",
+          "quantName": "沪深300低位_周downMa40",
+          "logInfo": ""
         },
         {
           "trigDate": "2026-03-23",
@@ -3442,45 +3447,25 @@ var triggerLogObj区间 = {
           }
         }
       ],
-      "2026-07-14": [
+      "2026-07-17": [
         {
-          "trigDate": "2026-07-14",
-          "quantName": "上证50低位_ma5金叉10绿空绿红",
+          "trigDate": "2026-07-17",
+          "quantName": "上证低位_周downMa40",
           "logInfo": ""
         },
         {
-          "nextFirstDelivery周五": {
-            "close": "3->2026-07-17,-268.84,-5.6",
-            "high": ",0,0",
-            "low": "3->2026-07-17,-268.84,-5.6"
-          },
-          "after": {
-            "close": "12->2026-07-30,-225.69,-4.7",
-            "high": ",0,0",
-            "low": "3->2026-07-17,-268.84,-5.6",
-            "nextSecondDelivery周五": "2026-08-21",
-            "nextThirdDelivery周五": "2026-09-18"
-          }
-        }
-      ],
-      "2026-07-15": [
-        {
-          "trigDate": "2026-07-15",
-          "quantName": "上证50低位_ma5金叉10绿空绿红",
+          "trigDate": "2026-07-17",
+          "quantName": "沪深300低位_周downMa40",
           "logInfo": ""
         },
         {
-          "nextFirstDelivery周五": {
-            "close": "2->2026-07-17,-182.43,-3.87",
-            "high": ",0,0",
-            "low": "2->2026-07-17,-182.43,-3.87"
-          },
           "after": {
-            "close": "11->2026-07-30,-139.28,-2.96",
-            "high": "4->2026-07-21,27.7,0.59",
-            "low": "2->2026-07-17,-182.43,-3.87",
-            "nextSecondDelivery周五": "2026-08-21",
-            "nextThirdDelivery周五": "2026-09-18"
+            "close": "9->2026-07-30,-3.42,-0.07",
+            "high": "2->2026-07-21,163.56,3.57",
+            "low": "7->2026-07-28,-6.15,-0.13",
+            "nextFirstDelivery周五": "2026-08-21",
+            "nextSecondDelivery周五": "2026-09-18",
+            "nextThirdDelivery周五": "2026-10-16"
           }
         }
       ],
