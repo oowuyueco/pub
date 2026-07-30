@@ -1,4 +1,4 @@
-var 恐贪指数 = [
+var 恐贪指数 =  [
     {
         "date": "2024-07-22",
         "jiucaishuo": 12.93,
@@ -3457,11 +3457,60 @@ var 恐贪指数 = [
             0.417,
             0.111
         ]
+    },
+    {
+        "date": "2026-07-29",
+        "jiucaishuo": 8.7,
+        "jiucaishuo六子": [
+            20.47,
+            22989.43,
+            0.16,
+            -7.82,
+            -7.56,
+            7.37
+        ],
+        "baifenwei": 33.97,
+        "baifenwei六子": [
+            4.19,
+            55.69,
+            1.46,
+            82.14,
+            26.72,
+            64.95
+        ],
+        "ashare": 52,
+        "miumiu": 25.04,
+        "dazhihu": [
+            0.806,
+            0.147
+        ]
+    },
+    {
+        "date": "2026-07-30",
+        "jiucaishuo": "",
+        "jiucaishuo六子": "",
+        "baifenwei": 31.1,
+        "baifenwei六子": [
+            4.39,
+            46.88,
+            0.79,
+            71.03,
+            21.16,
+            76.98
+        ],
+        "ashare": "",
+        "miumiu": "",
+        "dazhihu": "",
+        "ths资金": [
+            5.8,
+            ""
+        ]
     }
 ]
-var 恐贪writeDateTime = "2026-07-29 14:49:52"
+var 恐贪writeDateTime = "2026-07-30 10:10:35"
 
-if (typeof module !== "undefined" && module.exports) {
-    exports.恐贪指数 = 恐贪指数
-    exports.恐贪writeDateTime = 恐贪writeDateTime
-};
+     if (typeof module !== "undefined" && module.exports) {
+          exports.恐贪指数 = 恐贪指数
+          exports.恐贪writeDateTime = 恐贪writeDateTime
+      };
+     
