@@ -766,7 +766,7 @@ var triggerLogObj基金 = {
         }
     ]
 };
-var 基金策略runLastTime = "2026-07-30 22:07:02";
+var 基金策略runLastTime = "2026-07-31 21:18:29";
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj基金 = triggerLogObj基金
