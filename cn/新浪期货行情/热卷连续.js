@@ -30078,11 +30078,31 @@ var 热卷连续 = [
     "volume": 367173,
     "hold": 1411088,
     "settle": 3288
+  },
+  {
+    "date": "2026-07-30",
+    "open": 3290,
+    "high": 3290,
+    "low": 3235,
+    "close": 3240,
+    "volume": 790275,
+    "hold": 1524984,
+    "settle": 3257
+  },
+  {
+    "date": "2026-07-31",
+    "open": 3245,
+    "high": 3247,
+    "low": 3214,
+    "close": 3220,
+    "volume": 534381,
+    "hold": 1559862,
+    "settle": 3230
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.热卷连续 = 热卷连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-30 09:55:20"
+    exports.writeDateTime = "2026-07-31 21:12:10"
 };

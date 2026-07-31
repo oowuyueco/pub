@@ -28598,11 +28598,31 @@ var 锰硅连续 = [
     "volume": 187207,
     "hold": 507005,
     "settle": 5716
+  },
+  {
+    "date": "2026-07-30",
+    "open": 5706,
+    "high": 5718,
+    "low": 5658,
+    "close": 5684,
+    "volume": 200738,
+    "hold": 485377,
+    "settle": 5688
+  },
+  {
+    "date": "2026-07-31",
+    "open": 5690,
+    "high": 5716,
+    "low": 5670,
+    "close": 5680,
+    "volume": 141795,
+    "hold": 466634,
+    "settle": 5692
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.锰硅连续 = 锰硅连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-30 09:56:09"
+    exports.writeDateTime = "2026-07-31 21:13:01"
 };

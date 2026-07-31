@@ -45188,11 +45188,31 @@ var 黄金连续 = [
     "volume": 189457,
     "hold": 167723,
     "settle": 881.76
+  },
+  {
+    "date": "2026-07-30",
+    "open": 880.26,
+    "high": 894.88,
+    "low": 874.5,
+    "close": 881.4,
+    "volume": 282457,
+    "hold": 171281,
+    "settle": 884.1
+  },
+  {
+    "date": "2026-07-31",
+    "open": 888.26,
+    "high": 897.5,
+    "low": 886.58,
+    "close": 888.3,
+    "volume": 279829,
+    "hold": 182150,
+    "settle": 891.92
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.黄金连续 = 黄金连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-07-30 09:55:25"
+    exports.writeDateTime = "2026-07-31 21:12:14"
 };
