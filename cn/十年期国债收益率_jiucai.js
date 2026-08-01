@@ -18294,6 +18294,10 @@ var 十年期国债收益率_jiucai = [
     [
         "2026-07-30",
         1.7196
+    ],
+    [
+        "2026-07-31",
+        1.7141
     ]
 ]
 if (typeof module !== "undefined" && module.exports) { exports.十年期国债收益率_jiucai = 十年期国债收益率_jiucai

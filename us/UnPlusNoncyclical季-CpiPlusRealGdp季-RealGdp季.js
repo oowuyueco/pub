@@ -1583,7 +1583,7 @@ var CpiPlusRealGdp季 = [
     ],
     [
         "2026-06-28",
-        null
+        1.70103
     ]
 ]
 var RealGdp季 = [
@@ -2377,6 +2377,6 @@ var RealGdp季 = [
     ],
     [
         "2026-06-28",
-        null
+        2.10182
     ]
 ]
