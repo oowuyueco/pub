@@ -38608,5 +38608,5 @@ var 消费ETF华夏 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.消费ETF华夏 = 消费ETF华夏
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-07-31 21:12:03"
+    exports.writeDateTime = "2026-08-01 20:32:13"
 };
