@@ -659,6 +659,21 @@ console.log(券商策略低位ByDay, changeShowLog(券商策略低位ByDay), 券
 console.groupEnd()
 
 
+//恐贪策略
+let 恐贪策略高位 = 统计策略(triggerLogObj恐贪.按日期排序, "恐贪策略", "高位")
+let 恐贪策略低位 = 统计策略(triggerLogObj恐贪.按日期排序, "恐贪策略", "低位")
+let 恐贪策略高位ByDay = 恐贪策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+let 恐贪策略低位ByDay = 恐贪策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+let 恐贪策略高位By期权日 = 恐贪策略高位.trig期权日Arr
+let 恐贪策略低位By期权日 = 恐贪策略低位.trig期权日Arr
+
+console.groupCollapsed("恐贪策略高位ByDay   恐贪策略高位By期权日")
+console.log(恐贪策略高位ByDay, changeShowLog(恐贪策略高位ByDay), 恐贪策略高位By期权日)
+console.groupEnd()
+console.groupCollapsed("恐贪策略低位ByDay   恐贪策略低位By期权日")
+console.log(恐贪策略低位ByDay, changeShowLog(恐贪策略低位ByDay), 恐贪策略低位By期权日)
+console.groupEnd()
+
 //区间策略
 function 统计区间区间策略(区间类型 = "上升日期区间", 汇总N = 5, 过滤M = 10) {
     let 区间ByDay = {}
@@ -882,6 +897,8 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
 
     let trigDateArrPmi股债 = Object.entries(triggerLogObjPmi股债).filter((ele, index) => { return ele[1][0].includes(高低位) })
 
+    let trigDateArr恐贪 = Object.entries(triggerLogObj恐贪.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
+
     let trigDateArr区间 = []
     Object.entries(triggerLogObj区间.上升日期区间).forEach(([日期区间, 区间trigDateArr]) => {
         Object.entries(区间trigDateArr).forEach(([trigDate, trigNameObjArr]) => {
@@ -902,7 +919,7 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
         })
     })
 
-    let trigDateArr = [...trigDateArr区间, ...trigDateArr指数, , ...trigDateArr券商, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债] //  [...trigDateArrPmi股债] //
+    let trigDateArr = [...trigDateArr指数, ...trigDateArr区间, ...trigDateArr券商, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债, ...trigDateArr恐贪,] //  [...trigDateArrPmi股债] //
     trigDateArr.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
     const dateMap = new Map();
@@ -1558,7 +1575,17 @@ for (let index = 全部策略By期权日.length - 1; index >= 0; index--) {
 
 
 let 期权买卖List = 附加xls过滤时间(期权建议ByDay)
+
+
 期权买卖List = 第二次按方向到期日分类查找标记ok2(期权买卖List, 5).filter((ele, index) => ele.ok2)
+
+
+期权买卖List = 期权买卖List.filter(ele => {
+    if (ele[3].includes("手动")) return true
+    if (沪深300行业割裂大标准差(ele[0]) && ele[2].unif高低位() == "低位" && !triggerLogObj恐贪?.低位深度恐惧六子NO技术.includes(ele[0])) return false
+    return true
+})
+
 
 
 console.groupCollapsed("全部策略ByDay      全部策略By期权日")
@@ -1947,10 +1974,11 @@ function 沪深300行业割裂大标准差(trigDate) {
         sqrvariance > 15 &&
         同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1) < -15
     ) {
-        console.log("沪深300行业割裂大标准差", sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
+        console.log("沪深300行业割裂大标准差", trigDate, true, sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
         return true
     }
 
+    console.log("沪深300行业割裂大标准差", trigDate, false, sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
     return false
 }
 
@@ -2490,6 +2518,17 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
         ) &&
         curWeek.J < curWeek.D && curWeek.bar < 0 && curWeek.bias.bias2 < 0 && curWeek.cci.cci < 0
     ) res += "深恐."
+    if (
+        asset期权[2].unif高低位() == "高位" &&
+        triggerLogObj恐贪?.低位深度恐惧六子NO技术.includes(curDate) &&
+        (
+            (curDay.bias.bias3 <= -5 && pre1Day.bias.bias3 >= curDay.bias.bias3) ||
+            (pre1Day.bias.bias3 - curDay.bias.bias3 >= 3) ||
+            curDay.cci.cci <= -210 ||
+            沪深300行业割裂大标准差(curDate) ||
+            getCurDate区间类型(curDate) == "上升日期区间"
+        )
+    ) res += "深恐六子."
 
 
     if (asset期权[3].includes("沽")) res += check沽提前卖出(沪深300技术, curDate, asset期权)
