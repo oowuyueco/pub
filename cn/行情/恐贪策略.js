@@ -1,5 +1,5 @@
 
- var triggerLogObj恐贪 = {
+var triggerLogObj恐贪 = {
     "按日期排序": {
         "2024-08-23": [
             "低位深度恐惧六子",
@@ -438,10 +438,9 @@
         }
     ]
 }
-var runLastKlineDate = "2026-07-31"
+var runLastKlineDate恐贪策略 = "2026-07-31"
 
- if (typeof module !== "undefined" && module.exports) {
-     exports.triggerLogObj恐贪 = triggerLogObj恐贪
-     exports.runLastKlineDate = runLastKlineDate
- }
- 
+if (typeof module !== "undefined" && module.exports) {
+    exports.triggerLogObj恐贪 = triggerLogObj恐贪
+    exports.runLastKlineDate恐贪策略 = runLastKlineDate恐贪策略
+}

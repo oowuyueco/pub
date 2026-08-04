@@ -1582,11 +1582,20 @@ let 期权买卖List = 附加xls过滤时间(期权建议ByDay)
 
 期权买卖List = 期权买卖List.filter(ele => {
     if (ele[3].includes("手动")) return true
-    if (沪深300行业割裂大标准差(ele[0]) && ele[2].unif高低位() == "低位" && !triggerLogObj恐贪?.低位深度恐惧六子NO技术.includes(ele[0])) return false
+
+    if (
+        ele[2].unif高低位() == "低位" && !triggerLogObj恐贪?.低位深度恐惧六子NO技术.includes(ele[0]) &&
+        triggerLogObj恐贪?.低位深度恐惧六子NO技术[0] < ele[0] && dateToStamp(runLastKlineDate恐贪策略) >= dateToStamp(currentDayYMD) - 5 * 86400000 &&
+        (沪深300行业割裂大标准差(ele[0]) || 科创50沪深300高估(ele[0]))
+    ) return false
+
     return true
 })
 
-
+// let test期权买卖List = 期权买卖List.map((ele, index) => {
+//     return [ele[0], ele[1], ele, [2], ele[3], 沪深300行业割裂大标准差(ele[0]), 科创50沪深300高估(ele[0]), ele.tAr]
+// })
+// console.log(test期权买卖List)
 
 console.groupCollapsed("全部策略ByDay      全部策略By期权日")
 console.log(全部策略ByDay, changeShowLog((全部策略ByDay)), 全部策略By期权日, "=>期权建议ByDay", 期权建议ByDay, "=>期权买卖List", 期权买卖List)
@@ -1944,6 +1953,22 @@ function extractFirstNumber(str) {
     return match ? parseFloat(match[0]) : null;
 }
 
+function 科创50沪深300高估(trigDate) {
+    let cur科创50估值 = 科创50估值.findLast(ele => ele.date.substring(0, 9) == trigDate.substring(0, 9))
+    let cur沪深300估值 = 沪深300估值.findLast(ele => ele.date.substring(0, 9) == trigDate.substring(0, 9))
+
+    if (
+        (cur科创50估值?.ps > 90 || (cur科创50估值?.ps > 80 && cur科创50估值?.pe > 90)) &&
+        cur沪深300估值.pe > 80 && cur沪深300估值.ps > 80 && (cur沪深300估值.pe > 90 || cur沪深300估值.ps > 90)
+    ) {
+        //console.log("科创50沪深300高估", trigDate, true, cur科创50估值)
+        return true
+    }
+
+    //console.log("科创50沪深300高估", trigDate, false, cur科创50估值)
+    return false
+
+}
 function 沪深300行业割裂大标准差(trigDate) {
 
     function getN同比(指数list, trigDate, preNday = 60) {
@@ -1974,14 +1999,13 @@ function 沪深300行业割裂大标准差(trigDate) {
         sqrvariance > 15 &&
         同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1) < -15
     ) {
-        console.log("沪深300行业割裂大标准差", trigDate, true, sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
+        //console.log("沪深300行业割裂大标准差", trigDate, true, sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
         return true
     }
 
-    console.log("沪深300行业割裂大标准差", trigDate, false, sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
+    //console.log("沪深300行业割裂大标准差", trigDate, false, sqrvariance, 同比涨跌幅Arr[0] * 同比涨跌幅Arr.at(-1))
     return false
 }
-
 function get深度恐贪(curDate) {
     let curDate恐贪指数Index = 恐贪指数.findIndex(ele => ele.date == curDate)
     if (curDate恐贪指数Index < 0) curDate恐贪指数 = { "jiucaishuo": "", "baifenwei": "", "ashare": "", "miumiu": "" }
@@ -2501,6 +2525,7 @@ function check提前卖出(curDate, asset期权, trigBuy = null) {
             (pre2Day.volume > pre1Day.volume && pre1Day.volume > curDay.volume) ||
             (pre3Week.volume > pre2Week.volume && pre2Week.volume > pre1Week.volume && pre1Week.volume > curWeek.volume) ||
             沪深300行业割裂大标准差(curDate) ||//2026-06-22 触发收盘通知下个交易日2026-06-23(深贪>提前)卖出[2026-06-08,2026-07-17,低位]
+            科创50沪深300高估(ele[0]) ||
             getCurDate区间类型(curDate) == "下降日期区间"
         )
     ) res += "深贪."

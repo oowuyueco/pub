@@ -27,12 +27,15 @@ global.恒生 = require("../cn/行情/恒生.js").恒生;
 // 恐贪指数模块（挂载两个需要的属性，也可用 Object.assign 全挂）
 global.恐贪writeDateTime = require("../cn/行情/恐贪指数.js").恐贪writeDateTime;
 global.恐贪指数 = require("../cn/行情/恐贪指数.js").恐贪指数;
+global.科创50估值 = require("../cn/行情/指数分位.js").科创50估值;
+global.沪深300估值 = require("../cn/行情/指数分位.js").沪深300估值;
 
 // 策略模块（直接挂载需要的 triggerLogObj...）
 global.triggerLogObj指数 = require("../cn/行情/指数策略.js").triggerLogObj指数;
 global.triggerLogObj券商 = require("../cn/行情/券商策略.js").triggerLogObj券商;
 global.triggerLogObj区间 = require("../cn/行情/区间策略.js").triggerLogObj区间;
 global.triggerLogObj恐贪 = require("../cn/行情/恐贪策略.js").triggerLogObj恐贪;
+global.runLastKlineDate恐贪策略 = require("../cn/行情/恐贪策略.js").runLastKlineDate恐贪策略;
 global.triggerLogObj基金 = require("../cn/基金/基金策略.js").triggerLogObj基金;
 
 global.triggerLogObjPmi股债 = require("../cn/pmiGZ策略.js").triggerLogObjPmi股债;
