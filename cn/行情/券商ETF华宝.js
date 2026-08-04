@@ -28762,11 +28762,23 @@ var 券商ETF华宝 = [
     "volume": 1185364540,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-08-04",
+    "timestamp": 1785772800000,
+    "open": 0.529,
+    "high": 0.531,
+    "low": 0.526,
+    "close": 0.527,
+    "percent": 0,
+    "volume": 1427679800,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.券商ETF华宝 = 券商ETF华宝
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-04 09:09:27"
+    exports.writeDateTime = "2026-08-04 21:14:30"
 };

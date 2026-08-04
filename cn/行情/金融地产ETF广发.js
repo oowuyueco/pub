@@ -32950,11 +32950,23 @@ var 金融地产ETF广发 = [
     "volume": 82451680,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-08-04",
+    "timestamp": 1785772800000,
+    "open": 1.226,
+    "high": 1.226,
+    "low": 1.205,
+    "close": 1.207,
+    "percent": -1.55,
+    "volume": 5276900,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.金融地产ETF广发 = 金融地产ETF广发
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-04 09:09:04"
+    exports.writeDateTime = "2026-08-04 21:14:06"
 };
