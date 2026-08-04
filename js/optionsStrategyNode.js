@@ -32,6 +32,7 @@ global.恐贪指数 = require("../cn/行情/恐贪指数.js").恐贪指数;
 global.triggerLogObj指数 = require("../cn/行情/指数策略.js").triggerLogObj指数;
 global.triggerLogObj券商 = require("../cn/行情/券商策略.js").triggerLogObj券商;
 global.triggerLogObj区间 = require("../cn/行情/区间策略.js").triggerLogObj区间;
+global.triggerLogObj恐贪 = require("../cn/行情/恐贪策略.js").triggerLogObj恐贪;
 global.triggerLogObj基金 = require("../cn/基金/基金策略.js").triggerLogObj基金;
 
 global.triggerLogObjPmi股债 = require("../cn/pmiGZ策略.js").triggerLogObjPmi股债;
