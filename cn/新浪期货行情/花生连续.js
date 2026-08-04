@@ -13318,11 +13318,21 @@ var 花生连续 = [
     "volume": 141874,
     "hold": 190779,
     "settle": 8158
+  },
+  {
+    "date": "2026-08-04",
+    "open": 8170,
+    "high": 8208,
+    "low": 8138,
+    "close": 8188,
+    "volume": 101198,
+    "hold": 192237,
+    "settle": 8186
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.花生连续 = 花生连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-08-04 09:10:09"
+    exports.writeDateTime = "2026-08-04 21:15:25"
 };
