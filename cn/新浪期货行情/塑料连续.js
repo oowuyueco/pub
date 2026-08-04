@@ -46228,11 +46228,21 @@ var 塑料连续 = [
     "volume": 450566,
     "hold": 317660,
     "settle": 7710
+  },
+  {
+    "date": "2026-08-03",
+    "open": 7844,
+    "high": 7864,
+    "low": 7633,
+    "close": 7671,
+    "volume": 506082,
+    "hold": 303892,
+    "settle": 7721
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.塑料连续 = 塑料连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-08-01 20:39:12"
+    exports.writeDateTime = "2026-08-04 09:10:47"
 };

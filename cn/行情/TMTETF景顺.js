@@ -33910,11 +33910,23 @@ var TMTETF景顺 = [
     "volume": 8059600,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-08-03",
+    "timestamp": 1785686400000,
+    "open": 3.429,
+    "high": 3.506,
+    "low": 3.353,
+    "close": 3.364,
+    "percent": -4.32,
+    "volume": 6934000,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.TMTETF景顺 = TMTETF景顺
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-01 20:32:13"
+    exports.writeDateTime = "2026-08-04 09:09:05"
 };
