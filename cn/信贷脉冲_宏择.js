@@ -1,4 +1,5 @@
-var 信贷脉冲_宏择 = [
+
+var 信贷脉冲_宏择 =  [
     [
         "2004-02-28",
         23.13
@@ -1076,6 +1077,8 @@ var 信贷脉冲_宏择 = [
         21.52
     ]
 ]
+var 信贷脉冲_宏择writeDateTime = "2026-08-05 15:33:34"
 if (typeof module !== "undefined" && module.exports) {
-    exports.信贷脉冲_宏择 = 信贷脉冲_宏择
-}
+        exports.信贷脉冲_宏择 = 信贷脉冲_宏择
+        exports.信贷脉冲_宏择writeDateTime = 信贷脉冲_宏择writeDateTime
+};

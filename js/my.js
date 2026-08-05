@@ -2089,6 +2089,7 @@ if (typeof module !== "undefined" && module.exports) {
     exports.stampToDate = stampToDate
     exports.dateToStamp = dateToStamp
     exports.getDateInWeekDay = getDateInWeekDay
+    exports.getPreMonth = getPreMonth
 
 
     exports.countWorkdays = countWorkdays
