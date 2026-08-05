@@ -4622,8 +4622,8 @@ var triggerLogObj美股指数 = {
       "日周月高位九转",
       {
         "after": {
-          "close": "36->2026-08-03,312.83,4.29",
-          "high": "36->2026-08-03,312.83,4.29",
+          "close": "37->2026-08-04,448.85,6.16",
+          "high": "37->2026-08-04,448.85,6.16",
           "low": ",0,0",
           "nextThirdDelivery周五": "2026-08-21"
         },
@@ -6145,7 +6145,7 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-08-03"
+var runLastKlineDate = "2026-08-04"
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj美股指数 = triggerLogObj美股指数
         exports.runLastKlineDate = runLastKlineDate
