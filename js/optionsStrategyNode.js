@@ -29,6 +29,7 @@ global.恐贪writeDateTime = require("../cn/行情/恐贪指数.js").恐贪write
 global.恐贪指数 = require("../cn/行情/恐贪指数.js").恐贪指数;
 global.科创50估值 = require("../cn/行情/指数分位.js").科创50估值;
 global.沪深300估值 = require("../cn/行情/指数分位.js").沪深300估值;
+global.双创50_800消费_关联度_300权重 = require("../cn/行情/指数分位.js").双创50_800消费_关联度_300权重;
 
 // 策略模块（直接挂载需要的 triggerLogObj...）
 global.triggerLogObj指数 = require("../cn/行情/指数策略.js").triggerLogObj指数;
