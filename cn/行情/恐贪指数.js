@@ -9462,10 +9462,10 @@ var 恐贪指数 =  [
         ]
     }
 ]
-var 恐贪writeDateTime = "2026-07-31 21:18:14"
+var 恐贪writeDateTime = "2026-08-05 09:09:21"
 
-     if (typeof module !== "undefined" && module.exports) {
-          exports.恐贪指数 = 恐贪指数
-          exports.恐贪writeDateTime = 恐贪writeDateTime
-      };
-     
+          if (typeof module !== "undefined" && module.exports) {
+               exports.恐贪指数 = 恐贪指数
+               exports.恐贪writeDateTime = 恐贪writeDateTime
+           };
+          

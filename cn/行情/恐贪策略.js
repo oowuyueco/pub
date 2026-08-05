@@ -1,5 +1,5 @@
 
-var triggerLogObj恐贪 = {
+ var triggerLogObj恐贪 = {
     "按日期排序": {
         "2024-08-23": [
             "低位深度恐惧六子",
@@ -295,7 +295,7 @@ var triggerLogObj恐贪 = {
                     "low": "28->2026-07-17,-214.35,-4.52"
                 },
                 "after": {
-                    "close": "38->2026-07-31,-155.25,-3.27",
+                    "close": "40->2026-08-04,-142.52,-3",
                     "high": "9->2026-06-22,316.21,6.67",
                     "low": "28->2026-07-17,-214.35,-4.52",
                     "nextThirdDelivery周五": "2026-08-21"
@@ -306,9 +306,9 @@ var triggerLogObj恐贪 = {
             "低位深度恐惧六子",
             {
                 "after": {
-                    "close": "10->2026-07-31,12.53,0.27",
+                    "close": "12->2026-08-04,25.26,0.55",
                     "high": "2->2026-07-21,163.56,3.57",
-                    "low": "9->2026-07-30,-25.95,-0.57",
+                    "low": "11->2026-08-03,-32.49,-0.71",
                     "nextFirstDelivery周五": "2026-08-21",
                     "nextSecondDelivery周五": "2026-09-18",
                     "nextThirdDelivery周五": "2026-10-16"
@@ -319,9 +319,9 @@ var triggerLogObj恐贪 = {
             "低位深度恐惧六子",
             {
                 "after": {
-                    "close": "9->2026-07-31,-42.65,-0.92",
+                    "close": "11->2026-08-04,-29.92,-0.65",
                     "high": "1->2026-07-21,108.38,2.34",
-                    "low": "8->2026-07-30,-81.13,-1.75",
+                    "low": "10->2026-08-03,-87.67,-1.89",
                     "nextFirstDelivery周五": "2026-08-21",
                     "nextSecondDelivery周五": "2026-09-18",
                     "nextThirdDelivery周五": "2026-10-16"
@@ -438,9 +438,10 @@ var triggerLogObj恐贪 = {
         }
     ]
 }
-var runLastKlineDate恐贪策略 = "2026-07-31"
+var runLastKlineDate恐贪策略 = "2026-08-04"
 
-if (typeof module !== "undefined" && module.exports) {
-    exports.triggerLogObj恐贪 = triggerLogObj恐贪
-    exports.runLastKlineDate恐贪策略 = runLastKlineDate恐贪策略
-}
+ if (typeof module !== "undefined" && module.exports) {
+     exports.triggerLogObj恐贪 = triggerLogObj恐贪
+     exports.runLastKlineDate恐贪策略 = runLastKlineDate恐贪策略
+ }
+ 
