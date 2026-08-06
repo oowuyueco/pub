@@ -16,7 +16,7 @@ if (typeof module !== "undefined" && module.exports) {
 
 /*
 
-长周期                               中周期                 中短周期
+长周期                               中周期                 中短周期！
 
 科创50沪深300高估                 get深度恐贪_贪婪         恐贪六子_贪婪todo??
 
@@ -298,6 +298,21 @@ function 恐贪六子_深度恐惧(curDate) {
 }
 
 
+function 恐贪估值汇总(curDate) {
+    let 汇总 = ""
+
+    if (科创50沪深300高估(curDate) === true) 汇总 += "科创50沪深300高估,"
+    if (沪深300行业割裂大标准差(curDate) === true) 汇总 += "沪深300行业割裂大标准差,"
+    if (科创50沪深300低估(curDate) === true) 汇总 += "科创50沪深300低估,"
+
+    if (恐贪_深度贪婪(curDate) === true) 汇总 += "恐贪_深度贪婪,"
+    if (恐贪_深度恐惧(curDate) === true) 汇总 += "恐贪_深度恐惧,"
+
+    if (恐贪六子_深度恐惧(curDate) === true) 汇总 += "恐贪六子_深度恐惧,"
+
+    return 汇总
+}
+
 if (typeof module !== "undefined" && module.exports) {
 
     exports.科创50估值 = 科创50估值
@@ -312,8 +327,12 @@ if (typeof module !== "undefined" && module.exports) {
     exports.科创50沪深300高估 = 科创50沪深300高估
     exports.沪深300行业割裂大标准差 = 沪深300行业割裂大标准差
     exports.科创50沪深300低估 = 科创50沪深300低估
+
     exports.恐贪_深度贪婪 = 恐贪_深度贪婪
     exports.恐贪_深度恐惧 = 恐贪_深度恐惧
+
     exports.恐贪六子_深度恐惧 = 恐贪六子_深度恐惧
+
+    exports.恐贪估值汇总 = 恐贪估值汇总
 
 }
