@@ -1,4 +1,4 @@
-var 恐贪指数 =  [
+var 恐贪指数 = [
     {
         "date": "2024-07-31",
         "jiucaishuo": 15.9,
@@ -9460,12 +9460,86 @@ var 恐贪指数 =  [
             7.4,
             ""
         ]
+    },
+    {
+        "date": "2026-08-04",
+        "jiucaishuo": 13.41,
+        "jiucaishuo六子": [
+            19.36,
+            22154.23,
+            0.31,
+            -7.76,
+            -4.48,
+            7.5
+        ],
+        "baifenwei": 36.59,
+        "baifenwei六子": [
+            4.46,
+            50,
+            0.53,
+            70.37,
+            52.25,
+            95.9
+        ],
+        "ashare": 45.6,
+        "miumiu": 38.62,
+        "dazhihu": [
+            0.595,
+            0.238
+        ]
+    },
+    {
+        "date": "2026-08-05",
+        "jiucaishuo": 25.78,
+        "jiucaishuo六子": [
+            18.28,
+            26623.89,
+            0.31,
+            -7.52,
+            -2.47,
+            7.92
+        ],
+        "baifenwei": 40.26,
+        "baifenwei六子": [
+            5.23,
+            70.9,
+            0.79,
+            60.19,
+            64.29,
+            91.53
+        ],
+        "ashare": 74.8,
+        "miumiu": 62.31,
+        "dazhihu": [
+            0.667,
+            0.267
+        ]
+    },
+    {
+        "date": "2026-08-06",
+        "jiucaishuo": "",
+        "jiucaishuo六子": "",
+        "baifenwei": 34.33,
+        "baifenwei六子": [
+            6.21,
+            48.55,
+            1.32,
+            50.26,
+            62.57,
+            90.08
+        ],
+        "ashare": "",
+        "miumiu": "",
+        "dazhihu": "",
+        "ths资金": [
+            7.2,
+            ""
+        ]
     }
 ]
-var 恐贪writeDateTime = "2026-08-05 09:09:21"
+var 恐贪指数writeDateTime = "2026-08-06 10:25:59"
 
-          if (typeof module !== "undefined" && module.exports) {
-               exports.恐贪指数 = 恐贪指数
-               exports.恐贪writeDateTime = 恐贪writeDateTime
-           };
-          
+if (typeof module !== "undefined" && module.exports) {
+    exports.恐贪指数 = 恐贪指数
+    exports.恐贪指数writeDateTime = 恐贪指数writeDateTime
+};
