@@ -2528,7 +2528,7 @@ var triggerLogObj区间 = {
         }
       ]
     },
-    "2022-11-03=>2026-08-06": {
+    "2022-11-03=>2026-08-07": {
       "2022-12-27": [
         {
           "trigDate": "2022-12-27",
@@ -3440,7 +3440,7 @@ var triggerLogObj区间 = {
             "low": "28->2026-07-17,-214.35,-4.52"
           },
           "after": {
-            "close": "42->2026-08-06,-92.14,-1.94",
+            "close": "43->2026-08-07,-49.01,-1.03",
             "high": "9->2026-06-22,316.21,6.67",
             "low": "28->2026-07-17,-214.35,-4.52",
             "nextThirdDelivery周五": "2026-08-21"
@@ -3460,7 +3460,7 @@ var triggerLogObj区间 = {
         },
         {
           "after": {
-            "close": "14->2026-08-06,75.64,1.65",
+            "close": "15->2026-08-07,118.77,2.6",
             "high": "2->2026-07-21,163.56,3.57",
             "low": "11->2026-08-03,-32.49,-0.71",
             "nextFirstDelivery周五": "2026-08-21",
@@ -3477,7 +3477,7 @@ var triggerLogObj区间 = {
         },
         {
           "after": {
-            "close": "13->2026-08-06,20.46,0.44",
+            "close": "14->2026-08-07,63.59,1.37",
             "high": "1->2026-07-21,108.38,2.34",
             "low": "10->2026-08-03,-87.67,-1.89",
             "nextFirstDelivery周五": "2026-08-21",
@@ -3499,9 +3499,26 @@ var triggerLogObj区间 = {
         },
         {
           "after": {
-            "close": "9->2026-08-06,-4.72,-0.1",
+            "close": "10->2026-08-07,38.41,0.82",
             "high": "1->2026-07-27,46.4,1",
             "low": "6->2026-08-03,-112.85,-2.42",
+            "nextFirstDelivery周五": "2026-08-21",
+            "nextSecondDelivery周五": "2026-09-18",
+            "nextThirdDelivery周五": "2026-10-16"
+          }
+        }
+      ],
+      "2026-08-07": [
+        {
+          "trigDate": "2026-08-07",
+          "quantName": "上证50低位_金叉低连空但",
+          "logInfo": ""
+        },
+        {
+          "after": {
+            "close": ",0,0",
+            "high": ",0,0",
+            "low": ",0,0",
             "nextFirstDelivery周五": "2026-08-21",
             "nextSecondDelivery周五": "2026-09-18",
             "nextThirdDelivery周五": "2026-10-16"
@@ -6586,7 +6603,7 @@ var triggerLogObj区间 = {
     }
   }
 }
-var runLastKlineDate = "2026-08-06"
+var runLastKlineDate = "2026-08-07"
 
         if (typeof module !== "undefined" && module.exports) {
             exports.triggerLogObj区间 = triggerLogObj区间
