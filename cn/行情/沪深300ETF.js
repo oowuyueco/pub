@@ -41398,11 +41398,23 @@ var 沪深300ETF = [
     "volume": 878355996,
     "hsl": 0,
     "zgs": null
+  },
+  {
+    "date": "2026-08-07",
+    "timestamp": 1786032000000,
+    "open": 4.706,
+    "high": 4.764,
+    "low": 4.706,
+    "close": 4.751,
+    "percent": 0.89,
+    "volume": 943535585,
+    "hsl": 0,
+    "zgs": null
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪深300ETF = 沪深300ETF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-06 21:08:56"
+    exports.writeDateTime = "2026-08-07 20:05:12"
 };
