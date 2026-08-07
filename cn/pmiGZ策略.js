@@ -752,6 +752,31 @@ var triggerLogObjPmi股债Cond1 = {
       "trigNextDate": "2025-06-03",
       "trigNextIndex": 4955
     }
+  ],
+  "2026-08-03": [
+    "高位Pmi股债",
+    {
+      "after": {
+        "close": "4->2026-08-07,127.5,2.79",
+        "high": "4->2026-08-07,127.5,2.79",
+        "low": ",0,0",
+        "nextFirstDelivery周五": "2026-08-21",
+        "nextSecondDelivery周五": "2026-09-18",
+        "nextThirdDelivery周五": "2026-10-16"
+      },
+      "testInfo": [
+        "2026-08-01",
+        0.5,
+        5.24,
+        58.34,
+        20.34,
+        20.34,
+        "次0"
+      ],
+      "index": 5240,
+      "trigNextDate": "2026-08-03",
+      "trigNextIndex": 5240
+    }
   ]
 }
 var triggerLogObjPmi股债 = {
@@ -1301,9 +1326,25 @@ var triggerLogObjPmi股债 = {
       "nextNday": 0,
       "nextNday差": 0
     }
+  ],
+  "2026-08-03": [
+    "高位Pmi股债",
+    {
+      "after": {
+        "close": "4->2026-08-07,127.5,2.79",
+        "high": "4->2026-08-07,127.5,2.79",
+        "low": ",0,0",
+        "nextFirstDelivery周五": "2026-08-21",
+        "nextSecondDelivery周五": "2026-09-18",
+        "nextThirdDelivery周五": "2026-10-16"
+      },
+      "cond1Date": "2026-08-03",
+      "nextNday": 0,
+      "nextNday差": 0
+    }
   ]
 }
-var pmi股债策略runLastTime = "2026-07-31 21:18:33"
+var pmi股债策略runLastTime = "2026-08-07 20:12:44"
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObjPmi股债 = triggerLogObjPmi股债

@@ -298,7 +298,7 @@ var triggerLogObj恐贪 =  {
                     "low": "28->2026-07-17,-214.35,-4.52"
                 },
                 "after": {
-                    "close": "41->2026-08-05,-85.3,-1.8",
+                    "close": "43->2026-08-07,-49.01,-1.03",
                     "high": "9->2026-06-22,316.21,6.67",
                     "low": "28->2026-07-17,-214.35,-4.52",
                     "nextThirdDelivery周五": "2026-08-21"
@@ -309,7 +309,7 @@ var triggerLogObj恐贪 =  {
             "低位深度恐惧六子",
             {
                 "after": {
-                    "close": "13->2026-08-05,82.48,1.8",
+                    "close": "15->2026-08-07,118.77,2.6",
                     "high": "2->2026-07-21,163.56,3.57",
                     "low": "11->2026-08-03,-32.49,-0.71",
                     "nextFirstDelivery周五": "2026-08-21",
@@ -322,7 +322,7 @@ var triggerLogObj恐贪 =  {
             "低位深度恐惧六子",
             {
                 "after": {
-                    "close": "12->2026-08-05,27.3,0.59",
+                    "close": "14->2026-08-07,63.59,1.37",
                     "high": "1->2026-07-21,108.38,2.34",
                     "low": "10->2026-08-03,-87.67,-1.89",
                     "nextFirstDelivery周五": "2026-08-21",
@@ -441,7 +441,7 @@ var triggerLogObj恐贪 =  {
         }
     ]
 }
-var runLastKlineDate恐贪策略 = "2026-08-05"
+var runLastKlineDate恐贪策略 = "2026-08-07"
 if (typeof module !== "undefined" && module.exports) {
      exports.triggerLogObj恐贪 = triggerLogObj恐贪
      exports.runLastKlineDate恐贪策略 = runLastKlineDate恐贪策略
