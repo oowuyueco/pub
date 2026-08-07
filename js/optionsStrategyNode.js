@@ -26,11 +26,6 @@ global.上证50 = require("../cn/行情/上证50.js").上证50;
 global.恒生 = require("../cn/行情/恒生.js").恒生;
 
 // 恐贪指数模块（挂载两个需要的属性，也可用 Object.assign 全挂）
-// global.恐贪writeDateTime = require("../cn/行情/恐贪指数.js").恐贪writeDateTime;
-// global.恐贪指数 = require("../cn/行情/恐贪指数.js").恐贪指数;
-// global.科创50估值 = require("../cn/行情/指数分位.js").科创50估值;
-// global.沪深300估值 = require("../cn/行情/指数分位.js").沪深300估值;
-// global.双创50_800消费_关联度_300权重 = require("../cn/行情/指数分位.js").双创50_800消费_关联度_300权重;
 Object.assign(global, require("./fearGreedPesb.js"));
 
 // 策略模块（直接挂载需要的 triggerLogObj...）
