@@ -1585,7 +1585,7 @@ let 期权买卖List = 附加xls过滤时间(期权建议ByDay)
 
     if (
         ele[2].unif高低位() == "低位" &&
-        恐贪六子_深度恐惧(ele[0]) === false &&
+        恐贪六子_深度恐惧(getPreNexDate(ele[0], -1)) === false && 恐贪六子_深度恐惧(ele[0]) === false &&
         (沪深300行业割裂大标准差(ele[0]) === true || (科创50沪深300高估(ele[0]) === true && 恐贪_深度恐惧(ele[0]) !== true))
     ) return false
 
