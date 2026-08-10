@@ -1,5 +1,10 @@
 let PPI_eastmoney = [
     {
+        "REPORT_DATE": "2026-07-01 00:00:00",
+        "BASE": 103.5,
+        "BASE_ACCUMULATE": 101.8
+    },
+    {
         "REPORT_DATE": "2026-06-01 00:00:00",
         "BASE": 104.1,
         "BASE_ACCUMULATE": 101.5
