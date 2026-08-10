@@ -659,19 +659,19 @@ console.log(券商策略低位ByDay, changeShowLog(券商策略低位ByDay), 券
 console.groupEnd()
 
 
-//恐贪策略
-let 恐贪策略高位 = 统计策略(triggerLogObj恐贪.按日期排序, "恐贪策略", "高位")
-let 恐贪策略低位 = 统计策略(triggerLogObj恐贪.按日期排序, "恐贪策略", "低位")
-let 恐贪策略高位ByDay = 恐贪策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
-let 恐贪策略低位ByDay = 恐贪策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
-let 恐贪策略高位By期权日 = 恐贪策略高位.trig期权日Arr
-let 恐贪策略低位By期权日 = 恐贪策略低位.trig期权日Arr
+//情绪策略
+let 情绪策略高位 = 统计策略(triggerLogObj情绪.按日期排序, "情绪策略", "高位")
+let 情绪策略低位 = 统计策略(triggerLogObj情绪.按日期排序, "情绪策略", "低位")
+let 情绪策略高位ByDay = 情绪策略高位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+let 情绪策略低位ByDay = 情绪策略低位.trigDateArr.filter((ele, index) => +ele[0].substring(0, 4) >= 2000)
+let 情绪策略高位By期权日 = 情绪策略高位.trig期权日Arr
+let 情绪策略低位By期权日 = 情绪策略低位.trig期权日Arr
 
-console.groupCollapsed("恐贪策略高位ByDay   恐贪策略高位By期权日")
-console.log(恐贪策略高位ByDay, changeShowLog(恐贪策略高位ByDay), 恐贪策略高位By期权日)
+console.groupCollapsed("情绪策略高位ByDay   情绪策略高位By期权日")
+console.log(情绪策略高位ByDay, changeShowLog(情绪策略高位ByDay), 情绪策略高位By期权日)
 console.groupEnd()
-console.groupCollapsed("恐贪策略低位ByDay   恐贪策略低位By期权日")
-console.log(恐贪策略低位ByDay, changeShowLog(恐贪策略低位ByDay), 恐贪策略低位By期权日)
+console.groupCollapsed("情绪策略低位ByDay   情绪策略低位By期权日")
+console.log(情绪策略低位ByDay, changeShowLog(情绪策略低位ByDay), 情绪策略低位By期权日)
 console.groupEnd()
 
 //区间策略
@@ -897,7 +897,7 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
 
     let trigDateArrPmi股债 = Object.entries(triggerLogObjPmi股债).filter((ele, index) => { return ele[1][0].includes(高低位) })
 
-    let trigDateArr恐贪 = Object.entries(triggerLogObj恐贪.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
+    let trigDateArr情绪 = Object.entries(triggerLogObj情绪.按日期排序).filter((ele, index) => { return ele[1][0].includes(高低位) })
 
     let trigDateArr区间 = []
     Object.entries(triggerLogObj区间.上升日期区间).forEach(([日期区间, 区间trigDateArr]) => {
@@ -919,7 +919,7 @@ function 统计全部策略(高低位 = "位", 汇总N = 5, 过滤M = 10) {
         })
     })
 
-    let trigDateArr = [...trigDateArr指数, ...trigDateArr区间, ...trigDateArr券商, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债, ...trigDateArr恐贪,] //  [...trigDateArrPmi股债] //
+    let trigDateArr = [...trigDateArr指数, ...trigDateArr区间, ...trigDateArr券商, ...trigDateArr同花顺, ...trigDateArr基金, ...trigDateArrPmi股债, ...trigDateArr情绪,] //  [...trigDateArrPmi股债] //
     trigDateArr.sort((a, b) => dateToStamp(a[0]) - dateToStamp(b[0]))
 
     const dateMap = new Map();
@@ -2720,7 +2720,7 @@ async function 模拟交易(期权买卖List) {
     //, asset现金:${+asset.现金.toFixed(2)} 
     // ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == preDayYMD); return cur策略 ? `昨日${preDayYMD}策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()} \r\n 
     await pageSendMail(`
-最新策略运行日期(恐贪指数):${window?.恐贪指数writeDateTime} ${JSON.stringify(window?.恐贪指数.at(-1))} ${恐贪估值汇总(currentDayYMD)}
+最新策略运行日期(恐贪指数):${window?.恐贪指数writeDateTime} ${JSON.stringify(window?.恐贪指数.at(-1))} ${情绪汇总(currentDayYMD)}
 ${(() => { let cur策略 = 全部策略ByDay.find(e => e[0] == currentDayYMD); return cur策略 ? `当日${currentDayYMD}全部策略汇总：(${cur策略[1].length})[${cur策略[1].toString()}]` : "" })()}
 
 当日${currentDayYMD}期权交易：
