@@ -102,7 +102,7 @@ function 沪深300行业割裂大标准差(trigDate) {
     return false
 }
 function 科创50沪深300低估(trigDate) {
-    console.log("科创50沪深300低估", 沪深300估值.at(-1))
+    //console.log("科创50沪深300低估", 沪深300估值.at(-1))
     let cur科创50估值 = 科创50估值.findLast(ele => ele.date.substring(0, 9) == trigDate.substring(0, 9))
     let cur沪深300估值 = 沪深300估值.findLast(ele => ele.date.substring(0, 9) == trigDate.substring(0, 9))
 
