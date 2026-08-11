@@ -333,6 +333,7 @@
 
         function backTest默认数据策略(pmiData = cn_pmi_avg) {
             var yield_TenNaDeb = 十年期国债利率倒数
+            var yield_全ApeMiddel = 全A股PE中位数
             var yield_300PeMiddle = 沪深300PE中位数
             var yield_ten300Cha = 股债差300平均
 
@@ -345,6 +346,8 @@
 
             for (var i = 2; i < pmiData.length; i++) {
                 if (pmiData[i][0] < 策略startDate) continue
+
+                var 全ApeMiddel = findPCNMonthLast(yield_全ApeMiddel, pmiData[i][0], -1)[1]
 
                 var hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
                 var hs300PeMiddelNext = hs300PeMiddel
@@ -389,6 +392,12 @@
                 }
 
                 //========================================================================================
+
+                function checkMiddleCha() {
+                    //['2026-08-03', '2026-09-18', '高位', '4543.18 沽沪深300 4406.885', tAr: '高位Pmi股债', yes1: 1, ok2: 1]
+                    return 全ApeMiddel - tenYearPe > -20 && hs300PeMiddel - tenYearPe > -30
+                }
+
                 function sellCond() {
                     if (
                         false
@@ -396,18 +405,22 @@
                         || (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
 
                         || (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
-                        || (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
-                        || (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
-                        || (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+
+                        || (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel > 21 && guzhaicha < 5.7 && checkMiddleCha()) //经济热震荡 估值不冷 
+
+                        || (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6 && checkMiddleCha())
+                        || (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6.5 && checkMiddleCha() && preNlowesVal(pmiData, i) > -30)   //preNlowesVal(pmiData, i) > -30  2020-5 
 
                     ) return [
                         (hs300PeMiddel - tenYearPe > 10 && guzhaicha < 3)
                         , (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
 
                         , (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
-                        , (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
-                        , (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
-                        , (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+
+                        , (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel > 21 && guzhaicha < 5.7 && checkMiddleCha()) //经济热震荡 估值不冷 
+
+                        , (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6 && checkMiddleCha())
+                        , (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6.5 && checkMiddleCha() && preNlowesVal(pmiData, i) > -30)   //preNlowesVal(pmiData, i) > -30  2020-5 
                     ]
 
                     return false
@@ -432,6 +445,7 @@
                 newArr[1] = +(1 / (ele[1] / 100)).toFixed(4)
                 return newArr;
             })//day
+            var yield_全ApeMiddel = 全A股PE中位数 //month
             var yield_300PeMiddle = 沪深300PE中位数_lixinger //week
             var yield_ten300Cha = 沪深300风险溢价差_jiucai //day
 
@@ -444,6 +458,9 @@
 
             for (var i = 2; i < pmiData.length; i++) {
                 if (pmiData[i][0] < 策略startDate) continue
+
+
+                var 全ApeMiddel = findPCNMonthLast(yield_全ApeMiddel, pmiData[i][0], -1)[1]
 
                 let hs300PeMiddel = findPCNMonthLast(yield_300PeMiddle, pmiData[i][0], -1)[1]
                 if (hs300PeMiddel === false) continue
@@ -496,6 +513,12 @@
 
                 //========================================================================================
 
+                function checkMiddleCha() {
+                    //['2026-08-03', '2026-09-18', '高位', '4543.18 沽沪深300 4406.885', tAr: '高位Pmi股债', yes1: 1, ok2: 1]
+                    return 全ApeMiddel - tenYearPe > -20 && hs300PeMiddel - tenYearPe > -30
+                }
+
+
                 function sellCond() {
                     if (
                         false
@@ -503,18 +526,22 @@
                         || (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
 
                         || (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
-                        || (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
-                        || (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
-                        || (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+
+                        || (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 21 && guzhaicha <= 5.7 && checkMiddleCha()) //经济震荡 估值不冷 
+
+                        || (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6 && checkMiddleCha())
+                        || (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6.5 && checkMiddleCha() && preNlowesVal(pmiData, i) > -30)   //preNlowesVal(pmiData, i) > -30  2020-5 
 
                     ) return [
                         (hs300PeMiddel - tenYearPe > 10 && guzhaicha < 3)
                         , (hs300PeMiddel > tenYearPe && hs300PeMiddel >= hs300PeMiddelNext && guzhaicha < 3) //纯泡沫 09 15  17  //['2009-05-01', 35] 35.6223 30.0815209216978 1.03
 
                         , (pmiData[i - 1][1] >= pmiData[i][1] && pmiData[i][1] >= 9 && hs300PeMiddel >= 25 && guzhaicha <= 4)  //经济热 估值高  09  17  20
-                        , (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6) //经济震荡 估值不冷 
-                        , (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6)
-                        , (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && preNlowesVal(pmiData, i) > -30 && guzhaicha <= 6.5)   //preNlowesVal(pmiData, i) > -30  2020-5 
+
+                        , (pmiData[i - 1][1] >= 20 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 21 && guzhaicha <= 5.7 && checkMiddleCha()) //经济震荡 估值不冷 
+
+                        , (pmiData[i - 1][1] >= 9 && 0 >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6 && checkMiddleCha())
+                        , (11 >= pmiData[i - 1][1] && pmiData[i - 1][1] >= 9 && pmiData[i - 1][1] >= pmiData[i][1] && hs300PeMiddel >= 20 && guzhaicha <= 6.5 && checkMiddleCha() && preNlowesVal(pmiData, i) > -30)   //preNlowesVal(pmiData, i) > -30  2020-5 
                     ]
 
                     return false
