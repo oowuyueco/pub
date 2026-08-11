@@ -32,9 +32,7 @@ const 缺少数据 = "缺少数据"
 function 科创50沪深300高估(trigDate) {
     let cur科创50估值 = 科创50估值.findLast(ele => ele.date.substring(0, 9) == trigDate.substring(0, 9))
     let cur沪深300估值 = 沪深300估值.findLast(ele => ele.date.substring(0, 9) == trigDate.substring(0, 9))
-
     if (!cur科创50估值 || !cur沪深300估值) return 缺少数据
-
 
     if (
         cur科创50估值 && cur沪深300估值 &&
@@ -43,6 +41,16 @@ function 科创50沪深300高估(trigDate) {
     ) {
         return true
     }
+
+    let cur拥挤度 = 拥挤度.findLast(ele => ele[0].substring(0, 9) == trigDate.substring(0, 9))     //2020-02-0  3
+    let cur融资买入占比 = 融资买入占比.findLast(ele => ele[0].substring(0, 9) == trigDate.substring(0, 9))
+    if (
+        cur拥挤度 && cur拥挤度[1] >= 50 &&
+        cur融资买入占比 && cur融资买入占比?.[1] > 10
+    ) {
+        return true
+    }
+
 
     return false
 }
