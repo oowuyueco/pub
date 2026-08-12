@@ -9580,8 +9580,15 @@ var 恐贪指数 =  [
     },
     {
         "date": "2026-08-10",
-        "jiucaishuo": "",
-        "jiucaishuo六子": "",
+        "jiucaishuo": 37.31,
+        "jiucaishuo六子": [
+            17.58,
+            25259.42,
+            0.63,
+            -7.63,
+            -0.45,
+            10.13
+        ],
         "baifenwei": 43.29,
         "baifenwei六子": [
             11.49,
@@ -9591,16 +9598,77 @@ var 恐贪指数 =  [
             71.3,
             82.8
         ],
-        "ashare": "",
+        "ashare": 104.8,
         "miumiu": null,
-        "dazhihu": "",
+        "dazhihu": [
+            0.729,
+            0.411
+        ],
         "ths资金": [
             7,
             49
         ]
+    },
+    {
+        "date": "2026-08-11",
+        "jiucaishuo": 27.97,
+        "jiucaishuo六子": [
+            17.35,
+            23236.05,
+            0.45,
+            -7.68,
+            -3.31,
+            10.17
+        ],
+        "baifenwei": 33.64,
+        "baifenwei六子": [
+            12.65,
+            50,
+            3.31,
+            30.16,
+            71.3,
+            81.61
+        ],
+        "ashare": 94.2,
+        "miumiu": null,
+        "dazhihu": [
+            0.361,
+            0.396
+        ]
+    },
+    {
+        "date": "2026-08-12",
+        "jiucaishuo": 32.43,
+        "jiucaishuo六子": [
+            16.89,
+            21548.04,
+            0.56,
+            -7.85,
+            -2.49,
+            10.09
+        ],
+        "baifenwei": 50.99,
+        "baifenwei六子": [
+            39.51,
+            50,
+            4.23,
+            83.86,
+            76.85,
+            100
+        ],
+        "ashare": 88.7,
+        "miumiu": null,
+        "dazhihu": [
+            0.688,
+            0.458
+        ],
+        "ths资金": [
+            7.8,
+            48
+        ]
     }
 ]
-var 恐贪指数writeDateTime = "2026-08-10 16:21:46"
+var 恐贪指数writeDateTime = "2026-08-12 20:41:15"
 
 if (typeof module !== "undefined" && module.exports) {
      exports.恐贪指数 = 恐贪指数
