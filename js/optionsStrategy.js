@@ -1618,9 +1618,14 @@ let 期权买卖List = 附加xls过滤时间(期权建议ByDay)
 期权买卖List = 期权买卖List.filter(ele => {
     if (ele[3].includes("手动")) return true
 
+    let pre300Index, pre300Date;
+    let cur300Index = 沪深300.findIndex(item => item.date == ele[0]);
+    if (cur300Index > 2) pre300Index = cur300Index - 1;
+    if (pre300Index) pre300Date = 沪深300[pre300Index].date;
+
     if (
         ele[2].unif高低位() == "低位" &&
-        恐贪六子_深度恐惧(getPreNexDate(ele[0], -1)) === false && 恐贪六子_深度恐惧(ele[0]) === false &&
+        恐贪六子_深度恐惧(pre300Date) === false && 恐贪六子_深度恐惧(ele[0]) === false &&
         (沪深300行业割裂大标准差(ele[0]) === true || (科创50沪深300高估(ele[0]) === true && 恐贪_深度恐惧(ele[0]) !== true))
     ) return false
 
