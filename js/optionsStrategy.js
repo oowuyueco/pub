@@ -1327,7 +1327,22 @@ function 第一次按方向后N到期日分类查找标记yes1(全部策略By期
                     curDay.bias.bias1 > curDay.bias.bias3 || curDay.bias.bias2 > curDay.bias.bias3
                 )
             }
-            //return true
+
+            function preNLowestAttr(periodList, N = 5, attr = "J") {
+                let lowest = 10000
+                for (let index = periodList.length - 1; index >= periodList.length - N; index--) {
+                    let currentJVal = attr == "cci" ? periodList[index].cci.cci : periodList[index][attr]
+                    if (currentJVal < lowest) lowest = currentJVal
+                }
+                return lowest
+            }
+            function preNdownLows(periodList, N = 5) {
+                for (let index = periodList.length - 1; index >= periodList.length - N; index--) {
+                    let currentPeriod = periodList[index]
+                    if (currentPeriod.lows > currentPeriod.low) return true
+                }
+                return false
+            }
 
             let cond星plus = true &&
                 trigArr[trigArrIndex][3] == "低★" &&
@@ -1383,6 +1398,26 @@ function 第一次按方向后N到期日分类查找标记yes1(全部策略By期
                     BIAS金叉attr(沪深300技术.currentMonthList, "bias1", 2) || BIAS金叉attr(沪深300技术.currentMonthList, "bias2", 2)
                 )
             if (cond周月bb金叉) return "cond周月bb金叉"
+
+
+            if (
+                trigArr[trigArrIndex + 1]?.yes1 == "cond周月bb金叉" &&
+                preNLowestAttr(沪深300技术.currentDayList, 5, "cci") < -120
+            ) return "preCond周月bb金叉低Cci"
+
+            if (
+                ocLowest(pre1Day) > ocHighest(curDay) &&
+                curDay.bar < 0 && curDay.bias.bias2 < 0 &&
+                preNLowestAttr(沪深300技术.currentDayList, 5, "cci") < -120
+            ) return "cond下空低Cci"
+
+            if (
+                (绿空绿绿(沪深300技术.currentDayList) || 绿空绿红(沪深300技术.currentDayList)) &&
+                preN十字星(沪深300技术.currentDayList, 3) &&
+                preNLowestAttr(沪深300技术.currentDayList, 5, "cci") < -120
+            ) {
+                return "cond空绿十字低Cci"
+            }
 
 
             let cond日周金叉up = true &&
@@ -2711,7 +2746,7 @@ async function 模拟交易(期权买卖List) {
 
     let profile平均数 = calAvgProf(asset.期权, 5)
     let profile中位数 = calMedianProf(asset.期权, 5)
-    console.log("收益中位数", profile中位数, "收益平均数", profile平均数);
+    console.log("收益中位数", +profile中位数.toFixed(4), "收益平均数", +profile平均数.toFixed(4));
 
     const endJs = performance.now();
     window.asset = asset

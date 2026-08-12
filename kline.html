@@ -29,10 +29,11 @@
             JS1.onload = function () {
                 jsLoadCount++
                 var JS2 = document.createElement("script")
-                JS2.src = `../../test/策略test.js`
+                JS2.src = `../../tempData/stock/测试策略.js`
                 JS2.onload = function () {
                     jsLoadCount++
                     if (jsLoadCount == 2) {
+                        test策略 = []
                         //test策略 = test策略.filter(ele => ele[2] > 1)
                         //window.trigDateArr = test策略
                         //window.trigDateArr = typeof test策略 !== "undefined" && typeof test策略[dataName] !== "undefined" ? test策略[dataName] : []
