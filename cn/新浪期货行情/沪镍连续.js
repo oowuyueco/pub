@@ -27668,11 +27668,21 @@ var 沪镍连续 = [
     "volume": 150117,
     "hold": 139944,
     "settle": 129010
+  },
+  {
+    "date": "2026-08-12",
+    "open": 128940,
+    "high": 129020,
+    "low": 128020,
+    "close": 128710,
+    "volume": 141932,
+    "hold": 140040,
+    "settle": 128530
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.沪镍连续 = 沪镍连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-08-11 20:32:08"
+    exports.writeDateTime = "2026-08-12 20:36:13"
 };
