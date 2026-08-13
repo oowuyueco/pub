@@ -342,6 +342,8 @@
     <script type="text/javascript" src="./js/qingxu.js"></script>
     <script type="text/javascript" src="./js/optionsStrategy.js"></script>
 
+    <script type="text/javascript" src="./cn/基金/smartfellowData.js"></script>
+
 </head>
 
 <body style="height: 100%; width: 100%; margin: 0">
@@ -1948,7 +1950,7 @@
                     smooth: true,
                     lineStyle: {
                         width: 0.7,
-                        color: "#ff61ca", //"black" //
+                        color: "#0079cd"//"#FD4142"//"blue", //"black" // "#ff61ca"//
 
                     },
                     zlevel: 2,
@@ -2078,15 +2080,15 @@
 
 
                 {//拥挤杠杆
-                    name: "拥挤度",
+                    name: "全A交易拥挤度",
                     type: "line",
                     xAxisIndex: 6,
                     yAxisIndex: 13,
                     showSymbol: false,
                     smooth: true,
                     lineStyle: {
-                        width: 0.7,
-                        color: "gray"
+                        width: 1,
+                        color: "#ff9300" //"#ff61ca"//
                     },
                     markLine: {
                         symbol: ["none", "none"],
@@ -2094,7 +2096,7 @@
                             {
                                 lineStyle: {
                                     width: 0.5,
-                                    color: "black",
+                                    color: "red",
                                     //type: "solid" // 实线，不写默认虚线
                                 },
                                 label: {
@@ -2104,13 +2106,27 @@
                                     position: "start",
                                 },
                                 yAxis: 50, // 标线值
-                                x: "55%",
+                                //x: "55%",
                             },
                         ],
                     },
-
                     data: 拥挤度.addStartEnd()
                 },
+                { //股债
+                    name: "股债基上限透支度",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 13,
+                    data: 偏股一级债顶部估算.map((ele, index) => {
+                        return [ele.date, ele.透支度 * 50]
+                    }).addStartEnd(),
+                    showSymbol: false,
+                    lineStyle: {
+                        width: 0.8,
+                        color: "#FD4142"//"#FD4142"//"red" //"#ff61ca"// #0079cd
+                    },
+                },
+
 
                 {//恐贪指数
                     name: "恐贪指数",
