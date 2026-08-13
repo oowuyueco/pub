@@ -1303,7 +1303,7 @@ var triggerLogObjPmi股债 = {
     }
   ]
 }
-var pmi股债策略runLastTime = "2026-08-13 14:53:27"
+var pmi股债策略runLastTime = "2026-08-13 20:43:00"
 
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObjPmi股债 = triggerLogObjPmi股债
