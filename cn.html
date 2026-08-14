@@ -651,7 +651,7 @@
                             color: "black",
                             fontSize: 9.5,
                             padding: [
-                                -3,  // 上
+                                5,  // 上
                                 5, // 右
                                 5,  // 下
                                 5, // 左
@@ -1787,8 +1787,8 @@
                 {//基金策略
                     name: '基金策略',
                     type: 'scatter',
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     symbol: 'pin',
                     itemStyle: {
                         normal: {
@@ -1803,14 +1803,14 @@
                     data: 基金策略低位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -5]
+                        return [item[0], -18.5]
                     }).addStartEnd()
                 },
                 {
                     name: '基金策略',
                     type: 'scatter',
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
                     itemStyle: {
                         normal: {
@@ -1819,21 +1819,21 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 8
+                        return 7
                     },
                     zlevel: 1,
                     data: 基金策略低位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -5]
+                        return [item[0], -18]
                     }).addStartEnd()
                 },
 
                 {
                     name: '基金策略',
                     type: 'scatter',
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     symbol: 'pin',
                     itemStyle: {
                         normal: {
@@ -1842,20 +1842,20 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 5
+                        return 6
                     },
                     zlevel: 1,
                     data: 基金策略高位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -5]
+                        return [item[0], -18.5]
                     }).addStartEnd()
                 },
                 {
                     name: '基金策略',
                     type: 'scatter',
-                    xAxisIndex: 4,
-                    yAxisIndex: 8,
+                    xAxisIndex: 6,
+                    yAxisIndex: 12,
                     symbol: 'path://M 200 200 l-40 100 100 -80 -120 0 100 80 -40 -120 -40 120z',
                     itemStyle: {
                         normal: {
@@ -1864,13 +1864,13 @@
                         }
                     },
                     symbolSize: function (val) {
-                        return 5
+                        return 7
                     },
                     zlevel: 1,
                     data: 基金策略高位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -5]
+                        return [item[0], -18]
                     }).addStartEnd()
                 },
 
@@ -2205,7 +2205,7 @@
                     data: pmi股债策略高位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -22]
+                        return [item[0], -25]
                     }).addStartEnd()
                 },
                 {
@@ -2227,7 +2227,7 @@
                     data: pmi股债策略高位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -22]
+                        return [item[0], -24]
                     }).addStartEnd()
                 },
 
@@ -2250,7 +2250,7 @@
                     data: pmi股债策略低位ByDay.filter((item) => {
                         return !item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -22]
+                        return [item[0], -25]
                     }).addStartEnd()
                 },
                 {
@@ -2272,7 +2272,7 @@
                     data: pmi股债策略低位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -22]
+                        return [item[0], -24]
                     }).addStartEnd()
                 },
 
