@@ -12,6 +12,7 @@ if (typeof module !== "undefined" && module.exports) {
     var { 恐贪指数, 恐贪指数writeDateTime } = require("../cn/情绪/恐贪指数.js");
 
     var { 拥挤度, 融资买入占比, 拥挤杠杆writeDateTime } = require("../cn/情绪/拥挤杠杆.js");
+    var { xbx拥挤度, xbx融资买入占比, xbx市盈率数据, xbx拥挤杠杆writeDateTime } = require("../cn/情绪/xbx拥挤杠杆.js");
 }
 
 
@@ -337,6 +338,10 @@ if (typeof module !== "undefined" && module.exports) {
     exports.拥挤度 = 拥挤度
     exports.融资买入占比 = 融资买入占比
     exports.拥挤杠杆writeDateTime = 拥挤杠杆writeDateTime
+
+    exports.xbx拥挤度 = xbx拥挤度
+    exports.xbx融资买入占比 = xbx融资买入占比
+    exports.xbx市盈率数据 = xbx市盈率数据
 
 
     exports.科创50沪深300高估 = 科创50沪深300高估

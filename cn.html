@@ -343,6 +343,7 @@
     <script type="text/javascript" src="./js/optionsStrategy.js"></script>
 
     <script type="text/javascript" src="./cn/基金/smartfellowData.js"></script>
+    <script type="text/javascript" src="./cn/情绪/xbx拥挤杠杆.js"></script>
 
 </head>
 
@@ -2101,8 +2102,43 @@
                 },
 
 
+
                 {//拥挤杠杆
-                    name: "全A交易拥挤度",
+                    name: "xbx拥挤度",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 13,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "#ff9300" //"#ff61ca"//
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "red",
+                                    //type: "solid" // 实线，不写默认虚线
+                                },
+                                label: {
+                                    formatter: "50高估",
+                                    color: "red",
+                                    fontSize: "0",
+                                    position: "start",
+                                },
+                                yAxis: 50, // 标线值
+                                //x: "55%",
+                            },
+                        ],
+                    },
+                    data: xbx拥挤度.map((ele, index) => { ele[1] = ele[1] * 100; return ele }).addStartEnd()
+                },
+
+                {//拥挤杠杆
+                    name: "dxp拥挤度",
                     type: "line",
                     xAxisIndex: 6,
                     yAxisIndex: 13,
@@ -2518,7 +2554,7 @@
                 "ppi基数", "上证", "恒生", "区间策略", "大盘策略", "券商策略", "同花顺策略", "基金策略", "pmi股债策略",
                 "汽车与出口", "房地产", "中位PE", "恒指美债差", "美债", "MM制造业",
                 "M1_M2", "M1_M2_MA", "信贷脉冲_MA4", "中美汇", "美元指", "金融脉动增速us",
-                "300同比", "恐贪指数"
+                "300同比", "恐贪指数", "xbx拥挤度"
             ].forEach(hidename => {
                 myChart.dispatchAction({
                     type: 'legendToggleSelect',
