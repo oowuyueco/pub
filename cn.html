@@ -344,6 +344,7 @@
 
     <script type="text/javascript" src="./cn/基金/smartfellowData.js"></script>
     <script type="text/javascript" src="./cn/情绪/xbx拥挤杠杆.js"></script>
+    <script type="text/javascript" src="./cn/情绪/指数分位.js"></script>
 
 </head>
 
@@ -1780,7 +1781,7 @@
                     data: 同花顺策略低位ByDay.filter((item) => {
                         return item[3].includes("★")
                     }).map((item) => {
-                        return [item[0], -3]
+                        return [item[0], -2.5]
                     }).addStartEnd()
                 },
 
@@ -2102,8 +2103,7 @@
                 },
 
 
-
-                {//拥挤杠杆
+                {//拥挤杠杆 以下四个适合判断顶部 局部顶部
                     name: "xbx拥挤度",
                     type: "line",
                     xAxisIndex: 6,
@@ -2136,7 +2136,6 @@
                     },
                     data: xbx拥挤度.map((ele, index) => { ele[1] = ele[1] * 100; return ele }).addStartEnd()
                 },
-
                 {//拥挤杠杆
                     name: "dxp拥挤度",
                     type: "line",
@@ -2170,7 +2169,7 @@
                     },
                     data: 拥挤度.addStartEnd()
                 },
-                { //股债
+                {//股债透支度
                     name: "股债基上限透支度",
                     type: "line",
                     xAxisIndex: 6,
@@ -2184,7 +2183,39 @@
                         color: "#FD4142"//"#FD4142"//"red" //"#ff61ca"// #0079cd
                     },
                 },
-
+                {//科创50PS估值
+                    name: "科创50PS估值",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 13,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "#ff61ca" //"#ff61ca"//
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "red",
+                                    //type: "solid" // 实线，不写默认虚线
+                                },
+                                label: {
+                                    formatter: "50高估",
+                                    color: "red",
+                                    fontSize: "0",
+                                    position: "start",
+                                },
+                                yAxis: 50, // 标线值
+                                //x: "55%",
+                            },
+                        ],
+                    },
+                    data: 科创50估值.map((ele, index) => { return [ele.date, 25 + 0.25 * ele.ps] }).addStartEnd()  //线性范围映射 0-100 压缩到 25-50
+                },
 
                 {//恐贪指数
                     name: "恐贪指数",
@@ -2554,7 +2585,7 @@
                 "ppi基数", "上证", "恒生", "区间策略", "大盘策略", "券商策略", "同花顺策略", "基金策略", "pmi股债策略",
                 "汽车与出口", "房地产", "中位PE", "恒指美债差", "美债", "MM制造业",
                 "M1_M2", "M1_M2_MA", "信贷脉冲_MA4", "中美汇", "美元指", "金融脉动增速us",
-                "300同比", "恐贪指数", "xbx拥挤度"
+                "300同比", "恐贪指数", "xbx拥挤度", "科创50PS估值"
             ].forEach(hidename => {
                 myChart.dispatchAction({
                     type: 'legendToggleSelect',
