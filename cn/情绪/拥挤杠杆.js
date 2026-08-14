@@ -2915,6 +2915,10 @@ var 拥挤度 =  [
     [
         "2026-08-06",
         49.64
+    ],
+    [
+        "2026-08-07",
+        50.72
     ]
 ]
 var 融资买入占比 =  [
@@ -6331,7 +6335,7 @@ var 融资买入占比 =  [
         9.9
     ]
 ]
-var 拥挤杠杆writeDateTime = "2026-08-13 20:42:38"
+var 拥挤杠杆writeDateTime = "2026-08-14 20:36:38"
 if (typeof module !== "undefined" && module.exports) {
      exports.拥挤度 = 拥挤度
      exports.融资买入占比 = 融资买入占比
