@@ -1075,7 +1075,7 @@ var triggerLogObj基金 = {
         }
     ]
 }
-var 基金策略runLastTime = "2026-08-14 20:36:56"
+var 基金策略runLastTime = "2026-08-15 20:10:11"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj基金 = triggerLogObj基金
     exports.基金策略runLastTime = 基金策略runLastTime
