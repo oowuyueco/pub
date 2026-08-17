@@ -1029,7 +1029,7 @@ var triggerLogObj基金 = {
                 "low": "16->2026-07-17,-452.73,-9.09"
             },
             "after": {
-                "close": "36->2026-08-14,-315.95,-6.34",
+                "close": "37->2026-08-17,-240.73,-4.83",
                 "high": ",0,0",
                 "low": "16->2026-07-17,-452.73,-9.09",
                 "nextSecondDelivery周五": "2026-08-21",
@@ -1047,7 +1047,7 @@ var triggerLogObj基金 = {
                 "low": "13->2026-07-17,-443.59,-8.92"
             },
             "after": {
-                "close": "33->2026-08-14,-306.81,-6.17",
+                "close": "34->2026-08-17,-231.59,-4.66",
                 "high": ",0,0",
                 "low": "13->2026-07-17,-443.59,-8.92",
                 "nextSecondDelivery周五": "2026-08-21",
@@ -1065,7 +1065,7 @@ var triggerLogObj基金 = {
                 "low": "12->2026-07-17,-336.07,-6.91"
             },
             "after": {
-                "close": "32->2026-08-14,-199.29,-4.1",
+                "close": "33->2026-08-17,-124.07,-2.55",
                 "high": "6->2026-07-09,11.14,0.23",
                 "low": "12->2026-07-17,-336.07,-6.91",
                 "nextSecondDelivery周五": "2026-08-21",
@@ -1075,7 +1075,7 @@ var triggerLogObj基金 = {
         }
     ]
 }
-var 基金策略runLastTime = "2026-08-15 20:10:11"
+var 基金策略runLastTime = "2026-08-17 20:08:48"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj基金 = triggerLogObj基金
     exports.基金策略runLastTime = 基金策略runLastTime
