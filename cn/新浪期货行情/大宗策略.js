@@ -14035,14 +14035,14 @@ var triggerLogObj大宗={
                     0,
                     -2.91
                 ],
-                "day15LowUp": [
+                "day16LowUp": [
                     "5,2026-08-03",
                     -7.64,
-                    "15,2026-08-17",
-                    3.62,
-                    3.62
+                    "16,2026-08-18",
+                    4.82,
+                    4.82
                 ],
-                "lastDay": 15
+                "lastDay": 16
             }
         },
         {
@@ -14061,12 +14061,38 @@ var triggerLogObj大宗={
                     2.47,
                     2.47
                 ],
-                "day14LowUp": [
+                "day15LowUp": [
                     "4,2026-08-03",
                     -5.45,
-                    "14,2026-08-17",
-                    6.07,
-                    6.07
+                    "15,2026-08-18",
+                    7.3,
+                    7.3
+                ],
+                "lastDay": 15
+            }
+        },
+        {
+            "dataName": "纯碱连续",
+            "quantName": "低位低量",
+            "trigDate": "2026-07-29",
+            "trigAtIndex": 1609,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day10LowUp": [
+                    "3,2026-08-03",
+                    -4.27,
+                    "9,2026-08-11",
+                    3.75,
+                    2.81
+                ],
+                "day14LowUp": [
+                    "3,2026-08-03",
+                    -4.27,
+                    "14,2026-08-18",
+                    8.65,
+                    8.65
                 ],
                 "lastDay": 14
             }
@@ -14087,40 +14113,14 @@ var triggerLogObj大宗={
                     3.75,
                     2.81
                 ],
-                "day13LowUp": [
+                "day14LowUp": [
                     "3,2026-08-03",
                     -4.27,
-                    "13,2026-08-17",
-                    7.4,
-                    7.4
+                    "14,2026-08-18",
+                    8.65,
+                    8.65
                 ],
-                "lastDay": 13
-            }
-        },
-        {
-            "dataName": "纯碱连续",
-            "quantName": "低位低量",
-            "trigDate": "2026-07-29",
-            "trigAtIndex": 1609,
-            "dataType": "工业",
-            "trigcalType": "",
-            "test": "",
-            "logProfileN": {
-                "day10LowUp": [
-                    "3,2026-08-03",
-                    -4.27,
-                    "9,2026-08-11",
-                    3.75,
-                    2.81
-                ],
-                "day13LowUp": [
-                    "3,2026-08-03",
-                    -4.27,
-                    "13,2026-08-17",
-                    7.4,
-                    7.4
-                ],
-                "lastDay": 13
+                "lastDay": 14
             }
         },
         {
@@ -14139,12 +14139,38 @@ var triggerLogObj大宗={
                     5.51,
                     3.28
                 ],
-                "day12LowUp": [
+                "day13LowUp": [
                     "2,2026-08-03",
                     -2.65,
-                    "12,2026-08-17",
-                    9.22,
-                    9.22
+                    "13,2026-08-18",
+                    10.49,
+                    10.49
+                ],
+                "lastDay": 13
+            }
+        },
+        {
+            "dataName": "纯碱连续",
+            "quantName": "低位低量",
+            "trigDate": "2026-07-31",
+            "trigAtIndex": 1611,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
+                "day10LowUp": [
+                    "1,2026-08-03",
+                    -1.71,
+                    "10,2026-08-14",
+                    9.41,
+                    9.41
+                ],
+                "day12LowUp": [
+                    "1,2026-08-03",
+                    -1.71,
+                    "12,2026-08-18",
+                    11.55,
+                    11.55
                 ],
                 "lastDay": 12
             }
@@ -14165,40 +14191,14 @@ var triggerLogObj大宗={
                     9.41,
                     9.41
                 ],
-                "day11LowUp": [
+                "day12LowUp": [
                     "1,2026-08-03",
                     -1.71,
-                    "11,2026-08-17",
-                    10.27,
-                    10.27
+                    "12,2026-08-18",
+                    11.55,
+                    11.55
                 ],
-                "lastDay": 11
-            }
-        },
-        {
-            "dataName": "纯碱连续",
-            "quantName": "低位低量",
-            "trigDate": "2026-07-31",
-            "trigAtIndex": 1611,
-            "dataType": "工业",
-            "trigcalType": "",
-            "test": "",
-            "logProfileN": {
-                "day10LowUp": [
-                    "1,2026-08-03",
-                    -1.71,
-                    "10,2026-08-14",
-                    9.41,
-                    9.41
-                ],
-                "day11LowUp": [
-                    "1,2026-08-03",
-                    -1.71,
-                    "11,2026-08-17",
-                    10.27,
-                    10.27
-                ],
-                "lastDay": 11
+                "lastDay": 12
             }
         },
         {
@@ -14210,14 +14210,14 @@ var triggerLogObj大宗={
             "trigcalType": "",
             "test": "",
             "logProfileN": {
-                "day9LowUp": [
+                "day10LowUp": [
                     "",
                     0,
-                    "9,2026-08-17",
-                    11.82,
-                    11.82
+                    "10,2026-08-18",
+                    13.12,
+                    13.12
                 ],
-                "lastDay": 9
+                "lastDay": 10
             }
         },
         {
@@ -14229,14 +14229,14 @@ var triggerLogObj大宗={
             "trigcalType": "",
             "test": "",
             "logProfileN": {
-                "day8LowUp": [
+                "day9LowUp": [
                     "",
                     0,
-                    "8,2026-08-17",
-                    10.03,
-                    10.03
+                    "9,2026-08-18",
+                    11.31,
+                    11.31
                 ],
-                "lastDay": 8
+                "lastDay": 9
             }
         },
         {
@@ -14248,12 +14248,31 @@ var triggerLogObj大宗={
             "trigcalType": "",
             "test": "",
             "logProfileN": {
+                "day8LowUp": [
+                    "",
+                    0,
+                    "8,2026-08-18",
+                    11.31,
+                    11.31
+                ],
+                "lastDay": 8
+            }
+        },
+        {
+            "dataName": "纯碱连续",
+            "quantName": "低位低量",
+            "trigDate": "2026-08-07",
+            "trigAtIndex": 1616,
+            "dataType": "工业",
+            "trigcalType": "",
+            "test": "",
+            "logProfileN": {
                 "day7LowUp": [
                     "",
                     0,
-                    "7,2026-08-17",
-                    10.03,
-                    10.03
+                    "7,2026-08-18",
+                    11.08,
+                    11.08
                 ],
                 "lastDay": 7
             }
@@ -14267,33 +14286,14 @@ var triggerLogObj大宗={
             "trigcalType": "",
             "test": "",
             "logProfileN": {
-                "day6LowUp": [
+                "day7LowUp": [
                     "",
                     0,
-                    "6,2026-08-17",
-                    9.8,
-                    9.8
+                    "7,2026-08-18",
+                    11.08,
+                    11.08
                 ],
-                "lastDay": 6
-            }
-        },
-        {
-            "dataName": "纯碱连续",
-            "quantName": "低位低量",
-            "trigDate": "2026-08-07",
-            "trigAtIndex": 1616,
-            "dataType": "工业",
-            "trigcalType": "",
-            "test": "",
-            "logProfileN": {
-                "day6LowUp": [
-                    "",
-                    0,
-                    "6,2026-08-17",
-                    9.8,
-                    9.8
-                ],
-                "lastDay": 6
+                "lastDay": 7
             }
         }
     ],
@@ -15080,8 +15080,8 @@ var triggerLogObj大宗={
         }
     ]
 }
-var runLastKlineDate = "2026-08-17"
-var cnFutures策略runLastTime = "2026-08-17 20:04:54"
+var runLastKlineDate = "2026-08-18"
+var cnFutures策略runLastTime = "2026-08-18 20:06:49"
 
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj大宗 = triggerLogObj大宗
