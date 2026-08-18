@@ -314,8 +314,8 @@ var 组2B当日Plus历史明细 = {
             "2026-07-02",
             "持仓",
             "18.00",
-            "18.56",
-            "3.11%"
+            "19.04",
+            "5.78%"
         ],
         [
             "920523",
@@ -668,6 +668,6 @@ var 组2B当日Plus历史明细 = {
 
             if (typeof module !== "undefined" && module.exports) {
                 exports.组2B当日Plus历史明细 = 组2B当日Plus历史明细
-                exports.组2BrunLastTime = "2026-08-17 20:10:59"
+                exports.组2BrunLastTime = "2026-08-18 20:12:15"
             }
             
