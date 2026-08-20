@@ -1,5 +1,5 @@
 
-var 五年之锚 =  [
+    var 五年之锚 =  [
     {
         "date": "2007-01-04",
         "偏离度": null
@@ -19057,7 +19057,7 @@ var 五年之锚 =  [
         "偏离度": 23.8371
     }
 ]
-var 偏股一级债顶部估算 =  [
+    var 偏股一级债顶部估算 =  [
     {
         "date": "2008-01-02",
         "透支度": 1
@@ -37147,9 +37147,9 @@ var 偏股一级债顶部估算 =  [
         "透支度": 0.8905
     }
 ]
-var smartfellow_writeDateTime = ""
-if (typeof module !== "undefined" && module.exports) {
-        exports.五年之锚 = 五年之锚
-        exports.偏股一级债顶部估算 = 偏股一级债顶部估算
-        exports.smartfellow_writeDateTime = smartfellow_writeDateTime
-}
+    var smartfellow_writeDateTime = ""
+    if (typeof module !== "undefined" && module.exports) {
+    exports.五年之锚 = 五年之锚
+    exports.偏股一级债顶部估算 = 偏股一级债顶部估算
+    exports.smartfellow_writeDateTime = smartfellow_writeDateTime
+    }
