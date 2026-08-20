@@ -13,6 +13,8 @@ if (typeof module !== "undefined" && module.exports) {
 
     var { 拥挤度, 融资买入占比, 拥挤杠杆writeDateTime } = require("../cn/情绪/拥挤杠杆.js");
     var { xbx拥挤度, xbx融资买入占比, xbx市盈率数据, xbx拥挤杠杆writeDateTime } = require("../cn/情绪/xbx拥挤杠杆.js");
+
+    var { 抱团指数, 抱团指数writeDateTime } = require("../cn/情绪/抱团指数.js");
 }
 
 
@@ -136,10 +138,14 @@ function 恐贪_深度贪婪(curDate) {
 
     let preN5HigJC = -1000
     let preN5HigASH = -1000
-    for (let ii = 1; ii < 7; ii++) {
+    let preN5HigBFW = -1000
+    let preN5HigBFW涨跌比 = -1000
+    for (let ii = 1; ii < 8; ii++) {
         const ele = 恐贪指数[curDate恐贪指数Index - ii];
         if (ele?.jiucaishuo > preN5HigJC) preN5HigJC = ele?.jiucaishuo
         if (ele?.ashare > preN5HigASH) preN5HigASH = ele?.ashare
+        if (ele?.baifenwei > preN5HigBFW) preN5HigBFW = ele?.baifenwei
+        if (ele?.baifenwei六子[5] > preN5HigBFW涨跌比) preN5HigBFW涨跌比 = ele?.baifenwei六子[5]
     }
 
     let thsPlus资金 = ""
@@ -167,7 +173,7 @@ function 恐贪_深度贪婪(curDate) {
     if (curDate恐贪指数?.baifenwei && curDate恐贪指数?.baifenwei < 20) 深度恐惧count++
     if (curDate恐贪指数?.ashare && curDate恐贪指数?.ashare < 15) 深度恐惧count++
     if (curDate恐贪指数?.miumiu && curDate恐贪指数?.miumiu < 10) 深度恐惧count++
-    if (thsPlus资金 && thsPlus资金 < 55.5) 深度恐惧count++
+    if (thsPlus资金 && thsPlus资金 < 53) 深度恐惧count++
 
 
     if (深度贪婪count >= 3 && 深度恐惧count == 0) return true
@@ -185,6 +191,15 @@ function 恐贪_深度贪婪(curDate) {
         curDate恐贪指数?.ashare && curDate恐贪指数?.ashare > 95 && preN5HigASH > 99 &&
         (curDate恐贪指数?.jiucaishuo > 79 || curDate恐贪指数?.miumiu > 85 || thsPlus资金 > 65.5) &&
         深度恐惧count == 0
+    ) return true
+
+
+    if (
+        curDate恐贪指数?.ashare && curDate恐贪指数?.ashare > 95 && preN5HigASH > 99 //中期 
+        && preN5HigBFW > 60 //中期 
+        && curDate恐贪指数?.baifenwei六子 && curDate恐贪指数?.baifenwei六子?.[0] > 75  //波动 中期
+        && curDate恐贪指数?.baifenwei六子 && curDate恐贪指数?.baifenwei六子?.[4] > 75  //rsi 短期
+        && preN5HigBFW涨跌比 > 80  //涨跌比  短期
     ) return true
 
 
@@ -343,6 +358,8 @@ if (typeof module !== "undefined" && module.exports) {
     exports.xbx融资买入占比 = xbx融资买入占比
     exports.xbx市盈率数据 = xbx市盈率数据
 
+    
+    exports.抱团指数 = 抱团指数
 
     exports.科创50沪深300高估 = 科创50沪深300高估
     exports.沪深300行业割裂大标准差 = 沪深300行业割裂大标准差

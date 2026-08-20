@@ -345,6 +345,16 @@
     <script type="text/javascript" src="./cn/基金/smartfellowData.js"></script>
     <script type="text/javascript" src="./cn/情绪/xbx拥挤杠杆.js"></script>
     <script type="text/javascript" src="./cn/情绪/指数分位.js"></script>
+    <script type="text/javascript" src="./cn/情绪/抱团指数.js"></script>
+    <script>
+        let 抱团Ma30 = 抱团指数.map((ele, index) => {
+            return [ele.date, ele.score]
+        }).chartDataMaN(30)
+
+
+        let 拥挤度Ma10 = 拥挤度.chartDataMaN(5)
+
+    </script>
 
 </head>
 
@@ -2103,7 +2113,7 @@
                 },
 
 
-                {//拥挤杠杆 以下四个适合判断顶部 局部顶部
+                {//拥挤杠杆 以下四类适合判断顶部 局部顶部
                     name: "xbx拥挤度",
                     type: "line",
                     xAxisIndex: 6,
@@ -2167,7 +2177,7 @@
                             },
                         ],
                     },
-                    data: 拥挤度.addStartEnd()
+                    data: 拥挤度Ma10.addStartEnd()
                 },
                 {//股债透支度
                     name: "股债基上限透支度",
@@ -2181,6 +2191,26 @@
                     lineStyle: {
                         width: 0.8,
                         color: "#FD4142"//"#FD4142"//"red" //"#ff61ca"// #0079cd
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "red",
+                                    //type: "solid" // 实线，不写默认虚线
+                                },
+                                label: {
+                                    formatter: "50高估",
+                                    color: "red",
+                                    fontSize: "0",
+                                    position: "start",
+                                },
+                                yAxis: 50, // 标线值
+                                //x: "55%",
+                            },
+                        ],
                     },
                 },
                 {//科创50PS估值
@@ -2215,6 +2245,42 @@
                         ],
                     },
                     data: 科创50估值.map((ele, index) => { return [ele.date, 25 + 0.25 * ele.ps] }).addStartEnd()  //线性范围映射 0-100 压缩到 25-50
+                },
+                {//抱团Ma30
+                    name: "抱团Ma30",
+                    type: "line",
+                    xAxisIndex: 6,
+                    yAxisIndex: 13,
+                    showSymbol: false,
+                    smooth: true,
+                    lineStyle: {
+                        width: 1,
+                        color: "#ff61ca" //"#ff61ca"//
+                    },
+                    markLine: {
+                        symbol: ["none", "none"],
+                        data: [
+                            {
+                                lineStyle: {
+                                    width: 0.5,
+                                    color: "red",
+                                    //type: "solid" // 实线，不写默认虚线
+                                },
+                                label: {
+                                    formatter: "50高估",
+                                    color: "red",
+                                    fontSize: "0",
+                                    position: "start",
+                                },
+                                yAxis: 50, // 标线值
+                                //x: "55%",
+                            },
+                        ],
+                    },
+                    data: 抱团Ma30.map((ele, index) => {
+                        if (+ele[1] > 175) return [ele[0], 55]
+                        return [ele[0], (+ele[1] + 50) / 4]
+                    }).addStartEnd()  //将 50～175 线性映射到 25～50
                 },
 
                 {//恐贪指数
