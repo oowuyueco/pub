@@ -983,7 +983,8 @@ var triggerLogObj基金 = {
                 "nextSecondDelivery周五": "2026-08-21",
                 "nextThirdDelivery周五": "2026-09-18"
             },
-            "testInfo": " "
+            "testInfo": " ",
+            "标星": "高位★"
         }
     ],
     "2026-06-25": [
@@ -1002,7 +1003,8 @@ var triggerLogObj基金 = {
                 "nextSecondDelivery周五": "2026-08-21",
                 "nextThirdDelivery周五": "2026-09-18"
             },
-            "testInfo": " "
+            "testInfo": " ",
+            "标星": "高位★"
         }
     ],
     "2026-06-30": [
@@ -1042,7 +1044,7 @@ var triggerLogObj基金 = {
         }
     ]
 }
-var 基金策略runLastTime = "2026-08-20 14:17:14"
+var 基金策略runLastTime = "2026-08-20 15:18:35"
 if (typeof module !== "undefined" && module.exports) {
     exports.triggerLogObj基金 = triggerLogObj基金
     exports.基金策略runLastTime = 基金策略runLastTime
