@@ -8868,11 +8868,21 @@ var 工业硅连续 = [
     "volume": 223896,
     "hold": 305879,
     "settle": 8775
+  },
+  {
+    "date": "2026-08-21",
+    "open": 8750,
+    "high": 8825,
+    "low": 8720,
+    "close": 8790,
+    "volume": 154976,
+    "hold": 304492,
+    "settle": 8770
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.工业硅连续 = 工业硅连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-08-20 20:18:11"
+    exports.writeDateTime = "2026-08-21 20:17:50"
 };

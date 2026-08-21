@@ -16258,11 +16258,21 @@ var 纯碱连续 = [
     "volume": 1488760,
     "hold": 1006176,
     "settle": 1033
+  },
+  {
+    "date": "2026-08-21",
+    "open": 1030,
+    "high": 1043,
+    "low": 1022,
+    "close": 1039,
+    "volume": 1249197,
+    "hold": 1044423,
+    "settle": 1031
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.纯碱连续 = 纯碱连续
     exports.dataSource = ""
-    exports.writeDateTime = "2026-08-20 20:17:50"
+    exports.writeDateTime = "2026-08-21 20:17:33"
 };
