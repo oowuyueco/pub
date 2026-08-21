@@ -41230,11 +41230,23 @@ var 工业40LOF = [
     "volume": 3104314406,
     "hsl": 2.41,
     "zgs": 1288097263.900415
+  },
+  {
+    "date": "2026-08-21",
+    "timestamp": 1787241600000,
+    "open": 6014.1,
+    "high": 6114.43,
+    "low": 5978.68,
+    "close": 6092.08,
+    "percent": 0.75,
+    "volume": 2691714188,
+    "hsl": 2.09,
+    "zgs": 1287901525.3588517
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
     exports.工业40LOF = 工业40LOF
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-20 20:16:39"
+    exports.writeDateTime = "2026-08-21 20:15:49"
 };
