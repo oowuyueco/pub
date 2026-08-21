@@ -18389,9 +18389,21 @@
         "score": 57,
         "score2": 0,
         "timing": -1
+    },
+    {
+        "date": "2026-08-20",
+        "score": 81.08,
+        "score2": 0,
+        "timing": 0
+    },
+    {
+        "date": "2026-08-21",
+        "score": 110.45,
+        "score2": 0,
+        "timing": 0
     }
 ]
-  var 抱团指数writeDateTime = "2026-08-20 13:48:04"
+  var 抱团指数writeDateTime = "2026-08-21 20:23:09"
   if (typeof module !== "undefined" && module.exports) {
      exports.抱团指数 = 抱团指数
      exports.抱团指数writeDateTime = 抱团指数writeDateTime

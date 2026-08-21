@@ -342,6 +342,11 @@ var triggerLogObj情绪 =  {
                     "high": "9->2026-06-22,316.21,6.67",
                     "low": "28->2026-07-17,-214.35,-4.52",
                     "nextThirdDelivery周五": "2026-08-21"
+                },
+                "nextThirdDelivery周五": {
+                    "close": "53->2026-08-21,-124.55,-2.63",
+                    "high": "9->2026-06-22,316.21,6.67",
+                    "low": "28->2026-07-17,-214.35,-4.52"
                 }
             }
         ],
@@ -355,11 +360,15 @@ var triggerLogObj情绪 =  {
                     "low": "19->2026-07-17,-518.93,-10.28"
                 },
                 "after": {
-                    "close": "42->2026-08-19,-459.33,-9.1",
+                    "close": "44->2026-08-21,-429.13,-8.5",
                     "high": ",0,0",
                     "low": "19->2026-07-17,-518.93,-10.28",
-                    "nextSecondDelivery周五": "2026-08-21",
                     "nextThirdDelivery周五": "2026-09-18"
+                },
+                "nextSecondDelivery周五": {
+                    "close": "44->2026-08-21,-429.13,-8.5",
+                    "high": ",0,0",
+                    "low": "19->2026-07-17,-518.93,-10.28"
                 }
             }
         ],
@@ -373,11 +382,15 @@ var triggerLogObj情绪 =  {
                     "low": "16->2026-07-17,-452.73,-9.09"
                 },
                 "after": {
-                    "close": "39->2026-08-19,-393.13,-7.89",
+                    "close": "41->2026-08-21,-362.93,-7.29",
                     "high": ",0,0",
                     "low": "16->2026-07-17,-452.73,-9.09",
-                    "nextSecondDelivery周五": "2026-08-21",
                     "nextThirdDelivery周五": "2026-09-18"
+                },
+                "nextSecondDelivery周五": {
+                    "close": "41->2026-08-21,-362.93,-7.29",
+                    "high": ",0,0",
+                    "low": "16->2026-07-17,-452.73,-9.09"
                 }
             }
         ],
@@ -385,12 +398,16 @@ var triggerLogObj情绪 =  {
             "低位深度恐惧六子",
             {
                 "after": {
-                    "close": "23->2026-08-19,13.03,0.28",
+                    "close": "25->2026-08-21,43.23,0.94",
                     "high": "21->2026-08-17,165.43,3.62",
                     "low": "11->2026-08-03,-32.49,-0.71",
-                    "nextFirstDelivery周五": "2026-08-21",
                     "nextSecondDelivery周五": "2026-09-18",
                     "nextThirdDelivery周五": "2026-10-16"
+                },
+                "nextFirstDelivery周五": {
+                    "close": "25->2026-08-21,43.23,0.94",
+                    "high": "21->2026-08-17,165.43,3.62",
+                    "low": "11->2026-08-03,-32.49,-0.71"
                 }
             }
         ],
@@ -398,12 +415,16 @@ var triggerLogObj情绪 =  {
             "低位深度恐惧六子",
             {
                 "after": {
-                    "close": "22->2026-08-19,-42.15,-0.91",
+                    "close": "24->2026-08-21,-11.95,-0.26",
                     "high": "20->2026-08-17,110.25,2.38",
                     "low": "10->2026-08-03,-87.67,-1.89",
-                    "nextFirstDelivery周五": "2026-08-21",
                     "nextSecondDelivery周五": "2026-09-18",
                     "nextThirdDelivery周五": "2026-10-16"
+                },
+                "nextFirstDelivery周五": {
+                    "close": "24->2026-08-21,-11.95,-0.26",
+                    "high": "20->2026-08-17,110.25,2.38",
+                    "low": "10->2026-08-03,-87.67,-1.89"
                 }
             }
         ]
@@ -551,7 +572,7 @@ var triggerLogObj情绪 =  {
         }
     ]
 }
-var runLastKlineDate情绪策略 = "2026-08-19"
+var runLastKlineDate情绪策略 = "2026-08-21"
 if (typeof module !== "undefined" && module.exports) {
      exports.triggerLogObj情绪 = triggerLogObj情绪
      exports.runLastKlineDate情绪策略 = runLastKlineDate情绪策略
