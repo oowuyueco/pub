@@ -4636,6 +4636,11 @@ var triggerLogObj美股指数 = {
           "close": "25->2026-07-17,170.02,2.33",
           "high": "20->2026-07-10,287.72,3.95",
           "low": ",0,0"
+        },
+        "nextThirdDelivery周五": {
+          "close": "50->2026-08-21,386.7,5.31",
+          "high": "44->2026-08-13,511.32,7.02",
+          "low": ",0,0"
         }
       }
     ]
@@ -6145,7 +6150,7 @@ var triggerLogObj美股指数 = {
     }
   ]
 }
-var runLastKlineDate = "2026-08-20"
+var runLastKlineDate = "2026-08-21"
     if (typeof module !== "undefined" && module.exports) {
         exports.triggerLogObj美股指数 = triggerLogObj美股指数
         exports.runLastKlineDate = runLastKlineDate

@@ -33124,5 +33124,5 @@ var 金融地产ETF广发 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.金融地产ETF广发 = 金融地产ETF广发
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-21 20:15:48"
+    exports.writeDateTime = "2026-08-22 20:01:19"
 };
