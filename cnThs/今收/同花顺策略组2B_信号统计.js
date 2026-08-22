@@ -668,6 +668,6 @@ var 组2B当日Plus历史明细 = {
 
             if (typeof module !== "undefined" && module.exports) {
                 exports.组2B当日Plus历史明细 = 组2B当日Plus历史明细
-                exports.组2BrunLastTime = "2026-08-21 20:25:07"
+                exports.组2BrunLastTime = "2026-08-22 20:08:39"
             }
             
