@@ -65980,5 +65980,5 @@ var 上证50 = [
 if (typeof module !== "undefined" && module.exports) {
     exports.上证50 = 上证50
     exports.dataSource = "雪球"
-    exports.writeDateTime = "2026-08-21 20:15:46"
+    exports.writeDateTime = "2026-08-22 20:01:17"
 };
